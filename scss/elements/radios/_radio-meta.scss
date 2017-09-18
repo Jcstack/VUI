@@ -1,0 +1,27 @@
+.sav-radio {
+  // 尺寸
+  &.is-small {
+    @include make-size-sm;
+  }
+
+  &.is-large {
+    @include make-size-lg;
+  }
+}
+
+// 颜色
+@each $theme-type, $theme-color in $is-theme-colors {
+  .sav-radio.#{$theme-type} {
+    > .as-text {
+      &::before {
+        border-color: $theme-color;
+      }
+    }
+
+    > input:checked + .as-text {
+      &::after {
+        background-color: $theme-color;
+      }
+    }
+  }
+}

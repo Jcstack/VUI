@@ -1,0 +1,22 @@
+$text-bg-color: $element-bd-color !default;
+$text-bd-color: $is-primary-color !default;
+
+.sav-textarea {
+  border: 1px solid $text-bg-color;
+  border-radius: $element-bd-radius;
+  padding: 0.6em 1em 0.6em 1em;
+
+  &:hover {
+    border: 1px solid $element-active-bg-color;
+  }
+
+  &:focus {
+    border: 1px solid $text-bd-color;
+
+    @include stripa;
+  }
+
+  &::-webkit-input-placeholder {
+    color: $text-bg-color;
+  }
+}

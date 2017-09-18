@@ -1,0 +1,23 @@
+// 砖头元素
+@mixin make-element-brick {
+  // 需要设成相对的, 方便内嵌或定位
+  position: relative;
+
+  // 盒子
+  box-sizing: border-box;
+
+  // 块
+  display: inline-block;
+}
+
+// 元素
+@mixin make-element-default {
+  // 尺寸
+  @include make-size-default;
+
+  // 不可选
+  @include unselectable;
+
+  // 砖头元素
+  @include make-element-brick;
+}

@@ -1,0 +1,13 @@
+@import "icons-font-awesome";
+
+$icon-font-fontawesome-class: "fa";
+$icon-font-fontawesome-family: "FontAwesome";
+$icon-font-fontawesome-file: "fontawesome-webfont";
+$icon-font-fontawesome-version: "4.7.0";
+$icon-font-fontawesome-path: "../fonts" !default;
+
+// 添加字库
+@include make-icon-font-library($icon-font-fontawesome-class, $icon-font-fontawesome-family, $icon-font-fontawesome-path, $icon-font-fontawesome-file, $icon-font-fontawesome-version);
+
+// 导出字体文件
+@include make-icons-font-awesome;

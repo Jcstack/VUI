@@ -1,0 +1,73 @@
+.sav-field {
+  display: flex;
+  justify-content: center;
+
+  &.is-body,
+  > .field-body {
+    display: flex;
+    flex: 1;
+
+    > .field-item {
+      @include block-col;
+    }
+  }
+}
+
+.sav-form {
+  overflow: hidden;
+
+  &.is-horizontal {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    > .sav-field {
+      @include block-col;
+    }
+  }
+
+  &.is-vertical {
+    display: block;
+
+    > .sav-field {
+      @include block-row;
+
+      > .sav-label {
+        min-width: 4em;
+        margin-right: 1.5rem;
+        text-align: right;
+      }
+    }
+
+    @for $i from 1 through 12 {
+      &.has-grow-#{$i} {
+        > .sav-field {
+          > .sav-label {
+            width: #{$i + 4}em;
+          }
+        }
+      }
+    }
+  }
+
+  @include make-flex-modify;
+
+  &.is-around {
+    flex: 1;
+    justify-content: space-around;
+  }
+
+  &.is-fill {
+    flex: 1;
+
+    > .sav-field {
+      flex-grow: 1;
+    }
+  }
+
+  &.is-disabled {
+    .sav-label {
+      color: darken($element-disabled-bg-color, 30) !important;
+    }
+  }
+}
