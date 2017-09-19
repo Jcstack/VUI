@@ -1,7 +1,7 @@
 # Sav Vui
 
 * Get Started
-  * [Installation](readme.md)
+  * [Installation](/)
 
 * Elements
   * 按钮
