@@ -1,0 +1,8 @@
+@import "color";
+
+body {
+  color: red;
+  > h2 {
+    color: black;
+  }
+}

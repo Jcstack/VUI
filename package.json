@@ -38,6 +38,7 @@
   "homepage": "https://github.com/savjs/sav-vui#readme",
   "dependencies": {
     "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
     "popper.js": "^1.10.8"
   }
 }
