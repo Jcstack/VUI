@@ -1,4 +1,4 @@
-.sav-btn {
+.#{$ns}-btn {
   // 方形
   &.is-square,
   &.is-circle {
@@ -15,21 +15,21 @@
 }
 
 // 圆形
-.sav-btn.is-circle {
+.#{$ns}-btn.is-circle {
   border-radius: 50%;
 }
 
 // 尺寸
-.sav-btn.is-small {
+.#{$ns}-btn.is-small {
   @include make-size-sm;
 }
 
-.sav-btn.is-large {
+.#{$ns}-btn.is-large {
   @include make-size-lg;
 }
 
 // loading
-.sav-btn.is-loading {
+.#{$ns}-btn.is-loading {
   .as-icon {
     opacity: 0;
   }
@@ -75,7 +75,7 @@
 }
 
 @each $theme-type, $theme-color in $is-theme-colors {
-  .sav-btn.#{$theme-type} {
+  .#{$ns}-btn.#{$theme-type} {
     @include make-button-variant($is-text-light-color, $theme-color);
   }
 }

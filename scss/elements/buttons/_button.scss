@@ -4,7 +4,7 @@ $button-bg-color: $element-bg-color !default;
 $button-disabled-bg-color: $element-disabled-bg-color !default;
 $button-text-color: $is-text-darken-color !default;
 
-.sav-btn {
+.#{$ns}-btn {
   @include make-element-default;
 
   // 去除下划线
@@ -73,14 +73,14 @@ $button-text-color: $is-text-darken-color !default;
   }
 }
 
-.sav-btn-group {
+.#{$ns}-btn-group {
   &.is-horizontal {
     display: inline-block;
     vertical-align: middle;
 
     @include clearfix;
 
-    .sav-btn {
+    .#{$ns}-btn {
       float: left;
       margin-left: -1px;
 
@@ -108,7 +108,7 @@ $button-text-color: $is-text-darken-color !default;
     display: inline-block;
     vertical-align: middle;
 
-    .sav-btn {
+    .#{$ns}-btn {
       display: block;
       margin-top: -1px;
       width: 100%;

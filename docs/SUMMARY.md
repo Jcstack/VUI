@@ -3,11 +3,27 @@
 * Get Started
   * [Installation](/)
 
-* Elements
-  * 按钮
+* Basis(基件) {is-dropdown}
+  * Color & Size
+  * Layout
+  * Modifier
+  * Animation
 
-* Components
+* Elements(元件) {is-dropdown}
+  * [Button](elements/buttons.md)
+  * Form
+  * Box
+  * Notification
+  * Icon
+
+* Components(组件) {is-dropdown}
   * Modal
+  * Card
+  * Pagination
 
-* Advanced
+* Advanced(进阶)
   * Customize
+
+<style lang="scss">
+  @import "~root/scss/sav-vui.scss";
+</style>

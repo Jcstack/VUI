@@ -10,7 +10,8 @@
     "build-sass": "node scripts/build-sass",
     "build-icon": "node scripts/build-icon",
     "build": "npm run build-icon && npm run build-sass && npm run build-vui",
-    "test": "npm run build"
+    "test": "npm run build",
+    "watch-doc": "sd watch"
   },
   "repository": {
     "type": "git",
