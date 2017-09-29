@@ -71,7 +71,7 @@ function getComponentName (components, name) {
 }
 
 /**
- * Camelize a hyphen-delmited string.
+ * Camelize a hyphen-delimited string.
  */
 const camelCaseRE = /[-_](\w)/g
 function camelCase (str) {

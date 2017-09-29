@@ -1,2 +1,84 @@
-@import "to-string";
-@import "str-replace";
+// 字符串替换
+@function str-replace($string, $old, $new) {
+  $str_index: str-index($string, $old);
+
+  @if $str_index != null and $str_index > 0 {
+    $str_index: -1 + $str_index;
+    $str_new: str-slice($string, 0, $str_index);
+    $str_new: str-insert($str_new, $new, str-length($str_new) + 1);
+    $str_new: str-insert($str_new, str-slice($string, $str_index + str-length($old) + 1, str-length($string)), str-length($str_new) + 1);
+
+    @return str-replace($str_new, $old, $new);
+  }
+
+  @return $string;
+}
+
+// http://hugogiraudel.com/2013/08/08/advanced-sass-list-functions/
+
+// 列表到字符串转换
+@function to-string($list, $glue: "", $is-nested: false) {
+  $result: null;
+
+  @for $i from 1 through length($list) {
+    $e: nth($list, $i);
+
+    @if type-of($e) == list {
+      $result: unquote("#{$result}#{to-string($e, $glue, true)}");
+    }
+    @else {
+      $result: if($i != length($list) or $is-nested, unquote("#{$result}#{$e}#{$glue}"), unquote("#{$result}#{$e}"));
+    }
+  }
+
+  @return $result;
+}
+
+@function powerNumber($number, $exp) {
+  $value: 1;
+
+  @if $exp > 0 {
+    @for $i from 1 through $exp {
+      $value: $value * $number;
+    }
+  }
+  @else if $exp < 0 {
+    @for $i from 1 through -$exp {
+      $value: $value / $number;
+    }
+  }
+
+  @return $value;
+}
+
+@function colorLuminance($color) {
+  $color-rgb: ("red": red($color), "green": green($color), "blue": blue($color));
+
+  @each $name, $value in $color-rgb {
+    $adjusted: 0;
+    $value: $value / 255;
+
+    @if $value < 0.03928 {
+      $value: $value / 12.92;
+    }
+    @else {
+      $value: ($value + 0.055) / 1.055;
+      $value: powerNumber($value, 2);
+    }
+
+    $color-rgb: map-merge($color-rgb, ($name: $value));
+  }
+
+  @return map-get($color-rgb, "red") * 0.2126 + map-get($color-rgb, "green") * 0.7152 + map-get($color-rgb, "blue") * 0.0722;
+}
+
+// 计算反转色
+@function findColorInvert($color) {
+  @if colorLuminance($color) > 0.55 {
+    @return rgba(#000, 0.7);
+  }
+  @else {
+    @return #fff;
+  }
+}
+

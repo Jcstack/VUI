@@ -1,41 +1,3 @@
-.#{$ns}-btn {
-  // 方形
-  &.is-square,
-  &.is-circle {
-    @include make-square-default;
-
-    &.is-small {
-      @include make-square-sm;
-    }
-
-    &.is-large {
-      @include make-square-lg;
-    }
-  }
-}
-
-// 圆形
-.#{$ns}-btn.is-circle {
-  border-radius: 50%;
-}
-
-// 尺寸
-.#{$ns}-btn.is-small {
-  @include make-size-sm;
-}
-
-.#{$ns}-btn.is-large {
-  @include make-size-lg;
-}
-
-// loading
-.#{$ns}-btn.is-loading {
-  .as-icon {
-    opacity: 0;
-  }
-}
-
-// 颜色
 @mixin make-button-variant($text-color, $color) {
   &.is-outline {
     color: $color;
@@ -50,6 +12,13 @@
     &.is-active,
     &:active {
       color: $text-color;
+    }
+
+    &.is-loading {
+      &::after {
+        border-left-color: $color;
+        border-bottom-color: $color;
+      }
     }
   }
 
@@ -67,15 +36,8 @@
     background-color: darken($color, 10);
   }
 
-  // 加载中
   &.is-loading::after {
     border-left-color: $text-color;
     border-bottom-color: $text-color;
-  }
-}
-
-@each $theme-type, $theme-color in $is-theme-colors {
-  .#{$ns}-btn.#{$theme-type} {
-    @include make-button-variant($is-text-light-color, $theme-color);
   }
 }

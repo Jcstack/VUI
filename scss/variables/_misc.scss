@@ -1,0 +1,72 @@
+// Body
+$body-background: #fff !default;
+$body-size: 16px !default
+
+$easing: ease-out !default;
+$radius-small: 2px !default;
+$radius: 3px !default;
+$radius-large: 5px !default;
+$speed: 86ms !default
+
+// Typography
+$family-sans-serif: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif !default;
+$family-monospace: monospace !default;
+$family-arial: "Arial" !default;
+$render-mode: optimizeLegibility !default;
+
+$family-primary: $family-sans-serif !default;
+$family-code: $family-monospace !default;
+
+
+///// Older @TODO /////
+// 字体
+$element-font-family: "Arial" !default;
+
+// 圆角
+$element-bd-radius: 0.2rem !default;
+
+// 容器或元素内补白基量
+$element-pad-size: 1rem !default;
+
+// 元素光标
+$element-cursor: pointer !default;
+
+// 文本颜色
+$element-text-color: #363636 !default;
+
+// 背景色
+$element-bg-color: white !default;
+
+// 边框颜色
+$element-bd-color: #C6C6C6 !default;
+
+// 活动背景色
+$element-active-bg-color: #DCDFE1 !default;
+
+// 悬停背景色
+$element-hover-bg-color: #EAEAEA !default;
+
+// 禁用背景色
+$element-disabled-bg-color: #F2F2F2 !default;
+
+// 主题文本颜色
+$is-text-light-color: white !default;
+$is-text-darken-color: black !default;
+
+// 主色调
+$is-primary-color: $primary !default;
+
+// 次色调
+$is-secondary-color: lighten($primary, 5) !default;
+
+// 成功
+$is-success-color: $success !default;
+
+// 失败
+$is-error-color: $danger !default;
+
+// 警告
+$is-warn-color: $warning !default;
+
+// 主题颜色
+$is-theme-colors: ("is-primary": $is-primary-color, "is-secondary": $is-secondary-color, "is-warn": $is-warn-color, "is-success": $is-success-color, "is-error": $is-error-color) !default;

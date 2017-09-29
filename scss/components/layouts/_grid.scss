@@ -6,11 +6,6 @@ $grid-size: 12 !default;
   height: auto;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap {
-    // &::before,
-    // &::after
-    //   display: flex
-  };
 
   &.is-float {
     display: block;

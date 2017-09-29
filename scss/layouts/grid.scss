@@ -1,0 +1,142 @@
+$column-gap: 0.5rem !default;
+$grids-number: 12;
+
+@mixin make-columns-grid ($device) {
+  &.is-narrow,
+  &.is-narrow-#{$device} {
+    flex: none;
+  }
+
+  &.is-full,
+  &.is-full-#{$device} {
+    flex: none;
+    width: 100%;
+  }
+
+  &.is-three-quarters,
+  &.is-three-quarters-#{$device} {
+    flex: none;
+    width: 75%;
+  }
+
+  &.is-two-thirds,
+  &.is-two-thirds-#{$device} {
+    flex: none;
+    width: 66.6666%;
+  }
+
+  &.is-half,
+  &.is-half-#{$device} {
+    flex: none;
+    width: 50%;
+  }
+
+  &.is-one-third,
+  &.is-one-third-#{$device} {
+    flex: none;
+    width: 33.3333%;
+  }
+
+  &.is-one-quarter,
+  &.is-one-quarter-#{$device} {
+    flex: none;
+    width: 25%;
+  }
+
+  &.is-offset-three-quarters,
+  &.is-offset-three-quarters-#{$device} {
+    margin-left: 75%;
+  }
+
+  &.is-offset-two-quarter,
+  &.is-offset-two-thirds-#{$device} {
+    margin-left: 66.6666%;
+  }
+
+  &.is-offset-half,
+  &.is-offset-half-#{$device} {
+    margin-left: 50%;
+  }
+
+  &.is-offset-one-third,
+  &.is-offset-one-third-#{$device} {
+    margin-left: 33.3333%;
+  }
+
+  &.is-offset-one-quarter,
+  &.is-offset-one-quarter-#{$device} {
+    margin-left: 25%;
+  }
+
+  @for $i from 1 through $grids-number {
+    &.is-#{$i},
+    &.is-#{$i}-#{$device} {
+      flex: none;
+      width: $i / $grids-number * 100%;
+    }
+
+    &.is-offset-#{$i},
+    &.is-offset-#{$i}-#{$device} {
+      margin-left: $i / $grids-number * 100%;
+    }
+  }
+}
+
+.#{$ns}-columns {
+  margin-left: -$column-gap;
+  margin-right: -$column-gap;
+  margin-top: -$column-gap;
+
+  display: flex; // @todo . Current version just for `desktop`
+
+  &:last-child {
+    margin-bottom: -$column-gap;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: calc(1.5rem - #{$column-gap});
+  }
+
+  // Modifiers
+  &.is-centered {
+    justify-content: center;
+  }
+
+  &.is-gapless {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+
+    & > .#{$ns}-column {
+      margin: 0;
+      padding: 0 !important;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &.is-multiline {
+    flex-wrap: wrap;
+  }
+
+  &.is-vcentered {
+    align-items: center;
+  }
+}
+
+.#{$ns}-column {
+  display: block;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+  padding: $column-gap;
+
+  // grids
+  @include make-columns-grid("desktop")
+}

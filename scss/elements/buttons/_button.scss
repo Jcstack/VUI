@@ -1,8 +1,14 @@
+@import "button-meta";
+
 $button-bd-radius: $element-bd-radius !default;
 $button-bd-color: $element-bd-color !default;
 $button-bg-color: $element-bg-color !default;
 $button-disabled-bg-color: $element-disabled-bg-color !default;
 $button-text-color: $is-text-darken-color !default;
+
+$button-link-color: $text !default;
+$button-link-hover-background-color: $background !default;
+$button-link-hover-color: $text-strong !default;
 
 .#{$ns}-btn {
   @include make-element-default;
@@ -13,8 +19,8 @@ $button-text-color: $is-text-darken-color !default;
   // 去除默认焦点
   outline: none;
 
-  // 去除 Button的默认边框样式 + 去除 Border宽度
-  border: 1px solid transparent;
+  // 去除 Button的默认边框样式
+  border: 1px solid $button-bd-color;
 
   // 居中对齐
   vertical-align: middle;
@@ -28,7 +34,6 @@ $button-text-color: $is-text-darken-color !default;
 
   // 颜色
   background-color: $button-bg-color;
-  border-color: $button-bd-color;
   border-radius: $button-bd-radius;
   color: $button-text-color;
 
@@ -65,10 +70,70 @@ $button-text-color: $is-text-darken-color !default;
     pointer-events: none;
     color: transparent !important;
 
+    .as-icon {
+      opacity: 0;
+    }
+
     &::after {
       @include make-icon-loader;
       @include make-spin-around;
       @include center(1.2em);
+    }
+  }
+
+  // Size
+  .is-small {
+    @include make-size-sm;
+  }
+
+  // 圆形
+  &.is-circle {
+    border-radius: 50%;
+  }
+
+  &.is-large {
+    @include make-size-lg;
+  }
+
+  // 方形
+  &.is-square,
+  &.is-circle {
+    @include make-square-default;
+
+    &.is-small {
+      @include make-square-sm;
+    }
+
+    &.is-large {
+      @include make-square-lg;
+    }
+  }
+
+  // 链接
+  &.is-link {
+    background-color: transparent;
+    border-color: transparent;
+    color: $button-link-color;
+    text-decoration: none;
+
+    &:hover,
+    &.is-hovered,
+    &:focus,
+    &.is-focused {
+      background-color: $button-link-hover-background-color;
+      color: $button-link-hover-color;
+    }
+
+    &:active,
+    &.is-active {
+      background-color: darken($button-link-hover-background-color, 5%);
+      color: $button-link-hover-color;
+    }
+
+    &[disabled] {
+      background-color: transparent;
+      border-color: transparent;
+      box-shadow: none;
     }
   }
 }
@@ -132,5 +197,14 @@ $button-text-color: $is-text-darken-color !default;
         border-top-right-radius: 0;
       }
     }
+  }
+}
+
+@each $name, $pair in $colors {
+  $color: nth($pair, 1);
+  $text-color: nth($pair, 2);
+
+  .#{$ns}-btn.is-#{$name} {
+    @include make-button-variant($text-color, $color);
   }
 }

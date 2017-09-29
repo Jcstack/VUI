@@ -1,21 +1,14 @@
-// 命名空间
+// Namespace
 $ns: "v";
 
-// 变量
-@import "variables/all";
-
-// 函数
 @import "functions/all";
-
-// 混合
+@import "variables/all";
 @import "mixins/all";
-
-// 动画过度
 @import "base/animates/view";
 
-// 表单
+@import "layouts/all";
+
 @import "elements/buttons/button";
-@import "elements/buttons/button-meta";
 @import "elements/inputs/input";
 @import "elements/inputs/input-meta";
 
