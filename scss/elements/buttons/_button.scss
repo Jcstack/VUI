@@ -82,7 +82,7 @@ $button-link-hover-color: $text-strong !default;
   }
 
   // Size
-  .is-small {
+  &.is-small {
     @include make-size-sm;
   }
 
