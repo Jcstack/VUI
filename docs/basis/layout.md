@@ -74,7 +74,7 @@
   </div>
 </div>
 
-框架内置了些有语意の修饰符 .
+框架内置了些有语义の修饰符 .
 
 ```css
 [column].is-three-quarters

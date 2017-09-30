@@ -8,7 +8,7 @@
 
 ## 字体大小
 
-尺寸分7个数量级别，4个语意级别，使用`rem`相对根`font-size: 16px`设置 .
+尺寸分7个数量级别，4个语义级别，使用`rem`相对根`font-size: 16px`设置 .
 
 <div class="sd-sizes-presentation">
   <div class="item">

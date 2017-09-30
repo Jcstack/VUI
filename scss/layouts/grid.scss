@@ -1,82 +1,82 @@
 $column-gap: 0.5rem !default;
 $grids-number: 12;
 
-@mixin make-columns-grid ($device) {
+@mixin make-columns-grid ($target) {
   &.is-narrow,
-  &.is-narrow-#{$device} {
+  &.is-narrow-#{$target} {
     flex: none;
   }
 
   &.is-full,
-  &.is-full-#{$device} {
+  &.is-full-#{$target} {
     flex: none;
     width: 100%;
   }
 
   &.is-three-quarters,
-  &.is-three-quarters-#{$device} {
+  &.is-three-quarters-#{$target} {
     flex: none;
     width: 75%;
   }
 
   &.is-two-thirds,
-  &.is-two-thirds-#{$device} {
+  &.is-two-thirds-#{$target} {
     flex: none;
     width: 66.6666%;
   }
 
   &.is-half,
-  &.is-half-#{$device} {
+  &.is-half-#{$target} {
     flex: none;
     width: 50%;
   }
 
   &.is-one-third,
-  &.is-one-third-#{$device} {
+  &.is-one-third-#{$target} {
     flex: none;
     width: 33.3333%;
   }
 
   &.is-one-quarter,
-  &.is-one-quarter-#{$device} {
+  &.is-one-quarter-#{$target} {
     flex: none;
     width: 25%;
   }
 
   &.is-offset-three-quarters,
-  &.is-offset-three-quarters-#{$device} {
+  &.is-offset-three-quarters-#{$target} {
     margin-left: 75%;
   }
 
   &.is-offset-two-quarter,
-  &.is-offset-two-thirds-#{$device} {
+  &.is-offset-two-thirds-#{$target} {
     margin-left: 66.6666%;
   }
 
   &.is-offset-half,
-  &.is-offset-half-#{$device} {
+  &.is-offset-half-#{$target} {
     margin-left: 50%;
   }
 
   &.is-offset-one-third,
-  &.is-offset-one-third-#{$device} {
+  &.is-offset-one-third-#{$target} {
     margin-left: 33.3333%;
   }
 
   &.is-offset-one-quarter,
-  &.is-offset-one-quarter-#{$device} {
+  &.is-offset-one-quarter-#{$target} {
     margin-left: 25%;
   }
 
   @for $i from 1 through $grids-number {
     &.is-#{$i},
-    &.is-#{$i}-#{$device} {
+    &.is-#{$i}-#{$target} {
       flex: none;
       width: $i / $grids-number * 100%;
     }
 
     &.is-offset-#{$i},
-    &.is-offset-#{$i}-#{$device} {
+    &.is-offset-#{$i}-#{$target} {
       margin-left: $i / $grids-number * 100%;
     }
   }

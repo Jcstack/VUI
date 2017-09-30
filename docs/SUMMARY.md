@@ -6,7 +6,7 @@
 * Basis(基件) {is-dropdown}
   * [Color & Size & Font](basis/color_size.md)
   * [Grid & Layout](basis/layout.md)
-  * Modifier
+  * [Modifier](basis/modifiers.md)
   * Animation
 
 * Elements(元件) {is-dropdown}
@@ -28,5 +28,6 @@
   * Customize
 
 <style lang="scss">
-  @import "~root/scss/sav-vui.scss";
+  @import "~root/scss/vui.scss";
+  @import "~root/docs_lib/common.scss";
 </style>
