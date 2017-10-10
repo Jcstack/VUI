@@ -30,7 +30,7 @@ $tab-active-bd-color: darken($tab-bd-color, 40) !default;
 
     &,
     > a {
-      @include stripa;
+      @include strip-a;
     }
 
     &:hover {

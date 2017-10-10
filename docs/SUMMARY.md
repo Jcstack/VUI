@@ -12,8 +12,9 @@
 * Elements(元件) {is-dropdown}
   * [Button](elements/buttons.md)
   * [Form](elements/form.md)
-  * Box
-  * Notification
+  * [Notification](elements/notifications.md)
+  * [Content](elements/content.md)
+  * [Box](elements/box.md)
   * Icon
 
 * Components(组件) {is-dropdown}

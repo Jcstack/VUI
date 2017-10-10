@@ -1,3 +1,10 @@
 //@import "~root/scss/pre";
 
 body {}
+
+.demo-box {
+  padding: 25px 0;
+  a {
+    font-weight: inherit;
+  }
+}

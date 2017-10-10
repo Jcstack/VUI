@@ -16,7 +16,7 @@ $rate-bg-color: $element-bd-color !default;
     }
 
     > .rate-list {
-      @include stripa;
+      @include strip-a;
 
       display: inline-block;
       padding: 0px 2px 0px 2px;

@@ -1,4 +1,9 @@
-// 砖头元素
+$control-radius: $radius !default;
+$control-radius-small: $radius-small !default;
+
+$control-padding-vertical: calc(0.375em - 1px) !default;
+$control-padding-horizontal: calc(0.625em - 1px) !default;
+
 @mixin make-element-brick {
   // 需要设成相对的, 方便内嵌或定位
   position: relative;
@@ -10,14 +15,51 @@
   display: inline-block;
 }
 
-// 元素
+@mixin control-input {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: $control-radius;
+  box-shadow: none;
+  display: inline-flex;
+  font-size: $size-normal;
+  height: 2.25em;
+  justify-content: flex-start;
+  line-height: 1.5;
+  padding: $control-padding-vertical $control-padding-horizontal;
+  position: relative;
+  vertical-align: top;
+
+  // States
+  &:focus,
+  &.is-focused,
+  &:active,
+  &.is-active {
+    outline: none;
+  }
+
+  &[disabled] {
+    cursor: not-allowed;
+  }
+}
+
+// The controls sizes use mixins so they can be used at different breakpoints
+@mixin control-small {
+  border-radius: $control-radius-small;
+  font-size: $size-small;
+}
+
+@mixin control-medium {
+  font-size: $size-medium;
+}
+
+@mixin control-large {
+  font-size: $size-large;
+}
+
 @mixin make-element-default {
-  // 尺寸
   @include make-size-default;
-
-  // 不可选
   @include unselectable;
-
-  // 砖头元素
   @include make-element-brick;
 }

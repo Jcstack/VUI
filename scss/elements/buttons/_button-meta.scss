@@ -1,17 +1,40 @@
-@mixin make-button-variant($text-color, $color) {
+@mixin button-small {
+  border-radius: $radius-small;
+  font-size: $size-small;
+}
+
+@mixin button-medium {
+  font-size: $size-medium;
+}
+
+@mixin button-large {
+  font-size: $size-large;
+}
+
+@mixin make-button-variant($color-invert, $color, $button-focus-box-shadow-size) {
   &.is-outline {
     color: $color;
-    background-color: $text-color;
+    background-color: $color-invert;
     border-color: darken($color, 2);
 
     &:hover,
-    &:focus {
-      color: $text-color;
+    &.is-hovered {
+      color: $color-invert !important;
+    }
+
+    &:focus,
+    &.is-focused {
+      border-color: transparent;
+      color: $color;
+
+      &:not(:active) {
+        box-shadow: $button-focus-box-shadow-size rgba($color, 0.25);
+      }
     }
 
     &.is-active,
     &:active {
-      color: $text-color;
+      color: $color-invert;
     }
 
     &.is-loading {
@@ -22,22 +45,32 @@
     }
   }
 
-  color: $text-color;
+  color: $color-invert;
   border-color: darken($color, 2);
   background-color: $color;
 
   &:hover,
-  &:focus {
+  &.is-hovered {
     background-color: darken($color, 6);
   }
 
-  &.is-active,
-  &:active {
+  &:focus,
+  &.is-focused {
+    border-color: transparent;
+    color: $color-invert;
+
+    &:not(:active) {
+      box-shadow: $button-focus-box-shadow-size rgba($color, 0.25);
+    }
+  }
+
+  &:active,
+  &.is-active {
     background-color: darken($color, 10);
   }
 
   &.is-loading::after {
-    border-left-color: $text-color;
-    border-bottom-color: $text-color;
+    border-left-color: $color-invert;
+    border-bottom-color: $color-invert;
   }
 }

@@ -13,7 +13,7 @@ $text-bd-color: $primary !default;
   &:focus {
     border: 1px solid $text-bd-color;
 
-    @include stripa;
+    @include strip-a;
   }
 
   &::-webkit-input-placeholder {
