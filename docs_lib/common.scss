@@ -4,7 +4,11 @@ body {}
 
 .demo-box {
   padding: 25px 0;
-  a {
+  &.has-pad-sm {
+    padding: 5px 0;
+  }
+  a, button, input {
     font-weight: inherit;
+    color: inherit;
   }
 }

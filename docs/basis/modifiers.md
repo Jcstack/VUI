@@ -49,9 +49,9 @@
 
 #### c. 风格(style)
 
-- `is-outline`
+- `is-outlined`
 <div class="sd-btns-container">
-  <a class="v-btn is-outline is-info">is-outline</a>
+  <a class="v-btn is-outlined is-info">is-outlined</a>
 </div>
 
 
@@ -60,11 +60,11 @@
 - 加载中 `is-loading`
 ```html
 <a class="v-btn is-loading is-success">is-loading</a>
-<a class="v-btn is-loading is-success is-outline">is-loading</a>
+<a class="v-btn is-loading is-success is-outlined">is-loading</a>
 ```
 <div class="sd-btns-container">
   <a class="v-btn is-loading is-success">is-loading</a>
-  <a class="v-btn is-loading is-success is-outline">is-loading</a>
+  <a class="v-btn is-loading is-success is-outlined">is-loading</a>
 </div>
 
 - 不可用 `is-disabled` & `[disabled]`

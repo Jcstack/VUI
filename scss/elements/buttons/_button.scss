@@ -47,13 +47,14 @@ $button-link-hover-color: $text-strong !default;
   }
 
   &.is-disabled,
-  &:disabled {
+  &:disabled,
+  &[disabled] {
     pointer-events: none;
     cursor: not-allowed;
-    background-color: $button-disabled-bg-color !important;
-    color: darken($button-disabled-bg-color, 30) !important;
-    border-color: darken($button-disabled-bg-color, 15) !important;
+    background-color: $button-disabled-bg-color;
+    border-color: darken($button-disabled-bg-color, 15);
     box-shadow: none !important;
+    opacity: .5;
   }
 
   &:focus,

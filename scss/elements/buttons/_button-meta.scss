@@ -12,7 +12,7 @@
 }
 
 @mixin make-button-variant($color-invert, $color, $button-focus-box-shadow-size) {
-  &.is-outline {
+  &.is-outlined {
     color: $color;
     background-color: $color-invert;
     border-color: darken($color, 2);
@@ -62,6 +62,13 @@
     &:not(:active) {
       box-shadow: $button-focus-box-shadow-size rgba($color, 0.25);
     }
+  }
+
+  &.is-disabled,
+  &:disabled,
+  &[disabled] {
+    background-color: $color !important;
+    border-color: transparent !important;
   }
 
   &:active,
