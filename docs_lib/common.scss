@@ -11,4 +11,24 @@ body {}
     font-weight: inherit;
     color: inherit;
   }
+
+  &.sd-with-icon-bg {
+    .has-icon {
+      background-color: $white-ter;
+    }
+  }
+
+  .has-icon {
+    &.is-medium {
+      .iconfont {
+        font-size: 1.5rem;
+      }
+    }
+
+    &.is-large{
+      .iconfont {
+        font-size: 2.5rem;
+      }
+    }
+  }
 }

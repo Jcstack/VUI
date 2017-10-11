@@ -1,6 +1,6 @@
 # 按钮 Buttons
 
-按钮(`button`)在任何交互设计中都是非常重要的基元，一个好的交互按钮设计，可以大大增强界面的交互体验。
+按钮(`button`)在任何交互设计中都是非常重要的元件，一个好的交互按钮设计，可以大大增强界面的交互体验。
 通过在特定元素上添加`.v-btn`类，可以设置一个基本的按钮。
 
 - `&lt;a&gt;` 锚点链接
@@ -93,6 +93,10 @@
   <a class="v-btn is-danger is-outlined">Outlined</a>
 </div>
 
+<p class="tip">
+  由于 <code>warning</code>的主题色太亮，该风格轮廓按钮不建议使用 .
+</p>
+
 ### d.状态(states)
 
 - 正常(normal) - 悬停(hover) - 激活(active) - 聚焦(focus)
@@ -169,47 +173,126 @@
 #### 图标按钮(icon)
 
 ```html
-<p class="field">
-  <a class="button">
-    <span class="icon is-small">
-      <i class="fa fa-bold"></i>
+<a class="v-btn">
+  <span class="has-icon">
+    <i class="fa fa-github"></i>
+  </span>
+  <span>GitHub</span>
+</a>
+<a class="v-btn is-primary">
+  <span class="has-icon">
+      <i class="fa fa-chrome fa-lg"></i>
     </span>
-  </a>
-  <a class="button">
-    <span class="icon is-small">
-      <i class="fa fa-italic"></i>
-    </span>
-  </a>
-  <a class="button">
-    <span class="icon is-small">
-      <i class="fa fa-underline"></i>
-    </span>
-  </a>
-</p>
+  <span>Chrome</span>
+</a>
 ```
 
-#### 按钮组(button group)
+<div class="demo-box">
+  <a class="v-btn is-medium">
+    <span class="has-icon">
+      <i class="fa fa-github"></i>
+    </span>
+    <span>GitHub</span>
+  </a>
+  <a class="v-btn is-primary">
+    <span class="has-icon">
+      <i class="fa fa-chrome fa-lg"></i>
+    </span>
+    <span>Chrome</span>
+  </a>
+</div>
+
+#### 按钮组(group buttons)
+
+Grouped按钮组是单行按钮布局(Base on `Flex`)，主要由`v-field`容器修饰符`is-grouped`来控制`v-control`容器布局做到的，这两个容器是必须的 .
 
 ```html
-<p class="filed is-grouped">
-
-</p>
-```
-
-#### 附加按钮(addons button)
-
-```html
-<div class="field has-addons">
-  <p class="control">
-    <a class="button">
-      <span class="icon is-small">
-        <i class="fa fa-align-left"></i>
-      </span>
-      <span>Left</span>
-    </a>
+<div class="v-field is-grouped">
+  <p class="v-control">
+    <a class="v-btn is-primary">Submit</a>
+  </p>
+  <p class="v-control is-expanded">
+    <a class="v-btn">Cancel</a>
   </p>
 </div>
 ```
+
+<div class="demo-box has-pad-sm">
+  <div class="v-field is-grouped">
+    <p class="v-control">
+      <a class="v-btn is-primary">
+        <span class="has-icon">
+          <i class="fa fa-rocket"></i>
+        </span>
+        <span>
+          Biu Biu ...
+        </span>
+      </a>
+    </p>
+    <p class="v-control is-expanded">
+      <a class="v-btn">
+        <span class="has-icon">
+          <i class="fa fa-power-off"></i>
+        </span>
+        <span>
+          Power off
+        </span>
+      </a>
+    </p>
+  </div>
+</div>
+
+<p class="tip">
+  详细的 <code>v-field</code>, <code>v-control</code> 用法说明以及设计概要将会在 Form 章节中讲解 .
+</p>
+
+#### 附加按钮(addons buttons)
+
+Addon主要由`v-field`容器修饰符`has-addons`来控制`v-control`容器样式做到的，这两个容器是必须的 .
+
+```html
+<div class="v-field has-addons has-addons-centered">
+  <p class="v-control">
+    <a class="v-btn"><span class="has-icon"><i class="fa fa-backward"></i></span></a>
+  </p>
+  <p class="v-control">
+    <a class="v-btn">
+      <span class="has-icon has-text-danger"><i class="fa fa-play"></i></span>
+      <span>Play</span>
+    </a>
+  </p>
+  ...
+</div>
+```
+
+<div class="demo-box has-pad-sm">
+  <div class="v-field has-addons has-addons-centered">
+    <p class="v-control">
+      <a class="v-btn">
+        <span class="has-icon">
+          <i class="fa fa-backward"></i>
+        </span>
+        <span>Back</span>
+      </a>
+    </p>
+    <p class="v-control">
+      <a class="v-btn">
+        <span class="has-icon has-text-danger">
+          <i class="fa fa-play"></i>
+        </span>
+        <span>Play</span>
+      </a>
+    </p>
+    <p class="v-control">
+      <a class="v-btn">
+        <span class="has-icon">
+          <i class="fa fa-forward"></i>
+        </span>
+        <span>Next</span>
+      </a>
+    </p>
+  </div>
+</div>
 
 <script>
   export default {

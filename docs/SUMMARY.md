@@ -15,7 +15,7 @@
   * [Notification](elements/notifications.md)
   * [Content](elements/content.md)
   * [Box](elements/box.md)
-  * Icon
+  * [Icon](elements/icon.md)
 
 * Components(组件) {is-dropdown}
   * Modal
@@ -29,6 +29,8 @@
   * Customize
 
 <style lang="scss">
+  @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+  @import url("https://at.alicdn.com/t/font_299456_81qcthgrkonu3di.css");
   @import "~root/scss/vui.scss";
   @import "~root/docs_lib/common.scss";
 </style>

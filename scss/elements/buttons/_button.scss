@@ -18,6 +18,7 @@ $button-link-hover-color: $text-strong !default;
 .#{$ns}-btn {
   //@include make-element-default;
   @include control-input;
+  @include unselectable;
 
   background-color: $button-bg-color;
   border-color: $button-bd-color;
@@ -137,9 +138,30 @@ $button-link-hover-color: $text-strong !default;
     }
   }
 
-  // Helpers
-  > .as-icon {
-    @include make-icon-addon;
+  // Icons
+  .has-icon {
+    &,
+    &.is-small,
+    &.is-medium,
+    &.is-large {
+      height: 1.5em;
+      width: 1.5em;
+    }
+
+    &:first-child:not(:last-child) {
+      margin-left: calc(-0.375em - 1px);
+      margin-right: 0.1875em;
+    }
+
+    &:last-child:not(:first-child) {
+      margin-left: 0.1875em;
+      margin-right: calc(-0.375em - 1px);
+    }
+
+    &:first-child:last-child {
+      margin-left: calc(-0.375em - 1px);
+      margin-right: calc(-0.375em - 1px);
+    }
   }
 }
 

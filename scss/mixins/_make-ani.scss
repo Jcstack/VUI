@@ -12,3 +12,16 @@
 @mixin make-spin-around {
   animation: spin-around 500ms infinite linear;
 }
+
+@mixin loader {
+  @include make-spin-around;
+  border: 2px solid $border;
+  border-radius: 290486px;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  content: "";
+  display: block;
+  height: 1em;
+  position: relative;
+  width: 1em;
+}
