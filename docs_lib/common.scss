@@ -31,4 +31,12 @@ body {}
       }
     }
   }
+
+  p {
+    &.v-help {
+      line-height: normal;
+      font-size: 0.75rem;
+      margin-top: 0.25rem;
+    }
+  }
 }

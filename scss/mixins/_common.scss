@@ -14,8 +14,7 @@
   @if $height != 0 {
     left: calc(50% - (#{$width} / 2) - 0.5px);
     top: calc(50% - (#{$height} / 2) - 0.5px);
-  }
-  @else {
+  } @else {
     left: calc(50% - (#{$width} / 2) - 0.5px);
     top: calc(50% - (#{$width} / 2) - 0.5px);
   }
@@ -36,6 +35,29 @@
 
   // 去除默认焦点
   outline: none;
+}
+
+@mixin placeholder {
+  $placeholders: ":-moz" ":-webkit-input" "-moz" "-ms-input";
+
+  @each $placeholder in $placeholders {
+    &:#{$placeholder}-placeholder {
+      @content;
+    }
+  }
+}
+
+@mixin arrow($color) {
+  border: 1px solid $color;
+  border-right: 0;
+  border-top: 0;
+  content: " ";
+  display: block;
+  height: 0.5em;
+  pointer-events: none;
+  position: absolute;
+  transform: rotate(-45deg);
+  width: 0.5em;
 }
 
 // 重置ul

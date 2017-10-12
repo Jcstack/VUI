@@ -21,7 +21,8 @@
   border-top-color: transparent;
   content: "";
   display: block;
+  box-sizing: $box-sizing;
   height: 1em;
-  position: relative;
   width: 1em;
+  position: relative;
 }

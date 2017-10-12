@@ -1,7 +1,7 @@
 $input-color: $grey-darker !default;
 $input-background-color: $white !default;
 $input-border-color: $grey-lighter !default;
-$input-shadow: inset 0 1px 2px rgba($black, 0.1) !default;
+// $input-shadow: inset 0 1px 2px rgba($black, 0.1) !default;
 
 $input-hover-color: $grey-darker !default;
 $input-hover-border-color: $grey-light !default;
@@ -21,6 +21,11 @@ $input-icon-color: $grey-lighter !default;
 $input-icon-active-color: $grey !default;
 
 $input-radius: $radius !default;
+
+$label-color: $grey-darker !default;
+$label-weight: $weight-bold !default;
+
+$help-size: $size-small !default;
 
 @mixin input {
   @include control-input;

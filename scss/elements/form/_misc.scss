@@ -1,0 +1,66 @@
+.#{$ns}-checkbox,
+.#{$ns}-radio {
+  @include unselectable;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1.25;
+  position: relative;
+
+  input {
+    cursor: pointer;
+  }
+
+  &:hover {
+    color: $input-hover-color;
+  }
+
+  &[disabled] {
+    color: $input-disabled-color;
+    cursor: not-allowed;
+  }
+}
+
+.#{$ns}-radio {
+  & + .#{$ns}-radio {
+    margin-left: 1em;
+  }
+}
+
+.#{$ns}-label {
+  color: $label-color;
+  display: block;
+  font-size: $size-normal;
+  font-weight: $label-weight;
+  line-height: 1.5em;
+
+  &:not(:last-child) {
+    margin-bottom: 0.5em;
+  }
+
+  // Sizes
+  &.is-small {
+    font-size: $size-small;
+  }
+
+  &.is-medium {
+    font-size: $size-medium;
+  }
+
+  &.is-large {
+    font-size: $size-large;
+  }
+}
+
+.#{$ns}-help {
+  display: block;
+  font-size: $help-size;
+  margin-top: 0.25rem;
+
+  @each $name, $pair in $colors {
+    $color: nth($pair, 1);
+
+    &.is-#{$name} {
+      color: $color;
+    }
+  }
+}

@@ -1,20 +1,5 @@
 @import "button-meta";
 
-$button-bd-radius: $element-bd-radius !default;
-$button-bd-color: $element-bd-color !default;
-$button-bg-color: $element-bg-color !default;
-$button-disabled-bg-color: $element-disabled-bg-color !default;
-$button-text-color: $is-text-darken-color !default;
-
-$button-focus-color: $link-focus !default;
-$button-focus-border-color: $link-focus-border !default;
-$button-focus-box-shadow-size: 0 0 0 0.125em !default;
-$button-focus-box-shadow-color: rgba($link, 0.25) !default;
-
-$button-link-color: $text !default;
-$button-link-hover-background-color: $background !default;
-$button-link-hover-color: $text-strong !default;
-
 .#{$ns}-btn {
   //@include make-element-default;
   @include control-input;
