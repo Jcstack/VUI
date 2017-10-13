@@ -1,3 +1,10 @@
+$icon-default-bd-color: $element-bd-color !default;
+
+$icon-dimensions: 1.5rem !default; // 24px
+$icon-dimensions-small: 1rem !default; // 16px
+$icon-dimensions-medium: 2rem !default; // 32px
+$icon-dimensions-large: 3rem !default; // 48px
+
 @mixin make-icons-variant($color) {
   .is-icon-arrow {
     &::after {

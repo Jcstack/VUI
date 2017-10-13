@@ -310,7 +310,7 @@ Vui表单样式控制，并非局限`form`元素，这里更多作为一个收�
       <div class="v-field has-addons">
         <p class="v-control">
           <a class="v-btn is-static">
-            +44
+            +86
           </a>
         </p>
         <p class="v-control is-expanded">
@@ -441,7 +441,7 @@ Vui表单样式控制，并非局限`form`元素，这里更多作为一个收�
         <div class="v-field has-addons">
           <p class="v-control">
             <a class="v-btn is-static">
-              +44
+              +86
             </a>
           </p>
           <p class="v-control is-expanded">
