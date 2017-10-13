@@ -24,6 +24,8 @@
     <p class="v-control">
       <input type="tel" class="v-input is-danger" placeholder=".is-danger">
     </p>
+  </div>
+  <div class="v-field">
     <p class="v-control">
       <input type="email" class="v-input is-primary" placeholder=".is-primary">
     </p>

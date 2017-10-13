@@ -1,6 +1,7 @@
 //@import "~root/scss/pre";
 
-body {}
+body {
+}
 
 .demo-box {
   padding: 25px 0;
@@ -25,7 +26,7 @@ body {}
       }
     }
 
-    &.is-large{
+    &.is-large {
       .iconfont {
         font-size: 2.5rem;
       }
@@ -33,10 +34,50 @@ body {}
   }
 
   p {
+    // clear user agent style
     &.v-help {
       line-height: normal;
       font-size: 0.75rem;
       margin-top: 0.25rem;
     }
+    &.v-control {
+      margin: 0;
+    }
+  }
+
+  &.sd-form-example-cnt {
+    padding: 30px 25px !important;
+    width: 95%;
+    border: 1px solid #eeeeee;
+    border-radius: 4px;
+    position: relative;
+    margin: 40px 0;
+    &:after {
+      content: "Form Example";
+      position: absolute;
+      top: -10px;
+      left: 15px;
+      background-color: #f9da00;
+      color: #393f48;
+      font-size: 12px;
+      line-height: 1em;
+      padding: 4px 5px;
+      border-radius: 2px;
+    }
+  }
+}
+
+.__too-long-hl-code {
+  max-height: 180px;
+  overflow: scroll;
+  opacity: .6;
+  cursor: pointer;
+  position: relative;
+  transition: opacity .5s;
+  &:after {
+    content: "点击展开";
+  }
+  &:hover {
+    opacity: 1;
   }
 }
