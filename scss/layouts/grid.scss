@@ -82,7 +82,7 @@ $grids-number: 12;
   }
 }
 
-.#{$ns}-columns {
+.#{$ns}-cols {
   margin-left: -$column-gap;
   margin-right: -$column-gap;
   margin-top: -$column-gap;
@@ -130,7 +130,7 @@ $grids-number: 12;
   }
 }
 
-.#{$ns}-column {
+.#{$ns}-col {
   display: block;
   flex-basis: 0;
   flex-grow: 1;

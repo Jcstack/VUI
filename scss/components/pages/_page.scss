@@ -18,7 +18,7 @@ $flip-bg-color: $primary !default;
   }
 
   .page-list {
-    @include resetul;
+    @include reset-ul;
 
     border-top: 1px solid $flip-bd-color;
     border-bottom: 1px solid $flip-bd-color;
@@ -51,7 +51,7 @@ $flip-bg-color: $primary !default;
   > .page-item {
     width: 100%;
 
-    @include resetul;
+    @include reset-ul;
 
     > .as-icon {
       @include make-icon-addon;

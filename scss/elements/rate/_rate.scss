@@ -7,7 +7,7 @@ $rate-bg-color: $element-bd-color !default;
   align-items: center;
 
   > .rate-item {
-    @include resetul;
+    @include reset-ul;
 
     display: inline-block;
 

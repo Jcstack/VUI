@@ -1,0 +1,79 @@
+$notification-background-color: $background !default;
+$notification-radius: $radius !default;
+$notification-padding: 1.25rem 2.5rem 1.25rem 1.5rem !default;
+$notification-zindex: 1010;
+
+.#{$ns}-notification {
+  @include block-row;
+
+  background-color: $notification-background-color;
+  border-radius: $notification-radius;
+  padding: $notification-padding;
+  position: relative;
+
+  a:not(.button) {
+    color: currentColor;
+    text-decoration: underline;
+  }
+
+  strong {
+    color: currentColor;
+  }
+
+  code,
+  pre {
+    background: $white;
+  }
+
+  pre code {
+    background: transparent;
+  }
+
+  & > .#{$ns}-close {
+    position: absolute;
+    right: 0.5em;
+    top: 0.5em;
+  }
+
+  .#{$ns}-title,
+  .#{$ns}-subtitle,
+  .#{$ns}-content {
+    color: currentColor;
+  }
+
+  // Colors
+  @each $name, $pair in $colors {
+    $color: nth($pair, 1);
+    $color-invert: nth($pair, 2);
+
+    &.is-#{$name} {
+      background-color: $color;
+      color: $color-invert;
+    }
+  }
+}
+
+// Popup
+.#{$ns}-notification-popup {
+  position: fixed;
+  right: 16px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, .04), 0 1px 4px rgba(0, 0, 0, .15);
+  transition: opacity 0.3s, transform .3s, right .3s, top 0.4s;
+  overflow: hidden;
+  z-index: $notification-zindex;
+  max-width: 480px;
+
+  > .#{$ns}-notification {
+    padding-top: 1rem;
+  }
+
+  .has-title {
+    padding: 0;
+    margin: 0;
+    font-size: $size-medium;
+  }
+
+  .has-content {
+    padding-top: 0.25rem;
+  }
+}

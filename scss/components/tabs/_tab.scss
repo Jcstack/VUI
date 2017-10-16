@@ -11,7 +11,7 @@ $tab-active-bd-color: darken($tab-bd-color, 40) !default;
   justify-content: flex-start;
   align-items: center;
 
-  @include resetul;
+  @include reset-ul;
   @include unselectable;
 
   border-bottom: 1px solid $tab-bd-color;

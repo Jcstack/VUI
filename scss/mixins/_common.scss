@@ -61,7 +61,7 @@
 }
 
 // 重置ul
-@mixin resetul {
+@mixin reset-ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -70,13 +70,13 @@
 // 行块
 @mixin block-row {
   &:not(:last-child) {
-    margin-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
   }
 }
 
 // 列块
 @mixin block-col {
   &:not(:last-child) {
-    margin-right: 0.5rem;
+    margin-right: 1.5rem;
   }
 }
