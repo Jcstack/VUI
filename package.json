@@ -11,7 +11,8 @@
     "build-icon": "node scripts/build-icon",
     "build": "npm run build-icon && npm run build-sass && npm run build-vui",
     "test": "npm run build",
-    "watch-doc": "sd watch"
+    "watch-doc": "sd watch",
+    "test-pkgs": "./node_modules/.bin/ava --tap packages/**/*.spec.js"
   },
   "repository": {
     "type": "git",
@@ -25,15 +26,27 @@
   "bugs": {
     "url": "https://github.com/savjs/sav-vui/issues"
   },
+  "ava": {
+    "require": [
+      "./packages/.test.setup.js"
+    ]
+  },
   "devDependencies": {
+    "ava": "^0.22.0",
+    "avoriaz": "^6.0.0",
+    "browser-env": "^3.2.1",
     "font-awesome": "^4.7.0",
     "fs-extra": "^3.0.1",
     "node-sass": "^4.5.3",
     "photon": "github:connors/photon",
+    "require-extension-hooks": "^0.3.2",
+    "require-extension-hooks-babel": "^0.1.1",
+    "require-extension-hooks-vue": "^0.4.1",
     "rollup-standalone": "future",
     "standard-sass": "0.0.6",
-    "vue": "2.3.4",
+    "vue": "^2.5.2",
     "vue-router": "^2.5.3",
+    "vue-template-compiler": "^2.5.2",
     "watch-cli": "^0.2.1"
   },
   "homepage": "https://github.com/savjs/sav-vui#readme",

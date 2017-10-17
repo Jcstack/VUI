@@ -24,7 +24,7 @@
   import SavIcon from './SavIcon.vue'
   import SavBtn from './SavBtn.vue'
   import {createMixins} from '../mixin'
-  import {getScrollBarSize} from '../utils/util.js'
+  import {getScrollBarSize} from '../utils'
   export default {
     mixins: createMixins(['align']),
     components: {

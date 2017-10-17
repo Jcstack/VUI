@@ -4,7 +4,7 @@
   </div>
 </template>
 <script>
-  import {trust} from '../utils/util.js'
+  import {trust} from '../utils'
   export default {
     props: {
       col: {

@@ -3,7 +3,7 @@
 </template>
 <script>
   import SavSelect from '../components/SavSelect.vue'
-  import {makeOptions} from '../utils/util.js'
+  import {makeOptions} from '../utils'
 
   export default {
     props: {

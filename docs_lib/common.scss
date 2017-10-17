@@ -33,18 +33,6 @@ body {
     }
   }
 
-  p {
-    // clear user agent style
-    &.v-help {
-      line-height: normal;
-      font-size: 0.75rem;
-      margin-top: 0.25rem;
-    }
-    &.v-control {
-      margin: 0;
-    }
-  }
-
   &.sd-form-example-cnt {
     padding: 30px 25px !important;
     width: 95%;
@@ -64,6 +52,21 @@ body {
       padding: 4px 5px;
       border-radius: 2px;
     }
+  }
+}
+
+p {
+  // clear user agent style
+  &.v-help {
+    line-height: normal;
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+  }
+  &.v-control {
+    margin: 0;
+  }
+  &.v-modal-card-title {
+    margin: 0;
   }
 }
 

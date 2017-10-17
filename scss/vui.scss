@@ -28,11 +28,12 @@ $ns: "v";
 //@import "elements/checks/check-meta";
 
 
-@import "elements/tables/table";
-@import "elements/tables/table-meta";
+//@import "elements/tables/table";
+//@import "elements/tables/table-meta";
+//
+//@import "elements/badge/badge";
 
-@import "elements/badge/badge";
-
+@import "components/modal/modal";
 @import "components/tabs/tab";
 @import "components/tabs/tab-meta";
 
@@ -62,7 +63,6 @@ $ns: "v";
 
 @import "elements/tooltips/tooltip";
 
-@import "components/modals/modal";
 @import "components/datepicker/datepicker";
 @import "components/popupovers/popupover";
 

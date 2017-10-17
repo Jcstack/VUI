@@ -7,7 +7,7 @@
 </template>
 <script>
   import {createMixins} from '../mixin'
-  import {trust} from '../utils/util.js'
+  import {trust} from '../utils'
   export default {
     mixins: createMixins(['align']),
     props: {

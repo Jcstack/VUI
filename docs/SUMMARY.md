@@ -23,7 +23,7 @@
   * [Content](elements/content.md)
 
 * Components(组件) {is-dropdown}
-  * Modal
+  * [Modal](components/modal.md)
   * Card
   * Pagination
 
@@ -32,6 +32,7 @@
 
 * Advanced(进阶)
   * Customize
+  * [Examples](examples.md)
 
 <style lang="scss">
   @import url("https://cdn.bootcss.com/animate.css/3.5.2/animate.css");

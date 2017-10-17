@@ -9,7 +9,7 @@
 </template>
 <script>
   import {elements, options} from '../mixin'
-  import {trust} from '../utils/util.js'
+  import {trust} from '../utils'
   let incId = 0
   export default {
     mixins: [...elements, ...options],

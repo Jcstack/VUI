@@ -9,6 +9,7 @@ Object.defineProperty(module.exports, 'use', {
     const webpackConfig = ctx.RESOLVED_WEBPACK_CONFIG
 
     webpackConfig.resolve.alias['root'] = path.resolve(__dirname, '..')
+    webpackConfig.resolve.alias['packages'] = path.resolve(__dirname, '../packages')
 
     return Promise.resolve()
   }
