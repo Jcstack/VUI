@@ -1,0 +1,77 @@
+$sidebar-item-color: $text !default;
+$sidebar-item-radius: $radius-small !default;
+$sidebar-item-hover-color: $text-strong !default;
+$sidebar-item-hover-background-color: $background !default;
+$sidebar-item-active-color: $link-invert !default;
+$sidebar-item-active-background-color: $link !default;
+
+$sidebar-list-border-left: 1px solid $border !default;
+
+$sidebar-label-color: $text-light !default;
+
+.#{$ns}-sidebar {
+  font-size: $size-unit;
+
+  // Sizes
+  &.is-small {
+    font-size: $size-small;
+  }
+
+  &.is-medium {
+    font-size: $size-medium;
+  }
+
+  &.is-large {
+    font-size: $size-large;
+  }
+}
+
+.#{$ns}-sidebar-list {
+  @include reset-ul;
+  @include clear-margin-padding;
+
+  line-height: 1.25;
+
+  a {
+    border-radius: $sidebar-item-radius;
+    color: $sidebar-item-color;
+    display: block;
+    padding: 0.5em 0.75em;
+
+    &:hover {
+      background-color: $sidebar-item-hover-background-color;
+      color: $sidebar-item-hover-color;
+    }
+
+    // Modifiers
+    &.is-active {
+      background-color: $sidebar-item-active-background-color;
+      color: $sidebar-item-active-color;
+    }
+  }
+
+  li {
+    ul {
+      @include reset-ul;
+
+      border-left: $sidebar-list-border-left;
+      margin: 0.75em;
+      padding-left: 0.75em;
+    }
+  }
+}
+
+.#{$ns}-sidebar-label {
+  color: $sidebar-label-color;
+  font-size: 0.75em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  &:not(:first-child) {
+    margin-top: 1em;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 1em;
+  }
+}

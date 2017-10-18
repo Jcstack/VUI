@@ -60,6 +60,11 @@
   width: 0.5em;
 }
 
+@mixin clear-margin-padding {
+  margin: 0;
+  padding: 0;
+}
+
 // 重置ul
 @mixin reset-ul {
   list-style: none;
@@ -79,4 +84,15 @@
   &:not(:last-child) {
     margin-right: 1.5rem;
   }
+}
+
+// Responsive @todo
+@mixin desktop {
+  @media screen and (min-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin desktop-only {
+    @content;
 }

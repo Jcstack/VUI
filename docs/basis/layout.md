@@ -158,7 +158,7 @@
 </script>
 
 <style lang="scss" type="text/scss">
-  @import "~root/scss/pre";
+  @import "~root/scss/presets";
 
   .sd-grid-block {
     display: block;
