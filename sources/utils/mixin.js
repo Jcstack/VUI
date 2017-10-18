@@ -1,4 +1,4 @@
-import common from './mixins/common.js'
+import common from '../mixins/common.js'
 
 export function createMixins (types) {
   let ret = {

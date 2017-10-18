@@ -1,28 +1,28 @@
 <template>
   <table class="sav-table">
     <thead>
-      <tr>
-        <component
+    <tr>
+      <component
           :is="columnComponent"
           v-for="option in columns"
           :option="option"
           :textField="textField"
           :valueField="valueField"
-        ></component>
-      </tr>
+      ></component>
+    </tr>
     </thead>
     <tbody>
-      <slot>
-        <tr v-for="entry in rows">
-          <component
+    <slot>
+      <tr v-for="entry in rows">
+        <component
             v-for="option in columns"
             :is="option[componentField] || contentComponent"
             :option="option"
             :entry="entry"
             :valueField="valueField"
-            ></component>
-        </tr>
-      </slot>
+        ></component>
+      </tr>
+    </slot>
     </tbody>
   </table>
 </template>
@@ -36,7 +36,8 @@
 </component>
 
 <script>
-  import {createMixins} from '../mixin.js'
+  import { createMixins } from '../utils/mixin.js'
+
   export default {
     mixins: createMixins(['size', 'textField', 'valueField']),
     props: {
