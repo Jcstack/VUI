@@ -53,6 +53,7 @@
   "dependencies": {
     "gulp": "^3.9.1",
     "gulp-clean": "^0.3.2",
+    "is-type-of": "^1.2.0",
     "popper.js": "^1.10.8"
   }
 }

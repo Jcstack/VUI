@@ -24,6 +24,7 @@
 
 * Components(组件) {is-dropdown}
   * [Modal](components/modal.md)
+  * [Dropdown](components/dropdown.md)
   * Card
   * Pagination
 

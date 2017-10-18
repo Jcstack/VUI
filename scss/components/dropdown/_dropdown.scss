@@ -1,0 +1,93 @@
+$dropdown-content-background-color: $white !default;
+$dropdown-content-arrow: $link !default;
+$dropdown-content-offset: 4px !default;
+$dropdown-content-radius: $radius !default;
+$dropdown-content-shadow: 0 2px 3px rgba($black, 0.1), 0 0 0 1px rgba($black, 0.1) !default;
+$dropdown-content-z: 20 !default;
+
+$dropdown-item-color: $grey-dark !default;
+$dropdown-item-hover-color: $black !default;
+$dropdown-item-hover-background-color: $background !default;
+$dropdown-item-active-color: $primary-invert !default;
+$dropdown-item-active-background-color: $primary !default;
+
+$dropdown-divider-background-color: $border !default;
+
+.#{$ns}-dropdown {
+  display: inline-flex;
+  position: relative;
+  vertical-align: top;
+
+  &.is-active,
+  &.is-hoverable:hover {
+    .#{$ns}-dropdown-menu {
+      display: block;
+    }
+  }
+
+  &.is-right {
+    .#{$ns}-dropdown-menu {
+      left: auto;
+      right: 0;
+    }
+  }
+
+  &.is-up {
+    .#{$ns}-dropdown-menu {
+      bottom: 100%;
+      padding-bottom: $dropdown-content-offset;
+      padding-top: unset;
+      top: auto
+    }
+  }
+}
+
+.#{$ns}-dropdown-menu {
+  display: none;
+  left: 0;
+  min-width: 12 * $size-unit;
+  padding-top: $dropdown-content-offset;
+  position: absolute;
+  top: 100%;
+  z-index: $dropdown-content-z;
+}
+
+.#{$ns}-dropdown-content {
+  background-color: $dropdown-content-background-color;
+  border-radius: $dropdown-content-radius;
+  box-shadow: $dropdown-content-shadow;
+  padding-bottom: 0.5 * $size-unit;
+  padding-top: 0.5 * $size-unit;
+}
+
+.#{$ns}-dropdown-item {
+  color: $dropdown-item-color;
+  display: block;
+  font-size: 0.875 * $size-unit;
+  line-height: 1.5;
+  padding: 0.375 * $size-unit $size-unit;
+  position: relative;
+}
+
+a.#{$ns}-dropdown-item {
+  padding-right: 3 * $size-unit;
+  white-space: nowrap;
+
+  &:hover {
+    background-color: $dropdown-item-hover-background-color;
+    color: $dropdown-item-hover-color;
+  }
+
+  &.is-active {
+    background-color: $dropdown-item-active-background-color;
+    color: $dropdown-item-active-color;
+  }
+}
+
+.#{$ns}-dropdown-divider {
+  background-color: $dropdown-divider-background-color;
+  border: none;
+  display: block;
+  height: 1px;
+  margin: 0.5 * $size-unit 0;
+}

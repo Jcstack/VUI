@@ -70,6 +70,14 @@ p {
   }
 }
 
+.markdown-section figure, .markdown-section p, .markdown-section ul, .markdown-section ol {
+  margin: 0.5em 0;
+}
+
+.markdown-section ul, .markdown-section ol {
+  padding-left: 1rem;
+}
+
 .__too-long-hl-code {
   max-height: 180px;
   overflow: scroll;
