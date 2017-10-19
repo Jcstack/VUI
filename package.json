@@ -1,5 +1,5 @@
 {
-  "name": "svui",
+  "name": "@vui/core",
   "version": "0.0.1",
   "description": "Yet a really simple and impressive UI framework for SavJS",
   "main": "dist/vui.css",
@@ -18,8 +18,7 @@
     "url": ""
   },
   "author": {
-    "name": "jetiny",
-    "email": "86287344@qq.com"
+    "name": "HF.FE"
   },
   "ava": {
     "require": [
@@ -40,14 +39,14 @@
     "standard-sass": "0.0.6",
     "vue": "^2.5.2",
     "vue-router": "^2.5.3",
-    "vue-template-compiler": "^2.5.2",
     "watch-cli": "^0.2.1"
   },
   "dependencies": {
     "gulp": "^3.9.1",
     "gulp-clean": "^0.3.2",
     "is-type-of": "^1.2.0",
-    "popper.js": "^1.10.8"
+    "popper.js": "^1.10.8",
+    "vue-template-compiler": "^2.5.2"
   },
   "license": "MIT"
 }

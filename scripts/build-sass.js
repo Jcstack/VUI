@@ -2,10 +2,10 @@ const sass = require('node-sass')
 const path = require('path')
 const {mkdirAsync, writeFileAsync} = require('./file')
 
-let distCssDir = path.resolve(__dirname, '../dist/css/')
+let distCssDir = path.resolve(__dirname, '../dist/')
 
 let includePaths = [
-  path.resolve(__dirname, '../sass')
+  path.resolve(__dirname, '../scss')
 ]
 
 // nested, expanded, compact, compressed
@@ -20,12 +20,13 @@ mkdirAsync(distCssDir).then(() => {
       outFile: path.resolve(distCssDir, 'vui.css'),
       includePaths
     }),
-    // sassRenderAsync({
-    //   outputStyle,
-    //   file: path.resolve(__dirname, '../sass/photon.sass'),
-    //   outFile: path.resolve(distCssDir, 'photon.css'),
-    //   includePaths
-    // }),
+    sassRenderAsync({
+      outputStyle,
+      sourceMap: true,
+      file: path.resolve(__dirname, '../scss/generics.scss'),
+      outFile: path.resolve(distCssDir, 'generics.css'),
+      includePaths
+    }),
   ]).then(() => {
     console.log('Done')
   })

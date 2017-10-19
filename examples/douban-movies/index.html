@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Douban Movies</title>
+  <link rel="stylesheet" href="../../dist/generics.css">
+  <link rel="stylesheet" href="../../dist/vui.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.bootcss.com/vue/2.4.4/vue.js"></script>
+</head>
+<body>
+<div class="v-container">
+  <div class="v-cols">
+    <div class="v-col is-3">
+      left
+    </div>
+    <main class="v-col">
+      <div class="main-body" id="app">
+        <!-- start main body -->
+        <button class="v-btn is-primary"
+                @click="toggleComponent"
+        >toggle component</button>
+
+        <button class="v-btn is-danger"
+                @click="rebuildComponent"
+        >rebuild component</button>
+        <!-- custom component -->
+        <div class="v-field">
+          <component :is="component"></component>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script>
+    ~(function (host) {
+
+      let app = new Vue({
+        el: '#app',
+        data () {
+          return {
+            component: null
+          }
+        },
+
+        methods: {
+          toggleComponent () {
+            this.component = (this.component == null || this.component === 'c2') ? 'c1' : 'c2'
+          },
+
+          rebuildComponent () {
+            const ref = this.component
+
+            if (ref != null) {
+              this.component = null
+
+              this.$nextTick(() => {
+                this.component = ref
+              })
+            }
+          }
+        },
+
+        components: {
+          c1: {
+            template: `<p> first c1 @${Date.now()}</p>`,
+
+            mounted () {
+              console.info('c1 [Mounted] @' + Date.now())
+            }
+          },
+
+          c2: {
+            template: `<p> secondary c2  @${Date.now()}</p>`,
+
+            mounted () {
+              console.info('c2 [Mounted] @' + Date.now())
+            }
+          }
+        }
+      })
+
+    })(window)
+  </script>
+</div>
+</body>
+</html>

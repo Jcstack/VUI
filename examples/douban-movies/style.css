@@ -1,0 +1,12 @@
+.v-container > .v-cols > .v-col:first-child {
+    height: 100vh;
+    background-color: #F2F2F2;
+}
+
+.v-container > .v-cols > main {
+
+}
+
+.main-body {
+    padding: 1.2rem;
+}

@@ -1,6 +1,0 @@
-
-exports.ResHomeIndex = {
-  props: {
-    
-  }
-}
