@@ -37,6 +37,7 @@ $ns: "v";
 @import "components/dropdown/dropdown";
 @import "components/sidebar/sidebar";
 @import "components/navbar/navbar";
+@import "components/message/message";
 @import "components/tabs/tab";
 @import "components/tabs/tab-meta";
 
@@ -50,23 +51,23 @@ $ns: "v";
 
 //@import "components/forms/form";
 
-@import "components/trees/tree";
-@import "components/trees/tree-meta";
-
-@import "components/navs/nav";
-@import "components/navs/nav-meta";
-
-@import "elements/rate/rate";
-@import "elements/slider/slider";
-
-@import "components/pages/page";
-@import "elements/message/message";
-@import "elements/message/message-meta";
-@import "elements/switch/switch";
-
-@import "elements/tooltips/tooltip";
-
-@import "components/datepicker/datepicker";
-@import "components/popupovers/popupover";
+//@import "components/trees/tree";
+//@import "components/trees/tree-meta";
+//
+//@import "components/navs/nav";
+//@import "components/navs/nav-meta";
+//
+//@import "elements/rate/rate";
+//@import "elements/slider/slider";
+//
+//@import "components/pages/page";
+//@import "elements/message/message";
+//@import "elements/message/message-meta";
+//@import "elements/switch/switch";
+//
+//@import "elements/tooltips/tooltip";
+//
+//@import "components/datepicker/datepicker";
+//@import "components/popupovers/popupover";
 
 // @import elements/tables/table-meta

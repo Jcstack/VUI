@@ -1,7 +1,7 @@
 $notification-background-color: $background !default;
 $notification-radius: $radius !default;
 $notification-padding: 1.25rem 2.5rem 1.25rem 1.5rem !default;
-$notification-zindex: 1010;
+$notification-popup-zindex: 1010 !default;
 
 .#{$ns}-notification {
   @include block-row;
@@ -60,7 +60,7 @@ $notification-zindex: 1010;
   box-shadow: 0 0 3px rgba(0, 0, 0, .04), 0 1px 4px rgba(0, 0, 0, .15);
   transition: opacity 0.3s, transform .3s, right .3s, top 0.4s;
   overflow: hidden;
-  z-index: $notification-zindex;
+  z-index: $notification-popup-zindex;
   max-width: 480px;
 
   > .#{$ns}-notification {

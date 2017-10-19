@@ -27,6 +27,7 @@
   * [Dropdown](components/dropdown.md)
   * [Sidebar](components/sidebar.md)
   * [Navbar](components/navbar.md)
+  * [Message](components/message.md)
   * Card
   * Pagination
 

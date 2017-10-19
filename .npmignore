@@ -14,7 +14,10 @@ jspm_packages
 .npm
 .idea
 
+.sdocs
 test
 examples
 example
 demo
+__demo
+packages

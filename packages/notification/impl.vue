@@ -2,7 +2,7 @@
   <transition
       enter-active-class="animated bounceInRight"
       leave-active-class="animated fadeOut"
-      @after-leave="afterLeave"
+      @after-leave="_afterAnimatedLeave"
   >
     <div class="v-notification-popup"
          v-show="visible"
@@ -24,12 +24,12 @@
   </transition>
 </template>
 
-<script type="text/babel">
+<script>
 
   const typeMaps = {
     success: 'success',
     info: 'info',
-    warning: 'warn',
+    warning: 'warning',
     error: 'danger'
   }
 
@@ -61,7 +61,7 @@
       }
     },
     methods: {
-      afterLeave () {
+      _afterAnimatedLeave () {
         // Clear
         this.$nextTick(() => {
           this.$destroy()
