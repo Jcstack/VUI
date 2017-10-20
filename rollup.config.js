@@ -2,8 +2,8 @@ import babel from 'rollup-plugin-babel'
 import vue from 'rollup-plugin-vue2'
 
 export default {
-  entry: 'src/index.js',
-  dest: 'dist/sav-vui.js',
+  entry: 'packages/index.js',
+  dest: 'dist/vui.js',
   format: 'umd',
   plugins: [
     vue(),

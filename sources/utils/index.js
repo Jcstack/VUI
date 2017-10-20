@@ -91,7 +91,7 @@ export function getScrollBarSize (fresh) {
   return cached
 }
 
-const TransitionEndEvent = {
+export const TransitionEndEvent = {
   WebkitTransition: 'webkitTransitionEnd',
   MozTransition: 'transitionend',
   OTransition: 'oTransitionEnd otransitionend',
@@ -116,6 +116,27 @@ export function isVNode (node) {
 
 export function getFirstComponentChild (children) {
   return children && children.filter(c => c && c.tag)[0]
+}
+
+/**
+ * zero index base
+ * @param step {Number}
+ * @param ptrIndex {Number|null}
+ * @param maxLen {Number}
+ */
+export function pluckValidCircleIndex (step = 1, ptrIndex = null, maxLen) {
+  if (step && maxLen && step < maxLen) {
+    if (ptrIndex == null) {
+      ptrIndex = step > 0 ? 0 : (maxLen - 1)
+    } else {
+      ptrIndex = ptrIndex + step
+      ptrIndex = ptrIndex < 0 ? (maxLen - 1) : (
+        ptrIndex >= maxLen ? 0 : ptrIndex
+      )
+    }
+  }
+
+  return ptrIndex
 }
 
 export default utils

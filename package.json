@@ -10,6 +10,7 @@
     "build-sass": "node scripts/build-sass",
     "build": "npm run build-sass && npm run build-components",
     "test": "npm run build",
+    "test-units": "NODE_ENV=test-units ./node_modules/.bin/ava --tap tests/units/**/*.spec.js",
     "test-pkgs": "./node_modules/.bin/ava --tap packages/**/*.spec.js",
     "watch-doc": "sd watch"
   },
@@ -26,6 +27,7 @@
     ]
   },
   "devDependencies": {
+    "@vui/rollup-standalone": "0.0.1",
     "ava": "^0.22.0",
     "avoriaz": "^6.0.0",
     "browser-env": "^3.2.1",
@@ -35,7 +37,6 @@
     "require-extension-hooks": "^0.3.2",
     "require-extension-hooks-babel": "^0.1.1",
     "require-extension-hooks-vue": "^0.4.1",
-    "rollup-standalone": "future",
     "standard-sass": "0.0.6",
     "vue": "^2.5.2",
     "vue-router": "^2.5.3",
