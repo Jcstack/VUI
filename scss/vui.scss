@@ -1,6 +1,7 @@
 // Namespace
 $ns: "v";
 
+@import "base/animation";
 @import "functions/all";
 @import "variables/all";
 @import "mixins/all";
@@ -14,6 +15,13 @@ $ns: "v";
 @import "elements/notification/notification";
 @import "elements/misc/misc";
 
+
+@import "components/modal/modal";
+@import "components/dropdown/dropdown";
+@import "components/sidebar/sidebar";
+@import "components/navbar/navbar";
+@import "components/message/message";
+@import "components/tab/tab";
 
 //@import "elements/inputs/input";
 //@import "elements/inputs/input-meta";
@@ -31,14 +39,6 @@ $ns: "v";
 //@import "elements/tables/table-meta";
 //
 //@import "elements/badge/badge";
-
-@import "components/modal/modal";
-@import "components/dropdown/dropdown";
-@import "components/sidebar/sidebar";
-@import "components/navbar/navbar";
-@import "components/message/message";
-@import "components/tabs/tab";
-@import "components/tabs/tab-meta";
 
 //@import "components/layouts/container";
 //@import "components/layouts/flex";

@@ -1,0 +1,82 @@
+@import "../../scss/presets";
+
+.sd-example-search-douban {
+  background-color: #F2F2F2;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  > .search-field {
+    padding: 18vh 0;
+    width: 60vw;
+    margin: 0 auto;
+    flex: 6;
+    .v-control {
+      position: relative;
+    }
+  }
+
+  > .db-logo {
+    background-color: white;
+    text-align: center;
+    flex: 1;
+
+    img {
+      width: 160px;
+    }
+  }
+
+  .search-results {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    padding: 15px;
+    //border: 1px solid #ccc;
+    border-radius: $radius;
+    box-shadow: 1px 1px 5px #ddd;
+    min-width: 48vw;
+
+    .v-cols {
+      > .l:first-child {
+        .img-thumb {
+          background-color: #F2F2F2;
+          display: block;
+          width: 100px;
+          min-height: 120px;
+          img {
+            width: 100%;
+            vertical-align: top;
+          }
+        }
+      }
+
+      > .v-col:last-child {
+        padding-left: 1rem;
+
+        h2 {
+          font-weight: bold;
+        }
+
+        p {
+          font-size: $size-small;
+          padding: 10px 0;
+          strong {
+            color: $danger;
+            font-size: $size-small;
+          }
+        }
+      }
+    }
+
+    > ul {
+      > li {
+        padding-bottom: 10px;
+        &.is-active {
+          background-color: #F2F2F2;
+        }
+      }
+    }
+  }
+}

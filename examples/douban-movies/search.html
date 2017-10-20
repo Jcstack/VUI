@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Search Douban Movies</title>
+  <link rel="stylesheet" href="../../dist/generics.css">
+  <link rel="stylesheet" href="../../dist/vui.css">
+  <link rel="stylesheet" href="./search.css">
+  <script src="//cdn.bootcss.com/vue/2.4.4/vue.min.js"></script>
+  <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdn.bootcss.com/rxjs/6.0.0-alpha.0/Rx.js"></script>
+</head>
+<body>
+<main class="sd-example-search-douban">
+  <div class="v-field search-field">
+    <div class="v-control is-large">
+      <input type="text" name="key" class="v-input is-large" placeholder="Movie keywords">
+
+      <!-- results items -->
+      <div class="search-results" id="search_results" v-show="subjects.length > 0">
+        <ul>
+          <li v-for="el in subjects" class="v-cols" :key="el.id"
+              :class="{ 'is-active': curActiveId == el.id }"
+          >
+            <div class="l">
+              <span class="img-thumb">
+                <img :src="el.cover" alt="">
+              </span>
+            </div>
+            <div class="v-col">
+              <h2>
+                {{ el.title }}
+              </h2>
+              <p>
+                平均 <strong>{{ el.scores }}</strong> 分 <br>
+                {{  el.genres }}
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- end items -->
+    </div>
+  </div>
+  <div class="db-logo">
+    <img src="http://ww2.sinaimg.cn/crop.0.0.2044.2044.1024/699132e6jw1el9q06jcxej21kw1kw7cb.jpg" alt="">
+  </div>
+</main>
+<script src="search.module.js" type="module"></script>
+</body>
+</html>

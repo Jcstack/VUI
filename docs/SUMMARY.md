@@ -28,6 +28,7 @@
   * [Sidebar](components/sidebar.md)
   * [Navbar](components/navbar.md)
   * [Message](components/message.md)
+  * [Tabs](components/tab.md)
   * Card
   * Pagination
 

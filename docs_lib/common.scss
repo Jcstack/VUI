@@ -1,4 +1,5 @@
-body {}
+body {
+}
 
 .demo-box {
   padding: 25px 0;
@@ -73,6 +74,11 @@ p {
 
 .markdown-section ul, .markdown-section ol {
   padding-left: 1rem;
+}
+
+.sd-loading {
+  font-size: 2rem;
+  @include loader;
 }
 
 .__too-long-hl-code {

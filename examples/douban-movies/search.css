@@ -1,0 +1,52 @@
+.sd-example-search-douban {
+  background-color: #F2F2F2;
+  height: 100vh;
+  display: flex;
+  flex-direction: column; }
+  .sd-example-search-douban > .search-field {
+    padding: 18vh 0;
+    width: 60vw;
+    margin: 0 auto;
+    flex: 6; }
+    .sd-example-search-douban > .search-field .v-control {
+      position: relative; }
+  .sd-example-search-douban > .db-logo {
+    background-color: white;
+    text-align: center;
+    flex: 1; }
+    .sd-example-search-douban > .db-logo img {
+      width: 160px; }
+  .sd-example-search-douban .search-results {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 3px;
+    box-shadow: 1px 1px 5px #ddd;
+    min-width: 48vw; }
+    .sd-example-search-douban .search-results .v-cols > .l:first-child .img-thumb {
+      background-color: #F2F2F2;
+      display: block;
+      width: 100px;
+      min-height: 120px; }
+      .sd-example-search-douban .search-results .v-cols > .l:first-child .img-thumb img {
+        width: 100%;
+        vertical-align: top; }
+    .sd-example-search-douban .search-results .v-cols > .v-col:last-child {
+      padding-left: 1rem; }
+      .sd-example-search-douban .search-results .v-cols > .v-col:last-child h2 {
+        font-weight: bold; }
+      .sd-example-search-douban .search-results .v-cols > .v-col:last-child p {
+        font-size: 0.75rem;
+        padding: 10px 0; }
+        .sd-example-search-douban .search-results .v-cols > .v-col:last-child p strong {
+          color: #ff3860;
+          font-size: 0.75rem; }
+    .sd-example-search-douban .search-results > ul > li {
+      padding-bottom: 10px; }
+      .sd-example-search-douban .search-results > ul > li.is-active {
+        background-color: #F2F2F2; }
+
+/*# sourceMappingURL=search.css.map */

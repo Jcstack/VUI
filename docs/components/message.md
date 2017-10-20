@@ -9,13 +9,13 @@
 <div class="demo-box">
   <article class="v-message">
     <div class="v-message-body">
-      这是一个病毒链接 <a href="">http://www.baidu.com</a> ...
+      😈   &nbsp;这是一个病毒链接 <a href="">http://www.baidu.com</a> ...
     </div>
   </article>
 
   <article class="v-message is-warning">
     <div class="v-message-body">
-      你的快递被人拿走了 ...
+      💔  &nbsp;你的快递被人拿走了 ...
     </div>
   </article>
 
