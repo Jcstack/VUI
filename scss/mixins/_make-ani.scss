@@ -1,4 +1,12 @@
-// 旋转效果
+@mixin animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@mixin animated-infinite {
+  animation-iteration-count: infinite;
+}
+
 @mixin make-spin-around {
   animation: v-kf-spin-around 500ms infinite linear;
 }

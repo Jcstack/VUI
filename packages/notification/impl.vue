@@ -65,7 +65,7 @@
         // Clear
         this.$nextTick(() => {
           this.$destroy()
-          this.$el.parentNode.removeChild(this.$el)
+            this.$el.parentNode.removeChild(this.$el)
         })
       },
       handleClose () {
