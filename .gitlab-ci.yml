@@ -1,0 +1,66 @@
+variables:
+  NPM_REGISTRY: "npm.hfjy.red:4873"
+  NPM_AUTH_TOKEN: "NEp/wBNA7U3ZIvmic9+phQ=="
+before_script:
+  - CASE_PATH="$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME/${CI_BUILD_TAG:-$CI_BUILD_REF_NAME}"
+  - echo $CASE_PATH
+stages:
+  - deploy
+  - alertify
+
+deploy-branches:
+  stage: deploy
+  only:
+    - branches
+  variables:
+    PUB_TO: "dev@web.hfjy.red:/opt/case/web"
+  script:
+    - echo -e "//$NPM_REGISTRY/:_authToken=\"$NPM_AUTH_TOKEN\"\nregistry=http://$NPM_REGISTRY" > ~/.npmrc
+    - mkdir -p /tmp/runner_caches/$CASE_PATH/node_modules
+    - cp -f -r /tmp/runner_caches/$CASE_PATH/node_modules ./
+#    - npm install --registry=http://$NPM_REGISTRY --sass-binary-site=https://npm.taobao.org/mirrors/node-sass
+    - cp -f -r ./node_modules /tmp/runner_caches/$CASE_PATH/
+    - npm run test-units
+
+#    - ./node_modules/.bin/webpack
+#    - echo "$CI_BUILD_TAG" > ./dist/VERSION.txt
+
+    - mkdir -p "_tmpdir/$CASE_PATH"
+    - rsync -avur -e 'ssh -o StrictHostKeyChecking=no' _tmpdir/ $PUB_TO/
+
+    - echo "推送到开发节点 $PUB_TO/$CASE_PATH/"
+    - rsync -avur -e 'ssh -o StrictHostKeyChecking=no' --delete .sdocs-dist/ $PUB_TO/$CASE_PATH/
+
+#    - echo "推送到dev $PUB_TO/$CASE_PATH/"
+#    - rsync -avurz --delete -e 'ssh -o StrictHostKeyChecking=no -i /home/gitlab-runner/.ssh/spub_key' dist/ dev@192.168.0.207:/opt/case/test-preschool/
+
+#    - echo "推送到test dev@101.37.252.53:/opt/case/www/wwwroot/vui-core"
+#    - rsync -avurz --delete -e 'ssh -o StrictHostKeyChecking=no -i /home/gitlab-runner/.ssh/spub_key -p 16300'  dist/ dev@101.37.252.53:/opt/case/www/webroot/vui-core
+
+deploy-tags:
+  stage: deploy
+  only:
+    - tags
+    - triggers
+  variables:
+    PUB_TO: "dev@web.hfjy.red:/opt/case/web"
+  script:
+    - echo -e "//$NPM_REGISTRY/:_authToken=\"$NPM_AUTH_TOKEN\"\nregistry=http://$NPM_REGISTRY" > ~/.npmrc
+    - mkdir -p /tmp/runner_caches/$CASE_PATH/node_modules
+    - cp -f -r /tmp/runner_caches/$CASE_PATH/node_modules ./
+    - npm install --registry=http://$NPM_REGISTRY --sass-binary-site=https://npm.taobao.org/mirrors/node-sass >> /tmp/npm-install.log
+    - cp -f -r ./node_modules /tmp/runner_caches/$CASE_PATH/
+    - npm run test-units
+    - echo "$CI_BUILD_TAG" > ./dist/VERSION.txt
+
+#    - echo "推送到开发节点 $PUB_TO/$CASE_PATH/"
+#    - rsync -avur -e 'ssh -o StrictHostKeyChecking=no' --delete dist/ $PUB_TO/$CASE_PATH/
+#
+#    - echo "推送到dev $PUB_TO/$CASE_PATH/"
+#    - rsync -avurz --delete -e 'ssh -o StrictHostKeyChecking=no -i /home/gitlab-runner/.ssh/spub_key' dist/ dev@192.168.0.207:/opt/case/test-preschool/
+#
+#    - echo "推送到i-test dev@116.62.176.179:/opt/case/test-preschool/"
+#    - rsync -avurz --delete -e 'ssh -o StrictHostKeyChecking=no -i /home/gitlab-runner/.ssh/spub_key -p 16300' dist/ dev@116.62.176.179:/opt/case/test-preschool/
+#
+#    - echo "推送到S3 dev@121.40.170.38:/opt/case/test-preschool/"
+#    - rsync -avurz --delete -e 'ssh -o StrictHostKeyChecking=no -i /home/gitlab-runner/.ssh/spub_key -p 16300' dist/ dev@121.40.170.38:/opt/case/test-preschool/
