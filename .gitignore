@@ -1,5 +1,6 @@
 
 .sdocs
+.DS_Store
 
 # Logs
 logs
