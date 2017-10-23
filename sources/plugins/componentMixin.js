@@ -1,3 +1,4 @@
+import { camelCase, pascalCase, hyphenCase } from '../utils'
 
 export function componentMixin (Vue) {
   let extend = Vue.extend
@@ -68,39 +69,4 @@ function getComponentName (components, name) {
   }
   components[name] = {}
   return name
-}
-
-/**
- * Camelize a hyphen-delimited string.
- */
-const camelCaseRE = /[-_](\w)/g
-function camelCase (str) {
-  return lcfirst(str.replace(camelCaseRE, (_, c) => c ? c.toUpperCase() : ''))
-}
-
-/**
- * Capitalize a string.
- */
-function ucfirst (str) {
-  return str.charAt(0).toUpperCase() + str.slice(1)
-}
-
-/**
- * UnCapitalize a string.
- */
-function lcfirst (str) {
-  return str.charAt(0).toLowerCase() + str.slice(1)
-}
-
-const replaceAZRE = /([A-Z])/g
-
-/**
- * Hyphenate a camelCase string.
- */
-function hyphenCase (str) {
-  return camelCase(str).replace(replaceAZRE, '-$1').toLowerCase()
-}
-
-function pascalCase (str) {
-  return ucfirst(camelCase(str))
 }

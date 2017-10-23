@@ -2,8 +2,8 @@ const gulp = require('gulp')
 const path = require('path')
 
 function _covert () {
-  return gulp.src('../sass/**/*.scss')
-  .pipe(gulp.dest('../scss'))
+  return gulp.src('../scss/**/*.sass')
+  .pipe(gulp.dest('../sass'))
 }
 
 _covert().on('finish', () => {

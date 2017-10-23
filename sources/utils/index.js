@@ -139,5 +139,41 @@ export function pluckValidCircleIndex (step = 1, ptrIndex = null, maxLen) {
   return ptrIndex
 }
 
+/**
+ * Camelize a hyphen-delimited string.
+ */
+const camelCaseRE = /[-_](\w)/g
+
+export function camelCase (str) {
+  return lcfirst(str.replace(camelCaseRE, (_, c) => c ? c.toUpperCase() : ''))
+}
+
+/**
+ * Capitalize a string.
+ */
+export function ucfirst (str) {
+  return str.charAt(0).toUpperCase() + str.slice(1)
+}
+
+/**
+ * UnCapitalize a string.
+ */
+export function lcfirst (str) {
+  return str.charAt(0).toLowerCase() + str.slice(1)
+}
+
+const replaceAZRE = /([A-Z])/g
+
+/**
+ * Hyphenate a camelCase string.
+ */
+export function hyphenCase (str) {
+  return camelCase(str).replace(replaceAZRE, '-$1').toLowerCase()
+}
+
+export function pascalCase (str) {
+  return ucfirst(camelCase(str))
+}
+
 export default utils
 
