@@ -4,12 +4,23 @@
   <template v-for="el in ['primary', 'danger', 'info', 'success', 'black']">
     <v-btn :color-modifier="el"
            size-modifier="small"
+           v-tip.top="`this is a sav tip`"
            :is-loading="switcher"
            @click.native="switcher = !switcher"
     >
       click me
     </v-btn>
   </template>
+
+  <div style="padding-top: 30px;">
+    <popover-popper
+        title="Title"
+        content="hello body 我的世界 我快递费蓝思科技烦死你dffffs顶顶顶"
+        width="200"
+    >
+      <button class="v-btn" slot="reference">Toggle Popover</button>
+    </popover-popper>
+  </div>
 </div>
 
 <div class="demo-box">
@@ -42,9 +53,13 @@
   </div>
 </div>
 
-
 <script>
+  import Vue from 'vue'
   import VBtn from 'packages/button'
+  import TooltipInstaller from 'packages/tooltip'
+  import { PopoverPopper } from 'packages/popover'
+
+  Vue.use(TooltipInstaller)
 
   export default {
     data () {
@@ -62,7 +77,8 @@
     },
 
     components: {
-      VBtn
+      VBtn,
+      PopoverPopper
     }
   }
 </script>

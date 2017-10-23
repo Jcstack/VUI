@@ -1,5 +1,21 @@
 # 消息框 Messages
 
+由`v-message`修饰的一个消息容器 .
+
+```html
+<article class="v-message">
+  <div class="v-message-body">
+    😈   &nbsp;这是一个病毒链接 <a href="">http://www.baidu.com</a> ...
+  </div>
+</article>
+
+<article class="v-message is-warning">
+  <div class="v-message-body">
+    💔  &nbsp;你的快递被人拿走了 ...
+  </div>
+</article>
+```
+
 <div class="demo-box">
   <button class="v-btn" @click="_showMsg">
     show popup message

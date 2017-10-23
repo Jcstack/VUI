@@ -1,189 +1,175 @@
-import Popper from 'popper.js/dist/esm/popper.js'
-const PopperMixin = {
-    props: {
-        always: {
-            type: Boolean,
-            default: false
-        },
-        trigger: {
-            type: String,
-            default: 'click'
-        },
-        appendToBody: {
-            type: Boolean,
-            default: true
-        },
-        content: {
-            type: String,
-            default: ''
-        },
-        placement: {
-            type: String,
-            default: 'top'
-        },
-        disabled: {
-            type: Boolean,
-            default: false
-        },
-    },
+import PopupManager from '../utils/popup'
+import PopperJS from './popper'
 
-    data() {
+const stopPropagation = e => e.stopPropagation()
+
+/**
+ * @param {HTMLElement} [reference=$refs.reference] - The reference element used to position the popper.
+ * @param {HTMLElement} [popper=$refs.popper] - The HTML element used as popper, or a configuration used to generate the popper.
+ * @param {String} [placement=button] - Placement of the popper accepted values: top(-start, -end), right(-start, -end), bottom(-start, -end), left(-start, -end)
+ * @param {Number} [offset=0] - Amount of pixels the popper will be shifted (can be negative).
+ * @param {Boolean} [visible=false] Visibility of the popup element.
+ * @param {Boolean} [visible-arrow=false] Visibility of the arrow, no style.
+ */
+export default {
+  props: {
+    placement: {
+      type: String,
+      default: 'bottom'
+    },
+    boundariesPadding: {
+      type: Number,
+      default: 5
+    },
+    reference: {},
+    popper: {},
+    offset: {
+      default: 0
+    },
+    value: Boolean,
+    visibleArrow: Boolean,
+    transition: String,
+    appendToBody: {
+      type: Boolean,
+      default: true
+    },
+    popperOptions: {
+      type: Object,
+      default () {
         return {
-            reference: null,
-            popper: null,
-            isShow: false
-        };
-    },
-
-    watch: {
-        disabled(val) {
-            if (!val) {
-                this.runPopper()
-            } else {
-                this.destroy()
-            }
+          gpuAcceleration: false
         }
-    },
-
-    methods: {
-        toggle() {
-            this.isShow = !this.isShow
-            if (!this.isShow) {
-                this.timer = setTimeout(() => {
-                    this.popper.destroy()
-                    this.popper = null
-                }, 300)
-            }
-        },
-        // add delay
-        hidePopper() {
-            this.isShow = false
-            this.timer = setTimeout(() => {
-                this.popper.destroy() // destroy popper when hide
-                this.popper = null
-            }, 300)
-        },
-        showPopper() {
-            this.isShow = true
-            if (this.timer) clearTimeout(this.timer)
-            if (this.popperTimer) clearTimeout(this.popperTimer)
-        },
-
-        createInstance() {
-            // this.isShow = true;
-            this.showPopper()
-            if (this.popper) {
-                this.popper.update()
-                return
-            }
-            const placementMapper = {
-                top: 'top',
-                left: 'left',
-                right: 'right',
-                bottom: 'bottom',
-                topLeft: 'top-end',
-                topRight: 'top-start',
-                leftTop: 'left-end',
-                leftBottom: 'left-start',
-                bottomLeft: 'bottom-end',
-                bottomRight: 'bottom-start',
-                rightTop: 'right-end',
-                rightBottom: 'right-start',
-            };
-            const placement = placementMapper[this.placement] ? placementMapper[this.placement] : 'bottom'
-
-            const reference = this.reference = this.reference || this.$el.children[0]
-            const popperEl = this.$refs.popper
-            const options = {
-                placement
-            };
-            if (this.appendToBody) document.body.appendChild(popperEl)
-            this.popper = new Popper(reference, popperEl, options)
-        },
-
-        handleClick(e) {
-            e.stopPropagation()
-            if (this.$el.contains(e.target)) {
-                if (this.isShow) {
-                    this.isShow = false
-                    this.hidePopper()
-                } else {
-                    this.createInstance()
-                }
-            } else if (this.$refs.popper.contains(e.target)) {
-               this.isShow = true
-                this.showPopper()
-            } else {
-               this.isShow = false
-                /*eslint-disable */
-                if (this.isShow) this.hidePopper()
-                /*eslint-disable */
-            }
-        },
-
-        bindEvent() {
-            const reference = this.reference = this.reference || this.$el.children[0]
-            const popper = this.$refs.popper
-            if (!reference || !popper) return
-
-            if (this.trigger === 'hover') {
-                reference.addEventListener('mouseenter', this.createInstance)
-                reference.addEventListener('mouseleave', this.hidePopper)
-                popper.addEventListener('mouseenter', this.showPopper)
-                popper.addEventListener('mouseleave', this.hidePopper)
-            } else {
-                reference.addEventListener('click', this.handleClick)
-                popper.addEventListener('click', this.showPopper)
-                document.documentElement.addEventListener('click', this.handleClick)
-            }
-        },
-
-        runPopper() {
-            if (this.disabled) return
-            if (this.always) {
-                this.createInstance()
-            } else {
-                this.bindEvent()
-            }
-        },
-
-        destroy() {
-            if (this.popper) {
-                this.popper.destroy()
-                this.popper = null
-            }
-        },
-
-        removeEvent() {
-            if (!this.reference) return
-            const popper = this.$refs.popper
-            if (this.trigger === 'focus') {
-                this.reference.removeEventListener('focus', this.createInstance)
-                this.reference.removeEventListener('blur', this.toggle)
-            } else if (this.trigger === 'click') {
-                this.reference.removeEventListener('click', this.handleClick)
-                popper.removeEventListener('click', this.showPopper)
-                document.documentElement.removeEventListener('click', this.handleClick)
-            } else {
-                this.reference.removeEventListener('mouseenter', this.createInstance)
-                this.reference.removeEventListener('mouseleave', this.toggle)
-            }
-        }
-
-    },
-
-    mounted() {
-        // todo disabled,
-        this.runPopper()
-    },
-
-    beforeDestroy() {
-        this.removeEvent()
-        this.$refs.popper.remove()
-        this.destroy()
+      }
     }
+  },
 
+  data () {
+    return {
+      showPopper: false,
+      currentPlacement: ''
+    }
+  },
+
+  watch: {
+    value: {
+      immediate: true,
+      handler (val) {
+        this.showPopper = val
+        this.$emit('input', val)
+      }
+    },
+
+    showPopper (val) {
+      val ? this.updatePopper() : this.destroyPopper()
+      this.$emit('input', val)
+    }
+  },
+
+  methods: {
+    createPopper () {
+      if (this.$isServer) return
+      this.currentPlacement = this.currentPlacement || this.placement
+      if (!/^(top|bottom|left|right)(-start|-end)?$/g.test(this.currentPlacement)) {
+        return
+      }
+
+      const options = this.popperOptions
+      const popper = this.popperElm = this.popperElm || this.popper || this.$refs.popper
+      let reference = this.referenceElm = this.referenceElm || this.reference || this.$refs.reference
+
+      if (!reference &&
+        this.$slots.reference &&
+        this.$slots.reference[0]) {
+        reference = this.referenceElm = this.$slots.reference[0].elm
+      }
+
+      if (!popper || !reference) return
+      if (this.visibleArrow) this.appendArrow(popper)
+      if (this.appendToBody) document.body.appendChild(this.popperElm)
+      if (this.popperJS && this.popperJS.destroy) {
+        this.popperJS.destroy()
+      }
+
+      options.placement = this.currentPlacement
+      options.offset = this.offset
+      this.popperJS = new PopperJS(reference, popper, options)
+      this.popperJS.onCreate(_ => {
+        this.$emit('created', this)
+        this.resetTransformOrigin()
+        this.$nextTick(this.updatePopper)
+      })
+      if (typeof options.onUpdate === 'function') {
+        this.popperJS.onUpdate(options.onUpdate)
+      }
+      this.popperJS._popper.style.zIndex = PopupManager.nextZIndex()
+      this.popperElm.addEventListener('click', stopPropagation)
+    },
+
+    updatePopper () {
+      this.popperJS ? this.popperJS.update() : this.createPopper()
+    },
+
+    doDestroy () {
+      /* istanbul ignore if */
+      if (this.showPopper || !this.popperJS) return
+      this.popperJS.destroy()
+      this.popperJS = null
+    },
+
+    destroyPopper () {
+      if (this.popperJS) {
+        this.resetTransformOrigin()
+      }
+    },
+
+    resetTransformOrigin () {
+      let placementMap = {
+        top: 'bottom',
+        bottom: 'top',
+        left: 'right',
+        right: 'left'
+      }
+      let placement = this.popperJS._popper.getAttribute('x-placement').split('-')[0]
+      let origin = placementMap[placement]
+      this.popperJS._popper.style.transformOrigin = ['top', 'bottom'].indexOf(placement) > -1 ? `center ${ origin }` : `${ origin } center`
+    },
+
+    appendArrow (element) {
+      let hash
+      if (this.appended) {
+        return
+      }
+
+      this.appended = true
+
+      for (let item in element.attributes) {
+        if (/^_v-/.test(element.attributes[item].name)) {
+          hash = element.attributes[item].name
+          break
+        }
+      }
+
+      const arrow = document.createElement('div')
+
+      if (hash) {
+        arrow.setAttribute(hash, '')
+      }
+      arrow.setAttribute('x-arrow', '')
+      arrow.className = 'has-arrow'
+      element.appendChild(arrow)
+    }
+  },
+
+  beforeDestroy () {
+    this.doDestroy()
+    if (this.popperElm && this.popperElm.parentNode === document.body) {
+      this.popperElm.removeEventListener('click', stopPropagation)
+      document.body.removeChild(this.popperElm)
+    }
+  },
+
+  // call destroy in keep-alive mode
+  deactivated () {
+    this.$options.beforeDestroy[0].call(this)
+  }
 }
-
-export default PopperMixin
-

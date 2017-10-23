@@ -160,9 +160,7 @@ const getTopPopup = function () {
   if (PopupManager.modalStack.length > 0) {
     const topPopup = PopupManager.modalStack[PopupManager.modalStack.length - 1]
     if (!topPopup) return
-    const instance = PopupManager.getInstance(topPopup.id)
-
-    return instance
+    return PopupManager.getInstance(topPopup.id)
   }
 }
 

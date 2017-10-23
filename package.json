@@ -1,6 +1,6 @@
 {
   "name": "@vui/core",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Yet a really simple and impressive UI framework for SavJS",
   "main": "dist/vui.css",
   "homepage": "https://github.com/savjs/sav-vui#readme",
@@ -40,13 +40,12 @@
     "standard-sass": "0.0.6",
     "vue": "^2.5.2",
     "vue-router": "^2.5.3",
-    "watch-cli": "^0.2.1"
+    "watch-cli": "^0.2.1",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2"
   },
   "dependencies": {
-    "gulp": "^3.9.1",
-    "gulp-clean": "^0.3.2",
     "is-type-of": "^1.2.0",
-    "popper.js": "^1.10.8",
     "vue-template-compiler": "^2.5.2"
   },
   "license": "MIT"

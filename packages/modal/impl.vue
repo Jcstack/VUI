@@ -20,7 +20,7 @@
     <div class="v-modal-card">
       <header class="v-modal-card-head">
         <slot name="header">
-          <p class="v-modal-card-title">{{ title }}</p>
+          <div class="v-modal-card-title">{{ title }}</div>
           <button class="v-close"
                   @click="_handleClose"
           ></button>
