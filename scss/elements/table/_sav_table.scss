@@ -1,12 +1,12 @@
-$table-text-color: #495060 !default;
-$table-bd-color: #e9eaec !default;
+$table-text-color: $grey-dark !default;
+$table-bd-color: $grey-lighter !default;
 $table-bg-color: $element-bg-color !default;
 
-$table-even-bg-color: #f8f8f9 !default;
+$table-even-bg-color: $white-ter !default;
 $table-hover-bg-color: darken($table-bg-color, 6) !default;
 $table-active-bg-color: darken($table-bg-color, 8) !default;
 
-.sav-table {
+.#{$ns}-table {
   @include make-table;
 
   border: 1px solid $table-bd-color;
@@ -44,4 +44,19 @@ $table-active-bg-color: darken($table-bg-color, 8) !default;
       }
     }
   }
+
+  // Modifiers
+  &.is-small {
+    th, td {
+      @include make-size-sm;
+    }
+  }
+
+  &.is-large {
+    th, td {
+      @include make-size-lg;
+    }
+  }
 }
+
+

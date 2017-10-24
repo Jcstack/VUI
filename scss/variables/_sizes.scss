@@ -2,7 +2,7 @@
 $box-sizing: border-box;
 
 //// Typo Size . design base on root 16px ////
-$size-unit: 1rem !default;
+$size-unit: 1rem !default; // 16px
 $size-1: 3rem !default; // 48px
 $size-2: 2.5rem !default; // 40px
 $size-3: 2rem !default; // 32px
@@ -10,6 +10,10 @@ $size-4: 1.5rem !default; // 24px
 $size-5: 1.25rem !default; // 20px
 $size-6: 1rem !default; // 16px
 $size-7: 0.75rem !default; // 12px
+
+// Others
+// 0.875 * 16px = 14px
+// 1.125 * 16px = 18px
 
 $weight-light: 300 !default;
 $weight-normal: 400 !default;
@@ -30,10 +34,10 @@ $widescreen: 1192px !default;
 $fullhd: 1384px !default;
 
 // Meaningful size
-$size-small: $size-7 !default;
-$size-normal: $size-6 !default;
-$size-medium: $size-5 !default;
-$size-large: $size-4 !default;
+$size-small: $size-7 !default; // 12px
+$size-normal: $size-6 !default; // 16px
+$size-medium: $size-5 !default; // 20px
+$size-large: $size-4 !default; // 24px
 
 //// Lists
 $sizes: $size-1 $size-2 $size-3 $size-4 $size-5 $size-6 $size-7 !default;
