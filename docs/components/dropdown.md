@@ -107,9 +107,9 @@
   </div>
 </div>
 
-## 菜单对其
+## 菜单对齐
 
-- 由`[v-dropdown].is-right` 修饰符控制水平对其，默认左对齐 .
+- 由`[v-dropdown].is-right` 修饰符控制水平对齐，默认左对齐 .
 
 <div class="demo-box" pre>
   <div class="v-dropdown is-hoverable">
