@@ -10,8 +10,16 @@ export default {
       type: [Boolean, String],
       default: false
     },
+    extras: {
+      type: Array,
+      default: Array
+    },
+    state: {
+      type: String,
+      default: ''
+    },
     disabled: {
-      type: [Boolean, String],
+      type: Boolean,
       default: false
     },
     flex: {
@@ -64,34 +72,46 @@ export default {
     }
   },
   computed: {
-    sizeModify () {
-      return trust(this.size) ? `is-${this.size}` : ''
-    },
-    colModify () {
-      return trust(this.col) ? `is-${this.col}` : ''
-    },
-    offsetModify () {
-      return trust(this.offset) ? `is-offset-${this.offset}` : ''
-    },
-    colorModify () {
+    colorModifier () {
       return trust(this.color) ? `is-${this.color}` : ''
     },
-    disabledModify () {
+    sizeModifier () {
+      return trust(this.size) ? `is-${this.size}` : ''
+    },
+    extrasModifier () {
+      if (!this.extras || !Array.isArray(this.extras)) {
+        return ''
+      }
+
+      return this.extras.map(it => {
+        return `is-${it}`
+      })
+    },
+    stateModifier () {
+      return trust(this.state) ? `is-${this.state}` : ''
+    },
+    colModifier () {
+      return trust(this.col) ? `is-${this.col}` : ''
+    },
+    offsetModifier () {
+      return trust(this.offset) ? `is-offset-${this.offset}` : ''
+    },
+    disabledModifier () {
       return trust(this.disabled) ? `is-disabled` : ''
     },
-    flexModify () {
+    flexModifier () {
       return trust(this.flex) ? `is-${this.flex}` : ''
     },
-    typeModify () {
+    typeModifier () {
       return trust(this.type) ? `is-${this.type}` : ''
     },
-    alignModify () {
+    alignModifier () {
       return trust(this.align) ? `is-${this.align}` : ''
     },
-    blockModify () {
+    blockModifier () {
       return trust(this.block) ? `is-block` : ''
     },
-    verticalModify () {
+    verticalModifier () {
       return trust(this.vertical) ? `is-vertical` : ''
     }
   }

@@ -1,11 +1,17 @@
 <template>
   <div class="v-tooltip-popup">
-    <div class="v-tooltip">hello</div>
+    <div class="v-tooltip">
+      {{ text }}
+    </div>
   </div>
 </template>
 
 <script>
   export default {
-    name: 'VTooltip'
+    name: 'VTooltip',
+
+    props: {
+      text: String
+    }
   }
 </script>

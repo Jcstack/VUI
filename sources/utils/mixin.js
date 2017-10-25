@@ -12,7 +12,7 @@ export function createMixins (types) {
       ret.props[it] = common.props[it]
       hasProps = true
     }
-    let modify = `${it}Modify`
+    let modify = `${it}Modifier`
     if (common.computed[modify]) {
       ret.computed[modify] = common.computed[modify]
       hasComputed = true
@@ -24,9 +24,10 @@ export function createMixins (types) {
   if (!hasComputed) {
     delete ret.computed
   }
-  return [ret]
+
+  return ret
 }
 
-export const option = createMixins(['textField', 'valueField', 'value'])
-export const options = createMixins(['textField', 'valueField', 'options', 'value'])
-export const elements = createMixins(['color', 'size', 'disabled'])
+export const optionMixins = createMixins(['textField', 'valueField', 'value'])
+export const optionsMixins = createMixins(['textField', 'valueField', 'options', 'value'])
+export const elementMixins = createMixins(['color', 'size', 'state', 'disabled'])

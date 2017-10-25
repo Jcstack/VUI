@@ -3,8 +3,21 @@ import {
   pluckValidCircleIndex
 } from '../../sources/utils'
 
+import {
+ createMixins,
+ elements
+} from '../../sources/utils/mixin'
 
-test.only('test [pluckValidCircleIndex]', t => {
+test.only('test [createMixins]', t => {
+  const colorModifierMixin = createMixins(['color'])
+
+  t.true(colorModifierMixin.hasOwnProperty('props'), 'mixins need `props` attribute')
+  t.true(colorModifierMixin.props.hasOwnProperty('color'))
+  t.true('computed' in colorModifierMixin)
+  t.is(typeof colorModifierMixin.computed.colorModifier, 'function')
+})
+
+test('test [pluckValidCircleIndex]', t => {
 
   t.is(typeof pluckValidCircleIndex, 'function')
 

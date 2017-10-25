@@ -7,7 +7,6 @@
   * [Color & Size & Font](basis/color_size.md)
   * [Grid & Layout](basis/layout.md)
   * [Modifier](basis/modifiers.md)
-  * Animation
 
 * Elements(元件) {is-dropdown}
   * [Icon](elements/icon.md)
@@ -28,9 +27,8 @@
   * [Sidebar](components/sidebar.md)
   * [Navbar](components/navbar.md)
   * [Message](components/message.md)
+  * [Card](components/card.md)
   * [Tabs](components/tab.md)
-  * Card
-  * Pagination
 
 * Business(业务) {is-dropdown}
   * Fuzzy

@@ -2,8 +2,8 @@
 
 <div class="demo-box">
   <template v-for="el in ['primary', 'danger', 'info', 'success', 'black']">
-    <v-btn :color-modifier="el"
-           size-modifier="small"
+    <v-btn :color="el"
+           size="small"
            v-tip.top="`this is a sav tip`"
            :is-loading="switcher"
            @click.native="switcher = !switcher"

@@ -2,7 +2,7 @@ import { mount } from 'avoriaz'
 import test from 'ava'
 import Modal from './impl.vue'
 
-test.serial.only('test modal', t => {
+test.serial('test modal', t => {
   const wrapper = mount(Modal, {
     propsData: {
       visible: true

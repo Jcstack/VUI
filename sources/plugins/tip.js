@@ -1,10 +1,18 @@
-
-export default function initSavTip () {
+export function installSavTip () {
   if (installed) {
     return
   }
-  document.addEventListener('mousedown', click)
-  document.addEventListener('mousemove', move)
+  document.addEventListener('mousedown', click, false)
+  document.addEventListener('mousemove', move, false)
+}
+
+export function uninstallSavTip () {
+  if (!installed) {
+    return
+  }
+
+  document.removeEventListener('mousedown', click, false)
+  document.removeEventListener('mousemove', move, false)
 }
 
 let tip

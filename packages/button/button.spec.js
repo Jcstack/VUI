@@ -3,11 +3,11 @@ import test from 'ava'
 import Button from './impl.vue'
 
 
-test.serial('test button', t => {
+test.serial.only('test button', t => {
   const wrapper = mount(Button, {
     propsData: {
-      colorModifier: 'primary',
-      sizeModifier: 'large',
+      color: 'primary',
+      size: 'large',
       isLoading: true
     }
   })

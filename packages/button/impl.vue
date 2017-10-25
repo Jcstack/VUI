@@ -8,18 +8,14 @@
 </template>
 
 <script>
+  import { elementMixins } from '../../sources/utils/mixin'
+
   export default {
     name: 'VButton',
 
+    mixins: [ elementMixins ],
+
     props: {
-      colorModifier: {
-        type: String,
-        'default': ''
-      },
-      sizeModifier: {
-        type: String,
-        'default': ''
-      },
       isLoading: {
         type: Boolean,
         'default': false
@@ -28,11 +24,12 @@
 
     computed: {
       _modeClass () {
-        let mode = {}
+        let mode = []
 
-        mode[`is-${this.colorModifier}`] = (this.colorModifier !== '')
-        mode[`is-${this.sizeModifier}`] = (this.sizeModifier !== '')
-        mode[`is-loading`] = this.isLoading
+        mode.push(this.colorModifier)
+        mode.push(this.sizeModifier)
+
+        this.isLoading && mode.push(`is-loading`)
 
         return mode
       }

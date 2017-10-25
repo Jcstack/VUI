@@ -3,10 +3,10 @@ Yet a really simple and impressive UI framework for **SavJS** .
 
 ## Get Started
 
-Checkout the source code then ...
+#### From local npm
 
 ```
-npm install
+npm install @vui/core
 ```
 
 ## Design Philosophy
