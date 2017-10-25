@@ -20,6 +20,9 @@
     >
       <button class="v-btn" slot="reference">Toggle Popover</button>
     </popover-popper>
+    <button class="v-btn is-primary" @click="_openDialog">
+      open dialog
+    </button>
   </div>
 </div>
 
@@ -160,6 +163,7 @@
   import VBtn from 'packages/button'
   import TooltipInstaller from 'packages/tooltip'
   import { PopoverPopper } from 'packages/popover'
+  import { open } from 'packages/modal'
 
   Vue.use(TooltipInstaller)
 
@@ -181,6 +185,40 @@
     components: {
       VBtn,
       PopoverPopper
+    },
+
+    methods: {
+      _openDialog () {
+        open(`<div class="v-box">
+          <h1>{{msg}}</h1>
+          <button @click="_handleReject">onReject</button>
+          <my-btn :on-resolved="onResolved"></my-btn>
+        </div>`, {
+          methods: {
+            _handleReject () {
+              console.log(this.getTopDialog().$emit('ok', 'this is ok hahaha'))
+              console.log(this.onRejected(new Error('gao sth error')))
+            }
+          },
+          components: {
+            myBtn: {
+              props: ['onResolved'],
+              template: `<button class="v-btn" @click="_asyncGet">async get sth</button>`,
+              methods: {
+                _asyncGet () {
+//                  console.log(this.onResolved(666))
+                }
+              }
+            }
+          }
+        }, {
+          msg: 'hello dialog'
+        })
+        .then(data => console.log(data))
+        .catch(err => {
+          console.error(err)
+        })
+      }
     }
   }
 </script>
