@@ -25,7 +25,7 @@
 </template>
 
 <script>
-  import PopperMixin from '../../sources/mixins/vue-popper'
+  import PopperMixin from '../../sources/mixins/popper'
   import { on, off } from '../../sources/utils/dom'
 
   export default {
