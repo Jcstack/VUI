@@ -6,7 +6,6 @@ const components = [
 ]
 
 export function install (Vue) {
-
   components.forEach((it) => {
     it.install(Vue)
   })

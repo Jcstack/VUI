@@ -1,0 +1,70 @@
+$slider-range-line-bar-weight: 4px;
+$slider-range-point-width: 16px;
+
+.#{$ns}-range-slider {
+  position: relative;
+  background-color: brown;
+  padding: 15px 10px;
+  width: 100%;
+
+  &.is-dragging {
+    .sav-range-progress-point {
+      /*cursor: grabbing;*/
+      opacity: .5;
+    }
+  }
+
+  &.is-vertical {
+    height: 320px; /* need be calculated */
+    width: 24px;
+    padding: 5px 10px;
+    background-color: #0e729f;
+    .#{$ns}-range-progress-bar {
+      height: 100%;
+      width: $slider-range-line-bar-weight;
+      &-line {
+        height: 100%;
+      }
+    }
+
+    .#{$ns}-range-progress-point {
+      background-color: #00c3b1;
+      left: -($slider-range-point-width - $slider-range-line-bar-weight) / 2;
+      top: 0;
+      transform: translateY(-50%);
+    }
+  }
+
+  &.is-horizontal {
+    .#{$ns}-range-progress-point {
+      top: -($slider-range-point-width - $slider-range-line-bar-weight) / 2;
+      left: 0;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.#{$ns}-range-progress {
+  &-bar {
+    position: relative;
+    height: $slider-range-line-bar-weight;
+    background-color: transparent;
+    width: 100%;
+    &-line {
+      height: $slider-range-line-bar-weight;
+      background-color: #ffffff;
+      display: block;
+    }
+  }
+
+  &-point {
+    position: absolute;
+    width: $slider-range-point-width;
+    height: $slider-range-point-width;
+    background-color: rosybrown;
+    border-radius: $slider-range-point-width;
+    user-select: none;
+    opacity: 1;
+    cursor: grab;
+  }
+}

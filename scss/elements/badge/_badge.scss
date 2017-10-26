@@ -1,12 +1,12 @@
 $badge-bd-color: #ed3f14 !default;
 
-.sav-badge {
+.#{$ns}-badge {
   position: relative;
   display: inline-block;
   line-height: 1;
   vertical-align: middle;
 
-  .as-badge {
+  .has-badge {
     width: 42px;
     height: 42px;
     background: #eee;
@@ -14,7 +14,7 @@ $badge-bd-color: #ed3f14 !default;
     display: inline-block;
   }
 
-  .as-badge-dot {
+  .has-badge-dot {
     position: absolute;
     transform: translateX(-50%);
     transform-origin: 0 center;
@@ -28,8 +28,8 @@ $badge-bd-color: #ed3f14 !default;
     box-shadow: 0 0 0 1px $is-text-light-color;
   }
 
-  .as-badge-count {
-    @extend .as-badge-dot;
+  .has-badge-count {
+    @extend .has-badge-dot;
 
     transform: translateX(50%);
     top: -10px;

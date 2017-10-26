@@ -4,16 +4,6 @@ $switch-on-bg-color: $is-success-color !default;
 $switch-bd-radius: $element-bd-radius !default;
 $switch-default-width: 20px !default;
 
-@mixin make-animate {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(150%);
-  }
-}
-
 .sav-switch {
   width: $switch-default-width * 3;
   height: 34px;
@@ -97,11 +87,17 @@ $switch-default-width: 20px !default;
   background: $switch-on-bg-color;
 
   > .roll-boll {
-    animation: roll 0.5s;
+    animation: v-kf-sw-roll 0.5s;
     animation-fill-mode: forwards;
   }
 }
 
-@keyframes roll {
-  @include make-animate;
+@keyframes v-kf-sw-roll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(150%);
+  }
 }

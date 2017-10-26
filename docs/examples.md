@@ -195,7 +195,8 @@
           <my-btn :on-resolved="onResolved"></my-btn>
         </div>`, {
           propsData: {
-            size: 'large'
+            size: 'large',
+            closable: true
           },
           methods: {
             _handleReject () {

@@ -4,9 +4,9 @@
        v-if="!isCard"
   >
     <div class="v-modal-overlay"></div>
-      <div class="v-modal-content"
-           :class="[ sizeModifier ]"
-      >
+    <div class="v-modal-content"
+         :class="[ sizeModifier ]"
+    >
       <!-- default modal content -->
       <slot></slot>
     </div>
@@ -51,11 +51,15 @@
   export default {
     name: 'VModal',
 
-    mixins: [ createMixins(['size']) ],
+    mixins: [createMixins(['size'])],
 
     props: {
       title: String,
       visible: Boolean,
+      closable: {
+        type: Boolean,
+        'default': true
+      },
       isCard: {
         type: Boolean,
         'default': false
@@ -86,6 +90,11 @@
       })
     },
 
+    mounted () {
+      // Esc close
+      document.addEventListener('keyup', this._handleEscClose, false)
+    },
+
     computed: {
       _visible () {
         return this.visible
@@ -94,8 +103,25 @@
 
     methods: {
       _handleClose () {
+        this._close()
+      },
+
+      _close () {
         this.$emit('dimission', 'close')
+      },
+
+      _handleEscClose (e) {
+        if (this._visible && this.closable) {
+          if (e.keyCode === 27) {
+            this._close()
+          }
+        }
       }
+    },
+
+    beforeDestroy () {
+      // Clear listeners
+      document.removeEventListener('keyup', this._handleEscClose, false)
     }
   }
 </script>
