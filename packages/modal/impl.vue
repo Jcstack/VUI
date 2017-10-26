@@ -78,6 +78,9 @@
             case 'close':
               this.$emit('close')
               break
+            case 'esc':
+              this.$emit('close', e)
+              break
           }
         } else if (is.promise(e)) {
           e.then(() => {
@@ -103,17 +106,13 @@
 
     methods: {
       _handleClose () {
-        this._close()
-      },
-
-      _close () {
         this.$emit('dimission', 'close')
       },
 
       _handleEscClose (e) {
         if (this._visible && this.closable) {
           if (e.keyCode === 27) {
-            this._close()
+            this.$emit('dimission', 'esc')
           }
         }
       }

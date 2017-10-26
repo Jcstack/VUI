@@ -34,7 +34,7 @@
   * Fuzzy
 
 * Advanced(进阶)
-  * Customize
+  * [Customize](customize.md)
   * [Examples](examples.md)
 
 <style lang="scss">
