@@ -126,7 +126,7 @@
 </div>
 
 <div class="demo-box">
-  <table class="v-table" style="width: 100%">
+  <table class="v-table is-bordered is-striped">
     <thead>
     <tr>
       <th>One</th>
@@ -194,6 +194,9 @@
           <button @click="_handleReject">onReject</button>
           <my-btn :on-resolved="onResolved"></my-btn>
         </div>`, {
+          propsData: {
+            size: 'large'
+          },
           methods: {
             _handleReject () {
               console.log(this.getTopDialog().$emit('ok', 'this is ok hahaha'))
@@ -261,5 +264,9 @@
       margin-left: 2em;
       margin-top: 1em;
     }
+  }
+
+  .v-table {
+    display: table;
   }
 </style>

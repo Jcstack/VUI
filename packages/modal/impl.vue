@@ -4,7 +4,9 @@
        v-if="!isCard"
   >
     <div class="v-modal-overlay"></div>
-    <div class="v-modal-content">
+      <div class="v-modal-content"
+           :class="[ sizeModifier ]"
+      >
       <!-- default modal content -->
       <slot></slot>
     </div>
@@ -17,7 +19,9 @@
        :class="{ 'is-active' : _visible }"
        v-else>
     <div class="v-modal-overlay"></div>
-    <div class="v-modal-card">
+    <div class="v-modal-card"
+         :class="[ sizeModifier ]"
+    >
       <header class="v-modal-card-head">
         <slot name="header">
           <div class="v-modal-card-title">{{ title }}</div>
@@ -42,9 +46,12 @@
 
 <script>
   import is from 'is-type-of'
+  import { createMixins } from '../../sources/utils/mixin'
 
   export default {
     name: 'VModal',
+
+    mixins: [ createMixins(['size']) ],
 
     props: {
       title: String,

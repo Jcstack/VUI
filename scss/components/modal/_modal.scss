@@ -1,6 +1,6 @@
 $modal-z: 1011 !default;
 
-$modal-overlay-background-color: rgba($black, 0.86) !default;
+$modal-overlay-background-color: rgba($black, 0.8) !default;
 $modal-content-width: 640px !default;
 $modal-content-width-small: 420px !default;
 $modal-content-width-medium: 840px !default;
@@ -62,6 +62,9 @@ $modal-card-body-padding: 20px !default;
   overflow: auto;
   position: relative;
   width: $modal-content-width;
+
+  @include animated;
+  animation: v-kf-fade-in-down 800ms ease;
 
   &.is-small {
     width: $modal-content-width-small;
