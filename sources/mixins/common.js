@@ -18,6 +18,14 @@ export default {
       type: String,
       default: ''
     },
+    active: {
+      type: Boolean,
+      default: false
+    },
+    hoverable: {
+      type: Boolean,
+      default: false,
+    },
     disabled: {
       type: Boolean,
       default: false
@@ -66,6 +74,10 @@ export default {
       type: Boolean,
       default: false
     },
+    inline: {
+      type: Boolean,
+      default: false
+    },
     vertical: {
       type: Boolean,
       default: false
@@ -99,6 +111,12 @@ export default {
     disabledModifier () {
       return trust(this.disabled) ? `is-disabled` : ''
     },
+    activeModifier () {
+      return this.active ? `is-active` : ''
+    },
+    hoverableModifier () {
+      return this.hoverable ? `is-hoverable` : ''
+    },
     flexModifier () {
       return trust(this.flex) ? `is-${this.flex}` : ''
     },
@@ -109,7 +127,10 @@ export default {
       return trust(this.align) ? `is-${this.align}` : ''
     },
     blockModifier () {
-      return trust(this.block) ? `is-block` : ''
+      return this.block ? `is-block` : ''
+    },
+    inlineModifier () {
+      return this.inline ? `is-inline` : ''
     },
     verticalModifier () {
       return trust(this.vertical) ? `is-vertical` : ''

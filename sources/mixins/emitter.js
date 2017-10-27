@@ -12,7 +12,7 @@ function broadcast (componentName, eventName, params, componentKey = 'name') {
 
 export default {
   methods: {
-    dispatch (componentName, eventName, params, componentKey = 'name') {
+    vDispatch (componentName, eventName, params, componentKey = 'name') {
       let parent = this.$parent || this.$root
       let name = parent.$options[componentKey]
 
@@ -27,7 +27,7 @@ export default {
         parent.$emit.apply(parent, [eventName].concat(params))
       }
     },
-    broadcast (componentName, eventName, params, componentKey = 'name') {
+    vBroadcast (componentName, eventName, params, componentKey = 'name') {
       broadcast.call(this, componentName, eventName, params, componentKey)
     }
   }

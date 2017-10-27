@@ -52,6 +52,15 @@ $dropdown-divider-background-color: $border !default;
   z-index: $dropdown-content-z;
 }
 
+.#{$ns}-ani-menu {
+  &-enter-active {
+    animation: v-kf-fade-in .5s;
+  }
+  &-leave-active {
+    animation: v-kf-fade-out .5s;
+  }
+}
+
 .#{$ns}-dropdown-content {
   background-color: $dropdown-content-background-color;
   border-radius: $dropdown-content-radius;
