@@ -102,15 +102,17 @@ export function open ($slots, options = {}, slotData = {}) {
       vm.$el.parentNode.removeChild(vm.$el)
     }
 
+    // preConfirm ?:> ok
     vm.$on('ok', (e) => {
       vm.$emit('close')
       resolve(e)
     })
 
-    vm.$on('close', () => {
-      forceDestroyElement()
+    vm.$on('close', (e) => {
+      (!e || e === 'esc' || e === 'cancel') && forceDestroyElement()
     })
 
+    // Fatal error !!
     vm.$on('error', e => {
       reject(e)
     })

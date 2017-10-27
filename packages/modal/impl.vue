@@ -36,8 +36,8 @@
       </section>
       <footer class="v-modal-card-foot">
         <slot name="footer">
-          <button class="v-btn is-primary">Save changes</button>
-          <button class="v-btn is-link">Cancel</button>
+          <button class="v-btn is-primary" @click="$emit('dimission', 'confirm')">{{ confirmText }}</button>
+          <button class="v-btn is-link" @click="$emit('dimission', 'cancel')">{{ cancelText }}</button>
         </slot>
       </footer>
     </div>
@@ -56,6 +56,18 @@
     props: {
       title: String,
       visible: Boolean,
+      confirmText: {
+        type: String,
+        'default': '确定'
+      },
+      cancelText: {
+        type: String,
+        'default': '取消'
+      },
+      preConfirm: {
+        type: Function,
+        'default': Function
+      },
       closable: {
         type: Boolean,
         'default': true
@@ -79,7 +91,17 @@
               this.$emit('close')
               break
             case 'esc':
+            case 'cancel':
               this.$emit('close', e)
+              break
+            case 'confirm':
+              Promise.resolve(this.preConfirm.call(this))
+              .then(res => {
+                this.$emit('ok', res)
+              })
+              .catch(err => {
+                // Handle error by `preConfirm` hook
+              })
               break
           }
         } else if (is.promise(e)) {
@@ -106,7 +128,7 @@
 
     methods: {
       _handleClose () {
-        this.$emit('dimission', 'close')
+        this.closable && this.$emit('dimission', 'close')
       },
 
       _handleEscClose (e) {

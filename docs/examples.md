@@ -195,8 +195,23 @@
           <my-btn :on-resolved="onResolved"></my-btn>
         </div>`, {
           propsData: {
-            size: 'large',
-            closable: true
+//            size: 'large',
+            closable: true,
+            isCard: false,
+            preConfirm () {
+              const p = Promise.resolve('996')
+
+              p.then(res => {
+                console.log(res)
+              }, err => {
+                console.error('preConfirm ', err)
+                setTimeout(n => {
+                  this.$emit('close')
+                }, 2000)
+              })
+
+              return p
+            }
           },
           methods: {
             _handleReject () {
