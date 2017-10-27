@@ -1,6 +1,8 @@
 <template>
   <div class="v-dropdown"
-       :class="[ _dropdownModifiers, {
+       :class="[
+         magicModifier,
+         _dropdownModifiers, {
          'is-active': active
        }]"
        v-click-outside="_handleClickOutside"
@@ -30,18 +32,12 @@
   export default {
     name: 'VDropdown',
 
-    mixins: [createMixins(['disabled', 'hoverable'])],
+    mixins: [createMixins(['disabled', 'hoverable', 'magic'])],
 
     props: {
       value: {
         type: [String, Number, Boolean, Symbol, Object],
         'default': null
-      },
-      position: {
-        type: String,
-        validator (val) {
-          return !val || ['up', 'up-right'].indexOf(val) > -1
-        }
       }
     },
 
@@ -92,11 +88,6 @@
 
         cls.push(this.disabledModifier)
         cls.push(this.hoverableModifier)
-
-        if (this.position) {
-          cls.push('is-up')
-          !!~this.position.indexOf('right') && cls.push('is-right')
-        }
 
         return cls
       }

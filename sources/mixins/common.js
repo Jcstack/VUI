@@ -1,4 +1,4 @@
-import {trust} from '../utils'
+import { trust, hyphenCase } from '../utils'
 
 export default {
   props: {
@@ -29,6 +29,10 @@ export default {
     disabled: {
       type: Boolean,
       default: false
+    },
+    magic: {
+      type: String,
+      'default': ''
     },
     flex: {
       type: [Boolean, String],
@@ -101,6 +105,19 @@ export default {
     },
     stateModifier () {
       return trust(this.state) ? `is-${this.state}` : ''
+    },
+    magicModifier () {
+      if (!this.magic || !this.magic.trim()) {
+        return ''
+      }
+
+      let magic = this.magic.split('-')
+
+      magic = magic.map(n => {
+        return `is-${hyphenCase(n)}`
+      })
+
+      return magic.join(' ')
     },
     colModifier () {
       return trust(this.col) ? `is-${this.col}` : ''

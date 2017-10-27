@@ -1,7 +1,7 @@
 # Examples
 
 <div class="demo-box">
-  <dropdown position="up" v-model="formData.price">
+  <dropdown magic="right" v-model="formData.price">
     <button
         slot="trigger"
         class="v-btn is-warning" aria-haspopup="true" aria-controls="v-dropdown-menu">
