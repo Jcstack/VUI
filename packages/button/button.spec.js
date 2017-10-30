@@ -3,7 +3,7 @@ import test from 'ava'
 import Button from './impl.vue'
 
 
-test.serial.only('test button', t => {
+test.serial('test button', t => {
   const wrapper = mount(Button, {
     propsData: {
       color: 'primary',
