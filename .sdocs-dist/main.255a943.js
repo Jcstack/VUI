@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "./";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 28);
+/******/ 	return __webpack_require__(__webpack_require__.s = 26);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -211,7 +211,7 @@ if (typeof DEBUG !== 'undefined' && DEBUG) {
   ) }
 }
 
-var listToStyles = __webpack_require__(/*! ./listToStyles */ 34)
+var listToStyles = __webpack_require__(/*! ./listToStyles */ 32)
 
 /*
 type StyleObject = {
@@ -414,17 +414,6 @@ function applyToTag (styleElement, obj) {
 
 /***/ }),
 /* 3 */
-/*!**********************!*\
-  !*** external "Vue" ***!
-  \**********************/
-/*! no static exports found */
-/*! exports used: default */
-/***/ (function(module, exports) {
-
-module.exports = Vue;
-
-/***/ }),
-/* 4 */
 /*!************************************************************!*\
   !*** ./node_modules/readable-stream/lib/_stream_duplex.js ***!
   \************************************************************/
@@ -482,7 +471,7 @@ var util = __webpack_require__(/*! core-util-is */ 6);
 util.inherits = __webpack_require__(/*! inherits */ 7);
 /*</replacement>*/
 
-var Readable = __webpack_require__(/*! ./_stream_readable */ 19);
+var Readable = __webpack_require__(/*! ./_stream_readable */ 18);
 var Writable = __webpack_require__(/*! ./_stream_writable */ 14);
 
 util.inherits(Duplex, Readable);
@@ -557,6 +546,17 @@ function forEach(xs, f) {
     f(xs[i], i);
   }
 }
+
+/***/ }),
+/* 4 */
+/*!**********************!*\
+  !*** external "Vue" ***!
+  \**********************/
+/*! no static exports found */
+/*! exports used: default */
+/***/ (function(module, exports) {
+
+module.exports = Vue;
 
 /***/ }),
 /* 5 */
@@ -1014,9 +1014,9 @@ function nextTick(fn, arg1, arg2, arg3) {
 
 
 
-var base64 = __webpack_require__(/*! base64-js */ 82)
-var ieee754 = __webpack_require__(/*! ieee754 */ 83)
-var isArray = __webpack_require__(/*! isarray */ 18)
+var base64 = __webpack_require__(/*! base64-js */ 81)
+var ieee754 = __webpack_require__(/*! ieee754 */ 82)
+var isArray = __webpack_require__(/*! isarray */ 17)
 
 exports.Buffer = Buffer
 exports.SlowBuffer = SlowBuffer
@@ -3118,13 +3118,13 @@ function isUndefined(arg) {
 /*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(/*! ./lib/_stream_readable.js */ 19);
+exports = module.exports = __webpack_require__(/*! ./lib/_stream_readable.js */ 18);
 exports.Stream = exports;
 exports.Readable = exports;
 exports.Writable = __webpack_require__(/*! ./lib/_stream_writable.js */ 14);
-exports.Duplex = __webpack_require__(/*! ./lib/_stream_duplex.js */ 4);
-exports.Transform = __webpack_require__(/*! ./lib/_stream_transform.js */ 23);
-exports.PassThrough = __webpack_require__(/*! ./lib/_stream_passthrough.js */ 91);
+exports.Duplex = __webpack_require__(/*! ./lib/_stream_duplex.js */ 3);
+exports.Transform = __webpack_require__(/*! ./lib/_stream_transform.js */ 22);
+exports.PassThrough = __webpack_require__(/*! ./lib/_stream_passthrough.js */ 90);
 
 
 /***/ }),
@@ -3282,12 +3282,12 @@ util.inherits = __webpack_require__(/*! inherits */ 7);
 
 /*<replacement>*/
 var internalUtil = {
-  deprecate: __webpack_require__(/*! util-deprecate */ 90)
+  deprecate: __webpack_require__(/*! util-deprecate */ 89)
 };
 /*</replacement>*/
 
 /*<replacement>*/
-var Stream = __webpack_require__(/*! ./internal/streams/stream */ 20);
+var Stream = __webpack_require__(/*! ./internal/streams/stream */ 19);
 /*</replacement>*/
 
 /*<replacement>*/
@@ -3301,14 +3301,14 @@ function _isUint8Array(obj) {
 }
 /*</replacement>*/
 
-var destroyImpl = __webpack_require__(/*! ./internal/streams/destroy */ 21);
+var destroyImpl = __webpack_require__(/*! ./internal/streams/destroy */ 20);
 
 util.inherits(Writable, Stream);
 
 function nop() {}
 
 function WritableState(options, stream) {
-  Duplex = Duplex || __webpack_require__(/*! ./_stream_duplex */ 4);
+  Duplex = Duplex || __webpack_require__(/*! ./_stream_duplex */ 3);
 
   options = options || {};
 
@@ -3448,7 +3448,7 @@ if (typeof Symbol === 'function' && Symbol.hasInstance && typeof Function.protot
 }
 
 function Writable(options) {
-  Duplex = Duplex || __webpack_require__(/*! ./_stream_duplex */ 4);
+  Duplex = Duplex || __webpack_require__(/*! ./_stream_duplex */ 3);
 
   // Writable ctor is applied to Duplexes, too.
   // `realHasInstance` is necessary because using plain `instanceof`
@@ -3874,7 +3874,7 @@ Writable.prototype._destroy = function (err, cb) {
   this.end();
   cb(err);
 };
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../../../../s-docs/node_modules/process/browser.js */ 5), __webpack_require__(/*! ./../../../../../s-docs/node_modules/timers-browserify/main.js */ 88).setImmediate, __webpack_require__(/*! ./../../../../../s-docs/node_modules/webpack/buildin/global.js */ 8)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../../../../s-docs/node_modules/process/browser.js */ 5), __webpack_require__(/*! ./../../../../../s-docs/node_modules/timers-browserify/main.js */ 87).setImmediate, __webpack_require__(/*! ./../../../../../s-docs/node_modules/webpack/buildin/global.js */ 8)))
 
 /***/ }),
 /* 15 */
@@ -3912,142 +3912,6 @@ Writable.prototype._destroy = function (err, cb) {
 
 /***/ }),
 /* 16 */
-/*!**********************************!*\
-  !*** ../packages/modal/index.js ***!
-  \**********************************/
-/*! exports provided: modalShared, open, default */
-/*! exports used: default, open */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["b"] = open;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(/*! vue */ 3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__impl_vue__ = __webpack_require__(/*! ./impl.vue */ 80);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__impl_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__impl_vue__);
-/**
- * User: charlie
- * Date: 17/10/2017 2:05 PM
- **/
-
-
-
-
-/* istanbul ignore next */
-__WEBPACK_IMPORTED_MODULE_1__impl_vue___default.a.install = function (Vue) {
-  Vue.component(__WEBPACK_IMPORTED_MODULE_1__impl_vue___default.a.name, __WEBPACK_IMPORTED_MODULE_1__impl_vue___default.a);
-};
-
-const modalShared = {
-  rootCtx: null
-};
-/* unused harmony export modalShared */
-
-
-function open($slots, options = {}, slotData = {}) {
-  let _onResolved = () => {};
-  let _onRejected = () => {};
-
-  const Dialog = __WEBPACK_IMPORTED_MODULE_0_vue___default.a.extend({
-    name: 'XVDialog',
-    mixins: [__WEBPACK_IMPORTED_MODULE_1__impl_vue___default.a],
-    parent: modalShared.rootCtx, // setup `context` shared data
-    beforeCreate() {
-      if (typeof $slots === 'string') {
-        $slots = {
-          default: $slots
-        };
-      }
-
-      // compile slots to vNodes
-      Object.keys($slots).forEach(k => {
-        const renderer = __WEBPACK_IMPORTED_MODULE_0_vue___default.a.compile($slots[k]);
-        const slotCtx = {
-          data() {
-            slotData = typeof slotData === 'function' ? slotData.call(this) : slotData;
-
-            if (slotData) {
-              slotData.onResolved = _onResolved;
-              slotData.onRejected = _onRejected;
-            }
-
-            return slotData;
-          },
-          render: renderer.render,
-          staticRenderFns: renderer.staticRenderFns,
-          components: options.components || {},
-          computed: options.computed || {},
-          methods: Object.assign(options.methods || {}, {
-            getTopDialog() {
-              let dialog = this.$parent || null;
-
-              while (dialog) {
-                if (dialog.$options.name === 'XVDialog') {
-                  break;
-                }
-
-                dialog = dialog.$parent;
-              }
-
-              return dialog;
-            }
-          })
-
-          // setup array
-        };$slots[k] = [this.$createElement(slotCtx)];
-      });
-
-      Object.assign(this.$slots, $slots);
-    }
-  });
-
-  const _defaults = {
-    propsData: {
-      visible: true
-    }
-
-    // @todo merge strategy
-  };if (options.propsData) {
-    Object.assign(_defaults.propsData, options.propsData);
-    delete options.propsData;
-  }
-
-  const vm = new Dialog(Object.assign(_defaults, options));
-
-  return new Promise((resolve, reject) => {
-    _onResolved = resolve;
-    _onRejected = reject;
-
-    // render it
-    vm.$mount();
-
-    document.body.appendChild(vm.$el);
-
-    function forceDestroyElement() {
-      // vm.visible = false
-      vm.$destroy();
-      vm.$el.parentNode.removeChild(vm.$el);
-    }
-
-    vm.$on('ok', e => {
-      vm.$emit('close');
-      resolve(e);
-    });
-
-    vm.$on('close', () => {
-      forceDestroyElement();
-    });
-
-    vm.$on('error', e => {
-      reject(e);
-    });
-  });
-}
-
-/* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_1__impl_vue___default.a);
-
-/***/ }),
-/* 17 */
 /*!*******************************************!*\
   !*** ../node_modules/is-type-of/index.js ***!
   \*******************************************/
@@ -4059,8 +3923,8 @@ function open($slots, options = {}, slotData = {}) {
 
 
 var utils = __webpack_require__(/*! core-util-is */ 6);
-var isStearm = __webpack_require__(/*! isstream */ 84);
-var isClass = __webpack_require__(/*! is-class */ 96);
+var isStearm = __webpack_require__(/*! isstream */ 83);
+var isClass = __webpack_require__(/*! is-class */ 95);
 
 /**
  * Expose all methods in core-util-is
@@ -4184,7 +4048,7 @@ function transform(m) {
 
 
 /***/ }),
-/* 18 */
+/* 17 */
 /*!***************************************!*\
   !*** ./node_modules/isarray/index.js ***!
   \***************************************/
@@ -4200,7 +4064,7 @@ module.exports = Array.isArray || function (arr) {
 
 
 /***/ }),
-/* 19 */
+/* 18 */
 /*!**************************************************************!*\
   !*** ./node_modules/readable-stream/lib/_stream_readable.js ***!
   \**************************************************************/
@@ -4240,7 +4104,7 @@ var processNextTick = __webpack_require__(/*! process-nextick-args */ 9);
 module.exports = Readable;
 
 /*<replacement>*/
-var isArray = __webpack_require__(/*! isarray */ 18);
+var isArray = __webpack_require__(/*! isarray */ 17);
 /*</replacement>*/
 
 /*<replacement>*/
@@ -4258,7 +4122,7 @@ var EElistenerCount = function (emitter, type) {
 /*</replacement>*/
 
 /*<replacement>*/
-var Stream = __webpack_require__(/*! ./internal/streams/stream */ 20);
+var Stream = __webpack_require__(/*! ./internal/streams/stream */ 19);
 /*</replacement>*/
 
 // TODO(bmeurer): Change this back to const once hole checks are
@@ -4280,7 +4144,7 @@ util.inherits = __webpack_require__(/*! inherits */ 7);
 /*</replacement>*/
 
 /*<replacement>*/
-var debugUtil = __webpack_require__(/*! util */ 86);
+var debugUtil = __webpack_require__(/*! util */ 85);
 var debug = void 0;
 if (debugUtil && debugUtil.debuglog) {
   debug = debugUtil.debuglog('stream');
@@ -4289,8 +4153,8 @@ if (debugUtil && debugUtil.debuglog) {
 }
 /*</replacement>*/
 
-var BufferList = __webpack_require__(/*! ./internal/streams/BufferList */ 87);
-var destroyImpl = __webpack_require__(/*! ./internal/streams/destroy */ 21);
+var BufferList = __webpack_require__(/*! ./internal/streams/BufferList */ 86);
+var destroyImpl = __webpack_require__(/*! ./internal/streams/destroy */ 20);
 var StringDecoder;
 
 util.inherits(Readable, Stream);
@@ -4312,7 +4176,7 @@ function prependListener(emitter, event, fn) {
 }
 
 function ReadableState(options, stream) {
-  Duplex = Duplex || __webpack_require__(/*! ./_stream_duplex */ 4);
+  Duplex = Duplex || __webpack_require__(/*! ./_stream_duplex */ 3);
 
   options = options || {};
 
@@ -4373,14 +4237,14 @@ function ReadableState(options, stream) {
   this.decoder = null;
   this.encoding = null;
   if (options.encoding) {
-    if (!StringDecoder) StringDecoder = __webpack_require__(/*! string_decoder/ */ 22).StringDecoder;
+    if (!StringDecoder) StringDecoder = __webpack_require__(/*! string_decoder/ */ 21).StringDecoder;
     this.decoder = new StringDecoder(options.encoding);
     this.encoding = options.encoding;
   }
 }
 
 function Readable(options) {
-  Duplex = Duplex || __webpack_require__(/*! ./_stream_duplex */ 4);
+  Duplex = Duplex || __webpack_require__(/*! ./_stream_duplex */ 3);
 
   if (!(this instanceof Readable)) return new Readable(options);
 
@@ -4529,7 +4393,7 @@ Readable.prototype.isPaused = function () {
 
 // backwards compatibility.
 Readable.prototype.setEncoding = function (enc) {
-  if (!StringDecoder) StringDecoder = __webpack_require__(/*! string_decoder/ */ 22).StringDecoder;
+  if (!StringDecoder) StringDecoder = __webpack_require__(/*! string_decoder/ */ 21).StringDecoder;
   this._readableState.decoder = new StringDecoder(enc);
   this._readableState.encoding = enc;
   return this;
@@ -5219,7 +5083,7 @@ function indexOf(xs, x) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../../../../s-docs/node_modules/webpack/buildin/global.js */ 8), __webpack_require__(/*! ./../../../../../s-docs/node_modules/process/browser.js */ 5)))
 
 /***/ }),
-/* 20 */
+/* 19 */
 /*!*****************************************************************************!*\
   !*** ./node_modules/readable-stream/lib/internal/streams/stream-browser.js ***!
   \*****************************************************************************/
@@ -5231,7 +5095,7 @@ module.exports = __webpack_require__(/*! events */ 11).EventEmitter;
 
 
 /***/ }),
-/* 21 */
+/* 20 */
 /*!**********************************************************************!*\
   !*** ./node_modules/readable-stream/lib/internal/streams/destroy.js ***!
   \**********************************************************************/
@@ -5314,7 +5178,7 @@ module.exports = {
 };
 
 /***/ }),
-/* 22 */
+/* 21 */
 /*!******************************************************************************************************!*\
   !*** /Users/charlie/code/s-docs/node_modules/node-libs-browser/node_modules/string_decoder/index.js ***!
   \******************************************************************************************************/
@@ -5546,7 +5410,7 @@ function base64DetectIncompleteChar(buffer) {
 
 
 /***/ }),
-/* 23 */
+/* 22 */
 /*!***************************************************************!*\
   !*** ./node_modules/readable-stream/lib/_stream_transform.js ***!
   \***************************************************************/
@@ -5622,7 +5486,7 @@ function base64DetectIncompleteChar(buffer) {
 
 module.exports = Transform;
 
-var Duplex = __webpack_require__(/*! ./_stream_duplex */ 4);
+var Duplex = __webpack_require__(/*! ./_stream_duplex */ 3);
 
 /*<replacement>*/
 var util = __webpack_require__(/*! core-util-is */ 6);
@@ -5771,17 +5635,17 @@ function done(stream, er, data) {
 }
 
 /***/ }),
-/* 24 */
+/* 23 */
 /*!*********************************!*\
   !*** ../sources/utils/mixin.js ***!
   \*********************************/
 /*! exports provided: createMixins, optionMixins, optionsMixins, elementMixins */
-/*! exports used: createMixins, elementMixins */
+/*! exports used: createMixins */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = createMixins;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__mixins_common_js__ = __webpack_require__(/*! ../mixins/common.js */ 97);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__mixins_common_js__ = __webpack_require__(/*! ../mixins/common.js */ 96);
 
 
 function createMixins(types) {
@@ -5819,30 +5683,30 @@ const optionsMixins = createMixins(['textField', 'valueField', 'options', 'value
 /* unused harmony export optionsMixins */
 
 const elementMixins = createMixins(['color', 'size', 'state', 'disabled']);
-/* harmony export (immutable) */ __webpack_exports__["b"] = elementMixins;
+/* unused harmony export elementMixins */
 
 
 /***/ }),
-/* 25 */
+/* 24 */
 /*!*********************************!*\
   !*** ../sources/utils/index.js ***!
   \*********************************/
 /*! exports provided: trust, makeOptions, getScrollBarSize, TransitionEndEvent, transitionEndTest, isVNode, getFirstComponentChild, pluckValidCircleIndex, camelCase, ucfirst, lcfirst, hyphenCase, pascalCase, default */
-/*! exports used: isVNode, trust */
+/*! exports used: hyphenCase, isVNode, trust */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (immutable) */ __webpack_exports__["b"] = trust;
+/* harmony export (immutable) */ __webpack_exports__["c"] = trust;
 /* unused harmony export makeOptions */
 /* unused harmony export getScrollBarSize */
 /* unused harmony export transitionEndTest */
-/* harmony export (immutable) */ __webpack_exports__["a"] = isVNode;
+/* harmony export (immutable) */ __webpack_exports__["b"] = isVNode;
 /* unused harmony export getFirstComponentChild */
 /* unused harmony export pluckValidCircleIndex */
 /* unused harmony export camelCase */
 /* unused harmony export ucfirst */
 /* unused harmony export lcfirst */
-/* unused harmony export hyphenCase */
+/* harmony export (immutable) */ __webpack_exports__["a"] = hyphenCase;
 /* unused harmony export pascalCase */
 const utils = {
   isEmpty(obj) {
@@ -6024,324 +5888,74 @@ function pascalCase(str) {
 /* unused harmony default export */ var _unused_webpack_default_export = (utils);
 
 /***/ }),
-/* 26 */
-/*!*********************************!*\
-  !*** ../sources/utils/popup.js ***!
-  \*********************************/
+/* 25 */
+/*!**********************************************!*\
+  !*** ../sources/directives/click-outside.js ***!
+  \**********************************************/
 /*! exports provided: default */
 /*! exports used: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(/*! vue */ 3);
+/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(/*! vue */ 4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__dom__ = __webpack_require__(/*! ./dom */ 27);
 
 
+// @SECTION: implementation
 
-let hasModal = false;
+const HANDLER = '_vue_clickaway_handler';
 
-const getModal = function () {
-  if (__WEBPACK_IMPORTED_MODULE_0_vue___default.a.prototype.$isServer) return;
+function bind(el, binding) {
+  unbind(el);
 
-  let modalDom = PopupManager.modalDom;
-
-  if (modalDom) {
-    hasModal = true;
-  } else {
-    hasModal = false;
-    modalDom = document.createElement('div');
-    PopupManager.modalDom = modalDom;
-
-    modalDom.addEventListener('touchmove', function (event) {
-      event.preventDefault();
-      event.stopPropagation();
-    });
-
-    modalDom.addEventListener('click', function () {
-      PopupManager.doOnModalClick && PopupManager.doOnModalClick();
-    });
+  const callback = binding.value;
+  if (typeof callback !== 'function') {
+    if (process.env.NODE_ENV !== 'production') {
+      __WEBPACK_IMPORTED_MODULE_0_vue___default.a.util.warn('v-' + binding.name + '="' + binding.expression + '" expects a function value, ' + 'got ' + callback);
+    }
+    return;
   }
 
-  return modalDom;
-};
+  // @NOTE: Vue binds directives in microtasks, while UI events are dispatched
+  //        in macrotasks. This causes the listener to be set up before
+  //        the "origin" click event (the event that lead to the binding of
+  //        the directive) arrives at the document root. To work around that,
+  //        we ignore events until the end of the "initial" macrotask.
+  // @REFERENCE: https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/
+  // @REFERENCE: https://github.com/simplesmiler/vue-clickaway/issues/8
+  var initialMacrotaskEnded = false;
+  setTimeout(function () {
+    initialMacrotaskEnded = true;
+  }, 0);
 
-const instances = {};
-
-const PopupManager = {
-  zIndex: 2000,
-
-  modalFade: true,
-
-  getInstance: function (id) {
-    return instances[id];
-  },
-
-  register: function (id, instance) {
-    if (id && instance) {
-      instances[id] = instance;
+  el[HANDLER] = function (ev) {
+    // @NOTE: IE 5.0+
+    // @REFERENCE: https://developer.mozilla.org/en/docs/Web/API/Node/contains
+    if (initialMacrotaskEnded && !el.contains(ev.target)) {
+      return callback(ev);
     }
-  },
-
-  deregister: function (id) {
-    if (id) {
-      instances[id] = null;
-      delete instances[id];
-    }
-  },
-
-  nextZIndex: function () {
-    return PopupManager.zIndex++;
-  },
-
-  modalStack: [],
-
-  doOnModalClick: function () {
-    const topItem = PopupManager.modalStack[PopupManager.modalStack.length - 1];
-    if (!topItem) return;
-
-    const instance = PopupManager.getInstance(topItem.id);
-    if (instance && instance.closeOnClickModal) {
-      instance.close();
-    }
-  },
-
-  openModal: function (id, zIndex, dom, modalClass, modalFade) {
-    if (__WEBPACK_IMPORTED_MODULE_0_vue___default.a.prototype.$isServer) return;
-    if (!id || zIndex === undefined) return;
-    this.modalFade = modalFade;
-
-    const modalStack = this.modalStack;
-
-    for (let i = 0, j = modalStack.length; i < j; i++) {
-      const item = modalStack[i];
-      if (item.id === id) {
-        return;
-      }
-    }
-
-    const modalDom = getModal();
-
-    Object(__WEBPACK_IMPORTED_MODULE_1__dom__["a" /* addClass */])(modalDom, 'v-modal');
-
-    if (this.modalFade && !hasModal) {
-      Object(__WEBPACK_IMPORTED_MODULE_1__dom__["a" /* addClass */])(modalDom, 'v-modal-enter');
-    }
-
-    if (modalClass) {
-      let classArr = modalClass.trim().split(/\s+/);
-      classArr.forEach(item => Object(__WEBPACK_IMPORTED_MODULE_1__dom__["a" /* addClass */])(modalDom, item));
-    }
-
-    setTimeout(() => {
-      Object(__WEBPACK_IMPORTED_MODULE_1__dom__["d" /* removeClass */])(modalDom, 'v-modal-enter');
-    }, 200);
-
-    if (dom && dom.parentNode && dom.parentNode.nodeType !== 11) {
-      dom.parentNode.appendChild(modalDom);
-    } else {
-      document.body.appendChild(modalDom);
-    }
-
-    if (zIndex) {
-      modalDom.style.zIndex = zIndex;
-    }
-    modalDom.style.display = '';
-
-    this.modalStack.push({ id: id, zIndex: zIndex, modalClass: modalClass });
-  },
-
-  closeModal: function (id) {
-    const modalStack = this.modalStack;
-    const modalDom = getModal();
-
-    if (modalStack.length > 0) {
-      const topItem = modalStack[modalStack.length - 1];
-      if (topItem.id === id) {
-        if (topItem.modalClass) {
-          let classArr = topItem.modalClass.trim().split(/\s+/);
-          classArr.forEach(item => Object(__WEBPACK_IMPORTED_MODULE_1__dom__["d" /* removeClass */])(modalDom, item));
-        }
-
-        modalStack.pop();
-        if (modalStack.length > 0) {
-          modalDom.style.zIndex = modalStack[modalStack.length - 1].zIndex;
-        }
-      } else {
-        for (let i = modalStack.length - 1; i >= 0; i--) {
-          if (modalStack[i].id === id) {
-            modalStack.splice(i, 1);
-            break;
-          }
-        }
-      }
-    }
-
-    if (modalStack.length === 0) {
-      if (this.modalFade) {
-        Object(__WEBPACK_IMPORTED_MODULE_1__dom__["a" /* addClass */])(modalDom, 'v-modal-leave');
-      }
-      setTimeout(() => {
-        if (modalStack.length === 0) {
-          if (modalDom.parentNode) modalDom.parentNode.removeChild(modalDom);
-          modalDom.style.display = 'none';
-          PopupManager.modalDom = undefined;
-        }
-        Object(__WEBPACK_IMPORTED_MODULE_1__dom__["d" /* removeClass */])(modalDom, 'v-modal-leave');
-      }, 200);
-    }
-  }
-};
-
-const getTopPopup = function () {
-  if (__WEBPACK_IMPORTED_MODULE_0_vue___default.a.prototype.$isServer) return;
-  if (PopupManager.modalStack.length > 0) {
-    const topPopup = PopupManager.modalStack[PopupManager.modalStack.length - 1];
-    if (!topPopup) return;
-    return PopupManager.getInstance(topPopup.id);
-  }
-};
-
-if (!__WEBPACK_IMPORTED_MODULE_0_vue___default.a.prototype.$isServer) {
-  // handle `esc` key when the popup is shown
-  window.addEventListener('keydown', function (event) {
-    if (event.keyCode === 27) {
-      const topPopup = getTopPopup();
-
-      if (topPopup && topPopup.closeOnPressEscape) {
-        topPopup.handleClose ? topPopup.handleClose() : topPopup.handleAction ? topPopup.handleAction('cancel') : topPopup.close();
-      }
-    }
-  });
-}
-
-/* harmony default export */ __webpack_exports__["a"] = (PopupManager);
-
-/***/ }),
-/* 27 */
-/*!*******************************!*\
-  !*** ../sources/utils/dom.js ***!
-  \*******************************/
-/*! exports provided: on, off, once, hasClass, addClass, removeClass */
-/*! exports used: addClass, off, on, removeClass */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* unused harmony export hasClass */
-/* harmony export (immutable) */ __webpack_exports__["a"] = addClass;
-/* harmony export (immutable) */ __webpack_exports__["d"] = removeClass;
-const isServer = Vue.prototype.$isServer;
-
-/* istanbul ignore next */
-const on = function () {
-  if (!isServer && document.addEventListener) {
-    return function (element, event, handler) {
-      if (element && event && handler) {
-        element.addEventListener(event, handler, false);
-      }
-    };
-  } else {
-    return function (element, event, handler) {
-      if (element && event && handler) {
-        element.attachEvent('on' + event, handler);
-      }
-    };
-  }
-}();
-/* harmony export (immutable) */ __webpack_exports__["c"] = on;
-
-
-/* istanbul ignore next */
-const off = function () {
-  if (!isServer && document.removeEventListener) {
-    return function (element, event, handler) {
-      if (element && event) {
-        element.removeEventListener(event, handler, false);
-      }
-    };
-  } else {
-    return function (element, event, handler) {
-      if (element && event) {
-        element.detachEvent('on' + event, handler);
-      }
-    };
-  }
-}();
-/* harmony export (immutable) */ __webpack_exports__["b"] = off;
-
-
-/* istanbul ignore next */
-const once = function (el, event, fn) {
-  let listener = function () {
-    if (fn) {
-      fn.apply(this, arguments);
-    }
-    off(el, event, listener);
   };
-  on(el, event, listener);
-};
-/* unused harmony export once */
 
-
-/* istanbul ignore next */
-function hasClass(el, cls) {
-  if (!el || !cls) return false;
-  if (cls.indexOf(' ') !== -1) throw new Error('className should not contain space.');
-  if (el.classList) {
-    return el.classList.contains(cls);
-  } else {
-    return (' ' + el.className + ' ').indexOf(' ' + cls + ' ') > -1;
-  }
+  document.documentElement.addEventListener('click', el[HANDLER], false);
 }
 
-/* istanbul ignore next */
-function addClass(el, cls) {
-  if (!el) return;
-  let curClass = el.className;
-  let classes = (cls || '').split(' ');
-
-  for (let i = 0, j = classes.length; i < j; i++) {
-    let clsName = classes[i];
-    if (!clsName) continue;
-
-    if (el.classList) {
-      el.classList.add(clsName);
-    } else {
-      if (!hasClass(el, clsName)) {
-        curClass += ' ' + clsName;
-      }
-    }
-  }
-  if (!el.classList) {
-    el.className = curClass;
-  }
+function unbind(el) {
+  document.documentElement.removeEventListener('click', el[HANDLER], false);
+  delete el[HANDLER];
 }
 
-/* istanbul ignore next */
-function removeClass(el, cls) {
-  if (!el || !cls) return;
-  let classes = cls.split(' ');
-  let curClass = ' ' + el.className + ' ';
-
-  for (let i = 0, j = classes.length; i < j; i++) {
-    let clsName = classes[i];
-    if (!clsName) continue;
-
-    if (el.classList) {
-      el.classList.remove(clsName);
-    } else {
-      if (hasClass(el, clsName)) {
-        curClass = curClass.replace(' ' + clsName + ' ', ' ');
-      }
-    }
-  }
-  if (!el.classList) {
-    el.className = trim(curClass);
-  }
-}
+/* harmony default export */ __webpack_exports__["a"] = ({
+  bind: bind,
+  update: function (el, binding) {
+    if (binding.value === binding.oldValue) return;
+    bind(el, binding);
+  },
+  unbind: unbind
+});
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(/*! ./../../../s-docs/node_modules/process/browser.js */ 5)))
 
 /***/ }),
-/* 28 */
+/* 26 */
 /*!******************!*\
   !*** ./index.js ***!
   \******************/
@@ -6351,11 +5965,11 @@ function removeClass(el, cls) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(/*! vue */ 3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(/*! vue */ 4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_router__ = __webpack_require__(/*! vue-router */ 29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__routes__ = __webpack_require__(/*! ./routes */ 30);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_summary_container_vue__ = __webpack_require__(/*! ./components/summary_container.vue */ 154);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_router__ = __webpack_require__(/*! vue-router */ 27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__routes__ = __webpack_require__(/*! ./routes */ 28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_summary_container_vue__ = __webpack_require__(/*! ./components/summary_container.vue */ 149);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_summary_container_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__components_summary_container_vue__);
 
 
@@ -6396,7 +6010,7 @@ var app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
 });
 
 /***/ }),
-/* 29 */
+/* 27 */
 /*!********************************************************!*\
   !*** ./node_modules/vue-router/dist/vue-router.esm.js ***!
   \********************************************************/
@@ -8914,7 +8528,7 @@ if (inBrowser && window.Vue) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(/*! ./../../../../../s-docs/node_modules/process/browser.js */ 5)))
 
 /***/ }),
-/* 30 */
+/* 28 */
 /*!*******************!*\
   !*** ./routes.js ***!
   \*******************/
@@ -8924,52 +8538,54 @@ if (inBrowser && window.Vue) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return routes; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__pages_basis_color_size_vue__ = __webpack_require__(/*! ./pages/basis/color_size.vue */ 31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__pages_basis_color_size_vue__ = __webpack_require__(/*! ./pages/basis/color_size.vue */ 29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__pages_basis_color_size_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__pages_basis_color_size_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__pages_basis_layout_vue__ = __webpack_require__(/*! ./pages/basis/layout.vue */ 37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__pages_basis_layout_vue__ = __webpack_require__(/*! ./pages/basis/layout.vue */ 35);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__pages_basis_layout_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__pages_basis_layout_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_basis_modifiers_vue__ = __webpack_require__(/*! ./pages/basis/modifiers.vue */ 42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_basis_modifiers_vue__ = __webpack_require__(/*! ./pages/basis/modifiers.vue */ 40);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_basis_modifiers_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__pages_basis_modifiers_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_elements_icon_vue__ = __webpack_require__(/*! ./pages/elements/icon.vue */ 46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_elements_icon_vue__ = __webpack_require__(/*! ./pages/elements/icon.vue */ 44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_elements_icon_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__pages_elements_icon_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_elements_buttons_vue__ = __webpack_require__(/*! ./pages/elements/buttons.vue */ 48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_elements_buttons_vue__ = __webpack_require__(/*! ./pages/elements/buttons.vue */ 46);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_elements_buttons_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__pages_elements_buttons_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_elements_form_vue__ = __webpack_require__(/*! ./pages/elements/form.vue */ 53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_elements_form_vue__ = __webpack_require__(/*! ./pages/elements/form.vue */ 51);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_elements_form_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__pages_elements_form_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_elements_input_vue__ = __webpack_require__(/*! ./pages/elements/input.vue */ 56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_elements_input_vue__ = __webpack_require__(/*! ./pages/elements/input.vue */ 54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_elements_input_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__pages_elements_input_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_elements_select_vue__ = __webpack_require__(/*! ./pages/elements/select.vue */ 58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_elements_select_vue__ = __webpack_require__(/*! ./pages/elements/select.vue */ 56);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_elements_select_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__pages_elements_select_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_elements_textarea_vue__ = __webpack_require__(/*! ./pages/elements/textarea.vue */ 60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_elements_textarea_vue__ = __webpack_require__(/*! ./pages/elements/textarea.vue */ 58);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_elements_textarea_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8__pages_elements_textarea_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_elements_form_misc_vue__ = __webpack_require__(/*! ./pages/elements/form_misc.vue */ 62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_elements_form_misc_vue__ = __webpack_require__(/*! ./pages/elements/form_misc.vue */ 60);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_elements_form_misc_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9__pages_elements_form_misc_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_elements_close_vue__ = __webpack_require__(/*! ./pages/elements/close.vue */ 64);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_elements_close_vue__ = __webpack_require__(/*! ./pages/elements/close.vue */ 62);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_elements_close_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10__pages_elements_close_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_elements_box_vue__ = __webpack_require__(/*! ./pages/elements/box.vue */ 66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_elements_box_vue__ = __webpack_require__(/*! ./pages/elements/box.vue */ 64);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_elements_box_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11__pages_elements_box_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_elements_notifications_vue__ = __webpack_require__(/*! ./pages/elements/notifications.vue */ 69);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_elements_notifications_vue__ = __webpack_require__(/*! ./pages/elements/notifications.vue */ 67);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_elements_notifications_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12__pages_elements_notifications_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_elements_content_vue__ = __webpack_require__(/*! ./pages/elements/content.vue */ 76);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_elements_content_vue__ = __webpack_require__(/*! ./pages/elements/content.vue */ 74);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_elements_content_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13__pages_elements_content_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_components_modal_vue__ = __webpack_require__(/*! ./pages/components/modal.vue */ 78);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_components_modal_vue__ = __webpack_require__(/*! ./pages/components/modal.vue */ 76);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_components_modal_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14__pages_components_modal_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_components_dropdown_vue__ = __webpack_require__(/*! ./pages/components/dropdown.vue */ 100);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_components_dropdown_vue__ = __webpack_require__(/*! ./pages/components/dropdown.vue */ 99);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_components_dropdown_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_15__pages_components_dropdown_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_components_sidebar_vue__ = __webpack_require__(/*! ./pages/components/sidebar.vue */ 106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_components_sidebar_vue__ = __webpack_require__(/*! ./pages/components/sidebar.vue */ 104);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_components_sidebar_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_16__pages_components_sidebar_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_components_navbar_vue__ = __webpack_require__(/*! ./pages/components/navbar.vue */ 110);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_components_navbar_vue__ = __webpack_require__(/*! ./pages/components/navbar.vue */ 108);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_components_navbar_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_17__pages_components_navbar_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_components_message_vue__ = __webpack_require__(/*! ./pages/components/message.vue */ 114);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_components_message_vue__ = __webpack_require__(/*! ./pages/components/message.vue */ 112);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_components_message_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_18__pages_components_message_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_components_card_vue__ = __webpack_require__(/*! ./pages/components/card.vue */ 121);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_components_card_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_19__pages_components_card_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_components_tab_vue__ = __webpack_require__(/*! ./pages/components/tab.vue */ 123);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_components_tab_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_20__pages_components_tab_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_examples_vue__ = __webpack_require__(/*! ./pages/examples.vue */ 128);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_examples_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_21__pages_examples_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pages_readme_vue__ = __webpack_require__(/*! ./pages/readme.vue */ 152);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pages_readme_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_22__pages_readme_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_customize_vue__ = __webpack_require__(/*! ./pages/customize.vue */ 128);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_customize_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_21__pages_customize_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pages_examples2_vue__ = __webpack_require__(/*! ./pages/examples2.vue */ 130);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pages_examples2_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_22__pages_examples2_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pages_readme_vue__ = __webpack_require__(/*! ./pages/readme.vue */ 147);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pages_readme_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_23__pages_readme_vue__);
 
 // generated by SUMMARY.md
 
@@ -8996,12 +8612,13 @@ if (inBrowser && window.Vue) {
 
 
 
-var routes = [{ path: '/pages/basis/color_size.md', component: __WEBPACK_IMPORTED_MODULE_0__pages_basis_color_size_vue___default.a }, { path: '/pages/basis/layout.md', component: __WEBPACK_IMPORTED_MODULE_1__pages_basis_layout_vue___default.a }, { path: '/pages/basis/modifiers.md', component: __WEBPACK_IMPORTED_MODULE_2__pages_basis_modifiers_vue___default.a }, { path: '/pages/elements/icon.md', component: __WEBPACK_IMPORTED_MODULE_3__pages_elements_icon_vue___default.a }, { path: '/pages/elements/buttons.md', component: __WEBPACK_IMPORTED_MODULE_4__pages_elements_buttons_vue___default.a }, { path: '/pages/elements/form.md', component: __WEBPACK_IMPORTED_MODULE_5__pages_elements_form_vue___default.a }, { path: '/pages/elements/input.md', component: __WEBPACK_IMPORTED_MODULE_6__pages_elements_input_vue___default.a }, { path: '/pages/elements/select.md', component: __WEBPACK_IMPORTED_MODULE_7__pages_elements_select_vue___default.a }, { path: '/pages/elements/textarea.md', component: __WEBPACK_IMPORTED_MODULE_8__pages_elements_textarea_vue___default.a }, { path: '/pages/elements/form_misc.md', component: __WEBPACK_IMPORTED_MODULE_9__pages_elements_form_misc_vue___default.a }, { path: '/pages/elements/close.md', component: __WEBPACK_IMPORTED_MODULE_10__pages_elements_close_vue___default.a }, { path: '/pages/elements/box.md', component: __WEBPACK_IMPORTED_MODULE_11__pages_elements_box_vue___default.a }, { path: '/pages/elements/notifications.md', component: __WEBPACK_IMPORTED_MODULE_12__pages_elements_notifications_vue___default.a }, { path: '/pages/elements/content.md', component: __WEBPACK_IMPORTED_MODULE_13__pages_elements_content_vue___default.a }, { path: '/pages/components/modal.md', component: __WEBPACK_IMPORTED_MODULE_14__pages_components_modal_vue___default.a }, { path: '/pages/components/dropdown.md', component: __WEBPACK_IMPORTED_MODULE_15__pages_components_dropdown_vue___default.a }, { path: '/pages/components/sidebar.md', component: __WEBPACK_IMPORTED_MODULE_16__pages_components_sidebar_vue___default.a }, { path: '/pages/components/navbar.md', component: __WEBPACK_IMPORTED_MODULE_17__pages_components_navbar_vue___default.a }, { path: '/pages/components/message.md', component: __WEBPACK_IMPORTED_MODULE_18__pages_components_message_vue___default.a }, { path: '/pages/components/card.md', component: __WEBPACK_IMPORTED_MODULE_19__pages_components_card_vue___default.a }, { path: '/pages/components/tab.md', component: __WEBPACK_IMPORTED_MODULE_20__pages_components_tab_vue___default.a }, { path: '/pages/examples.md', component: __WEBPACK_IMPORTED_MODULE_21__pages_examples_vue___default.a }, { path: '/', component: __WEBPACK_IMPORTED_MODULE_22__pages_readme_vue___default.a }];
+
+var routes = [{ path: '/pages/basis/color_size.md', component: __WEBPACK_IMPORTED_MODULE_0__pages_basis_color_size_vue___default.a }, { path: '/pages/basis/layout.md', component: __WEBPACK_IMPORTED_MODULE_1__pages_basis_layout_vue___default.a }, { path: '/pages/basis/modifiers.md', component: __WEBPACK_IMPORTED_MODULE_2__pages_basis_modifiers_vue___default.a }, { path: '/pages/elements/icon.md', component: __WEBPACK_IMPORTED_MODULE_3__pages_elements_icon_vue___default.a }, { path: '/pages/elements/buttons.md', component: __WEBPACK_IMPORTED_MODULE_4__pages_elements_buttons_vue___default.a }, { path: '/pages/elements/form.md', component: __WEBPACK_IMPORTED_MODULE_5__pages_elements_form_vue___default.a }, { path: '/pages/elements/input.md', component: __WEBPACK_IMPORTED_MODULE_6__pages_elements_input_vue___default.a }, { path: '/pages/elements/select.md', component: __WEBPACK_IMPORTED_MODULE_7__pages_elements_select_vue___default.a }, { path: '/pages/elements/textarea.md', component: __WEBPACK_IMPORTED_MODULE_8__pages_elements_textarea_vue___default.a }, { path: '/pages/elements/form_misc.md', component: __WEBPACK_IMPORTED_MODULE_9__pages_elements_form_misc_vue___default.a }, { path: '/pages/elements/close.md', component: __WEBPACK_IMPORTED_MODULE_10__pages_elements_close_vue___default.a }, { path: '/pages/elements/box.md', component: __WEBPACK_IMPORTED_MODULE_11__pages_elements_box_vue___default.a }, { path: '/pages/elements/notifications.md', component: __WEBPACK_IMPORTED_MODULE_12__pages_elements_notifications_vue___default.a }, { path: '/pages/elements/content.md', component: __WEBPACK_IMPORTED_MODULE_13__pages_elements_content_vue___default.a }, { path: '/pages/components/modal.md', component: __WEBPACK_IMPORTED_MODULE_14__pages_components_modal_vue___default.a }, { path: '/pages/components/dropdown.md', component: __WEBPACK_IMPORTED_MODULE_15__pages_components_dropdown_vue___default.a }, { path: '/pages/components/sidebar.md', component: __WEBPACK_IMPORTED_MODULE_16__pages_components_sidebar_vue___default.a }, { path: '/pages/components/navbar.md', component: __WEBPACK_IMPORTED_MODULE_17__pages_components_navbar_vue___default.a }, { path: '/pages/components/message.md', component: __WEBPACK_IMPORTED_MODULE_18__pages_components_message_vue___default.a }, { path: '/pages/components/card.md', component: __WEBPACK_IMPORTED_MODULE_19__pages_components_card_vue___default.a }, { path: '/pages/components/tab.md', component: __WEBPACK_IMPORTED_MODULE_20__pages_components_tab_vue___default.a }, { path: '/pages/customize.md', component: __WEBPACK_IMPORTED_MODULE_21__pages_customize_vue___default.a }, { path: '/pages/examples2.md', component: __WEBPACK_IMPORTED_MODULE_22__pages_examples2_vue___default.a }, { path: '/', component: __WEBPACK_IMPORTED_MODULE_23__pages_readme_vue___default.a }];
 
 
 
 /***/ }),
-/* 31 */
+/* 29 */
 /*!************************************!*\
   !*** ./pages/basis/color_size.vue ***!
   \************************************/
@@ -9011,13 +8628,13 @@ var routes = [{ path: '/pages/basis/color_size.md', component: __WEBPACK_IMPORTE
 
 
 /* styles */
-__webpack_require__(/*! !vue-style-loader!css-loader?sourceMap&-autoprefixer!../../node_modules/vue-loader/lib/style-compiler/index?{"id":"data-v-6b7ec34a","scoped":false,"hasInlineConfig":false}!sass-loader?sourceMap!../../node_modules/vue-loader/lib/selector?type=styles&index=0!./color_size.vue */ 32)
+__webpack_require__(/*! !vue-style-loader!css-loader?sourceMap&-autoprefixer!../../node_modules/vue-loader/lib/style-compiler/index?{"id":"data-v-6b7ec34a","scoped":false,"hasInlineConfig":false}!sass-loader?sourceMap!../../node_modules/vue-loader/lib/selector?type=styles&index=0!./color_size.vue */ 30)
 
 var Component = __webpack_require__(/*! ../../node_modules/vue-loader/lib/component-normalizer */ 0)(
   /* script */
-  __webpack_require__(/*! !babel-loader!../../node_modules/vue-loader/lib/selector?type=script&index=0!./color_size.vue */ 35),
+  __webpack_require__(/*! !babel-loader!../../node_modules/vue-loader/lib/selector?type=script&index=0!./color_size.vue */ 33),
   /* template */
-  __webpack_require__(/*! !../../node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-6b7ec34a"}!../../node_modules/vue-loader/lib/selector?type=template&index=0!./color_size.vue */ 36),
+  __webpack_require__(/*! !../../node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-6b7ec34a"}!../../node_modules/vue-loader/lib/selector?type=template&index=0!./color_size.vue */ 34),
   /* scopeId */
   null,
   /* cssModules */
@@ -9044,7 +8661,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 32 */
+/* 30 */
 /*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-style-loader!./node_modules/css-loader?sourceMap&-autoprefixer!./node_modules/vue-loader/lib/style-compiler?{"id":"data-v-6b7ec34a","scoped":false,"hasInlineConfig":false}!./node_modules/sass-loader/lib/loader.js?sourceMap!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./pages/basis/color_size.vue ***!
   \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
@@ -9055,7 +8672,7 @@ module.exports = Component.exports
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(/*! !../../node_modules/css-loader?sourceMap&-autoprefixer!../../node_modules/vue-loader/lib/style-compiler?{"id":"data-v-6b7ec34a","scoped":false,"hasInlineConfig":false}!../../node_modules/sass-loader/lib/loader.js?sourceMap!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./color_size.vue */ 33);
+var content = __webpack_require__(/*! !../../node_modules/css-loader?sourceMap&-autoprefixer!../../node_modules/vue-loader/lib/style-compiler?{"id":"data-v-6b7ec34a","scoped":false,"hasInlineConfig":false}!../../node_modules/sass-loader/lib/loader.js?sourceMap!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./color_size.vue */ 31);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -9075,7 +8692,7 @@ if(false) {
 }
 
 /***/ }),
-/* 33 */
+/* 31 */
 /*!********************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader?sourceMap&-autoprefixer!./node_modules/vue-loader/lib/style-compiler?{"id":"data-v-6b7ec34a","scoped":false,"hasInlineConfig":false}!./node_modules/sass-loader/lib/loader.js?sourceMap!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./pages/basis/color_size.vue ***!
   \********************************************************************************************************************************************************************************************************************************************************************************************************************/
@@ -9094,7 +8711,7 @@ exports.push([module.i, "\n.sd-colors-presentation > .item {\n  padding: 15px 0;
 
 
 /***/ }),
-/* 34 */
+/* 32 */
 /*!***********************************************************!*\
   !*** ./node_modules/vue-style-loader/lib/listToStyles.js ***!
   \***********************************************************/
@@ -9132,7 +8749,7 @@ module.exports = function listToStyles (parentId, list) {
 
 
 /***/ }),
-/* 35 */
+/* 33 */
 /*!**********************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./pages/basis/color_size.vue ***!
   \**********************************************************************************************************************************/
@@ -9297,7 +8914,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 36 */
+/* 34 */
 /*!*****************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-6b7ec34a"}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./pages/basis/color_size.vue ***!
   \*****************************************************************************************************************************************************************************/
@@ -9371,7 +8988,7 @@ if (false) {
 }
 
 /***/ }),
-/* 37 */
+/* 35 */
 /*!********************************!*\
   !*** ./pages/basis/layout.vue ***!
   \********************************/
@@ -9381,13 +8998,13 @@ if (false) {
 
 
 /* styles */
-__webpack_require__(/*! !vue-style-loader!css-loader?sourceMap&-autoprefixer!../../node_modules/vue-loader/lib/style-compiler/index?{"id":"data-v-35cdb317","scoped":false,"hasInlineConfig":false}!sass-loader?sourceMap!../../node_modules/vue-loader/lib/selector?type=styles&index=0!./layout.vue */ 38)
+__webpack_require__(/*! !vue-style-loader!css-loader?sourceMap&-autoprefixer!../../node_modules/vue-loader/lib/style-compiler/index?{"id":"data-v-35cdb317","scoped":false,"hasInlineConfig":false}!sass-loader?sourceMap!../../node_modules/vue-loader/lib/selector?type=styles&index=0!./layout.vue */ 36)
 
 var Component = __webpack_require__(/*! ../../node_modules/vue-loader/lib/component-normalizer */ 0)(
   /* script */
-  __webpack_require__(/*! !babel-loader!../../node_modules/vue-loader/lib/selector?type=script&index=0!./layout.vue */ 40),
+  __webpack_require__(/*! !babel-loader!../../node_modules/vue-loader/lib/selector?type=script&index=0!./layout.vue */ 38),
   /* template */
-  __webpack_require__(/*! !../../node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-35cdb317"}!../../node_modules/vue-loader/lib/selector?type=template&index=0!./layout.vue */ 41),
+  __webpack_require__(/*! !../../node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-35cdb317"}!../../node_modules/vue-loader/lib/selector?type=template&index=0!./layout.vue */ 39),
   /* scopeId */
   null,
   /* cssModules */
@@ -9414,7 +9031,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 38 */
+/* 36 */
 /*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-style-loader!./node_modules/css-loader?sourceMap&-autoprefixer!./node_modules/vue-loader/lib/style-compiler?{"id":"data-v-35cdb317","scoped":false,"hasInlineConfig":false}!./node_modules/sass-loader/lib/loader.js?sourceMap!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./pages/basis/layout.vue ***!
   \************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
@@ -9425,7 +9042,7 @@ module.exports = Component.exports
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(/*! !../../node_modules/css-loader?sourceMap&-autoprefixer!../../node_modules/vue-loader/lib/style-compiler?{"id":"data-v-35cdb317","scoped":false,"hasInlineConfig":false}!../../node_modules/sass-loader/lib/loader.js?sourceMap!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./layout.vue */ 39);
+var content = __webpack_require__(/*! !../../node_modules/css-loader?sourceMap&-autoprefixer!../../node_modules/vue-loader/lib/style-compiler?{"id":"data-v-35cdb317","scoped":false,"hasInlineConfig":false}!../../node_modules/sass-loader/lib/loader.js?sourceMap!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./layout.vue */ 37);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -9445,7 +9062,7 @@ if(false) {
 }
 
 /***/ }),
-/* 39 */
+/* 37 */
 /*!****************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader?sourceMap&-autoprefixer!./node_modules/vue-loader/lib/style-compiler?{"id":"data-v-35cdb317","scoped":false,"hasInlineConfig":false}!./node_modules/sass-loader/lib/loader.js?sourceMap!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./pages/basis/layout.vue ***!
   \****************************************************************************************************************************************************************************************************************************************************************************************************************/
@@ -9464,7 +9081,7 @@ exports.push([module.i, "\n.sd-grid-block {\n  display: block;\n  padding: 35px 
 
 
 /***/ }),
-/* 40 */
+/* 38 */
 /*!******************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./pages/basis/layout.vue ***!
   \******************************************************************************************************************************/
@@ -9609,7 +9226,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 41 */
+/* 39 */
 /*!*************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-35cdb317"}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./pages/basis/layout.vue ***!
   \*************************************************************************************************************************************************************************/
@@ -10058,7 +9675,7 @@ if (false) {
 }
 
 /***/ }),
-/* 42 */
+/* 40 */
 /*!***********************************!*\
   !*** ./pages/basis/modifiers.vue ***!
   \***********************************/
@@ -10068,13 +9685,13 @@ if (false) {
 
 
 /* styles */
-__webpack_require__(/*! !vue-style-loader!css-loader?sourceMap&-autoprefixer!../../node_modules/vue-loader/lib/style-compiler/index?{"id":"data-v-7409b2c2","scoped":false,"hasInlineConfig":false}!sass-loader?sourceMap!../../node_modules/vue-loader/lib/selector?type=styles&index=0!./modifiers.vue */ 43)
+__webpack_require__(/*! !vue-style-loader!css-loader?sourceMap&-autoprefixer!../../node_modules/vue-loader/lib/style-compiler/index?{"id":"data-v-7409b2c2","scoped":false,"hasInlineConfig":false}!sass-loader?sourceMap!../../node_modules/vue-loader/lib/selector?type=styles&index=0!./modifiers.vue */ 41)
 
 var Component = __webpack_require__(/*! ../../node_modules/vue-loader/lib/component-normalizer */ 0)(
   /* script */
   null,
   /* template */
-  __webpack_require__(/*! !../../node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-7409b2c2"}!../../node_modules/vue-loader/lib/selector?type=template&index=0!./modifiers.vue */ 45),
+  __webpack_require__(/*! !../../node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-7409b2c2"}!../../node_modules/vue-loader/lib/selector?type=template&index=0!./modifiers.vue */ 43),
   /* scopeId */
   null,
   /* cssModules */
@@ -10101,7 +9718,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 43 */
+/* 41 */
 /*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-style-loader!./node_modules/css-loader?sourceMap&-autoprefixer!./node_modules/vue-loader/lib/style-compiler?{"id":"data-v-7409b2c2","scoped":false,"hasInlineConfig":false}!./node_modules/sass-loader/lib/loader.js?sourceMap!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./pages/basis/modifiers.vue ***!
   \***************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
@@ -10112,7 +9729,7 @@ module.exports = Component.exports
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(/*! !../../node_modules/css-loader?sourceMap&-autoprefixer!../../node_modules/vue-loader/lib/style-compiler?{"id":"data-v-7409b2c2","scoped":false,"hasInlineConfig":false}!../../node_modules/sass-loader/lib/loader.js?sourceMap!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./modifiers.vue */ 44);
+var content = __webpack_require__(/*! !../../node_modules/css-loader?sourceMap&-autoprefixer!../../node_modules/vue-loader/lib/style-compiler?{"id":"data-v-7409b2c2","scoped":false,"hasInlineConfig":false}!../../node_modules/sass-loader/lib/loader.js?sourceMap!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./modifiers.vue */ 42);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -10132,7 +9749,7 @@ if(false) {
 }
 
 /***/ }),
-/* 44 */
+/* 42 */
 /*!*******************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader?sourceMap&-autoprefixer!./node_modules/vue-loader/lib/style-compiler?{"id":"data-v-7409b2c2","scoped":false,"hasInlineConfig":false}!./node_modules/sass-loader/lib/loader.js?sourceMap!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./pages/basis/modifiers.vue ***!
   \*******************************************************************************************************************************************************************************************************************************************************************************************************************/
@@ -10151,7 +9768,7 @@ exports.push([module.i, "\n.sd-btns-container .v-btn {\n  min-width: 80px;\n  ma
 
 
 /***/ }),
-/* 45 */
+/* 43 */
 /*!****************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-7409b2c2"}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./pages/basis/modifiers.vue ***!
   \****************************************************************************************************************************************************************************/
@@ -10587,7 +10204,7 @@ if (false) {
 }
 
 /***/ }),
-/* 46 */
+/* 44 */
 /*!*********************************!*\
   !*** ./pages/elements/icon.vue ***!
   \*********************************/
@@ -10599,7 +10216,7 @@ var Component = __webpack_require__(/*! ../../node_modules/vue-loader/lib/compon
   /* script */
   null,
   /* template */
-  __webpack_require__(/*! !../../node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-6a1cad45"}!../../node_modules/vue-loader/lib/selector?type=template&index=0!./icon.vue */ 47),
+  __webpack_require__(/*! !../../node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-6a1cad45"}!../../node_modules/vue-loader/lib/selector?type=template&index=0!./icon.vue */ 45),
   /* scopeId */
   null,
   /* cssModules */
@@ -10626,7 +10243,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 47 */
+/* 45 */
 /*!**************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-6a1cad45"}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./pages/elements/icon.vue ***!
   \**************************************************************************************************************************************************************************/
@@ -11137,7 +10754,7 @@ if (false) {
 }
 
 /***/ }),
-/* 48 */
+/* 46 */
 /*!************************************!*\
   !*** ./pages/elements/buttons.vue ***!
   \************************************/
@@ -11147,13 +10764,13 @@ if (false) {
 
 
 /* styles */
-__webpack_require__(/*! !vue-style-loader!css-loader?sourceMap&-autoprefixer!../../node_modules/vue-loader/lib/style-compiler/index?{"id":"data-v-2f48ba65","scoped":false,"hasInlineConfig":false}!sass-loader?sourceMap!../../node_modules/vue-loader/lib/selector?type=styles&index=0!./buttons.vue */ 49)
+__webpack_require__(/*! !vue-style-loader!css-loader?sourceMap&-autoprefixer!../../node_modules/vue-loader/lib/style-compiler/index?{"id":"data-v-2f48ba65","scoped":false,"hasInlineConfig":false}!sass-loader?sourceMap!../../node_modules/vue-loader/lib/selector?type=styles&index=0!./buttons.vue */ 47)
 
 var Component = __webpack_require__(/*! ../../node_modules/vue-loader/lib/component-normalizer */ 0)(
   /* script */
-  __webpack_require__(/*! !babel-loader!../../node_modules/vue-loader/lib/selector?type=script&index=0!./buttons.vue */ 51),
+  __webpack_require__(/*! !babel-loader!../../node_modules/vue-loader/lib/selector?type=script&index=0!./buttons.vue */ 49),
   /* template */
-  __webpack_require__(/*! !../../node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-2f48ba65"}!../../node_modules/vue-loader/lib/selector?type=template&index=0!./buttons.vue */ 52),
+  __webpack_require__(/*! !../../node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-2f48ba65"}!../../node_modules/vue-loader/lib/selector?type=template&index=0!./buttons.vue */ 50),
   /* scopeId */
   null,
   /* cssModules */
@@ -11180,7 +10797,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 49 */
+/* 47 */
 /*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-style-loader!./node_modules/css-loader?sourceMap&-autoprefixer!./node_modules/vue-loader/lib/style-compiler?{"id":"data-v-2f48ba65","scoped":false,"hasInlineConfig":false}!./node_modules/sass-loader/lib/loader.js?sourceMap!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./pages/elements/buttons.vue ***!
   \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
@@ -11191,7 +10808,7 @@ module.exports = Component.exports
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(/*! !../../node_modules/css-loader?sourceMap&-autoprefixer!../../node_modules/vue-loader/lib/style-compiler?{"id":"data-v-2f48ba65","scoped":false,"hasInlineConfig":false}!../../node_modules/sass-loader/lib/loader.js?sourceMap!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./buttons.vue */ 50);
+var content = __webpack_require__(/*! !../../node_modules/css-loader?sourceMap&-autoprefixer!../../node_modules/vue-loader/lib/style-compiler?{"id":"data-v-2f48ba65","scoped":false,"hasInlineConfig":false}!../../node_modules/sass-loader/lib/loader.js?sourceMap!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./buttons.vue */ 48);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -11211,7 +10828,7 @@ if(false) {
 }
 
 /***/ }),
-/* 50 */
+/* 48 */
 /*!********************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader?sourceMap&-autoprefixer!./node_modules/vue-loader/lib/style-compiler?{"id":"data-v-2f48ba65","scoped":false,"hasInlineConfig":false}!./node_modules/sass-loader/lib/loader.js?sourceMap!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./pages/elements/buttons.vue ***!
   \********************************************************************************************************************************************************************************************************************************************************************************************************************/
@@ -11230,7 +10847,7 @@ exports.push([module.i, "\n.sd-states-buttons .v-btn {\n  width: 10%;\n  margin-
 
 
 /***/ }),
-/* 51 */
+/* 49 */
 /*!**********************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./pages/elements/buttons.vue ***!
   \**********************************************************************************************************************************/
@@ -11524,7 +11141,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 52 */
+/* 50 */
 /*!*****************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-2f48ba65"}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./pages/elements/buttons.vue ***!
   \*****************************************************************************************************************************************************************************/
@@ -13118,7 +12735,7 @@ if (false) {
 }
 
 /***/ }),
-/* 53 */
+/* 51 */
 /*!*********************************!*\
   !*** ./pages/elements/form.vue ***!
   \*********************************/
@@ -13128,9 +12745,9 @@ if (false) {
 
 var Component = __webpack_require__(/*! ../../node_modules/vue-loader/lib/component-normalizer */ 0)(
   /* script */
-  __webpack_require__(/*! !babel-loader!../../node_modules/vue-loader/lib/selector?type=script&index=0!./form.vue */ 54),
+  __webpack_require__(/*! !babel-loader!../../node_modules/vue-loader/lib/selector?type=script&index=0!./form.vue */ 52),
   /* template */
-  __webpack_require__(/*! !../../node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-9b573fe0"}!../../node_modules/vue-loader/lib/selector?type=template&index=0!./form.vue */ 55),
+  __webpack_require__(/*! !../../node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-9b573fe0"}!../../node_modules/vue-loader/lib/selector?type=template&index=0!./form.vue */ 53),
   /* scopeId */
   null,
   /* cssModules */
@@ -13157,7 +12774,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 54 */
+/* 52 */
 /*!*******************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./pages/elements/form.vue ***!
   \*******************************************************************************************************************************/
@@ -13690,7 +13307,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 55 */
+/* 53 */
 /*!**************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-9b573fe0"}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./pages/elements/form.vue ***!
   \**************************************************************************************************************************************************************************/
@@ -17177,7 +16794,7 @@ if (false) {
 }
 
 /***/ }),
-/* 56 */
+/* 54 */
 /*!**********************************!*\
   !*** ./pages/elements/input.vue ***!
   \**********************************/
@@ -17189,7 +16806,7 @@ var Component = __webpack_require__(/*! ../../node_modules/vue-loader/lib/compon
   /* script */
   null,
   /* template */
-  __webpack_require__(/*! !../../node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-d6906da4"}!../../node_modules/vue-loader/lib/selector?type=template&index=0!./input.vue */ 57),
+  __webpack_require__(/*! !../../node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-d6906da4"}!../../node_modules/vue-loader/lib/selector?type=template&index=0!./input.vue */ 55),
   /* scopeId */
   null,
   /* cssModules */
@@ -17216,7 +16833,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 57 */
+/* 55 */
 /*!***************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-d6906da4"}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./pages/elements/input.vue ***!
   \***************************************************************************************************************************************************************************/
@@ -18000,7 +17617,7 @@ if (false) {
 }
 
 /***/ }),
-/* 58 */
+/* 56 */
 /*!***********************************!*\
   !*** ./pages/elements/select.vue ***!
   \***********************************/
@@ -18012,7 +17629,7 @@ var Component = __webpack_require__(/*! ../../node_modules/vue-loader/lib/compon
   /* script */
   null,
   /* template */
-  __webpack_require__(/*! !../../node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-4f86cf48"}!../../node_modules/vue-loader/lib/selector?type=template&index=0!./select.vue */ 59),
+  __webpack_require__(/*! !../../node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-4f86cf48"}!../../node_modules/vue-loader/lib/selector?type=template&index=0!./select.vue */ 57),
   /* scopeId */
   null,
   /* cssModules */
@@ -18039,7 +17656,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 59 */
+/* 57 */
 /*!****************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-4f86cf48"}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./pages/elements/select.vue ***!
   \****************************************************************************************************************************************************************************/
@@ -18723,7 +18340,7 @@ if (false) {
 }
 
 /***/ }),
-/* 60 */
+/* 58 */
 /*!*************************************!*\
   !*** ./pages/elements/textarea.vue ***!
   \*************************************/
@@ -18735,7 +18352,7 @@ var Component = __webpack_require__(/*! ../../node_modules/vue-loader/lib/compon
   /* script */
   null,
   /* template */
-  __webpack_require__(/*! !../../node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-518d34f4"}!../../node_modules/vue-loader/lib/selector?type=template&index=0!./textarea.vue */ 61),
+  __webpack_require__(/*! !../../node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-518d34f4"}!../../node_modules/vue-loader/lib/selector?type=template&index=0!./textarea.vue */ 59),
   /* scopeId */
   null,
   /* cssModules */
@@ -18762,7 +18379,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 61 */
+/* 59 */
 /*!******************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-518d34f4"}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./pages/elements/textarea.vue ***!
   \******************************************************************************************************************************************************************************/
@@ -19067,7 +18684,7 @@ if (false) {
 }
 
 /***/ }),
-/* 62 */
+/* 60 */
 /*!**************************************!*\
   !*** ./pages/elements/form_misc.vue ***!
   \**************************************/
@@ -19079,7 +18696,7 @@ var Component = __webpack_require__(/*! ../../node_modules/vue-loader/lib/compon
   /* script */
   null,
   /* template */
-  __webpack_require__(/*! !../../node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-28f29f2a"}!../../node_modules/vue-loader/lib/selector?type=template&index=0!./form_misc.vue */ 63),
+  __webpack_require__(/*! !../../node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-28f29f2a"}!../../node_modules/vue-loader/lib/selector?type=template&index=0!./form_misc.vue */ 61),
   /* scopeId */
   null,
   /* cssModules */
@@ -19106,7 +18723,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 63 */
+/* 61 */
 /*!*******************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-28f29f2a"}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./pages/elements/form_misc.vue ***!
   \*******************************************************************************************************************************************************************************/
@@ -19407,7 +19024,7 @@ if (false) {
 }
 
 /***/ }),
-/* 64 */
+/* 62 */
 /*!**********************************!*\
   !*** ./pages/elements/close.vue ***!
   \**********************************/
@@ -19419,7 +19036,7 @@ var Component = __webpack_require__(/*! ../../node_modules/vue-loader/lib/compon
   /* script */
   null,
   /* template */
-  __webpack_require__(/*! !../../node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-1237885c"}!../../node_modules/vue-loader/lib/selector?type=template&index=0!./close.vue */ 65),
+  __webpack_require__(/*! !../../node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-1237885c"}!../../node_modules/vue-loader/lib/selector?type=template&index=0!./close.vue */ 63),
   /* scopeId */
   null,
   /* cssModules */
@@ -19446,7 +19063,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 65 */
+/* 63 */
 /*!***************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-1237885c"}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./pages/elements/close.vue ***!
   \***************************************************************************************************************************************************************************/
@@ -19812,7 +19429,7 @@ if (false) {
 }
 
 /***/ }),
-/* 66 */
+/* 64 */
 /*!********************************!*\
   !*** ./pages/elements/box.vue ***!
   \********************************/
@@ -19822,9 +19439,9 @@ if (false) {
 
 var Component = __webpack_require__(/*! ../../node_modules/vue-loader/lib/component-normalizer */ 0)(
   /* script */
-  __webpack_require__(/*! !babel-loader!../../node_modules/vue-loader/lib/selector?type=script&index=0!./box.vue */ 67),
+  __webpack_require__(/*! !babel-loader!../../node_modules/vue-loader/lib/selector?type=script&index=0!./box.vue */ 65),
   /* template */
-  __webpack_require__(/*! !../../node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-c488eca2"}!../../node_modules/vue-loader/lib/selector?type=template&index=0!./box.vue */ 68),
+  __webpack_require__(/*! !../../node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-c488eca2"}!../../node_modules/vue-loader/lib/selector?type=template&index=0!./box.vue */ 66),
   /* scopeId */
   null,
   /* cssModules */
@@ -19851,7 +19468,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 67 */
+/* 65 */
 /*!******************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./pages/elements/box.vue ***!
   \******************************************************************************************************************************/
@@ -19947,7 +19564,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 68 */
+/* 66 */
 /*!*************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-c488eca2"}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./pages/elements/box.vue ***!
   \*************************************************************************************************************************************************************************/
@@ -20167,7 +19784,7 @@ if (false) {
 }
 
 /***/ }),
-/* 69 */
+/* 67 */
 /*!******************************************!*\
   !*** ./pages/elements/notifications.vue ***!
   \******************************************/
@@ -20177,9 +19794,9 @@ if (false) {
 
 var Component = __webpack_require__(/*! ../../node_modules/vue-loader/lib/component-normalizer */ 0)(
   /* script */
-  __webpack_require__(/*! !babel-loader!../../node_modules/vue-loader/lib/selector?type=script&index=0!./notifications.vue */ 70),
+  __webpack_require__(/*! !babel-loader!../../node_modules/vue-loader/lib/selector?type=script&index=0!./notifications.vue */ 68),
   /* template */
-  __webpack_require__(/*! !../../node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-2878bb4c"}!../../node_modules/vue-loader/lib/selector?type=template&index=0!./notifications.vue */ 75),
+  __webpack_require__(/*! !../../node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-2878bb4c"}!../../node_modules/vue-loader/lib/selector?type=template&index=0!./notifications.vue */ 73),
   /* scopeId */
   null,
   /* cssModules */
@@ -20206,7 +19823,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 70 */
+/* 68 */
 /*!****************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./pages/elements/notifications.vue ***!
   \****************************************************************************************************************************************/
@@ -20216,7 +19833,7 @@ module.exports = Component.exports
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_root_packages_notification__ = __webpack_require__(/*! root/packages/notification */ 71);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_root_packages_notification__ = __webpack_require__(/*! root/packages/notification */ 69);
 //
 //
 //
@@ -20317,7 +19934,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 71 */
+/* 69 */
 /*!*****************************************!*\
   !*** ../packages/notification/index.js ***!
   \*****************************************/
@@ -20328,9 +19945,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NotificationFactory; });
 /* unused harmony export Notification */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(/*! vue */ 3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(/*! vue */ 4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__impl_vue__ = __webpack_require__(/*! ./impl.vue */ 72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__impl_vue__ = __webpack_require__(/*! ./impl.vue */ 70);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__impl_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__impl_vue__);
 /**
  * Created by charlie on 9/30/16.
@@ -20450,7 +20067,7 @@ let NotificationFactory = {
 
 
 /***/ }),
-/* 72 */
+/* 70 */
 /*!*****************************************!*\
   !*** ../packages/notification/impl.vue ***!
   \*****************************************/
@@ -20460,9 +20077,9 @@ let NotificationFactory = {
 
 var Component = __webpack_require__(/*! ../../.sdocs/node_modules/vue-loader/lib/component-normalizer */ 0)(
   /* script */
-  __webpack_require__(/*! !babel-loader!../../.sdocs/node_modules/vue-loader/lib/selector?type=script&index=0!./impl.vue */ 73),
+  __webpack_require__(/*! !babel-loader!../../.sdocs/node_modules/vue-loader/lib/selector?type=script&index=0!./impl.vue */ 71),
   /* template */
-  __webpack_require__(/*! !../../.sdocs/node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-67bb4150"}!../../.sdocs/node_modules/vue-loader/lib/selector?type=template&index=0!./impl.vue */ 74),
+  __webpack_require__(/*! !../../.sdocs/node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-67bb4150"}!../../.sdocs/node_modules/vue-loader/lib/selector?type=template&index=0!./impl.vue */ 72),
   /* scopeId */
   null,
   /* cssModules */
@@ -20489,7 +20106,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 73 */
+/* 71 */
 /*!***************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!../packages/notification/impl.vue ***!
   \***************************************************************************************************************************************/
@@ -20601,7 +20218,7 @@ const typeMaps = {
 });
 
 /***/ }),
-/* 74 */
+/* 72 */
 /*!**********************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-67bb4150"}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!../packages/notification/impl.vue ***!
   \**********************************************************************************************************************************************************************************/
@@ -20662,7 +20279,7 @@ if (false) {
 }
 
 /***/ }),
-/* 75 */
+/* 73 */
 /*!***********************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-2878bb4c"}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./pages/elements/notifications.vue ***!
   \***********************************************************************************************************************************************************************************/
@@ -20840,7 +20457,7 @@ if (false) {
 }
 
 /***/ }),
-/* 76 */
+/* 74 */
 /*!************************************!*\
   !*** ./pages/elements/content.vue ***!
   \************************************/
@@ -20852,7 +20469,7 @@ var Component = __webpack_require__(/*! ../../node_modules/vue-loader/lib/compon
   /* script */
   null,
   /* template */
-  __webpack_require__(/*! !../../node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-7fe9f35d"}!../../node_modules/vue-loader/lib/selector?type=template&index=0!./content.vue */ 77),
+  __webpack_require__(/*! !../../node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-7fe9f35d"}!../../node_modules/vue-loader/lib/selector?type=template&index=0!./content.vue */ 75),
   /* scopeId */
   null,
   /* cssModules */
@@ -20879,7 +20496,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 77 */
+/* 75 */
 /*!*****************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-7fe9f35d"}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./pages/elements/content.vue ***!
   \*****************************************************************************************************************************************************************************/
@@ -20901,7 +20518,7 @@ if (false) {
 }
 
 /***/ }),
-/* 78 */
+/* 76 */
 /*!************************************!*\
   !*** ./pages/components/modal.vue ***!
   \************************************/
@@ -20911,9 +20528,9 @@ if (false) {
 
 var Component = __webpack_require__(/*! ../../node_modules/vue-loader/lib/component-normalizer */ 0)(
   /* script */
-  __webpack_require__(/*! !babel-loader!../../node_modules/vue-loader/lib/selector?type=script&index=0!./modal.vue */ 79),
+  __webpack_require__(/*! !babel-loader!../../node_modules/vue-loader/lib/selector?type=script&index=0!./modal.vue */ 77),
   /* template */
-  __webpack_require__(/*! !../../node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-fa11fe20"}!../../node_modules/vue-loader/lib/selector?type=template&index=0!./modal.vue */ 99),
+  __webpack_require__(/*! !../../node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-fa11fe20"}!../../node_modules/vue-loader/lib/selector?type=template&index=0!./modal.vue */ 98),
   /* scopeId */
   null,
   /* cssModules */
@@ -20940,7 +20557,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 79 */
+/* 77 */
 /*!**********************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./pages/components/modal.vue ***!
   \**********************************************************************************************************************************/
@@ -20950,7 +20567,7 @@ module.exports = Component.exports
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_packages_modal__ = __webpack_require__(/*! packages/modal */ 16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_packages_modal__ = __webpack_require__(/*! packages/modal */ 78);
 //
 //
 //
@@ -21063,7 +20680,145 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 80 */
+/* 78 */
+/*!**********************************!*\
+  !*** ../packages/modal/index.js ***!
+  \**********************************/
+/*! exports provided: modalShared, open, default */
+/*! exports used: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export open */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(/*! vue */ 4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__impl_vue__ = __webpack_require__(/*! ./impl.vue */ 79);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__impl_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__impl_vue__);
+/**
+ * User: charlie
+ * Date: 17/10/2017 2:05 PM
+ **/
+
+
+
+
+/* istanbul ignore next */
+__WEBPACK_IMPORTED_MODULE_1__impl_vue___default.a.install = function (Vue) {
+  Vue.component(__WEBPACK_IMPORTED_MODULE_1__impl_vue___default.a.name, __WEBPACK_IMPORTED_MODULE_1__impl_vue___default.a);
+};
+
+const modalShared = {
+  rootCtx: null
+};
+/* unused harmony export modalShared */
+
+
+function open($slots, options = {}, slotData = {}) {
+  let _onResolved = () => {};
+  let _onRejected = () => {};
+
+  const Dialog = __WEBPACK_IMPORTED_MODULE_0_vue___default.a.extend({
+    name: 'XVDialog',
+    mixins: [__WEBPACK_IMPORTED_MODULE_1__impl_vue___default.a],
+    parent: modalShared.rootCtx, // setup `context` shared data
+    beforeCreate() {
+      if (typeof $slots === 'string') {
+        $slots = {
+          default: $slots
+        };
+      }
+
+      // compile slots to vNodes
+      Object.keys($slots).forEach(k => {
+        const renderer = __WEBPACK_IMPORTED_MODULE_0_vue___default.a.compile($slots[k]);
+        const slotCtx = {
+          data() {
+            slotData = typeof slotData === 'function' ? slotData.call(this) : slotData;
+
+            if (slotData) {
+              slotData.onResolved = _onResolved;
+              slotData.onRejected = _onRejected;
+            }
+
+            return slotData;
+          },
+          render: renderer.render,
+          staticRenderFns: renderer.staticRenderFns,
+          components: options.components || {},
+          computed: options.computed || {},
+          methods: Object.assign(options.methods || {}, {
+            getTopDialog() {
+              let dialog = this.$parent || null;
+
+              while (dialog) {
+                if (dialog.$options.name === 'XVDialog') {
+                  break;
+                }
+
+                dialog = dialog.$parent;
+              }
+
+              return dialog;
+            }
+          })
+
+          // setup array
+        };$slots[k] = [this.$createElement(slotCtx)];
+      });
+
+      Object.assign(this.$slots, $slots);
+    }
+  });
+
+  const _defaults = {
+    propsData: {
+      visible: true
+    }
+
+    // @todo merge strategy
+  };if (options.propsData) {
+    Object.assign(_defaults.propsData, options.propsData);
+    delete options.propsData;
+  }
+
+  const vm = new Dialog(Object.assign(_defaults, options));
+
+  return new Promise((resolve, reject) => {
+    _onResolved = resolve;
+    _onRejected = reject;
+
+    // render it
+    vm.$mount();
+
+    document.body.appendChild(vm.$el);
+
+    function forceDestroyElement() {
+      // vm.visible = false
+      vm.$destroy();
+      vm.$el.parentNode.removeChild(vm.$el);
+    }
+
+    // preConfirm ?:> ok
+    vm.$on('ok', e => {
+      vm.$emit('close');
+      resolve(e);
+    });
+
+    vm.$on('close', e => {
+      (!e || e === 'esc' || e === 'cancel') && forceDestroyElement();
+    });
+
+    // Fatal error !!
+    vm.$on('error', e => {
+      reject(e);
+    });
+  });
+}
+
+/* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_1__impl_vue___default.a);
+
+/***/ }),
+/* 79 */
 /*!**********************************!*\
   !*** ../packages/modal/impl.vue ***!
   \**********************************/
@@ -21073,9 +20828,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 var Component = __webpack_require__(/*! ../../.sdocs/node_modules/vue-loader/lib/component-normalizer */ 0)(
   /* script */
-  __webpack_require__(/*! !babel-loader!../../.sdocs/node_modules/vue-loader/lib/selector?type=script&index=0!./impl.vue */ 81),
+  __webpack_require__(/*! !babel-loader!../../.sdocs/node_modules/vue-loader/lib/selector?type=script&index=0!./impl.vue */ 80),
   /* template */
-  __webpack_require__(/*! !../../.sdocs/node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-0eac5c66"}!../../.sdocs/node_modules/vue-loader/lib/selector?type=template&index=0!./impl.vue */ 98),
+  __webpack_require__(/*! !../../.sdocs/node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-0eac5c66"}!../../.sdocs/node_modules/vue-loader/lib/selector?type=template&index=0!./impl.vue */ 97),
   /* scopeId */
   null,
   /* cssModules */
@@ -21102,7 +20857,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 81 */
+/* 80 */
 /*!********************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!../packages/modal/impl.vue ***!
   \********************************************************************************************************************************/
@@ -21112,9 +20867,9 @@ module.exports = Component.exports
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_is_type_of__ = __webpack_require__(/*! is-type-of */ 17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_is_type_of__ = __webpack_require__(/*! is-type-of */ 16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_is_type_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_is_type_of__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__sources_utils_mixin__ = __webpack_require__(/*! ../../sources/utils/mixin */ 24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__sources_utils_mixin__ = __webpack_require__(/*! ../../sources/utils/mixin */ 23);
 //
 //
 //
@@ -21173,6 +20928,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   props: {
     title: String,
     visible: Boolean,
+    confirmText: {
+      type: String,
+      'default': '确定'
+    },
+    cancelText: {
+      type: String,
+      'default': '取消'
+    },
+    preConfirm: {
+      type: Function,
+      'default': Function
+    },
     closable: {
       type: Boolean,
       'default': true
@@ -21194,6 +20961,17 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         switch (e) {
           case 'close':
             this.$emit('close');
+            break;
+          case 'esc':
+          case 'cancel':
+            this.$emit('close', e);
+            break;
+          case 'confirm':
+            Promise.resolve(this.preConfirm.call(this)).then(res => {
+              this.$emit('ok', res);
+            }).catch(err => {
+              // Handle error by `preConfirm` hook
+            });
             break;
         }
       } else if (__WEBPACK_IMPORTED_MODULE_0_is_type_of___default.a.promise(e)) {
@@ -21220,17 +20998,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
   methods: {
     _handleClose() {
-      this._close();
-    },
-
-    _close() {
-      this.$emit('dimission', 'close');
+      this.closable && this.$emit('dimission', 'close');
     },
 
     _handleEscClose(e) {
       if (this._visible && this.closable) {
         if (e.keyCode === 27) {
-          this._close();
+          this.$emit('dimission', 'esc');
         }
       }
     }
@@ -21243,7 +21017,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 82 */
+/* 81 */
 /*!*****************************************!*\
   !*** ./node_modules/base64-js/index.js ***!
   \*****************************************/
@@ -21369,7 +21143,7 @@ function fromByteArray (uint8) {
 
 
 /***/ }),
-/* 83 */
+/* 82 */
 /*!***************************************!*\
   !*** ./node_modules/ieee754/index.js ***!
   \***************************************/
@@ -21464,7 +21238,7 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
 
 
 /***/ }),
-/* 84 */
+/* 83 */
 /*!*******************************************!*\
   !*** ./node_modules/isstream/isstream.js ***!
   \*******************************************/
@@ -21472,7 +21246,7 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
 /*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
-var stream = __webpack_require__(/*! stream */ 85)
+var stream = __webpack_require__(/*! stream */ 84)
 
 
 function isStream (obj) {
@@ -21502,7 +21276,7 @@ module.exports.isDuplex   = isDuplex
 
 
 /***/ }),
-/* 85 */
+/* 84 */
 /*!**************************************************************************!*\
   !*** /Users/charlie/code/s-docs/node_modules/stream-browserify/index.js ***!
   \**************************************************************************/
@@ -21538,10 +21312,10 @@ var inherits = __webpack_require__(/*! inherits */ 7);
 
 inherits(Stream, EE);
 Stream.Readable = __webpack_require__(/*! readable-stream/readable.js */ 12);
-Stream.Writable = __webpack_require__(/*! readable-stream/writable.js */ 92);
-Stream.Duplex = __webpack_require__(/*! readable-stream/duplex.js */ 93);
-Stream.Transform = __webpack_require__(/*! readable-stream/transform.js */ 94);
-Stream.PassThrough = __webpack_require__(/*! readable-stream/passthrough.js */ 95);
+Stream.Writable = __webpack_require__(/*! readable-stream/writable.js */ 91);
+Stream.Duplex = __webpack_require__(/*! readable-stream/duplex.js */ 92);
+Stream.Transform = __webpack_require__(/*! readable-stream/transform.js */ 93);
+Stream.PassThrough = __webpack_require__(/*! readable-stream/passthrough.js */ 94);
 
 // Backwards-compat with node 0.4.x
 Stream.Stream = Stream;
@@ -21640,7 +21414,7 @@ Stream.prototype.pipe = function(dest, options) {
 
 
 /***/ }),
-/* 86 */
+/* 85 */
 /*!**********************!*\
   !*** util (ignored) ***!
   \**********************/
@@ -21651,7 +21425,7 @@ Stream.prototype.pipe = function(dest, options) {
 /* (ignored) */
 
 /***/ }),
-/* 87 */
+/* 86 */
 /*!*************************************************************************!*\
   !*** ./node_modules/readable-stream/lib/internal/streams/BufferList.js ***!
   \*************************************************************************/
@@ -21736,7 +21510,7 @@ module.exports = function () {
 }();
 
 /***/ }),
-/* 88 */
+/* 87 */
 /*!*************************************************************************!*\
   !*** /Users/charlie/code/s-docs/node_modules/timers-browserify/main.js ***!
   \*************************************************************************/
@@ -21794,13 +21568,13 @@ exports._unrefActive = exports.active = function(item) {
 };
 
 // setimmediate attaches itself to the global object
-__webpack_require__(/*! setimmediate */ 89);
+__webpack_require__(/*! setimmediate */ 88);
 exports.setImmediate = setImmediate;
 exports.clearImmediate = clearImmediate;
 
 
 /***/ }),
-/* 89 */
+/* 88 */
 /*!***************************************************!*\
   !*** ./node_modules/setimmediate/setImmediate.js ***!
   \***************************************************/
@@ -21998,7 +21772,7 @@ exports.clearImmediate = clearImmediate;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../../../s-docs/node_modules/webpack/buildin/global.js */ 8), __webpack_require__(/*! ./../../../../s-docs/node_modules/process/browser.js */ 5)))
 
 /***/ }),
-/* 90 */
+/* 89 */
 /*!************************************************!*\
   !*** ./node_modules/util-deprecate/browser.js ***!
   \************************************************/
@@ -22077,7 +21851,7 @@ function config (name) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../../../s-docs/node_modules/webpack/buildin/global.js */ 8)))
 
 /***/ }),
-/* 91 */
+/* 90 */
 /*!*****************************************************************!*\
   !*** ./node_modules/readable-stream/lib/_stream_passthrough.js ***!
   \*****************************************************************/
@@ -22115,7 +21889,7 @@ function config (name) {
 
 module.exports = PassThrough;
 
-var Transform = __webpack_require__(/*! ./_stream_transform */ 23);
+var Transform = __webpack_require__(/*! ./_stream_transform */ 22);
 
 /*<replacement>*/
 var util = __webpack_require__(/*! core-util-is */ 6);
@@ -22135,7 +21909,7 @@ PassThrough.prototype._transform = function (chunk, encoding, cb) {
 };
 
 /***/ }),
-/* 92 */
+/* 91 */
 /*!**********************************************************!*\
   !*** ./node_modules/readable-stream/writable-browser.js ***!
   \**********************************************************/
@@ -22147,7 +21921,7 @@ module.exports = __webpack_require__(/*! ./lib/_stream_writable.js */ 14);
 
 
 /***/ }),
-/* 93 */
+/* 92 */
 /*!********************************************************!*\
   !*** ./node_modules/readable-stream/duplex-browser.js ***!
   \********************************************************/
@@ -22155,11 +21929,11 @@ module.exports = __webpack_require__(/*! ./lib/_stream_writable.js */ 14);
 /*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! ./lib/_stream_duplex.js */ 4);
+module.exports = __webpack_require__(/*! ./lib/_stream_duplex.js */ 3);
 
 
 /***/ }),
-/* 94 */
+/* 93 */
 /*!***************************************************!*\
   !*** ./node_modules/readable-stream/transform.js ***!
   \***************************************************/
@@ -22171,7 +21945,7 @@ module.exports = __webpack_require__(/*! ./readable */ 12).Transform
 
 
 /***/ }),
-/* 95 */
+/* 94 */
 /*!*****************************************************!*\
   !*** ./node_modules/readable-stream/passthrough.js ***!
   \*****************************************************/
@@ -22183,7 +21957,7 @@ module.exports = __webpack_require__(/*! ./readable */ 12).PassThrough
 
 
 /***/ }),
-/* 96 */
+/* 95 */
 /*!********************************************!*\
   !*** ../node_modules/is-class/is-class.js ***!
   \********************************************/
@@ -22223,7 +21997,7 @@ module.exports = __webpack_require__(/*! ./readable */ 12).PassThrough
 
 
 /***/ }),
-/* 97 */
+/* 96 */
 /*!***********************************!*\
   !*** ../sources/mixins/common.js ***!
   \***********************************/
@@ -22232,7 +22006,7 @@ module.exports = __webpack_require__(/*! ./readable */ 12).PassThrough
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils__ = __webpack_require__(/*! ../utils */ 25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils__ = __webpack_require__(/*! ../utils */ 24);
 
 
 /* harmony default export */ __webpack_exports__["a"] = ({
@@ -22253,9 +22027,21 @@ module.exports = __webpack_require__(/*! ./readable */ 12).PassThrough
       type: String,
       default: ''
     },
+    active: {
+      type: Boolean,
+      default: false
+    },
+    hoverable: {
+      type: Boolean,
+      default: false
+    },
     disabled: {
       type: Boolean,
       default: false
+    },
+    magic: {
+      type: String,
+      'default': ''
     },
     flex: {
       type: [Boolean, String],
@@ -22301,6 +22087,10 @@ module.exports = __webpack_require__(/*! ./readable */ 12).PassThrough
       type: Boolean,
       default: false
     },
+    inline: {
+      type: Boolean,
+      default: false
+    },
     vertical: {
       type: Boolean,
       default: false
@@ -22308,10 +22098,10 @@ module.exports = __webpack_require__(/*! ./readable */ 12).PassThrough
   },
   computed: {
     colorModifier() {
-      return Object(__WEBPACK_IMPORTED_MODULE_0__utils__["b" /* trust */])(this.color) ? `is-${this.color}` : '';
+      return Object(__WEBPACK_IMPORTED_MODULE_0__utils__["c" /* trust */])(this.color) ? `is-${this.color}` : '';
     },
     sizeModifier() {
-      return Object(__WEBPACK_IMPORTED_MODULE_0__utils__["b" /* trust */])(this.size) ? `is-${this.size}` : '';
+      return Object(__WEBPACK_IMPORTED_MODULE_0__utils__["c" /* trust */])(this.size) ? `is-${this.size}` : '';
     },
     extrasModifier() {
       if (!this.extras || !Array.isArray(this.extras)) {
@@ -22323,37 +22113,59 @@ module.exports = __webpack_require__(/*! ./readable */ 12).PassThrough
       });
     },
     stateModifier() {
-      return Object(__WEBPACK_IMPORTED_MODULE_0__utils__["b" /* trust */])(this.state) ? `is-${this.state}` : '';
+      return Object(__WEBPACK_IMPORTED_MODULE_0__utils__["c" /* trust */])(this.state) ? `is-${this.state}` : '';
+    },
+    magicModifier() {
+      if (!this.magic || !this.magic.trim()) {
+        return '';
+      }
+
+      let magic = this.magic.split('-');
+
+      magic = magic.map(n => {
+        return `is-${Object(__WEBPACK_IMPORTED_MODULE_0__utils__["a" /* hyphenCase */])(n)}`;
+      });
+
+      return magic.join(' ');
     },
     colModifier() {
-      return Object(__WEBPACK_IMPORTED_MODULE_0__utils__["b" /* trust */])(this.col) ? `is-${this.col}` : '';
+      return Object(__WEBPACK_IMPORTED_MODULE_0__utils__["c" /* trust */])(this.col) ? `is-${this.col}` : '';
     },
     offsetModifier() {
-      return Object(__WEBPACK_IMPORTED_MODULE_0__utils__["b" /* trust */])(this.offset) ? `is-offset-${this.offset}` : '';
+      return Object(__WEBPACK_IMPORTED_MODULE_0__utils__["c" /* trust */])(this.offset) ? `is-offset-${this.offset}` : '';
     },
     disabledModifier() {
-      return Object(__WEBPACK_IMPORTED_MODULE_0__utils__["b" /* trust */])(this.disabled) ? `is-disabled` : '';
+      return Object(__WEBPACK_IMPORTED_MODULE_0__utils__["c" /* trust */])(this.disabled) ? `is-disabled` : '';
+    },
+    activeModifier() {
+      return this.active ? `is-active` : '';
+    },
+    hoverableModifier() {
+      return this.hoverable ? `is-hoverable` : '';
     },
     flexModifier() {
-      return Object(__WEBPACK_IMPORTED_MODULE_0__utils__["b" /* trust */])(this.flex) ? `is-${this.flex}` : '';
+      return Object(__WEBPACK_IMPORTED_MODULE_0__utils__["c" /* trust */])(this.flex) ? `is-${this.flex}` : '';
     },
     typeModifier() {
-      return Object(__WEBPACK_IMPORTED_MODULE_0__utils__["b" /* trust */])(this.type) ? `is-${this.type}` : '';
+      return Object(__WEBPACK_IMPORTED_MODULE_0__utils__["c" /* trust */])(this.type) ? `is-${this.type}` : '';
     },
     alignModifier() {
-      return Object(__WEBPACK_IMPORTED_MODULE_0__utils__["b" /* trust */])(this.align) ? `is-${this.align}` : '';
+      return Object(__WEBPACK_IMPORTED_MODULE_0__utils__["c" /* trust */])(this.align) ? `is-${this.align}` : '';
     },
     blockModifier() {
-      return Object(__WEBPACK_IMPORTED_MODULE_0__utils__["b" /* trust */])(this.block) ? `is-block` : '';
+      return this.block ? `is-block` : '';
+    },
+    inlineModifier() {
+      return this.inline ? `is-inline` : '';
     },
     verticalModifier() {
-      return Object(__WEBPACK_IMPORTED_MODULE_0__utils__["b" /* trust */])(this.vertical) ? `is-vertical` : '';
+      return Object(__WEBPACK_IMPORTED_MODULE_0__utils__["c" /* trust */])(this.vertical) ? `is-vertical` : '';
     }
   }
 });
 
 /***/ }),
-/* 98 */
+/* 97 */
 /*!***************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-0eac5c66"}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!../packages/modal/impl.vue ***!
   \***************************************************************************************************************************************************************************/
@@ -22401,10 +22213,20 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_vm._t("default")], 2), _vm._v(" "), _c('footer', {
     staticClass: "v-modal-card-foot"
   }, [_vm._t("footer", [_c('button', {
-    staticClass: "v-btn is-primary"
-  }, [_vm._v("Save changes")]), _vm._v(" "), _c('button', {
-    staticClass: "v-btn is-link"
-  }, [_vm._v("Cancel")])])], 2)])])
+    staticClass: "v-btn is-primary",
+    on: {
+      "click": function($event) {
+        _vm.$emit('dimission', 'confirm')
+      }
+    }
+  }, [_vm._v(_vm._s(_vm.confirmText))]), _vm._v(" "), _c('button', {
+    staticClass: "v-btn is-link",
+    on: {
+      "click": function($event) {
+        _vm.$emit('dimission', 'cancel')
+      }
+    }
+  }, [_vm._v(_vm._s(_vm.cancelText))])])], 2)])])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
@@ -22415,7 +22237,7 @@ if (false) {
 }
 
 /***/ }),
-/* 99 */
+/* 98 */
 /*!*****************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-fa11fe20"}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./pages/components/modal.vue ***!
   \*****************************************************************************************************************************************************************************/
@@ -22872,7 +22694,7 @@ if (false) {
 }
 
 /***/ }),
-/* 100 */
+/* 99 */
 /*!***************************************!*\
   !*** ./pages/components/dropdown.vue ***!
   \***************************************/
@@ -22882,13 +22704,13 @@ if (false) {
 
 
 /* styles */
-__webpack_require__(/*! !vue-style-loader!css-loader?sourceMap&-autoprefixer!../../node_modules/vue-loader/lib/style-compiler/index?{"id":"data-v-5f56601e","scoped":false,"hasInlineConfig":false}!sass-loader?sourceMap!../../node_modules/vue-loader/lib/selector?type=styles&index=0!./dropdown.vue */ 101)
+__webpack_require__(/*! !vue-style-loader!css-loader?sourceMap&-autoprefixer!../../node_modules/vue-loader/lib/style-compiler/index?{"id":"data-v-5f56601e","scoped":false,"hasInlineConfig":false}!sass-loader?sourceMap!../../node_modules/vue-loader/lib/selector?type=styles&index=0!./dropdown.vue */ 100)
 
 var Component = __webpack_require__(/*! ../../node_modules/vue-loader/lib/component-normalizer */ 0)(
   /* script */
-  __webpack_require__(/*! !babel-loader!../../node_modules/vue-loader/lib/selector?type=script&index=0!./dropdown.vue */ 103),
+  __webpack_require__(/*! !babel-loader!../../node_modules/vue-loader/lib/selector?type=script&index=0!./dropdown.vue */ 102),
   /* template */
-  __webpack_require__(/*! !../../node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-5f56601e"}!../../node_modules/vue-loader/lib/selector?type=template&index=0!./dropdown.vue */ 105),
+  __webpack_require__(/*! !../../node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-5f56601e"}!../../node_modules/vue-loader/lib/selector?type=template&index=0!./dropdown.vue */ 103),
   /* scopeId */
   null,
   /* cssModules */
@@ -22915,7 +22737,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 101 */
+/* 100 */
 /*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-style-loader!./node_modules/css-loader?sourceMap&-autoprefixer!./node_modules/vue-loader/lib/style-compiler?{"id":"data-v-5f56601e","scoped":false,"hasInlineConfig":false}!./node_modules/sass-loader/lib/loader.js?sourceMap!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./pages/components/dropdown.vue ***!
   \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
@@ -22926,7 +22748,7 @@ module.exports = Component.exports
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(/*! !../../node_modules/css-loader?sourceMap&-autoprefixer!../../node_modules/vue-loader/lib/style-compiler?{"id":"data-v-5f56601e","scoped":false,"hasInlineConfig":false}!../../node_modules/sass-loader/lib/loader.js?sourceMap!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./dropdown.vue */ 102);
+var content = __webpack_require__(/*! !../../node_modules/css-loader?sourceMap&-autoprefixer!../../node_modules/vue-loader/lib/style-compiler?{"id":"data-v-5f56601e","scoped":false,"hasInlineConfig":false}!../../node_modules/sass-loader/lib/loader.js?sourceMap!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./dropdown.vue */ 101);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -22946,7 +22768,7 @@ if(false) {
 }
 
 /***/ }),
-/* 102 */
+/* 101 */
 /*!***********************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader?sourceMap&-autoprefixer!./node_modules/vue-loader/lib/style-compiler?{"id":"data-v-5f56601e","scoped":false,"hasInlineConfig":false}!./node_modules/sass-loader/lib/loader.js?sourceMap!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./pages/components/dropdown.vue ***!
   \***********************************************************************************************************************************************************************************************************************************************************************************************************************/
@@ -22965,7 +22787,7 @@ exports.push([module.i, "\na.v-dropdown-item {\n  text-decoration: none;\n}\nhr.
 
 
 /***/ }),
-/* 103 */
+/* 102 */
 /*!*************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./pages/components/dropdown.vue ***!
   \*************************************************************************************************************************************/
@@ -22976,7 +22798,7 @@ exports.push([module.i, "\na.v-dropdown-item {\n  text-decoration: none;\n}\nhr.
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_docs_lib_MaybeLongCodeMixin__ = __webpack_require__(/*! docs_lib/MaybeLongCodeMixin */ 15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_sources_directives_click_outside__ = __webpack_require__(/*! sources/directives/click-outside */ 104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_sources_directives_click_outside__ = __webpack_require__(/*! sources/directives/click-outside */ 25);
 //
 //
 //
@@ -23206,74 +23028,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 104 */
-/*!**********************************************!*\
-  !*** ../sources/directives/click-outside.js ***!
-  \**********************************************/
-/*! exports provided: default */
-/*! exports used: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(/*! vue */ 3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-
-
-// @SECTION: implementation
-
-const HANDLER = '_vue_clickaway_handler';
-
-function bind(el, binding) {
-  unbind(el);
-
-  const callback = binding.value;
-  if (typeof callback !== 'function') {
-    if (process.env.NODE_ENV !== 'production') {
-      __WEBPACK_IMPORTED_MODULE_0_vue___default.a.util.warn('v-' + binding.name + '="' + binding.expression + '" expects a function value, ' + 'got ' + callback);
-    }
-    return;
-  }
-
-  // @NOTE: Vue binds directives in microtasks, while UI events are dispatched
-  //        in macrotasks. This causes the listener to be set up before
-  //        the "origin" click event (the event that lead to the binding of
-  //        the directive) arrives at the document root. To work around that,
-  //        we ignore events until the end of the "initial" macrotask.
-  // @REFERENCE: https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/
-  // @REFERENCE: https://github.com/simplesmiler/vue-clickaway/issues/8
-  var initialMacrotaskEnded = false;
-  setTimeout(function () {
-    initialMacrotaskEnded = true;
-  }, 0);
-
-  el[HANDLER] = function (ev) {
-    // @NOTE: IE 5.0+
-    // @REFERENCE: https://developer.mozilla.org/en/docs/Web/API/Node/contains
-    if (initialMacrotaskEnded && !el.contains(ev.target)) {
-      return callback(ev);
-    }
-  };
-
-  document.documentElement.addEventListener('click', el[HANDLER], false);
-}
-
-function unbind(el) {
-  document.documentElement.removeEventListener('click', el[HANDLER], false);
-  delete el[HANDLER];
-}
-
-/* harmony default export */ __webpack_exports__["a"] = ({
-  bind: bind,
-  update: function (el, binding) {
-    if (binding.value === binding.oldValue) return;
-    bind(el, binding);
-  },
-  unbind: unbind
-});
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(/*! ./../../../s-docs/node_modules/process/browser.js */ 5)))
-
-/***/ }),
-/* 105 */
+/* 103 */
 /*!********************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-5f56601e"}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./pages/components/dropdown.vue ***!
   \********************************************************************************************************************************************************************************/
@@ -24242,7 +23997,7 @@ if (false) {
 }
 
 /***/ }),
-/* 106 */
+/* 104 */
 /*!**************************************!*\
   !*** ./pages/components/sidebar.vue ***!
   \**************************************/
@@ -24252,13 +24007,13 @@ if (false) {
 
 
 /* styles */
-__webpack_require__(/*! !vue-style-loader!css-loader?sourceMap&-autoprefixer!../../node_modules/vue-loader/lib/style-compiler/index?{"id":"data-v-4a13435f","scoped":false,"hasInlineConfig":false}!sass-loader?sourceMap!../../node_modules/vue-loader/lib/selector?type=styles&index=0!./sidebar.vue */ 107)
+__webpack_require__(/*! !vue-style-loader!css-loader?sourceMap&-autoprefixer!../../node_modules/vue-loader/lib/style-compiler/index?{"id":"data-v-4a13435f","scoped":false,"hasInlineConfig":false}!sass-loader?sourceMap!../../node_modules/vue-loader/lib/selector?type=styles&index=0!./sidebar.vue */ 105)
 
 var Component = __webpack_require__(/*! ../../node_modules/vue-loader/lib/component-normalizer */ 0)(
   /* script */
   null,
   /* template */
-  __webpack_require__(/*! !../../node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-4a13435f"}!../../node_modules/vue-loader/lib/selector?type=template&index=0!./sidebar.vue */ 109),
+  __webpack_require__(/*! !../../node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-4a13435f"}!../../node_modules/vue-loader/lib/selector?type=template&index=0!./sidebar.vue */ 107),
   /* scopeId */
   null,
   /* cssModules */
@@ -24285,7 +24040,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 107 */
+/* 105 */
 /*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-style-loader!./node_modules/css-loader?sourceMap&-autoprefixer!./node_modules/vue-loader/lib/style-compiler?{"id":"data-v-4a13435f","scoped":false,"hasInlineConfig":false}!./node_modules/sass-loader/lib/loader.js?sourceMap!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./pages/components/sidebar.vue ***!
   \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
@@ -24296,7 +24051,7 @@ module.exports = Component.exports
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(/*! !../../node_modules/css-loader?sourceMap&-autoprefixer!../../node_modules/vue-loader/lib/style-compiler?{"id":"data-v-4a13435f","scoped":false,"hasInlineConfig":false}!../../node_modules/sass-loader/lib/loader.js?sourceMap!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./sidebar.vue */ 108);
+var content = __webpack_require__(/*! !../../node_modules/css-loader?sourceMap&-autoprefixer!../../node_modules/vue-loader/lib/style-compiler?{"id":"data-v-4a13435f","scoped":false,"hasInlineConfig":false}!../../node_modules/sass-loader/lib/loader.js?sourceMap!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./sidebar.vue */ 106);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -24316,7 +24071,7 @@ if(false) {
 }
 
 /***/ }),
-/* 108 */
+/* 106 */
 /*!**********************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader?sourceMap&-autoprefixer!./node_modules/vue-loader/lib/style-compiler?{"id":"data-v-4a13435f","scoped":false,"hasInlineConfig":false}!./node_modules/sass-loader/lib/loader.js?sourceMap!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./pages/components/sidebar.vue ***!
   \**********************************************************************************************************************************************************************************************************************************************************************************************************************/
@@ -24335,7 +24090,7 @@ exports.push([module.i, "\n.sd-sidebar-local p {\n  margin: 0;\n  line-height: i
 
 
 /***/ }),
-/* 109 */
+/* 107 */
 /*!*******************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-4a13435f"}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./pages/components/sidebar.vue ***!
   \*******************************************************************************************************************************************************************************/
@@ -24732,7 +24487,7 @@ if (false) {
 }
 
 /***/ }),
-/* 110 */
+/* 108 */
 /*!*************************************!*\
   !*** ./pages/components/navbar.vue ***!
   \*************************************/
@@ -24742,13 +24497,13 @@ if (false) {
 
 
 /* styles */
-__webpack_require__(/*! !vue-style-loader!css-loader?sourceMap&-autoprefixer!../../node_modules/vue-loader/lib/style-compiler/index?{"id":"data-v-280819dd","scoped":false,"hasInlineConfig":false}!sass-loader?sourceMap!../../node_modules/vue-loader/lib/selector?type=styles&index=0!./navbar.vue */ 111)
+__webpack_require__(/*! !vue-style-loader!css-loader?sourceMap&-autoprefixer!../../node_modules/vue-loader/lib/style-compiler/index?{"id":"data-v-280819dd","scoped":false,"hasInlineConfig":false}!sass-loader?sourceMap!../../node_modules/vue-loader/lib/selector?type=styles&index=0!./navbar.vue */ 109)
 
 var Component = __webpack_require__(/*! ../../node_modules/vue-loader/lib/component-normalizer */ 0)(
   /* script */
   null,
   /* template */
-  __webpack_require__(/*! !../../node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-280819dd"}!../../node_modules/vue-loader/lib/selector?type=template&index=0!./navbar.vue */ 113),
+  __webpack_require__(/*! !../../node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-280819dd"}!../../node_modules/vue-loader/lib/selector?type=template&index=0!./navbar.vue */ 111),
   /* scopeId */
   null,
   /* cssModules */
@@ -24775,7 +24530,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 111 */
+/* 109 */
 /*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-style-loader!./node_modules/css-loader?sourceMap&-autoprefixer!./node_modules/vue-loader/lib/style-compiler?{"id":"data-v-280819dd","scoped":false,"hasInlineConfig":false}!./node_modules/sass-loader/lib/loader.js?sourceMap!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./pages/components/navbar.vue ***!
   \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
@@ -24786,7 +24541,7 @@ module.exports = Component.exports
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(/*! !../../node_modules/css-loader?sourceMap&-autoprefixer!../../node_modules/vue-loader/lib/style-compiler?{"id":"data-v-280819dd","scoped":false,"hasInlineConfig":false}!../../node_modules/sass-loader/lib/loader.js?sourceMap!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./navbar.vue */ 112);
+var content = __webpack_require__(/*! !../../node_modules/css-loader?sourceMap&-autoprefixer!../../node_modules/vue-loader/lib/style-compiler?{"id":"data-v-280819dd","scoped":false,"hasInlineConfig":false}!../../node_modules/sass-loader/lib/loader.js?sourceMap!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./navbar.vue */ 110);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -24806,7 +24561,7 @@ if(false) {
 }
 
 /***/ }),
-/* 112 */
+/* 110 */
 /*!*********************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader?sourceMap&-autoprefixer!./node_modules/vue-loader/lib/style-compiler?{"id":"data-v-280819dd","scoped":false,"hasInlineConfig":false}!./node_modules/sass-loader/lib/loader.js?sourceMap!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./pages/components/navbar.vue ***!
   \*********************************************************************************************************************************************************************************************************************************************************************************************************************/
@@ -24825,7 +24580,7 @@ exports.push([module.i, "\n.sd-navbar-wrap {\n  margin: -1.25rem;\n}\n", "", {"v
 
 
 /***/ }),
-/* 113 */
+/* 111 */
 /*!******************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-280819dd"}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./pages/components/navbar.vue ***!
   \******************************************************************************************************************************************************************************/
@@ -25137,7 +24892,7 @@ if (false) {
 }
 
 /***/ }),
-/* 114 */
+/* 112 */
 /*!**************************************!*\
   !*** ./pages/components/message.vue ***!
   \**************************************/
@@ -25147,7 +24902,7 @@ if (false) {
 
 var Component = __webpack_require__(/*! ../../node_modules/vue-loader/lib/component-normalizer */ 0)(
   /* script */
-  __webpack_require__(/*! !babel-loader!../../node_modules/vue-loader/lib/selector?type=script&index=0!./message.vue */ 115),
+  __webpack_require__(/*! !babel-loader!../../node_modules/vue-loader/lib/selector?type=script&index=0!./message.vue */ 113),
   /* template */
   __webpack_require__(/*! !../../node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-2e83ea8a"}!../../node_modules/vue-loader/lib/selector?type=template&index=0!./message.vue */ 120),
   /* scopeId */
@@ -25176,7 +24931,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 115 */
+/* 113 */
 /*!************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./pages/components/message.vue ***!
   \************************************************************************************************************************************/
@@ -25186,7 +24941,7 @@ module.exports = Component.exports
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_packages_message__ = __webpack_require__(/*! packages/message */ 116);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_packages_message__ = __webpack_require__(/*! packages/message */ 114);
 //
 //
 //
@@ -25248,7 +25003,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 116 */
+/* 114 */
 /*!************************************!*\
   !*** ../packages/message/index.js ***!
   \************************************/
@@ -25258,12 +25013,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MessageFactory; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(/*! vue */ 3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(/*! vue */ 4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__impl_vue__ = __webpack_require__(/*! ./impl.vue */ 117);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__impl_vue__ = __webpack_require__(/*! ./impl.vue */ 115);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__impl_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__impl_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sources_utils_popup__ = __webpack_require__(/*! ../../sources/utils/popup */ 26);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__sources_utils_index__ = __webpack_require__(/*! ../../sources/utils/index */ 25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sources_utils_popup__ = __webpack_require__(/*! ../../sources/utils/popup */ 118);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__sources_utils_index__ = __webpack_require__(/*! ../../sources/utils/index */ 24);
 /* unused harmony reexport Message */
 
 
@@ -25294,7 +25049,7 @@ const MessageFactory = function (options) {
     data: options
   });
   instance.id = id;
-  if (Object(__WEBPACK_IMPORTED_MODULE_3__sources_utils_index__["a" /* isVNode */])(instance.message)) {
+  if (Object(__WEBPACK_IMPORTED_MODULE_3__sources_utils_index__["b" /* isVNode */])(instance.message)) {
     instance.$slots.default = [instance.message];
     instance.message = null;
   }
@@ -25343,7 +25098,7 @@ MessageFactory.closeAll = function () {
 
 
 /***/ }),
-/* 117 */
+/* 115 */
 /*!************************************!*\
   !*** ../packages/message/impl.vue ***!
   \************************************/
@@ -25353,9 +25108,9 @@ MessageFactory.closeAll = function () {
 
 var Component = __webpack_require__(/*! ../../.sdocs/node_modules/vue-loader/lib/component-normalizer */ 0)(
   /* script */
-  __webpack_require__(/*! !babel-loader!../../.sdocs/node_modules/vue-loader/lib/selector?type=script&index=0!./impl.vue */ 118),
+  __webpack_require__(/*! !babel-loader!../../.sdocs/node_modules/vue-loader/lib/selector?type=script&index=0!./impl.vue */ 116),
   /* template */
-  __webpack_require__(/*! !../../.sdocs/node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-35f16d68"}!../../.sdocs/node_modules/vue-loader/lib/selector?type=template&index=0!./impl.vue */ 119),
+  __webpack_require__(/*! !../../.sdocs/node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-35f16d68"}!../../.sdocs/node_modules/vue-loader/lib/selector?type=template&index=0!./impl.vue */ 117),
   /* scopeId */
   null,
   /* cssModules */
@@ -25382,7 +25137,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 118 */
+/* 116 */
 /*!**********************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!../packages/message/impl.vue ***!
   \**********************************************************************************************************************************/
@@ -25392,7 +25147,7 @@ module.exports = Component.exports
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_is_type_of__ = __webpack_require__(/*! is-type-of */ 17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_is_type_of__ = __webpack_require__(/*! is-type-of */ 16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_is_type_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_is_type_of__);
 //
 //
@@ -25507,7 +25262,7 @@ const typeMaps = {
 });
 
 /***/ }),
-/* 119 */
+/* 117 */
 /*!*****************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-35f16d68"}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!../packages/message/impl.vue ***!
   \*****************************************************************************************************************************************************************************/
@@ -25550,6 +25305,323 @@ if (false) {
   module.hot.accept()
   if (module.hot.data) {
      require("vue-hot-reload-api").rerender("data-v-35f16d68", module.exports)
+  }
+}
+
+/***/ }),
+/* 118 */
+/*!*********************************!*\
+  !*** ../sources/utils/popup.js ***!
+  \*********************************/
+/*! exports provided: default */
+/*! exports used: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(/*! vue */ 4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__dom__ = __webpack_require__(/*! ./dom */ 119);
+
+
+
+let hasModal = false;
+
+const getModal = function () {
+  if (__WEBPACK_IMPORTED_MODULE_0_vue___default.a.prototype.$isServer) return;
+
+  let modalDom = PopupManager.modalDom;
+
+  if (modalDom) {
+    hasModal = true;
+  } else {
+    hasModal = false;
+    modalDom = document.createElement('div');
+    PopupManager.modalDom = modalDom;
+
+    modalDom.addEventListener('touchmove', function (event) {
+      event.preventDefault();
+      event.stopPropagation();
+    });
+
+    modalDom.addEventListener('click', function () {
+      PopupManager.doOnModalClick && PopupManager.doOnModalClick();
+    });
+  }
+
+  return modalDom;
+};
+
+const instances = {};
+
+const PopupManager = {
+  zIndex: 2000,
+
+  modalFade: true,
+
+  getInstance: function (id) {
+    return instances[id];
+  },
+
+  register: function (id, instance) {
+    if (id && instance) {
+      instances[id] = instance;
+    }
+  },
+
+  deregister: function (id) {
+    if (id) {
+      instances[id] = null;
+      delete instances[id];
+    }
+  },
+
+  nextZIndex: function () {
+    return PopupManager.zIndex++;
+  },
+
+  modalStack: [],
+
+  doOnModalClick: function () {
+    const topItem = PopupManager.modalStack[PopupManager.modalStack.length - 1];
+    if (!topItem) return;
+
+    const instance = PopupManager.getInstance(topItem.id);
+    if (instance && instance.closeOnClickModal) {
+      instance.close();
+    }
+  },
+
+  openModal: function (id, zIndex, dom, modalClass, modalFade) {
+    if (__WEBPACK_IMPORTED_MODULE_0_vue___default.a.prototype.$isServer) return;
+    if (!id || zIndex === undefined) return;
+    this.modalFade = modalFade;
+
+    const modalStack = this.modalStack;
+
+    for (let i = 0, j = modalStack.length; i < j; i++) {
+      const item = modalStack[i];
+      if (item.id === id) {
+        return;
+      }
+    }
+
+    const modalDom = getModal();
+
+    Object(__WEBPACK_IMPORTED_MODULE_1__dom__["a" /* addClass */])(modalDom, 'v-modal');
+
+    if (this.modalFade && !hasModal) {
+      Object(__WEBPACK_IMPORTED_MODULE_1__dom__["a" /* addClass */])(modalDom, 'v-modal-enter');
+    }
+
+    if (modalClass) {
+      let classArr = modalClass.trim().split(/\s+/);
+      classArr.forEach(item => Object(__WEBPACK_IMPORTED_MODULE_1__dom__["a" /* addClass */])(modalDom, item));
+    }
+
+    setTimeout(() => {
+      Object(__WEBPACK_IMPORTED_MODULE_1__dom__["b" /* removeClass */])(modalDom, 'v-modal-enter');
+    }, 200);
+
+    if (dom && dom.parentNode && dom.parentNode.nodeType !== 11) {
+      dom.parentNode.appendChild(modalDom);
+    } else {
+      document.body.appendChild(modalDom);
+    }
+
+    if (zIndex) {
+      modalDom.style.zIndex = zIndex;
+    }
+    modalDom.style.display = '';
+
+    this.modalStack.push({ id: id, zIndex: zIndex, modalClass: modalClass });
+  },
+
+  closeModal: function (id) {
+    const modalStack = this.modalStack;
+    const modalDom = getModal();
+
+    if (modalStack.length > 0) {
+      const topItem = modalStack[modalStack.length - 1];
+      if (topItem.id === id) {
+        if (topItem.modalClass) {
+          let classArr = topItem.modalClass.trim().split(/\s+/);
+          classArr.forEach(item => Object(__WEBPACK_IMPORTED_MODULE_1__dom__["b" /* removeClass */])(modalDom, item));
+        }
+
+        modalStack.pop();
+        if (modalStack.length > 0) {
+          modalDom.style.zIndex = modalStack[modalStack.length - 1].zIndex;
+        }
+      } else {
+        for (let i = modalStack.length - 1; i >= 0; i--) {
+          if (modalStack[i].id === id) {
+            modalStack.splice(i, 1);
+            break;
+          }
+        }
+      }
+    }
+
+    if (modalStack.length === 0) {
+      if (this.modalFade) {
+        Object(__WEBPACK_IMPORTED_MODULE_1__dom__["a" /* addClass */])(modalDom, 'v-modal-leave');
+      }
+      setTimeout(() => {
+        if (modalStack.length === 0) {
+          if (modalDom.parentNode) modalDom.parentNode.removeChild(modalDom);
+          modalDom.style.display = 'none';
+          PopupManager.modalDom = undefined;
+        }
+        Object(__WEBPACK_IMPORTED_MODULE_1__dom__["b" /* removeClass */])(modalDom, 'v-modal-leave');
+      }, 200);
+    }
+  }
+};
+
+const getTopPopup = function () {
+  if (__WEBPACK_IMPORTED_MODULE_0_vue___default.a.prototype.$isServer) return;
+  if (PopupManager.modalStack.length > 0) {
+    const topPopup = PopupManager.modalStack[PopupManager.modalStack.length - 1];
+    if (!topPopup) return;
+    return PopupManager.getInstance(topPopup.id);
+  }
+};
+
+if (!__WEBPACK_IMPORTED_MODULE_0_vue___default.a.prototype.$isServer) {
+  // handle `esc` key when the popup is shown
+  window.addEventListener('keydown', function (event) {
+    if (event.keyCode === 27) {
+      const topPopup = getTopPopup();
+
+      if (topPopup && topPopup.closeOnPressEscape) {
+        topPopup.handleClose ? topPopup.handleClose() : topPopup.handleAction ? topPopup.handleAction('cancel') : topPopup.close();
+      }
+    }
+  });
+}
+
+/* harmony default export */ __webpack_exports__["a"] = (PopupManager);
+
+/***/ }),
+/* 119 */
+/*!*******************************!*\
+  !*** ../sources/utils/dom.js ***!
+  \*******************************/
+/*! exports provided: on, off, once, hasClass, addClass, removeClass */
+/*! exports used: addClass, removeClass */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export hasClass */
+/* harmony export (immutable) */ __webpack_exports__["a"] = addClass;
+/* harmony export (immutable) */ __webpack_exports__["b"] = removeClass;
+const isServer = Vue.prototype.$isServer;
+
+/* istanbul ignore next */
+const on = function () {
+  if (!isServer && document.addEventListener) {
+    return function (element, event, handler) {
+      if (element && event && handler) {
+        element.addEventListener(event, handler, false);
+      }
+    };
+  } else {
+    return function (element, event, handler) {
+      if (element && event && handler) {
+        element.attachEvent('on' + event, handler);
+      }
+    };
+  }
+}();
+/* unused harmony export on */
+
+
+/* istanbul ignore next */
+const off = function () {
+  if (!isServer && document.removeEventListener) {
+    return function (element, event, handler) {
+      if (element && event) {
+        element.removeEventListener(event, handler, false);
+      }
+    };
+  } else {
+    return function (element, event, handler) {
+      if (element && event) {
+        element.detachEvent('on' + event, handler);
+      }
+    };
+  }
+}();
+/* unused harmony export off */
+
+
+/* istanbul ignore next */
+const once = function (el, event, fn) {
+  let listener = function () {
+    if (fn) {
+      fn.apply(this, arguments);
+    }
+    off(el, event, listener);
+  };
+  on(el, event, listener);
+};
+/* unused harmony export once */
+
+
+/* istanbul ignore next */
+function hasClass(el, cls) {
+  if (!el || !cls) return false;
+  if (cls.indexOf(' ') !== -1) throw new Error('className should not contain space.');
+  if (el.classList) {
+    return el.classList.contains(cls);
+  } else {
+    return (' ' + el.className + ' ').indexOf(' ' + cls + ' ') > -1;
+  }
+}
+
+/* istanbul ignore next */
+function addClass(el, cls) {
+  if (!el) return;
+  let curClass = el.className;
+  let classes = (cls || '').split(' ');
+
+  for (let i = 0, j = classes.length; i < j; i++) {
+    let clsName = classes[i];
+    if (!clsName) continue;
+
+    if (el.classList) {
+      el.classList.add(clsName);
+    } else {
+      if (!hasClass(el, clsName)) {
+        curClass += ' ' + clsName;
+      }
+    }
+  }
+  if (!el.classList) {
+    el.className = curClass;
+  }
+}
+
+/* istanbul ignore next */
+function removeClass(el, cls) {
+  if (!el || !cls) return;
+  let classes = cls.split(' ');
+  let curClass = ' ' + el.className + ' ';
+
+  for (let i = 0, j = classes.length; i < j; i++) {
+    let clsName = classes[i];
+    if (!clsName) continue;
+
+    if (el.classList) {
+      el.classList.remove(clsName);
+    } else {
+      if (hasClass(el, clsName)) {
+        curClass = curClass.replace(' ' + clsName + ' ', ' ');
+      }
+    }
+  }
+  if (!el.classList) {
+    el.className = trim(curClass);
   }
 }
 
@@ -26379,30 +26451,26 @@ if (false) {
 
 /***/ }),
 /* 128 */
-/*!****************************!*\
-  !*** ./pages/examples.vue ***!
-  \****************************/
+/*!*****************************!*\
+  !*** ./pages/customize.vue ***!
+  \*****************************/
 /*! no static exports found */
 /*! exports used: default */
 /***/ (function(module, exports, __webpack_require__) {
 
-
-/* styles */
-__webpack_require__(/*! !vue-style-loader!css-loader?sourceMap&-autoprefixer!../node_modules/vue-loader/lib/style-compiler/index?{"id":"data-v-47bc3445","scoped":true,"hasInlineConfig":false}!sass-loader?sourceMap!../node_modules/vue-loader/lib/selector?type=styles&index=0!./examples.vue */ 129)
-
 var Component = __webpack_require__(/*! ../node_modules/vue-loader/lib/component-normalizer */ 0)(
   /* script */
-  __webpack_require__(/*! !babel-loader!../node_modules/vue-loader/lib/selector?type=script&index=0!./examples.vue */ 131),
+  null,
   /* template */
-  __webpack_require__(/*! !../node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-47bc3445"}!../node_modules/vue-loader/lib/selector?type=template&index=0!./examples.vue */ 151),
+  __webpack_require__(/*! !../node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-d0582012"}!../node_modules/vue-loader/lib/selector?type=template&index=0!./customize.vue */ 129),
   /* scopeId */
-  "data-v-47bc3445",
+  null,
   /* cssModules */
   null
 )
-Component.options.__file = "/Users/charlie/code/sav-vui/.sdocs/pages/examples.vue"
+Component.options.__file = "/Users/charlie/code/sav-vui/.sdocs/pages/customize.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] examples.vue: functional components are not supported with templates, they should use render functions.")}
+if (Component.options.functional) {console.error("[vue-loader] customize.vue: functional components are not supported with templates, they should use render functions.")}
 
 /* hot reload */
 if (false) {(function () {
@@ -26411,9 +26479,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-47bc3445", Component.options)
+    hotAPI.createRecord("data-v-d0582012", Component.options)
   } else {
-    hotAPI.reload("data-v-47bc3445", Component.options)
+    hotAPI.reload("data-v-d0582012", Component.options)
   }
 })()}
 
@@ -26422,9 +26490,74 @@ module.exports = Component.exports
 
 /***/ }),
 /* 129 */
-/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-style-loader!./node_modules/css-loader?sourceMap&-autoprefixer!./node_modules/vue-loader/lib/style-compiler?{"id":"data-v-47bc3445","scoped":true,"hasInlineConfig":false}!./node_modules/sass-loader/lib/loader.js?sourceMap!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./pages/examples.vue ***!
-  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!**********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-d0582012"}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./pages/customize.vue ***!
+  \**********************************************************************************************************************************************************************/
+/*! no static exports found */
+/*! all exports used */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _vm._m(0)
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('section', [_c('h1', [_vm._v("Customize")]), _vm._v(" "), _c('p', [_vm._v("Sooner ~~ 😯")]), _vm._v(" "), _c('br'), _vm._v(" "), _c('pre', [_c('code', [_vm._v("But still you also could checkout the source code :)\n")])])])
+}]}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-d0582012", module.exports)
+  }
+}
+
+/***/ }),
+/* 130 */
+/*!*****************************!*\
+  !*** ./pages/examples2.vue ***!
+  \*****************************/
+/*! no static exports found */
+/*! exports used: default */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+/* styles */
+__webpack_require__(/*! !vue-style-loader!css-loader?sourceMap&-autoprefixer!../node_modules/vue-loader/lib/style-compiler/index?{"id":"data-v-a03c0486","scoped":false,"hasInlineConfig":false}!sass-loader?sourceMap!../node_modules/vue-loader/lib/selector?type=styles&index=0!./examples2.vue */ 131)
+
+var Component = __webpack_require__(/*! ../node_modules/vue-loader/lib/component-normalizer */ 0)(
+  /* script */
+  __webpack_require__(/*! !babel-loader!../node_modules/vue-loader/lib/selector?type=script&index=0!./examples2.vue */ 133),
+  /* template */
+  __webpack_require__(/*! !../node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-a03c0486"}!../node_modules/vue-loader/lib/selector?type=template&index=0!./examples2.vue */ 146),
+  /* scopeId */
+  null,
+  /* cssModules */
+  null
+)
+Component.options.__file = "/Users/charlie/code/sav-vui/.sdocs/pages/examples2.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] examples2.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-a03c0486", Component.options)
+  } else {
+    hotAPI.reload("data-v-a03c0486", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 131 */
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-style-loader!./node_modules/css-loader?sourceMap&-autoprefixer!./node_modules/vue-loader/lib/style-compiler?{"id":"data-v-a03c0486","scoped":false,"hasInlineConfig":false}!./node_modules/sass-loader/lib/loader.js?sourceMap!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./pages/examples2.vue ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
@@ -26432,17 +26565,17 @@ module.exports = Component.exports
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(/*! !../node_modules/css-loader?sourceMap&-autoprefixer!../node_modules/vue-loader/lib/style-compiler?{"id":"data-v-47bc3445","scoped":true,"hasInlineConfig":false}!../node_modules/sass-loader/lib/loader.js?sourceMap!../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./examples.vue */ 130);
+var content = __webpack_require__(/*! !../node_modules/css-loader?sourceMap&-autoprefixer!../node_modules/vue-loader/lib/style-compiler?{"id":"data-v-a03c0486","scoped":false,"hasInlineConfig":false}!../node_modules/sass-loader/lib/loader.js?sourceMap!../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./examples2.vue */ 132);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(/*! ../node_modules/vue-style-loader/lib/addStylesClient.js */ 2)("61fcde62", content, false);
+var update = __webpack_require__(/*! ../node_modules/vue-style-loader/lib/addStylesClient.js */ 2)("ce11994e", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../node_modules/css-loader/index.js?sourceMap&-autoprefixer!../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-47bc3445\",\"scoped\":true,\"hasInlineConfig\":false}!../node_modules/sass-loader/lib/loader.js?sourceMap!../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./examples.vue", function() {
-     var newContent = require("!!../node_modules/css-loader/index.js?sourceMap&-autoprefixer!../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-47bc3445\",\"scoped\":true,\"hasInlineConfig\":false}!../node_modules/sass-loader/lib/loader.js?sourceMap!../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./examples.vue");
+   module.hot.accept("!!../node_modules/css-loader/index.js?sourceMap&-autoprefixer!../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-a03c0486\",\"scoped\":false,\"hasInlineConfig\":false}!../node_modules/sass-loader/lib/loader.js?sourceMap!../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./examples2.vue", function() {
+     var newContent = require("!!../node_modules/css-loader/index.js?sourceMap&-autoprefixer!../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-a03c0486\",\"scoped\":false,\"hasInlineConfig\":false}!../node_modules/sass-loader/lib/loader.js?sourceMap!../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./examples2.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -26452,10 +26585,10 @@ if(false) {
 }
 
 /***/ }),
-/* 130 */
-/*!***********************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader?sourceMap&-autoprefixer!./node_modules/vue-loader/lib/style-compiler?{"id":"data-v-47bc3445","scoped":true,"hasInlineConfig":false}!./node_modules/sass-loader/lib/loader.js?sourceMap!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./pages/examples.vue ***!
-  \***********************************************************************************************************************************************************************************************************************************************************************************************************/
+/* 132 */
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader?sourceMap&-autoprefixer!./node_modules/vue-loader/lib/style-compiler?{"id":"data-v-a03c0486","scoped":false,"hasInlineConfig":false}!./node_modules/sass-loader/lib/loader.js?sourceMap!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./pages/examples2.vue ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
@@ -26465,173 +26598,24 @@ exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/li
 
 
 // module
-exports.push([module.i, "\n.v-btn[data-v-47bc3445] {\n  margin-right: 1rem;\n}\n.v-breadcrumb a[data-v-47bc3445] {\n  color: #7a7a7a;\n}\n.v-media-left[data-v-47bc3445] {\n  margin-right: 1rem;\n}\n.v-media-left .v-image.is-48x48[data-v-47bc3445] {\n    width: 48px;\n    height: 48px;\n    background-color: #eee8d5;\n}\n.v-media p[data-v-47bc3445] {\n  margin: 0;\n  line-height: 1.4rem;\n}\n.v-content p[data-v-47bc3445], .v-content ul[data-v-47bc3445], .v-content ol[data-v-47bc3445] {\n  line-height: inherit;\n  margin: inherit;\n}\n.v-content ul[data-v-47bc3445], .v-content ol[data-v-47bc3445] {\n  margin-left: 2em;\n  margin-top: 1em;\n}\n.v-table[data-v-47bc3445] {\n  display: table;\n}\n", "", {"version":3,"sources":["/./pages/examples.vue"],"names":[],"mappings":";AACA;EACE,mBAAmB;CACpB;AACD;EACE,eAAe;CAChB;AACD;EACE,mBAAmB;CACpB;AACD;IACI,YAAY;IACZ,aAAa;IACb,0BAA0B;CAC7B;AACD;EACE,UAAU;EACV,oBAAoB;CACrB;AACD;EACE,qBAAqB;EACrB,gBAAgB;CACjB;AACD;EACE,iBAAiB;EACjB,gBAAgB;CACjB;AACD;EACE,eAAe;CAChB","file":"examples.vue","sourcesContent":["\n.v-btn[data-v-47bc3445] {\n  margin-right: 1rem;\n}\n.v-breadcrumb a[data-v-47bc3445] {\n  color: #7a7a7a;\n}\n.v-media-left[data-v-47bc3445] {\n  margin-right: 1rem;\n}\n.v-media-left .v-image.is-48x48[data-v-47bc3445] {\n    width: 48px;\n    height: 48px;\n    background-color: #eee8d5;\n}\n.v-media p[data-v-47bc3445] {\n  margin: 0;\n  line-height: 1.4rem;\n}\n.v-content p[data-v-47bc3445], .v-content ul[data-v-47bc3445], .v-content ol[data-v-47bc3445] {\n  line-height: inherit;\n  margin: inherit;\n}\n.v-content ul[data-v-47bc3445], .v-content ol[data-v-47bc3445] {\n  margin-left: 2em;\n  margin-top: 1em;\n}\n.v-table[data-v-47bc3445] {\n  display: table;\n}\n"],"sourceRoot":"webpack://"}]);
+exports.push([module.i, "\n.v-table {\n  display: table !important;\n}\n.my-x-table thead > tr th:first-child {\n  width: 80px;\n}\n", "", {"version":3,"sources":["/./pages/examples2.vue"],"names":[],"mappings":";AACA;EACE,0BAA0B;CAC3B;AACD;EACE,YAAY;CACb","file":"examples2.vue","sourcesContent":["\n.v-table {\n  display: table !important;\n}\n.my-x-table thead > tr th:first-child {\n  width: 80px;\n}\n"],"sourceRoot":"webpack://"}]);
 
 // exports
 
 
 /***/ }),
-/* 131 */
-/*!**************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./pages/examples.vue ***!
-  \**************************************************************************************************************************/
+/* 133 */
+/*!***************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./pages/examples2.vue ***!
+  \***************************************************************************************************************************/
 /*! exports provided: default */
 /*! all exports used */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(/*! vue */ 3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_packages_button__ = __webpack_require__(/*! packages/button */ 132);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_packages_tooltip__ = __webpack_require__(/*! packages/tooltip */ 136);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_packages_popover__ = __webpack_require__(/*! packages/popover */ 142);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_packages_modal__ = __webpack_require__(/*! packages/modal */ 16);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_packages_dropdown__ = __webpack_require__(/*! packages/dropdown */ 134);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_packages_table__ = __webpack_require__(/*! packages/table */ 142);
 //
 //
 //
@@ -26677,217 +26661,54 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
-
-
-
-
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_2_packages_tooltip__["a" /* default */]);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      switcher: false
+      formData: {
+        price: '请选择价格'
+      },
+      tableCols: ['__select|', 'first', 'second|第二'],
+      tableRows: [{
+        first: 'a',
+        second: 'b'
+      }]
     };
   },
 
 
-  watch: {
-    'switcher': function switcher(a) {
-      var _this = this;
-
-      a && setTimeout(function () {
-        _this.switcher = false;
-      }, 2000);
+  methods: {
+    _addRow: function _addRow() {
+      this.tableRows.push({
+        first: 'cc',
+        second: 'dd'
+      });
     }
   },
 
   components: {
-    VBtn: __WEBPACK_IMPORTED_MODULE_1_packages_button__["a" /* default */],
-    PopoverPopper: __WEBPACK_IMPORTED_MODULE_3_packages_popover__["a" /* PopoverPopper */]
-  },
-
-  methods: {
-    _openDialog: function _openDialog() {
-      Object(__WEBPACK_IMPORTED_MODULE_4_packages_modal__["b" /* open */])('<div class="v-box">\n          <h1>{{msg}}</h1>\n          <button @click="_handleReject">onReject</button>\n          <my-btn :on-resolved="onResolved"></my-btn>\n        </div>', {
-        propsData: {
-          size: 'large',
-          closable: true
-        },
-        methods: {
-          _handleReject: function _handleReject() {
-            console.log(this.getTopDialog().$emit('ok', 'this is ok hahaha'));
-            console.log(this.onRejected(new Error('gao sth error')));
-          }
-        },
-        components: {
-          myBtn: {
-            props: ['onResolved'],
-            template: '<button class="v-btn" @click="_asyncGet">async get sth</button>',
-            methods: {
-              _asyncGet: function _asyncGet() {
-                //                  console.log(this.onResolved(666))
-              }
-            }
-          }
-        }
-      }, {
-        msg: 'hello dialog'
-      }).then(function (data) {
-        return console.log(data);
-      }).catch(function (err) {
-        console.error(err);
-      });
-    }
+    Dropdown: __WEBPACK_IMPORTED_MODULE_0_packages_dropdown__["b" /* default */],
+    DropdownItem: __WEBPACK_IMPORTED_MODULE_0_packages_dropdown__["a" /* DropdownItem */],
+    VTable: __WEBPACK_IMPORTED_MODULE_1_packages_table__["a" /* default */]
   }
 });
-
-/***/ }),
-/* 132 */
-/*!***********************************!*\
-  !*** ../packages/button/index.js ***!
-  \***********************************/
-/*! exports provided: default */
-/*! exports used: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__impl_vue__ = __webpack_require__(/*! ./impl.vue */ 133);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__impl_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__impl_vue__);
-
-
-/* istanbul ignore next */
-__WEBPACK_IMPORTED_MODULE_0__impl_vue___default.a.install = function (Vue) {
-  Vue.component(__WEBPACK_IMPORTED_MODULE_0__impl_vue___default.a.name, __WEBPACK_IMPORTED_MODULE_0__impl_vue___default.a);
-};
-
-/* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0__impl_vue___default.a);
-
-/***/ }),
-/* 133 */
-/*!***********************************!*\
-  !*** ../packages/button/impl.vue ***!
-  \***********************************/
-/*! no static exports found */
-/*! exports used: default */
-/***/ (function(module, exports, __webpack_require__) {
-
-var Component = __webpack_require__(/*! ../../.sdocs/node_modules/vue-loader/lib/component-normalizer */ 0)(
-  /* script */
-  __webpack_require__(/*! !babel-loader!../../.sdocs/node_modules/vue-loader/lib/selector?type=script&index=0!./impl.vue */ 134),
-  /* template */
-  __webpack_require__(/*! !../../.sdocs/node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-7dae6c2e"}!../../.sdocs/node_modules/vue-loader/lib/selector?type=template&index=0!./impl.vue */ 135),
-  /* scopeId */
-  null,
-  /* cssModules */
-  null
-)
-Component.options.__file = "/Users/charlie/code/sav-vui/packages/button/impl.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] impl.vue: functional components are not supported with templates, they should use render functions.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-7dae6c2e", Component.options)
-  } else {
-    hotAPI.reload("data-v-7dae6c2e", Component.options)
-  }
-})()}
-
-module.exports = Component.exports
-
 
 /***/ }),
 /* 134 */
-/*!*********************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!../packages/button/impl.vue ***!
-  \*********************************************************************************************************************************/
-/*! exports provided: default */
-/*! all exports used */
+/*!*************************************!*\
+  !*** ../packages/dropdown/index.js ***!
+  \*************************************/
+/*! exports provided: default, DropdownItem */
+/*! exports used: DropdownItem, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__sources_utils_mixin__ = __webpack_require__(/*! ../../sources/utils/mixin */ 24);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'VButton',
-
-  mixins: [__WEBPACK_IMPORTED_MODULE_0__sources_utils_mixin__["b" /* elementMixins */]],
-
-  props: {
-    isLoading: {
-      type: Boolean,
-      'default': false
-    }
-  },
-
-  computed: {
-    _modeClass() {
-      let mode = [];
-
-      mode.push(this.colorModifier);
-      mode.push(this.sizeModifier);
-
-      this.isLoading && mode.push(`is-loading`);
-
-      return mode;
-    }
-  }
-});
-
-/***/ }),
-/* 135 */
-/*!****************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-7dae6c2e"}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!../packages/button/impl.vue ***!
-  \****************************************************************************************************************************************************************************/
-/*! no static exports found */
-/*! all exports used */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('button', {
-    staticClass: "v-btn",
-    class: _vm._modeClass
-  }, [_vm._t("default")], 2)
-},staticRenderFns: []}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-7dae6c2e", module.exports)
-  }
-}
-
-/***/ }),
-/* 136 */
-/*!************************************!*\
-  !*** ../packages/tooltip/index.js ***!
-  \************************************/
-/*! exports provided: default */
-/*! exports used: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__impl_vue__ = __webpack_require__(/*! ./impl.vue */ 137);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__impl_vue__ = __webpack_require__(/*! ./impl.vue */ 135);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__impl_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__impl_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__sources_plugins_tip__ = __webpack_require__(/*! ../../sources/plugins/tip */ 140);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sources_directives_tip__ = __webpack_require__(/*! ../../sources/directives/tip */ 141);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__impl_item_vue__ = __webpack_require__(/*! ./impl_item.vue */ 138);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__impl_item_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__impl_item_vue__);
+/* harmony reexport (default from non-hamory) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_0__impl_vue___default.a; });
+/* harmony reexport (default from non-hamory) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_1__impl_item_vue___default.a; });
 /**
  * User: charlie
  * Date: 17/10/2017 2:05 PM
@@ -26895,39 +26716,33 @@ if (false) {
 
 
 
-
 __WEBPACK_IMPORTED_MODULE_0__impl_vue___default.a.install = function (Vue) {
-  // install component
   Vue.component(__WEBPACK_IMPORTED_MODULE_0__impl_vue___default.a.name, __WEBPACK_IMPORTED_MODULE_0__impl_vue___default.a);
-
-  // install directive
-  Vue.directive('tip', __WEBPACK_IMPORTED_MODULE_2__sources_directives_tip__["a" /* default */]);
-
-  Object(__WEBPACK_IMPORTED_MODULE_1__sources_plugins_tip__["a" /* installSavTip */])();
+  Vue.component(__WEBPACK_IMPORTED_MODULE_1__impl_item_vue___default.a.name, __WEBPACK_IMPORTED_MODULE_1__impl_item_vue___default.a);
 };
 
-/* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0__impl_vue___default.a);
+
 
 /***/ }),
-/* 137 */
-/*!************************************!*\
-  !*** ../packages/tooltip/impl.vue ***!
-  \************************************/
+/* 135 */
+/*!*************************************!*\
+  !*** ../packages/dropdown/impl.vue ***!
+  \*************************************/
 /*! no static exports found */
 /*! exports used: default */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Component = __webpack_require__(/*! ../../.sdocs/node_modules/vue-loader/lib/component-normalizer */ 0)(
   /* script */
-  __webpack_require__(/*! !babel-loader!../../.sdocs/node_modules/vue-loader/lib/selector?type=script&index=0!./impl.vue */ 138),
+  __webpack_require__(/*! !babel-loader!../../.sdocs/node_modules/vue-loader/lib/selector?type=script&index=0!./impl.vue */ 136),
   /* template */
-  __webpack_require__(/*! !../../.sdocs/node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-7eaa9660"}!../../.sdocs/node_modules/vue-loader/lib/selector?type=template&index=0!./impl.vue */ 139),
+  __webpack_require__(/*! !../../.sdocs/node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-20ebcaea"}!../../.sdocs/node_modules/vue-loader/lib/selector?type=template&index=0!./impl.vue */ 137),
   /* scopeId */
   null,
   /* cssModules */
   null
 )
-Component.options.__file = "/Users/charlie/code/sav-vui/packages/tooltip/impl.vue"
+Component.options.__file = "/Users/charlie/code/sav-vui/packages/dropdown/impl.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] impl.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -26938,9 +26753,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-7eaa9660", Component.options)
+    hotAPI.createRecord("data-v-20ebcaea", Component.options)
   } else {
-    hotAPI.reload("data-v-7eaa9660", Component.options)
+    hotAPI.reload("data-v-20ebcaea", Component.options)
   }
 })()}
 
@@ -26948,16 +26763,18 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 138 */
-/*!**********************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!../packages/tooltip/impl.vue ***!
-  \**********************************************************************************************************************************/
+/* 136 */
+/*!***********************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!../packages/dropdown/impl.vue ***!
+  \***********************************************************************************************************************************/
 /*! exports provided: default */
 /*! all exports used */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__sources_utils_mixin__ = __webpack_require__(/*! ../../sources/utils/mixin */ 23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__sources_directives_click_outside__ = __webpack_require__(/*! ../../sources/directives/click-outside */ 25);
 //
 //
 //
@@ -26966,268 +26783,372 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'VTooltip',
+  name: 'VDropdown',
+
+  mixins: [Object(__WEBPACK_IMPORTED_MODULE_0__sources_utils_mixin__["a" /* createMixins */])(['disabled', 'hoverable', 'magic'])],
 
   props: {
-    text: String
+    value: {
+      type: [String, Number, Boolean, Symbol, Object],
+      'default': null
+    }
+  },
+
+  data() {
+    return {
+      selected: this.value,
+      active: false
+    };
+  },
+
+  created() {
+    this.$on('item-selected', val => {
+      this.selected = val;
+      this.active = false;
+    });
+  },
+
+  watch: {
+    'selected'(val) {
+      this.$emit('input', val);
+      this.$emit('change', val);
+    },
+
+    'value'(val) {
+      if (val === this.selected) return;
+
+      console.debug('new', val, 'selected', this.selected);
+      // support v-model
+      this.$emit('item-selected', val);
+    }
+  },
+
+  methods: {
+    _handleClickOutside() {
+      this.active = false;
+    },
+
+    _handleToggle() {
+      if (this.disabled || this.hoverable) return;
+
+      this.active = !this.active;
+    }
+  },
+
+  computed: {
+    _dropdownModifiers() {
+      let cls = [];
+
+      cls.push(this.disabledModifier);
+      cls.push(this.hoverableModifier);
+
+      return cls;
+    }
+  },
+
+  directives: {
+    ClickOutside: __WEBPACK_IMPORTED_MODULE_1__sources_directives_click_outside__["a" /* default */]
   }
 });
 
 /***/ }),
-/* 139 */
-/*!*****************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-7eaa9660"}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!../packages/tooltip/impl.vue ***!
-  \*****************************************************************************************************************************************************************************/
+/* 137 */
+/*!******************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-20ebcaea"}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!../packages/dropdown/impl.vue ***!
+  \******************************************************************************************************************************************************************************/
 /*! no static exports found */
 /*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticClass: "v-tooltip-popup"
+    directives: [{
+      name: "click-outside",
+      rawName: "v-click-outside",
+      value: (_vm._handleClickOutside),
+      expression: "_handleClickOutside"
+    }],
+    staticClass: "v-dropdown",
+    class: [
+      _vm.magicModifier,
+      _vm._dropdownModifiers, {
+        'is-active': _vm.active
+      }
+    ]
   }, [_c('div', {
-    staticClass: "v-tooltip"
-  }, [_vm._v("\n    " + _vm._s(_vm.text) + "\n  ")])])
+    ref: "trigger",
+    staticClass: "v-dropdown-trigger",
+    on: {
+      "click": _vm._handleToggle
+    }
+  }, [_vm._t("trigger")], 2), _vm._v(" "), _c('transition', {
+    attrs: {
+      "name": "v-ani-menu"
+    }
+  }, [_c('div', {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: (_vm.active || _vm.hoverable),
+      expression: "active || hoverable"
+    }],
+    ref: "dropdownMenu",
+    staticClass: "v-dropdown-menu"
+  }, [_c('div', {
+    staticClass: "v-dropdown-content"
+  }, [_vm._t("default")], 2)])])], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-7eaa9660", module.exports)
+     require("vue-hot-reload-api").rerender("data-v-20ebcaea", module.exports)
   }
 }
 
 /***/ }),
-/* 140 */
-/*!*********************************!*\
-  !*** ../sources/plugins/tip.js ***!
-  \*********************************/
-/*! exports provided: installSavTip, uninstallSavTip */
-/*! exports used: installSavTip */
+/* 138 */
+/*!******************************************!*\
+  !*** ../packages/dropdown/impl_item.vue ***!
+  \******************************************/
+/*! no static exports found */
+/*! exports used: default */
+/***/ (function(module, exports, __webpack_require__) {
+
+var Component = __webpack_require__(/*! ../../.sdocs/node_modules/vue-loader/lib/component-normalizer */ 0)(
+  /* script */
+  __webpack_require__(/*! !babel-loader!../../.sdocs/node_modules/vue-loader/lib/selector?type=script&index=0!./impl_item.vue */ 139),
+  /* template */
+  __webpack_require__(/*! !../../.sdocs/node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-2fea2f10"}!../../.sdocs/node_modules/vue-loader/lib/selector?type=template&index=0!./impl_item.vue */ 141),
+  /* scopeId */
+  null,
+  /* cssModules */
+  null
+)
+Component.options.__file = "/Users/charlie/code/sav-vui/packages/dropdown/impl_item.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] impl_item.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-2fea2f10", Component.options)
+  } else {
+    hotAPI.reload("data-v-2fea2f10", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 139 */
+/*!****************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!../packages/dropdown/impl_item.vue ***!
+  \****************************************************************************************************************************************/
+/*! exports provided: default */
+/*! all exports used */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = installSavTip;
-/* unused harmony export uninstallSavTip */
-function installSavTip() {
-  if (installed) {
-    return;
-  }
-  document.addEventListener('mousedown', click, false);
-  document.addEventListener('mousemove', move, false);
-}
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__sources_mixins_emitter__ = __webpack_require__(/*! ../../sources/mixins/emitter */ 140);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
-function uninstallSavTip() {
-  if (!installed) {
-    return;
-  }
 
-  document.removeEventListener('mousedown', click, false);
-  document.removeEventListener('mousemove', move, false);
-}
 
-let tip;
-let tipTarget;
-let tipVisible = false;
-let installed = false;
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: 'VDropdownItem',
 
-function getTip() {
-  if (!tip) {
-    tip = document.createElement('div');
-    tip.className = 'sav-tooltip';
-    tip.id = 'tip';
-    document.body.append(tip);
-  }
-  return tip;
-}
+  mixins: [__WEBPACK_IMPORTED_MODULE_0__sources_mixins_emitter__["a" /* default */]],
 
-function click(event) {
-  if (!(event.buttons === 1 || event.which === 1)) {
-    return;
-  }
-  if (tipVisible) {
-    tipVisible = false;
-    let { style } = getTip();
-    style.transition = 'opacity 150ms';
-    style.opacity = 0;
-    setTimeout(() => {
-      if (!tipTarget) {
-        style.display = `none`;
-      }
-    }, 100);
-  }
-}
+  props: {
+    value: {
+      type: [String, Number, Boolean, Symbol, Object],
+      'default': null
+    },
+    divider: Boolean,
+    hasLink: Boolean,
+    custom: Boolean,
+    disabled: Boolean
+  },
 
-function move(event) {
-  if (tipTarget) {
-    if (event.target === tipTarget) {
-      return;
+  methods: {
+    _handleItemSelected() {
+      this.vDispatch('VDropdown', 'item-selected', this.value);
     }
-    if (tipTarget.contains(event.target)) {
-      if (!isTip(event.target.dataset)) {
-        return;
-      }
+  },
+
+  computed: {
+    _isActive() {
+      return this.value !== null && this.value === this.$parent.selected;
     }
-    tipTarget = null;
   }
-  let tipNode = getTipNode(event.target);
-  if (tipNode) {
-    tipTarget = tipNode;
-    let tip = getTip();
-    let { x, y } = applyTip(tipTarget.dataset, tipTarget, tip);
-    let { style } = tip;
-    style.transition = 'opacity 150ms, transform 150ms';
-    style.transform = `translate(${x}, ${y})`;
-    style.display = `block`;
-    style.opacity = 1;
-    tipVisible = true;
-  } else if (tipVisible) {
-    let { style } = getTip();
-    style.transition = 'opacity 150ms, transform 150ms';
-    style.opacity = 0;
-    setTimeout(() => {
-      if (!tipTarget) {
-        style.display = `none`;
-      }
-    }, 100);
-    tipVisible = false;
-  }
-}
-
-function getTipNode(node) {
-  if (node.dataset) {
-    return node.closest('[data-tip]') || node.closest('[data-tip-html]');
-  }
-}
-
-function isTip({ tip, tipHtml }) {
-  return !!(tip || tipHtml);
-}
-
-const clss = ['is-left', 'is-top', 'is-right', 'is-bottom'];
-
-function applyTip(opts, target, tipNode) {
-  if (opts.tip) {
-    tipNode.innerText = opts.tip;
-  } else if (opts.tipHtml) {
-    tipNode.innerHTML = opts.tipHtml;
-  }
-  let x;
-  let y;
-  let { left, top, right, bottom } = tipTarget.getBoundingClientRect();
-  let offset = opts.tipOffset || 4;
-  let hx = Math.round((left + right) / 2);
-  let hy = Math.round((bottom + top) / 2);
-  x = `calc(-50% + ${hx}px)`;
-  y = `calc(-50% + ${hy}px)`;
-  switch (opts.tipAlign) {
-    case 'left':
-      x = `calc(-100% + ${Math.round(left - offset)}px)`;
-      break;
-    case 'top':
-      y = `calc(-100% + ${Math.round(top - offset)}px)`;
-      break;
-    case 'bottom':
-      y = `${offset + bottom}px`;
-      break;
-    default:
-      x = `${Math.round(right + offset)}px`;
-      break;
-  }
-  clss.forEach(cls => {
-    tipNode.classList.remove(cls);
-  });
-  tipNode.classList.add(`is-${opts.tipAlign || 'right'}`);
-  return { x, y };
-}
+});
 
 /***/ }),
-/* 141 */
+/* 140 */
 /*!************************************!*\
-  !*** ../sources/directives/tip.js ***!
+  !*** ../sources/mixins/emitter.js ***!
   \************************************/
 /*! exports provided: default */
 /*! exports used: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/**
- * tooltip提示
- * v-tip="text"
- * v-tip="bindValue"
- * html
- * v-tip.html="bindValue"
- * align
- * v-tip.left="left-text"
- * v-tip.right="right-text"
- */
+function broadcast(componentName, eventName, params, componentKey = 'name') {
+  this.$children.forEach(child => {
+    let name = child.$options[componentKey];
 
-/* harmony default export */ __webpack_exports__["a"] = ({
-  bind: applyBinding,
-  update: applyBinding
-});
-
-function applyBinding(el, binding) {
-  let ds = parseBinding(binding);
-  if (!(ds || el.dataset)) {
-    return;
-  }
-  Object.assign(el.dataset, ds);
+    if (name === componentName) {
+      child.$emit.apply(child, [eventName].concat(params));
+    } else {
+      broadcast.apply(child, [componentName, eventName].concat([params]));
+    }
+  });
 }
 
-const aligns = ['top', 'left', 'right', 'bottom'];
+/* harmony default export */ __webpack_exports__["a"] = ({
+  methods: {
+    vDispatch(componentName, eventName, params, componentKey = 'name') {
+      let parent = this.$parent || this.$root;
+      let name = parent.$options[componentKey];
 
-function parseBinding(binding) {
-  let ret = {};
-  let tipAlign = aligns.find(it => binding.modifiers[it]);
-  let isHtml = binding.modifiers.html;
-  let tipValue = binding.value !== undefined ? binding.value : binding.expression;
-  if (tipValue) {
-    if (tipAlign) {
-      ret.tipAlign = tipAlign;
+      while (parent && (!name || name !== componentName)) {
+        parent = parent.$parent;
+
+        if (parent) {
+          name = parent.$options[componentKey];
+        }
+      }
+      if (parent) {
+        parent.$emit.apply(parent, [eventName].concat(params));
+      }
+    },
+    vBroadcast(componentName, eventName, params, componentKey = 'name') {
+      broadcast.call(this, componentName, eventName, params, componentKey);
     }
-    if (isHtml) {
-      ret.tipHtml = tipValue;
-    } else {
-      ret.tip = tipValue;
+  }
+});
+
+/***/ }),
+/* 141 */
+/*!***********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-2fea2f10"}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!../packages/dropdown/impl_item.vue ***!
+  \***********************************************************************************************************************************************************************************/
+/*! no static exports found */
+/*! all exports used */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return (_vm.divider) ? _c('hr', {
+    staticClass: "v-dropdown-divider"
+  }) : (!_vm.custom && !_vm.hasLink) ? _c('a', {
+    staticClass: "v-dropdown-item",
+    class: {
+      'is-disabled': _vm.disabled,
+      'is-active': _vm._isActive
+    },
+    on: {
+      "click": _vm._handleItemSelected
     }
-    return ret;
+  }, [_vm._t("default")], 2) : _c('div', {
+    class: {
+      'v-dropdown-item': !_vm.hasLink,
+      'is-disabled': _vm.disabled,
+      'is-active': _vm._isActive,
+      'has-link': _vm.hasLink
+    },
+    on: {
+      "click": _vm._handleItemSelected
+    }
+  }, [_vm._t("default")], 2)
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-2fea2f10", module.exports)
   }
 }
 
 /***/ }),
 /* 142 */
-/*!************************************!*\
-  !*** ../packages/popover/index.js ***!
-  \************************************/
-/*! exports provided: default, PopoverPopper */
-/*! exports used: PopoverPopper */
+/*!**********************************!*\
+  !*** ../packages/table/index.js ***!
+  \**********************************/
+/*! exports provided: default */
+/*! exports used: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__impl_vue__ = __webpack_require__(/*! ./impl.vue */ 143);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__impl_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__impl_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__impl_popper_vue__ = __webpack_require__(/*! ./impl_popper.vue */ 146);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__impl_popper_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__impl_popper_vue__);
-/* unused harmony reexport default */
-/* harmony reexport (default from non-hamory) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_1__impl_popper_vue___default.a; });
-
 
 
 __WEBPACK_IMPORTED_MODULE_0__impl_vue___default.a.install = function (Vue) {
-  // install it
-  Vue.component(__WEBPACK_IMPORTED_MODULE_0__impl_vue___default.a.name, __WEBPACK_IMPORTED_MODULE_0__impl_vue___default.a);
+  Vue.install(__WEBPACK_IMPORTED_MODULE_0__impl_vue___default.a.name, __WEBPACK_IMPORTED_MODULE_0__impl_vue___default.a);
 };
 
-
+/* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0__impl_vue___default.a);
 
 /***/ }),
 /* 143 */
-/*!************************************!*\
-  !*** ../packages/popover/impl.vue ***!
-  \************************************/
+/*!**********************************!*\
+  !*** ../packages/table/impl.vue ***!
+  \**********************************/
 /*! no static exports found */
 /*! exports used: default */
 /***/ (function(module, exports, __webpack_require__) {
@@ -27236,13 +27157,13 @@ var Component = __webpack_require__(/*! ../../.sdocs/node_modules/vue-loader/lib
   /* script */
   __webpack_require__(/*! !babel-loader!../../.sdocs/node_modules/vue-loader/lib/selector?type=script&index=0!./impl.vue */ 144),
   /* template */
-  __webpack_require__(/*! !../../.sdocs/node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-e7a50724"}!../../.sdocs/node_modules/vue-loader/lib/selector?type=template&index=0!./impl.vue */ 145),
+  __webpack_require__(/*! !../../.sdocs/node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-4dfe5f36"}!../../.sdocs/node_modules/vue-loader/lib/selector?type=template&index=0!./impl.vue */ 145),
   /* scopeId */
   null,
   /* cssModules */
   null
 )
-Component.options.__file = "/Users/charlie/code/sav-vui/packages/popover/impl.vue"
+Component.options.__file = "/Users/charlie/code/sav-vui/packages/table/impl.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] impl.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -27253,9 +27174,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-e7a50724", Component.options)
+    hotAPI.createRecord("data-v-4dfe5f36", Component.options)
   } else {
-    hotAPI.reload("data-v-e7a50724", Component.options)
+    hotAPI.reload("data-v-4dfe5f36", Component.options)
   }
 })()}
 
@@ -27264,9 +27185,9 @@ module.exports = Component.exports
 
 /***/ }),
 /* 144 */
-/*!**********************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!../packages/popover/impl.vue ***!
-  \**********************************************************************************************************************************/
+/*!********************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!../packages/table/impl.vue ***!
+  \********************************************************************************************************************************/
 /*! exports provided: default */
 /*! all exports used */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -27281,1963 +27202,427 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'VPopover'
-});
-
-/***/ }),
-/* 145 */
-/*!*****************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-e7a50724"}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!../packages/popover/impl.vue ***!
-  \*****************************************************************************************************************************************************************************/
-/*! no static exports found */
-/*! all exports used */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _vm._m(0)
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "v-popover-popup"
-  }, [_c('p', [_vm._v("\n    popover\n  ")])])
-}]}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-e7a50724", module.exports)
-  }
-}
-
-/***/ }),
-/* 146 */
-/*!*******************************************!*\
-  !*** ../packages/popover/impl_popper.vue ***!
-  \*******************************************/
-/*! no static exports found */
-/*! exports used: default */
-/***/ (function(module, exports, __webpack_require__) {
-
-var Component = __webpack_require__(/*! ../../.sdocs/node_modules/vue-loader/lib/component-normalizer */ 0)(
-  /* script */
-  __webpack_require__(/*! !babel-loader!../../.sdocs/node_modules/vue-loader/lib/selector?type=script&index=0!./impl_popper.vue */ 147),
-  /* template */
-  __webpack_require__(/*! !../../.sdocs/node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-2640bccd"}!../../.sdocs/node_modules/vue-loader/lib/selector?type=template&index=0!./impl_popper.vue */ 150),
-  /* scopeId */
-  null,
-  /* cssModules */
-  null
-)
-Component.options.__file = "/Users/charlie/code/sav-vui/packages/popover/impl_popper.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] impl_popper.vue: functional components are not supported with templates, they should use render functions.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-2640bccd", Component.options)
-  } else {
-    hotAPI.reload("data-v-2640bccd", Component.options)
-  }
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 147 */
-/*!*****************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!../packages/popover/impl_popper.vue ***!
-  \*****************************************************************************************************************************************/
-/*! exports provided: default */
-/*! all exports used */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__sources_mixins_popper__ = __webpack_require__(/*! ../../sources/mixins/popper */ 148);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__sources_utils_dom__ = __webpack_require__(/*! ../../sources/utils/dom */ 27);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'VPopoverPopper',
-
-  mixins: [__WEBPACK_IMPORTED_MODULE_0__sources_mixins_popper__["a" /* default */]],
+  name: 'VTable',
 
   props: {
-    trigger: {
-      type: String,
-      'default': 'click',
-      validator: value => ['click', 'focus', 'hover', 'manual'].indexOf(value) > -1
+    rows: {
+      type: Array
     },
-    openDelay: {
-      type: Number,
-      'default': 0
+    columns: {
+      type: Array,
+      'default': []
     },
-    title: String,
-    disabled: Boolean,
-    content: String,
-    reference: {},
-    popperClass: String,
-    width: {},
-    visibleArrow: {
-      'default': true
-    },
-    transition: {
-      type: String,
-      'default': 'popover-fade'
-    }
-  },
-
-  watch: {
-    showPopper(newVal, oldVal) {
-      newVal ? this.$emit('show') : this.$emit('hide');
-    }
-  },
-
-  mounted() {
-    let reference = this.reference || this.$refs.reference;
-    const popper = this.popper || this.$refs.popper;
-    if (!reference && this.$slots.reference && this.$slots.reference[0]) {
-      reference = this.referenceElm = this.$slots.reference[0].elm;
-    }
-    if (this.trigger === 'click') {
-      Object(__WEBPACK_IMPORTED_MODULE_1__sources_utils_dom__["c" /* on */])(reference, 'click', this.doToggle);
-      Object(__WEBPACK_IMPORTED_MODULE_1__sources_utils_dom__["c" /* on */])(document, 'click', this.handleDocumentClick);
-    } else if (this.trigger === 'hover') {
-      Object(__WEBPACK_IMPORTED_MODULE_1__sources_utils_dom__["c" /* on */])(reference, 'mouseenter', this.handleMouseEnter);
-      Object(__WEBPACK_IMPORTED_MODULE_1__sources_utils_dom__["c" /* on */])(popper, 'mouseenter', this.handleMouseEnter);
-      Object(__WEBPACK_IMPORTED_MODULE_1__sources_utils_dom__["c" /* on */])(reference, 'mouseleave', this.handleMouseLeave);
-      Object(__WEBPACK_IMPORTED_MODULE_1__sources_utils_dom__["c" /* on */])(popper, 'mouseleave', this.handleMouseLeave);
-    } else if (this.trigger === 'focus') {
-      let found = false;
-      if ([].slice.call(reference.children).length) {
-        const children = reference.childNodes;
-        const len = children.length;
-        for (let i = 0; i < len; i++) {
-          if (children[i].nodeName === 'INPUT' || children[i].nodeName === 'TEXTAREA') {
-            Object(__WEBPACK_IMPORTED_MODULE_1__sources_utils_dom__["c" /* on */])(children[i], 'focus', this.doShow);
-            Object(__WEBPACK_IMPORTED_MODULE_1__sources_utils_dom__["c" /* on */])(children[i], 'blur', this.doClose);
-            found = true;
-            break;
-          }
-        }
-      }
-      if (found) return;
-      if (reference.nodeName === 'INPUT' || reference.nodeName === 'TEXTAREA') {
-        Object(__WEBPACK_IMPORTED_MODULE_1__sources_utils_dom__["c" /* on */])(reference, 'focus', this.doShow);
-        Object(__WEBPACK_IMPORTED_MODULE_1__sources_utils_dom__["c" /* on */])(reference, 'blur', this.doClose);
-      } else {
-        Object(__WEBPACK_IMPORTED_MODULE_1__sources_utils_dom__["c" /* on */])(reference, 'mousedown', this.doShow);
-        Object(__WEBPACK_IMPORTED_MODULE_1__sources_utils_dom__["c" /* on */])(reference, 'mouseup', this.doClose);
-      }
-    }
-  },
-
-  methods: {
-    doToggle() {
-      this.showPopper = !this.showPopper;
-    },
-    doShow() {
-      this.showPopper = true;
-    },
-    doClose() {
-      this.showPopper = false;
-    },
-    handleMouseEnter() {
-      clearTimeout(this._timer);
-      if (this.openDelay) {
-        this._timer = setTimeout(() => {
-          this.showPopper = true;
-        }, this.openDelay);
-      } else {
-        this.showPopper = true;
-      }
-    },
-    handleMouseLeave() {
-      clearTimeout(this._timer);
-      this._timer = setTimeout(() => {
-        this.showPopper = false;
-      }, 200);
-    },
-    handleDocumentClick(e) {
-      let reference = this.reference || this.$refs.reference;
-      const popper = this.popper || this.$refs.popper;
-      if (!reference && this.$slots.reference && this.$slots.reference[0]) {
-        reference = this.referenceElm = this.$slots.reference[0].elm;
-      }
-      if (!this.$el || !reference || this.$el.contains(e.target) || reference.contains(e.target) || !popper || popper.contains(e.target)) return;
-      this.showPopper = false;
-    }
-  },
-
-  destroyed() {
-    const reference = this.reference;
-    Object(__WEBPACK_IMPORTED_MODULE_1__sources_utils_dom__["b" /* off */])(reference, 'click', this.doToggle);
-    Object(__WEBPACK_IMPORTED_MODULE_1__sources_utils_dom__["b" /* off */])(reference, 'mouseup', this.doClose);
-    Object(__WEBPACK_IMPORTED_MODULE_1__sources_utils_dom__["b" /* off */])(reference, 'mousedown', this.doShow);
-    Object(__WEBPACK_IMPORTED_MODULE_1__sources_utils_dom__["b" /* off */])(reference, 'focus', this.doShow);
-    Object(__WEBPACK_IMPORTED_MODULE_1__sources_utils_dom__["b" /* off */])(reference, 'blur', this.doClose);
-    Object(__WEBPACK_IMPORTED_MODULE_1__sources_utils_dom__["b" /* off */])(reference, 'mouseleave', this.handleMouseLeave);
-    Object(__WEBPACK_IMPORTED_MODULE_1__sources_utils_dom__["b" /* off */])(reference, 'mouseenter', this.handleMouseEnter);
-    Object(__WEBPACK_IMPORTED_MODULE_1__sources_utils_dom__["b" /* off */])(document, 'click', this.handleDocumentClick);
-  }
-});
-
-/***/ }),
-/* 148 */
-/*!***********************************!*\
-  !*** ../sources/mixins/popper.js ***!
-  \***********************************/
-/*! exports provided: default */
-/*! exports used: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_popup__ = __webpack_require__(/*! ../utils/popup */ 26);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__plugins_popper__ = __webpack_require__(/*! ../plugins/popper */ 149);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__plugins_popper___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__plugins_popper__);
-
-
-
-const stopPropagation = e => e.stopPropagation();
-
-/**
- * @param {HTMLElement} [reference=$refs.reference] - The reference element used to position the popper.
- * @param {HTMLElement} [popper=$refs.popper] - The HTML element used as popper, or a configuration used to generate the popper.
- * @param {String} [placement=button] - Placement of the popper accepted values: top(-start, -end), right(-start, -end), bottom(-start, -end), left(-start, -end)
- * @param {Number} [offset=0] - Amount of pixels the popper will be shifted (can be negative).
- * @param {Boolean} [visible=false] Visibility of the popup element.
- * @param {Boolean} [visible-arrow=false] Visibility of the arrow, no style.
- */
-/* harmony default export */ __webpack_exports__["a"] = ({
-  props: {
-    placement: {
-      type: String,
-      default: 'bottom'
-    },
-    boundariesPadding: {
-      type: Number,
-      default: 5
-    },
-    reference: {},
-    popper: {},
-    offset: {
-      default: 0
-    },
-    value: Boolean,
-    visibleArrow: Boolean,
-    transition: String,
-    appendToBody: {
-      type: Boolean,
-      default: true
-    },
-    popperOptions: {
+    options: {
       type: Object,
-      default() {
+      'default'() {
         return {
-          gpuAcceleration: false
+          tableClasses: 'is-bordered is-striped'
         };
       }
+    },
+    sortable: {
+      type: Boolean,
+      'default': false
     }
   },
 
   data() {
     return {
-      showPopper: false,
-      currentPlacement: ''
+      thColumns: [],
+      tdColumns: [],
+      sortableState: null,
+      vFeatState: {}
     };
   },
 
-  watch: {
-    value: {
-      immediate: true,
-      handler(val) {
-        this.showPopper = val;
-        this.$emit('input', val);
-      }
-    },
-
-    showPopper(val) {
-      val ? this.updatePopper() : this.destroyPopper();
-      this.$emit('input', val);
+  created() {
+    if (this.sortable) {
+      this.sortableState = {
+        activeColumn: false
+      };
     }
+
+    this._preparedInternalColumns();
+
+    // `__` feature
+    this.vFeatState.select_all_initialized = false;
+    this._supportedPrefixFeature('__select');
+  },
+
+  watch: {
+    'columns'() {
+      this._preparedInternalColumns();
+    },
+    'rows'() {
+      this._supportedPrefixFeature('__select');
+    }
+  },
+
+  computed: {
+    'v__selected_all': {
+      get() {
+        let switcher = false;
+
+        if (this.vFeatState.select_all_initialized && this.rows.length) {
+          switcher = this.rows.every(n => {
+            return Boolean(n.v__selected);
+          });
+        }
+
+        return switcher;
+      },
+
+      set(switcher) {
+        console.log(switcher);
+        if (this.vFeatState.select_all_initialized && this.rows.length) {
+          this.rows.forEach(n => {
+            n.v__selected = switcher;
+          });
+        }
+      }
+    }
+
   },
 
   methods: {
-    createPopper() {
-      if (this.$isServer) return;
-      this.currentPlacement = this.currentPlacement || this.placement;
-      if (!/^(top|bottom|left|right)(-start|-end)?$/g.test(this.currentPlacement)) {
-        return;
-      }
+    _supportedPrefixFeature(feat) {
+      if (feat && !!~this.tdColumns.indexOf(feat)) {
+        switch (feat.replace(/__/g, '')) {
+          case 'select':
+            this._injectRowItemField('v__selected', false);
 
-      const options = this.popperOptions;
-      const popper = this.popperElm = this.popperElm || this.popper || this.$refs.popper;
-      let reference = this.referenceElm = this.referenceElm || this.reference || this.$refs.reference;
+            if (!this.vFeatState.select_all_initialized) {
+              this.$set(this.vFeatState, 'select_all_initialized', true);
+              this.$on('v-select-all', switcher => {
+                this.v__selected_all = switcher;
+              });
+            }
 
-      if (!reference && this.$slots.reference && this.$slots.reference[0]) {
-        reference = this.referenceElm = this.$slots.reference[0].elm;
-      }
-
-      if (!popper || !reference) return;
-      if (this.visibleArrow) this.appendArrow(popper);
-      if (this.appendToBody) document.body.appendChild(this.popperElm);
-      if (this.popperJS && this.popperJS.destroy) {
-        this.popperJS.destroy();
-      }
-
-      options.placement = this.currentPlacement;
-      options.offset = this.offset;
-      this.popperJS = new __WEBPACK_IMPORTED_MODULE_1__plugins_popper___default.a(reference, popper, options);
-      this.popperJS.onCreate(_ => {
-        this.$emit('created', this);
-        this.resetTransformOrigin();
-        this.$nextTick(this.updatePopper);
-      });
-      if (typeof options.onUpdate === 'function') {
-        this.popperJS.onUpdate(options.onUpdate);
-      }
-      this.popperJS._popper.style.zIndex = __WEBPACK_IMPORTED_MODULE_0__utils_popup__["a" /* default */].nextZIndex();
-      this.popperElm.addEventListener('click', stopPropagation);
-    },
-
-    updatePopper() {
-      this.popperJS ? this.popperJS.update() : this.createPopper();
-    },
-
-    doDestroy() {
-      /* istanbul ignore if */
-      if (this.showPopper || !this.popperJS) return;
-      this.popperJS.destroy();
-      this.popperJS = null;
-    },
-
-    destroyPopper() {
-      if (this.popperJS) {
-        this.resetTransformOrigin();
-      }
-    },
-
-    resetTransformOrigin() {
-      let placementMap = {
-        top: 'bottom',
-        bottom: 'top',
-        left: 'right',
-        right: 'left'
-      };
-      let placement = this.popperJS._popper.getAttribute('x-placement').split('-')[0];
-      let origin = placementMap[placement];
-      this.popperJS._popper.style.transformOrigin = ['top', 'bottom'].indexOf(placement) > -1 ? `center ${origin}` : `${origin} center`;
-    },
-
-    appendArrow(element) {
-      let hash;
-      if (this.appended) {
-        return;
-      }
-
-      this.appended = true;
-
-      for (let item in element.attributes) {
-        if (/^_v-/.test(element.attributes[item].name)) {
-          hash = element.attributes[item].name;
-          break;
+            break;
         }
       }
-
-      const arrow = document.createElement('div');
-
-      if (hash) {
-        arrow.setAttribute(hash, '');
-      }
-      arrow.setAttribute('x-arrow', '');
-      arrow.className = 'has-arrow';
-      element.appendChild(arrow);
+    },
+    _injectRowItemField(key, value) {
+      this.rows && this.rows.forEach(it => {
+        if (it && !it.hasOwnProperty(key)) {
+          this.$set(it, key, value); // force set row field reactive
+        }
+      });
+    },
+    _preparedInternalColumns() {
+      this.thColumns = [];
+      this.tdColumns = [];
+      Array.isArray(this.columns) && this.columns.forEach(it => {
+        let tmp = null;
+        if (it && !!~it.indexOf('|')) {
+          tmp = it.split('|');
+          tmp = [tmp[0].trim().toLowerCase(), tmp[1].trim()];
+          this.tdColumns.push(tmp[0]);
+          this.thColumns.push(tmp);
+        } else {
+          tmp = it.trim();
+          this.thColumns.push([tmp, tmp]);
+          this.tdColumns.push(tmp);
+        }
+      });
+    },
+    _orderByColumn(col) {
+      this.sortableState.activeColumn = col;
+      this.$emit('order-by-column', col);
+    },
+    _headClick(col) {
+      this.sortable && this._orderByColumn(col);
     }
-  },
-
-  beforeDestroy() {
-    this.doDestroy();
-    if (this.popperElm && this.popperElm.parentNode === document.body) {
-      this.popperElm.removeEventListener('click', stopPropagation);
-      document.body.removeChild(this.popperElm);
-    }
-  },
-
-  // call destroy in keep-alive mode
-  deactivated() {
-    this.$options.beforeDestroy[0].call(this);
   }
 });
 
 /***/ }),
-/* 149 */
-/*!************************************!*\
-  !*** ../sources/plugins/popper.js ***!
-  \************************************/
-/*! no static exports found */
-/*! exports used: default */
-/***/ (function(module, exports, __webpack_require__) {
-
-var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
- * @fileOverview Kickass library to create and place poppers near their reference elements.
- * @version {{version}}
- * @license
- * Copyright (c) 2016 Federico Zivolo and contributors
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in all
- * copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
- * SOFTWARE.
- */
-
-//
-// Cross module loader
-// Supported: Node, AMD, Browser globals
-//
-;(function (root, factory) {
-    if (true) {
-        // AMD. Register as an anonymous module.
-        !(__WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
-				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
-				(__WEBPACK_AMD_DEFINE_FACTORY__.call(exports, __webpack_require__, exports, module)) :
-				__WEBPACK_AMD_DEFINE_FACTORY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-    } else if (typeof module === 'object' && module.exports) {
-        // Node. Does not work with strict CommonJS, but
-        // only CommonJS-like environments that support module.exports,
-        // like Node.
-        module.exports = factory();
-    } else {
-        // Browser globals (root is window)
-        root.Popper = factory();
-    }
-})(this, function () {
-
-    'use strict';
-
-    var root = window;
-
-    // default options
-    var DEFAULTS = {
-        // placement of the popper
-        placement: 'bottom',
-
-        gpuAcceleration: true,
-
-        // shift popper from its origin by the given amount of pixels (can be negative)
-        offset: 0,
-
-        // the element which will act as boundary of the popper
-        boundariesElement: 'viewport',
-
-        // amount of pixel used to define a minimum distance between the boundaries and the popper
-        boundariesPadding: 5,
-
-        // popper will try to prevent overflow following this order,
-        // by default, then, it could overflow on the left and on top of the boundariesElement
-        preventOverflowOrder: ['left', 'right', 'top', 'bottom'],
-
-        // the behavior used by flip to change the placement of the popper
-        flipBehavior: 'flip',
-
-        arrowElement: '[x-arrow]',
-
-        // list of functions used to modify the offsets before they are applied to the popper
-        modifiers: ['shift', 'offset', 'preventOverflow', 'keepTogether', 'arrow', 'flip', 'applyStyle'],
-
-        modifiersIgnored: []
-    };
-
-    /**
-     * Create a new Popper.js instance
-     * @constructor Popper
-     * @param {HTMLElement} reference - The reference element used to position the popper
-     * @param {HTMLElement|Object} popper
-     *      The HTML element used as popper, or a configuration used to generate the popper.
-     * @param {String} [popper.tagName='div'] The tag name of the generated popper.
-     * @param {Array} [popper.classNames=['popper']] Array of classes to apply to the generated popper.
-     * @param {Array} [popper.attributes] Array of attributes to apply, specify `attr:value` to assign a value to it.
-     * @param {HTMLElement|String} [popper.parent=window.document.body] The parent element, given as HTMLElement or as query string.
-     * @param {String} [popper.content=''] The content of the popper, it can be text, html, or node; if it is not text, set `contentType` to `html` or `node`.
-     * @param {String} [popper.contentType='text'] If `html`, the `content` will be parsed as HTML. If `node`, it will be appended as-is.
-     * @param {String} [popper.arrowTagName='div'] Same as `popper.tagName` but for the arrow element.
-     * @param {Array} [popper.arrowClassNames='has-arrow'] Same as `popper.classNames` but for the arrow element.
-     * @param {String} [popper.arrowAttributes=['x-arrow']] Same as `popper.attributes` but for the arrow element.
-     * @param {Object} options
-     * @param {String} [options.placement=bottom]
-     *      Placement of the popper accepted values: `top(-start, -end), right(-start, -end), bottom(-start, -right),
-     *      left(-start, -end)`
-     *
-     * @param {HTMLElement|String} [options.arrowElement='[x-arrow]']
-     *      The DOM Node used as arrow for the popper, or a CSS selector used to get the DOM node. It must be child of
-     *      its parent Popper. Popper.js will apply to the given element the style required to align the arrow with its
-     *      reference element.
-     *      By default, it will look for a child node of the popper with the `x-arrow` attribute.
-     *
-     * @param {Boolean} [options.gpuAcceleration=true]
-     *      When this property is set to true, the popper position will be applied using CSS3 translate3d, allowing the
-     *      browser to use the GPU to accelerate the rendering.
-     *      If set to false, the popper will be placed using `top` and `left` properties, not using the GPU.
-     *
-     * @param {Number} [options.offset=0]
-     *      Amount of pixels the popper will be shifted (can be negative).
-     *
-     * @param {String|Element} [options.boundariesElement='viewport']
-     *      The element which will define the boundaries of the popper position, the popper will never be placed outside
-     *      of the defined boundaries (except if `keepTogether` is enabled)
-     *
-     * @param {Number} [options.boundariesPadding=5]
-     *      Additional padding for the boundaries
-     *
-     * @param {Array} [options.preventOverflowOrder=['left', 'right', 'top', 'bottom']]
-     *      Order used when Popper.js tries to avoid overflows from the boundaries, they will be checked in order,
-     *      this means that the last ones will never overflow
-     *
-     * @param {String|Array} [options.flipBehavior='flip']
-     *      The behavior used by the `flip` modifier to change the placement of the popper when the latter is trying to
-     *      overlap its reference element. Defining `flip` as value, the placement will be flipped on
-     *      its axis (`right - left`, `top - bottom`).
-     *      You can even pass an array of placements (eg: `['right', 'left', 'top']` ) to manually specify
-     *      how alter the placement when a flip is needed. (eg. in the above example, it would first flip from right to left,
-     *      then, if even in its new placement, the popper is overlapping its reference element, it will be moved to top)
-     *
-     * @param {Array} [options.modifiers=[ 'shift', 'offset', 'preventOverflow', 'keepTogether', 'arrow', 'flip', 'applyStyle']]
-     *      List of functions used to modify the data before they are applied to the popper, add your custom functions
-     *      to this array to edit the offsets and placement.
-     *      The function should reflect the @params and @returns of preventOverflow
-     *
-     * @param {Array} [options.modifiersIgnored=[]]
-     *      Put here any built-in modifier name you want to exclude from the modifiers list
-     *      The function should reflect the @params and @returns of preventOverflow
-     *
-     * @param {Boolean} [options.removeOnDestroy=false]
-     *      Set to true if you want to automatically remove the popper when you call the `destroy` method.
-     */
-    function Popper(reference, popper, options) {
-        this._reference = reference.jquery ? reference[0] : reference;
-        this.state = { onCreateCalled: false };
-
-        // if the popper variable is a configuration object, parse it to generate an HTMLElement
-        // generate a default popper if is not defined
-        var isNotDefined = typeof popper === 'undefined' || popper === null;
-        var isConfig = popper && Object.prototype.toString.call(popper) === '[object Object]';
-        if (isNotDefined || isConfig) {
-            this._popper = this.parse(isConfig ? popper : {});
-        }
-        // otherwise, use the given HTMLElement as popper
-        else {
-                this._popper = popper.jquery ? popper[0] : popper;
-            }
-
-        // with {} we create a new object with the options inside it
-        this._options = Object.assign({}, DEFAULTS, options);
-
-        // refactoring modifiers' list
-        this._options.modifiers = this._options.modifiers.map(function (modifier) {
-            // remove ignored modifiers
-            if (this._options.modifiersIgnored.indexOf(modifier) !== -1) return;
-
-            // set the x-placement attribute before everything else because it could be used to add margins to the popper
-            // margins needs to be calculated to get the correct popper offsets
-            if (modifier === 'applyStyle') {
-                this._popper.setAttribute('x-placement', this._options.placement);
-            }
-
-            // return predefined modifier identified by string or keep the custom one
-            return this.modifiers[modifier] || modifier;
-        }.bind(this));
-
-        // make sure to apply the popper position before any computation
-        this.state.position = this._getPosition(this._popper, this._reference);
-        setStyle(this._popper, { position: this.state.position });
-
-        // determine how we should set the origin of offsets
-        this.state.isParentTransformed = this._getIsParentTransformed(this._popper);
-
-        // fire the first update to position the popper in the right place
-        this.update();
-
-        // setup event listeners, they will take care of update the position in specific situations
-        this._setupEventListeners();
-        return this;
-    }
-
-    //
-    // Methods
-    //
-    /**
-     * Destroy the popper
-     * @method
-     * @memberof Popper
-     */
-    Popper.prototype.destroy = function () {
-        this._popper.removeAttribute('x-placement');
-        this._popper.style.left = '';
-        this._popper.style.position = '';
-        this._popper.style.top = '';
-        this._popper.style[getSupportedPropertyName('transform')] = '';
-        this._removeEventListeners();
-
-        // remove the popper if user explicity asked for the deletion on destroy
-        if (this._options.removeOnDestroy) {
-            this._popper.parentNode.removeChild(this._popper);
-        }
-        return this;
-    };
-
-    /**
-     * Updates the position of the popper, computing the new offsets and applying the new style
-     * @method
-     * @memberof Popper
-     */
-    Popper.prototype.update = function () {
-        var data = { instance: this, styles: {} };
-
-        // make sure to apply the popper position before any computation
-        this.state.position = this._getPosition(this._popper, this._reference);
-        setStyle(this._popper, { position: this.state.position });
-
-        // to avoid useless computations we throttle the popper position refresh to 60fps
-        root.requestAnimationFrame(function () {
-            var now = root.performance.now();
-            if (now - this.state.lastFrame <= 16) {
-                // this update fired to early! drop it
-                return;
-            }
-            this.state.lastFrame = now;
-
-            // store placement inside the data object, modifiers will be able to edit `placement` if needed
-            // and refer to _originalPlacement to know the original value
-            data.placement = this._options.placement;
-            data._originalPlacement = this._options.placement;
-
-            // compute the popper and trigger offsets and put them inside data.offsets
-            data.offsets = this._getOffsets(this._popper, this._reference, data.placement);
-
-            // get boundaries
-            data.boundaries = this._getBoundaries(data, this._options.boundariesPadding, this._options.boundariesElement);
-
-            data = this.runModifiers(data, this._options.modifiers);
-
-            if (!isFunction(this.state.createCalback)) {
-                this.state.onCreateCalled = true;
-            }
-            if (!this.state.onCreateCalled) {
-                this.state.onCreateCalled = true;
-                if (isFunction(this.state.createCalback)) {
-                    this.state.createCalback(this);
-                }
-            } else if (isFunction(this.state.updateCallback)) {
-                this.state.updateCallback(data);
-            }
-        }.bind(this));
-    };
-
-    /**
-     * If a function is passed, it will be executed after the initialization of popper with as first argument the Popper instance.
-     * @method
-     * @memberof Popper
-     * @param {Function} callback
-     */
-    Popper.prototype.onCreate = function (callback) {
-        // the createCallbacks return as first argument the popper instance
-        this.state.createCalback = callback;
-        return this;
-    };
-
-    /**
-     * If a function is passed, it will be executed after each update of popper with as first argument the set of coordinates and informations
-     * used to style popper and its arrow.
-     * NOTE: it doesn't get fired on the first call of the `Popper.update()` method inside the `Popper` constructor!
-     * @method
-     * @memberof Popper
-     * @param {Function} callback
-     */
-    Popper.prototype.onUpdate = function (callback) {
-        this.state.updateCallback = callback;
-        return this;
-    };
-
-    /**
-     * Helper used to generate poppers from a configuration file
-     * @method
-     * @memberof Popper
-     * @param config {Object} configuration
-     * @returns {HTMLElement} popper
-     */
-    Popper.prototype.parse = function (config) {
-        var defaultConfig = {
-            tagName: 'div',
-            classNames: ['popper'],
-            attributes: [],
-            parent: root.document.body,
-            content: '',
-            contentType: 'text',
-            arrowTagName: 'div',
-            arrowClassNames: ['has-arrow'],
-            arrowAttributes: ['x-arrow']
-        };
-        config = Object.assign({}, defaultConfig, config);
-
-        var d = root.document;
-
-        var popper = d.createElement(config.tagName);
-        addClassNames(popper, config.classNames);
-        addAttributes(popper, config.attributes);
-        if (config.contentType === 'node') {
-            popper.appendChild(config.content.jquery ? config.content[0] : config.content);
-        } else if (config.contentType === 'html') {
-            popper.innerHTML = config.content;
-        } else {
-            popper.textContent = config.content;
-        }
-
-        if (config.arrowTagName) {
-            var arrow = d.createElement(config.arrowTagName);
-            addClassNames(arrow, config.arrowClassNames);
-            addAttributes(arrow, config.arrowAttributes);
-            popper.appendChild(arrow);
-        }
-
-        var parent = config.parent.jquery ? config.parent[0] : config.parent;
-
-        // if the given parent is a string, use it to match an element
-        // if more than one element is matched, the first one will be used as parent
-        // if no elements are matched, the script will throw an error
-        if (typeof parent === 'string') {
-            parent = d.querySelectorAll(config.parent);
-            if (parent.length > 1) {
-                console.warn('WARNING: the given `parent` query(' + config.parent + ') matched more than one element, the first one will be used');
-            }
-            if (parent.length === 0) {
-                throw 'ERROR: the given `parent` doesn\'t exists!';
-            }
-            parent = parent[0];
-        }
-        // if the given parent is a DOM nodes list or an array of nodes with more than one element,
-        // the first one will be used as parent
-        if (parent.length > 1 && parent instanceof Element === false) {
-            console.warn('WARNING: you have passed as parent a list of elements, the first one will be used');
-            parent = parent[0];
-        }
-
-        // append the generated popper to its parent
-        parent.appendChild(popper);
-
-        return popper;
-
-        /**
-         * Adds class names to the given element
-         * @function
-         * @ignore
-         * @param {HTMLElement} target
-         * @param {Array} classes
-         */
-        function addClassNames(element, classNames) {
-            classNames.forEach(function (className) {
-                element.classList.add(className);
-            });
-        }
-
-        /**
-         * Adds attributes to the given element
-         * @function
-         * @ignore
-         * @param {HTMLElement} target
-         * @param {Array} attributes
-         * @example
-         * addAttributes(element, [ 'data-info:foobar' ]);
-         */
-        function addAttributes(element, attributes) {
-            attributes.forEach(function (attribute) {
-                element.setAttribute(attribute.split(':')[0], attribute.split(':')[1] || '');
-            });
-        }
-    };
-
-    /**
-     * Helper used to get the position which will be applied to the popper
-     * @method
-     * @memberof Popper
-     * @param config {HTMLElement} popper element
-     * @returns {HTMLElement} reference element
-     */
-    Popper.prototype._getPosition = function (popper, reference) {
-        var container = getOffsetParent(reference);
-
-        // Decide if the popper will be fixed
-        // If the reference element is inside a fixed context, the popper will be fixed as well to allow them to scroll together
-        var isParentFixed = isFixed(container);
-        return isParentFixed ? 'fixed' : 'absolute';
-    };
-
-    /**
-     * Helper used to determine if the popper's parent is transformed.
-     * @param  {[type]} popper [description]
-     * @return {[type]}        [description]
-     */
-    Popper.prototype._getIsParentTransformed = function (popper) {
-        return isTransformed(popper.parentNode);
-    };
-
-    /**
-     * Get offsets to the popper
-     * @method
-     * @memberof Popper
-     * @access private
-     * @param {Element} popper - the popper element
-     * @param {Element} reference - the reference element (the popper will be relative to this)
-     * @returns {Object} An object containing the offsets which will be applied to the popper
-     */
-    Popper.prototype._getOffsets = function (popper, reference, placement) {
-        placement = placement.split('-')[0];
-        var popperOffsets = {};
-
-        popperOffsets.position = this.state.position;
-        var isParentFixed = popperOffsets.position === 'fixed';
-
-        var isParentTransformed = this.state.isParentTransformed;
-
-        //
-        // Get reference element position
-        //
-        var offsetParent = isParentFixed && isParentTransformed ? getOffsetParent(reference) : getOffsetParent(popper);
-        var referenceOffsets = getOffsetRectRelativeToCustomParent(reference, offsetParent, isParentFixed, isParentTransformed);
-
-        //
-        // Get popper sizes
-        //
-        var popperRect = getOuterSizes(popper);
-
-        //
-        // Compute offsets of popper
-        //
-
-        // depending by the popper placement we have to compute its offsets slightly differently
-        if (['right', 'left'].indexOf(placement) !== -1) {
-            popperOffsets.top = referenceOffsets.top + referenceOffsets.height / 2 - popperRect.height / 2;
-            if (placement === 'left') {
-                popperOffsets.left = referenceOffsets.left - popperRect.width;
-            } else {
-                popperOffsets.left = referenceOffsets.right;
-            }
-        } else {
-            popperOffsets.left = referenceOffsets.left + referenceOffsets.width / 2 - popperRect.width / 2;
-            if (placement === 'top') {
-                popperOffsets.top = referenceOffsets.top - popperRect.height;
-            } else {
-                popperOffsets.top = referenceOffsets.bottom;
-            }
-        }
-
-        // Add width and height to our offsets object
-        popperOffsets.width = popperRect.width;
-        popperOffsets.height = popperRect.height;
-
-        return {
-            popper: popperOffsets,
-            reference: referenceOffsets
-        };
-    };
-
-    /**
-     * Setup needed event listeners used to update the popper position
-     * @method
-     * @memberof Popper
-     * @access private
-     */
-    Popper.prototype._setupEventListeners = function () {
-        // NOTE: 1 DOM access here
-        this.state.updateBound = this.update.bind(this);
-        root.addEventListener('resize', this.state.updateBound);
-        // if the boundariesElement is window we don't need to listen for the scroll event
-        if (this._options.boundariesElement !== 'window') {
-            var target = getScrollParent(this._reference);
-            // here it could be both `body` or `documentElement` thanks to Firefox, we then check both
-            if (target === root.document.body || target === root.document.documentElement) {
-                target = root;
-            }
-            target.addEventListener('scroll', this.state.updateBound);
-        }
-    };
-
-    /**
-     * Remove event listeners used to update the popper position
-     * @method
-     * @memberof Popper
-     * @access private
-     */
-    Popper.prototype._removeEventListeners = function () {
-        // NOTE: 1 DOM access here
-        root.removeEventListener('resize', this.state.updateBound);
-        if (this._options.boundariesElement !== 'window') {
-            var target = getScrollParent(this._reference);
-            // here it could be both `body` or `documentElement` thanks to Firefox, we then check both
-            if (target === root.document.body || target === root.document.documentElement) {
-                target = root;
-            }
-            target.removeEventListener('scroll', this.state.updateBound);
-        }
-        this.state.updateBound = null;
-    };
-
-    /**
-     * Computed the boundaries limits and return them
-     * @method
-     * @memberof Popper
-     * @access private
-     * @param {Object} data - Object containing the property "offsets" generated by `_getOffsets`
-     * @param {Number} padding - Boundaries padding
-     * @param {Element} boundariesElement - Element used to define the boundaries
-     * @returns {Object} Coordinates of the boundaries
-     */
-    Popper.prototype._getBoundaries = function (data, padding, boundariesElement) {
-        // NOTE: 1 DOM access here
-        var boundaries = {};
-        var width, height;
-        if (boundariesElement === 'window') {
-            var body = root.document.body,
-                html = root.document.documentElement;
-
-            height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
-            width = Math.max(body.scrollWidth, body.offsetWidth, html.clientWidth, html.scrollWidth, html.offsetWidth);
-
-            boundaries = {
-                top: 0,
-                right: width,
-                bottom: height,
-                left: 0
-            };
-        } else if (boundariesElement === 'viewport') {
-            var offsetParent = getOffsetParent(this._popper);
-            var scrollParent = getScrollParent(this._popper);
-            var offsetParentRect = getOffsetRect(offsetParent);
-
-            // if the popper is fixed we don't have to substract scrolling from the boundaries
-            var scrollTop = data.offsets.popper.position === 'fixed' ? 0 : scrollParent.scrollTop;
-            var scrollLeft = data.offsets.popper.position === 'fixed' ? 0 : scrollParent.scrollLeft;
-
-            boundaries = {
-                top: 0 - (offsetParentRect.top - scrollTop),
-                right: root.document.documentElement.clientWidth - (offsetParentRect.left - scrollLeft),
-                bottom: root.document.documentElement.clientHeight - (offsetParentRect.top - scrollTop),
-                left: 0 - (offsetParentRect.left - scrollLeft)
-            };
-        } else {
-            if (getOffsetParent(this._popper) === boundariesElement) {
-                boundaries = {
-                    top: 0,
-                    left: 0,
-                    right: boundariesElement.clientWidth,
-                    bottom: boundariesElement.clientHeight
-                };
-            } else {
-                boundaries = getOffsetRect(boundariesElement);
-            }
-        }
-        boundaries.left += padding;
-        boundaries.right -= padding;
-        boundaries.top = boundaries.top + padding;
-        boundaries.bottom = boundaries.bottom - padding;
-        return boundaries;
-    };
-
-    /**
-     * Loop trough the list of modifiers and run them in order, each of them will then edit the data object
-     * @method
-     * @memberof Popper
-     * @access public
-     * @param {Object} data
-     * @param {Array} modifiers
-     * @param {Function} ends
-     */
-    Popper.prototype.runModifiers = function (data, modifiers, ends) {
-        var modifiersToRun = modifiers.slice();
-        if (ends !== undefined) {
-            modifiersToRun = this._options.modifiers.slice(0, getArrayKeyIndex(this._options.modifiers, ends));
-        }
-
-        modifiersToRun.forEach(function (modifier) {
-            if (isFunction(modifier)) {
-                data = modifier.call(this, data);
-            }
-        }.bind(this));
-
-        return data;
-    };
-
-    /**
-     * Helper used to know if the given modifier depends from another one.
-     * @method
-     * @memberof Popper
-     * @returns {Boolean}
-     */
-
-    Popper.prototype.isModifierRequired = function (requesting, requested) {
-        var index = getArrayKeyIndex(this._options.modifiers, requesting);
-        return !!this._options.modifiers.slice(0, index).filter(function (modifier) {
-            return modifier === requested;
-        }).length;
-    };
-
-    //
-    // Modifiers
-    //
-
-    /**
-     * Modifiers list
-     * @namespace Popper.modifiers
-     * @memberof Popper
-     * @type {Object}
-     */
-    Popper.prototype.modifiers = {};
-
-    /**
-     * Apply the computed styles to the popper element
-     * @method
-     * @memberof Popper.modifiers
-     * @argument {Object} data - The data object generated by `update` method
-     * @returns {Object} The same data object
-     */
-    Popper.prototype.modifiers.applyStyle = function (data) {
-        // apply the final offsets to the popper
-        // NOTE: 1 DOM access here
-        var styles = {
-            position: data.offsets.popper.position
-        };
-
-        // round top and left to avoid blurry text
-        var left = Math.round(data.offsets.popper.left);
-        var top = Math.round(data.offsets.popper.top);
-
-        // if gpuAcceleration is set to true and transform is supported, we use `translate3d` to apply the position to the popper
-        // we automatically use the supported prefixed version if needed
-        var prefixedProperty;
-        if (this._options.gpuAcceleration && (prefixedProperty = getSupportedPropertyName('transform'))) {
-            styles[prefixedProperty] = 'translate3d(' + left + 'px, ' + top + 'px, 0)';
-            styles.top = 0;
-            styles.left = 0;
-        }
-        // othwerise, we use the standard `left` and `top` properties
-        else {
-                styles.left = left;
-                styles.top = top;
-            }
-
-        // any property present in `data.styles` will be applied to the popper,
-        // in this way we can make the 3rd party modifiers add custom styles to it
-        // Be aware, modifiers could override the properties defined in the previous
-        // lines of this modifier!
-        Object.assign(styles, data.styles);
-
-        setStyle(this._popper, styles);
-
-        // set an attribute which will be useful to style the tooltip (use it to properly position its arrow)
-        // NOTE: 1 DOM access here
-        this._popper.setAttribute('x-placement', data.placement);
-
-        // if the arrow style has been computed, apply the arrow style
-        if (data.offsets.arrow) {
-            setStyle(data.arrowElement, data.offsets.arrow);
-        }
-
-        // return the data object to allow chaining of other modifiers
-        return data;
-    };
-
-    /**
-     * Modifier used to shift the popper on the start or end of its reference element side
-     * @method
-     * @memberof Popper.modifiers
-     * @argument {Object} data - The data object generated by `update` method
-     * @returns {Object} The data object, properly modified
-     */
-    Popper.prototype.modifiers.shift = function (data) {
-        var placement = data.placement;
-        var basePlacement = placement.split('-')[0];
-        var shiftVariation = placement.split('-')[1];
-
-        // if shift shiftVariation is specified, run the modifier
-        if (shiftVariation) {
-            var reference = data.offsets.reference;
-            var popper = getPopperClientRect(data.offsets.popper);
-
-            var shiftOffsets = {
-                y: {
-                    start: { top: reference.top },
-                    end: { top: reference.top + reference.height - popper.height }
-                },
-                x: {
-                    start: { left: reference.left },
-                    end: { left: reference.left + reference.width - popper.width }
-                }
-            };
-
-            var axis = ['bottom', 'top'].indexOf(basePlacement) !== -1 ? 'x' : 'y';
-
-            data.offsets.popper = Object.assign(popper, shiftOffsets[axis][shiftVariation]);
-        }
-
-        return data;
-    };
-
-    /**
-     * Modifier used to make sure the popper does not overflows from it's boundaries
-     * @method
-     * @memberof Popper.modifiers
-     * @argument {Object} data - The data object generated by `update` method
-     * @returns {Object} The data object, properly modified
-     */
-    Popper.prototype.modifiers.preventOverflow = function (data) {
-        var order = this._options.preventOverflowOrder;
-        var popper = getPopperClientRect(data.offsets.popper);
-
-        var check = {
-            left: function () {
-                var left = popper.left;
-                if (popper.left < data.boundaries.left) {
-                    left = Math.max(popper.left, data.boundaries.left);
-                }
-                return { left: left };
-            },
-            right: function () {
-                var left = popper.left;
-                if (popper.right > data.boundaries.right) {
-                    left = Math.min(popper.left, data.boundaries.right - popper.width);
-                }
-                return { left: left };
-            },
-            top: function () {
-                var top = popper.top;
-                if (popper.top < data.boundaries.top) {
-                    top = Math.max(popper.top, data.boundaries.top);
-                }
-                return { top: top };
-            },
-            bottom: function () {
-                var top = popper.top;
-                if (popper.bottom > data.boundaries.bottom) {
-                    top = Math.min(popper.top, data.boundaries.bottom - popper.height);
-                }
-                return { top: top };
-            }
-        };
-
-        order.forEach(function (direction) {
-            data.offsets.popper = Object.assign(popper, check[direction]());
-        });
-
-        return data;
-    };
-
-    /**
-     * Modifier used to make sure the popper is always near its reference
-     * @method
-     * @memberof Popper.modifiers
-     * @argument {Object} data - The data object generated by _update method
-     * @returns {Object} The data object, properly modified
-     */
-    Popper.prototype.modifiers.keepTogether = function (data) {
-        var popper = getPopperClientRect(data.offsets.popper);
-        var reference = data.offsets.reference;
-        var f = Math.floor;
-
-        if (popper.right < f(reference.left)) {
-            data.offsets.popper.left = f(reference.left) - popper.width;
-        }
-        if (popper.left > f(reference.right)) {
-            data.offsets.popper.left = f(reference.right);
-        }
-        if (popper.bottom < f(reference.top)) {
-            data.offsets.popper.top = f(reference.top) - popper.height;
-        }
-        if (popper.top > f(reference.bottom)) {
-            data.offsets.popper.top = f(reference.bottom);
-        }
-
-        return data;
-    };
-
-    /**
-     * Modifier used to flip the placement of the popper when the latter is starting overlapping its reference element.
-     * Requires the `preventOverflow` modifier before it in order to work.
-     * **NOTE:** This modifier will run all its previous modifiers everytime it tries to flip the popper!
-     * @method
-     * @memberof Popper.modifiers
-     * @argument {Object} data - The data object generated by _update method
-     * @returns {Object} The data object, properly modified
-     */
-    Popper.prototype.modifiers.flip = function (data) {
-        // check if preventOverflow is in the list of modifiers before the flip modifier.
-        // otherwise flip would not work as expected.
-        if (!this.isModifierRequired(this.modifiers.flip, this.modifiers.preventOverflow)) {
-            console.warn('WARNING: preventOverflow modifier is required by flip modifier in order to work, be sure to include it before flip!');
-            return data;
-        }
-
-        if (data.flipped && data.placement === data._originalPlacement) {
-            // seems like flip is trying to loop, probably there's not enough space on any of the flippable sides
-            return data;
-        }
-
-        var placement = data.placement.split('-')[0];
-        var placementOpposite = getOppositePlacement(placement);
-        var variation = data.placement.split('-')[1] || '';
-
-        var flipOrder = [];
-        if (this._options.flipBehavior === 'flip') {
-            flipOrder = [placement, placementOpposite];
-        } else {
-            flipOrder = this._options.flipBehavior;
-        }
-
-        flipOrder.forEach(function (step, index) {
-            if (placement !== step || flipOrder.length === index + 1) {
-                return;
-            }
-
-            placement = data.placement.split('-')[0];
-            placementOpposite = getOppositePlacement(placement);
-
-            var popperOffsets = getPopperClientRect(data.offsets.popper);
-
-            // this boolean is used to distinguish right and bottom from top and left
-            // they need different computations to get flipped
-            var a = ['right', 'bottom'].indexOf(placement) !== -1;
-
-            // using Math.floor because the reference offsets may contain decimals we are not going to consider here
-            if (a && Math.floor(data.offsets.reference[placement]) > Math.floor(popperOffsets[placementOpposite]) || !a && Math.floor(data.offsets.reference[placement]) < Math.floor(popperOffsets[placementOpposite])) {
-                // we'll use this boolean to detect any flip loop
-                data.flipped = true;
-                data.placement = flipOrder[index + 1];
-                if (variation) {
-                    data.placement += '-' + variation;
-                }
-                data.offsets.popper = this._getOffsets(this._popper, this._reference, data.placement).popper;
-
-                data = this.runModifiers(data, this._options.modifiers, this._flip);
-            }
-        }.bind(this));
-        return data;
-    };
-
-    /**
-     * Modifier used to add an offset to the popper, useful if you more granularity positioning your popper.
-     * The offsets will shift the popper on the side of its reference element.
-     * @method
-     * @memberof Popper.modifiers
-     * @argument {Object} data - The data object generated by _update method
-     * @returns {Object} The data object, properly modified
-     */
-    Popper.prototype.modifiers.offset = function (data) {
-        var offset = this._options.offset;
-        var popper = data.offsets.popper;
-
-        if (data.placement.indexOf('left') !== -1) {
-            popper.top -= offset;
-        } else if (data.placement.indexOf('right') !== -1) {
-            popper.top += offset;
-        } else if (data.placement.indexOf('top') !== -1) {
-            popper.left -= offset;
-        } else if (data.placement.indexOf('bottom') !== -1) {
-            popper.left += offset;
-        }
-        return data;
-    };
-
-    /**
-     * Modifier used to move the arrows on the edge of the popper to make sure them are always between the popper and the reference element
-     * It will use the CSS outer size of the arrow element to know how many pixels of conjuction are needed
-     * @method
-     * @memberof Popper.modifiers
-     * @argument {Object} data - The data object generated by _update method
-     * @returns {Object} The data object, properly modified
-     */
-    Popper.prototype.modifiers.arrow = function (data) {
-        var arrow = this._options.arrowElement;
-
-        // if the arrowElement is a string, suppose it's a CSS selector
-        if (typeof arrow === 'string') {
-            arrow = this._popper.querySelector(arrow);
-        }
-
-        // if arrow element is not found, don't run the modifier
-        if (!arrow) {
-            return data;
-        }
-
-        // the arrow element must be child of its popper
-        if (!this._popper.contains(arrow)) {
-            console.warn('WARNING: `arrowElement` must be child of its popper element!');
-            return data;
-        }
-
-        // arrow depends on keepTogether in order to work
-        if (!this.isModifierRequired(this.modifiers.arrow, this.modifiers.keepTogether)) {
-            console.warn('WARNING: keepTogether modifier is required by arrow modifier in order to work, be sure to include it before arrow!');
-            return data;
-        }
-
-        var arrowStyle = {};
-        var placement = data.placement.split('-')[0];
-        var popper = getPopperClientRect(data.offsets.popper);
-        var reference = data.offsets.reference;
-        var isVertical = ['left', 'right'].indexOf(placement) !== -1;
-
-        var len = isVertical ? 'height' : 'width';
-        var side = isVertical ? 'top' : 'left';
-        var altSide = isVertical ? 'left' : 'top';
-        var opSide = isVertical ? 'bottom' : 'right';
-        var arrowSize = getOuterSizes(arrow)[len];
-
-        //
-        // extends keepTogether behavior making sure the popper and its reference have enough pixels in conjuction
-        //
-
-        // top/left side
-        if (reference[opSide] - arrowSize < popper[side]) {
-            data.offsets.popper[side] -= popper[side] - (reference[opSide] - arrowSize);
-        }
-        // bottom/right side
-        if (reference[side] + arrowSize > popper[opSide]) {
-            data.offsets.popper[side] += reference[side] + arrowSize - popper[opSide];
-        }
-
-        // compute center of the popper
-        var center = reference[side] + reference[len] / 2 - arrowSize / 2;
-
-        // Compute the sideValue using the updated popper offsets
-        var sideValue = center - getPopperClientRect(data.offsets.popper)[side];
-
-        // prevent arrow from being placed not contiguously to its popper
-        sideValue = Math.max(Math.min(popper[len] - arrowSize, sideValue), 0);
-        arrowStyle[side] = sideValue;
-        arrowStyle[altSide] = ''; // make sure to remove any old style from the arrow
-
-        data.offsets.arrow = arrowStyle;
-        data.arrowElement = arrow;
-
-        return data;
-    };
-
-    //
-    // Helpers
-    //
-
-    /**
-     * Get the outer sizes of the given element (offset size + margins)
-     * @function
-     * @ignore
-     * @argument {Element} element
-     * @returns {Object} object containing width and height properties
-     */
-    function getOuterSizes(element) {
-        // NOTE: 1 DOM access here
-        var _display = element.style.display,
-            _visibility = element.style.visibility;
-        element.style.display = 'block';element.style.visibility = 'hidden';
-        var calcWidthToForceRepaint = element.offsetWidth;
-
-        // original method
-        var styles = root.getComputedStyle(element);
-        var x = parseFloat(styles.marginTop) + parseFloat(styles.marginBottom);
-        var y = parseFloat(styles.marginLeft) + parseFloat(styles.marginRight);
-        var result = { width: element.offsetWidth + y, height: element.offsetHeight + x };
-
-        // reset element styles
-        element.style.display = _display;element.style.visibility = _visibility;
-        return result;
-    }
-
-    /**
-     * Get the opposite placement of the given one/
-     * @function
-     * @ignore
-     * @argument {String} placement
-     * @returns {String} flipped placement
-     */
-    function getOppositePlacement(placement) {
-        var hash = { left: 'right', right: 'left', bottom: 'top', top: 'bottom' };
-        return placement.replace(/left|right|bottom|top/g, function (matched) {
-            return hash[matched];
-        });
-    }
-
-    /**
-     * Given the popper offsets, generate an output similar to getBoundingClientRect
-     * @function
-     * @ignore
-     * @argument {Object} popperOffsets
-     * @returns {Object} ClientRect like output
-     */
-    function getPopperClientRect(popperOffsets) {
-        var offsets = Object.assign({}, popperOffsets);
-        offsets.right = offsets.left + offsets.width;
-        offsets.bottom = offsets.top + offsets.height;
-        return offsets;
-    }
-
-    /**
-     * Given an array and the key to find, returns its index
-     * @function
-     * @ignore
-     * @argument {Array} arr
-     * @argument keyToFind
-     * @returns index or null
-     */
-    function getArrayKeyIndex(arr, keyToFind) {
-        var i = 0,
-            key;
-        for (key in arr) {
-            if (arr[key] === keyToFind) {
-                return i;
-            }
-            i++;
-        }
-        return null;
-    }
-
-    /**
-     * Get CSS computed property of the given element
-     * @function
-     * @ignore
-     * @argument {Eement} element
-     * @argument {String} property
-     */
-    function getStyleComputedProperty(element, property) {
-        // NOTE: 1 DOM access here
-        var css = root.getComputedStyle(element, null);
-        return css[property];
-    }
-
-    /**
-     * Returns the offset parent of the given element
-     * @function
-     * @ignore
-     * @argument {Element} element
-     * @returns {Element} offset parent
-     */
-    function getOffsetParent(element) {
-        // NOTE: 1 DOM access here
-        var offsetParent = element.offsetParent;
-        return offsetParent === root.document.body || !offsetParent ? root.document.documentElement : offsetParent;
-    }
-
-    /**
-     * Returns the scrolling parent of the given element
-     * @function
-     * @ignore
-     * @argument {Element} element
-     * @returns {Element} offset parent
-     */
-    function getScrollParent(element) {
-        if (element === root.document) {
-            // Firefox puts the scrollTOp value on `documentElement` instead of `body`, we then check which of them is
-            // greater than 0 and return the proper element
-            if (root.document.body.scrollTop) {
-                return root.document.body;
-            } else {
-                return root.document.documentElement;
-            }
-        }
-
-        // Firefox want us to check `-x` and `-y` variations as well
-        if (['scroll', 'auto'].indexOf(getStyleComputedProperty(element, 'overflow')) !== -1 || ['scroll', 'auto'].indexOf(getStyleComputedProperty(element, 'overflow-x')) !== -1 || ['scroll', 'auto'].indexOf(getStyleComputedProperty(element, 'overflow-y')) !== -1) {
-            // If the detected scrollParent is body, we perform an additional check on its parentNode
-            // in this way we'll get body if the browser is Chrome-ish, or documentElement otherwise
-            // fixes issue #65
-            return element === root.document.body ? getScrollParent(element.parentNode) : element;
-        }
-        return element.parentNode ? getScrollParent(element.parentNode) : element;
-    }
-
-    /**
-     * Check if the given element is fixed or is inside a fixed parent
-     * @function
-     * @ignore
-     * @argument {Element} element
-     * @argument {Element} customContainer
-     * @returns {Boolean} answer to "isFixed?"
-     */
-    function isFixed(element) {
-        if (element === root.document.body || element.nodeName === 'HTML') {
-            return false;
-        }
-        if (getStyleComputedProperty(element, 'position') === 'fixed') {
-            return true;
-        }
-        return element.parentNode ? isFixed(element.parentNode) : element;
-    }
-
-    /**
-     * Check if the given element has transforms applied to itself or a parent
-     * @param  {Element} element
-     * @return {Boolean} answer to "isTransformed?"
-     */
-    function isTransformed(element) {
-        if (element === root.document.body) {
-            return false;
-        }
-        if (getStyleComputedProperty(element, 'transform') !== 'none') {
-            return true;
-        }
-        return element.parentNode ? isTransformed(element.parentNode) : element;
-    }
-
-    /**
-     * Set the style to the given popper
-     * @function
-     * @ignore
-     * @argument {Element} element - Element to apply the style to
-     * @argument {Object} styles - Object with a list of properties and values which will be applied to the element
-     */
-    function setStyle(element, styles) {
-        function is_numeric(n) {
-            return n !== '' && !isNaN(parseFloat(n)) && isFinite(n);
-        }
-        Object.keys(styles).forEach(function (prop) {
-            var unit = '';
-            // add unit if the value is numeric and is one of the following
-            if (['width', 'height', 'top', 'right', 'bottom', 'left'].indexOf(prop) !== -1 && is_numeric(styles[prop])) {
-                unit = 'px';
-            }
-            element.style[prop] = styles[prop] + unit;
-        });
-    }
-
-    /**
-     * Check if the given variable is a function
-     * @function
-     * @ignore
-     * @argument {Element} element - Element to check
-     * @returns {Boolean} answer to: is a function?
-     */
-    function isFunction(functionToCheck) {
-        var getType = {};
-        return functionToCheck && getType.toString.call(functionToCheck) === '[object Function]';
-    }
-
-    /**
-     * Get the position of the given element, relative to its offset parent
-     * @function
-     * @ignore
-     * @param {Element} element
-     * @return {Object} position - Coordinates of the element and its `scrollTop`
-     */
-    function getOffsetRect(element) {
-        var elementRect = {
-            width: element.offsetWidth,
-            height: element.offsetHeight,
-            left: element.offsetLeft,
-            top: element.offsetTop
-        };
-
-        elementRect.right = elementRect.left + elementRect.width;
-        elementRect.bottom = elementRect.top + elementRect.height;
-
-        // position
-        return elementRect;
-    }
-
-    /**
-     * Get bounding client rect of given element
-     * @function
-     * @ignore
-     * @param {HTMLElement} element
-     * @return {Object} client rect
-     */
-    function getBoundingClientRect(element) {
-        var rect = element.getBoundingClientRect();
-        return {
-            left: rect.left,
-            top: rect.top,
-            right: rect.right,
-            bottom: rect.bottom,
-            width: rect.right - rect.left,
-            height: rect.bottom - rect.top
-        };
-    }
-
-    /**
-     * Given an element and one of its parents, return the offset
-     * @function
-     * @ignore
-     * @param {HTMLElement} element
-     * @param {HTMLElement} parent
-     * @return {Object} rect
-     */
-    function getOffsetRectRelativeToCustomParent(element, parent, fixed, transformed) {
-        var elementRect = getBoundingClientRect(element);
-        var parentRect = getBoundingClientRect(parent);
-
-        if (fixed && !transformed) {
-            var scrollParent = getScrollParent(parent);
-            parentRect.top += scrollParent.scrollTop;
-            parentRect.bottom += scrollParent.scrollTop;
-            parentRect.left += scrollParent.scrollLeft;
-            parentRect.right += scrollParent.scrollLeft;
-        }
-
-        var rect = {
-            top: elementRect.top - parentRect.top,
-            left: elementRect.left - parentRect.left,
-            bottom: elementRect.top - parentRect.top + elementRect.height,
-            right: elementRect.left - parentRect.left + elementRect.width,
-            width: elementRect.width,
-            height: elementRect.height
-        };
-        return rect;
-    }
-
-    /**
-     * Get the prefixed supported property name
-     * @function
-     * @ignore
-     * @argument {String} property (camelCase)
-     * @returns {String} prefixed property (camelCase)
-     */
-    function getSupportedPropertyName(property) {
-        var prefixes = ['', 'ms', 'webkit', 'moz', 'o'];
-
-        for (var i = 0; i < prefixes.length; i++) {
-            var toCheck = prefixes[i] ? prefixes[i] + property.charAt(0).toUpperCase() + property.slice(1) : property;
-            if (typeof root.document.body.style[toCheck] !== 'undefined') {
-                return toCheck;
-            }
-        }
-        return null;
-    }
-
-    /**
-     * The Object.assign() method is used to copy the values of all enumerable own properties from one or more source
-     * objects to a target object. It will return the target object.
-     * This polyfill doesn't support symbol properties, since ES5 doesn't have symbols anyway
-     * Source: https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
-     * @function
-     * @ignore
-     */
-    if (!Object.assign) {
-        Object.defineProperty(Object, 'assign', {
-            enumerable: false,
-            configurable: true,
-            writable: true,
-            value: function (target) {
-                if (target === undefined || target === null) {
-                    throw new TypeError('Cannot convert first argument to object');
-                }
-
-                var to = Object(target);
-                for (var i = 1; i < arguments.length; i++) {
-                    var nextSource = arguments[i];
-                    if (nextSource === undefined || nextSource === null) {
-                        continue;
-                    }
-                    nextSource = Object(nextSource);
-
-                    var keysArray = Object.keys(nextSource);
-                    for (var nextIndex = 0, len = keysArray.length; nextIndex < len; nextIndex++) {
-                        var nextKey = keysArray[nextIndex];
-                        var desc = Object.getOwnPropertyDescriptor(nextSource, nextKey);
-                        if (desc !== undefined && desc.enumerable) {
-                            to[nextKey] = nextSource[nextKey];
-                        }
-                    }
-                }
-                return to;
-            }
-        });
-    }
-
-    if (!root.requestAnimationFrame) {
-        /* jshint ignore:start */
-        var lastTime = 0;
-        var vendors = ['ms', 'moz', 'webkit', 'o'];
-        for (var x = 0; x < vendors.length && !root.requestAnimationFrame; ++x) {
-            root.requestAnimationFrame = root[vendors[x] + 'RequestAnimationFrame'];
-            root.cancelAnimationFrame = root[vendors[x] + 'CancelAnimationFrame'] || root[vendors[x] + 'CancelRequestAnimationFrame'];
-        }
-
-        if (!root.requestAnimationFrame) {
-            root.requestAnimationFrame = function (callback, element) {
-                var currTime = new Date().getTime();
-                var timeToCall = Math.max(0, 16 - (currTime - lastTime));
-                var id = root.setTimeout(function () {
-                    callback(currTime + timeToCall);
-                }, timeToCall);
-                lastTime = currTime + timeToCall;
-                return id;
-            };
-        }
-
-        if (!root.cancelAnimationFrame) {
-            root.cancelAnimationFrame = function (id) {
-                clearTimeout(id);
-            };
-        }
-        /* jshint ignore:end */
-    }
-
-    return Popper;
-});
-
-/***/ }),
-/* 150 */
-/*!************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-2640bccd"}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!../packages/popover/impl_popper.vue ***!
-  \************************************************************************************************************************************************************************************/
+/* 145 */
+/*!***************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-4dfe5f36"}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!../packages/table/impl.vue ***!
+  \***************************************************************************************************************************************************************************/
 /*! no static exports found */
 /*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('span', [_c('transition', {
-    attrs: {
-      "name": _vm.transition
-    },
-    on: {
-      "after-leave": _vm.doDestroy
-    }
-  }, [_c('div', {
-    directives: [{
-      name: "show",
-      rawName: "v-show",
-      value: (!_vm.disabled && _vm.showPopper),
-      expression: "!disabled && showPopper"
-    }],
-    ref: "popper",
-    staticClass: "v-popover",
-    class: [_vm.popperClass],
-    style: ({
-      width: _vm.width + 'px'
-    })
-  }, [_c('div', {
-    staticClass: "v-popover-inner"
-  }, [(_vm.title) ? _c('span', {
-    staticClass: "has-title"
-  }, [_vm._v("\n          " + _vm._s(_vm.title) + "\n        ")]) : _vm._e(), _vm._v(" "), _c('div', {
-    staticClass: "v-popover-body"
-  }, [_c('div', {
-    staticClass: "has-content"
-  }, [_vm._t("default", [_vm._v(_vm._s(_vm.content))])], 2)])])])]), _vm._v(" "), _vm._t("reference")], 2)
+  return _c('table', {
+    staticClass: "v-table",
+    class: this.options.tableClasses
+  }, [_c('thead', [_c('tr', _vm._l((_vm.thColumns), function(cc) {
+    return _c('th', {
+      on: {
+        "click": function($event) {
+          _vm._headClick(cc)
+        }
+      }
+    }, [(("" + (cc[0].indexOf('__'))) == -1) ? _vm._t(("th-item-" + (cc[0])), [_c('span', [_vm._v(" " + _vm._s(cc[1]) + " ")])]) : _vm._e(), _vm._v(" "), (cc[0] === '__select') ? _vm._t("v__th-select", [_c('span', {
+      staticClass: "v-th-select"
+    }, [_c('label', {
+      staticClass: "v-checkbox"
+    }, [_c('input', {
+      directives: [{
+        name: "model",
+        rawName: "v-model",
+        value: (_vm.v__selected_all),
+        expression: "v__selected_all"
+      }],
+      attrs: {
+        "type": "checkbox"
+      },
+      domProps: {
+        "checked": Array.isArray(_vm.v__selected_all) ? _vm._i(_vm.v__selected_all, null) > -1 : (_vm.v__selected_all)
+      },
+      on: {
+        "__c": function($event) {
+          var $$a = _vm.v__selected_all,
+            $$el = $event.target,
+            $$c = $$el.checked ? (true) : (false);
+          if (Array.isArray($$a)) {
+            var $$v = null,
+              $$i = _vm._i($$a, $$v);
+            if ($$el.checked) {
+              $$i < 0 && (_vm.v__selected_all = $$a.concat([$$v]))
+            } else {
+              $$i > -1 && (_vm.v__selected_all = $$a.slice(0, $$i).concat($$a.slice($$i + 1)))
+            }
+          } else {
+            _vm.v__selected_all = $$c
+          }
+        }
+      }
+    }), _vm._v("\n            " + _vm._s(cc[1]) + "\n          ")])])]) : _vm._e()], 2)
+  }))]), _vm._v(" "), _c('tbody', _vm._l((_vm.rows), function(el, index) {
+    return _c('tr', {
+      class: {
+        'is-selected': el.v__selected
+      }
+    }, _vm._l((_vm.tdColumns), function(c) {
+      return _c('td', [(("" + (c.indexOf('__'))) == -1) ? _vm._t(("td-item-" + c), [_vm._v("\n        " + _vm._s(el[c]) + "\n      ")], {
+        row: el,
+        k: c,
+        v: el[c],
+        index: index
+      }) : _vm._e(), _vm._v(" "), (c === '__select') ? _vm._t("v__td-select", [_c('span', {
+        staticClass: "v-td-select"
+      }, [_c('label', {
+        staticClass: "v-checkbox"
+      }, [_c('input', {
+        directives: [{
+          name: "model",
+          rawName: "v-model",
+          value: (el.v__selected),
+          expression: "el.v__selected"
+        }],
+        attrs: {
+          "type": "checkbox"
+        },
+        domProps: {
+          "checked": Array.isArray(el.v__selected) ? _vm._i(el.v__selected, null) > -1 : (el.v__selected)
+        },
+        on: {
+          "__c": function($event) {
+            var $$a = el.v__selected,
+              $$el = $event.target,
+              $$c = $$el.checked ? (true) : (false);
+            if (Array.isArray($$a)) {
+              var $$v = null,
+                $$i = _vm._i($$a, $$v);
+              if ($$el.checked) {
+                $$i < 0 && (el.v__selected = $$a.concat([$$v]))
+              } else {
+                $$i > -1 && (el.v__selected = $$a.slice(0, $$i).concat($$a.slice($$i + 1)))
+              }
+            } else {
+              el.v__selected = $$c
+            }
+          }
+        }
+      })])])], {
+        row: el
+      }) : _vm._e()], 2)
+    }))
+  }))])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-2640bccd", module.exports)
+     require("vue-hot-reload-api").rerender("data-v-4dfe5f36", module.exports)
   }
 }
 
 /***/ }),
-/* 151 */
-/*!*********************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-47bc3445"}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./pages/examples.vue ***!
-  \*********************************************************************************************************************************************************************/
+/* 146 */
+/*!**********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-a03c0486"}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./pages/examples2.vue ***!
+  \**********************************************************************************************************************************************************************/
 /*! no static exports found */
 /*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('section', [_c('h1', [_vm._v("Components Demo Page")]), _vm._v(" "), _c('div', {
+  return _c('section', [_c('h1', [_vm._v("Examples")]), _vm._v(" "), _c('div', {
     staticClass: "demo-box"
-  }, [_vm._l((['primary', 'danger', 'info', 'success', 'black']), function(el) {
-    return [_c('v-btn', {
-      directives: [{
-        name: "tip",
-        rawName: "v-tip.top",
-        value: ("this is a sav tip"),
-        expression: "`this is a sav tip`",
-        modifiers: {
-          "top": true
-        }
-      }],
-      attrs: {
-        "color": el,
-        "size": "small",
-        "is-loading": _vm.switcher
-      },
-      nativeOn: {
-        "click": function($event) {
-          _vm.switcher = !_vm.switcher
-        }
-      }
-    }, [_vm._v("\n      click me\n    ")])]
-  }), _vm._v(" "), _c('div', {
-    staticStyle: {
-      "padding-top": "30px"
-    }
-  }, [_c('popover-popper', {
+  }, [_c('dropdown', {
     attrs: {
-      "title": "Title",
-      "content": "hello body 我的世界 我快递费蓝思科技烦死你dffffs顶顶顶",
-      "width": "200"
+      "magic": "right"
+    },
+    model: {
+      value: (_vm.formData.price),
+      callback: function($$v) {
+        _vm.formData.price = $$v
+      },
+      expression: "formData.price"
     }
   }, [_c('button', {
-    staticClass: "v-btn",
+    staticClass: "v-btn is-warning",
     attrs: {
-      "slot": "reference"
+      "slot": "trigger",
+      "aria-haspopup": "true",
+      "aria-controls": "v-dropdown-menu"
     },
-    slot: "reference"
-  }, [_vm._v("Toggle Popover")])]), _vm._v(" "), _c('button', {
-    staticClass: "v-btn is-primary",
-    on: {
-      "click": _vm._openDialog
-    }
-  }, [_vm._v("\n      open dialog\n    ")])], 1)], 2), _vm._v(" "), _vm._m(0), _vm._v(" "), _vm._m(1), _vm._v(" "), _vm._m(2), _vm._v(" "), _vm._m(3)])
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "demo-box"
-  }, [_c('nav', {
-    staticClass: "v-breadcrumb"
-  }, [_c('ul', [_c('li', [_c('a', {
-    attrs: {
-      "href": "#"
-    }
-  }, [_vm._v("Vui")])]), _vm._v(" "), _c('li', [_c('a', {
-    attrs: {
-      "href": "#"
-    }
-  }, [_c('span', {
+    slot: "trigger"
+  }, [_c('span', [_vm._v(_vm._s(_vm.formData.price))]), _vm._v(" "), _c('span', {
     staticClass: "has-icon is-small"
   }, [_c('i', {
-    staticClass: "fa fa-github"
-  })]), _vm._v("\n        Components\n      ")])]), _vm._v(" "), _c('li', {
-    staticClass: "is-active"
-  }, [_c('a', {
+    staticClass: "fa fa-angle-up",
     attrs: {
-      "href": "#",
-      "aria-current": "page"
+      "aria-hidden": "true"
     }
-  }, [_vm._v("Breadcrumb")])])])]), _vm._v(" "), _c('div', {
-    staticClass: "v-cols"
-  }, [_c('div', {
-    staticClass: "v-col is-8"
-  }, [_c('div', {
-    staticClass: "v-field is-grouped"
-  }, [_c('div', {
-    staticClass: "v-control is-expanded"
-  }, [_c('input', {
-    staticClass: "v-input is-large",
+  })])]), _vm._v(" "), _c('dropdown-item', {
     attrs: {
-      "type": "text"
+      "value": "￥1"
     }
-  })]), _vm._v(" "), _c('div', {
-    staticClass: "v-control"
-  }, [_c('button', {
-    staticClass: "v-btn is-info is-large"
-  }, [_c('span', {
-    staticClass: "has-icon"
-  }, [_c('i', {
-    staticClass: "fa fa-github"
-  })]), _vm._v(" "), _c('span', [_vm._v("\n              Click Me\n            ")])])])]), _vm._v(" "), _c('div', {
-    staticClass: "v-field"
-  }, [_c('div', {
-    staticClass: "v-control"
-  }, [_c('input', {
-    staticClass: "v-input is-danger",
+  }, [_vm._v("\n      hello world\n    ")]), _vm._v(" "), _c('dropdown-item', {
     attrs: {
-      "type": "text",
-      "placeholder": "...."
+      "divider": true
     }
-  })])])]), _vm._v(" "), _c('div', {
-    staticClass: "v-col"
-  }, [_vm._v("\n      this is right\n    ")])])])
-},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "demo-box",
+  }), _vm._v(" "), _c('dropdown-item', {
     attrs: {
-      "pre": ""
+      "value": "￥2"
     }
-  }, [_c('div', {
-    staticClass: "v-box"
-  }, [_c('div', {
-    staticClass: "v-media"
-  }, [_c('figure', {
-    staticClass: "v-media-left"
-  }, [_c('p', {
-    staticClass: "v-image is-48x48"
-  })]), _vm._v(" "), _c('div', {
-    staticClass: "v-media-content"
-  }, [_c('div', {
-    staticClass: "v-content"
-  }, [_c('p', [_c('strong', [_vm._v("Sean Brown")]), _vm._v(" "), _c('br'), _vm._v("\n            Donec sollicitudin urna eget eros malesuada sagittis. Pellentesque habitant morbi tristique senectus et\n            netus\n            et malesuada fames ac turpis egestas. Aliquam blandit nisl a nulla sagittis, a lobortis leo feugiat.\n            "), _c('br'), _vm._v(" "), _c('small', [_c('a', [_vm._v("Like")]), _vm._v(" · "), _c('a', [_vm._v("Reply")]), _vm._v(" · 2 hrs")])])]), _vm._v(" "), _c('div', {
-    staticClass: "v-media"
-  }, [_vm._v("\n          Vivamus quis semper metus, non tincidunt dolor. Vivamus in mi eu lorem cursus ullamcorper sit amet nec massa.\n        ")]), _vm._v(" "), _c('div', {
-    staticClass: "v-media"
-  }, [_vm._v("\n          Morbi vitae diam et purus tincidunt porttitor vel vitae augue. Praesent malesuada metus sed pharetra euismod.\n          Cras tellus odio, tincidunt iaculis diam non, porta aliquet tortor.\n        ")])])])])])
-},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
+  }, [_vm._v("\n      hello world\n    ")])], 1)], 1), _vm._v(" "), _c('div', {
     staticClass: "demo-box"
-  }, [_c('h1', [_vm._v("Here is Content")]), _vm._v(" "), _c('div', {
-    staticClass: "v-box"
-  }, [_c('div', {
-    staticClass: "v-content"
-  }, [_c('h1', [_vm._v("我的快递被人偷了...")]), _vm._v(" "), _c('p', [_vm._v("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus ultrices eleifend gravida, nulla\n        nunc varius lectus, nec rutrum justo nibh eu lectus. Ut vulputate semper dui. Fusce erat odio, sollicitudin vel\n        erat vel, interdum mattis neque.")]), _vm._v(" "), _c('h2', [_vm._v("Second level")]), _vm._v(" "), _c('p', [_vm._v("Curabitur accumsan turpis pharetra "), _c('strong', [_vm._v("augue tincidunt")]), _vm._v(" blandit. Quisque condimentum maximus mi,\n        sit\n        amet commodo arcu rutrum id. Proin pretium urna vel cursus venenatis. Suspendisse potenti. Etiam mattis sem\n        rhoncus lacus dapibus facilisis. Donec at dignissim dui. Ut et neque nisl.")]), _vm._v(" "), _c('ul', [_c('li', [_vm._v("In fermentum leo eu lectus mollis, quis dictum mi aliquet.")]), _vm._v(" "), _c('li', [_vm._v("Morbi eu nulla lobortis, lobortis est in, fringilla felis.")]), _vm._v(" "), _c('li', [_vm._v("Aliquam nec felis in sapien venenatis viverra fermentum nec lectus.")]), _vm._v(" "), _c('li', [_vm._v("Ut non enim metus.")])])])])])
-},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "demo-box"
-  }, [_c('table', {
-    staticClass: "v-table is-bordered is-striped"
-  }, [_c('thead', [_c('tr', [_c('th', [_vm._v("One")]), _vm._v(" "), _c('th', [_vm._v("Two")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("Three")]), _vm._v(" "), _c('td', [_vm._v("Four")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Five")]), _vm._v(" "), _c('td', [_vm._v("Six")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Seven")]), _vm._v(" "), _c('td', [_vm._v("Eight")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Nine")]), _vm._v(" "), _c('td', [_vm._v("Ten")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Eleven")]), _vm._v(" "), _c('td', [_vm._v("Twelve")])])])])])
-}]}
+  }, [_c('v-table', {
+    staticClass: "my-x-table",
+    attrs: {
+      "columns": _vm.tableCols,
+      "rows": _vm.tableRows
+    },
+    scopedSlots: _vm._u([{
+      key: "v-td-select",
+      fn: function(ref) {
+        var row = ref.row;
+
+        return [_c('label', {
+          staticClass: "v-checkbox"
+        }, [_c('input', {
+          directives: [{
+            name: "model",
+            rawName: "v-model",
+            value: (row.v__selected),
+            expression: "row.v__selected"
+          }],
+          attrs: {
+            "type": "checkbox"
+          },
+          domProps: {
+            "checked": Array.isArray(row.v__selected) ? _vm._i(row.v__selected, null) > -1 : (row.v__selected)
+          },
+          on: {
+            "__c": function($event) {
+              var $$a = row.v__selected,
+                $$el = $event.target,
+                $$c = $$el.checked ? (true) : (false);
+              if (Array.isArray($$a)) {
+                var $$v = null,
+                  $$i = _vm._i($$a, $$v);
+                if ($$el.checked) {
+                  $$i < 0 && (row.v__selected = $$a.concat([$$v]))
+                } else {
+                  $$i > -1 && (row.v__selected = $$a.slice(0, $$i).concat($$a.slice($$i + 1)))
+                }
+              } else {
+                row.v__selected = $$c
+              }
+            }
+          }
+        })])]
+      }
+    }])
+  }), _vm._v(" "), _c('button', {
+    on: {
+      "click": _vm._addRow
+    }
+  }, [_vm._v("Add new Row")])], 1)])
+},staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-47bc3445", module.exports)
+     require("vue-hot-reload-api").rerender("data-v-a03c0486", module.exports)
   }
 }
 
 /***/ }),
-/* 152 */
+/* 147 */
 /*!**************************!*\
   !*** ./pages/readme.vue ***!
   \**************************/
@@ -29249,7 +27634,7 @@ var Component = __webpack_require__(/*! ../node_modules/vue-loader/lib/component
   /* script */
   null,
   /* template */
-  __webpack_require__(/*! !../node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-450f3fac"}!../node_modules/vue-loader/lib/selector?type=template&index=0!./readme.vue */ 153),
+  __webpack_require__(/*! !../node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-450f3fac"}!../node_modules/vue-loader/lib/selector?type=template&index=0!./readme.vue */ 148),
   /* scopeId */
   null,
   /* cssModules */
@@ -29276,7 +27661,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 153 */
+/* 148 */
 /*!*******************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-450f3fac"}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./pages/readme.vue ***!
   \*******************************************************************************************************************************************************************/
@@ -29302,7 +27687,7 @@ if (false) {
 }
 
 /***/ }),
-/* 154 */
+/* 149 */
 /*!******************************************!*\
   !*** ./components/summary_container.vue ***!
   \******************************************/
@@ -29312,9 +27697,9 @@ if (false) {
 
 var Component = __webpack_require__(/*! ../node_modules/vue-loader/lib/component-normalizer */ 0)(
   /* script */
-  __webpack_require__(/*! !babel-loader!../node_modules/vue-loader/lib/selector?type=script&index=0!./summary_container.vue */ 155),
+  __webpack_require__(/*! !babel-loader!../node_modules/vue-loader/lib/selector?type=script&index=0!./summary_container.vue */ 150),
   /* template */
-  __webpack_require__(/*! !../node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-84f85d80"}!../node_modules/vue-loader/lib/selector?type=template&index=0!./summary_container.vue */ 160),
+  __webpack_require__(/*! !../node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-84f85d80"}!../node_modules/vue-loader/lib/selector?type=template&index=0!./summary_container.vue */ 155),
   /* scopeId */
   null,
   /* cssModules */
@@ -29341,7 +27726,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 155 */
+/* 150 */
 /*!****************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./components/summary_container.vue ***!
   \****************************************************************************************************************************************/
@@ -29351,7 +27736,7 @@ module.exports = Component.exports
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__pages_summary_vue__ = __webpack_require__(/*! ../pages/summary.vue */ 156);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__pages_summary_vue__ = __webpack_require__(/*! ../pages/summary.vue */ 151);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__pages_summary_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__pages_summary_vue__);
 //
 //
@@ -29374,7 +27759,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 156 */
+/* 151 */
 /*!***************************!*\
   !*** ./pages/summary.vue ***!
   \***************************/
@@ -29384,13 +27769,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /* styles */
-__webpack_require__(/*! !vue-style-loader!css-loader?sourceMap&-autoprefixer!../node_modules/vue-loader/lib/style-compiler/index?{"id":"data-v-36d8ce4c","scoped":false,"hasInlineConfig":false}!sass-loader?sourceMap!../node_modules/vue-loader/lib/selector?type=styles&index=0!./summary.vue */ 157)
+__webpack_require__(/*! !vue-style-loader!css-loader?sourceMap&-autoprefixer!../node_modules/vue-loader/lib/style-compiler/index?{"id":"data-v-36d8ce4c","scoped":false,"hasInlineConfig":false}!sass-loader?sourceMap!../node_modules/vue-loader/lib/selector?type=styles&index=0!./summary.vue */ 152)
 
 var Component = __webpack_require__(/*! ../node_modules/vue-loader/lib/component-normalizer */ 0)(
   /* script */
   null,
   /* template */
-  __webpack_require__(/*! !../node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-36d8ce4c"}!../node_modules/vue-loader/lib/selector?type=template&index=0!./summary.vue */ 159),
+  __webpack_require__(/*! !../node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-36d8ce4c"}!../node_modules/vue-loader/lib/selector?type=template&index=0!./summary.vue */ 154),
   /* scopeId */
   null,
   /* cssModules */
@@ -29417,7 +27802,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 157 */
+/* 152 */
 /*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-style-loader!./node_modules/css-loader?sourceMap&-autoprefixer!./node_modules/vue-loader/lib/style-compiler?{"id":"data-v-36d8ce4c","scoped":false,"hasInlineConfig":false}!./node_modules/sass-loader/lib/loader.js?sourceMap!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./pages/summary.vue ***!
   \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************/
@@ -29428,7 +27813,7 @@ module.exports = Component.exports
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(/*! !../node_modules/css-loader?sourceMap&-autoprefixer!../node_modules/vue-loader/lib/style-compiler?{"id":"data-v-36d8ce4c","scoped":false,"hasInlineConfig":false}!../node_modules/sass-loader/lib/loader.js?sourceMap!../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./summary.vue */ 158);
+var content = __webpack_require__(/*! !../node_modules/css-loader?sourceMap&-autoprefixer!../node_modules/vue-loader/lib/style-compiler?{"id":"data-v-36d8ce4c","scoped":false,"hasInlineConfig":false}!../node_modules/sass-loader/lib/loader.js?sourceMap!../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./summary.vue */ 153);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -29448,7 +27833,7 @@ if(false) {
 }
 
 /***/ }),
-/* 158 */
+/* 153 */
 /*!***********************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader?sourceMap&-autoprefixer!./node_modules/vue-loader/lib/style-compiler?{"id":"data-v-36d8ce4c","scoped":false,"hasInlineConfig":false}!./node_modules/sass-loader/lib/loader.js?sourceMap!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./pages/summary.vue ***!
   \***********************************************************************************************************************************************************************************************************************************************************************************************************/
@@ -29463,13 +27848,13 @@ exports.push([module.i, "@import url(https://maxcdn.bootstrapcdn.com/font-awesom
 exports.push([module.i, "@import url(https://at.alicdn.com/t/font_299456_81qcthgrkonu3di.css);", ""]);
 
 // module
-exports.push([module.i, "\n@charset \"UTF-8\";\n@-webkit-keyframes v-kf-spin-around {\nfrom {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n}\nto {\n    -webkit-transform: rotate(359deg);\n            transform: rotate(359deg);\n}\n}\n@keyframes v-kf-spin-around {\nfrom {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n}\nto {\n    -webkit-transform: rotate(359deg);\n            transform: rotate(359deg);\n}\n}\n@-webkit-keyframes v-kf-fade-in {\nfrom {\n    opacity: 0;\n}\nto {\n    opacity: 1;\n}\n}\n@keyframes v-kf-fade-in {\nfrom {\n    opacity: 0;\n}\nto {\n    opacity: 1;\n}\n}\n@-webkit-keyframes v-kf-fade-out {\nfrom {\n    opacity: 1;\n}\nto {\n    opacity: 0;\n}\n}\n@keyframes v-kf-fade-out {\nfrom {\n    opacity: 1;\n}\nto {\n    opacity: 0;\n}\n}\n@-webkit-keyframes v-kf-fade-in-down {\nfrom {\n    opacity: 0;\n    -webkit-transform: translate3d(0, -100%, 0);\n            transform: translate3d(0, -100%, 0);\n}\nto {\n    opacity: 1;\n    -webkit-transform: none;\n            transform: none;\n}\n}\n@keyframes v-kf-fade-in-down {\nfrom {\n    opacity: 0;\n    -webkit-transform: translate3d(0, -100%, 0);\n            transform: translate3d(0, -100%, 0);\n}\nto {\n    opacity: 1;\n    -webkit-transform: none;\n            transform: none;\n}\n}\n@-webkit-keyframes v-kf-fade-out-down {\nfrom {\n    opacity: 1;\n}\nto {\n    opacity: 0;\n    -webkit-transform: translate3d(0, 100%, 0);\n            transform: translate3d(0, 100%, 0);\n}\n}\n@keyframes v-kf-fade-out-down {\nfrom {\n    opacity: 1;\n}\nto {\n    opacity: 0;\n    -webkit-transform: translate3d(0, 100%, 0);\n            transform: translate3d(0, 100%, 0);\n}\n}\n.v-container {\n  margin: 0 auto;\n  position: relative;\n}\n.v-cols {\n  margin-left: -0.5rem;\n  margin-right: -0.5rem;\n  margin-top: -0.5rem;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n}\n.v-cols:last-child {\n    margin-bottom: -0.5rem;\n}\n.v-cols:not(:last-child) {\n    margin-bottom: calc(1rem - 0.5rem);\n}\n.v-cols.is-centered {\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n}\n.v-cols.is-gapless {\n    margin-left: 0;\n    margin-right: 0;\n    margin-top: 0;\n}\n.v-cols.is-gapless > .v-column {\n      margin: 0;\n      padding: 0 !important;\n}\n.v-cols.is-gapless:not(:last-child) {\n      margin-bottom: 1rem;\n}\n.v-cols.is-gapless:last-child {\n      margin-bottom: 0;\n}\n.v-cols.is-multiline {\n    -ms-flex-wrap: wrap;\n        flex-wrap: wrap;\n}\n.v-cols.is-vcentered {\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n}\n.v-col {\n  display: block;\n  -ms-flex-preferred-size: 0;\n      flex-basis: 0;\n  -webkit-box-flex: 1;\n      -ms-flex-positive: 1;\n          flex-grow: 1;\n  -ms-flex-negative: 1;\n      flex-shrink: 1;\n  padding: 0.5rem;\n}\n.v-col.is-narrow, .v-col.is-narrow-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n}\n.v-col.is-full, .v-col.is-full-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 100%;\n}\n.v-col.is-three-quarters, .v-col.is-three-quarters-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 75%;\n}\n.v-col.is-two-thirds, .v-col.is-two-thirds-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 66.6666%;\n}\n.v-col.is-half, .v-col.is-half-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 50%;\n}\n.v-col.is-one-third, .v-col.is-one-third-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 33.3333%;\n}\n.v-col.is-one-quarter, .v-col.is-one-quarter-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 25%;\n}\n.v-col.is-offset-three-quarters, .v-col.is-offset-three-quarters-desktop {\n    margin-left: 75%;\n}\n.v-col.is-offset-two-quarter, .v-col.is-offset-two-thirds-desktop {\n    margin-left: 66.6666%;\n}\n.v-col.is-offset-half, .v-col.is-offset-half-desktop {\n    margin-left: 50%;\n}\n.v-col.is-offset-one-third, .v-col.is-offset-one-third-desktop {\n    margin-left: 33.3333%;\n}\n.v-col.is-offset-one-quarter, .v-col.is-offset-one-quarter-desktop {\n    margin-left: 25%;\n}\n.v-col.is-1, .v-col.is-1-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 8.33333%;\n}\n.v-col.is-offset-1, .v-col.is-offset-1-desktop {\n    margin-left: 8.33333%;\n}\n.v-col.is-2, .v-col.is-2-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 16.66667%;\n}\n.v-col.is-offset-2, .v-col.is-offset-2-desktop {\n    margin-left: 16.66667%;\n}\n.v-col.is-3, .v-col.is-3-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 25%;\n}\n.v-col.is-offset-3, .v-col.is-offset-3-desktop {\n    margin-left: 25%;\n}\n.v-col.is-4, .v-col.is-4-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 33.33333%;\n}\n.v-col.is-offset-4, .v-col.is-offset-4-desktop {\n    margin-left: 33.33333%;\n}\n.v-col.is-5, .v-col.is-5-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 41.66667%;\n}\n.v-col.is-offset-5, .v-col.is-offset-5-desktop {\n    margin-left: 41.66667%;\n}\n.v-col.is-6, .v-col.is-6-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 50%;\n}\n.v-col.is-offset-6, .v-col.is-offset-6-desktop {\n    margin-left: 50%;\n}\n.v-col.is-7, .v-col.is-7-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 58.33333%;\n}\n.v-col.is-offset-7, .v-col.is-offset-7-desktop {\n    margin-left: 58.33333%;\n}\n.v-col.is-8, .v-col.is-8-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 66.66667%;\n}\n.v-col.is-offset-8, .v-col.is-offset-8-desktop {\n    margin-left: 66.66667%;\n}\n.v-col.is-9, .v-col.is-9-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 75%;\n}\n.v-col.is-offset-9, .v-col.is-offset-9-desktop {\n    margin-left: 75%;\n}\n.v-col.is-10, .v-col.is-10-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 83.33333%;\n}\n.v-col.is-offset-10, .v-col.is-offset-10-desktop {\n    margin-left: 83.33333%;\n}\n.v-col.is-11, .v-col.is-11-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 91.66667%;\n}\n.v-col.is-offset-11, .v-col.is-offset-11-desktop {\n    margin-left: 91.66667%;\n}\n.v-col.is-12, .v-col.is-12-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 100%;\n}\n.v-col.is-offset-12, .v-col.is-offset-12-desktop {\n    margin-left: 100%;\n}\n.has-icon {\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  display: -webkit-inline-box;\n  display: -ms-inline-flexbox;\n  display: inline-flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  height: 1.5rem;\n  width: 1.5rem;\n}\n.has-icon.is-small {\n    height: 1rem;\n    width: 1rem;\n}\n.has-icon.is-medium {\n    height: 2rem;\n    width: 2rem;\n}\n.has-icon.is-large {\n    height: 3rem;\n    width: 3rem;\n}\n.has-icon.has-text-white {\n    color: white;\n}\n.has-icon.has-text-black {\n    color: #0a0a0a;\n}\n.has-icon.has-text-light {\n    color: whitesmoke;\n}\n.has-icon.has-text-dark {\n    color: #363636;\n}\n.has-icon.has-text-primary {\n    color: #1ca0f2;\n}\n.has-icon.has-text-info {\n    color: #b86bff;\n}\n.has-icon.has-text-success {\n    color: #23d160;\n}\n.has-icon.has-text-warning {\n    color: #ffdd57;\n}\n.has-icon.has-text-danger {\n    color: #ff3860;\n}\n.has-icon.is-primary .is-icon-arrow::after {\n    border-left-color: white;\n    border-top-color: white;\n}\n.has-icon.is-primary .is-icon-caret::after {\n    border-top-color: white;\n}\n.has-icon.is-primary .is-icon-right::after {\n    border-left-color: white;\n    border-bottom-color: white;\n}\n.has-icon.is-primary .is-icon-close::before, .has-icon.is-primary .is-icon-close::after {\n    background-color: white;\n}\n.has-icon.is-primary.is-outline .is-icon-arrow::after {\n    border-left-color: #1ca0f2;\n    border-top-color: #1ca0f2;\n}\n.has-icon.is-primary.is-outline .is-icon-caret::after {\n    border-top-color: #1ca0f2;\n}\n.has-icon.is-primary.is-outline .is-icon-right::after {\n    border-left-color: #1ca0f2;\n    border-bottom-color: #1ca0f2;\n}\n.has-icon.is-primary.is-outline .is-icon-close::before, .has-icon.is-primary.is-outline .is-icon-close::after {\n    background-color: #1ca0f2;\n}\n.has-icon.is-primary.is-outline:hover .is-icon-arrow::after, .has-icon.is-primary.is-outline:focus .is-icon-arrow::after, .has-icon.is-primary.is-outline.is-active .is-icon-arrow::after, .has-icon.is-primary.is-outline:active .is-icon-arrow::after {\n    border-left-color: white;\n    border-top-color: white;\n}\n.has-icon.is-primary.is-outline:hover .is-icon-caret::after, .has-icon.is-primary.is-outline:focus .is-icon-caret::after, .has-icon.is-primary.is-outline.is-active .is-icon-caret::after, .has-icon.is-primary.is-outline:active .is-icon-caret::after {\n    border-top-color: white;\n}\n.has-icon.is-primary.is-outline:hover .is-icon-right::after, .has-icon.is-primary.is-outline:focus .is-icon-right::after, .has-icon.is-primary.is-outline.is-active .is-icon-right::after, .has-icon.is-primary.is-outline:active .is-icon-right::after {\n    border-left-color: white;\n    border-bottom-color: white;\n}\n.has-icon.is-primary.is-outline:hover .is-icon-close::before, .has-icon.is-primary.is-outline:hover .is-icon-close::after, .has-icon.is-primary.is-outline:focus .is-icon-close::before, .has-icon.is-primary.is-outline:focus .is-icon-close::after, .has-icon.is-primary.is-outline.is-active .is-icon-close::before, .has-icon.is-primary.is-outline.is-active .is-icon-close::after, .has-icon.is-primary.is-outline:active .is-icon-close::before, .has-icon.is-primary.is-outline:active .is-icon-close::after {\n    background-color: white;\n}\n.has-icon.is-primary.is-icon-arrow::after {\n    border-left-color: #1ca0f2;\n    border-top-color: #1ca0f2;\n}\n.has-icon.is-primary.is-icon-caret::after {\n    border-top-color: #1ca0f2;\n}\n.has-icon.is-primary.is-icon-right::after {\n    border-left-color: #1ca0f2;\n    border-bottom-color: #1ca0f2;\n}\n.has-icon.is-primary.is-icon-close::before, .has-icon.is-primary.is-icon-close::after {\n    background-color: #1ca0f2;\n}\n.has-icon.is-secondary .is-icon-arrow::after {\n    border-left-color: white;\n    border-top-color: white;\n}\n.has-icon.is-secondary .is-icon-caret::after {\n    border-top-color: white;\n}\n.has-icon.is-secondary .is-icon-right::after {\n    border-left-color: white;\n    border-bottom-color: white;\n}\n.has-icon.is-secondary .is-icon-close::before, .has-icon.is-secondary .is-icon-close::after {\n    background-color: white;\n}\n.has-icon.is-secondary.is-outline .is-icon-arrow::after {\n    border-left-color: #35aaf3;\n    border-top-color: #35aaf3;\n}\n.has-icon.is-secondary.is-outline .is-icon-caret::after {\n    border-top-color: #35aaf3;\n}\n.has-icon.is-secondary.is-outline .is-icon-right::after {\n    border-left-color: #35aaf3;\n    border-bottom-color: #35aaf3;\n}\n.has-icon.is-secondary.is-outline .is-icon-close::before, .has-icon.is-secondary.is-outline .is-icon-close::after {\n    background-color: #35aaf3;\n}\n.has-icon.is-secondary.is-outline:hover .is-icon-arrow::after, .has-icon.is-secondary.is-outline:focus .is-icon-arrow::after, .has-icon.is-secondary.is-outline.is-active .is-icon-arrow::after, .has-icon.is-secondary.is-outline:active .is-icon-arrow::after {\n    border-left-color: white;\n    border-top-color: white;\n}\n.has-icon.is-secondary.is-outline:hover .is-icon-caret::after, .has-icon.is-secondary.is-outline:focus .is-icon-caret::after, .has-icon.is-secondary.is-outline.is-active .is-icon-caret::after, .has-icon.is-secondary.is-outline:active .is-icon-caret::after {\n    border-top-color: white;\n}\n.has-icon.is-secondary.is-outline:hover .is-icon-right::after, .has-icon.is-secondary.is-outline:focus .is-icon-right::after, .has-icon.is-secondary.is-outline.is-active .is-icon-right::after, .has-icon.is-secondary.is-outline:active .is-icon-right::after {\n    border-left-color: white;\n    border-bottom-color: white;\n}\n.has-icon.is-secondary.is-outline:hover .is-icon-close::before, .has-icon.is-secondary.is-outline:hover .is-icon-close::after, .has-icon.is-secondary.is-outline:focus .is-icon-close::before, .has-icon.is-secondary.is-outline:focus .is-icon-close::after, .has-icon.is-secondary.is-outline.is-active .is-icon-close::before, .has-icon.is-secondary.is-outline.is-active .is-icon-close::after, .has-icon.is-secondary.is-outline:active .is-icon-close::before, .has-icon.is-secondary.is-outline:active .is-icon-close::after {\n    background-color: white;\n}\n.has-icon.is-secondary.is-icon-arrow::after {\n    border-left-color: #35aaf3;\n    border-top-color: #35aaf3;\n}\n.has-icon.is-secondary.is-icon-caret::after {\n    border-top-color: #35aaf3;\n}\n.has-icon.is-secondary.is-icon-right::after {\n    border-left-color: #35aaf3;\n    border-bottom-color: #35aaf3;\n}\n.has-icon.is-secondary.is-icon-close::before, .has-icon.is-secondary.is-icon-close::after {\n    background-color: #35aaf3;\n}\n.has-icon.is-warn .is-icon-arrow::after {\n    border-left-color: white;\n    border-top-color: white;\n}\n.has-icon.is-warn .is-icon-caret::after {\n    border-top-color: white;\n}\n.has-icon.is-warn .is-icon-right::after {\n    border-left-color: white;\n    border-bottom-color: white;\n}\n.has-icon.is-warn .is-icon-close::before, .has-icon.is-warn .is-icon-close::after {\n    background-color: white;\n}\n.has-icon.is-warn.is-outline .is-icon-arrow::after {\n    border-left-color: #ffdd57;\n    border-top-color: #ffdd57;\n}\n.has-icon.is-warn.is-outline .is-icon-caret::after {\n    border-top-color: #ffdd57;\n}\n.has-icon.is-warn.is-outline .is-icon-right::after {\n    border-left-color: #ffdd57;\n    border-bottom-color: #ffdd57;\n}\n.has-icon.is-warn.is-outline .is-icon-close::before, .has-icon.is-warn.is-outline .is-icon-close::after {\n    background-color: #ffdd57;\n}\n.has-icon.is-warn.is-outline:hover .is-icon-arrow::after, .has-icon.is-warn.is-outline:focus .is-icon-arrow::after, .has-icon.is-warn.is-outline.is-active .is-icon-arrow::after, .has-icon.is-warn.is-outline:active .is-icon-arrow::after {\n    border-left-color: white;\n    border-top-color: white;\n}\n.has-icon.is-warn.is-outline:hover .is-icon-caret::after, .has-icon.is-warn.is-outline:focus .is-icon-caret::after, .has-icon.is-warn.is-outline.is-active .is-icon-caret::after, .has-icon.is-warn.is-outline:active .is-icon-caret::after {\n    border-top-color: white;\n}\n.has-icon.is-warn.is-outline:hover .is-icon-right::after, .has-icon.is-warn.is-outline:focus .is-icon-right::after, .has-icon.is-warn.is-outline.is-active .is-icon-right::after, .has-icon.is-warn.is-outline:active .is-icon-right::after {\n    border-left-color: white;\n    border-bottom-color: white;\n}\n.has-icon.is-warn.is-outline:hover .is-icon-close::before, .has-icon.is-warn.is-outline:hover .is-icon-close::after, .has-icon.is-warn.is-outline:focus .is-icon-close::before, .has-icon.is-warn.is-outline:focus .is-icon-close::after, .has-icon.is-warn.is-outline.is-active .is-icon-close::before, .has-icon.is-warn.is-outline.is-active .is-icon-close::after, .has-icon.is-warn.is-outline:active .is-icon-close::before, .has-icon.is-warn.is-outline:active .is-icon-close::after {\n    background-color: white;\n}\n.has-icon.is-warn.is-icon-arrow::after {\n    border-left-color: #ffdd57;\n    border-top-color: #ffdd57;\n}\n.has-icon.is-warn.is-icon-caret::after {\n    border-top-color: #ffdd57;\n}\n.has-icon.is-warn.is-icon-right::after {\n    border-left-color: #ffdd57;\n    border-bottom-color: #ffdd57;\n}\n.has-icon.is-warn.is-icon-close::before, .has-icon.is-warn.is-icon-close::after {\n    background-color: #ffdd57;\n}\n.has-icon.is-success .is-icon-arrow::after {\n    border-left-color: white;\n    border-top-color: white;\n}\n.has-icon.is-success .is-icon-caret::after {\n    border-top-color: white;\n}\n.has-icon.is-success .is-icon-right::after {\n    border-left-color: white;\n    border-bottom-color: white;\n}\n.has-icon.is-success .is-icon-close::before, .has-icon.is-success .is-icon-close::after {\n    background-color: white;\n}\n.has-icon.is-success.is-outline .is-icon-arrow::after {\n    border-left-color: #23d160;\n    border-top-color: #23d160;\n}\n.has-icon.is-success.is-outline .is-icon-caret::after {\n    border-top-color: #23d160;\n}\n.has-icon.is-success.is-outline .is-icon-right::after {\n    border-left-color: #23d160;\n    border-bottom-color: #23d160;\n}\n.has-icon.is-success.is-outline .is-icon-close::before, .has-icon.is-success.is-outline .is-icon-close::after {\n    background-color: #23d160;\n}\n.has-icon.is-success.is-outline:hover .is-icon-arrow::after, .has-icon.is-success.is-outline:focus .is-icon-arrow::after, .has-icon.is-success.is-outline.is-active .is-icon-arrow::after, .has-icon.is-success.is-outline:active .is-icon-arrow::after {\n    border-left-color: white;\n    border-top-color: white;\n}\n.has-icon.is-success.is-outline:hover .is-icon-caret::after, .has-icon.is-success.is-outline:focus .is-icon-caret::after, .has-icon.is-success.is-outline.is-active .is-icon-caret::after, .has-icon.is-success.is-outline:active .is-icon-caret::after {\n    border-top-color: white;\n}\n.has-icon.is-success.is-outline:hover .is-icon-right::after, .has-icon.is-success.is-outline:focus .is-icon-right::after, .has-icon.is-success.is-outline.is-active .is-icon-right::after, .has-icon.is-success.is-outline:active .is-icon-right::after {\n    border-left-color: white;\n    border-bottom-color: white;\n}\n.has-icon.is-success.is-outline:hover .is-icon-close::before, .has-icon.is-success.is-outline:hover .is-icon-close::after, .has-icon.is-success.is-outline:focus .is-icon-close::before, .has-icon.is-success.is-outline:focus .is-icon-close::after, .has-icon.is-success.is-outline.is-active .is-icon-close::before, .has-icon.is-success.is-outline.is-active .is-icon-close::after, .has-icon.is-success.is-outline:active .is-icon-close::before, .has-icon.is-success.is-outline:active .is-icon-close::after {\n    background-color: white;\n}\n.has-icon.is-success.is-icon-arrow::after {\n    border-left-color: #23d160;\n    border-top-color: #23d160;\n}\n.has-icon.is-success.is-icon-caret::after {\n    border-top-color: #23d160;\n}\n.has-icon.is-success.is-icon-right::after {\n    border-left-color: #23d160;\n    border-bottom-color: #23d160;\n}\n.has-icon.is-success.is-icon-close::before, .has-icon.is-success.is-icon-close::after {\n    background-color: #23d160;\n}\n.has-icon.is-error .is-icon-arrow::after {\n    border-left-color: white;\n    border-top-color: white;\n}\n.has-icon.is-error .is-icon-caret::after {\n    border-top-color: white;\n}\n.has-icon.is-error .is-icon-right::after {\n    border-left-color: white;\n    border-bottom-color: white;\n}\n.has-icon.is-error .is-icon-close::before, .has-icon.is-error .is-icon-close::after {\n    background-color: white;\n}\n.has-icon.is-error.is-outline .is-icon-arrow::after {\n    border-left-color: #ff3860;\n    border-top-color: #ff3860;\n}\n.has-icon.is-error.is-outline .is-icon-caret::after {\n    border-top-color: #ff3860;\n}\n.has-icon.is-error.is-outline .is-icon-right::after {\n    border-left-color: #ff3860;\n    border-bottom-color: #ff3860;\n}\n.has-icon.is-error.is-outline .is-icon-close::before, .has-icon.is-error.is-outline .is-icon-close::after {\n    background-color: #ff3860;\n}\n.has-icon.is-error.is-outline:hover .is-icon-arrow::after, .has-icon.is-error.is-outline:focus .is-icon-arrow::after, .has-icon.is-error.is-outline.is-active .is-icon-arrow::after, .has-icon.is-error.is-outline:active .is-icon-arrow::after {\n    border-left-color: white;\n    border-top-color: white;\n}\n.has-icon.is-error.is-outline:hover .is-icon-caret::after, .has-icon.is-error.is-outline:focus .is-icon-caret::after, .has-icon.is-error.is-outline.is-active .is-icon-caret::after, .has-icon.is-error.is-outline:active .is-icon-caret::after {\n    border-top-color: white;\n}\n.has-icon.is-error.is-outline:hover .is-icon-right::after, .has-icon.is-error.is-outline:focus .is-icon-right::after, .has-icon.is-error.is-outline.is-active .is-icon-right::after, .has-icon.is-error.is-outline:active .is-icon-right::after {\n    border-left-color: white;\n    border-bottom-color: white;\n}\n.has-icon.is-error.is-outline:hover .is-icon-close::before, .has-icon.is-error.is-outline:hover .is-icon-close::after, .has-icon.is-error.is-outline:focus .is-icon-close::before, .has-icon.is-error.is-outline:focus .is-icon-close::after, .has-icon.is-error.is-outline.is-active .is-icon-close::before, .has-icon.is-error.is-outline.is-active .is-icon-close::after, .has-icon.is-error.is-outline:active .is-icon-close::before, .has-icon.is-error.is-outline:active .is-icon-close::after {\n    background-color: white;\n}\n.has-icon.is-error.is-icon-arrow::after {\n    border-left-color: #ff3860;\n    border-top-color: #ff3860;\n}\n.has-icon.is-error.is-icon-caret::after {\n    border-top-color: #ff3860;\n}\n.has-icon.is-error.is-icon-right::after {\n    border-left-color: #ff3860;\n    border-bottom-color: #ff3860;\n}\n.has-icon.is-error.is-icon-close::before, .has-icon.is-error.is-icon-close::after {\n    background-color: #ff3860;\n}\n.is-icon-caret::after {\n  border: 0.45em solid transparent;\n  position: absolute;\n  top: 0.3em;\n  content: \"\";\n  transition: all 0.3s;\n  box-sizing: border-box;\n  border-top-color: #C6C6C6;\n}\n.is-icon-right::after {\n  border: 2px solid transparent;\n  position: absolute;\n  width: 1em;\n  height: 0.55em;\n  min-height: 8px;\n  content: \"\";\n  transform: rotate(-55deg);\n  -webkit-transform: rotate(-55deg) translate3d(0, 0, 0);\n  box-sizing: border-box;\n  border-left-color: #C6C6C6;\n  border-bottom-color: #C6C6C6;\n}\n.is-icon-arrow::after {\n  border: 2px solid transparent;\n  position: absolute;\n  width: 0.7em;\n  height: 0.72em;\n  top: -0.1em;\n  left: 0.15em;\n  content: \"\";\n  border-radius: 2px;\n  transform: rotate(222deg);\n  -webkit-transform: rotate(222deg) translate3d(0, 0, 0);\n  transition: all 0.3s;\n  box-sizing: border-box;\n  border-left-color: #C6C6C6;\n  border-top-color: #C6C6C6;\n}\n.is-icon-close::before, .is-icon-close::after {\n  position: absolute;\n  content: \"\";\n  width: 100%;\n  top: 0.3em;\n  height: 2px;\n  background-color: #C6C6C6;\n}\n.is-icon-close::before {\n  -webkit-transform: rotate(45deg);\n  transform: rotate(45deg);\n}\n.is-icon-close::after {\n  -webkit-transform: rotate(-45deg);\n  transform: rotate(-45deg);\n}\n.is-icon-wrap,\n.is-icon-caret,\n.is-icon-right,\n.is-icon-arrow,\n.is-icon-close {\n  text-align: left;\n  display: inline-block;\n  position: relative;\n  width: 1em;\n  height: 1em;\n  vertical-align: middle;\n}\n.is-open .is-icon-caret::after,\n.has-hover-open:hover .is-icon-caret::after {\n  -webkit-transform: rotate(180deg) translateY(50%);\n  transform: rotate(180deg) translateY(50%);\n}\n.is-open .is-icon-arrow::after,\n.has-hover-open:hover .is-icon-arrow::after {\n  -webkit-transform: rotate(408deg);\n  transform: rotate(408deg);\n  top: 0.35em;\n  height: 0.7em;\n}\n.v-btn {\n  -moz-appearance: none;\n  -webkit-appearance: none;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  border: 1px solid transparent;\n  border-radius: 3px;\n  box-shadow: none;\n  display: -webkit-inline-box;\n  display: -ms-inline-flexbox;\n  display: inline-flex;\n  font-size: 1rem;\n  height: 2.25em;\n  -webkit-box-pack: start;\n      -ms-flex-pack: start;\n          justify-content: flex-start;\n  line-height: 1.5;\n  padding: calc(0.375em - 1px) calc(0.625em - 1px);\n  position: relative;\n  vertical-align: top;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  background-color: white;\n  border-color: #C6C6C6;\n  color: black;\n  cursor: pointer;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  padding-left: 0.75em;\n  padding-right: 0.75em;\n  text-align: center;\n  white-space: nowrap;\n  text-decoration: none;\n}\n.v-btn:focus, .v-btn.is-focused, .v-btn:active, .v-btn.is-active {\n    outline: none;\n}\n.v-btn[disabled] {\n    cursor: not-allowed;\n}\n.v-btn strong {\n    color: inherit;\n}\n.v-btn:hover, .v-btn.is-hovered {\n    background-color: #f2f2f2;\n}\n.v-btn.is-active, .v-btn:active {\n    color: black;\n    background-color: #e6e6e6;\n}\n.v-btn.is-disabled, .v-btn:disabled, .v-btn[disabled] {\n    pointer-events: none;\n    cursor: not-allowed;\n    background-color: #F2F2F2;\n    border-color: #cccccc;\n    box-shadow: none !important;\n    opacity: .5;\n}\n.v-btn:focus, .v-btn.is-focused {\n    border-color: #1ca0f2;\n    color: #363636;\n}\n.v-btn:focus:not(:active), .v-btn.is-focused:not(:active) {\n      box-shadow: 0 0 0 0.125em rgba(28, 160, 242, 0.25);\n}\n.v-btn.is-small {\n    border-radius: 2px;\n    font-size: 0.75rem;\n}\n.v-btn.is-medium {\n    font-size: 1.25rem;\n}\n.v-btn.is-large {\n    font-size: 1.5rem;\n}\n.v-btn.is-loading {\n    pointer-events: none;\n    color: transparent !important;\n}\n.v-btn.is-loading .as-icon {\n      opacity: 0;\n}\n.v-btn.is-loading::after {\n      border: 2px solid #dbdbdb;\n      border-radius: 290486px;\n      border-right-color: transparent;\n      border-top-color: transparent;\n      content: \"\";\n      display: block;\n      position: relative;\n      height: 1em;\n      width: 1em;\n      -webkit-animation: v-kf-spin-around 500ms infinite linear;\n              animation: v-kf-spin-around 500ms infinite linear;\n      position: absolute;\n      left: calc(50% - (1.2em / 2) - 0.5px);\n      top: calc(50% - (1.2em / 2) - 0.5px);\n}\n.v-btn.is-circle {\n    border-radius: 50%;\n}\n.v-btn.is-square, .v-btn.is-circle {\n    width: calc(18px + 1rem);\n    height: calc(18px + 1rem);\n}\n.v-btn.is-square.is-small, .v-btn.is-circle.is-small {\n      width: calc(16px + 0.7rem);\n      height: calc(16px + 0.7rem);\n}\n.v-btn.is-square.is-large, .v-btn.is-circle.is-large {\n      width: calc(21px + 1.5rem);\n      height: calc(21px + 1.5rem);\n}\n.v-btn.is-link {\n    background-color: transparent;\n    border-color: transparent;\n    color: #4a4a4a;\n    text-decoration: none;\n}\n.v-btn.is-link:hover, .v-btn.is-link.is-hovered, .v-btn.is-link:focus, .v-btn.is-link.is-focused {\n      background-color: whitesmoke;\n      color: #363636;\n}\n.v-btn.is-link:active, .v-btn.is-link.is-active {\n      background-color: #e8e8e8;\n      color: #363636;\n}\n.v-btn.is-link[disabled] {\n      background-color: transparent;\n      border-color: transparent;\n      box-shadow: none;\n}\n.v-btn .has-icon, .v-btn .has-icon.is-small, .v-btn .has-icon.is-medium, .v-btn .has-icon.is-large {\n    height: 1.5em;\n    width: 1.5em;\n}\n.v-btn .has-icon:first-child:not(:last-child) {\n    margin-left: calc(-0.375em - 1px);\n    margin-right: 0.1875em;\n}\n.v-btn .has-icon:last-child:not(:first-child) {\n    margin-left: 0.1875em;\n    margin-right: calc(-0.375em - 1px);\n}\n.v-btn .has-icon:first-child:last-child {\n    margin-left: calc(-0.375em - 1px);\n    margin-right: calc(-0.375em - 1px);\n}\n.v-btn-group.is-horizontal {\n  display: inline-block;\n  vertical-align: middle;\n}\n.v-btn-group.is-horizontal::after {\n    clear: both;\n    content: \" \";\n    display: table;\n}\n.v-btn-group.is-horizontal .v-btn {\n    float: left;\n    margin-left: -1px;\n}\n.v-btn-group.is-horizontal .v-btn:not(:first-child):not(:last-child) {\n      border-radius: 0;\n}\n.v-btn-group.is-horizontal .v-btn:first-child {\n      margin-left: 0;\n}\n.v-btn-group.is-horizontal .v-btn:first-child:not(:last-child) {\n        border-bottom-right-radius: 0;\n        border-top-right-radius: 0;\n}\n.v-btn-group.is-horizontal .v-btn:last-child:not(:first-child) {\n      border-bottom-left-radius: 0;\n      border-top-left-radius: 0;\n}\n.v-btn-group.is-vertical {\n  display: inline-block;\n  vertical-align: middle;\n}\n.v-btn-group.is-vertical .v-btn {\n    display: block;\n    margin-top: -1px;\n    width: 100%;\n    max-width: 100%;\n}\n.v-btn-group.is-vertical .v-btn:not(:first-child):not(:last-child) {\n      border-radius: 0;\n}\n.v-btn-group.is-vertical .v-btn:first-child {\n      margin-top: 0;\n}\n.v-btn-group.is-vertical .v-btn:first-child:not(:last-child) {\n        border-bottom-left-radius: 0;\n        border-bottom-right-radius: 0;\n}\n.v-btn-group.is-vertical .v-btn:last-child:not(:first-child) {\n      border-top-left-radius: 0;\n      border-top-right-radius: 0;\n}\n.v-btn.is-white {\n  color: #0a0a0a;\n  border-color: #fafafa;\n  background-color: white;\n}\n.v-btn.is-white.is-outlined {\n    color: white;\n    background-color: #0a0a0a;\n    border-color: #fafafa;\n}\n.v-btn.is-white.is-outlined:hover, .v-btn.is-white.is-outlined.is-hovered {\n      color: #0a0a0a !important;\n}\n.v-btn.is-white.is-outlined:focus, .v-btn.is-white.is-outlined.is-focused {\n      border-color: transparent;\n      color: white;\n}\n.v-btn.is-white.is-outlined:focus:not(:active), .v-btn.is-white.is-outlined.is-focused:not(:active) {\n        box-shadow: 0 0 0 0.125em rgba(255, 255, 255, 0.25);\n}\n.v-btn.is-white.is-outlined.is-active, .v-btn.is-white.is-outlined:active {\n      color: #0a0a0a;\n}\n.v-btn.is-white.is-outlined.is-loading::after {\n      border-left-color: white;\n      border-bottom-color: white;\n}\n.v-btn.is-white:hover, .v-btn.is-white.is-hovered {\n    background-color: #f0f0f0;\n}\n.v-btn.is-white:focus, .v-btn.is-white.is-focused {\n    border-color: transparent;\n    color: #0a0a0a;\n}\n.v-btn.is-white:focus:not(:active), .v-btn.is-white.is-focused:not(:active) {\n      box-shadow: 0 0 0 0.125em rgba(255, 255, 255, 0.25);\n}\n.v-btn.is-white.is-disabled, .v-btn.is-white:disabled, .v-btn.is-white[disabled] {\n    background-color: white !important;\n    border-color: transparent !important;\n}\n.v-btn.is-white:active, .v-btn.is-white.is-active {\n    background-color: #e6e6e6;\n}\n.v-btn.is-white.is-loading::after {\n    border-left-color: #0a0a0a;\n    border-bottom-color: #0a0a0a;\n}\n.v-btn.is-black {\n  color: white;\n  border-color: #050505;\n  background-color: #0a0a0a;\n}\n.v-btn.is-black.is-outlined {\n    color: #0a0a0a;\n    background-color: white;\n    border-color: #050505;\n}\n.v-btn.is-black.is-outlined:hover, .v-btn.is-black.is-outlined.is-hovered {\n      color: white !important;\n}\n.v-btn.is-black.is-outlined:focus, .v-btn.is-black.is-outlined.is-focused {\n      border-color: transparent;\n      color: #0a0a0a;\n}\n.v-btn.is-black.is-outlined:focus:not(:active), .v-btn.is-black.is-outlined.is-focused:not(:active) {\n        box-shadow: 0 0 0 0.125em rgba(10, 10, 10, 0.25);\n}\n.v-btn.is-black.is-outlined.is-active, .v-btn.is-black.is-outlined:active {\n      color: white;\n}\n.v-btn.is-black.is-outlined.is-loading::after {\n      border-left-color: #0a0a0a;\n      border-bottom-color: #0a0a0a;\n}\n.v-btn.is-black:hover, .v-btn.is-black.is-hovered {\n    background-color: black;\n}\n.v-btn.is-black:focus, .v-btn.is-black.is-focused {\n    border-color: transparent;\n    color: white;\n}\n.v-btn.is-black:focus:not(:active), .v-btn.is-black.is-focused:not(:active) {\n      box-shadow: 0 0 0 0.125em rgba(10, 10, 10, 0.25);\n}\n.v-btn.is-black.is-disabled, .v-btn.is-black:disabled, .v-btn.is-black[disabled] {\n    background-color: #0a0a0a !important;\n    border-color: transparent !important;\n}\n.v-btn.is-black:active, .v-btn.is-black.is-active {\n    background-color: black;\n}\n.v-btn.is-black.is-loading::after {\n    border-left-color: white;\n    border-bottom-color: white;\n}\n.v-btn.is-light {\n  color: #363636;\n  border-color: #f0f0f0;\n  background-color: whitesmoke;\n}\n.v-btn.is-light.is-outlined {\n    color: whitesmoke;\n    background-color: #363636;\n    border-color: #f0f0f0;\n}\n.v-btn.is-light.is-outlined:hover, .v-btn.is-light.is-outlined.is-hovered {\n      color: #363636 !important;\n}\n.v-btn.is-light.is-outlined:focus, .v-btn.is-light.is-outlined.is-focused {\n      border-color: transparent;\n      color: whitesmoke;\n}\n.v-btn.is-light.is-outlined:focus:not(:active), .v-btn.is-light.is-outlined.is-focused:not(:active) {\n        box-shadow: 0 0 0 0.125em rgba(245, 245, 245, 0.25);\n}\n.v-btn.is-light.is-outlined.is-active, .v-btn.is-light.is-outlined:active {\n      color: #363636;\n}\n.v-btn.is-light.is-outlined.is-loading::after {\n      border-left-color: whitesmoke;\n      border-bottom-color: whitesmoke;\n}\n.v-btn.is-light:hover, .v-btn.is-light.is-hovered {\n    background-color: #e6e6e6;\n}\n.v-btn.is-light:focus, .v-btn.is-light.is-focused {\n    border-color: transparent;\n    color: #363636;\n}\n.v-btn.is-light:focus:not(:active), .v-btn.is-light.is-focused:not(:active) {\n      box-shadow: 0 0 0 0.125em rgba(245, 245, 245, 0.25);\n}\n.v-btn.is-light.is-disabled, .v-btn.is-light:disabled, .v-btn.is-light[disabled] {\n    background-color: whitesmoke !important;\n    border-color: transparent !important;\n}\n.v-btn.is-light:active, .v-btn.is-light.is-active {\n    background-color: #dbdbdb;\n}\n.v-btn.is-light.is-loading::after {\n    border-left-color: #363636;\n    border-bottom-color: #363636;\n}\n.v-btn.is-dark {\n  color: whitesmoke;\n  border-color: #303030;\n  background-color: #363636;\n}\n.v-btn.is-dark.is-outlined {\n    color: #363636;\n    background-color: whitesmoke;\n    border-color: #303030;\n}\n.v-btn.is-dark.is-outlined:hover, .v-btn.is-dark.is-outlined.is-hovered {\n      color: whitesmoke !important;\n}\n.v-btn.is-dark.is-outlined:focus, .v-btn.is-dark.is-outlined.is-focused {\n      border-color: transparent;\n      color: #363636;\n}\n.v-btn.is-dark.is-outlined:focus:not(:active), .v-btn.is-dark.is-outlined.is-focused:not(:active) {\n        box-shadow: 0 0 0 0.125em rgba(54, 54, 54, 0.25);\n}\n.v-btn.is-dark.is-outlined.is-active, .v-btn.is-dark.is-outlined:active {\n      color: whitesmoke;\n}\n.v-btn.is-dark.is-outlined.is-loading::after {\n      border-left-color: #363636;\n      border-bottom-color: #363636;\n}\n.v-btn.is-dark:hover, .v-btn.is-dark.is-hovered {\n    background-color: #262626;\n}\n.v-btn.is-dark:focus, .v-btn.is-dark.is-focused {\n    border-color: transparent;\n    color: whitesmoke;\n}\n.v-btn.is-dark:focus:not(:active), .v-btn.is-dark.is-focused:not(:active) {\n      box-shadow: 0 0 0 0.125em rgba(54, 54, 54, 0.25);\n}\n.v-btn.is-dark.is-disabled, .v-btn.is-dark:disabled, .v-btn.is-dark[disabled] {\n    background-color: #363636 !important;\n    border-color: transparent !important;\n}\n.v-btn.is-dark:active, .v-btn.is-dark.is-active {\n    background-color: #1c1c1c;\n}\n.v-btn.is-dark.is-loading::after {\n    border-left-color: whitesmoke;\n    border-bottom-color: whitesmoke;\n}\n.v-btn.is-primary {\n  color: #fff;\n  border-color: #139cf1;\n  background-color: #1ca0f2;\n}\n.v-btn.is-primary.is-outlined {\n    color: #1ca0f2;\n    background-color: #fff;\n    border-color: #139cf1;\n}\n.v-btn.is-primary.is-outlined:hover, .v-btn.is-primary.is-outlined.is-hovered {\n      color: #fff !important;\n}\n.v-btn.is-primary.is-outlined:focus, .v-btn.is-primary.is-outlined.is-focused {\n      border-color: transparent;\n      color: #1ca0f2;\n}\n.v-btn.is-primary.is-outlined:focus:not(:active), .v-btn.is-primary.is-outlined.is-focused:not(:active) {\n        box-shadow: 0 0 0 0.125em rgba(28, 160, 242, 0.25);\n}\n.v-btn.is-primary.is-outlined.is-active, .v-btn.is-primary.is-outlined:active {\n      color: #fff;\n}\n.v-btn.is-primary.is-outlined.is-loading::after {\n      border-left-color: #1ca0f2;\n      border-bottom-color: #1ca0f2;\n}\n.v-btn.is-primary:hover, .v-btn.is-primary.is-hovered {\n    background-color: #0d91e3;\n}\n.v-btn.is-primary:focus, .v-btn.is-primary.is-focused {\n    border-color: transparent;\n    color: #fff;\n}\n.v-btn.is-primary:focus:not(:active), .v-btn.is-primary.is-focused:not(:active) {\n      box-shadow: 0 0 0 0.125em rgba(28, 160, 242, 0.25);\n}\n.v-btn.is-primary.is-disabled, .v-btn.is-primary:disabled, .v-btn.is-primary[disabled] {\n    background-color: #1ca0f2 !important;\n    border-color: transparent !important;\n}\n.v-btn.is-primary:active, .v-btn.is-primary.is-active {\n    background-color: #0c84cf;\n}\n.v-btn.is-primary.is-loading::after {\n    border-left-color: #fff;\n    border-bottom-color: #fff;\n}\n.v-btn.is-info {\n  color: #fff;\n  border-color: #b361ff;\n  background-color: #b86bff;\n}\n.v-btn.is-info.is-outlined {\n    color: #b86bff;\n    background-color: #fff;\n    border-color: #b361ff;\n}\n.v-btn.is-info.is-outlined:hover, .v-btn.is-info.is-outlined.is-hovered {\n      color: #fff !important;\n}\n.v-btn.is-info.is-outlined:focus, .v-btn.is-info.is-outlined.is-focused {\n      border-color: transparent;\n      color: #b86bff;\n}\n.v-btn.is-info.is-outlined:focus:not(:active), .v-btn.is-info.is-outlined.is-focused:not(:active) {\n        box-shadow: 0 0 0 0.125em rgba(184, 107, 255, 0.25);\n}\n.v-btn.is-info.is-outlined.is-active, .v-btn.is-info.is-outlined:active {\n      color: #fff;\n}\n.v-btn.is-info.is-outlined.is-loading::after {\n      border-left-color: #b86bff;\n      border-bottom-color: #b86bff;\n}\n.v-btn.is-info:hover, .v-btn.is-info.is-hovered {\n    background-color: #a94dff;\n}\n.v-btn.is-info:focus, .v-btn.is-info.is-focused {\n    border-color: transparent;\n    color: #fff;\n}\n.v-btn.is-info:focus:not(:active), .v-btn.is-info.is-focused:not(:active) {\n      box-shadow: 0 0 0 0.125em rgba(184, 107, 255, 0.25);\n}\n.v-btn.is-info.is-disabled, .v-btn.is-info:disabled, .v-btn.is-info[disabled] {\n    background-color: #b86bff !important;\n    border-color: transparent !important;\n}\n.v-btn.is-info:active, .v-btn.is-info.is-active {\n    background-color: #9f38ff;\n}\n.v-btn.is-info.is-loading::after {\n    border-left-color: #fff;\n    border-bottom-color: #fff;\n}\n.v-btn.is-success {\n  color: #fff;\n  border-color: #22c95c;\n  background-color: #23d160;\n}\n.v-btn.is-success.is-outlined {\n    color: #23d160;\n    background-color: #fff;\n    border-color: #22c95c;\n}\n.v-btn.is-success.is-outlined:hover, .v-btn.is-success.is-outlined.is-hovered {\n      color: #fff !important;\n}\n.v-btn.is-success.is-outlined:focus, .v-btn.is-success.is-outlined.is-focused {\n      border-color: transparent;\n      color: #23d160;\n}\n.v-btn.is-success.is-outlined:focus:not(:active), .v-btn.is-success.is-outlined.is-focused:not(:active) {\n        box-shadow: 0 0 0 0.125em rgba(35, 209, 96, 0.25);\n}\n.v-btn.is-success.is-outlined.is-active, .v-btn.is-success.is-outlined:active {\n      color: #fff;\n}\n.v-btn.is-success.is-outlined.is-loading::after {\n      border-left-color: #23d160;\n      border-bottom-color: #23d160;\n}\n.v-btn.is-success:hover, .v-btn.is-success.is-hovered {\n    background-color: #1fb754;\n}\n.v-btn.is-success:focus, .v-btn.is-success.is-focused {\n    border-color: transparent;\n    color: #fff;\n}\n.v-btn.is-success:focus:not(:active), .v-btn.is-success.is-focused:not(:active) {\n      box-shadow: 0 0 0 0.125em rgba(35, 209, 96, 0.25);\n}\n.v-btn.is-success.is-disabled, .v-btn.is-success:disabled, .v-btn.is-success[disabled] {\n    background-color: #23d160 !important;\n    border-color: transparent !important;\n}\n.v-btn.is-success:active, .v-btn.is-success.is-active {\n    background-color: #1ca64c;\n}\n.v-btn.is-success.is-loading::after {\n    border-left-color: #fff;\n    border-bottom-color: #fff;\n}\n.v-btn.is-warning {\n  color: rgba(0, 0, 0, 0.7);\n  border-color: #ffdb4d;\n  background-color: #ffdd57;\n}\n.v-btn.is-warning.is-outlined {\n    color: #ffdd57;\n    background-color: rgba(0, 0, 0, 0.7);\n    border-color: #ffdb4d;\n}\n.v-btn.is-warning.is-outlined:hover, .v-btn.is-warning.is-outlined.is-hovered {\n      color: rgba(0, 0, 0, 0.7) !important;\n}\n.v-btn.is-warning.is-outlined:focus, .v-btn.is-warning.is-outlined.is-focused {\n      border-color: transparent;\n      color: #ffdd57;\n}\n.v-btn.is-warning.is-outlined:focus:not(:active), .v-btn.is-warning.is-outlined.is-focused:not(:active) {\n        box-shadow: 0 0 0 0.125em rgba(255, 221, 87, 0.25);\n}\n.v-btn.is-warning.is-outlined.is-active, .v-btn.is-warning.is-outlined:active {\n      color: rgba(0, 0, 0, 0.7);\n}\n.v-btn.is-warning.is-outlined.is-loading::after {\n      border-left-color: #ffdd57;\n      border-bottom-color: #ffdd57;\n}\n.v-btn.is-warning:hover, .v-btn.is-warning.is-hovered {\n    background-color: #ffd738;\n}\n.v-btn.is-warning:focus, .v-btn.is-warning.is-focused {\n    border-color: transparent;\n    color: rgba(0, 0, 0, 0.7);\n}\n.v-btn.is-warning:focus:not(:active), .v-btn.is-warning.is-focused:not(:active) {\n      box-shadow: 0 0 0 0.125em rgba(255, 221, 87, 0.25);\n}\n.v-btn.is-warning.is-disabled, .v-btn.is-warning:disabled, .v-btn.is-warning[disabled] {\n    background-color: #ffdd57 !important;\n    border-color: transparent !important;\n}\n.v-btn.is-warning:active, .v-btn.is-warning.is-active {\n    background-color: #ffd324;\n}\n.v-btn.is-warning.is-loading::after {\n    border-left-color: rgba(0, 0, 0, 0.7);\n    border-bottom-color: rgba(0, 0, 0, 0.7);\n}\n.v-btn.is-danger {\n  color: #fff;\n  border-color: #ff2e58;\n  background-color: #ff3860;\n}\n.v-btn.is-danger.is-outlined {\n    color: #ff3860;\n    background-color: #fff;\n    border-color: #ff2e58;\n}\n.v-btn.is-danger.is-outlined:hover, .v-btn.is-danger.is-outlined.is-hovered {\n      color: #fff !important;\n}\n.v-btn.is-danger.is-outlined:focus, .v-btn.is-danger.is-outlined.is-focused {\n      border-color: transparent;\n      color: #ff3860;\n}\n.v-btn.is-danger.is-outlined:focus:not(:active), .v-btn.is-danger.is-outlined.is-focused:not(:active) {\n        box-shadow: 0 0 0 0.125em rgba(255, 56, 96, 0.25);\n}\n.v-btn.is-danger.is-outlined.is-active, .v-btn.is-danger.is-outlined:active {\n      color: #fff;\n}\n.v-btn.is-danger.is-outlined.is-loading::after {\n      border-left-color: #ff3860;\n      border-bottom-color: #ff3860;\n}\n.v-btn.is-danger:hover, .v-btn.is-danger.is-hovered {\n    background-color: #ff1a47;\n}\n.v-btn.is-danger:focus, .v-btn.is-danger.is-focused {\n    border-color: transparent;\n    color: #fff;\n}\n.v-btn.is-danger:focus:not(:active), .v-btn.is-danger.is-focused:not(:active) {\n      box-shadow: 0 0 0 0.125em rgba(255, 56, 96, 0.25);\n}\n.v-btn.is-danger.is-disabled, .v-btn.is-danger:disabled, .v-btn.is-danger[disabled] {\n    background-color: #ff3860 !important;\n    border-color: transparent !important;\n}\n.v-btn.is-danger:active, .v-btn.is-danger.is-active {\n    background-color: #ff0537;\n}\n.v-btn.is-danger.is-loading::after {\n    border-left-color: #fff;\n    border-bottom-color: #fff;\n}\n.v-field:not(:last-child) {\n  margin-bottom: 0.75rem;\n}\n.v-field.has-addons {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: start;\n      -ms-flex-pack: start;\n          justify-content: flex-start;\n}\n.v-field.has-addons .v-control:not(:last-child) {\n    margin-right: -1px;\n}\n.v-field.has-addons .v-control:first-child .v-btn,\n  .v-field.has-addons .v-control:first-child .v-input,\n  .v-field.has-addons .v-control:first-child .v-select select {\n    border-bottom-left-radius: 3px;\n    border-top-left-radius: 3px;\n}\n.v-field.has-addons .v-control:last-child .v-btn,\n  .v-field.has-addons .v-control:last-child .v-input,\n  .v-field.has-addons .v-control:last-child .v-select select {\n    border-bottom-right-radius: 3px;\n    border-top-right-radius: 3px;\n}\n.v-field.has-addons .v-control .v-btn,\n  .v-field.has-addons .v-control .v-input,\n  .v-field.has-addons .v-control .v-select select {\n    border-radius: 0;\n}\n.v-field.has-addons .v-control .v-btn:hover, .v-field.has-addons .v-control .v-btn.is-hovered,\n    .v-field.has-addons .v-control .v-input:hover,\n    .v-field.has-addons .v-control .v-input.is-hovered,\n    .v-field.has-addons .v-control .v-select select:hover,\n    .v-field.has-addons .v-control .v-select select.is-hovered {\n      z-index: 2;\n}\n.v-field.has-addons .v-control .v-btn:focus, .v-field.has-addons .v-control .v-btn.is-focused, .v-field.has-addons .v-control .v-btn:active, .v-field.has-addons .v-control .v-btn.is-active,\n    .v-field.has-addons .v-control .v-input:focus,\n    .v-field.has-addons .v-control .v-input.is-focused,\n    .v-field.has-addons .v-control .v-input:active,\n    .v-field.has-addons .v-control .v-input.is-active,\n    .v-field.has-addons .v-control .v-select select:focus,\n    .v-field.has-addons .v-control .v-select select.is-focused,\n    .v-field.has-addons .v-control .v-select select:active,\n    .v-field.has-addons .v-control .v-select select.is-active {\n      z-index: 3;\n}\n.v-field.has-addons .v-control .v-btn:focus:hover, .v-field.has-addons .v-control .v-btn.is-focused:hover, .v-field.has-addons .v-control .v-btn:active:hover, .v-field.has-addons .v-control .v-btn.is-active:hover,\n      .v-field.has-addons .v-control .v-input:focus:hover,\n      .v-field.has-addons .v-control .v-input.is-focused:hover,\n      .v-field.has-addons .v-control .v-input:active:hover,\n      .v-field.has-addons .v-control .v-input.is-active:hover,\n      .v-field.has-addons .v-control .v-select select:focus:hover,\n      .v-field.has-addons .v-control .v-select select.is-focused:hover,\n      .v-field.has-addons .v-control .v-select select:active:hover,\n      .v-field.has-addons .v-control .v-select select.is-active:hover {\n        z-index: 4;\n}\n.v-field.has-addons .v-control.is-expanded {\n    -webkit-box-flex: 1;\n        -ms-flex-positive: 1;\n            flex-grow: 1;\n}\n.v-field.has-addons.has-addons-centered {\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n}\n.v-field.has-addons.has-addons-right {\n    -webkit-box-pack: end;\n        -ms-flex-pack: end;\n            justify-content: flex-end;\n}\n.v-field.has-addons.has-addons-fullwidth .v-control {\n    -webkit-box-flex: 1;\n        -ms-flex-positive: 1;\n            flex-grow: 1;\n    -ms-flex-negative: 0;\n        flex-shrink: 0;\n}\n.v-field.is-grouped {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: start;\n      -ms-flex-pack: start;\n          justify-content: flex-start;\n}\n.v-field.is-grouped > .v-control {\n    -ms-flex-negative: 0;\n        flex-shrink: 0;\n}\n.v-field.is-grouped > .v-control:not(:last-child) {\n      margin-bottom: 0;\n      margin-right: 0.75rem;\n}\n.v-field.is-grouped > .v-control.is-expanded {\n      -webkit-box-flex: 1;\n          -ms-flex-positive: 1;\n              flex-grow: 1;\n      -ms-flex-negative: 1;\n          flex-shrink: 1;\n}\n.v-field.is-grouped.is-grouped-centered {\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n}\n.v-field.is-grouped.is-grouped-right {\n    -webkit-box-pack: end;\n        -ms-flex-pack: end;\n            justify-content: flex-end;\n}\n.v-field.is-grouped.is-grouped-multiline {\n    -ms-flex-wrap: wrap;\n        flex-wrap: wrap;\n}\n.v-field.is-grouped.is-grouped-multiline > .ns-control:last-child, .v-field.is-grouped.is-grouped-multiline > .ns-control:not(:last-child) {\n      margin-bottom: 0.75rem;\n}\n.v-field.is-grouped.is-grouped-multiline:last-child {\n      margin-bottom: -0.75rem;\n}\n.v-field.is-grouped.is-grouped-multiline:not(:last-child) {\n      margin-bottom: 0;\n}\n.v-field.is-horizontal {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n}\n.v-field-label {\n  margin-bottom: 0.5rem;\n  -ms-flex-preferred-size: 0;\n      flex-basis: 0;\n  -webkit-box-flex: 1;\n      -ms-flex-positive: 1;\n          flex-grow: 1;\n  -ms-flex-negative: 0;\n      flex-shrink: 0;\n  margin-right: 1.5rem;\n  text-align: right;\n}\n.v-field-label .label {\n    font-size: inherit;\n}\n.v-field-label.is-small {\n    font-size: 0.75rem;\n    padding-top: 0.375em;\n}\n.v-field-label.is-normal {\n    padding-top: 0.375em;\n}\n.v-field-label.is-medium {\n    font-size: 1.25rem;\n    padding-top: 0.375em;\n}\n.v-field-label.is-large {\n    font-size: 1.5rem;\n    padding-top: 0.375em;\n}\n.v-field-body {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-preferred-size: 0;\n      flex-basis: 0;\n  -webkit-box-flex: 5;\n      -ms-flex-positive: 5;\n          flex-grow: 5;\n  -ms-flex-negative: 1;\n      flex-shrink: 1;\n}\n.v-field-body .v-field {\n    margin-bottom: 0;\n}\n.v-field-body > .v-field {\n    -ms-flex-negative: 1;\n        flex-shrink: 1;\n}\n.v-field-body > .v-field:not(.is-narrow) {\n      -webkit-box-flex: 1;\n          -ms-flex-positive: 1;\n              flex-grow: 1;\n}\n.v-field-body > .v-field:not(:last-child) {\n      margin-right: 0.75rem;\n}\n.v-control {\n  font-size: 1rem;\n  position: relative;\n  text-align: left;\n}\n.v-control.has-icons-left .v-input:focus ~ .has-icon,\n  .v-control.has-icons-left .v-select:focus ~ .has-icon, .v-control.has-icons-right .v-input:focus ~ .has-icon,\n  .v-control.has-icons-right .v-select:focus ~ .has-icon {\n    color: #7a7a7a;\n}\n.v-control.has-icons-left .v-input.is-small ~ .has-icon,\n  .v-control.has-icons-left .v-select.is-small ~ .has-icon, .v-control.has-icons-right .v-input.is-small ~ .has-icon,\n  .v-control.has-icons-right .v-select.is-small ~ .has-icon {\n    font-size: 0.75rem;\n}\n.v-control.has-icons-left .v-input.is-medium ~ .has-icon,\n  .v-control.has-icons-left .v-select.is-medium ~ .has-icon, .v-control.has-icons-right .v-input.is-medium ~ .has-icon,\n  .v-control.has-icons-right .v-select.is-medium ~ .has-icon {\n    font-size: 1.25rem;\n}\n.v-control.has-icons-left .v-input.is-large ~ .has-icon,\n  .v-control.has-icons-left .v-select.is-large ~ .has-icon, .v-control.has-icons-right .v-input.is-large ~ .has-icon,\n  .v-control.has-icons-right .v-select.is-large ~ .has-icon {\n    font-size: 1.5rem;\n}\n.v-control.has-icons-left .has-icon, .v-control.has-icons-right .has-icon {\n    color: #dbdbdb;\n    height: 2.25em;\n    pointer-events: none;\n    position: absolute;\n    top: 0;\n    width: 2.25em;\n    z-index: 4;\n}\n.v-control.has-icons-left .v-input,\n  .v-control.has-icons-left .v-select select {\n    padding-left: 2.25em;\n}\n.v-control.has-icons-left .has-icon.is-left {\n    left: 0;\n}\n.v-control.has-icons-right .v-input,\n  .v-control.has-icons-right .v-select select {\n    padding-right: 2.25em;\n}\n.v-control.has-icons-right .has-icon.is-right {\n    right: 0;\n}\n.v-control.is-loading::after {\n    -webkit-animation: v-kf-spin-around 500ms infinite linear;\n            animation: v-kf-spin-around 500ms infinite linear;\n    border: 2px solid #dbdbdb;\n    border-radius: 290486px;\n    border-right-color: transparent;\n    border-top-color: transparent;\n    content: \"\";\n    display: block;\n    box-sizing: border-box;\n    height: 1em;\n    width: 1em;\n    position: relative;\n    position: absolute !important;\n    right: 0.625em;\n    top: 0.625em;\n}\n.v-control.is-loading.is-small:after {\n    font-size: 0.75rem;\n}\n.v-control.is-loading.is-medium:after {\n    font-size: 1.25rem;\n}\n.v-control.is-loading.is-large:after {\n    font-size: 1.5rem;\n}\n.v-input,\n.v-textarea {\n  -moz-appearance: none;\n  -webkit-appearance: none;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  border: 1px solid transparent;\n  border-radius: 3px;\n  box-shadow: none;\n  display: -webkit-inline-box;\n  display: -ms-inline-flexbox;\n  display: inline-flex;\n  font-size: 1rem;\n  height: 2.25em;\n  -webkit-box-pack: start;\n      -ms-flex-pack: start;\n          justify-content: flex-start;\n  line-height: 1.5;\n  padding: calc(0.375em - 1px) calc(0.625em - 1px);\n  position: relative;\n  vertical-align: top;\n  background-color: white;\n  border-color: #dbdbdb;\n  color: #363636;\n  max-width: 100%;\n  width: 100%;\n}\n.v-input:focus, .v-input.is-focused, .v-input:active, .v-input.is-active,\n  .v-textarea:focus,\n  .v-textarea.is-focused,\n  .v-textarea:active,\n  .v-textarea.is-active {\n    outline: none;\n}\n.v-input[disabled],\n  .v-textarea[disabled] {\n    cursor: not-allowed;\n}\n.v-input:hover, .v-input.is-hovered,\n  .v-textarea:hover,\n  .v-textarea.is-hovered {\n    border-color: #b5b5b5;\n}\n.v-input:focus, .v-input.is-focused, .v-input:active, .v-input.is-active,\n  .v-textarea:focus,\n  .v-textarea.is-focused,\n  .v-textarea:active,\n  .v-textarea.is-active {\n    border-color: #1ca0f2;\n    box-shadow: 0 0 0 0.125em rgba(28, 160, 242, 0.25);\n}\n.v-input[disabled],\n  .v-textarea[disabled] {\n    background-color: whitesmoke;\n    border-color: whitesmoke;\n    box-shadow: none;\n    color: #7a7a7a;\n}\n.v-input[disabled]::-moz-placeholder,\n    .v-textarea[disabled]::-moz-placeholder {\n      color: rgba(122, 122, 122, 0.3);\n}\n.v-input[disabled]::-webkit-input-placeholder,\n    .v-textarea[disabled]::-webkit-input-placeholder {\n      color: rgba(122, 122, 122, 0.3);\n}\n.v-input[disabled]:-moz-placeholder,\n    .v-textarea[disabled]:-moz-placeholder {\n      color: rgba(122, 122, 122, 0.3);\n}\n.v-input[disabled]:-ms-input-placeholder,\n    .v-textarea[disabled]:-ms-input-placeholder {\n      color: rgba(122, 122, 122, 0.3);\n}\n.v-input[type=\"search\"],\n  .v-textarea[type=\"search\"] {\n    border-radius: 290486px;\n}\n.v-input.is-white,\n  .v-textarea.is-white {\n    border-color: white;\n}\n.v-input.is-white:focus, .v-input.is-white.is-focused, .v-input.is-white:active, .v-input.is-white.is-active,\n    .v-textarea.is-white:focus,\n    .v-textarea.is-white.is-focused,\n    .v-textarea.is-white:active,\n    .v-textarea.is-white.is-active {\n      box-shadow: 0 0 0 0.125em rgba(255, 255, 255, 0.25);\n}\n.v-input.is-black,\n  .v-textarea.is-black {\n    border-color: #0a0a0a;\n}\n.v-input.is-black:focus, .v-input.is-black.is-focused, .v-input.is-black:active, .v-input.is-black.is-active,\n    .v-textarea.is-black:focus,\n    .v-textarea.is-black.is-focused,\n    .v-textarea.is-black:active,\n    .v-textarea.is-black.is-active {\n      box-shadow: 0 0 0 0.125em rgba(10, 10, 10, 0.25);\n}\n.v-input.is-light,\n  .v-textarea.is-light {\n    border-color: whitesmoke;\n}\n.v-input.is-light:focus, .v-input.is-light.is-focused, .v-input.is-light:active, .v-input.is-light.is-active,\n    .v-textarea.is-light:focus,\n    .v-textarea.is-light.is-focused,\n    .v-textarea.is-light:active,\n    .v-textarea.is-light.is-active {\n      box-shadow: 0 0 0 0.125em rgba(245, 245, 245, 0.25);\n}\n.v-input.is-dark,\n  .v-textarea.is-dark {\n    border-color: #363636;\n}\n.v-input.is-dark:focus, .v-input.is-dark.is-focused, .v-input.is-dark:active, .v-input.is-dark.is-active,\n    .v-textarea.is-dark:focus,\n    .v-textarea.is-dark.is-focused,\n    .v-textarea.is-dark:active,\n    .v-textarea.is-dark.is-active {\n      box-shadow: 0 0 0 0.125em rgba(54, 54, 54, 0.25);\n}\n.v-input.is-primary,\n  .v-textarea.is-primary {\n    border-color: #1ca0f2;\n}\n.v-input.is-primary:focus, .v-input.is-primary.is-focused, .v-input.is-primary:active, .v-input.is-primary.is-active,\n    .v-textarea.is-primary:focus,\n    .v-textarea.is-primary.is-focused,\n    .v-textarea.is-primary:active,\n    .v-textarea.is-primary.is-active {\n      box-shadow: 0 0 0 0.125em rgba(28, 160, 242, 0.25);\n}\n.v-input.is-info,\n  .v-textarea.is-info {\n    border-color: #b86bff;\n}\n.v-input.is-info:focus, .v-input.is-info.is-focused, .v-input.is-info:active, .v-input.is-info.is-active,\n    .v-textarea.is-info:focus,\n    .v-textarea.is-info.is-focused,\n    .v-textarea.is-info:active,\n    .v-textarea.is-info.is-active {\n      box-shadow: 0 0 0 0.125em rgba(184, 107, 255, 0.25);\n}\n.v-input.is-success,\n  .v-textarea.is-success {\n    border-color: #23d160;\n}\n.v-input.is-success:focus, .v-input.is-success.is-focused, .v-input.is-success:active, .v-input.is-success.is-active,\n    .v-textarea.is-success:focus,\n    .v-textarea.is-success.is-focused,\n    .v-textarea.is-success:active,\n    .v-textarea.is-success.is-active {\n      box-shadow: 0 0 0 0.125em rgba(35, 209, 96, 0.25);\n}\n.v-input.is-warning,\n  .v-textarea.is-warning {\n    border-color: #ffdd57;\n}\n.v-input.is-warning:focus, .v-input.is-warning.is-focused, .v-input.is-warning:active, .v-input.is-warning.is-active,\n    .v-textarea.is-warning:focus,\n    .v-textarea.is-warning.is-focused,\n    .v-textarea.is-warning:active,\n    .v-textarea.is-warning.is-active {\n      box-shadow: 0 0 0 0.125em rgba(255, 221, 87, 0.25);\n}\n.v-input.is-danger,\n  .v-textarea.is-danger {\n    border-color: #ff3860;\n}\n.v-input.is-danger:focus, .v-input.is-danger.is-focused, .v-input.is-danger:active, .v-input.is-danger.is-active,\n    .v-textarea.is-danger:focus,\n    .v-textarea.is-danger.is-focused,\n    .v-textarea.is-danger:active,\n    .v-textarea.is-danger.is-active {\n      box-shadow: 0 0 0 0.125em rgba(255, 56, 96, 0.25);\n}\n.v-input.is-small,\n  .v-textarea.is-small {\n    border-radius: 2px;\n    font-size: 0.75rem;\n}\n.v-input.is-medium,\n  .v-textarea.is-medium {\n    font-size: 1.25rem;\n}\n.v-input.is-large,\n  .v-textarea.is-large {\n    font-size: 1.5rem;\n}\n.v-input.is-fullwidth,\n  .v-textarea.is-fullwidth {\n    display: block;\n    width: 100%;\n}\n.v-input.is-inline,\n  .v-textarea.is-inline {\n    display: inline;\n    width: auto;\n}\n.v-select {\n  display: inline-block;\n  max-width: 100%;\n  position: relative;\n  vertical-align: top;\n  box-sizing: border-box;\n}\n.v-select:not(.is-multiple) {\n    height: 2.25em;\n}\n.v-select:not(.is-multiple)::after {\n      border: 1px solid #1ca0f2;\n      border-right: 0;\n      border-top: 0;\n      content: \" \";\n      display: block;\n      height: 0.5em;\n      pointer-events: none;\n      position: absolute;\n      -webkit-transform: rotate(-45deg);\n              transform: rotate(-45deg);\n      width: 0.5em;\n      margin-top: -0.375em;\n      right: 1.125em;\n      top: 50%;\n      z-index: 4;\n}\n.v-select select {\n    -moz-appearance: none;\n    -webkit-appearance: none;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    border: 1px solid transparent;\n    border-radius: 3px;\n    box-shadow: none;\n    display: -webkit-inline-box;\n    display: -ms-inline-flexbox;\n    display: inline-flex;\n    font-size: 1rem;\n    height: 2.25em;\n    -webkit-box-pack: start;\n        -ms-flex-pack: start;\n            justify-content: flex-start;\n    line-height: 1.5;\n    padding: calc(0.375em - 1px) calc(0.625em - 1px);\n    position: relative;\n    vertical-align: top;\n    background-color: white;\n    border-color: #dbdbdb;\n    color: #363636;\n    cursor: pointer;\n    display: block;\n    font-size: 1em;\n    max-width: 100%;\n    outline: none;\n}\n.v-select select:focus, .v-select select.is-focused, .v-select select:active, .v-select select.is-active {\n      outline: none;\n}\n.v-select select[disabled] {\n      cursor: not-allowed;\n}\n.v-select select:hover, .v-select select.is-hovered {\n      border-color: #b5b5b5;\n}\n.v-select select:focus, .v-select select.is-focused, .v-select select:active, .v-select select.is-active {\n      border-color: #1ca0f2;\n      box-shadow: 0 0 0 0.125em rgba(28, 160, 242, 0.25);\n}\n.v-select select[disabled] {\n      background-color: whitesmoke;\n      border-color: whitesmoke;\n      box-shadow: none;\n      color: #7a7a7a;\n}\n.v-select select[disabled]::-moz-placeholder {\n        color: rgba(122, 122, 122, 0.3);\n}\n.v-select select[disabled]::-webkit-input-placeholder {\n        color: rgba(122, 122, 122, 0.3);\n}\n.v-select select[disabled]:-moz-placeholder {\n        color: rgba(122, 122, 122, 0.3);\n}\n.v-select select[disabled]:-ms-input-placeholder {\n        color: rgba(122, 122, 122, 0.3);\n}\n.v-select select::-ms-expand {\n      display: none;\n}\n.v-select select[disabled]:hover {\n      border-color: whitesmoke;\n}\n.v-select select:not([multiple]) {\n      padding-right: 2.5em;\n}\n.v-select select[multiple] {\n      height: unset;\n      padding: 0;\n}\n.v-select select[multiple] option {\n        padding: 0.5em 1em;\n}\n.v-select:hover::after {\n    border-color: #363636;\n}\n.v-select.is-white select {\n    border-color: white;\n}\n.v-select.is-white select:focus, .v-select.is-white select.is-focused, .v-select.is-white select:active, .v-select.is-white select.is-active {\n      box-shadow: 0 0 0 0.125em rgba(255, 255, 255, 0.25);\n}\n.v-select.is-black select {\n    border-color: #0a0a0a;\n}\n.v-select.is-black select:focus, .v-select.is-black select.is-focused, .v-select.is-black select:active, .v-select.is-black select.is-active {\n      box-shadow: 0 0 0 0.125em rgba(10, 10, 10, 0.25);\n}\n.v-select.is-light select {\n    border-color: whitesmoke;\n}\n.v-select.is-light select:focus, .v-select.is-light select.is-focused, .v-select.is-light select:active, .v-select.is-light select.is-active {\n      box-shadow: 0 0 0 0.125em rgba(245, 245, 245, 0.25);\n}\n.v-select.is-dark select {\n    border-color: #363636;\n}\n.v-select.is-dark select:focus, .v-select.is-dark select.is-focused, .v-select.is-dark select:active, .v-select.is-dark select.is-active {\n      box-shadow: 0 0 0 0.125em rgba(54, 54, 54, 0.25);\n}\n.v-select.is-primary select {\n    border-color: #1ca0f2;\n}\n.v-select.is-primary select:focus, .v-select.is-primary select.is-focused, .v-select.is-primary select:active, .v-select.is-primary select.is-active {\n      box-shadow: 0 0 0 0.125em rgba(28, 160, 242, 0.25);\n}\n.v-select.is-info select {\n    border-color: #b86bff;\n}\n.v-select.is-info select:focus, .v-select.is-info select.is-focused, .v-select.is-info select:active, .v-select.is-info select.is-active {\n      box-shadow: 0 0 0 0.125em rgba(184, 107, 255, 0.25);\n}\n.v-select.is-success select {\n    border-color: #23d160;\n}\n.v-select.is-success select:focus, .v-select.is-success select.is-focused, .v-select.is-success select:active, .v-select.is-success select.is-active {\n      box-shadow: 0 0 0 0.125em rgba(35, 209, 96, 0.25);\n}\n.v-select.is-warning select {\n    border-color: #ffdd57;\n}\n.v-select.is-warning select:focus, .v-select.is-warning select.is-focused, .v-select.is-warning select:active, .v-select.is-warning select.is-active {\n      box-shadow: 0 0 0 0.125em rgba(255, 221, 87, 0.25);\n}\n.v-select.is-danger select {\n    border-color: #ff3860;\n}\n.v-select.is-danger select:focus, .v-select.is-danger select.is-focused, .v-select.is-danger select:active, .v-select.is-danger select.is-active {\n      box-shadow: 0 0 0 0.125em rgba(255, 56, 96, 0.25);\n}\n.v-select.is-small {\n    border-radius: 2px;\n    font-size: 0.75rem;\n}\n.v-select.is-medium {\n    font-size: 1.25rem;\n}\n.v-select.is-large {\n    font-size: 1.5rem;\n}\n.v-select.is-disabled::after {\n    border-color: #7a7a7a;\n}\n.v-select.is-fullwidth {\n    width: 100%;\n}\n.v-select.is-fullwidth select {\n      width: 100%;\n}\n.v-select.is-loading::after {\n    -webkit-animation: v-kf-spin-around 500ms infinite linear;\n            animation: v-kf-spin-around 500ms infinite linear;\n    border: 2px solid #dbdbdb;\n    border-radius: 290486px;\n    border-right-color: transparent;\n    border-top-color: transparent;\n    content: \"\";\n    display: block;\n    box-sizing: border-box;\n    height: 1em;\n    width: 1em;\n    position: relative;\n    margin-top: 0;\n    position: absolute;\n    right: 0.625em;\n    top: 0.625em;\n    -webkit-transform: none;\n            transform: none;\n}\n.v-select.is-loading.is-small:after {\n    font-size: 0.75rem;\n}\n.v-select.is-loading.is-medium:after {\n    font-size: 1.25rem;\n}\n.v-select.is-loading.is-large:after {\n    font-size: 1.5rem;\n}\n.v-textarea {\n  display: block;\n  max-width: 100%;\n  min-width: 100%;\n  padding: 0.625em;\n  resize: vertical;\n}\n.v-textarea:not([rows]) {\n    max-height: 600px;\n    min-height: 120px;\n}\n.v-textarea[rows] {\n    height: unset;\n}\n.v-textarea.has-fixed-size {\n    resize: none;\n}\n.v-checkbox,\n.v-radio {\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  cursor: pointer;\n  display: inline-block;\n  line-height: 1.25;\n  position: relative;\n}\n.v-checkbox input,\n  .v-radio input {\n    cursor: pointer;\n}\n.v-checkbox:hover,\n  .v-radio:hover {\n    color: #363636;\n}\n.v-checkbox[disabled],\n  .v-radio[disabled] {\n    color: #7a7a7a;\n    cursor: not-allowed;\n}\n.v-radio + .v-radio {\n  margin-left: 1em;\n}\n.v-label {\n  color: #363636;\n  display: block;\n  font-size: 1rem;\n  font-weight: 700;\n  line-height: 1.5em;\n}\n.v-label:not(:last-child) {\n    margin-bottom: 0.5em;\n}\n.v-label.is-small {\n    font-size: 0.75rem;\n}\n.v-label.is-medium {\n    font-size: 1.25rem;\n}\n.v-label.is-large {\n    font-size: 1.5rem;\n}\n.v-help {\n  display: block;\n  font-size: 0.75rem;\n  margin-top: 0.25rem;\n}\n.v-help.is-white {\n    color: white;\n}\n.v-help.is-black {\n    color: #0a0a0a;\n}\n.v-help.is-light {\n    color: whitesmoke;\n}\n.v-help.is-dark {\n    color: #363636;\n}\n.v-help.is-primary {\n    color: #1ca0f2;\n}\n.v-help.is-info {\n    color: #b86bff;\n}\n.v-help.is-success {\n    color: #23d160;\n}\n.v-help.is-warning {\n    color: #ffdd57;\n}\n.v-help.is-danger {\n    color: #ff3860;\n}\n.v-content:not(:last-child) {\n  margin-bottom: 1.5rem;\n}\n.v-content li + li {\n  margin-top: 0.25em;\n}\n.v-content p:not(:last-child),\n.v-content dl:not(:last-child),\n.v-content ol:not(:last-child),\n.v-content ul:not(:last-child),\n.v-content blockquote:not(:last-child),\n.v-content pre:not(:last-child),\n.v-content table:not(:last-child) {\n  margin-bottom: 1em;\n}\n.v-content h1,\n.v-content h2,\n.v-content h3,\n.v-content h4,\n.v-content h5,\n.v-content h6 {\n  color: #363636;\n  font-weight: 400;\n  line-height: 1.125;\n}\n.v-content h1 {\n  font-size: 2em;\n  margin-bottom: 0.5em;\n}\n.v-content h1:not(:first-child) {\n    margin-top: 1em;\n}\n.v-content h2 {\n  font-size: 1.75em;\n  margin-bottom: 0.5714em;\n}\n.v-content h2:not(:first-child) {\n    margin-top: 1.1428em;\n}\n.v-content h3 {\n  font-size: 1.5em;\n  margin-bottom: 0.6666em;\n}\n.v-content h3:not(:first-child) {\n    margin-top: 1.3333em;\n}\n.v-content h4 {\n  font-size: 1.25em;\n  margin-bottom: 0.8em;\n}\n.v-content h5 {\n  font-size: 1.125em;\n  margin-bottom: 0.8888em;\n}\n.v-content h6 {\n  font-size: 1em;\n  margin-bottom: 1em;\n}\n.v-content blockquote {\n  background-color: whitesmoke;\n  border-left: 5px solid #dbdbdb;\n  padding: 1.25em 1.5em;\n}\n.v-content ol {\n  list-style: decimal outside;\n  margin-left: 2em;\n  margin-top: 1em;\n}\n.v-content ul {\n  list-style: disc outside;\n  margin-left: 2em;\n  margin-top: 1em;\n}\n.v-content ul ul {\n    list-style-type: circle;\n    margin-top: 0.5em;\n}\n.v-content ul ul ul {\n      list-style-type: square;\n}\n.v-content dd {\n  margin-left: 2em;\n}\n.v-content figure {\n  margin-left: 2em;\n  margin-right: 2em;\n  text-align: center;\n}\n.v-content figure:not(:first-child) {\n    margin-top: 2em;\n}\n.v-content figure:not(:last-child) {\n    margin-bottom: 2em;\n}\n.v-content figure img {\n    display: inline-block;\n}\n.v-content figure figcaption {\n    font-style: italic;\n}\n.v-content pre {\n  -webkit-overflow-scrolling: touch;\n  overflow-x: auto;\n  padding: 1.25em 1.5em;\n  white-space: pre;\n  word-wrap: normal;\n}\n.v-content sup,\n.v-content sub {\n  font-size: 75%;\n}\n.v-content table {\n  width: 100%;\n}\n.v-content table td,\n  .v-content table th {\n    border: 1px solid #dbdbdb;\n    border-width: 0 0 1px;\n    padding: 0.5em 0.75em;\n    vertical-align: top;\n}\n.v-content table th {\n    color: #363636;\n    text-align: left;\n}\n.v-content table tr:hover {\n    background-color: whitesmoke;\n}\n.v-content table thead td,\n  .v-content table thead th {\n    border-width: 0 0 2px;\n    color: #363636;\n}\n.v-content table tfoot td,\n  .v-content table tfoot th {\n    border-width: 2px 0 0;\n    color: #363636;\n}\n.v-content table tbody tr:last-child td,\n  .v-content table tbody tr:last-child th {\n    border-bottom-width: 0;\n}\n.v-content.is-small {\n  font-size: 0.75rem;\n}\n.v-content.is-medium {\n  font-size: 1.25rem;\n}\n.v-content.is-large {\n  font-size: 1.5rem;\n}\n.v-media {\n  -webkit-box-align: start;\n      -ms-flex-align: start;\n          align-items: flex-start;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  text-align: left;\n}\n.v-media .v-content:not(:last-child) {\n    margin-bottom: 0.75rem;\n}\n.v-media .v-media {\n    border-top: 1px solid rgba(219, 219, 219, 0.5);\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    padding-top: 0.75rem;\n}\n.v-media .v-media .v-content:not(:last-child),\n    .v-media .v-media .v-control:not(:last-child) {\n      margin-bottom: 0.5rem;\n}\n.v-media .v-media .v-media {\n      padding-top: 0.5rem;\n}\n.v-media .v-media .v-media + .v-media {\n        margin-top: 0.5rem;\n}\n.v-media + .v-media {\n    border-top: 1px solid rgba(219, 219, 219, 0.5);\n    margin-top: 1rem;\n    padding-top: 1rem;\n}\n.v-media.is-large + .v-media {\n    margin-top: 1.5rem;\n    padding-top: 1.5rem;\n}\n.v-media-left,\n.v-media-right {\n  -ms-flex-preferred-size: auto;\n      flex-basis: auto;\n  -webkit-box-flex: 0;\n      -ms-flex-positive: 0;\n          flex-grow: 0;\n  -ms-flex-negative: 0;\n      flex-shrink: 0;\n}\n.v-media-left {\n  margin-right: 1rem;\n}\n.v-media-right {\n  margin-left: 1rem;\n}\n.v-media-content {\n  -ms-flex-preferred-size: auto;\n      flex-basis: auto;\n  -webkit-box-flex: 1;\n      -ms-flex-positive: 1;\n          flex-grow: 1;\n  -ms-flex-negative: 1;\n      flex-shrink: 1;\n  text-align: left;\n}\n.v-box {\n  background-color: white;\n  border-radius: 5px;\n  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);\n  color: #4a4a4a;\n  display: block;\n  padding: 1.25rem;\n}\n.v-box:not(:last-child) {\n    margin-bottom: 1.5rem;\n}\na.v-box:hover, a.v-box:focus {\n  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px #1ca0f2;\n}\na.v-box:active {\n  box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.2), 0 0 0 1px #1ca0f2;\n}\n.v-content:not(:last-child) {\n  margin-bottom: 1.5rem;\n}\n.v-content li + li {\n  margin-top: 0.25em;\n}\n.v-content p:not(:last-child),\n.v-content dl:not(:last-child),\n.v-content ol:not(:last-child),\n.v-content ul:not(:last-child),\n.v-content blockquote:not(:last-child),\n.v-content pre:not(:last-child),\n.v-content table:not(:last-child) {\n  margin-bottom: 1em;\n}\n.v-content h1,\n.v-content h2,\n.v-content h3,\n.v-content h4,\n.v-content h5,\n.v-content h6 {\n  color: #363636;\n  font-weight: 400;\n  line-height: 1.125;\n}\n.v-content h1 {\n  font-size: 2em;\n  margin-bottom: 0.5em;\n}\n.v-content h1:not(:first-child) {\n    margin-top: 1em;\n}\n.v-content h2 {\n  font-size: 1.75em;\n  margin-bottom: 0.5714em;\n}\n.v-content h2:not(:first-child) {\n    margin-top: 1.1428em;\n}\n.v-content h3 {\n  font-size: 1.5em;\n  margin-bottom: 0.6666em;\n}\n.v-content h3:not(:first-child) {\n    margin-top: 1.3333em;\n}\n.v-content h4 {\n  font-size: 1.25em;\n  margin-bottom: 0.8em;\n}\n.v-content h5 {\n  font-size: 1.125em;\n  margin-bottom: 0.8888em;\n}\n.v-content h6 {\n  font-size: 1em;\n  margin-bottom: 1em;\n}\n.v-content blockquote {\n  background-color: whitesmoke;\n  border-left: 5px solid #dbdbdb;\n  padding: 1.25em 1.5em;\n}\n.v-content ol {\n  list-style: decimal outside;\n  margin-left: 2em;\n  margin-top: 1em;\n}\n.v-content ul {\n  list-style: disc outside;\n  margin-left: 2em;\n  margin-top: 1em;\n}\n.v-content ul ul {\n    list-style-type: circle;\n    margin-top: 0.5em;\n}\n.v-content ul ul ul {\n      list-style-type: square;\n}\n.v-content dd {\n  margin-left: 2em;\n}\n.v-content figure {\n  margin-left: 2em;\n  margin-right: 2em;\n  text-align: center;\n}\n.v-content figure:not(:first-child) {\n    margin-top: 2em;\n}\n.v-content figure:not(:last-child) {\n    margin-bottom: 2em;\n}\n.v-content figure img {\n    display: inline-block;\n}\n.v-content figure figcaption {\n    font-style: italic;\n}\n.v-content pre {\n  -webkit-overflow-scrolling: touch;\n  overflow-x: auto;\n  padding: 1.25em 1.5em;\n  white-space: pre;\n  word-wrap: normal;\n}\n.v-content sup,\n.v-content sub {\n  font-size: 75%;\n}\n.v-content table {\n  width: 100%;\n}\n.v-content table td,\n  .v-content table th {\n    border: 1px solid #dbdbdb;\n    border-width: 0 0 1px;\n    padding: 0.5em 0.75em;\n    vertical-align: top;\n}\n.v-content table th {\n    color: #363636;\n    text-align: left;\n}\n.v-content table tr:hover {\n    background-color: whitesmoke;\n}\n.v-content table thead td,\n  .v-content table thead th {\n    border-width: 0 0 2px;\n    color: #363636;\n}\n.v-content table tfoot td,\n  .v-content table tfoot th {\n    border-width: 2px 0 0;\n    color: #363636;\n}\n.v-content table tbody tr:last-child td,\n  .v-content table tbody tr:last-child th {\n    border-bottom-width: 0;\n}\n.v-content.is-small {\n  font-size: 0.75rem;\n}\n.v-content.is-medium {\n  font-size: 1.25rem;\n}\n.v-content.is-large {\n  font-size: 1.5rem;\n}\n.v-notification {\n  background-color: whitesmoke;\n  border-radius: 3px;\n  padding: 1.25rem 2.5rem 1.25rem 1.5rem;\n  position: relative;\n}\n.v-notification:not(:last-child) {\n    margin-bottom: 1.5rem;\n}\n.v-notification a:not(.button) {\n    color: currentColor;\n    text-decoration: underline;\n}\n.v-notification strong {\n    color: currentColor;\n}\n.v-notification code,\n  .v-notification pre {\n    background: white;\n}\n.v-notification pre code {\n    background: transparent;\n}\n.v-notification > .v-close {\n    position: absolute;\n    right: 0.5em;\n    top: 0.5em;\n}\n.v-notification .v-title,\n  .v-notification .v-subtitle,\n  .v-notification .v-content {\n    color: currentColor;\n}\n.v-notification.is-white {\n    background-color: white;\n    color: #0a0a0a;\n}\n.v-notification.is-black {\n    background-color: #0a0a0a;\n    color: white;\n}\n.v-notification.is-light {\n    background-color: whitesmoke;\n    color: #363636;\n}\n.v-notification.is-dark {\n    background-color: #363636;\n    color: whitesmoke;\n}\n.v-notification.is-primary {\n    background-color: #1ca0f2;\n    color: #fff;\n}\n.v-notification.is-info {\n    background-color: #b86bff;\n    color: #fff;\n}\n.v-notification.is-success {\n    background-color: #23d160;\n    color: #fff;\n}\n.v-notification.is-warning {\n    background-color: #ffdd57;\n    color: rgba(0, 0, 0, 0.7);\n}\n.v-notification.is-danger {\n    background-color: #ff3860;\n    color: #fff;\n}\n.v-notification-popup {\n  position: fixed;\n  right: 16px;\n  box-shadow: 0 0 3px rgba(0, 0, 0, 0.04), 0 1px 4px rgba(0, 0, 0, 0.15);\n  transition: opacity 0.3s, right .3s, top 0.4s, -webkit-transform .3s;\n  transition: opacity 0.3s, transform .3s, right .3s, top 0.4s;\n  transition: opacity 0.3s, transform .3s, right .3s, top 0.4s, -webkit-transform .3s;\n  overflow: hidden;\n  z-index: 1010;\n  max-width: 480px;\n}\n.v-notification-popup > .v-notification {\n    padding-top: 1rem;\n}\n.v-notification-popup .has-title {\n    padding: 0;\n    margin: 0;\n    font-size: 1.25rem;\n}\n.v-notification-popup .has-content {\n    padding-top: 0.25rem;\n}\n.v-table {\n  width: 100%;\n  border-spacing: 0;\n  border-collapse: collapse;\n  display: table;\n  cursor: default;\n  color: #363636;\n  margin-bottom: 1.5rem;\n}\n.v-table th, .v-table td {\n    border: 0;\n}\n.v-table th {\n    text-align: left;\n    font-weight: bold;\n}\n.v-table td,\n  .v-table th {\n    border: 1px solid #dbdbdb;\n    border-width: 0 0 1px;\n    padding: 0.65em 0.75em;\n    vertical-align: top;\n}\n.v-table td.is-white,\n    .v-table th.is-white {\n      background-color: white;\n      border-color: white;\n      color: #0a0a0a;\n}\n.v-table td.is-black,\n    .v-table th.is-black {\n      background-color: #0a0a0a;\n      border-color: #0a0a0a;\n      color: white;\n}\n.v-table td.is-light,\n    .v-table th.is-light {\n      background-color: whitesmoke;\n      border-color: whitesmoke;\n      color: #363636;\n}\n.v-table td.is-dark,\n    .v-table th.is-dark {\n      background-color: #363636;\n      border-color: #363636;\n      color: whitesmoke;\n}\n.v-table td.is-primary,\n    .v-table th.is-primary {\n      background-color: #1ca0f2;\n      border-color: #1ca0f2;\n      color: #fff;\n}\n.v-table td.is-info,\n    .v-table th.is-info {\n      background-color: #b86bff;\n      border-color: #b86bff;\n      color: #fff;\n}\n.v-table td.is-success,\n    .v-table th.is-success {\n      background-color: #23d160;\n      border-color: #23d160;\n      color: #fff;\n}\n.v-table td.is-warning,\n    .v-table th.is-warning {\n      background-color: #ffdd57;\n      border-color: #ffdd57;\n      color: rgba(0, 0, 0, 0.7);\n}\n.v-table td.is-danger,\n    .v-table th.is-danger {\n      background-color: #ff3860;\n      border-color: #ff3860;\n      color: #fff;\n}\n.v-table td.is-narrow,\n    .v-table th.is-narrow {\n      white-space: nowrap;\n      width: 1%;\n}\n.v-table th {\n    color: #363636;\n    text-align: left;\n    background-color: #ededed;\n}\n.v-table tr:hover {\n    background-color: #fafafa;\n}\n.v-table tr.is-selected {\n    background-color: #1ca0f2;\n    color: #fff;\n}\n.v-table tr.is-selected a,\n    .v-table tr.is-selected strong {\n      color: currentColor;\n}\n.v-table tr.is-selected td,\n    .v-table tr.is-selected th {\n      border-color: #fff;\n      color: currentColor;\n}\n.v-table thead td,\n  .v-table thead th {\n    border-width: 0 0 2px;\n    color: #363636;\n}\n.v-table tfoot td,\n  .v-table tfoot th {\n    border-width: 2px 0 0;\n    color: #363636;\n}\n.v-table tbody tr:last-child td,\n  .v-table tbody tr:last-child th {\n    border-bottom-width: 0;\n}\n.v-table.is-bordered td,\n  .v-table.is-bordered th {\n    border-width: 1px;\n}\n.v-table.is-bordered tr:last-child td,\n  .v-table.is-bordered tr:last-child th {\n    border-bottom-width: 1px;\n}\n.v-table.is-fit-content {\n    width: auto;\n}\n.v-table.is-narrow td,\n  .v-table.is-narrow th {\n    padding: 0.25em 0.5em;\n}\n.v-table.is-striped tbody tr:not(.is-selected):nth-child(even) {\n    background-color: #fafafa;\n}\n.v-table.is-striped tbody tr:not(.is-selected):nth-child(even):hover {\n      background-color: whitesmoke;\n}\n.v-badge {\n  position: relative;\n  display: inline-block;\n  line-height: 1;\n  vertical-align: middle;\n}\n.v-badge .has-badge {\n    width: 42px;\n    height: 42px;\n    background: #eee;\n    border-radius: 6px;\n    display: inline-block;\n}\n.v-badge .has-badge-dot, .v-badge .has-badge-count {\n    position: absolute;\n    -webkit-transform: translateX(-50%);\n            transform: translateX(-50%);\n    -webkit-transform-origin: 0 center;\n            transform-origin: 0 center;\n    top: -4px;\n    right: -8px;\n    height: 8px;\n    min-width: 8px;\n    border-radius: 100%;\n    background: #ed3f14;\n    z-index: 10;\n    box-shadow: 0 0 0 1px white;\n}\n.v-badge .has-badge-count {\n    -webkit-transform: translateX(50%);\n            transform: translateX(50%);\n    top: -10px;\n    right: 0;\n    height: 20px;\n    border-radius: 10px;\n    min-width: 20px;\n    background: #ed3f14;\n    border: 1px solid transparent;\n    color: white;\n    line-height: 18px;\n    text-align: center;\n    padding: 0 6px;\n    font-size: 12px;\n    white-space: nowrap;\n    -webkit-transform-origin: -10% center;\n            transform-origin: -10% center;\n    z-index: 10;\n    box-sizing: border-box;\n    box-shadow: 0 0 0 1px white;\n}\n.v-close {\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  -moz-appearance: none;\n  -webkit-appearance: none;\n  background-color: rgba(10, 10, 10, 0.2);\n  border: none;\n  border-radius: 290486px;\n  cursor: pointer;\n  display: inline-block;\n  -webkit-box-flex: 0;\n      -ms-flex-positive: 0;\n          flex-grow: 0;\n  -ms-flex-negative: 0;\n      flex-shrink: 0;\n  font-size: 1rem;\n  height: 20px;\n  max-height: 20px;\n  max-width: 20px;\n  min-height: 20px;\n  min-width: 20px;\n  outline: none;\n  position: relative;\n  vertical-align: top;\n  width: 20px;\n}\n.v-close:before, .v-close:after {\n    background-color: white;\n    content: \"\";\n    display: block;\n    left: 50%;\n    position: absolute;\n    top: 50%;\n    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);\n            transform: translateX(-50%) translateY(-50%) rotate(45deg);\n    -webkit-transform-origin: center center;\n            transform-origin: center center;\n}\n.v-close:before {\n    height: 2px;\n    width: 50%;\n}\n.v-close:after {\n    height: 50%;\n    width: 2px;\n}\n.v-close:hover, .v-close:focus {\n    background-color: rgba(10, 10, 10, 0.3);\n}\n.v-close:active {\n    background-color: rgba(10, 10, 10, 0.4);\n}\n.v-close.is-white {\n    background-color: rgba(255, 255, 255, 0.4);\n}\n.v-close.is-white:hover, .v-close.is-white:focus {\n      background-color: rgba(255, 255, 255, 0.6);\n}\n.v-close.is-white:active {\n      background-color: rgba(255, 255, 255, 0.9);\n}\n.v-close.is-black {\n    background-color: rgba(10, 10, 10, 0.4);\n}\n.v-close.is-black:hover, .v-close.is-black:focus {\n      background-color: rgba(10, 10, 10, 0.6);\n}\n.v-close.is-black:active {\n      background-color: rgba(10, 10, 10, 0.9);\n}\n.v-close.is-light {\n    background-color: rgba(245, 245, 245, 0.4);\n}\n.v-close.is-light:hover, .v-close.is-light:focus {\n      background-color: rgba(245, 245, 245, 0.6);\n}\n.v-close.is-light:active {\n      background-color: rgba(245, 245, 245, 0.9);\n}\n.v-close.is-dark {\n    background-color: rgba(54, 54, 54, 0.4);\n}\n.v-close.is-dark:hover, .v-close.is-dark:focus {\n      background-color: rgba(54, 54, 54, 0.6);\n}\n.v-close.is-dark:active {\n      background-color: rgba(54, 54, 54, 0.9);\n}\n.v-close.is-primary {\n    background-color: rgba(28, 160, 242, 0.4);\n}\n.v-close.is-primary:hover, .v-close.is-primary:focus {\n      background-color: rgba(28, 160, 242, 0.6);\n}\n.v-close.is-primary:active {\n      background-color: rgba(28, 160, 242, 0.9);\n}\n.v-close.is-info {\n    background-color: rgba(184, 107, 255, 0.4);\n}\n.v-close.is-info:hover, .v-close.is-info:focus {\n      background-color: rgba(184, 107, 255, 0.6);\n}\n.v-close.is-info:active {\n      background-color: rgba(184, 107, 255, 0.9);\n}\n.v-close.is-success {\n    background-color: rgba(35, 209, 96, 0.4);\n}\n.v-close.is-success:hover, .v-close.is-success:focus {\n      background-color: rgba(35, 209, 96, 0.6);\n}\n.v-close.is-success:active {\n      background-color: rgba(35, 209, 96, 0.9);\n}\n.v-close.is-warning {\n    background-color: rgba(255, 221, 87, 0.4);\n}\n.v-close.is-warning:hover, .v-close.is-warning:focus {\n      background-color: rgba(255, 221, 87, 0.6);\n}\n.v-close.is-warning:active {\n      background-color: rgba(255, 221, 87, 0.9);\n}\n.v-close.is-danger {\n    background-color: rgba(255, 56, 96, 0.4);\n}\n.v-close.is-danger:hover, .v-close.is-danger:focus {\n      background-color: rgba(255, 56, 96, 0.6);\n}\n.v-close.is-danger:active {\n      background-color: rgba(255, 56, 96, 0.9);\n}\n.v-close.is-small {\n    height: 16px;\n    max-height: 16px;\n    max-width: 16px;\n    min-height: 16px;\n    min-width: 16px;\n    width: 16px;\n}\n.v-close.is-medium {\n    height: 24px;\n    max-height: 24px;\n    max-width: 24px;\n    min-height: 24px;\n    min-width: 24px;\n    width: 24px;\n}\n.v-close.is-large {\n    height: 32px;\n    max-height: 32px;\n    max-width: 32px;\n    min-height: 32px;\n    min-width: 32px;\n    width: 32px;\n}\n.v-close.is-transparent {\n    background-color: transparent !important;\n}\n.v-close.is-transparent:before, .v-close.is-transparent:after {\n      background-color: rgba(10, 10, 10, 0.6);\n}\n.v-close.is-transparent:hover::before, .v-close.is-transparent:hover::after, .v-close.is-transparent:focus::before, .v-close.is-transparent:focus::after {\n      background-color: rgba(10, 10, 10, 0.8);\n}\n.v-close.is-transparent:active::before, .v-close.is-transparent:active::after {\n      background-color: #0a0a0a;\n}\n.v-close.is-transparent.is-white::before, .v-close.is-transparent.is-white::after {\n      background-color: rgba(255, 255, 255, 0.6);\n}\n.v-close.is-transparent.is-white:hover::before, .v-close.is-transparent.is-white:hover::after, .v-close.is-transparent.is-white:focus::before, .v-close.is-transparent.is-white:focus::after {\n      background-color: rgba(255, 255, 255, 0.8);\n}\n.v-close.is-transparent.is-white:active::before, .v-close.is-transparent.is-white:active::after {\n      background-color: white;\n}\n.v-close.is-transparent.is-black::before, .v-close.is-transparent.is-black::after {\n      background-color: rgba(10, 10, 10, 0.6);\n}\n.v-close.is-transparent.is-black:hover::before, .v-close.is-transparent.is-black:hover::after, .v-close.is-transparent.is-black:focus::before, .v-close.is-transparent.is-black:focus::after {\n      background-color: rgba(10, 10, 10, 0.8);\n}\n.v-close.is-transparent.is-black:active::before, .v-close.is-transparent.is-black:active::after {\n      background-color: #0a0a0a;\n}\n.v-close.is-transparent.is-light::before, .v-close.is-transparent.is-light::after {\n      background-color: rgba(245, 245, 245, 0.6);\n}\n.v-close.is-transparent.is-light:hover::before, .v-close.is-transparent.is-light:hover::after, .v-close.is-transparent.is-light:focus::before, .v-close.is-transparent.is-light:focus::after {\n      background-color: rgba(245, 245, 245, 0.8);\n}\n.v-close.is-transparent.is-light:active::before, .v-close.is-transparent.is-light:active::after {\n      background-color: whitesmoke;\n}\n.v-close.is-transparent.is-dark::before, .v-close.is-transparent.is-dark::after {\n      background-color: rgba(54, 54, 54, 0.6);\n}\n.v-close.is-transparent.is-dark:hover::before, .v-close.is-transparent.is-dark:hover::after, .v-close.is-transparent.is-dark:focus::before, .v-close.is-transparent.is-dark:focus::after {\n      background-color: rgba(54, 54, 54, 0.8);\n}\n.v-close.is-transparent.is-dark:active::before, .v-close.is-transparent.is-dark:active::after {\n      background-color: #363636;\n}\n.v-close.is-transparent.is-primary::before, .v-close.is-transparent.is-primary::after {\n      background-color: rgba(28, 160, 242, 0.6);\n}\n.v-close.is-transparent.is-primary:hover::before, .v-close.is-transparent.is-primary:hover::after, .v-close.is-transparent.is-primary:focus::before, .v-close.is-transparent.is-primary:focus::after {\n      background-color: rgba(28, 160, 242, 0.8);\n}\n.v-close.is-transparent.is-primary:active::before, .v-close.is-transparent.is-primary:active::after {\n      background-color: #1ca0f2;\n}\n.v-close.is-transparent.is-info::before, .v-close.is-transparent.is-info::after {\n      background-color: rgba(184, 107, 255, 0.6);\n}\n.v-close.is-transparent.is-info:hover::before, .v-close.is-transparent.is-info:hover::after, .v-close.is-transparent.is-info:focus::before, .v-close.is-transparent.is-info:focus::after {\n      background-color: rgba(184, 107, 255, 0.8);\n}\n.v-close.is-transparent.is-info:active::before, .v-close.is-transparent.is-info:active::after {\n      background-color: #b86bff;\n}\n.v-close.is-transparent.is-success::before, .v-close.is-transparent.is-success::after {\n      background-color: rgba(35, 209, 96, 0.6);\n}\n.v-close.is-transparent.is-success:hover::before, .v-close.is-transparent.is-success:hover::after, .v-close.is-transparent.is-success:focus::before, .v-close.is-transparent.is-success:focus::after {\n      background-color: rgba(35, 209, 96, 0.8);\n}\n.v-close.is-transparent.is-success:active::before, .v-close.is-transparent.is-success:active::after {\n      background-color: #23d160;\n}\n.v-close.is-transparent.is-warning::before, .v-close.is-transparent.is-warning::after {\n      background-color: rgba(255, 221, 87, 0.6);\n}\n.v-close.is-transparent.is-warning:hover::before, .v-close.is-transparent.is-warning:hover::after, .v-close.is-transparent.is-warning:focus::before, .v-close.is-transparent.is-warning:focus::after {\n      background-color: rgba(255, 221, 87, 0.8);\n}\n.v-close.is-transparent.is-warning:active::before, .v-close.is-transparent.is-warning:active::after {\n      background-color: #ffdd57;\n}\n.v-close.is-transparent.is-danger::before, .v-close.is-transparent.is-danger::after {\n      background-color: rgba(255, 56, 96, 0.6);\n}\n.v-close.is-transparent.is-danger:hover::before, .v-close.is-transparent.is-danger:hover::after, .v-close.is-transparent.is-danger:focus::before, .v-close.is-transparent.is-danger:focus::after {\n      background-color: rgba(255, 56, 96, 0.8);\n}\n.v-close.is-transparent.is-danger:active::before, .v-close.is-transparent.is-danger:active::after {\n      background-color: #ff3860;\n}\n.v-modal {\n  bottom: 0;\n  left: 0;\n  position: absolute;\n  right: 0;\n  top: 0;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  display: none;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  overflow: hidden;\n  position: fixed;\n  z-index: 1011;\n}\n.v-modal.is-active {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n}\n.v-modal-overlay {\n  bottom: 0;\n  left: 0;\n  position: absolute;\n  right: 0;\n  top: 0;\n  background-color: rgba(10, 10, 10, 0.8);\n}\n.v-modal-content,\n.v-modal-card {\n  margin: 0 20px;\n  max-height: calc(100vh - 160px);\n  overflow: auto;\n  position: relative;\n  width: 640px;\n  -webkit-animation-duration: 1s;\n          animation-duration: 1s;\n  -webkit-animation-fill-mode: both;\n          animation-fill-mode: both;\n  -webkit-animation: v-kf-fade-in-down 800ms ease;\n          animation: v-kf-fade-in-down 800ms ease;\n}\n.v-modal-content.is-small,\n  .v-modal-card.is-small {\n    width: 420px;\n}\n.v-modal-content.is-medium,\n  .v-modal-card.is-medium {\n    width: 840px;\n}\n.v-modal-content.is-large,\n  .v-modal-card.is-large {\n    width: 980px;\n}\n.v-modal-close {\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  -moz-appearance: none;\n  -webkit-appearance: none;\n  background-color: rgba(10, 10, 10, 0.2);\n  border: none;\n  border-radius: 290486px;\n  cursor: pointer;\n  display: inline-block;\n  -webkit-box-flex: 0;\n      -ms-flex-positive: 0;\n          flex-grow: 0;\n  -ms-flex-negative: 0;\n      flex-shrink: 0;\n  font-size: 1rem;\n  height: 20px;\n  max-height: 20px;\n  max-width: 20px;\n  min-height: 20px;\n  min-width: 20px;\n  outline: none;\n  position: relative;\n  vertical-align: top;\n  width: 20px;\n  background: none;\n  height: 40px;\n  position: fixed;\n  right: 20px;\n  top: 20px;\n  width: 40px;\n}\n.v-modal-close:before, .v-modal-close:after {\n    background-color: white;\n    content: \"\";\n    display: block;\n    left: 50%;\n    position: absolute;\n    top: 50%;\n    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);\n            transform: translateX(-50%) translateY(-50%) rotate(45deg);\n    -webkit-transform-origin: center center;\n            transform-origin: center center;\n}\n.v-modal-close:before {\n    height: 2px;\n    width: 50%;\n}\n.v-modal-close:after {\n    height: 50%;\n    width: 2px;\n}\n.v-modal-close:hover, .v-modal-close:focus {\n    background-color: rgba(10, 10, 10, 0.3);\n}\n.v-modal-close:active {\n    background-color: rgba(10, 10, 10, 0.4);\n}\n.v-modal-close.is-white {\n    background-color: rgba(255, 255, 255, 0.4);\n}\n.v-modal-close.is-white:hover, .v-modal-close.is-white:focus {\n      background-color: rgba(255, 255, 255, 0.6);\n}\n.v-modal-close.is-white:active {\n      background-color: rgba(255, 255, 255, 0.9);\n}\n.v-modal-close.is-black {\n    background-color: rgba(10, 10, 10, 0.4);\n}\n.v-modal-close.is-black:hover, .v-modal-close.is-black:focus {\n      background-color: rgba(10, 10, 10, 0.6);\n}\n.v-modal-close.is-black:active {\n      background-color: rgba(10, 10, 10, 0.9);\n}\n.v-modal-close.is-light {\n    background-color: rgba(245, 245, 245, 0.4);\n}\n.v-modal-close.is-light:hover, .v-modal-close.is-light:focus {\n      background-color: rgba(245, 245, 245, 0.6);\n}\n.v-modal-close.is-light:active {\n      background-color: rgba(245, 245, 245, 0.9);\n}\n.v-modal-close.is-dark {\n    background-color: rgba(54, 54, 54, 0.4);\n}\n.v-modal-close.is-dark:hover, .v-modal-close.is-dark:focus {\n      background-color: rgba(54, 54, 54, 0.6);\n}\n.v-modal-close.is-dark:active {\n      background-color: rgba(54, 54, 54, 0.9);\n}\n.v-modal-close.is-primary {\n    background-color: rgba(28, 160, 242, 0.4);\n}\n.v-modal-close.is-primary:hover, .v-modal-close.is-primary:focus {\n      background-color: rgba(28, 160, 242, 0.6);\n}\n.v-modal-close.is-primary:active {\n      background-color: rgba(28, 160, 242, 0.9);\n}\n.v-modal-close.is-info {\n    background-color: rgba(184, 107, 255, 0.4);\n}\n.v-modal-close.is-info:hover, .v-modal-close.is-info:focus {\n      background-color: rgba(184, 107, 255, 0.6);\n}\n.v-modal-close.is-info:active {\n      background-color: rgba(184, 107, 255, 0.9);\n}\n.v-modal-close.is-success {\n    background-color: rgba(35, 209, 96, 0.4);\n}\n.v-modal-close.is-success:hover, .v-modal-close.is-success:focus {\n      background-color: rgba(35, 209, 96, 0.6);\n}\n.v-modal-close.is-success:active {\n      background-color: rgba(35, 209, 96, 0.9);\n}\n.v-modal-close.is-warning {\n    background-color: rgba(255, 221, 87, 0.4);\n}\n.v-modal-close.is-warning:hover, .v-modal-close.is-warning:focus {\n      background-color: rgba(255, 221, 87, 0.6);\n}\n.v-modal-close.is-warning:active {\n      background-color: rgba(255, 221, 87, 0.9);\n}\n.v-modal-close.is-danger {\n    background-color: rgba(255, 56, 96, 0.4);\n}\n.v-modal-close.is-danger:hover, .v-modal-close.is-danger:focus {\n      background-color: rgba(255, 56, 96, 0.6);\n}\n.v-modal-close.is-danger:active {\n      background-color: rgba(255, 56, 96, 0.9);\n}\n.v-modal-close.is-small {\n    height: 16px;\n    max-height: 16px;\n    max-width: 16px;\n    min-height: 16px;\n    min-width: 16px;\n    width: 16px;\n}\n.v-modal-close.is-medium {\n    height: 24px;\n    max-height: 24px;\n    max-width: 24px;\n    min-height: 24px;\n    min-width: 24px;\n    width: 24px;\n}\n.v-modal-close.is-large {\n    height: 32px;\n    max-height: 32px;\n    max-width: 32px;\n    min-height: 32px;\n    min-width: 32px;\n    width: 32px;\n}\n.v-modal-close.is-transparent {\n    background-color: transparent !important;\n}\n.v-modal-close.is-transparent:before, .v-modal-close.is-transparent:after {\n      background-color: rgba(10, 10, 10, 0.6);\n}\n.v-modal-close.is-transparent:hover::before, .v-modal-close.is-transparent:hover::after, .v-modal-close.is-transparent:focus::before, .v-modal-close.is-transparent:focus::after {\n      background-color: rgba(10, 10, 10, 0.8);\n}\n.v-modal-close.is-transparent:active::before, .v-modal-close.is-transparent:active::after {\n      background-color: #0a0a0a;\n}\n.v-modal-close.is-transparent.is-white::before, .v-modal-close.is-transparent.is-white::after {\n      background-color: rgba(255, 255, 255, 0.6);\n}\n.v-modal-close.is-transparent.is-white:hover::before, .v-modal-close.is-transparent.is-white:hover::after, .v-modal-close.is-transparent.is-white:focus::before, .v-modal-close.is-transparent.is-white:focus::after {\n      background-color: rgba(255, 255, 255, 0.8);\n}\n.v-modal-close.is-transparent.is-white:active::before, .v-modal-close.is-transparent.is-white:active::after {\n      background-color: white;\n}\n.v-modal-close.is-transparent.is-black::before, .v-modal-close.is-transparent.is-black::after {\n      background-color: rgba(10, 10, 10, 0.6);\n}\n.v-modal-close.is-transparent.is-black:hover::before, .v-modal-close.is-transparent.is-black:hover::after, .v-modal-close.is-transparent.is-black:focus::before, .v-modal-close.is-transparent.is-black:focus::after {\n      background-color: rgba(10, 10, 10, 0.8);\n}\n.v-modal-close.is-transparent.is-black:active::before, .v-modal-close.is-transparent.is-black:active::after {\n      background-color: #0a0a0a;\n}\n.v-modal-close.is-transparent.is-light::before, .v-modal-close.is-transparent.is-light::after {\n      background-color: rgba(245, 245, 245, 0.6);\n}\n.v-modal-close.is-transparent.is-light:hover::before, .v-modal-close.is-transparent.is-light:hover::after, .v-modal-close.is-transparent.is-light:focus::before, .v-modal-close.is-transparent.is-light:focus::after {\n      background-color: rgba(245, 245, 245, 0.8);\n}\n.v-modal-close.is-transparent.is-light:active::before, .v-modal-close.is-transparent.is-light:active::after {\n      background-color: whitesmoke;\n}\n.v-modal-close.is-transparent.is-dark::before, .v-modal-close.is-transparent.is-dark::after {\n      background-color: rgba(54, 54, 54, 0.6);\n}\n.v-modal-close.is-transparent.is-dark:hover::before, .v-modal-close.is-transparent.is-dark:hover::after, .v-modal-close.is-transparent.is-dark:focus::before, .v-modal-close.is-transparent.is-dark:focus::after {\n      background-color: rgba(54, 54, 54, 0.8);\n}\n.v-modal-close.is-transparent.is-dark:active::before, .v-modal-close.is-transparent.is-dark:active::after {\n      background-color: #363636;\n}\n.v-modal-close.is-transparent.is-primary::before, .v-modal-close.is-transparent.is-primary::after {\n      background-color: rgba(28, 160, 242, 0.6);\n}\n.v-modal-close.is-transparent.is-primary:hover::before, .v-modal-close.is-transparent.is-primary:hover::after, .v-modal-close.is-transparent.is-primary:focus::before, .v-modal-close.is-transparent.is-primary:focus::after {\n      background-color: rgba(28, 160, 242, 0.8);\n}\n.v-modal-close.is-transparent.is-primary:active::before, .v-modal-close.is-transparent.is-primary:active::after {\n      background-color: #1ca0f2;\n}\n.v-modal-close.is-transparent.is-info::before, .v-modal-close.is-transparent.is-info::after {\n      background-color: rgba(184, 107, 255, 0.6);\n}\n.v-modal-close.is-transparent.is-info:hover::before, .v-modal-close.is-transparent.is-info:hover::after, .v-modal-close.is-transparent.is-info:focus::before, .v-modal-close.is-transparent.is-info:focus::after {\n      background-color: rgba(184, 107, 255, 0.8);\n}\n.v-modal-close.is-transparent.is-info:active::before, .v-modal-close.is-transparent.is-info:active::after {\n      background-color: #b86bff;\n}\n.v-modal-close.is-transparent.is-success::before, .v-modal-close.is-transparent.is-success::after {\n      background-color: rgba(35, 209, 96, 0.6);\n}\n.v-modal-close.is-transparent.is-success:hover::before, .v-modal-close.is-transparent.is-success:hover::after, .v-modal-close.is-transparent.is-success:focus::before, .v-modal-close.is-transparent.is-success:focus::after {\n      background-color: rgba(35, 209, 96, 0.8);\n}\n.v-modal-close.is-transparent.is-success:active::before, .v-modal-close.is-transparent.is-success:active::after {\n      background-color: #23d160;\n}\n.v-modal-close.is-transparent.is-warning::before, .v-modal-close.is-transparent.is-warning::after {\n      background-color: rgba(255, 221, 87, 0.6);\n}\n.v-modal-close.is-transparent.is-warning:hover::before, .v-modal-close.is-transparent.is-warning:hover::after, .v-modal-close.is-transparent.is-warning:focus::before, .v-modal-close.is-transparent.is-warning:focus::after {\n      background-color: rgba(255, 221, 87, 0.8);\n}\n.v-modal-close.is-transparent.is-warning:active::before, .v-modal-close.is-transparent.is-warning:active::after {\n      background-color: #ffdd57;\n}\n.v-modal-close.is-transparent.is-danger::before, .v-modal-close.is-transparent.is-danger::after {\n      background-color: rgba(255, 56, 96, 0.6);\n}\n.v-modal-close.is-transparent.is-danger:hover::before, .v-modal-close.is-transparent.is-danger:hover::after, .v-modal-close.is-transparent.is-danger:focus::before, .v-modal-close.is-transparent.is-danger:focus::after {\n      background-color: rgba(255, 56, 96, 0.8);\n}\n.v-modal-close.is-transparent.is-danger:active::before, .v-modal-close.is-transparent.is-danger:active::after {\n      background-color: #ff3860;\n}\n.v-modal-card {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  max-height: calc(100vh - 40px);\n  overflow: hidden;\n}\n.v-modal-card-head,\n.v-modal-card-foot {\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  background-color: whitesmoke;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-negative: 0;\n      flex-shrink: 0;\n  -webkit-box-pack: start;\n      -ms-flex-pack: start;\n          justify-content: flex-start;\n  padding: 20px;\n  position: relative;\n}\n.v-modal-card-head {\n  border-bottom: 1px solid #dbdbdb;\n  border-top-left-radius: 5px;\n  border-top-right-radius: 5px;\n}\n.v-modal-card-title {\n  color: #363636;\n  -webkit-box-flex: 1;\n      -ms-flex-positive: 1;\n          flex-grow: 1;\n  -ms-flex-negative: 0;\n      flex-shrink: 0;\n  font-size: 1.5rem;\n  line-height: 1;\n}\n.v-modal-card-foot {\n  border-bottom-left-radius: 5px;\n  border-bottom-right-radius: 5px;\n  border-top: 1px solid #dbdbdb;\n}\n.v-modal-card-foot .v-btn:not(:last-child) {\n    margin-right: 10px;\n}\n.v-modal-card-body {\n  -webkit-overflow-scrolling: touch;\n  background-color: white;\n  -webkit-box-flex: 1;\n      -ms-flex-positive: 1;\n          flex-grow: 1;\n  -ms-flex-negative: 1;\n      flex-shrink: 1;\n  overflow: auto;\n  padding: 20px;\n}\n.v-dropdown {\n  display: -webkit-inline-box;\n  display: -ms-inline-flexbox;\n  display: inline-flex;\n  position: relative;\n  vertical-align: top;\n}\n.v-dropdown.is-active .v-dropdown-menu, .v-dropdown.is-hoverable:hover .v-dropdown-menu {\n    display: block;\n}\n.v-dropdown.is-right .v-dropdown-menu {\n    left: auto;\n    right: 0;\n}\n.v-dropdown.is-up .v-dropdown-menu {\n    bottom: 100%;\n    padding-bottom: 4px;\n    padding-top: unset;\n    top: auto;\n}\n.v-dropdown-menu {\n  display: none;\n  left: 0;\n  min-width: 12rem;\n  padding-top: 4px;\n  position: absolute;\n  top: 100%;\n  z-index: 20;\n}\n.v-dropdown-content {\n  background-color: white;\n  border-radius: 3px;\n  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);\n  padding-bottom: 0.5rem;\n  padding-top: 0.5rem;\n}\n.v-dropdown-item {\n  color: #4a4a4a;\n  display: block;\n  font-size: 0.875rem;\n  line-height: 1.5;\n  padding: 0.375rem 1rem;\n  position: relative;\n}\na.v-dropdown-item {\n  padding-right: 3rem;\n  white-space: nowrap;\n}\na.v-dropdown-item:hover {\n    background-color: whitesmoke;\n    color: #0a0a0a;\n}\na.v-dropdown-item.is-active {\n    background-color: #1ca0f2;\n    color: #fff;\n}\n.v-dropdown-divider {\n  background-color: #dbdbdb;\n  border: none;\n  display: block;\n  height: 1px;\n  margin: 0.5rem 0;\n}\n.v-sidebar {\n  font-size: 1rem;\n}\n.v-sidebar.is-small {\n    font-size: 0.75rem;\n}\n.v-sidebar.is-medium {\n    font-size: 1.25rem;\n}\n.v-sidebar.is-large {\n    font-size: 1.5rem;\n}\n.v-sidebar-list {\n  list-style: none;\n  margin: 0;\n  padding: 0;\n  margin: 0;\n  padding: 0;\n  line-height: 1.25;\n}\n.v-sidebar-list a {\n    border-radius: 2px;\n    color: #4a4a4a;\n    display: block;\n    padding: 0.5em 0.75em;\n}\n.v-sidebar-list a:hover {\n      background-color: whitesmoke;\n      color: #363636;\n}\n.v-sidebar-list a.is-active {\n      background-color: #1ca0f2;\n      color: #fff;\n}\n.v-sidebar-list li ul {\n    list-style: none;\n    margin: 0;\n    padding: 0;\n    border-left: 1px solid #dbdbdb;\n    margin: 0.75em;\n    padding-left: 0.75em;\n}\n.v-sidebar-label {\n  color: #7a7a7a;\n  font-size: 0.75em;\n  letter-spacing: 0.1em;\n  text-transform: uppercase;\n}\n.v-sidebar-label:not(:first-child) {\n    margin-top: 1em;\n}\n.v-sidebar-label:not(:last-child) {\n    margin-bottom: 1em;\n}\n.v-navbar {\n  background-color: white;\n  min-height: 3.25rem;\n  position: relative;\n}\n.v-navbar.is-white {\n    background-color: white;\n    color: #0a0a0a;\n}\n.v-navbar.is-white .v-navbar-brand > .v-navbar-item,\n    .v-navbar.is-white .v-navbar-brand .v-navbar-link {\n      color: #0a0a0a;\n}\n.v-navbar.is-white .v-navbar-brand > a.v-navbar-item:hover, .v-navbar.is-white .v-navbar-brand > a.v-navbar-item.is-active,\n    .v-navbar.is-white .v-navbar-brand .v-navbar-link:hover,\n    .v-navbar.is-white .v-navbar-brand .v-navbar-link.is-active {\n      background-color: #f2f2f2;\n      color: #0a0a0a;\n}\n.v-navbar.is-white .v-navbar-brand .v-navbar-link::after {\n      border-color: #0a0a0a;\n}\n.v-navbar.is-white .v-navbar-start > .v-navbar-item,\n    .v-navbar.is-white .v-navbar-start .v-navbar-link,\n    .v-navbar.is-white .v-navbar-end > .v-navbar-item,\n    .v-navbar.is-white .v-navbar-end .v-navbar-link {\n      color: #0a0a0a;\n}\n.v-navbar.is-white .v-navbar-start > a.v-navbar-item:hover, .v-navbar.is-white .v-navbar-start > a.v-navbar-item.is-active,\n    .v-navbar.is-white .v-navbar-start .v-navbar-link:hover,\n    .v-navbar.is-white .v-navbar-start .v-navbar-link.is-active,\n    .v-navbar.is-white .v-navbar-end > a.v-navbar-item:hover,\n    .v-navbar.is-white .v-navbar-end > a.v-navbar-item.is-active,\n    .v-navbar.is-white .v-navbar-end .v-navbar-link:hover,\n    .v-navbar.is-white .v-navbar-end .v-navbar-link.is-active {\n      background-color: #f2f2f2;\n      color: #0a0a0a;\n}\n.v-navbar.is-white .v-navbar-start .v-navbar-link::after,\n    .v-navbar.is-white .v-navbar-end .v-navbar-link::after {\n      border-color: #0a0a0a;\n}\n.v-navbar.is-white .v-navbar-item.has-dropdown:hover .v-navbar-link,\n    .v-navbar.is-white .v-navbar-item.has-dropdown.is-active .v-navbar-link {\n      background-color: #f2f2f2;\n      color: #0a0a0a;\n}\n.v-navbar.is-white .v-navbar-dropdown a.v-navbar-item.is-active {\n      background-color: white;\n      color: #0a0a0a;\n}\n.v-navbar.is-black {\n    background-color: #0a0a0a;\n    color: white;\n}\n.v-navbar.is-black .v-navbar-brand > .v-navbar-item,\n    .v-navbar.is-black .v-navbar-brand .v-navbar-link {\n      color: white;\n}\n.v-navbar.is-black .v-navbar-brand > a.v-navbar-item:hover, .v-navbar.is-black .v-navbar-brand > a.v-navbar-item.is-active,\n    .v-navbar.is-black .v-navbar-brand .v-navbar-link:hover,\n    .v-navbar.is-black .v-navbar-brand .v-navbar-link.is-active {\n      background-color: black;\n      color: white;\n}\n.v-navbar.is-black .v-navbar-brand .v-navbar-link::after {\n      border-color: white;\n}\n.v-navbar.is-black .v-navbar-start > .v-navbar-item,\n    .v-navbar.is-black .v-navbar-start .v-navbar-link,\n    .v-navbar.is-black .v-navbar-end > .v-navbar-item,\n    .v-navbar.is-black .v-navbar-end .v-navbar-link {\n      color: white;\n}\n.v-navbar.is-black .v-navbar-start > a.v-navbar-item:hover, .v-navbar.is-black .v-navbar-start > a.v-navbar-item.is-active,\n    .v-navbar.is-black .v-navbar-start .v-navbar-link:hover,\n    .v-navbar.is-black .v-navbar-start .v-navbar-link.is-active,\n    .v-navbar.is-black .v-navbar-end > a.v-navbar-item:hover,\n    .v-navbar.is-black .v-navbar-end > a.v-navbar-item.is-active,\n    .v-navbar.is-black .v-navbar-end .v-navbar-link:hover,\n    .v-navbar.is-black .v-navbar-end .v-navbar-link.is-active {\n      background-color: black;\n      color: white;\n}\n.v-navbar.is-black .v-navbar-start .v-navbar-link::after,\n    .v-navbar.is-black .v-navbar-end .v-navbar-link::after {\n      border-color: white;\n}\n.v-navbar.is-black .v-navbar-item.has-dropdown:hover .v-navbar-link,\n    .v-navbar.is-black .v-navbar-item.has-dropdown.is-active .v-navbar-link {\n      background-color: black;\n      color: white;\n}\n.v-navbar.is-black .v-navbar-dropdown a.v-navbar-item.is-active {\n      background-color: #0a0a0a;\n      color: white;\n}\n.v-navbar.is-light {\n    background-color: whitesmoke;\n    color: #363636;\n}\n.v-navbar.is-light .v-navbar-brand > .v-navbar-item,\n    .v-navbar.is-light .v-navbar-brand .v-navbar-link {\n      color: #363636;\n}\n.v-navbar.is-light .v-navbar-brand > a.v-navbar-item:hover, .v-navbar.is-light .v-navbar-brand > a.v-navbar-item.is-active,\n    .v-navbar.is-light .v-navbar-brand .v-navbar-link:hover,\n    .v-navbar.is-light .v-navbar-brand .v-navbar-link.is-active {\n      background-color: #e8e8e8;\n      color: #363636;\n}\n.v-navbar.is-light .v-navbar-brand .v-navbar-link::after {\n      border-color: #363636;\n}\n.v-navbar.is-light .v-navbar-start > .v-navbar-item,\n    .v-navbar.is-light .v-navbar-start .v-navbar-link,\n    .v-navbar.is-light .v-navbar-end > .v-navbar-item,\n    .v-navbar.is-light .v-navbar-end .v-navbar-link {\n      color: #363636;\n}\n.v-navbar.is-light .v-navbar-start > a.v-navbar-item:hover, .v-navbar.is-light .v-navbar-start > a.v-navbar-item.is-active,\n    .v-navbar.is-light .v-navbar-start .v-navbar-link:hover,\n    .v-navbar.is-light .v-navbar-start .v-navbar-link.is-active,\n    .v-navbar.is-light .v-navbar-end > a.v-navbar-item:hover,\n    .v-navbar.is-light .v-navbar-end > a.v-navbar-item.is-active,\n    .v-navbar.is-light .v-navbar-end .v-navbar-link:hover,\n    .v-navbar.is-light .v-navbar-end .v-navbar-link.is-active {\n      background-color: #e8e8e8;\n      color: #363636;\n}\n.v-navbar.is-light .v-navbar-start .v-navbar-link::after,\n    .v-navbar.is-light .v-navbar-end .v-navbar-link::after {\n      border-color: #363636;\n}\n.v-navbar.is-light .v-navbar-item.has-dropdown:hover .v-navbar-link,\n    .v-navbar.is-light .v-navbar-item.has-dropdown.is-active .v-navbar-link {\n      background-color: #e8e8e8;\n      color: #363636;\n}\n.v-navbar.is-light .v-navbar-dropdown a.v-navbar-item.is-active {\n      background-color: whitesmoke;\n      color: #363636;\n}\n.v-navbar.is-dark {\n    background-color: #363636;\n    color: whitesmoke;\n}\n.v-navbar.is-dark .v-navbar-brand > .v-navbar-item,\n    .v-navbar.is-dark .v-navbar-brand .v-navbar-link {\n      color: whitesmoke;\n}\n.v-navbar.is-dark .v-navbar-brand > a.v-navbar-item:hover, .v-navbar.is-dark .v-navbar-brand > a.v-navbar-item.is-active,\n    .v-navbar.is-dark .v-navbar-brand .v-navbar-link:hover,\n    .v-navbar.is-dark .v-navbar-brand .v-navbar-link.is-active {\n      background-color: #292929;\n      color: whitesmoke;\n}\n.v-navbar.is-dark .v-navbar-brand .v-navbar-link::after {\n      border-color: whitesmoke;\n}\n.v-navbar.is-dark .v-navbar-start > .v-navbar-item,\n    .v-navbar.is-dark .v-navbar-start .v-navbar-link,\n    .v-navbar.is-dark .v-navbar-end > .v-navbar-item,\n    .v-navbar.is-dark .v-navbar-end .v-navbar-link {\n      color: whitesmoke;\n}\n.v-navbar.is-dark .v-navbar-start > a.v-navbar-item:hover, .v-navbar.is-dark .v-navbar-start > a.v-navbar-item.is-active,\n    .v-navbar.is-dark .v-navbar-start .v-navbar-link:hover,\n    .v-navbar.is-dark .v-navbar-start .v-navbar-link.is-active,\n    .v-navbar.is-dark .v-navbar-end > a.v-navbar-item:hover,\n    .v-navbar.is-dark .v-navbar-end > a.v-navbar-item.is-active,\n    .v-navbar.is-dark .v-navbar-end .v-navbar-link:hover,\n    .v-navbar.is-dark .v-navbar-end .v-navbar-link.is-active {\n      background-color: #292929;\n      color: whitesmoke;\n}\n.v-navbar.is-dark .v-navbar-start .v-navbar-link::after,\n    .v-navbar.is-dark .v-navbar-end .v-navbar-link::after {\n      border-color: whitesmoke;\n}\n.v-navbar.is-dark .v-navbar-item.has-dropdown:hover .v-navbar-link,\n    .v-navbar.is-dark .v-navbar-item.has-dropdown.is-active .v-navbar-link {\n      background-color: #292929;\n      color: whitesmoke;\n}\n.v-navbar.is-dark .v-navbar-dropdown a.v-navbar-item.is-active {\n      background-color: #363636;\n      color: whitesmoke;\n}\n.v-navbar.is-primary {\n    background-color: #1ca0f2;\n    color: #fff;\n}\n.v-navbar.is-primary .v-navbar-brand > .v-navbar-item,\n    .v-navbar.is-primary .v-navbar-brand .v-navbar-link {\n      color: #fff;\n}\n.v-navbar.is-primary .v-navbar-brand > a.v-navbar-item:hover, .v-navbar.is-primary .v-navbar-brand > a.v-navbar-item.is-active,\n    .v-navbar.is-primary .v-navbar-brand .v-navbar-link:hover,\n    .v-navbar.is-primary .v-navbar-brand .v-navbar-link.is-active {\n      background-color: #0d94e7;\n      color: #fff;\n}\n.v-navbar.is-primary .v-navbar-brand .v-navbar-link::after {\n      border-color: #fff;\n}\n.v-navbar.is-primary .v-navbar-start > .v-navbar-item,\n    .v-navbar.is-primary .v-navbar-start .v-navbar-link,\n    .v-navbar.is-primary .v-navbar-end > .v-navbar-item,\n    .v-navbar.is-primary .v-navbar-end .v-navbar-link {\n      color: #fff;\n}\n.v-navbar.is-primary .v-navbar-start > a.v-navbar-item:hover, .v-navbar.is-primary .v-navbar-start > a.v-navbar-item.is-active,\n    .v-navbar.is-primary .v-navbar-start .v-navbar-link:hover,\n    .v-navbar.is-primary .v-navbar-start .v-navbar-link.is-active,\n    .v-navbar.is-primary .v-navbar-end > a.v-navbar-item:hover,\n    .v-navbar.is-primary .v-navbar-end > a.v-navbar-item.is-active,\n    .v-navbar.is-primary .v-navbar-end .v-navbar-link:hover,\n    .v-navbar.is-primary .v-navbar-end .v-navbar-link.is-active {\n      background-color: #0d94e7;\n      color: #fff;\n}\n.v-navbar.is-primary .v-navbar-start .v-navbar-link::after,\n    .v-navbar.is-primary .v-navbar-end .v-navbar-link::after {\n      border-color: #fff;\n}\n.v-navbar.is-primary .v-navbar-item.has-dropdown:hover .v-navbar-link,\n    .v-navbar.is-primary .v-navbar-item.has-dropdown.is-active .v-navbar-link {\n      background-color: #0d94e7;\n      color: #fff;\n}\n.v-navbar.is-primary .v-navbar-dropdown a.v-navbar-item.is-active {\n      background-color: #1ca0f2;\n      color: #fff;\n}\n.v-navbar.is-info {\n    background-color: #b86bff;\n    color: #fff;\n}\n.v-navbar.is-info .v-navbar-brand > .v-navbar-item,\n    .v-navbar.is-info .v-navbar-brand .v-navbar-link {\n      color: #fff;\n}\n.v-navbar.is-info .v-navbar-brand > a.v-navbar-item:hover, .v-navbar.is-info .v-navbar-brand > a.v-navbar-item.is-active,\n    .v-navbar.is-info .v-navbar-brand .v-navbar-link:hover,\n    .v-navbar.is-info .v-navbar-brand .v-navbar-link.is-active {\n      background-color: #ab52ff;\n      color: #fff;\n}\n.v-navbar.is-info .v-navbar-brand .v-navbar-link::after {\n      border-color: #fff;\n}\n.v-navbar.is-info .v-navbar-start > .v-navbar-item,\n    .v-navbar.is-info .v-navbar-start .v-navbar-link,\n    .v-navbar.is-info .v-navbar-end > .v-navbar-item,\n    .v-navbar.is-info .v-navbar-end .v-navbar-link {\n      color: #fff;\n}\n.v-navbar.is-info .v-navbar-start > a.v-navbar-item:hover, .v-navbar.is-info .v-navbar-start > a.v-navbar-item.is-active,\n    .v-navbar.is-info .v-navbar-start .v-navbar-link:hover,\n    .v-navbar.is-info .v-navbar-start .v-navbar-link.is-active,\n    .v-navbar.is-info .v-navbar-end > a.v-navbar-item:hover,\n    .v-navbar.is-info .v-navbar-end > a.v-navbar-item.is-active,\n    .v-navbar.is-info .v-navbar-end .v-navbar-link:hover,\n    .v-navbar.is-info .v-navbar-end .v-navbar-link.is-active {\n      background-color: #ab52ff;\n      color: #fff;\n}\n.v-navbar.is-info .v-navbar-start .v-navbar-link::after,\n    .v-navbar.is-info .v-navbar-end .v-navbar-link::after {\n      border-color: #fff;\n}\n.v-navbar.is-info .v-navbar-item.has-dropdown:hover .v-navbar-link,\n    .v-navbar.is-info .v-navbar-item.has-dropdown.is-active .v-navbar-link {\n      background-color: #ab52ff;\n      color: #fff;\n}\n.v-navbar.is-info .v-navbar-dropdown a.v-navbar-item.is-active {\n      background-color: #b86bff;\n      color: #fff;\n}\n.v-navbar.is-success {\n    background-color: #23d160;\n    color: #fff;\n}\n.v-navbar.is-success .v-navbar-brand > .v-navbar-item,\n    .v-navbar.is-success .v-navbar-brand .v-navbar-link {\n      color: #fff;\n}\n.v-navbar.is-success .v-navbar-brand > a.v-navbar-item:hover, .v-navbar.is-success .v-navbar-brand > a.v-navbar-item.is-active,\n    .v-navbar.is-success .v-navbar-brand .v-navbar-link:hover,\n    .v-navbar.is-success .v-navbar-brand .v-navbar-link.is-active {\n      background-color: #20bc56;\n      color: #fff;\n}\n.v-navbar.is-success .v-navbar-brand .v-navbar-link::after {\n      border-color: #fff;\n}\n.v-navbar.is-success .v-navbar-start > .v-navbar-item,\n    .v-navbar.is-success .v-navbar-start .v-navbar-link,\n    .v-navbar.is-success .v-navbar-end > .v-navbar-item,\n    .v-navbar.is-success .v-navbar-end .v-navbar-link {\n      color: #fff;\n}\n.v-navbar.is-success .v-navbar-start > a.v-navbar-item:hover, .v-navbar.is-success .v-navbar-start > a.v-navbar-item.is-active,\n    .v-navbar.is-success .v-navbar-start .v-navbar-link:hover,\n    .v-navbar.is-success .v-navbar-start .v-navbar-link.is-active,\n    .v-navbar.is-success .v-navbar-end > a.v-navbar-item:hover,\n    .v-navbar.is-success .v-navbar-end > a.v-navbar-item.is-active,\n    .v-navbar.is-success .v-navbar-end .v-navbar-link:hover,\n    .v-navbar.is-success .v-navbar-end .v-navbar-link.is-active {\n      background-color: #20bc56;\n      color: #fff;\n}\n.v-navbar.is-success .v-navbar-start .v-navbar-link::after,\n    .v-navbar.is-success .v-navbar-end .v-navbar-link::after {\n      border-color: #fff;\n}\n.v-navbar.is-success .v-navbar-item.has-dropdown:hover .v-navbar-link,\n    .v-navbar.is-success .v-navbar-item.has-dropdown.is-active .v-navbar-link {\n      background-color: #20bc56;\n      color: #fff;\n}\n.v-navbar.is-success .v-navbar-dropdown a.v-navbar-item.is-active {\n      background-color: #23d160;\n      color: #fff;\n}\n.v-navbar.is-warning {\n    background-color: #ffdd57;\n    color: rgba(0, 0, 0, 0.7);\n}\n.v-navbar.is-warning .v-navbar-brand > .v-navbar-item,\n    .v-navbar.is-warning .v-navbar-brand .v-navbar-link {\n      color: rgba(0, 0, 0, 0.7);\n}\n.v-navbar.is-warning .v-navbar-brand > a.v-navbar-item:hover, .v-navbar.is-warning .v-navbar-brand > a.v-navbar-item.is-active,\n    .v-navbar.is-warning .v-navbar-brand .v-navbar-link:hover,\n    .v-navbar.is-warning .v-navbar-brand .v-navbar-link.is-active {\n      background-color: #ffd83d;\n      color: rgba(0, 0, 0, 0.7);\n}\n.v-navbar.is-warning .v-navbar-brand .v-navbar-link::after {\n      border-color: rgba(0, 0, 0, 0.7);\n}\n.v-navbar.is-warning .v-navbar-start > .v-navbar-item,\n    .v-navbar.is-warning .v-navbar-start .v-navbar-link,\n    .v-navbar.is-warning .v-navbar-end > .v-navbar-item,\n    .v-navbar.is-warning .v-navbar-end .v-navbar-link {\n      color: rgba(0, 0, 0, 0.7);\n}\n.v-navbar.is-warning .v-navbar-start > a.v-navbar-item:hover, .v-navbar.is-warning .v-navbar-start > a.v-navbar-item.is-active,\n    .v-navbar.is-warning .v-navbar-start .v-navbar-link:hover,\n    .v-navbar.is-warning .v-navbar-start .v-navbar-link.is-active,\n    .v-navbar.is-warning .v-navbar-end > a.v-navbar-item:hover,\n    .v-navbar.is-warning .v-navbar-end > a.v-navbar-item.is-active,\n    .v-navbar.is-warning .v-navbar-end .v-navbar-link:hover,\n    .v-navbar.is-warning .v-navbar-end .v-navbar-link.is-active {\n      background-color: #ffd83d;\n      color: rgba(0, 0, 0, 0.7);\n}\n.v-navbar.is-warning .v-navbar-start .v-navbar-link::after,\n    .v-navbar.is-warning .v-navbar-end .v-navbar-link::after {\n      border-color: rgba(0, 0, 0, 0.7);\n}\n.v-navbar.is-warning .v-navbar-item.has-dropdown:hover .v-navbar-link,\n    .v-navbar.is-warning .v-navbar-item.has-dropdown.is-active .v-navbar-link {\n      background-color: #ffd83d;\n      color: rgba(0, 0, 0, 0.7);\n}\n.v-navbar.is-warning .v-navbar-dropdown a.v-navbar-item.is-active {\n      background-color: #ffdd57;\n      color: rgba(0, 0, 0, 0.7);\n}\n.v-navbar.is-danger {\n    background-color: #ff3860;\n    color: #fff;\n}\n.v-navbar.is-danger .v-navbar-brand > .v-navbar-item,\n    .v-navbar.is-danger .v-navbar-brand .v-navbar-link {\n      color: #fff;\n}\n.v-navbar.is-danger .v-navbar-brand > a.v-navbar-item:hover, .v-navbar.is-danger .v-navbar-brand > a.v-navbar-item.is-active,\n    .v-navbar.is-danger .v-navbar-brand .v-navbar-link:hover,\n    .v-navbar.is-danger .v-navbar-brand .v-navbar-link.is-active {\n      background-color: #ff1f4b;\n      color: #fff;\n}\n.v-navbar.is-danger .v-navbar-brand .v-navbar-link::after {\n      border-color: #fff;\n}\n.v-navbar.is-danger .v-navbar-start > .v-navbar-item,\n    .v-navbar.is-danger .v-navbar-start .v-navbar-link,\n    .v-navbar.is-danger .v-navbar-end > .v-navbar-item,\n    .v-navbar.is-danger .v-navbar-end .v-navbar-link {\n      color: #fff;\n}\n.v-navbar.is-danger .v-navbar-start > a.v-navbar-item:hover, .v-navbar.is-danger .v-navbar-start > a.v-navbar-item.is-active,\n    .v-navbar.is-danger .v-navbar-start .v-navbar-link:hover,\n    .v-navbar.is-danger .v-navbar-start .v-navbar-link.is-active,\n    .v-navbar.is-danger .v-navbar-end > a.v-navbar-item:hover,\n    .v-navbar.is-danger .v-navbar-end > a.v-navbar-item.is-active,\n    .v-navbar.is-danger .v-navbar-end .v-navbar-link:hover,\n    .v-navbar.is-danger .v-navbar-end .v-navbar-link.is-active {\n      background-color: #ff1f4b;\n      color: #fff;\n}\n.v-navbar.is-danger .v-navbar-start .v-navbar-link::after,\n    .v-navbar.is-danger .v-navbar-end .v-navbar-link::after {\n      border-color: #fff;\n}\n.v-navbar.is-danger .v-navbar-item.has-dropdown:hover .v-navbar-link,\n    .v-navbar.is-danger .v-navbar-item.has-dropdown.is-active .v-navbar-link {\n      background-color: #ff1f4b;\n      color: #fff;\n}\n.v-navbar.is-danger .v-navbar-dropdown a.v-navbar-item.is-active {\n      background-color: #ff3860;\n      color: #fff;\n}\n.v-navbar > .container {\n    -webkit-box-align: stretch;\n        -ms-flex-align: stretch;\n            align-items: stretch;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    min-height: 3.25rem;\n    width: 100%;\n}\n.v-navbar.has-shadow {\n    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1);\n}\n.v-navbar-item {\n  -webkit-box-flex: 0;\n      -ms-flex-positive: 0;\n          flex-grow: 0;\n  -ms-flex-negative: 0;\n      flex-shrink: 0;\n}\n.v-navbar-item img {\n    max-height: 1.75rem;\n}\n.v-navbar-item.has-dropdown {\n    padding: 0;\n}\n.v-navbar-item.is-tab {\n    border-bottom: 1px solid transparent;\n    min-height: 3.25rem;\n    padding-bottom: calc(0.5em - 1px);\n}\n.v-navbar-item.is-tab:hover {\n      background-color: transparent;\n      border-bottom-color: #1ca0f2;\n}\n.v-navbar-item.is-tab.is-active {\n      background-color: transparent;\n      border-bottom-color: #1ca0f2;\n      border-bottom-style: solid;\n      border-bottom-width: 3px;\n      color: #1ca0f2;\n      padding-bottom: calc(0.5em - 3px);\n}\n.v-navbar-item,\n.v-navbar-link {\n  color: #4a4a4a;\n  display: block;\n  line-height: 1.5;\n  padding: 0.5rem 1rem;\n  position: relative;\n}\na.v-navbar-item:hover, a.v-navbar-item.is-active,\n.v-navbar-link:hover,\n.v-navbar-link.is-active {\n  background-color: whitesmoke;\n  color: #0a0a0a;\n}\n.v-navbar-brand,\n.v-navbar-tabs {\n  -webkit-box-align: stretch;\n      -ms-flex-align: stretch;\n          align-items: stretch;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-negative: 0;\n      flex-shrink: 0;\n  min-height: 3.25rem;\n}\n.v-navbar,\n.v-navbar-menu,\n.v-navbar-start,\n.v-navbar-end {\n  -webkit-box-align: stretch;\n      -ms-flex-align: stretch;\n          align-items: stretch;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n}\n.v-navbar {\n  min-height: 3.25rem;\n}\n.v-navbar.is-transparent a.v-navbar-item:hover, .v-navbar.is-transparent a.v-navbar-item.is-active,\n  .v-navbar.is-transparent .v-navbar-link:hover,\n  .v-navbar.is-transparent .v-navbar-link.is-active {\n    background-color: transparent;\n}\n.v-navbar.is-transparent .v-navbar-item.has-dropdown.is-active .v-navbar-link, .v-navbar.is-transparent .v-navbar-item.has-dropdown.is-hoverable:hover .v-navbar-link {\n    background-color: transparent;\n}\n.v-navbar.is-transparent .v-navbar-dropdown a.v-navbar-item:hover {\n    background-color: whitesmoke;\n    color: #0a0a0a;\n}\n.v-navbar.is-transparent .v-navbar-dropdown a.v-navbar-item.is-active {\n    background-color: whitesmoke;\n    color: #1ca0f2;\n}\n.v-navbar-item,\n.v-navbar-link {\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n}\n.v-navbar-item.has-dropdown {\n  -webkit-box-align: stretch;\n      -ms-flex-align: stretch;\n          align-items: stretch;\n}\n.v-navbar-item.is-active .v-navbar-dropdown, .v-navbar-item.is-hoverable:hover .v-navbar-dropdown {\n  display: block;\n}\n.v-navbar-item.is-active .v-navbar-dropdown.is-boxed, .v-navbar-item.is-hoverable:hover .v-navbar-dropdown.is-boxed {\n    opacity: 1;\n    pointer-events: auto;\n    -webkit-transform: translateY(0);\n            transform: translateY(0);\n}\n.v-navbar-menu {\n  -webkit-box-flex: 1;\n      -ms-flex-positive: 1;\n          flex-grow: 1;\n  -ms-flex-negative: 0;\n      flex-shrink: 0;\n}\n.v-navbar-start {\n  -webkit-box-pack: start;\n      -ms-flex-pack: start;\n          justify-content: flex-start;\n  margin-right: auto;\n}\n.v-navbar-end {\n  -webkit-box-pack: end;\n      -ms-flex-pack: end;\n          justify-content: flex-end;\n  margin-left: auto;\n}\n.v-message {\n  background-color: whitesmoke;\n  border-radius: 3px;\n  font-size: 1rem;\n}\n.v-message:not(:last-child) {\n    margin-bottom: 1.5rem;\n}\n.v-message strong {\n    color: currentColor;\n}\n.v-message a:not(.button):not(.tag) {\n    color: currentColor;\n    text-decoration: underline;\n}\n.v-message.is-small {\n    font-size: 0.75rem;\n}\n.v-message.is-medium {\n    font-size: 1.25rem;\n}\n.v-message.is-large {\n    font-size: 1.5rem;\n}\n.v-message.is-white {\n    background-color: white;\n}\n.v-message.is-white .v-message-header {\n      background-color: white;\n      color: #0a0a0a;\n}\n.v-message.is-white .v-message-body {\n      border-color: white;\n      color: #4d4d4d;\n}\n.v-message.is-black {\n    background-color: #fafafa;\n}\n.v-message.is-black .v-message-header {\n      background-color: #0a0a0a;\n      color: white;\n}\n.v-message.is-black .v-message-body {\n      border-color: #0a0a0a;\n      color: #090909;\n}\n.v-message.is-light {\n    background-color: #fafafa;\n}\n.v-message.is-light .v-message-header {\n      background-color: whitesmoke;\n      color: #363636;\n}\n.v-message.is-light .v-message-body {\n      border-color: whitesmoke;\n      color: #505050;\n}\n.v-message.is-dark {\n    background-color: #fafafa;\n}\n.v-message.is-dark .v-message-header {\n      background-color: #363636;\n      color: whitesmoke;\n}\n.v-message.is-dark .v-message-body {\n      border-color: #363636;\n      color: #2a2a2a;\n}\n.v-message.is-primary {\n    background-color: #f5fbfe;\n}\n.v-message.is-primary .v-message-header {\n      background-color: #1ca0f2;\n      color: #fff;\n}\n.v-message.is-primary .v-message-body {\n      border-color: #1ca0f2;\n      color: #0f527b;\n}\n.v-message.is-info {\n    background-color: #faf5ff;\n}\n.v-message.is-info .v-message-header {\n      background-color: #b86bff;\n      color: #fff;\n}\n.v-message.is-info .v-message-body {\n      border-color: #b86bff;\n      color: #7d0ce8;\n}\n.v-message.is-success {\n    background-color: #f6fef9;\n}\n.v-message.is-success .v-message-header {\n      background-color: #23d160;\n      color: #fff;\n}\n.v-message.is-success .v-message-body {\n      border-color: #23d160;\n      color: #0e301a;\n}\n.v-message.is-warning {\n    background-color: #fffdf5;\n}\n.v-message.is-warning .v-message-header {\n      background-color: #ffdd57;\n      color: rgba(0, 0, 0, 0.7);\n}\n.v-message.is-warning .v-message-body {\n      border-color: #ffdd57;\n      color: #3b3108;\n}\n.v-message.is-danger {\n    background-color: #fff5f7;\n}\n.v-message.is-danger .v-message-header {\n      background-color: #ff3860;\n      color: #fff;\n}\n.v-message.is-danger .v-message-body {\n      border-color: #ff3860;\n      color: #cd0930;\n}\n.v-message-header {\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  background-color: #4a4a4a;\n  border-radius: 3px 3px 0 0;\n  color: #fff;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  line-height: 1.25;\n  padding: 0.5em 0.75em;\n  position: relative;\n}\n.v-message-header .v-close {\n    -webkit-box-flex: 0;\n        -ms-flex-positive: 0;\n            flex-grow: 0;\n    -ms-flex-negative: 0;\n        flex-shrink: 0;\n    margin-left: 0.75em;\n}\n.v-message-header + .v-message-body {\n    border-top-left-radius: 0;\n    border-top-right-radius: 0;\n    border-top: none;\n}\n.v-message-body {\n  border: 1px solid #dbdbdb;\n  border-radius: 3px;\n  color: #4a4a4a;\n  padding: 1em 1.25em;\n}\n.v-message-body code,\n  .v-message-body pre {\n    background-color: white;\n}\n.v-message-body pre code {\n    background-color: transparent;\n}\n.v-message-popup {\n  position: fixed;\n  top: 1em;\n  z-index: 2010;\n  border-radius: 3px;\n  width: 100%;\n  left: 0;\n  right: 0;\n  background: transparent;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  padding: 0 5vw;\n}\n.v-message-popup > .v-message {\n    box-shadow: 1px 1px 10px #aaa;\n}\n.v-message-popup .v-message-body {\n    padding: 0.5em 1em;\n}\n.v-tabs {\n  -webkit-overflow-scrolling: touch;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  -webkit-box-align: stretch;\n      -ms-flex-align: stretch;\n          align-items: stretch;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  font-size: 1rem;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  overflow: hidden;\n  overflow-x: auto;\n  white-space: nowrap;\n}\n.v-tabs:not(:last-child) {\n    margin-bottom: 1.5rem;\n}\n.v-tabs a {\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    border-bottom-color: #dbdbdb;\n    border-bottom-style: solid;\n    border-bottom-width: 1px;\n    color: #4a4a4a;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    margin-bottom: -1px;\n    padding: 0.5em 1em;\n    vertical-align: top;\n}\n.v-tabs a:hover {\n      border-bottom-color: #363636;\n      color: #363636;\n}\n.v-tabs li {\n    display: block;\n}\n.v-tabs li.is-active a {\n      border-bottom-color: #1ca0f2;\n      color: #1ca0f2;\n}\n.v-tabs ul {\n    list-style: none;\n    margin: 0;\n    padding: 0;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    border-bottom-color: #dbdbdb;\n    border-bottom-style: solid;\n    border-bottom-width: 1px;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-flex: 1;\n        -ms-flex-positive: 1;\n            flex-grow: 1;\n    -ms-flex-negative: 0;\n        flex-shrink: 0;\n    -webkit-box-pack: start;\n        -ms-flex-pack: start;\n            justify-content: flex-start;\n}\n.v-tabs ul.is-left {\n      padding-right: 0.75em;\n}\n.v-tabs ul.is-center {\n      -webkit-box-flex: 0;\n          -ms-flex: none;\n              flex: none;\n      -webkit-box-pack: center;\n          -ms-flex-pack: center;\n              justify-content: center;\n      padding-left: 0.75em;\n      padding-right: 0.75em;\n}\n.v-tabs ul.is-right {\n      -webkit-box-pack: end;\n          -ms-flex-pack: end;\n              justify-content: flex-end;\n      padding-left: 0.75em;\n}\n.v-tabs .has-icon:first-child {\n    margin-right: 0.5em;\n}\n.v-tabs .has-icon:last-child {\n    margin-left: 0.5em;\n}\n.v-tabs.is-centered ul {\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n}\n.v-tabs.is-right ul {\n    -webkit-box-pack: end;\n        -ms-flex-pack: end;\n            justify-content: flex-end;\n}\n.v-tabs.is-boxed a {\n    border: 1px solid transparent;\n    border-radius: 3px 3px 0 0;\n}\n.v-tabs.is-boxed a:hover {\n      background-color: whitesmoke;\n      border-bottom-color: #dbdbdb;\n}\n.v-tabs.is-boxed li.is-active a {\n    background-color: white;\n    border-color: #dbdbdb;\n    border-bottom-color: transparent !important;\n}\n.v-tabs.is-fullwidth li {\n    -webkit-box-flex: 1;\n        -ms-flex-positive: 1;\n            flex-grow: 1;\n    -ms-flex-negative: 0;\n        flex-shrink: 0;\n}\n.v-tabs.is-toggle a {\n    border-color: #dbdbdb;\n    border-style: solid;\n    border-width: 1px;\n    margin-bottom: 0;\n    position: relative;\n}\n.v-tabs.is-toggle a:hover {\n      background-color: whitesmoke;\n      border-color: #b5b5b5;\n      z-index: 2;\n}\n.v-tabs.is-toggle li + li {\n    margin-left: -1px;\n}\n.v-tabs.is-toggle li:first-child a {\n    border-radius: 3px 0 0 3px;\n}\n.v-tabs.is-toggle li:last-child a {\n    border-radius: 0 3px 3px 0;\n}\n.v-tabs.is-toggle li.is-active a {\n    background-color: #1ca0f2;\n    border-color: #1ca0f2;\n    color: #fff;\n    z-index: 1;\n}\n.v-tabs.is-toggle ul {\n    border-bottom: none;\n}\n.v-tabs.is-small {\n    font-size: 0.75rem;\n}\n.v-tabs.is-medium {\n    font-size: 1.25rem;\n}\n.v-tabs.is-large {\n    font-size: 1.5rem;\n}\n.v-breadcrumb {\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  -webkit-box-align: stretch;\n      -ms-flex-align: stretch;\n          align-items: stretch;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  font-size: 1rem;\n  overflow: hidden;\n  overflow-x: auto;\n  white-space: nowrap;\n}\n.v-breadcrumb:not(:last-child) {\n    margin-bottom: 1.5rem;\n}\n.v-breadcrumb a {\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    color: #7a7a7a;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    text-decoration: none;\n    padding: 0.5em 0.75em;\n}\n.v-breadcrumb a:hover {\n      color: #363636;\n}\n.v-breadcrumb li {\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n}\n.v-breadcrumb li:first-child a {\n      padding-left: 0;\n}\n.v-breadcrumb li.is-active a {\n      color: #363636;\n      cursor: default;\n      pointer-events: none;\n}\n.v-breadcrumb li + li::before {\n      color: #4a4a4a;\n      content: \"/\";\n}\n.v-breadcrumb ul, .v-breadcrumb ol {\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-flex: 1;\n        -ms-flex-positive: 1;\n            flex-grow: 1;\n    -ms-flex-negative: 0;\n        flex-shrink: 0;\n    -webkit-box-pack: start;\n        -ms-flex-pack: start;\n            justify-content: flex-start;\n}\n.v-breadcrumb .has-icon:first-child {\n    margin-right: 0.5em;\n}\n.v-breadcrumb .has-icon:last-child {\n    margin-left: 0.5em;\n}\n.v-breadcrumb.is-centered ol, .v-breadcrumb.is-centered ul {\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n}\n.v-breadcrumb.is-right ol, .v-breadcrumb.is-right ul {\n    -webkit-box-pack: end;\n        -ms-flex-pack: end;\n            justify-content: flex-end;\n}\n.v-breadcrumb.is-small {\n    font-size: 0.75rem;\n}\n.v-breadcrumb.is-medium {\n    font-size: 1.25rem;\n}\n.v-breadcrumb.is-large {\n    font-size: 1.5rem;\n}\n.v-breadcrumb.has-arrow-separator li + li::before {\n    content: \"\\2192\";\n}\n.v-breadcrumb.has-bullet-separator li + li::before {\n    content: \"\\2022\";\n}\n.v-breadcrumb.has-dot-separator li + li::before {\n    content: \"\\B7\";\n}\n.v-breadcrumb.has-succeeds-separator li + li::before {\n    content: \"\\227B\";\n}\n.sav-tooltip {\n  position: fixed;\n  line-height: 1.2;\n  font-size: 14px;\n  padding: 0.5rem;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  box-sizing: border-box;\n  z-index: 10001;\n  top: 0;\n  left: 0;\n  max-width: 250px;\n  color: #4c4c4c;\n  background-color: #ffdd0a;\n  border: 1px solid #d0b300;\n  border-radius: 3px;\n  pointer-events: none;\n  transition: none;\n  display: none;\n  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);\n}\n.v-popover {\n  display: block;\n  visibility: visible;\n  font-size: 12px;\n  line-height: 1.5;\n  position: absolute;\n  z-index: 1060;\n  min-width: 150px;\n}\n.v-popover .has-arrow, .v-popover .has-arrow:after {\n    display: block;\n    width: 0;\n    height: 0;\n    position: absolute;\n    border-width: 6px;\n    border-color: transparent;\n    border-style: solid;\n}\n.v-popover .has-arrow:after {\n      content: \" \";\n      border-width: 5px;\n}\n.v-popover[x-placement^=\"top\"] {\n    padding: 5px 0 8px;\n}\n.v-popover[x-placement^=\"top\"] .has-arrow, .v-popover[x-placement^=\"top\"] .has-arrow:after {\n      left: 50%;\n      margin-left: -5px;\n      bottom: 3px;\n      border-width: 5px 5px 0;\n      border-top-color: #ffffff;\n}\n.v-popover[x-placement^=\"top\"] .has-arrow:after {\n        content: \" \";\n        bottom: 1px;\n        margin-left: -5px;\n        border-bottom-width: 0;\n        border-top-color: #ffffff;\n}\n.v-popover[x-placement^=\"right\"] {\n    padding: 0 5px 0 8px;\n}\n.v-popover[x-placement^=\"right\"] .has-arrow, .v-popover[x-placement^=\"right\"] .has-arrow:after {\n      display: none;\n      top: 50%;\n      margin-top: -5px;\n      left: 3px;\n      border-width: 5px 5px 5px 0;\n      border-right-color: #d6d7d8;\n}\n.v-popover[x-placement^=\"right\"] .has-arrow:after {\n        content: \" \";\n        left: 1px;\n        bottom: -5px;\n        border-left-width: 0;\n        border-right-color: white;\n}\n.v-popover[x-placement^=\"bottom\"] {\n    padding: 8px 0 5px;\n}\n.v-popover[x-placement^=\"bottom\"] .has-arrow, .v-popover[x-placement^=\"bottom\"] .has-arrow:after {\n      left: 50%;\n      margin-left: -5px;\n      top: 3px;\n      border-width: 0 5px 5px;\n      border-bottom-color: #d6d7d8;\n}\n.v-popover[x-placement^=\"bottom\"] .has-arrow:after {\n        content: \" \";\n        top: 1px;\n        margin-left: -5px;\n        border-top-width: 0;\n        border-bottom-color: #ffffff;\n}\n.v-popover[x-placement^=\"left\"] {\n    padding: 0 8px 0 5px;\n}\n.v-popover[x-placement^=\"left\"] .has-arrow, .v-popover[x-placement^=\"left\"] .has-arrow:after {\n      top: 0px;\n      margin-top: -5px;\n      right: 3px;\n      border-width: 5px 0 5px 5px;\n      border-left-color: #d6d7d8;\n}\n.v-popover[x-placement^=\"left\"] .has-arrow:after {\n        content: \" \";\n        right: 1px;\n        border-right-width: 0;\n        border-left-color: #ffffff;\n        bottom: -5px;\n}\n.v-popover-inner {\n  width: 100%;\n  background-color: white;\n  background-clip: padding-box;\n  border-radius: 2px;\n  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);\n  white-space: nowrap;\n  border: 1px solid #d6d7d8;\n}\n.v-popover-inner .has-title {\n    padding: 10px 0.5rem 5px 0.5rem;\n    position: relative;\n    font-size: 14px;\n    font-weight: bold;\n    display: block;\n    line-height: 1em;\n    background-color: #ffffff;\n}\n.v-popover-inner .has-title:after {\n      content: \"\";\n      display: none;\n      height: 1px;\n      position: absolute;\n      left: 0;\n      right: 0;\n      bottom: 0;\n      background-color: #e9eaec;\n}\n.v-popover-body {\n  padding: 0 0.5rem 0.5rem 0.5rem;\n}\n.v-popover-body .has-content {\n    word-break: break-all;\n    white-space: normal;\n    overflow: auto;\n    color: #495060;\n}\n.popover-fade-enter-active {\n  -webkit-animation: v-kf-fade-in .5s;\n          animation: v-kf-fade-in .5s;\n}\n.popover-fade-leave-active {\n  -webkit-animation: v-kf-fade-out .2s;\n          animation: v-kf-fade-out .2s;\n}\n.demo-box {\n  padding: 25px 0;\n}\n.demo-box.has-pad-sm {\n    padding: 5px 0;\n}\n.demo-box a, .demo-box button, .demo-box input {\n    font-weight: inherit;\n    color: inherit;\n}\n.demo-box.sd-with-icon-bg .has-icon {\n    background-color: whitesmoke;\n}\n.demo-box .has-icon.is-medium .iconfont {\n    font-size: 1.5rem;\n}\n.demo-box .has-icon.is-large .iconfont {\n    font-size: 2.5rem;\n}\n.demo-box.sd-form-example-cnt {\n    padding: 30px 25px !important;\n    width: 95%;\n    border: 1px solid #eeeeee;\n    border-radius: 4px;\n    position: relative;\n    margin: 40px 0;\n}\n.demo-box.sd-form-example-cnt:after {\n      content: \"Form Example\";\n      position: absolute;\n      top: -10px;\n      left: 15px;\n      background-color: #f9da00;\n      color: #393f48;\n      font-size: 12px;\n      line-height: 1em;\n      padding: 4px 5px;\n      border-radius: 2px;\n}\np.v-help {\n  line-height: normal;\n  font-size: 0.75rem;\n  margin-top: 0.25rem;\n}\np.v-control {\n  margin: 0;\n}\np.v-modal-card-title {\n  margin: 0;\n}\n.markdown-section figure, .markdown-section p, .markdown-section ul, .markdown-section ol {\n  margin: 0.5em 0;\n}\n.markdown-section ul, .markdown-section ol {\n  padding-left: 1rem;\n}\n.sd-loading {\n  font-size: 2rem;\n  -webkit-animation: v-kf-spin-around 500ms infinite linear;\n          animation: v-kf-spin-around 500ms infinite linear;\n  border: 2px solid #dbdbdb;\n  border-radius: 290486px;\n  border-right-color: transparent;\n  border-top-color: transparent;\n  content: \"\";\n  display: block;\n  box-sizing: border-box;\n  height: 1em;\n  width: 1em;\n  position: relative;\n}\n.__too-long-hl-code {\n  max-height: 180px;\n  overflow: scroll;\n  opacity: .6;\n  cursor: pointer;\n  position: relative;\n  transition: opacity .5s;\n}\n.__too-long-hl-code:after {\n    content: \"\\70B9\\51FB\\5C55\\5F00\";\n}\n.__too-long-hl-code:hover {\n    opacity: 1;\n}\n", "", {"version":3,"sources":["/./pages/summary.vue"],"names":[],"mappings":";AACA,iBAAiB;AAIjB;AACA;IACI,gCAAgC;YACxB,wBAAwB;CACnC;AACD;IACI,kCAAkC;YAC1B,0BAA0B;CACrC;CACA;AACD;AACA;IACI,gCAAgC;YACxB,wBAAwB;CACnC;AACD;IACI,kCAAkC;YAC1B,0BAA0B;CACrC;CACA;AACD;AACA;IACI,WAAW;CACd;AACD;IACI,WAAW;CACd;CACA;AACD;AACA;IACI,WAAW;CACd;AACD;IACI,WAAW;CACd;CACA;AACD;AACA;IACI,WAAW;CACd;AACD;IACI,WAAW;CACd;CACA;AACD;AACA;IACI,WAAW;CACd;AACD;IACI,WAAW;CACd;CACA;AACD;AACA;IACI,WAAW;IACX,4CAA4C;YACpC,oCAAoC;CAC/C;AACD;IACI,WAAW;IACX,wBAAwB;YAChB,gBAAgB;CAC3B;CACA;AACD;AACA;IACI,WAAW;IACX,4CAA4C;YACpC,oCAAoC;CAC/C;AACD;IACI,WAAW;IACX,wBAAwB;YAChB,gBAAgB;CAC3B;CACA;AACD;AACA;IACI,WAAW;CACd;AACD;IACI,WAAW;IACX,2CAA2C;YACnC,mCAAmC;CAC9C;CACA;AACD;AACA;IACI,WAAW;CACd;AACD;IACI,WAAW;IACX,2CAA2C;YACnC,mCAAmC;CAC9C;CACA;AACD;EACE,eAAe;EACf,mBAAmB;CACpB;AACD;EACE,qBAAqB;EACrB,sBAAsB;EACtB,oBAAoB;EACpB,qBAAqB;EACrB,qBAAqB;EACrB,cAAc;CACf;AACD;IACI,uBAAuB;CAC1B;AACD;IACI,mCAAmC;CACtC;AACD;IACI,yBAAyB;QACrB,sBAAsB;YAClB,wBAAwB;CACnC;AACD;IACI,eAAe;IACf,gBAAgB;IAChB,cAAc;CACjB;AACD;MACM,UAAU;MACV,sBAAsB;CAC3B;AACD;MACM,oBAAoB;CACzB;AACD;MACM,iBAAiB;CACtB;AACD;IACI,oBAAoB;QAChB,gBAAgB;CACvB;AACD;IACI,0BAA0B;QACtB,uBAAuB;YACnB,oBAAoB;CAC/B;AACD;EACE,eAAe;EACf,2BAA2B;MACvB,cAAc;EAClB,oBAAoB;MAChB,qBAAqB;UACjB,aAAa;EACrB,qBAAqB;MACjB,eAAe;EACnB,gBAAgB;CACjB;AACD;IACI,oBAAoB;QAChB,eAAe;YACX,WAAW;CACtB;AACD;IACI,oBAAoB;QAChB,eAAe;YACX,WAAW;IACnB,YAAY;CACf;AACD;IACI,oBAAoB;QAChB,eAAe;YACX,WAAW;IACnB,WAAW;CACd;AACD;IACI,oBAAoB;QAChB,eAAe;YACX,WAAW;IACnB,gBAAgB;CACnB;AACD;IACI,oBAAoB;QAChB,eAAe;YACX,WAAW;IACnB,WAAW;CACd;AACD;IACI,oBAAoB;QAChB,eAAe;YACX,WAAW;IACnB,gBAAgB;CACnB;AACD;IACI,oBAAoB;QAChB,eAAe;YACX,WAAW;IACnB,WAAW;CACd;AACD;IACI,iBAAiB;CACpB;AACD;IACI,sBAAsB;CACzB;AACD;IACI,iBAAiB;CACpB;AACD;IACI,sBAAsB;CACzB;AACD;IACI,iBAAiB;CACpB;AACD;IACI,oBAAoB;QAChB,eAAe;YACX,WAAW;IACnB,gBAAgB;CACnB;AACD;IACI,sBAAsB;CACzB;AACD;IACI,oBAAoB;QAChB,eAAe;YACX,WAAW;IACnB,iBAAiB;CACpB;AACD;IACI,uBAAuB;CAC1B;AACD;IACI,oBAAoB;QAChB,eAAe;YACX,WAAW;IACnB,WAAW;CACd;AACD;IACI,iBAAiB;CACpB;AACD;IACI,oBAAoB;QAChB,eAAe;YACX,WAAW;IACnB,iBAAiB;CACpB;AACD;IACI,uBAAuB;CAC1B;AACD;IACI,oBAAoB;QAChB,eAAe;YACX,WAAW;IACnB,iBAAiB;CACpB;AACD;IACI,uBAAuB;CAC1B;AACD;IACI,oBAAoB;QAChB,eAAe;YACX,WAAW;IACnB,WAAW;CACd;AACD;IACI,iBAAiB;CACpB;AACD;IACI,oBAAoB;QAChB,eAAe;YACX,WAAW;IACnB,iBAAiB;CACpB;AACD;IACI,uBAAuB;CAC1B;AACD;IACI,oBAAoB;QAChB,eAAe;YACX,WAAW;IACnB,iBAAiB;CACpB;AACD;IACI,uBAAuB;CAC1B;AACD;IACI,oBAAoB;QAChB,eAAe;YACX,WAAW;IACnB,WAAW;CACd;AACD;IACI,iBAAiB;CACpB;AACD;IACI,oBAAoB;QAChB,eAAe;YACX,WAAW;IACnB,iBAAiB;CACpB;AACD;IACI,uBAAuB;CAC1B;AACD;IACI,oBAAoB;QAChB,eAAe;YACX,WAAW;IACnB,iBAAiB;CACpB;AACD;IACI,uBAAuB;CAC1B;AACD;IACI,oBAAoB;QAChB,eAAe;YACX,WAAW;IACnB,YAAY;CACf;AACD;IACI,kBAAkB;CACrB;AACD;EACE,0BAA0B;MACtB,uBAAuB;UACnB,oBAAoB;EAC5B,4BAA4B;EAC5B,4BAA4B;EAC5B,qBAAqB;EACrB,yBAAyB;MACrB,sBAAsB;UAClB,wBAAwB;EAChC,eAAe;EACf,cAAc;CACf;AACD;IACI,aAAa;IACb,YAAY;CACf;AACD;IACI,aAAa;IACb,YAAY;CACf;AACD;IACI,aAAa;IACb,YAAY;CACf;AACD;IACI,aAAa;CAChB;AACD;IACI,eAAe;CAClB;AACD;IACI,kBAAkB;CACrB;AACD;IACI,eAAe;CAClB;AACD;IACI,eAAe;CAClB;AACD;IACI,eAAe;CAClB;AACD;IACI,eAAe;CAClB;AACD;IACI,eAAe;CAClB;AACD;IACI,eAAe;CAClB;AACD;IACI,yBAAyB;IACzB,wBAAwB;CAC3B;AACD;IACI,wBAAwB;CAC3B;AACD;IACI,yBAAyB;IACzB,2BAA2B;CAC9B;AACD;IACI,wBAAwB;CAC3B;AACD;IACI,2BAA2B;IAC3B,0BAA0B;CAC7B;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,2BAA2B;IAC3B,6BAA6B;CAChC;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,yBAAyB;IACzB,wBAAwB;CAC3B;AACD;IACI,wBAAwB;CAC3B;AACD;IACI,yBAAyB;IACzB,2BAA2B;CAC9B;AACD;IACI,wBAAwB;CAC3B;AACD;IACI,2BAA2B;IAC3B,0BAA0B;CAC7B;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,2BAA2B;IAC3B,6BAA6B;CAChC;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,yBAAyB;IACzB,wBAAwB;CAC3B;AACD;IACI,wBAAwB;CAC3B;AACD;IACI,yBAAyB;IACzB,2BAA2B;CAC9B;AACD;IACI,wBAAwB;CAC3B;AACD;IACI,2BAA2B;IAC3B,0BAA0B;CAC7B;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,2BAA2B;IAC3B,6BAA6B;CAChC;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,yBAAyB;IACzB,wBAAwB;CAC3B;AACD;IACI,wBAAwB;CAC3B;AACD;IACI,yBAAyB;IACzB,2BAA2B;CAC9B;AACD;IACI,wBAAwB;CAC3B;AACD;IACI,2BAA2B;IAC3B,0BAA0B;CAC7B;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,2BAA2B;IAC3B,6BAA6B;CAChC;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,yBAAyB;IACzB,wBAAwB;CAC3B;AACD;IACI,wBAAwB;CAC3B;AACD;IACI,yBAAyB;IACzB,2BAA2B;CAC9B;AACD;IACI,wBAAwB;CAC3B;AACD;IACI,2BAA2B;IAC3B,0BAA0B;CAC7B;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,2BAA2B;IAC3B,6BAA6B;CAChC;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,yBAAyB;IACzB,wBAAwB;CAC3B;AACD;IACI,wBAAwB;CAC3B;AACD;IACI,yBAAyB;IACzB,2BAA2B;CAC9B;AACD;IACI,wBAAwB;CAC3B;AACD;IACI,2BAA2B;IAC3B,0BAA0B;CAC7B;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,2BAA2B;IAC3B,6BAA6B;CAChC;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,yBAAyB;IACzB,wBAAwB;CAC3B;AACD;IACI,wBAAwB;CAC3B;AACD;IACI,yBAAyB;IACzB,2BAA2B;CAC9B;AACD;IACI,wBAAwB;CAC3B;AACD;IACI,2BAA2B;IAC3B,0BAA0B;CAC7B;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,2BAA2B;IAC3B,6BAA6B;CAChC;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,yBAAyB;IACzB,wBAAwB;CAC3B;AACD;IACI,wBAAwB;CAC3B;AACD;IACI,yBAAyB;IACzB,2BAA2B;CAC9B;AACD;IACI,wBAAwB;CAC3B;AACD;IACI,2BAA2B;IAC3B,0BAA0B;CAC7B;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,2BAA2B;IAC3B,6BAA6B;CAChC;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,yBAAyB;IACzB,wBAAwB;CAC3B;AACD;IACI,wBAAwB;CAC3B;AACD;IACI,yBAAyB;IACzB,2BAA2B;CAC9B;AACD;IACI,wBAAwB;CAC3B;AACD;IACI,2BAA2B;IAC3B,0BAA0B;CAC7B;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,2BAA2B;IAC3B,6BAA6B;CAChC;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,yBAAyB;IACzB,wBAAwB;CAC3B;AACD;IACI,wBAAwB;CAC3B;AACD;IACI,yBAAyB;IACzB,2BAA2B;CAC9B;AACD;IACI,wBAAwB;CAC3B;AACD;IACI,2BAA2B;IAC3B,0BAA0B;CAC7B;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,2BAA2B;IAC3B,6BAA6B;CAChC;AACD;IACI,0BAA0B;CAC7B;AACD;EACE,iCAAiC;EACjC,mBAAmB;EACnB,WAAW;EACX,YAAY;EACZ,qBAAqB;EACrB,uBAAuB;EACvB,0BAA0B;CAC3B;AACD;EACE,8BAA8B;EAC9B,mBAAmB;EACnB,WAAW;EACX,eAAe;EACf,gBAAgB;EAChB,YAAY;EACZ,0BAA0B;EAC1B,uDAAuD;EACvD,uBAAuB;EACvB,2BAA2B;EAC3B,6BAA6B;CAC9B;AACD;EACE,8BAA8B;EAC9B,mBAAmB;EACnB,aAAa;EACb,eAAe;EACf,YAAY;EACZ,aAAa;EACb,YAAY;EACZ,mBAAmB;EACnB,0BAA0B;EAC1B,uDAAuD;EACvD,qBAAqB;EACrB,uBAAuB;EACvB,2BAA2B;EAC3B,0BAA0B;CAC3B;AACD;EACE,mBAAmB;EACnB,YAAY;EACZ,YAAY;EACZ,WAAW;EACX,YAAY;EACZ,0BAA0B;CAC3B;AACD;EACE,iCAAiC;EACjC,yBAAyB;CAC1B;AACD;EACE,kCAAkC;EAClC,0BAA0B;CAC3B;AACD;;;;;EAKE,iBAAiB;EACjB,sBAAsB;EACtB,mBAAmB;EACnB,WAAW;EACX,YAAY;EACZ,uBAAuB;CACxB;AACD;;EAEE,kDAAkD;EAClD,0CAA0C;CAC3C;AACD;;EAEE,kCAAkC;EAClC,0BAA0B;EAC1B,YAAY;EACZ,cAAc;CACf;AACD;EACE,sBAAsB;EACtB,yBAAyB;EACzB,0BAA0B;MACtB,uBAAuB;UACnB,oBAAoB;EAC5B,8BAA8B;EAC9B,mBAAmB;EACnB,iBAAiB;EACjB,4BAA4B;EAC5B,4BAA4B;EAC5B,qBAAqB;EACrB,gBAAgB;EAChB,eAAe;EACf,wBAAwB;MACpB,qBAAqB;UACjB,4BAA4B;EACpC,iBAAiB;EACjB,iDAAiD;EACjD,mBAAmB;EACnB,oBAAoB;EACpB,0BAA0B;EAC1B,uBAAuB;EACvB,sBAAsB;EACtB,kBAAkB;EAClB,wBAAwB;EACxB,sBAAsB;EACtB,aAAa;EACb,gBAAgB;EAChB,yBAAyB;MACrB,sBAAsB;UAClB,wBAAwB;EAChC,qBAAqB;EACrB,sBAAsB;EACtB,mBAAmB;EACnB,oBAAoB;EACpB,sBAAsB;CACvB;AACD;IACI,cAAc;CACjB;AACD;IACI,oBAAoB;CACvB;AACD;IACI,eAAe;CAClB;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,aAAa;IACb,0BAA0B;CAC7B;AACD;IACI,qBAAqB;IACrB,oBAAoB;IACpB,0BAA0B;IAC1B,sBAAsB;IACtB,4BAA4B;IAC5B,YAAY;CACf;AACD;IACI,sBAAsB;IACtB,eAAe;CAClB;AACD;MACM,mDAAmD;CACxD;AACD;IACI,mBAAmB;IACnB,mBAAmB;CACtB;AACD;IACI,mBAAmB;CACtB;AACD;IACI,kBAAkB;CACrB;AACD;IACI,qBAAqB;IACrB,8BAA8B;CACjC;AACD;MACM,WAAW;CAChB;AACD;MACM,0BAA0B;MAC1B,wBAAwB;MACxB,gCAAgC;MAChC,8BAA8B;MAC9B,YAAY;MACZ,eAAe;MACf,mBAAmB;MACnB,YAAY;MACZ,WAAW;MACX,0DAA0D;cAClD,kDAAkD;MAC1D,mBAAmB;MACnB,sCAAsC;MACtC,qCAAqC;CAC1C;AACD;IACI,mBAAmB;CACtB;AACD;IACI,yBAAyB;IACzB,0BAA0B;CAC7B;AACD;MACM,2BAA2B;MAC3B,4BAA4B;CACjC;AACD;MACM,2BAA2B;MAC3B,4BAA4B;CACjC;AACD;IACI,8BAA8B;IAC9B,0BAA0B;IAC1B,eAAe;IACf,sBAAsB;CACzB;AACD;MACM,6BAA6B;MAC7B,eAAe;CACpB;AACD;MACM,0BAA0B;MAC1B,eAAe;CACpB;AACD;MACM,8BAA8B;MAC9B,0BAA0B;MAC1B,iBAAiB;CACtB;AACD;IACI,cAAc;IACd,aAAa;CAChB;AACD;IACI,kCAAkC;IAClC,uBAAuB;CAC1B;AACD;IACI,sBAAsB;IACtB,mCAAmC;CACtC;AACD;IACI,kCAAkC;IAClC,mCAAmC;CACtC;AACD;EACE,sBAAsB;EACtB,uBAAuB;CACxB;AACD;IACI,YAAY;IACZ,aAAa;IACb,eAAe;CAClB;AACD;IACI,YAAY;IACZ,kBAAkB;CACrB;AACD;MACM,iBAAiB;CACtB;AACD;MACM,eAAe;CACpB;AACD;QACQ,8BAA8B;QAC9B,2BAA2B;CAClC;AACD;MACM,6BAA6B;MAC7B,0BAA0B;CAC/B;AACD;EACE,sBAAsB;EACtB,uBAAuB;CACxB;AACD;IACI,eAAe;IACf,iBAAiB;IACjB,YAAY;IACZ,gBAAgB;CACnB;AACD;MACM,iBAAiB;CACtB;AACD;MACM,cAAc;CACnB;AACD;QACQ,6BAA6B;QAC7B,8BAA8B;CACrC;AACD;MACM,0BAA0B;MAC1B,2BAA2B;CAChC;AACD;EACE,eAAe;EACf,sBAAsB;EACtB,wBAAwB;CACzB;AACD;IACI,aAAa;IACb,0BAA0B;IAC1B,sBAAsB;CACzB;AACD;MACM,0BAA0B;CAC/B;AACD;MACM,0BAA0B;MAC1B,aAAa;CAClB;AACD;QACQ,oDAAoD;CAC3D;AACD;MACM,eAAe;CACpB;AACD;MACM,yBAAyB;MACzB,2BAA2B;CAChC;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,0BAA0B;IAC1B,eAAe;CAClB;AACD;MACM,oDAAoD;CACzD;AACD;IACI,mCAAmC;IACnC,qCAAqC;CACxC;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,2BAA2B;IAC3B,6BAA6B;CAChC;AACD;EACE,aAAa;EACb,sBAAsB;EACtB,0BAA0B;CAC3B;AACD;IACI,eAAe;IACf,wBAAwB;IACxB,sBAAsB;CACzB;AACD;MACM,wBAAwB;CAC7B;AACD;MACM,0BAA0B;MAC1B,eAAe;CACpB;AACD;QACQ,iDAAiD;CACxD;AACD;MACM,aAAa;CAClB;AACD;MACM,2BAA2B;MAC3B,6BAA6B;CAClC;AACD;IACI,wBAAwB;CAC3B;AACD;IACI,0BAA0B;IAC1B,aAAa;CAChB;AACD;MACM,iDAAiD;CACtD;AACD;IACI,qCAAqC;IACrC,qCAAqC;CACxC;AACD;IACI,wBAAwB;CAC3B;AACD;IACI,yBAAyB;IACzB,2BAA2B;CAC9B;AACD;EACE,eAAe;EACf,sBAAsB;EACtB,6BAA6B;CAC9B;AACD;IACI,kBAAkB;IAClB,0BAA0B;IAC1B,sBAAsB;CACzB;AACD;MACM,0BAA0B;CAC/B;AACD;MACM,0BAA0B;MAC1B,kBAAkB;CACvB;AACD;QACQ,oDAAoD;CAC3D;AACD;MACM,eAAe;CACpB;AACD;MACM,8BAA8B;MAC9B,gCAAgC;CACrC;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,0BAA0B;IAC1B,eAAe;CAClB;AACD;MACM,oDAAoD;CACzD;AACD;IACI,wCAAwC;IACxC,qCAAqC;CACxC;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,2BAA2B;IAC3B,6BAA6B;CAChC;AACD;EACE,kBAAkB;EAClB,sBAAsB;EACtB,0BAA0B;CAC3B;AACD;IACI,eAAe;IACf,6BAA6B;IAC7B,sBAAsB;CACzB;AACD;MACM,6BAA6B;CAClC;AACD;MACM,0BAA0B;MAC1B,eAAe;CACpB;AACD;QACQ,iDAAiD;CACxD;AACD;MACM,kBAAkB;CACvB;AACD;MACM,2BAA2B;MAC3B,6BAA6B;CAClC;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,0BAA0B;IAC1B,kBAAkB;CACrB;AACD;MACM,iDAAiD;CACtD;AACD;IACI,qCAAqC;IACrC,qCAAqC;CACxC;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,8BAA8B;IAC9B,gCAAgC;CACnC;AACD;EACE,YAAY;EACZ,sBAAsB;EACtB,0BAA0B;CAC3B;AACD;IACI,eAAe;IACf,uBAAuB;IACvB,sBAAsB;CACzB;AACD;MACM,uBAAuB;CAC5B;AACD;MACM,0BAA0B;MAC1B,eAAe;CACpB;AACD;QACQ,mDAAmD;CAC1D;AACD;MACM,YAAY;CACjB;AACD;MACM,2BAA2B;MAC3B,6BAA6B;CAClC;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,0BAA0B;IAC1B,YAAY;CACf;AACD;MACM,mDAAmD;CACxD;AACD;IACI,qCAAqC;IACrC,qCAAqC;CACxC;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,wBAAwB;IACxB,0BAA0B;CAC7B;AACD;EACE,YAAY;EACZ,sBAAsB;EACtB,0BAA0B;CAC3B;AACD;IACI,eAAe;IACf,uBAAuB;IACvB,sBAAsB;CACzB;AACD;MACM,uBAAuB;CAC5B;AACD;MACM,0BAA0B;MAC1B,eAAe;CACpB;AACD;QACQ,oDAAoD;CAC3D;AACD;MACM,YAAY;CACjB;AACD;MACM,2BAA2B;MAC3B,6BAA6B;CAClC;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,0BAA0B;IAC1B,YAAY;CACf;AACD;MACM,oDAAoD;CACzD;AACD;IACI,qCAAqC;IACrC,qCAAqC;CACxC;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,wBAAwB;IACxB,0BAA0B;CAC7B;AACD;EACE,YAAY;EACZ,sBAAsB;EACtB,0BAA0B;CAC3B;AACD;IACI,eAAe;IACf,uBAAuB;IACvB,sBAAsB;CACzB;AACD;MACM,uBAAuB;CAC5B;AACD;MACM,0BAA0B;MAC1B,eAAe;CACpB;AACD;QACQ,kDAAkD;CACzD;AACD;MACM,YAAY;CACjB;AACD;MACM,2BAA2B;MAC3B,6BAA6B;CAClC;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,0BAA0B;IAC1B,YAAY;CACf;AACD;MACM,kDAAkD;CACvD;AACD;IACI,qCAAqC;IACrC,qCAAqC;CACxC;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,wBAAwB;IACxB,0BAA0B;CAC7B;AACD;EACE,0BAA0B;EAC1B,sBAAsB;EACtB,0BAA0B;CAC3B;AACD;IACI,eAAe;IACf,qCAAqC;IACrC,sBAAsB;CACzB;AACD;MACM,qCAAqC;CAC1C;AACD;MACM,0BAA0B;MAC1B,eAAe;CACpB;AACD;QACQ,mDAAmD;CAC1D;AACD;MACM,0BAA0B;CAC/B;AACD;MACM,2BAA2B;MAC3B,6BAA6B;CAClC;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,0BAA0B;IAC1B,0BAA0B;CAC7B;AACD;MACM,mDAAmD;CACxD;AACD;IACI,qCAAqC;IACrC,qCAAqC;CACxC;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,sCAAsC;IACtC,wCAAwC;CAC3C;AACD;EACE,YAAY;EACZ,sBAAsB;EACtB,0BAA0B;CAC3B;AACD;IACI,eAAe;IACf,uBAAuB;IACvB,sBAAsB;CACzB;AACD;MACM,uBAAuB;CAC5B;AACD;MACM,0BAA0B;MAC1B,eAAe;CACpB;AACD;QACQ,kDAAkD;CACzD;AACD;MACM,YAAY;CACjB;AACD;MACM,2BAA2B;MAC3B,6BAA6B;CAClC;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,0BAA0B;IAC1B,YAAY;CACf;AACD;MACM,kDAAkD;CACvD;AACD;IACI,qCAAqC;IACrC,qCAAqC;CACxC;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,wBAAwB;IACxB,0BAA0B;CAC7B;AACD;EACE,uBAAuB;CACxB;AACD;EACE,qBAAqB;EACrB,qBAAqB;EACrB,cAAc;EACd,wBAAwB;MACpB,qBAAqB;UACjB,4BAA4B;CACrC;AACD;IACI,mBAAmB;CACtB;AACD;;;IAGI,+BAA+B;IAC/B,4BAA4B;CAC/B;AACD;;;IAGI,gCAAgC;IAChC,6BAA6B;CAChC;AACD;;;IAGI,iBAAiB;CACpB;AACD;;;;;MAKM,WAAW;CAChB;AACD;;;;;;;;;MASM,WAAW;CAChB;AACD;;;;;;;;;QASQ,WAAW;CAClB;AACD;IACI,oBAAoB;QAChB,qBAAqB;YACjB,aAAa;CACxB;AACD;IACI,yBAAyB;QACrB,sBAAsB;YAClB,wBAAwB;CACnC;AACD;IACI,sBAAsB;QAClB,mBAAmB;YACf,0BAA0B;CACrC;AACD;IACI,oBAAoB;QAChB,qBAAqB;YACjB,aAAa;IACrB,qBAAqB;QACjB,eAAe;CACtB;AACD;EACE,qBAAqB;EACrB,qBAAqB;EACrB,cAAc;EACd,wBAAwB;MACpB,qBAAqB;UACjB,4BAA4B;CACrC;AACD;IACI,qBAAqB;QACjB,eAAe;CACtB;AACD;MACM,iBAAiB;MACjB,sBAAsB;CAC3B;AACD;MACM,oBAAoB;UAChB,qBAAqB;cACjB,aAAa;MACrB,qBAAqB;UACjB,eAAe;CACxB;AACD;IACI,yBAAyB;QACrB,sBAAsB;YAClB,wBAAwB;CACnC;AACD;IACI,sBAAsB;QAClB,mBAAmB;YACf,0BAA0B;CACrC;AACD;IACI,oBAAoB;QAChB,gBAAgB;CACvB;AACD;MACM,uBAAuB;CAC5B;AACD;MACM,wBAAwB;CAC7B;AACD;MACM,iBAAiB;CACtB;AACD;EACE,qBAAqB;EACrB,qBAAqB;EACrB,cAAc;CACf;AACD;EACE,sBAAsB;EACtB,2BAA2B;MACvB,cAAc;EAClB,oBAAoB;MAChB,qBAAqB;UACjB,aAAa;EACrB,qBAAqB;MACjB,eAAe;EACnB,qBAAqB;EACrB,kBAAkB;CACnB;AACD;IACI,mBAAmB;CACtB;AACD;IACI,mBAAmB;IACnB,qBAAqB;CACxB;AACD;IACI,qBAAqB;CACxB;AACD;IACI,mBAAmB;IACnB,qBAAqB;CACxB;AACD;IACI,kBAAkB;IAClB,qBAAqB;CACxB;AACD;EACE,qBAAqB;EACrB,qBAAqB;EACrB,cAAc;EACd,2BAA2B;MACvB,cAAc;EAClB,oBAAoB;MAChB,qBAAqB;UACjB,aAAa;EACrB,qBAAqB;MACjB,eAAe;CACpB;AACD;IACI,iBAAiB;CACpB;AACD;IACI,qBAAqB;QACjB,eAAe;CACtB;AACD;MACM,oBAAoB;UAChB,qBAAqB;cACjB,aAAa;CAC1B;AACD;MACM,sBAAsB;CAC3B;AACD;EACE,gBAAgB;EAChB,mBAAmB;EACnB,iBAAiB;CAClB;AACD;;;IAGI,eAAe;CAClB;AACD;;;IAGI,mBAAmB;CACtB;AACD;;;IAGI,mBAAmB;CACtB;AACD;;;IAGI,kBAAkB;CACrB;AACD;IACI,eAAe;IACf,eAAe;IACf,qBAAqB;IACrB,mBAAmB;IACnB,OAAO;IACP,cAAc;IACd,WAAW;CACd;AACD;;IAEI,qBAAqB;CACxB;AACD;IACI,QAAQ;CACX;AACD;;IAEI,sBAAsB;CACzB;AACD;IACI,SAAS;CACZ;AACD;IACI,0DAA0D;YAClD,kDAAkD;IAC1D,0BAA0B;IAC1B,wBAAwB;IACxB,gCAAgC;IAChC,8BAA8B;IAC9B,YAAY;IACZ,eAAe;IACf,uBAAuB;IACvB,YAAY;IACZ,WAAW;IACX,mBAAmB;IACnB,8BAA8B;IAC9B,eAAe;IACf,aAAa;CAChB;AACD;IACI,mBAAmB;CACtB;AACD;IACI,mBAAmB;CACtB;AACD;IACI,kBAAkB;CACrB;AACD;;EAEE,sBAAsB;EACtB,yBAAyB;EACzB,0BAA0B;MACtB,uBAAuB;UACnB,oBAAoB;EAC5B,8BAA8B;EAC9B,mBAAmB;EACnB,iBAAiB;EACjB,4BAA4B;EAC5B,4BAA4B;EAC5B,qBAAqB;EACrB,gBAAgB;EAChB,eAAe;EACf,wBAAwB;MACpB,qBAAqB;UACjB,4BAA4B;EACpC,iBAAiB;EACjB,iDAAiD;EACjD,mBAAmB;EACnB,oBAAoB;EACpB,wBAAwB;EACxB,sBAAsB;EACtB,eAAe;EACf,gBAAgB;EAChB,YAAY;CACb;AACD;;;;;IAKI,cAAc;CACjB;AACD;;IAEI,oBAAoB;CACvB;AACD;;;IAGI,sBAAsB;CACzB;AACD;;;;;IAKI,sBAAsB;IACtB,mDAAmD;CACtD;AACD;;IAEI,6BAA6B;IAC7B,yBAAyB;IACzB,iBAAiB;IACjB,eAAe;CAClB;AACD;;MAEM,gCAAgC;CACrC;AACD;;MAEM,gCAAgC;CACrC;AACD;;MAEM,gCAAgC;CACrC;AACD;;MAEM,gCAAgC;CACrC;AACD;;IAEI,wBAAwB;CAC3B;AACD;;IAEI,oBAAoB;CACvB;AACD;;;;;MAKM,oDAAoD;CACzD;AACD;;IAEI,sBAAsB;CACzB;AACD;;;;;MAKM,iDAAiD;CACtD;AACD;;IAEI,yBAAyB;CAC5B;AACD;;;;;MAKM,oDAAoD;CACzD;AACD;;IAEI,sBAAsB;CACzB;AACD;;;;;MAKM,iDAAiD;CACtD;AACD;;IAEI,sBAAsB;CACzB;AACD;;;;;MAKM,mDAAmD;CACxD;AACD;;IAEI,sBAAsB;CACzB;AACD;;;;;MAKM,oDAAoD;CACzD;AACD;;IAEI,sBAAsB;CACzB;AACD;;;;;MAKM,kDAAkD;CACvD;AACD;;IAEI,sBAAsB;CACzB;AACD;;;;;MAKM,mDAAmD;CACxD;AACD;;IAEI,sBAAsB;CACzB;AACD;;;;;MAKM,kDAAkD;CACvD;AACD;;IAEI,mBAAmB;IACnB,mBAAmB;CACtB;AACD;;IAEI,mBAAmB;CACtB;AACD;;IAEI,kBAAkB;CACrB;AACD;;IAEI,eAAe;IACf,YAAY;CACf;AACD;;IAEI,gBAAgB;IAChB,YAAY;CACf;AACD;EACE,sBAAsB;EACtB,gBAAgB;EAChB,mBAAmB;EACnB,oBAAoB;EACpB,uBAAuB;CACxB;AACD;IACI,eAAe;CAClB;AACD;MACM,0BAA0B;MAC1B,gBAAgB;MAChB,cAAc;MACd,aAAa;MACb,eAAe;MACf,cAAc;MACd,qBAAqB;MACrB,mBAAmB;MACnB,kCAAkC;cAC1B,0BAA0B;MAClC,aAAa;MACb,qBAAqB;MACrB,eAAe;MACf,SAAS;MACT,WAAW;CAChB;AACD;IACI,sBAAsB;IACtB,yBAAyB;IACzB,0BAA0B;QACtB,uBAAuB;YACnB,oBAAoB;IAC5B,8BAA8B;IAC9B,mBAAmB;IACnB,iBAAiB;IACjB,4BAA4B;IAC5B,4BAA4B;IAC5B,qBAAqB;IACrB,gBAAgB;IAChB,eAAe;IACf,wBAAwB;QACpB,qBAAqB;YACjB,4BAA4B;IACpC,iBAAiB;IACjB,iDAAiD;IACjD,mBAAmB;IACnB,oBAAoB;IACpB,wBAAwB;IACxB,sBAAsB;IACtB,eAAe;IACf,gBAAgB;IAChB,eAAe;IACf,eAAe;IACf,gBAAgB;IAChB,cAAc;CACjB;AACD;MACM,cAAc;CACnB;AACD;MACM,oBAAoB;CACzB;AACD;MACM,sBAAsB;CAC3B;AACD;MACM,sBAAsB;MACtB,mDAAmD;CACxD;AACD;MACM,6BAA6B;MAC7B,yBAAyB;MACzB,iBAAiB;MACjB,eAAe;CACpB;AACD;QACQ,gCAAgC;CACvC;AACD;QACQ,gCAAgC;CACvC;AACD;QACQ,gCAAgC;CACvC;AACD;QACQ,gCAAgC;CACvC;AACD;MACM,cAAc;CACnB;AACD;MACM,yBAAyB;CAC9B;AACD;MACM,qBAAqB;CAC1B;AACD;MACM,cAAc;MACd,WAAW;CAChB;AACD;QACQ,mBAAmB;CAC1B;AACD;IACI,sBAAsB;CACzB;AACD;IACI,oBAAoB;CACvB;AACD;MACM,oDAAoD;CACzD;AACD;IACI,sBAAsB;CACzB;AACD;MACM,iDAAiD;CACtD;AACD;IACI,yBAAyB;CAC5B;AACD;MACM,oDAAoD;CACzD;AACD;IACI,sBAAsB;CACzB;AACD;MACM,iDAAiD;CACtD;AACD;IACI,sBAAsB;CACzB;AACD;MACM,mDAAmD;CACxD;AACD;IACI,sBAAsB;CACzB;AACD;MACM,oDAAoD;CACzD;AACD;IACI,sBAAsB;CACzB;AACD;MACM,kDAAkD;CACvD;AACD;IACI,sBAAsB;CACzB;AACD;MACM,mDAAmD;CACxD;AACD;IACI,sBAAsB;CACzB;AACD;MACM,kDAAkD;CACvD;AACD;IACI,mBAAmB;IACnB,mBAAmB;CACtB;AACD;IACI,mBAAmB;CACtB;AACD;IACI,kBAAkB;CACrB;AACD;IACI,sBAAsB;CACzB;AACD;IACI,YAAY;CACf;AACD;MACM,YAAY;CACjB;AACD;IACI,0DAA0D;YAClD,kDAAkD;IAC1D,0BAA0B;IAC1B,wBAAwB;IACxB,gCAAgC;IAChC,8BAA8B;IAC9B,YAAY;IACZ,eAAe;IACf,uBAAuB;IACvB,YAAY;IACZ,WAAW;IACX,mBAAmB;IACnB,cAAc;IACd,mBAAmB;IACnB,eAAe;IACf,aAAa;IACb,wBAAwB;YAChB,gBAAgB;CAC3B;AACD;IACI,mBAAmB;CACtB;AACD;IACI,mBAAmB;CACtB;AACD;IACI,kBAAkB;CACrB;AACD;EACE,eAAe;EACf,gBAAgB;EAChB,gBAAgB;EAChB,iBAAiB;EACjB,iBAAiB;CAClB;AACD;IACI,kBAAkB;IAClB,kBAAkB;CACrB;AACD;IACI,cAAc;CACjB;AACD;IACI,aAAa;CAChB;AACD;;EAEE,0BAA0B;EAC1B,uBAAuB;EACvB,sBAAsB;EACtB,kBAAkB;EAClB,gBAAgB;EAChB,sBAAsB;EACtB,kBAAkB;EAClB,mBAAmB;CACpB;AACD;;IAEI,gBAAgB;CACnB;AACD;;IAEI,eAAe;CAClB;AACD;;IAEI,eAAe;IACf,oBAAoB;CACvB;AACD;EACE,iBAAiB;CAClB;AACD;EACE,eAAe;EACf,eAAe;EACf,gBAAgB;EAChB,iBAAiB;EACjB,mBAAmB;CACpB;AACD;IACI,qBAAqB;CACxB;AACD;IACI,mBAAmB;CACtB;AACD;IACI,mBAAmB;CACtB;AACD;IACI,kBAAkB;CACrB;AACD;EACE,eAAe;EACf,mBAAmB;EACnB,oBAAoB;CACrB;AACD;IACI,aAAa;CAChB;AACD;IACI,eAAe;CAClB;AACD;IACI,kBAAkB;CACrB;AACD;IACI,eAAe;CAClB;AACD;IACI,eAAe;CAClB;AACD;IACI,eAAe;CAClB;AACD;IACI,eAAe;CAClB;AACD;IACI,eAAe;CAClB;AACD;IACI,eAAe;CAClB;AACD;EACE,sBAAsB;CACvB;AACD;EACE,mBAAmB;CACpB;AACD;;;;;;;EAOE,mBAAmB;CACpB;AACD;;;;;;EAME,eAAe;EACf,iBAAiB;EACjB,mBAAmB;CACpB;AACD;EACE,eAAe;EACf,qBAAqB;CACtB;AACD;IACI,gBAAgB;CACnB;AACD;EACE,kBAAkB;EAClB,wBAAwB;CACzB;AACD;IACI,qBAAqB;CACxB;AACD;EACE,iBAAiB;EACjB,wBAAwB;CACzB;AACD;IACI,qBAAqB;CACxB;AACD;EACE,kBAAkB;EAClB,qBAAqB;CACtB;AACD;EACE,mBAAmB;EACnB,wBAAwB;CACzB;AACD;EACE,eAAe;EACf,mBAAmB;CACpB;AACD;EACE,6BAA6B;EAC7B,+BAA+B;EAC/B,sBAAsB;CACvB;AACD;EACE,4BAA4B;EAC5B,iBAAiB;EACjB,gBAAgB;CACjB;AACD;EACE,yBAAyB;EACzB,iBAAiB;EACjB,gBAAgB;CACjB;AACD;IACI,wBAAwB;IACxB,kBAAkB;CACrB;AACD;MACM,wBAAwB;CAC7B;AACD;EACE,iBAAiB;CAClB;AACD;EACE,iBAAiB;EACjB,kBAAkB;EAClB,mBAAmB;CACpB;AACD;IACI,gBAAgB;CACnB;AACD;IACI,mBAAmB;CACtB;AACD;IACI,sBAAsB;CACzB;AACD;IACI,mBAAmB;CACtB;AACD;EACE,kCAAkC;EAClC,iBAAiB;EACjB,sBAAsB;EACtB,iBAAiB;EACjB,kBAAkB;CACnB;AACD;;EAEE,eAAe;CAChB;AACD;EACE,YAAY;CACb;AACD;;IAEI,0BAA0B;IAC1B,sBAAsB;IACtB,sBAAsB;IACtB,oBAAoB;CACvB;AACD;IACI,eAAe;IACf,iBAAiB;CACpB;AACD;IACI,6BAA6B;CAChC;AACD;;IAEI,sBAAsB;IACtB,eAAe;CAClB;AACD;;IAEI,sBAAsB;IACtB,eAAe;CAClB;AACD;;IAEI,uBAAuB;CAC1B;AACD;EACE,mBAAmB;CACpB;AACD;EACE,mBAAmB;CACpB;AACD;EACE,kBAAkB;CACnB;AACD;EACE,yBAAyB;MACrB,sBAAsB;UAClB,wBAAwB;EAChC,qBAAqB;EACrB,qBAAqB;EACrB,cAAc;EACd,iBAAiB;CAClB;AACD;IACI,uBAAuB;CAC1B;AACD;IACI,+CAA+C;IAC/C,qBAAqB;IACrB,qBAAqB;IACrB,cAAc;IACd,qBAAqB;CACxB;AACD;;MAEM,sBAAsB;CAC3B;AACD;MACM,oBAAoB;CACzB;AACD;QACQ,mBAAmB;CAC1B;AACD;IACI,+CAA+C;IAC/C,iBAAiB;IACjB,kBAAkB;CACrB;AACD;IACI,mBAAmB;IACnB,oBAAoB;CACvB;AACD;;EAEE,8BAA8B;MAC1B,iBAAiB;EACrB,oBAAoB;MAChB,qBAAqB;UACjB,aAAa;EACrB,qBAAqB;MACjB,eAAe;CACpB;AACD;EACE,mBAAmB;CACpB;AACD;EACE,kBAAkB;CACnB;AACD;EACE,8BAA8B;MAC1B,iBAAiB;EACrB,oBAAoB;MAChB,qBAAqB;UACjB,aAAa;EACrB,qBAAqB;MACjB,eAAe;EACnB,iBAAiB;CAClB;AACD;EACE,wBAAwB;EACxB,mBAAmB;EACnB,6EAA6E;EAC7E,eAAe;EACf,eAAe;EACf,iBAAiB;CAClB;AACD;IACI,sBAAsB;CACzB;AACD;EACE,+DAA+D;CAChE;AACD;EACE,qEAAqE;CACtE;AACD;EACE,sBAAsB;CACvB;AACD;EACE,mBAAmB;CACpB;AACD;;;;;;;EAOE,mBAAmB;CACpB;AACD;;;;;;EAME,eAAe;EACf,iBAAiB;EACjB,mBAAmB;CACpB;AACD;EACE,eAAe;EACf,qBAAqB;CACtB;AACD;IACI,gBAAgB;CACnB;AACD;EACE,kBAAkB;EAClB,wBAAwB;CACzB;AACD;IACI,qBAAqB;CACxB;AACD;EACE,iBAAiB;EACjB,wBAAwB;CACzB;AACD;IACI,qBAAqB;CACxB;AACD;EACE,kBAAkB;EAClB,qBAAqB;CACtB;AACD;EACE,mBAAmB;EACnB,wBAAwB;CACzB;AACD;EACE,eAAe;EACf,mBAAmB;CACpB;AACD;EACE,6BAA6B;EAC7B,+BAA+B;EAC/B,sBAAsB;CACvB;AACD;EACE,4BAA4B;EAC5B,iBAAiB;EACjB,gBAAgB;CACjB;AACD;EACE,yBAAyB;EACzB,iBAAiB;EACjB,gBAAgB;CACjB;AACD;IACI,wBAAwB;IACxB,kBAAkB;CACrB;AACD;MACM,wBAAwB;CAC7B;AACD;EACE,iBAAiB;CAClB;AACD;EACE,iBAAiB;EACjB,kBAAkB;EAClB,mBAAmB;CACpB;AACD;IACI,gBAAgB;CACnB;AACD;IACI,mBAAmB;CACtB;AACD;IACI,sBAAsB;CACzB;AACD;IACI,mBAAmB;CACtB;AACD;EACE,kCAAkC;EAClC,iBAAiB;EACjB,sBAAsB;EACtB,iBAAiB;EACjB,kBAAkB;CACnB;AACD;;EAEE,eAAe;CAChB;AACD;EACE,YAAY;CACb;AACD;;IAEI,0BAA0B;IAC1B,sBAAsB;IACtB,sBAAsB;IACtB,oBAAoB;CACvB;AACD;IACI,eAAe;IACf,iBAAiB;CACpB;AACD;IACI,6BAA6B;CAChC;AACD;;IAEI,sBAAsB;IACtB,eAAe;CAClB;AACD;;IAEI,sBAAsB;IACtB,eAAe;CAClB;AACD;;IAEI,uBAAuB;CAC1B;AACD;EACE,mBAAmB;CACpB;AACD;EACE,mBAAmB;CACpB;AACD;EACE,kBAAkB;CACnB;AACD;EACE,6BAA6B;EAC7B,mBAAmB;EACnB,uCAAuC;EACvC,mBAAmB;CACpB;AACD;IACI,sBAAsB;CACzB;AACD;IACI,oBAAoB;IACpB,2BAA2B;CAC9B;AACD;IACI,oBAAoB;CACvB;AACD;;IAEI,kBAAkB;CACrB;AACD;IACI,wBAAwB;CAC3B;AACD;IACI,mBAAmB;IACnB,aAAa;IACb,WAAW;CACd;AACD;;;IAGI,oBAAoB;CACvB;AACD;IACI,wBAAwB;IACxB,eAAe;CAClB;AACD;IACI,0BAA0B;IAC1B,aAAa;CAChB;AACD;IACI,6BAA6B;IAC7B,eAAe;CAClB;AACD;IACI,0BAA0B;IAC1B,kBAAkB;CACrB;AACD;IACI,0BAA0B;IAC1B,YAAY;CACf;AACD;IACI,0BAA0B;IAC1B,YAAY;CACf;AACD;IACI,0BAA0B;IAC1B,YAAY;CACf;AACD;IACI,0BAA0B;IAC1B,0BAA0B;CAC7B;AACD;IACI,0BAA0B;IAC1B,YAAY;CACf;AACD;EACE,gBAAgB;EAChB,YAAY;EACZ,uEAAuE;EACvE,qEAAqE;EACrE,6DAA6D;EAC7D,oFAAoF;EACpF,iBAAiB;EACjB,cAAc;EACd,iBAAiB;CAClB;AACD;IACI,kBAAkB;CACrB;AACD;IACI,WAAW;IACX,UAAU;IACV,mBAAmB;CACtB;AACD;IACI,qBAAqB;CACxB;AACD;EACE,YAAY;EACZ,kBAAkB;EAClB,0BAA0B;EAC1B,eAAe;EACf,gBAAgB;EAChB,eAAe;EACf,sBAAsB;CACvB;AACD;IACI,UAAU;CACb;AACD;IACI,iBAAiB;IACjB,kBAAkB;CACrB;AACD;;IAEI,0BAA0B;IAC1B,sBAAsB;IACtB,uBAAuB;IACvB,oBAAoB;CACvB;AACD;;MAEM,wBAAwB;MACxB,oBAAoB;MACpB,eAAe;CACpB;AACD;;MAEM,0BAA0B;MAC1B,sBAAsB;MACtB,aAAa;CAClB;AACD;;MAEM,6BAA6B;MAC7B,yBAAyB;MACzB,eAAe;CACpB;AACD;;MAEM,0BAA0B;MAC1B,sBAAsB;MACtB,kBAAkB;CACvB;AACD;;MAEM,0BAA0B;MAC1B,sBAAsB;MACtB,YAAY;CACjB;AACD;;MAEM,0BAA0B;MAC1B,sBAAsB;MACtB,YAAY;CACjB;AACD;;MAEM,0BAA0B;MAC1B,sBAAsB;MACtB,YAAY;CACjB;AACD;;MAEM,0BAA0B;MAC1B,sBAAsB;MACtB,0BAA0B;CAC/B;AACD;;MAEM,0BAA0B;MAC1B,sBAAsB;MACtB,YAAY;CACjB;AACD;;MAEM,oBAAoB;MACpB,UAAU;CACf;AACD;IACI,eAAe;IACf,iBAAiB;IACjB,0BAA0B;CAC7B;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,0BAA0B;IAC1B,YAAY;CACf;AACD;;MAEM,oBAAoB;CACzB;AACD;;MAEM,mBAAmB;MACnB,oBAAoB;CACzB;AACD;;IAEI,sBAAsB;IACtB,eAAe;CAClB;AACD;;IAEI,sBAAsB;IACtB,eAAe;CAClB;AACD;;IAEI,uBAAuB;CAC1B;AACD;;IAEI,kBAAkB;CACrB;AACD;;IAEI,yBAAyB;CAC5B;AACD;IACI,YAAY;CACf;AACD;;IAEI,sBAAsB;CACzB;AACD;IACI,0BAA0B;CAC7B;AACD;MACM,6BAA6B;CAClC;AACD;EACE,mBAAmB;EACnB,sBAAsB;EACtB,eAAe;EACf,uBAAuB;CACxB;AACD;IACI,YAAY;IACZ,aAAa;IACb,iBAAiB;IACjB,mBAAmB;IACnB,sBAAsB;CACzB;AACD;IACI,mBAAmB;IACnB,oCAAoC;YAC5B,4BAA4B;IACpC,mCAAmC;YAC3B,2BAA2B;IACnC,UAAU;IACV,YAAY;IACZ,YAAY;IACZ,eAAe;IACf,oBAAoB;IACpB,oBAAoB;IACpB,YAAY;IACZ,4BAA4B;CAC/B;AACD;IACI,mCAAmC;YAC3B,2BAA2B;IACnC,WAAW;IACX,SAAS;IACT,aAAa;IACb,oBAAoB;IACpB,gBAAgB;IAChB,oBAAoB;IACpB,8BAA8B;IAC9B,aAAa;IACb,kBAAkB;IAClB,mBAAmB;IACnB,eAAe;IACf,gBAAgB;IAChB,oBAAoB;IACpB,sCAAsC;YAC9B,8BAA8B;IACtC,YAAY;IACZ,uBAAuB;IACvB,4BAA4B;CAC/B;AACD;EACE,0BAA0B;EAC1B,uBAAuB;EACvB,sBAAsB;EACtB,kBAAkB;EAClB,sBAAsB;EACtB,yBAAyB;EACzB,wCAAwC;EACxC,aAAa;EACb,wBAAwB;EACxB,gBAAgB;EAChB,sBAAsB;EACtB,oBAAoB;MAChB,qBAAqB;UACjB,aAAa;EACrB,qBAAqB;MACjB,eAAe;EACnB,gBAAgB;EAChB,aAAa;EACb,iBAAiB;EACjB,gBAAgB;EAChB,iBAAiB;EACjB,gBAAgB;EAChB,cAAc;EACd,mBAAmB;EACnB,oBAAoB;EACpB,YAAY;CACb;AACD;IACI,wBAAwB;IACxB,YAAY;IACZ,eAAe;IACf,UAAU;IACV,mBAAmB;IACnB,SAAS;IACT,mEAAmE;YAC3D,2DAA2D;IACnE,wCAAwC;YAChC,gCAAgC;CAC3C;AACD;IACI,YAAY;IACZ,WAAW;CACd;AACD;IACI,YAAY;IACZ,WAAW;CACd;AACD;IACI,wCAAwC;CAC3C;AACD;IACI,wCAAwC;CAC3C;AACD;IACI,2CAA2C;CAC9C;AACD;MACM,2CAA2C;CAChD;AACD;MACM,2CAA2C;CAChD;AACD;IACI,wCAAwC;CAC3C;AACD;MACM,wCAAwC;CAC7C;AACD;MACM,wCAAwC;CAC7C;AACD;IACI,2CAA2C;CAC9C;AACD;MACM,2CAA2C;CAChD;AACD;MACM,2CAA2C;CAChD;AACD;IACI,wCAAwC;CAC3C;AACD;MACM,wCAAwC;CAC7C;AACD;MACM,wCAAwC;CAC7C;AACD;IACI,0CAA0C;CAC7C;AACD;MACM,0CAA0C;CAC/C;AACD;MACM,0CAA0C;CAC/C;AACD;IACI,2CAA2C;CAC9C;AACD;MACM,2CAA2C;CAChD;AACD;MACM,2CAA2C;CAChD;AACD;IACI,yCAAyC;CAC5C;AACD;MACM,yCAAyC;CAC9C;AACD;MACM,yCAAyC;CAC9C;AACD;IACI,0CAA0C;CAC7C;AACD;MACM,0CAA0C;CAC/C;AACD;MACM,0CAA0C;CAC/C;AACD;IACI,yCAAyC;CAC5C;AACD;MACM,yCAAyC;CAC9C;AACD;MACM,yCAAyC;CAC9C;AACD;IACI,aAAa;IACb,iBAAiB;IACjB,gBAAgB;IAChB,iBAAiB;IACjB,gBAAgB;IAChB,YAAY;CACf;AACD;IACI,aAAa;IACb,iBAAiB;IACjB,gBAAgB;IAChB,iBAAiB;IACjB,gBAAgB;IAChB,YAAY;CACf;AACD;IACI,aAAa;IACb,iBAAiB;IACjB,gBAAgB;IAChB,iBAAiB;IACjB,gBAAgB;IAChB,YAAY;CACf;AACD;IACI,yCAAyC;CAC5C;AACD;MACM,wCAAwC;CAC7C;AACD;MACM,wCAAwC;CAC7C;AACD;MACM,0BAA0B;CAC/B;AACD;MACM,2CAA2C;CAChD;AACD;MACM,2CAA2C;CAChD;AACD;MACM,wBAAwB;CAC7B;AACD;MACM,wCAAwC;CAC7C;AACD;MACM,wCAAwC;CAC7C;AACD;MACM,0BAA0B;CAC/B;AACD;MACM,2CAA2C;CAChD;AACD;MACM,2CAA2C;CAChD;AACD;MACM,6BAA6B;CAClC;AACD;MACM,wCAAwC;CAC7C;AACD;MACM,wCAAwC;CAC7C;AACD;MACM,0BAA0B;CAC/B;AACD;MACM,0CAA0C;CAC/C;AACD;MACM,0CAA0C;CAC/C;AACD;MACM,0BAA0B;CAC/B;AACD;MACM,2CAA2C;CAChD;AACD;MACM,2CAA2C;CAChD;AACD;MACM,0BAA0B;CAC/B;AACD;MACM,yCAAyC;CAC9C;AACD;MACM,yCAAyC;CAC9C;AACD;MACM,0BAA0B;CAC/B;AACD;MACM,0CAA0C;CAC/C;AACD;MACM,0CAA0C;CAC/C;AACD;MACM,0BAA0B;CAC/B;AACD;MACM,yCAAyC;CAC9C;AACD;MACM,yCAAyC;CAC9C;AACD;MACM,0BAA0B;CAC/B;AACD;EACE,UAAU;EACV,QAAQ;EACR,mBAAmB;EACnB,SAAS;EACT,OAAO;EACP,0BAA0B;MACtB,uBAAuB;UACnB,oBAAoB;EAC5B,cAAc;EACd,yBAAyB;MACrB,sBAAsB;UAClB,wBAAwB;EAChC,iBAAiB;EACjB,gBAAgB;EAChB,cAAc;CACf;AACD;IACI,qBAAqB;IACrB,qBAAqB;IACrB,cAAc;CACjB;AACD;EACE,UAAU;EACV,QAAQ;EACR,mBAAmB;EACnB,SAAS;EACT,OAAO;EACP,wCAAwC;CACzC;AACD;;EAEE,eAAe;EACf,gCAAgC;EAChC,eAAe;EACf,mBAAmB;EACnB,aAAa;EACb,+BAA+B;UACvB,uBAAuB;EAC/B,kCAAkC;UAC1B,0BAA0B;EAClC,gDAAgD;UACxC,wCAAwC;CACjD;AACD;;IAEI,aAAa;CAChB;AACD;;IAEI,aAAa;CAChB;AACD;;IAEI,aAAa;CAChB;AACD;EACE,0BAA0B;EAC1B,uBAAuB;EACvB,sBAAsB;EACtB,kBAAkB;EAClB,sBAAsB;EACtB,yBAAyB;EACzB,wCAAwC;EACxC,aAAa;EACb,wBAAwB;EACxB,gBAAgB;EAChB,sBAAsB;EACtB,oBAAoB;MAChB,qBAAqB;UACjB,aAAa;EACrB,qBAAqB;MACjB,eAAe;EACnB,gBAAgB;EAChB,aAAa;EACb,iBAAiB;EACjB,gBAAgB;EAChB,iBAAiB;EACjB,gBAAgB;EAChB,cAAc;EACd,mBAAmB;EACnB,oBAAoB;EACpB,YAAY;EACZ,iBAAiB;EACjB,aAAa;EACb,gBAAgB;EAChB,YAAY;EACZ,UAAU;EACV,YAAY;CACb;AACD;IACI,wBAAwB;IACxB,YAAY;IACZ,eAAe;IACf,UAAU;IACV,mBAAmB;IACnB,SAAS;IACT,mEAAmE;YAC3D,2DAA2D;IACnE,wCAAwC;YAChC,gCAAgC;CAC3C;AACD;IACI,YAAY;IACZ,WAAW;CACd;AACD;IACI,YAAY;IACZ,WAAW;CACd;AACD;IACI,wCAAwC;CAC3C;AACD;IACI,wCAAwC;CAC3C;AACD;IACI,2CAA2C;CAC9C;AACD;MACM,2CAA2C;CAChD;AACD;MACM,2CAA2C;CAChD;AACD;IACI,wCAAwC;CAC3C;AACD;MACM,wCAAwC;CAC7C;AACD;MACM,wCAAwC;CAC7C;AACD;IACI,2CAA2C;CAC9C;AACD;MACM,2CAA2C;CAChD;AACD;MACM,2CAA2C;CAChD;AACD;IACI,wCAAwC;CAC3C;AACD;MACM,wCAAwC;CAC7C;AACD;MACM,wCAAwC;CAC7C;AACD;IACI,0CAA0C;CAC7C;AACD;MACM,0CAA0C;CAC/C;AACD;MACM,0CAA0C;CAC/C;AACD;IACI,2CAA2C;CAC9C;AACD;MACM,2CAA2C;CAChD;AACD;MACM,2CAA2C;CAChD;AACD;IACI,yCAAyC;CAC5C;AACD;MACM,yCAAyC;CAC9C;AACD;MACM,yCAAyC;CAC9C;AACD;IACI,0CAA0C;CAC7C;AACD;MACM,0CAA0C;CAC/C;AACD;MACM,0CAA0C;CAC/C;AACD;IACI,yCAAyC;CAC5C;AACD;MACM,yCAAyC;CAC9C;AACD;MACM,yCAAyC;CAC9C;AACD;IACI,aAAa;IACb,iBAAiB;IACjB,gBAAgB;IAChB,iBAAiB;IACjB,gBAAgB;IAChB,YAAY;CACf;AACD;IACI,aAAa;IACb,iBAAiB;IACjB,gBAAgB;IAChB,iBAAiB;IACjB,gBAAgB;IAChB,YAAY;CACf;AACD;IACI,aAAa;IACb,iBAAiB;IACjB,gBAAgB;IAChB,iBAAiB;IACjB,gBAAgB;IAChB,YAAY;CACf;AACD;IACI,yCAAyC;CAC5C;AACD;MACM,wCAAwC;CAC7C;AACD;MACM,wCAAwC;CAC7C;AACD;MACM,0BAA0B;CAC/B;AACD;MACM,2CAA2C;CAChD;AACD;MACM,2CAA2C;CAChD;AACD;MACM,wBAAwB;CAC7B;AACD;MACM,wCAAwC;CAC7C;AACD;MACM,wCAAwC;CAC7C;AACD;MACM,0BAA0B;CAC/B;AACD;MACM,2CAA2C;CAChD;AACD;MACM,2CAA2C;CAChD;AACD;MACM,6BAA6B;CAClC;AACD;MACM,wCAAwC;CAC7C;AACD;MACM,wCAAwC;CAC7C;AACD;MACM,0BAA0B;CAC/B;AACD;MACM,0CAA0C;CAC/C;AACD;MACM,0CAA0C;CAC/C;AACD;MACM,0BAA0B;CAC/B;AACD;MACM,2CAA2C;CAChD;AACD;MACM,2CAA2C;CAChD;AACD;MACM,0BAA0B;CAC/B;AACD;MACM,yCAAyC;CAC9C;AACD;MACM,yCAAyC;CAC9C;AACD;MACM,0BAA0B;CAC/B;AACD;MACM,0CAA0C;CAC/C;AACD;MACM,0CAA0C;CAC/C;AACD;MACM,0BAA0B;CAC/B;AACD;MACM,yCAAyC;CAC9C;AACD;MACM,yCAAyC;CAC9C;AACD;MACM,0BAA0B;CAC/B;AACD;EACE,qBAAqB;EACrB,qBAAqB;EACrB,cAAc;EACd,6BAA6B;EAC7B,8BAA8B;MAC1B,2BAA2B;UACvB,uBAAuB;EAC/B,+BAA+B;EAC/B,iBAAiB;CAClB;AACD;;EAEE,0BAA0B;MACtB,uBAAuB;UACnB,oBAAoB;EAC5B,6BAA6B;EAC7B,qBAAqB;EACrB,qBAAqB;EACrB,cAAc;EACd,qBAAqB;MACjB,eAAe;EACnB,wBAAwB;MACpB,qBAAqB;UACjB,4BAA4B;EACpC,cAAc;EACd,mBAAmB;CACpB;AACD;EACE,iCAAiC;EACjC,4BAA4B;EAC5B,6BAA6B;CAC9B;AACD;EACE,eAAe;EACf,oBAAoB;MAChB,qBAAqB;UACjB,aAAa;EACrB,qBAAqB;MACjB,eAAe;EACnB,kBAAkB;EAClB,eAAe;CAChB;AACD;EACE,+BAA+B;EAC/B,gCAAgC;EAChC,8BAA8B;CAC/B;AACD;IACI,mBAAmB;CACtB;AACD;EACE,kCAAkC;EAClC,wBAAwB;EACxB,oBAAoB;MAChB,qBAAqB;UACjB,aAAa;EACrB,qBAAqB;MACjB,eAAe;EACnB,eAAe;EACf,cAAc;CACf;AACD;EACE,4BAA4B;EAC5B,4BAA4B;EAC5B,qBAAqB;EACrB,mBAAmB;EACnB,oBAAoB;CACrB;AACD;IACI,eAAe;CAClB;AACD;IACI,WAAW;IACX,SAAS;CACZ;AACD;IACI,aAAa;IACb,oBAAoB;IACpB,mBAAmB;IACnB,UAAU;CACb;AACD;EACE,cAAc;EACd,QAAQ;EACR,iBAAiB;EACjB,iBAAiB;EACjB,mBAAmB;EACnB,UAAU;EACV,YAAY;CACb;AACD;EACE,wBAAwB;EACxB,mBAAmB;EACnB,6EAA6E;EAC7E,uBAAuB;EACvB,oBAAoB;CACrB;AACD;EACE,eAAe;EACf,eAAe;EACf,oBAAoB;EACpB,iBAAiB;EACjB,uBAAuB;EACvB,mBAAmB;CACpB;AACD;EACE,oBAAoB;EACpB,oBAAoB;CACrB;AACD;IACI,6BAA6B;IAC7B,eAAe;CAClB;AACD;IACI,0BAA0B;IAC1B,YAAY;CACf;AACD;EACE,0BAA0B;EAC1B,aAAa;EACb,eAAe;EACf,YAAY;EACZ,iBAAiB;CAClB;AACD;EACE,gBAAgB;CACjB;AACD;IACI,mBAAmB;CACtB;AACD;IACI,mBAAmB;CACtB;AACD;IACI,kBAAkB;CACrB;AACD;EACE,iBAAiB;EACjB,UAAU;EACV,WAAW;EACX,UAAU;EACV,WAAW;EACX,kBAAkB;CACnB;AACD;IACI,mBAAmB;IACnB,eAAe;IACf,eAAe;IACf,sBAAsB;CACzB;AACD;MACM,6BAA6B;MAC7B,eAAe;CACpB;AACD;MACM,0BAA0B;MAC1B,YAAY;CACjB;AACD;IACI,iBAAiB;IACjB,UAAU;IACV,WAAW;IACX,+BAA+B;IAC/B,eAAe;IACf,qBAAqB;CACxB;AACD;EACE,eAAe;EACf,kBAAkB;EAClB,sBAAsB;EACtB,0BAA0B;CAC3B;AACD;IACI,gBAAgB;CACnB;AACD;IACI,mBAAmB;CACtB;AACD;EACE,wBAAwB;EACxB,oBAAoB;EACpB,mBAAmB;CACpB;AACD;IACI,wBAAwB;IACxB,eAAe;CAClB;AACD;;MAEM,eAAe;CACpB;AACD;;;MAGM,0BAA0B;MAC1B,eAAe;CACpB;AACD;MACM,sBAAsB;CAC3B;AACD;;;;MAIM,eAAe;CACpB;AACD;;;;;;;MAOM,0BAA0B;MAC1B,eAAe;CACpB;AACD;;MAEM,sBAAsB;CAC3B;AACD;;MAEM,0BAA0B;MAC1B,eAAe;CACpB;AACD;MACM,wBAAwB;MACxB,eAAe;CACpB;AACD;IACI,0BAA0B;IAC1B,aAAa;CAChB;AACD;;MAEM,aAAa;CAClB;AACD;;;MAGM,wBAAwB;MACxB,aAAa;CAClB;AACD;MACM,oBAAoB;CACzB;AACD;;;;MAIM,aAAa;CAClB;AACD;;;;;;;MAOM,wBAAwB;MACxB,aAAa;CAClB;AACD;;MAEM,oBAAoB;CACzB;AACD;;MAEM,wBAAwB;MACxB,aAAa;CAClB;AACD;MACM,0BAA0B;MAC1B,aAAa;CAClB;AACD;IACI,6BAA6B;IAC7B,eAAe;CAClB;AACD;;MAEM,eAAe;CACpB;AACD;;;MAGM,0BAA0B;MAC1B,eAAe;CACpB;AACD;MACM,sBAAsB;CAC3B;AACD;;;;MAIM,eAAe;CACpB;AACD;;;;;;;MAOM,0BAA0B;MAC1B,eAAe;CACpB;AACD;;MAEM,sBAAsB;CAC3B;AACD;;MAEM,0BAA0B;MAC1B,eAAe;CACpB;AACD;MACM,6BAA6B;MAC7B,eAAe;CACpB;AACD;IACI,0BAA0B;IAC1B,kBAAkB;CACrB;AACD;;MAEM,kBAAkB;CACvB;AACD;;;MAGM,0BAA0B;MAC1B,kBAAkB;CACvB;AACD;MACM,yBAAyB;CAC9B;AACD;;;;MAIM,kBAAkB;CACvB;AACD;;;;;;;MAOM,0BAA0B;MAC1B,kBAAkB;CACvB;AACD;;MAEM,yBAAyB;CAC9B;AACD;;MAEM,0BAA0B;MAC1B,kBAAkB;CACvB;AACD;MACM,0BAA0B;MAC1B,kBAAkB;CACvB;AACD;IACI,0BAA0B;IAC1B,YAAY;CACf;AACD;;MAEM,YAAY;CACjB;AACD;;;MAGM,0BAA0B;MAC1B,YAAY;CACjB;AACD;MACM,mBAAmB;CACxB;AACD;;;;MAIM,YAAY;CACjB;AACD;;;;;;;MAOM,0BAA0B;MAC1B,YAAY;CACjB;AACD;;MAEM,mBAAmB;CACxB;AACD;;MAEM,0BAA0B;MAC1B,YAAY;CACjB;AACD;MACM,0BAA0B;MAC1B,YAAY;CACjB;AACD;IACI,0BAA0B;IAC1B,YAAY;CACf;AACD;;MAEM,YAAY;CACjB;AACD;;;MAGM,0BAA0B;MAC1B,YAAY;CACjB;AACD;MACM,mBAAmB;CACxB;AACD;;;;MAIM,YAAY;CACjB;AACD;;;;;;;MAOM,0BAA0B;MAC1B,YAAY;CACjB;AACD;;MAEM,mBAAmB;CACxB;AACD;;MAEM,0BAA0B;MAC1B,YAAY;CACjB;AACD;MACM,0BAA0B;MAC1B,YAAY;CACjB;AACD;IACI,0BAA0B;IAC1B,YAAY;CACf;AACD;;MAEM,YAAY;CACjB;AACD;;;MAGM,0BAA0B;MAC1B,YAAY;CACjB;AACD;MACM,mBAAmB;CACxB;AACD;;;;MAIM,YAAY;CACjB;AACD;;;;;;;MAOM,0BAA0B;MAC1B,YAAY;CACjB;AACD;;MAEM,mBAAmB;CACxB;AACD;;MAEM,0BAA0B;MAC1B,YAAY;CACjB;AACD;MACM,0BAA0B;MAC1B,YAAY;CACjB;AACD;IACI,0BAA0B;IAC1B,0BAA0B;CAC7B;AACD;;MAEM,0BAA0B;CAC/B;AACD;;;MAGM,0BAA0B;MAC1B,0BAA0B;CAC/B;AACD;MACM,iCAAiC;CACtC;AACD;;;;MAIM,0BAA0B;CAC/B;AACD;;;;;;;MAOM,0BAA0B;MAC1B,0BAA0B;CAC/B;AACD;;MAEM,iCAAiC;CACtC;AACD;;MAEM,0BAA0B;MAC1B,0BAA0B;CAC/B;AACD;MACM,0BAA0B;MAC1B,0BAA0B;CAC/B;AACD;IACI,0BAA0B;IAC1B,YAAY;CACf;AACD;;MAEM,YAAY;CACjB;AACD;;;MAGM,0BAA0B;MAC1B,YAAY;CACjB;AACD;MACM,mBAAmB;CACxB;AACD;;;;MAIM,YAAY;CACjB;AACD;;;;;;;MAOM,0BAA0B;MAC1B,YAAY;CACjB;AACD;;MAEM,mBAAmB;CACxB;AACD;;MAEM,0BAA0B;MAC1B,YAAY;CACjB;AACD;MACM,0BAA0B;MAC1B,YAAY;CACjB;AACD;IACI,2BAA2B;QACvB,wBAAwB;YACpB,qBAAqB;IAC7B,qBAAqB;IACrB,qBAAqB;IACrB,cAAc;IACd,oBAAoB;IACpB,YAAY;CACf;AACD;IACI,4CAA4C;CAC/C;AACD;EACE,oBAAoB;MAChB,qBAAqB;UACjB,aAAa;EACrB,qBAAqB;MACjB,eAAe;CACpB;AACD;IACI,oBAAoB;CACvB;AACD;IACI,WAAW;CACd;AACD;IACI,qCAAqC;IACrC,oBAAoB;IACpB,kCAAkC;CACrC;AACD;MACM,8BAA8B;MAC9B,6BAA6B;CAClC;AACD;MACM,8BAA8B;MAC9B,6BAA6B;MAC7B,2BAA2B;MAC3B,yBAAyB;MACzB,eAAe;MACf,kCAAkC;CACvC;AACD;;EAEE,eAAe;EACf,eAAe;EACf,iBAAiB;EACjB,qBAAqB;EACrB,mBAAmB;CACpB;AACD;;;EAGE,6BAA6B;EAC7B,eAAe;CAChB;AACD;;EAEE,2BAA2B;MACvB,wBAAwB;UACpB,qBAAqB;EAC7B,qBAAqB;EACrB,qBAAqB;EACrB,cAAc;EACd,qBAAqB;MACjB,eAAe;EACnB,oBAAoB;CACrB;AACD;;;;EAIE,2BAA2B;MACvB,wBAAwB;UACpB,qBAAqB;EAC7B,qBAAqB;EACrB,qBAAqB;EACrB,cAAc;CACf;AACD;EACE,oBAAoB;CACrB;AACD;;;IAGI,8BAA8B;CACjC;AACD;IACI,8BAA8B;CACjC;AACD;IACI,6BAA6B;IAC7B,eAAe;CAClB;AACD;IACI,6BAA6B;IAC7B,eAAe;CAClB;AACD;;EAEE,0BAA0B;MACtB,uBAAuB;UACnB,oBAAoB;EAC5B,qBAAqB;EACrB,qBAAqB;EACrB,cAAc;CACf;AACD;EACE,2BAA2B;MACvB,wBAAwB;UACpB,qBAAqB;CAC9B;AACD;EACE,eAAe;CAChB;AACD;IACI,WAAW;IACX,qBAAqB;IACrB,iCAAiC;YACzB,yBAAyB;CACpC;AACD;EACE,oBAAoB;MAChB,qBAAqB;UACjB,aAAa;EACrB,qBAAqB;MACjB,eAAe;CACpB;AACD;EACE,wBAAwB;MACpB,qBAAqB;UACjB,4BAA4B;EACpC,mBAAmB;CACpB;AACD;EACE,sBAAsB;MAClB,mBAAmB;UACf,0BAA0B;EAClC,kBAAkB;CACnB;AACD;EACE,6BAA6B;EAC7B,mBAAmB;EACnB,gBAAgB;CACjB;AACD;IACI,sBAAsB;CACzB;AACD;IACI,oBAAoB;CACvB;AACD;IACI,oBAAoB;IACpB,2BAA2B;CAC9B;AACD;IACI,mBAAmB;CACtB;AACD;IACI,mBAAmB;CACtB;AACD;IACI,kBAAkB;CACrB;AACD;IACI,wBAAwB;CAC3B;AACD;MACM,wBAAwB;MACxB,eAAe;CACpB;AACD;MACM,oBAAoB;MACpB,eAAe;CACpB;AACD;IACI,0BAA0B;CAC7B;AACD;MACM,0BAA0B;MAC1B,aAAa;CAClB;AACD;MACM,sBAAsB;MACtB,eAAe;CACpB;AACD;IACI,0BAA0B;CAC7B;AACD;MACM,6BAA6B;MAC7B,eAAe;CACpB;AACD;MACM,yBAAyB;MACzB,eAAe;CACpB;AACD;IACI,0BAA0B;CAC7B;AACD;MACM,0BAA0B;MAC1B,kBAAkB;CACvB;AACD;MACM,sBAAsB;MACtB,eAAe;CACpB;AACD;IACI,0BAA0B;CAC7B;AACD;MACM,0BAA0B;MAC1B,YAAY;CACjB;AACD;MACM,sBAAsB;MACtB,eAAe;CACpB;AACD;IACI,0BAA0B;CAC7B;AACD;MACM,0BAA0B;MAC1B,YAAY;CACjB;AACD;MACM,sBAAsB;MACtB,eAAe;CACpB;AACD;IACI,0BAA0B;CAC7B;AACD;MACM,0BAA0B;MAC1B,YAAY;CACjB;AACD;MACM,sBAAsB;MACtB,eAAe;CACpB;AACD;IACI,0BAA0B;CAC7B;AACD;MACM,0BAA0B;MAC1B,0BAA0B;CAC/B;AACD;MACM,sBAAsB;MACtB,eAAe;CACpB;AACD;IACI,0BAA0B;CAC7B;AACD;MACM,0BAA0B;MAC1B,YAAY;CACjB;AACD;MACM,sBAAsB;MACtB,eAAe;CACpB;AACD;EACE,0BAA0B;MACtB,uBAAuB;UACnB,oBAAoB;EAC5B,0BAA0B;EAC1B,2BAA2B;EAC3B,YAAY;EACZ,qBAAqB;EACrB,qBAAqB;EACrB,cAAc;EACd,0BAA0B;MACtB,uBAAuB;UACnB,+BAA+B;EACvC,kBAAkB;EAClB,sBAAsB;EACtB,mBAAmB;CACpB;AACD;IACI,oBAAoB;QAChB,qBAAqB;YACjB,aAAa;IACrB,qBAAqB;QACjB,eAAe;IACnB,oBAAoB;CACvB;AACD;IACI,0BAA0B;IAC1B,2BAA2B;IAC3B,iBAAiB;CACpB;AACD;EACE,0BAA0B;EAC1B,mBAAmB;EACnB,eAAe;EACf,oBAAoB;CACrB;AACD;;IAEI,wBAAwB;CAC3B;AACD;IACI,8BAA8B;CACjC;AACD;EACE,gBAAgB;EAChB,SAAS;EACT,cAAc;EACd,mBAAmB;EACnB,YAAY;EACZ,QAAQ;EACR,SAAS;EACT,wBAAwB;EACxB,qBAAqB;EACrB,qBAAqB;EACrB,cAAc;EACd,yBAAyB;MACrB,sBAAsB;UAClB,wBAAwB;EAChC,eAAe;CAChB;AACD;IACI,8BAA8B;CACjC;AACD;IACI,mBAAmB;CACtB;AACD;EACE,kCAAkC;EAClC,0BAA0B;EAC1B,uBAAuB;EACvB,sBAAsB;EACtB,kBAAkB;EAClB,2BAA2B;MACvB,wBAAwB;UACpB,qBAAqB;EAC7B,qBAAqB;EACrB,qBAAqB;EACrB,cAAc;EACd,gBAAgB;EAChB,0BAA0B;MACtB,uBAAuB;UACnB,+BAA+B;EACvC,iBAAiB;EACjB,iBAAiB;EACjB,oBAAoB;CACrB;AACD;IACI,sBAAsB;CACzB;AACD;IACI,0BAA0B;QACtB,uBAAuB;YACnB,oBAAoB;IAC5B,6BAA6B;IAC7B,2BAA2B;IAC3B,yBAAyB;IACzB,eAAe;IACf,qBAAqB;IACrB,qBAAqB;IACrB,cAAc;IACd,yBAAyB;QACrB,sBAAsB;YAClB,wBAAwB;IAChC,oBAAoB;IACpB,mBAAmB;IACnB,oBAAoB;CACvB;AACD;MACM,6BAA6B;MAC7B,eAAe;CACpB;AACD;IACI,eAAe;CAClB;AACD;MACM,6BAA6B;MAC7B,eAAe;CACpB;AACD;IACI,iBAAiB;IACjB,UAAU;IACV,WAAW;IACX,0BAA0B;QACtB,uBAAuB;YACnB,oBAAoB;IAC5B,6BAA6B;IAC7B,2BAA2B;IAC3B,yBAAyB;IACzB,qBAAqB;IACrB,qBAAqB;IACrB,cAAc;IACd,oBAAoB;QAChB,qBAAqB;YACjB,aAAa;IACrB,qBAAqB;QACjB,eAAe;IACnB,wBAAwB;QACpB,qBAAqB;YACjB,4BAA4B;CACvC;AACD;MACM,sBAAsB;CAC3B;AACD;MACM,oBAAoB;UAChB,eAAe;cACX,WAAW;MACnB,yBAAyB;UACrB,sBAAsB;cAClB,wBAAwB;MAChC,qBAAqB;MACrB,sBAAsB;CAC3B;AACD;MACM,sBAAsB;UAClB,mBAAmB;cACf,0BAA0B;MAClC,qBAAqB;CAC1B;AACD;IACI,oBAAoB;CACvB;AACD;IACI,mBAAmB;CACtB;AACD;IACI,yBAAyB;QACrB,sBAAsB;YAClB,wBAAwB;CACnC;AACD;IACI,sBAAsB;QAClB,mBAAmB;YACf,0BAA0B;CACrC;AACD;IACI,8BAA8B;IAC9B,2BAA2B;CAC9B;AACD;MACM,6BAA6B;MAC7B,6BAA6B;CAClC;AACD;IACI,wBAAwB;IACxB,sBAAsB;IACtB,4CAA4C;CAC/C;AACD;IACI,oBAAoB;QAChB,qBAAqB;YACjB,aAAa;IACrB,qBAAqB;QACjB,eAAe;CACtB;AACD;IACI,sBAAsB;IACtB,oBAAoB;IACpB,kBAAkB;IAClB,iBAAiB;IACjB,mBAAmB;CACtB;AACD;MACM,6BAA6B;MAC7B,sBAAsB;MACtB,WAAW;CAChB;AACD;IACI,kBAAkB;CACrB;AACD;IACI,2BAA2B;CAC9B;AACD;IACI,2BAA2B;CAC9B;AACD;IACI,0BAA0B;IAC1B,sBAAsB;IACtB,YAAY;IACZ,WAAW;CACd;AACD;IACI,oBAAoB;CACvB;AACD;IACI,mBAAmB;CACtB;AACD;IACI,mBAAmB;CACtB;AACD;IACI,kBAAkB;CACrB;AACD;EACE,0BAA0B;EAC1B,uBAAuB;EACvB,sBAAsB;EACtB,kBAAkB;EAClB,2BAA2B;MACvB,wBAAwB;UACpB,qBAAqB;EAC7B,qBAAqB;EACrB,qBAAqB;EACrB,cAAc;EACd,gBAAgB;EAChB,iBAAiB;EACjB,iBAAiB;EACjB,oBAAoB;CACrB;AACD;IACI,sBAAsB;CACzB;AACD;IACI,0BAA0B;QACtB,uBAAuB;YACnB,oBAAoB;IAC5B,eAAe;IACf,qBAAqB;IACrB,qBAAqB;IACrB,cAAc;IACd,yBAAyB;QACrB,sBAAsB;YAClB,wBAAwB;IAChC,sBAAsB;IACtB,sBAAsB;CACzB;AACD;MACM,eAAe;CACpB;AACD;IACI,0BAA0B;QACtB,uBAAuB;YACnB,oBAAoB;IAC5B,qBAAqB;IACrB,qBAAqB;IACrB,cAAc;CACjB;AACD;MACM,gBAAgB;CACrB;AACD;MACM,eAAe;MACf,gBAAgB;MAChB,qBAAqB;CAC1B;AACD;MACM,eAAe;MACf,aAAa;CAClB;AACD;IACI,0BAA0B;QACtB,uBAAuB;YACnB,oBAAoB;IAC5B,qBAAqB;IACrB,qBAAqB;IACrB,cAAc;IACd,oBAAoB;QAChB,qBAAqB;YACjB,aAAa;IACrB,qBAAqB;QACjB,eAAe;IACnB,wBAAwB;QACpB,qBAAqB;YACjB,4BAA4B;CACvC;AACD;IACI,oBAAoB;CACvB;AACD;IACI,mBAAmB;CACtB;AACD;IACI,yBAAyB;QACrB,sBAAsB;YAClB,wBAAwB;CACnC;AACD;IACI,sBAAsB;QAClB,mBAAmB;YACf,0BAA0B;CACrC;AACD;IACI,mBAAmB;CACtB;AACD;IACI,mBAAmB;CACtB;AACD;IACI,kBAAkB;CACrB;AACD;IACI,iBAAa;CAChB;AACD;IACI,iBAAa;CAChB;AACD;IACI,eAAa;CAChB;AACD;IACI,iBAAa;CAChB;AACD;EACE,gBAAgB;EAChB,iBAAiB;EACjB,gBAAgB;EAChB,gBAAgB;EAChB,0BAA0B;EAC1B,uBAAuB;EACvB,sBAAsB;EACtB,kBAAkB;EAClB,uBAAuB;EACvB,eAAe;EACf,OAAO;EACP,QAAQ;EACR,iBAAiB;EACjB,eAAe;EACf,0BAA0B;EAC1B,0BAA0B;EAC1B,mBAAmB;EACnB,qBAAqB;EACrB,iBAAiB;EACjB,cAAc;EACd,4CAA4C;CAC7C;AACD;EACE,eAAe;EACf,oBAAoB;EACpB,gBAAgB;EAChB,iBAAiB;EACjB,mBAAmB;EACnB,cAAc;EACd,iBAAiB;CAClB;AACD;IACI,eAAe;IACf,SAAS;IACT,UAAU;IACV,mBAAmB;IACnB,kBAAkB;IAClB,0BAA0B;IAC1B,oBAAoB;CACvB;AACD;MACM,aAAa;MACb,kBAAkB;CACvB;AACD;IACI,mBAAmB;CACtB;AACD;MACM,UAAU;MACV,kBAAkB;MAClB,YAAY;MACZ,wBAAwB;MACxB,0BAA0B;CAC/B;AACD;QACQ,aAAa;QACb,YAAY;QACZ,kBAAkB;QAClB,uBAAuB;QACvB,0BAA0B;CACjC;AACD;IACI,qBAAqB;CACxB;AACD;MACM,cAAc;MACd,SAAS;MACT,iBAAiB;MACjB,UAAU;MACV,4BAA4B;MAC5B,4BAA4B;CACjC;AACD;QACQ,aAAa;QACb,UAAU;QACV,aAAa;QACb,qBAAqB;QACrB,0BAA0B;CACjC;AACD;IACI,mBAAmB;CACtB;AACD;MACM,UAAU;MACV,kBAAkB;MAClB,SAAS;MACT,wBAAwB;MACxB,6BAA6B;CAClC;AACD;QACQ,aAAa;QACb,SAAS;QACT,kBAAkB;QAClB,oBAAoB;QACpB,6BAA6B;CACpC;AACD;IACI,qBAAqB;CACxB;AACD;MACM,SAAS;MACT,iBAAiB;MACjB,WAAW;MACX,4BAA4B;MAC5B,2BAA2B;CAChC;AACD;QACQ,aAAa;QACb,WAAW;QACX,sBAAsB;QACtB,2BAA2B;QAC3B,aAAa;CACpB;AACD;EACE,YAAY;EACZ,wBAAwB;EACxB,6BAA6B;EAC7B,mBAAmB;EACnB,yCAAyC;EACzC,oBAAoB;EACpB,0BAA0B;CAC3B;AACD;IACI,gCAAgC;IAChC,mBAAmB;IACnB,gBAAgB;IAChB,kBAAkB;IAClB,eAAe;IACf,iBAAiB;IACjB,0BAA0B;CAC7B;AACD;MACM,YAAY;MACZ,cAAc;MACd,YAAY;MACZ,mBAAmB;MACnB,QAAQ;MACR,SAAS;MACT,UAAU;MACV,0BAA0B;CAC/B;AACD;EACE,gCAAgC;CACjC;AACD;IACI,sBAAsB;IACtB,oBAAoB;IACpB,eAAe;IACf,eAAe;CAClB;AACD;EACE,oCAAoC;UAC5B,4BAA4B;CACrC;AACD;EACE,qCAAqC;UAC7B,6BAA6B;CACtC;AACD;EACE,gBAAgB;CACjB;AACD;IACI,eAAe;CAClB;AACD;IACI,qBAAqB;IACrB,eAAe;CAClB;AACD;IACI,6BAA6B;CAChC;AACD;IACI,kBAAkB;CACrB;AACD;IACI,kBAAkB;CACrB;AACD;IACI,8BAA8B;IAC9B,WAAW;IACX,0BAA0B;IAC1B,mBAAmB;IACnB,mBAAmB;IACnB,eAAe;CAClB;AACD;MACM,wBAAwB;MACxB,mBAAmB;MACnB,WAAW;MACX,WAAW;MACX,0BAA0B;MAC1B,eAAe;MACf,gBAAgB;MAChB,iBAAiB;MACjB,iBAAiB;MACjB,mBAAmB;CACxB;AACD;EACE,oBAAoB;EACpB,mBAAmB;EACnB,oBAAoB;CACrB;AACD;EACE,UAAU;CACX;AACD;EACE,UAAU;CACX;AACD;EACE,gBAAgB;CACjB;AACD;EACE,mBAAmB;CACpB;AACD;EACE,gBAAgB;EAChB,0DAA0D;UAClD,kDAAkD;EAC1D,0BAA0B;EAC1B,wBAAwB;EACxB,gCAAgC;EAChC,8BAA8B;EAC9B,YAAY;EACZ,eAAe;EACf,uBAAuB;EACvB,YAAY;EACZ,WAAW;EACX,mBAAmB;CACpB;AACD;EACE,kBAAkB;EAClB,iBAAiB;EACjB,YAAY;EACZ,gBAAgB;EAChB,mBAAmB;EACnB,wBAAwB;CACzB;AACD;IACI,gCAAgB;CACnB;AACD;IACI,WAAW;CACd","file":"summary.vue","sourcesContent":["\n@charset \"UTF-8\";\n@import url(\"https://cdn.bootcss.com/animate.css/3.5.2/animate.css\");\n@import url(\"https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\");\n@import url(\"https://at.alicdn.com/t/font_299456_81qcthgrkonu3di.css\");\n@-webkit-keyframes v-kf-spin-around {\nfrom {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n}\nto {\n    -webkit-transform: rotate(359deg);\n            transform: rotate(359deg);\n}\n}\n@keyframes v-kf-spin-around {\nfrom {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n}\nto {\n    -webkit-transform: rotate(359deg);\n            transform: rotate(359deg);\n}\n}\n@-webkit-keyframes v-kf-fade-in {\nfrom {\n    opacity: 0;\n}\nto {\n    opacity: 1;\n}\n}\n@keyframes v-kf-fade-in {\nfrom {\n    opacity: 0;\n}\nto {\n    opacity: 1;\n}\n}\n@-webkit-keyframes v-kf-fade-out {\nfrom {\n    opacity: 1;\n}\nto {\n    opacity: 0;\n}\n}\n@keyframes v-kf-fade-out {\nfrom {\n    opacity: 1;\n}\nto {\n    opacity: 0;\n}\n}\n@-webkit-keyframes v-kf-fade-in-down {\nfrom {\n    opacity: 0;\n    -webkit-transform: translate3d(0, -100%, 0);\n            transform: translate3d(0, -100%, 0);\n}\nto {\n    opacity: 1;\n    -webkit-transform: none;\n            transform: none;\n}\n}\n@keyframes v-kf-fade-in-down {\nfrom {\n    opacity: 0;\n    -webkit-transform: translate3d(0, -100%, 0);\n            transform: translate3d(0, -100%, 0);\n}\nto {\n    opacity: 1;\n    -webkit-transform: none;\n            transform: none;\n}\n}\n@-webkit-keyframes v-kf-fade-out-down {\nfrom {\n    opacity: 1;\n}\nto {\n    opacity: 0;\n    -webkit-transform: translate3d(0, 100%, 0);\n            transform: translate3d(0, 100%, 0);\n}\n}\n@keyframes v-kf-fade-out-down {\nfrom {\n    opacity: 1;\n}\nto {\n    opacity: 0;\n    -webkit-transform: translate3d(0, 100%, 0);\n            transform: translate3d(0, 100%, 0);\n}\n}\n.v-container {\n  margin: 0 auto;\n  position: relative;\n}\n.v-cols {\n  margin-left: -0.5rem;\n  margin-right: -0.5rem;\n  margin-top: -0.5rem;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n}\n.v-cols:last-child {\n    margin-bottom: -0.5rem;\n}\n.v-cols:not(:last-child) {\n    margin-bottom: calc(1rem - 0.5rem);\n}\n.v-cols.is-centered {\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n}\n.v-cols.is-gapless {\n    margin-left: 0;\n    margin-right: 0;\n    margin-top: 0;\n}\n.v-cols.is-gapless > .v-column {\n      margin: 0;\n      padding: 0 !important;\n}\n.v-cols.is-gapless:not(:last-child) {\n      margin-bottom: 1rem;\n}\n.v-cols.is-gapless:last-child {\n      margin-bottom: 0;\n}\n.v-cols.is-multiline {\n    -ms-flex-wrap: wrap;\n        flex-wrap: wrap;\n}\n.v-cols.is-vcentered {\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n}\n.v-col {\n  display: block;\n  -ms-flex-preferred-size: 0;\n      flex-basis: 0;\n  -webkit-box-flex: 1;\n      -ms-flex-positive: 1;\n          flex-grow: 1;\n  -ms-flex-negative: 1;\n      flex-shrink: 1;\n  padding: 0.5rem;\n}\n.v-col.is-narrow, .v-col.is-narrow-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n}\n.v-col.is-full, .v-col.is-full-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 100%;\n}\n.v-col.is-three-quarters, .v-col.is-three-quarters-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 75%;\n}\n.v-col.is-two-thirds, .v-col.is-two-thirds-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 66.6666%;\n}\n.v-col.is-half, .v-col.is-half-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 50%;\n}\n.v-col.is-one-third, .v-col.is-one-third-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 33.3333%;\n}\n.v-col.is-one-quarter, .v-col.is-one-quarter-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 25%;\n}\n.v-col.is-offset-three-quarters, .v-col.is-offset-three-quarters-desktop {\n    margin-left: 75%;\n}\n.v-col.is-offset-two-quarter, .v-col.is-offset-two-thirds-desktop {\n    margin-left: 66.6666%;\n}\n.v-col.is-offset-half, .v-col.is-offset-half-desktop {\n    margin-left: 50%;\n}\n.v-col.is-offset-one-third, .v-col.is-offset-one-third-desktop {\n    margin-left: 33.3333%;\n}\n.v-col.is-offset-one-quarter, .v-col.is-offset-one-quarter-desktop {\n    margin-left: 25%;\n}\n.v-col.is-1, .v-col.is-1-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 8.33333%;\n}\n.v-col.is-offset-1, .v-col.is-offset-1-desktop {\n    margin-left: 8.33333%;\n}\n.v-col.is-2, .v-col.is-2-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 16.66667%;\n}\n.v-col.is-offset-2, .v-col.is-offset-2-desktop {\n    margin-left: 16.66667%;\n}\n.v-col.is-3, .v-col.is-3-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 25%;\n}\n.v-col.is-offset-3, .v-col.is-offset-3-desktop {\n    margin-left: 25%;\n}\n.v-col.is-4, .v-col.is-4-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 33.33333%;\n}\n.v-col.is-offset-4, .v-col.is-offset-4-desktop {\n    margin-left: 33.33333%;\n}\n.v-col.is-5, .v-col.is-5-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 41.66667%;\n}\n.v-col.is-offset-5, .v-col.is-offset-5-desktop {\n    margin-left: 41.66667%;\n}\n.v-col.is-6, .v-col.is-6-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 50%;\n}\n.v-col.is-offset-6, .v-col.is-offset-6-desktop {\n    margin-left: 50%;\n}\n.v-col.is-7, .v-col.is-7-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 58.33333%;\n}\n.v-col.is-offset-7, .v-col.is-offset-7-desktop {\n    margin-left: 58.33333%;\n}\n.v-col.is-8, .v-col.is-8-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 66.66667%;\n}\n.v-col.is-offset-8, .v-col.is-offset-8-desktop {\n    margin-left: 66.66667%;\n}\n.v-col.is-9, .v-col.is-9-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 75%;\n}\n.v-col.is-offset-9, .v-col.is-offset-9-desktop {\n    margin-left: 75%;\n}\n.v-col.is-10, .v-col.is-10-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 83.33333%;\n}\n.v-col.is-offset-10, .v-col.is-offset-10-desktop {\n    margin-left: 83.33333%;\n}\n.v-col.is-11, .v-col.is-11-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 91.66667%;\n}\n.v-col.is-offset-11, .v-col.is-offset-11-desktop {\n    margin-left: 91.66667%;\n}\n.v-col.is-12, .v-col.is-12-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 100%;\n}\n.v-col.is-offset-12, .v-col.is-offset-12-desktop {\n    margin-left: 100%;\n}\n.has-icon {\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  display: -webkit-inline-box;\n  display: -ms-inline-flexbox;\n  display: inline-flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  height: 1.5rem;\n  width: 1.5rem;\n}\n.has-icon.is-small {\n    height: 1rem;\n    width: 1rem;\n}\n.has-icon.is-medium {\n    height: 2rem;\n    width: 2rem;\n}\n.has-icon.is-large {\n    height: 3rem;\n    width: 3rem;\n}\n.has-icon.has-text-white {\n    color: white;\n}\n.has-icon.has-text-black {\n    color: #0a0a0a;\n}\n.has-icon.has-text-light {\n    color: whitesmoke;\n}\n.has-icon.has-text-dark {\n    color: #363636;\n}\n.has-icon.has-text-primary {\n    color: #1ca0f2;\n}\n.has-icon.has-text-info {\n    color: #b86bff;\n}\n.has-icon.has-text-success {\n    color: #23d160;\n}\n.has-icon.has-text-warning {\n    color: #ffdd57;\n}\n.has-icon.has-text-danger {\n    color: #ff3860;\n}\n.has-icon.is-primary .is-icon-arrow::after {\n    border-left-color: white;\n    border-top-color: white;\n}\n.has-icon.is-primary .is-icon-caret::after {\n    border-top-color: white;\n}\n.has-icon.is-primary .is-icon-right::after {\n    border-left-color: white;\n    border-bottom-color: white;\n}\n.has-icon.is-primary .is-icon-close::before, .has-icon.is-primary .is-icon-close::after {\n    background-color: white;\n}\n.has-icon.is-primary.is-outline .is-icon-arrow::after {\n    border-left-color: #1ca0f2;\n    border-top-color: #1ca0f2;\n}\n.has-icon.is-primary.is-outline .is-icon-caret::after {\n    border-top-color: #1ca0f2;\n}\n.has-icon.is-primary.is-outline .is-icon-right::after {\n    border-left-color: #1ca0f2;\n    border-bottom-color: #1ca0f2;\n}\n.has-icon.is-primary.is-outline .is-icon-close::before, .has-icon.is-primary.is-outline .is-icon-close::after {\n    background-color: #1ca0f2;\n}\n.has-icon.is-primary.is-outline:hover .is-icon-arrow::after, .has-icon.is-primary.is-outline:focus .is-icon-arrow::after, .has-icon.is-primary.is-outline.is-active .is-icon-arrow::after, .has-icon.is-primary.is-outline:active .is-icon-arrow::after {\n    border-left-color: white;\n    border-top-color: white;\n}\n.has-icon.is-primary.is-outline:hover .is-icon-caret::after, .has-icon.is-primary.is-outline:focus .is-icon-caret::after, .has-icon.is-primary.is-outline.is-active .is-icon-caret::after, .has-icon.is-primary.is-outline:active .is-icon-caret::after {\n    border-top-color: white;\n}\n.has-icon.is-primary.is-outline:hover .is-icon-right::after, .has-icon.is-primary.is-outline:focus .is-icon-right::after, .has-icon.is-primary.is-outline.is-active .is-icon-right::after, .has-icon.is-primary.is-outline:active .is-icon-right::after {\n    border-left-color: white;\n    border-bottom-color: white;\n}\n.has-icon.is-primary.is-outline:hover .is-icon-close::before, .has-icon.is-primary.is-outline:hover .is-icon-close::after, .has-icon.is-primary.is-outline:focus .is-icon-close::before, .has-icon.is-primary.is-outline:focus .is-icon-close::after, .has-icon.is-primary.is-outline.is-active .is-icon-close::before, .has-icon.is-primary.is-outline.is-active .is-icon-close::after, .has-icon.is-primary.is-outline:active .is-icon-close::before, .has-icon.is-primary.is-outline:active .is-icon-close::after {\n    background-color: white;\n}\n.has-icon.is-primary.is-icon-arrow::after {\n    border-left-color: #1ca0f2;\n    border-top-color: #1ca0f2;\n}\n.has-icon.is-primary.is-icon-caret::after {\n    border-top-color: #1ca0f2;\n}\n.has-icon.is-primary.is-icon-right::after {\n    border-left-color: #1ca0f2;\n    border-bottom-color: #1ca0f2;\n}\n.has-icon.is-primary.is-icon-close::before, .has-icon.is-primary.is-icon-close::after {\n    background-color: #1ca0f2;\n}\n.has-icon.is-secondary .is-icon-arrow::after {\n    border-left-color: white;\n    border-top-color: white;\n}\n.has-icon.is-secondary .is-icon-caret::after {\n    border-top-color: white;\n}\n.has-icon.is-secondary .is-icon-right::after {\n    border-left-color: white;\n    border-bottom-color: white;\n}\n.has-icon.is-secondary .is-icon-close::before, .has-icon.is-secondary .is-icon-close::after {\n    background-color: white;\n}\n.has-icon.is-secondary.is-outline .is-icon-arrow::after {\n    border-left-color: #35aaf3;\n    border-top-color: #35aaf3;\n}\n.has-icon.is-secondary.is-outline .is-icon-caret::after {\n    border-top-color: #35aaf3;\n}\n.has-icon.is-secondary.is-outline .is-icon-right::after {\n    border-left-color: #35aaf3;\n    border-bottom-color: #35aaf3;\n}\n.has-icon.is-secondary.is-outline .is-icon-close::before, .has-icon.is-secondary.is-outline .is-icon-close::after {\n    background-color: #35aaf3;\n}\n.has-icon.is-secondary.is-outline:hover .is-icon-arrow::after, .has-icon.is-secondary.is-outline:focus .is-icon-arrow::after, .has-icon.is-secondary.is-outline.is-active .is-icon-arrow::after, .has-icon.is-secondary.is-outline:active .is-icon-arrow::after {\n    border-left-color: white;\n    border-top-color: white;\n}\n.has-icon.is-secondary.is-outline:hover .is-icon-caret::after, .has-icon.is-secondary.is-outline:focus .is-icon-caret::after, .has-icon.is-secondary.is-outline.is-active .is-icon-caret::after, .has-icon.is-secondary.is-outline:active .is-icon-caret::after {\n    border-top-color: white;\n}\n.has-icon.is-secondary.is-outline:hover .is-icon-right::after, .has-icon.is-secondary.is-outline:focus .is-icon-right::after, .has-icon.is-secondary.is-outline.is-active .is-icon-right::after, .has-icon.is-secondary.is-outline:active .is-icon-right::after {\n    border-left-color: white;\n    border-bottom-color: white;\n}\n.has-icon.is-secondary.is-outline:hover .is-icon-close::before, .has-icon.is-secondary.is-outline:hover .is-icon-close::after, .has-icon.is-secondary.is-outline:focus .is-icon-close::before, .has-icon.is-secondary.is-outline:focus .is-icon-close::after, .has-icon.is-secondary.is-outline.is-active .is-icon-close::before, .has-icon.is-secondary.is-outline.is-active .is-icon-close::after, .has-icon.is-secondary.is-outline:active .is-icon-close::before, .has-icon.is-secondary.is-outline:active .is-icon-close::after {\n    background-color: white;\n}\n.has-icon.is-secondary.is-icon-arrow::after {\n    border-left-color: #35aaf3;\n    border-top-color: #35aaf3;\n}\n.has-icon.is-secondary.is-icon-caret::after {\n    border-top-color: #35aaf3;\n}\n.has-icon.is-secondary.is-icon-right::after {\n    border-left-color: #35aaf3;\n    border-bottom-color: #35aaf3;\n}\n.has-icon.is-secondary.is-icon-close::before, .has-icon.is-secondary.is-icon-close::after {\n    background-color: #35aaf3;\n}\n.has-icon.is-warn .is-icon-arrow::after {\n    border-left-color: white;\n    border-top-color: white;\n}\n.has-icon.is-warn .is-icon-caret::after {\n    border-top-color: white;\n}\n.has-icon.is-warn .is-icon-right::after {\n    border-left-color: white;\n    border-bottom-color: white;\n}\n.has-icon.is-warn .is-icon-close::before, .has-icon.is-warn .is-icon-close::after {\n    background-color: white;\n}\n.has-icon.is-warn.is-outline .is-icon-arrow::after {\n    border-left-color: #ffdd57;\n    border-top-color: #ffdd57;\n}\n.has-icon.is-warn.is-outline .is-icon-caret::after {\n    border-top-color: #ffdd57;\n}\n.has-icon.is-warn.is-outline .is-icon-right::after {\n    border-left-color: #ffdd57;\n    border-bottom-color: #ffdd57;\n}\n.has-icon.is-warn.is-outline .is-icon-close::before, .has-icon.is-warn.is-outline .is-icon-close::after {\n    background-color: #ffdd57;\n}\n.has-icon.is-warn.is-outline:hover .is-icon-arrow::after, .has-icon.is-warn.is-outline:focus .is-icon-arrow::after, .has-icon.is-warn.is-outline.is-active .is-icon-arrow::after, .has-icon.is-warn.is-outline:active .is-icon-arrow::after {\n    border-left-color: white;\n    border-top-color: white;\n}\n.has-icon.is-warn.is-outline:hover .is-icon-caret::after, .has-icon.is-warn.is-outline:focus .is-icon-caret::after, .has-icon.is-warn.is-outline.is-active .is-icon-caret::after, .has-icon.is-warn.is-outline:active .is-icon-caret::after {\n    border-top-color: white;\n}\n.has-icon.is-warn.is-outline:hover .is-icon-right::after, .has-icon.is-warn.is-outline:focus .is-icon-right::after, .has-icon.is-warn.is-outline.is-active .is-icon-right::after, .has-icon.is-warn.is-outline:active .is-icon-right::after {\n    border-left-color: white;\n    border-bottom-color: white;\n}\n.has-icon.is-warn.is-outline:hover .is-icon-close::before, .has-icon.is-warn.is-outline:hover .is-icon-close::after, .has-icon.is-warn.is-outline:focus .is-icon-close::before, .has-icon.is-warn.is-outline:focus .is-icon-close::after, .has-icon.is-warn.is-outline.is-active .is-icon-close::before, .has-icon.is-warn.is-outline.is-active .is-icon-close::after, .has-icon.is-warn.is-outline:active .is-icon-close::before, .has-icon.is-warn.is-outline:active .is-icon-close::after {\n    background-color: white;\n}\n.has-icon.is-warn.is-icon-arrow::after {\n    border-left-color: #ffdd57;\n    border-top-color: #ffdd57;\n}\n.has-icon.is-warn.is-icon-caret::after {\n    border-top-color: #ffdd57;\n}\n.has-icon.is-warn.is-icon-right::after {\n    border-left-color: #ffdd57;\n    border-bottom-color: #ffdd57;\n}\n.has-icon.is-warn.is-icon-close::before, .has-icon.is-warn.is-icon-close::after {\n    background-color: #ffdd57;\n}\n.has-icon.is-success .is-icon-arrow::after {\n    border-left-color: white;\n    border-top-color: white;\n}\n.has-icon.is-success .is-icon-caret::after {\n    border-top-color: white;\n}\n.has-icon.is-success .is-icon-right::after {\n    border-left-color: white;\n    border-bottom-color: white;\n}\n.has-icon.is-success .is-icon-close::before, .has-icon.is-success .is-icon-close::after {\n    background-color: white;\n}\n.has-icon.is-success.is-outline .is-icon-arrow::after {\n    border-left-color: #23d160;\n    border-top-color: #23d160;\n}\n.has-icon.is-success.is-outline .is-icon-caret::after {\n    border-top-color: #23d160;\n}\n.has-icon.is-success.is-outline .is-icon-right::after {\n    border-left-color: #23d160;\n    border-bottom-color: #23d160;\n}\n.has-icon.is-success.is-outline .is-icon-close::before, .has-icon.is-success.is-outline .is-icon-close::after {\n    background-color: #23d160;\n}\n.has-icon.is-success.is-outline:hover .is-icon-arrow::after, .has-icon.is-success.is-outline:focus .is-icon-arrow::after, .has-icon.is-success.is-outline.is-active .is-icon-arrow::after, .has-icon.is-success.is-outline:active .is-icon-arrow::after {\n    border-left-color: white;\n    border-top-color: white;\n}\n.has-icon.is-success.is-outline:hover .is-icon-caret::after, .has-icon.is-success.is-outline:focus .is-icon-caret::after, .has-icon.is-success.is-outline.is-active .is-icon-caret::after, .has-icon.is-success.is-outline:active .is-icon-caret::after {\n    border-top-color: white;\n}\n.has-icon.is-success.is-outline:hover .is-icon-right::after, .has-icon.is-success.is-outline:focus .is-icon-right::after, .has-icon.is-success.is-outline.is-active .is-icon-right::after, .has-icon.is-success.is-outline:active .is-icon-right::after {\n    border-left-color: white;\n    border-bottom-color: white;\n}\n.has-icon.is-success.is-outline:hover .is-icon-close::before, .has-icon.is-success.is-outline:hover .is-icon-close::after, .has-icon.is-success.is-outline:focus .is-icon-close::before, .has-icon.is-success.is-outline:focus .is-icon-close::after, .has-icon.is-success.is-outline.is-active .is-icon-close::before, .has-icon.is-success.is-outline.is-active .is-icon-close::after, .has-icon.is-success.is-outline:active .is-icon-close::before, .has-icon.is-success.is-outline:active .is-icon-close::after {\n    background-color: white;\n}\n.has-icon.is-success.is-icon-arrow::after {\n    border-left-color: #23d160;\n    border-top-color: #23d160;\n}\n.has-icon.is-success.is-icon-caret::after {\n    border-top-color: #23d160;\n}\n.has-icon.is-success.is-icon-right::after {\n    border-left-color: #23d160;\n    border-bottom-color: #23d160;\n}\n.has-icon.is-success.is-icon-close::before, .has-icon.is-success.is-icon-close::after {\n    background-color: #23d160;\n}\n.has-icon.is-error .is-icon-arrow::after {\n    border-left-color: white;\n    border-top-color: white;\n}\n.has-icon.is-error .is-icon-caret::after {\n    border-top-color: white;\n}\n.has-icon.is-error .is-icon-right::after {\n    border-left-color: white;\n    border-bottom-color: white;\n}\n.has-icon.is-error .is-icon-close::before, .has-icon.is-error .is-icon-close::after {\n    background-color: white;\n}\n.has-icon.is-error.is-outline .is-icon-arrow::after {\n    border-left-color: #ff3860;\n    border-top-color: #ff3860;\n}\n.has-icon.is-error.is-outline .is-icon-caret::after {\n    border-top-color: #ff3860;\n}\n.has-icon.is-error.is-outline .is-icon-right::after {\n    border-left-color: #ff3860;\n    border-bottom-color: #ff3860;\n}\n.has-icon.is-error.is-outline .is-icon-close::before, .has-icon.is-error.is-outline .is-icon-close::after {\n    background-color: #ff3860;\n}\n.has-icon.is-error.is-outline:hover .is-icon-arrow::after, .has-icon.is-error.is-outline:focus .is-icon-arrow::after, .has-icon.is-error.is-outline.is-active .is-icon-arrow::after, .has-icon.is-error.is-outline:active .is-icon-arrow::after {\n    border-left-color: white;\n    border-top-color: white;\n}\n.has-icon.is-error.is-outline:hover .is-icon-caret::after, .has-icon.is-error.is-outline:focus .is-icon-caret::after, .has-icon.is-error.is-outline.is-active .is-icon-caret::after, .has-icon.is-error.is-outline:active .is-icon-caret::after {\n    border-top-color: white;\n}\n.has-icon.is-error.is-outline:hover .is-icon-right::after, .has-icon.is-error.is-outline:focus .is-icon-right::after, .has-icon.is-error.is-outline.is-active .is-icon-right::after, .has-icon.is-error.is-outline:active .is-icon-right::after {\n    border-left-color: white;\n    border-bottom-color: white;\n}\n.has-icon.is-error.is-outline:hover .is-icon-close::before, .has-icon.is-error.is-outline:hover .is-icon-close::after, .has-icon.is-error.is-outline:focus .is-icon-close::before, .has-icon.is-error.is-outline:focus .is-icon-close::after, .has-icon.is-error.is-outline.is-active .is-icon-close::before, .has-icon.is-error.is-outline.is-active .is-icon-close::after, .has-icon.is-error.is-outline:active .is-icon-close::before, .has-icon.is-error.is-outline:active .is-icon-close::after {\n    background-color: white;\n}\n.has-icon.is-error.is-icon-arrow::after {\n    border-left-color: #ff3860;\n    border-top-color: #ff3860;\n}\n.has-icon.is-error.is-icon-caret::after {\n    border-top-color: #ff3860;\n}\n.has-icon.is-error.is-icon-right::after {\n    border-left-color: #ff3860;\n    border-bottom-color: #ff3860;\n}\n.has-icon.is-error.is-icon-close::before, .has-icon.is-error.is-icon-close::after {\n    background-color: #ff3860;\n}\n.is-icon-caret::after {\n  border: 0.45em solid transparent;\n  position: absolute;\n  top: 0.3em;\n  content: \"\";\n  transition: all 0.3s;\n  box-sizing: border-box;\n  border-top-color: #C6C6C6;\n}\n.is-icon-right::after {\n  border: 2px solid transparent;\n  position: absolute;\n  width: 1em;\n  height: 0.55em;\n  min-height: 8px;\n  content: \"\";\n  transform: rotate(-55deg);\n  -webkit-transform: rotate(-55deg) translate3d(0, 0, 0);\n  box-sizing: border-box;\n  border-left-color: #C6C6C6;\n  border-bottom-color: #C6C6C6;\n}\n.is-icon-arrow::after {\n  border: 2px solid transparent;\n  position: absolute;\n  width: 0.7em;\n  height: 0.72em;\n  top: -0.1em;\n  left: 0.15em;\n  content: \"\";\n  border-radius: 2px;\n  transform: rotate(222deg);\n  -webkit-transform: rotate(222deg) translate3d(0, 0, 0);\n  transition: all 0.3s;\n  box-sizing: border-box;\n  border-left-color: #C6C6C6;\n  border-top-color: #C6C6C6;\n}\n.is-icon-close::before, .is-icon-close::after {\n  position: absolute;\n  content: \"\";\n  width: 100%;\n  top: 0.3em;\n  height: 2px;\n  background-color: #C6C6C6;\n}\n.is-icon-close::before {\n  -webkit-transform: rotate(45deg);\n  transform: rotate(45deg);\n}\n.is-icon-close::after {\n  -webkit-transform: rotate(-45deg);\n  transform: rotate(-45deg);\n}\n.is-icon-wrap,\n.is-icon-caret,\n.is-icon-right,\n.is-icon-arrow,\n.is-icon-close {\n  text-align: left;\n  display: inline-block;\n  position: relative;\n  width: 1em;\n  height: 1em;\n  vertical-align: middle;\n}\n.is-open .is-icon-caret::after,\n.has-hover-open:hover .is-icon-caret::after {\n  -webkit-transform: rotate(180deg) translateY(50%);\n  transform: rotate(180deg) translateY(50%);\n}\n.is-open .is-icon-arrow::after,\n.has-hover-open:hover .is-icon-arrow::after {\n  -webkit-transform: rotate(408deg);\n  transform: rotate(408deg);\n  top: 0.35em;\n  height: 0.7em;\n}\n.v-btn {\n  -moz-appearance: none;\n  -webkit-appearance: none;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  border: 1px solid transparent;\n  border-radius: 3px;\n  box-shadow: none;\n  display: -webkit-inline-box;\n  display: -ms-inline-flexbox;\n  display: inline-flex;\n  font-size: 1rem;\n  height: 2.25em;\n  -webkit-box-pack: start;\n      -ms-flex-pack: start;\n          justify-content: flex-start;\n  line-height: 1.5;\n  padding: calc(0.375em - 1px) calc(0.625em - 1px);\n  position: relative;\n  vertical-align: top;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  background-color: white;\n  border-color: #C6C6C6;\n  color: black;\n  cursor: pointer;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  padding-left: 0.75em;\n  padding-right: 0.75em;\n  text-align: center;\n  white-space: nowrap;\n  text-decoration: none;\n}\n.v-btn:focus, .v-btn.is-focused, .v-btn:active, .v-btn.is-active {\n    outline: none;\n}\n.v-btn[disabled] {\n    cursor: not-allowed;\n}\n.v-btn strong {\n    color: inherit;\n}\n.v-btn:hover, .v-btn.is-hovered {\n    background-color: #f2f2f2;\n}\n.v-btn.is-active, .v-btn:active {\n    color: black;\n    background-color: #e6e6e6;\n}\n.v-btn.is-disabled, .v-btn:disabled, .v-btn[disabled] {\n    pointer-events: none;\n    cursor: not-allowed;\n    background-color: #F2F2F2;\n    border-color: #cccccc;\n    box-shadow: none !important;\n    opacity: .5;\n}\n.v-btn:focus, .v-btn.is-focused {\n    border-color: #1ca0f2;\n    color: #363636;\n}\n.v-btn:focus:not(:active), .v-btn.is-focused:not(:active) {\n      box-shadow: 0 0 0 0.125em rgba(28, 160, 242, 0.25);\n}\n.v-btn.is-small {\n    border-radius: 2px;\n    font-size: 0.75rem;\n}\n.v-btn.is-medium {\n    font-size: 1.25rem;\n}\n.v-btn.is-large {\n    font-size: 1.5rem;\n}\n.v-btn.is-loading {\n    pointer-events: none;\n    color: transparent !important;\n}\n.v-btn.is-loading .as-icon {\n      opacity: 0;\n}\n.v-btn.is-loading::after {\n      border: 2px solid #dbdbdb;\n      border-radius: 290486px;\n      border-right-color: transparent;\n      border-top-color: transparent;\n      content: \"\";\n      display: block;\n      position: relative;\n      height: 1em;\n      width: 1em;\n      -webkit-animation: v-kf-spin-around 500ms infinite linear;\n              animation: v-kf-spin-around 500ms infinite linear;\n      position: absolute;\n      left: calc(50% - (1.2em / 2) - 0.5px);\n      top: calc(50% - (1.2em / 2) - 0.5px);\n}\n.v-btn.is-circle {\n    border-radius: 50%;\n}\n.v-btn.is-square, .v-btn.is-circle {\n    width: calc(18px + 1rem);\n    height: calc(18px + 1rem);\n}\n.v-btn.is-square.is-small, .v-btn.is-circle.is-small {\n      width: calc(16px + 0.7rem);\n      height: calc(16px + 0.7rem);\n}\n.v-btn.is-square.is-large, .v-btn.is-circle.is-large {\n      width: calc(21px + 1.5rem);\n      height: calc(21px + 1.5rem);\n}\n.v-btn.is-link {\n    background-color: transparent;\n    border-color: transparent;\n    color: #4a4a4a;\n    text-decoration: none;\n}\n.v-btn.is-link:hover, .v-btn.is-link.is-hovered, .v-btn.is-link:focus, .v-btn.is-link.is-focused {\n      background-color: whitesmoke;\n      color: #363636;\n}\n.v-btn.is-link:active, .v-btn.is-link.is-active {\n      background-color: #e8e8e8;\n      color: #363636;\n}\n.v-btn.is-link[disabled] {\n      background-color: transparent;\n      border-color: transparent;\n      box-shadow: none;\n}\n.v-btn .has-icon, .v-btn .has-icon.is-small, .v-btn .has-icon.is-medium, .v-btn .has-icon.is-large {\n    height: 1.5em;\n    width: 1.5em;\n}\n.v-btn .has-icon:first-child:not(:last-child) {\n    margin-left: calc(-0.375em - 1px);\n    margin-right: 0.1875em;\n}\n.v-btn .has-icon:last-child:not(:first-child) {\n    margin-left: 0.1875em;\n    margin-right: calc(-0.375em - 1px);\n}\n.v-btn .has-icon:first-child:last-child {\n    margin-left: calc(-0.375em - 1px);\n    margin-right: calc(-0.375em - 1px);\n}\n.v-btn-group.is-horizontal {\n  display: inline-block;\n  vertical-align: middle;\n}\n.v-btn-group.is-horizontal::after {\n    clear: both;\n    content: \" \";\n    display: table;\n}\n.v-btn-group.is-horizontal .v-btn {\n    float: left;\n    margin-left: -1px;\n}\n.v-btn-group.is-horizontal .v-btn:not(:first-child):not(:last-child) {\n      border-radius: 0;\n}\n.v-btn-group.is-horizontal .v-btn:first-child {\n      margin-left: 0;\n}\n.v-btn-group.is-horizontal .v-btn:first-child:not(:last-child) {\n        border-bottom-right-radius: 0;\n        border-top-right-radius: 0;\n}\n.v-btn-group.is-horizontal .v-btn:last-child:not(:first-child) {\n      border-bottom-left-radius: 0;\n      border-top-left-radius: 0;\n}\n.v-btn-group.is-vertical {\n  display: inline-block;\n  vertical-align: middle;\n}\n.v-btn-group.is-vertical .v-btn {\n    display: block;\n    margin-top: -1px;\n    width: 100%;\n    max-width: 100%;\n}\n.v-btn-group.is-vertical .v-btn:not(:first-child):not(:last-child) {\n      border-radius: 0;\n}\n.v-btn-group.is-vertical .v-btn:first-child {\n      margin-top: 0;\n}\n.v-btn-group.is-vertical .v-btn:first-child:not(:last-child) {\n        border-bottom-left-radius: 0;\n        border-bottom-right-radius: 0;\n}\n.v-btn-group.is-vertical .v-btn:last-child:not(:first-child) {\n      border-top-left-radius: 0;\n      border-top-right-radius: 0;\n}\n.v-btn.is-white {\n  color: #0a0a0a;\n  border-color: #fafafa;\n  background-color: white;\n}\n.v-btn.is-white.is-outlined {\n    color: white;\n    background-color: #0a0a0a;\n    border-color: #fafafa;\n}\n.v-btn.is-white.is-outlined:hover, .v-btn.is-white.is-outlined.is-hovered {\n      color: #0a0a0a !important;\n}\n.v-btn.is-white.is-outlined:focus, .v-btn.is-white.is-outlined.is-focused {\n      border-color: transparent;\n      color: white;\n}\n.v-btn.is-white.is-outlined:focus:not(:active), .v-btn.is-white.is-outlined.is-focused:not(:active) {\n        box-shadow: 0 0 0 0.125em rgba(255, 255, 255, 0.25);\n}\n.v-btn.is-white.is-outlined.is-active, .v-btn.is-white.is-outlined:active {\n      color: #0a0a0a;\n}\n.v-btn.is-white.is-outlined.is-loading::after {\n      border-left-color: white;\n      border-bottom-color: white;\n}\n.v-btn.is-white:hover, .v-btn.is-white.is-hovered {\n    background-color: #f0f0f0;\n}\n.v-btn.is-white:focus, .v-btn.is-white.is-focused {\n    border-color: transparent;\n    color: #0a0a0a;\n}\n.v-btn.is-white:focus:not(:active), .v-btn.is-white.is-focused:not(:active) {\n      box-shadow: 0 0 0 0.125em rgba(255, 255, 255, 0.25);\n}\n.v-btn.is-white.is-disabled, .v-btn.is-white:disabled, .v-btn.is-white[disabled] {\n    background-color: white !important;\n    border-color: transparent !important;\n}\n.v-btn.is-white:active, .v-btn.is-white.is-active {\n    background-color: #e6e6e6;\n}\n.v-btn.is-white.is-loading::after {\n    border-left-color: #0a0a0a;\n    border-bottom-color: #0a0a0a;\n}\n.v-btn.is-black {\n  color: white;\n  border-color: #050505;\n  background-color: #0a0a0a;\n}\n.v-btn.is-black.is-outlined {\n    color: #0a0a0a;\n    background-color: white;\n    border-color: #050505;\n}\n.v-btn.is-black.is-outlined:hover, .v-btn.is-black.is-outlined.is-hovered {\n      color: white !important;\n}\n.v-btn.is-black.is-outlined:focus, .v-btn.is-black.is-outlined.is-focused {\n      border-color: transparent;\n      color: #0a0a0a;\n}\n.v-btn.is-black.is-outlined:focus:not(:active), .v-btn.is-black.is-outlined.is-focused:not(:active) {\n        box-shadow: 0 0 0 0.125em rgba(10, 10, 10, 0.25);\n}\n.v-btn.is-black.is-outlined.is-active, .v-btn.is-black.is-outlined:active {\n      color: white;\n}\n.v-btn.is-black.is-outlined.is-loading::after {\n      border-left-color: #0a0a0a;\n      border-bottom-color: #0a0a0a;\n}\n.v-btn.is-black:hover, .v-btn.is-black.is-hovered {\n    background-color: black;\n}\n.v-btn.is-black:focus, .v-btn.is-black.is-focused {\n    border-color: transparent;\n    color: white;\n}\n.v-btn.is-black:focus:not(:active), .v-btn.is-black.is-focused:not(:active) {\n      box-shadow: 0 0 0 0.125em rgba(10, 10, 10, 0.25);\n}\n.v-btn.is-black.is-disabled, .v-btn.is-black:disabled, .v-btn.is-black[disabled] {\n    background-color: #0a0a0a !important;\n    border-color: transparent !important;\n}\n.v-btn.is-black:active, .v-btn.is-black.is-active {\n    background-color: black;\n}\n.v-btn.is-black.is-loading::after {\n    border-left-color: white;\n    border-bottom-color: white;\n}\n.v-btn.is-light {\n  color: #363636;\n  border-color: #f0f0f0;\n  background-color: whitesmoke;\n}\n.v-btn.is-light.is-outlined {\n    color: whitesmoke;\n    background-color: #363636;\n    border-color: #f0f0f0;\n}\n.v-btn.is-light.is-outlined:hover, .v-btn.is-light.is-outlined.is-hovered {\n      color: #363636 !important;\n}\n.v-btn.is-light.is-outlined:focus, .v-btn.is-light.is-outlined.is-focused {\n      border-color: transparent;\n      color: whitesmoke;\n}\n.v-btn.is-light.is-outlined:focus:not(:active), .v-btn.is-light.is-outlined.is-focused:not(:active) {\n        box-shadow: 0 0 0 0.125em rgba(245, 245, 245, 0.25);\n}\n.v-btn.is-light.is-outlined.is-active, .v-btn.is-light.is-outlined:active {\n      color: #363636;\n}\n.v-btn.is-light.is-outlined.is-loading::after {\n      border-left-color: whitesmoke;\n      border-bottom-color: whitesmoke;\n}\n.v-btn.is-light:hover, .v-btn.is-light.is-hovered {\n    background-color: #e6e6e6;\n}\n.v-btn.is-light:focus, .v-btn.is-light.is-focused {\n    border-color: transparent;\n    color: #363636;\n}\n.v-btn.is-light:focus:not(:active), .v-btn.is-light.is-focused:not(:active) {\n      box-shadow: 0 0 0 0.125em rgba(245, 245, 245, 0.25);\n}\n.v-btn.is-light.is-disabled, .v-btn.is-light:disabled, .v-btn.is-light[disabled] {\n    background-color: whitesmoke !important;\n    border-color: transparent !important;\n}\n.v-btn.is-light:active, .v-btn.is-light.is-active {\n    background-color: #dbdbdb;\n}\n.v-btn.is-light.is-loading::after {\n    border-left-color: #363636;\n    border-bottom-color: #363636;\n}\n.v-btn.is-dark {\n  color: whitesmoke;\n  border-color: #303030;\n  background-color: #363636;\n}\n.v-btn.is-dark.is-outlined {\n    color: #363636;\n    background-color: whitesmoke;\n    border-color: #303030;\n}\n.v-btn.is-dark.is-outlined:hover, .v-btn.is-dark.is-outlined.is-hovered {\n      color: whitesmoke !important;\n}\n.v-btn.is-dark.is-outlined:focus, .v-btn.is-dark.is-outlined.is-focused {\n      border-color: transparent;\n      color: #363636;\n}\n.v-btn.is-dark.is-outlined:focus:not(:active), .v-btn.is-dark.is-outlined.is-focused:not(:active) {\n        box-shadow: 0 0 0 0.125em rgba(54, 54, 54, 0.25);\n}\n.v-btn.is-dark.is-outlined.is-active, .v-btn.is-dark.is-outlined:active {\n      color: whitesmoke;\n}\n.v-btn.is-dark.is-outlined.is-loading::after {\n      border-left-color: #363636;\n      border-bottom-color: #363636;\n}\n.v-btn.is-dark:hover, .v-btn.is-dark.is-hovered {\n    background-color: #262626;\n}\n.v-btn.is-dark:focus, .v-btn.is-dark.is-focused {\n    border-color: transparent;\n    color: whitesmoke;\n}\n.v-btn.is-dark:focus:not(:active), .v-btn.is-dark.is-focused:not(:active) {\n      box-shadow: 0 0 0 0.125em rgba(54, 54, 54, 0.25);\n}\n.v-btn.is-dark.is-disabled, .v-btn.is-dark:disabled, .v-btn.is-dark[disabled] {\n    background-color: #363636 !important;\n    border-color: transparent !important;\n}\n.v-btn.is-dark:active, .v-btn.is-dark.is-active {\n    background-color: #1c1c1c;\n}\n.v-btn.is-dark.is-loading::after {\n    border-left-color: whitesmoke;\n    border-bottom-color: whitesmoke;\n}\n.v-btn.is-primary {\n  color: #fff;\n  border-color: #139cf1;\n  background-color: #1ca0f2;\n}\n.v-btn.is-primary.is-outlined {\n    color: #1ca0f2;\n    background-color: #fff;\n    border-color: #139cf1;\n}\n.v-btn.is-primary.is-outlined:hover, .v-btn.is-primary.is-outlined.is-hovered {\n      color: #fff !important;\n}\n.v-btn.is-primary.is-outlined:focus, .v-btn.is-primary.is-outlined.is-focused {\n      border-color: transparent;\n      color: #1ca0f2;\n}\n.v-btn.is-primary.is-outlined:focus:not(:active), .v-btn.is-primary.is-outlined.is-focused:not(:active) {\n        box-shadow: 0 0 0 0.125em rgba(28, 160, 242, 0.25);\n}\n.v-btn.is-primary.is-outlined.is-active, .v-btn.is-primary.is-outlined:active {\n      color: #fff;\n}\n.v-btn.is-primary.is-outlined.is-loading::after {\n      border-left-color: #1ca0f2;\n      border-bottom-color: #1ca0f2;\n}\n.v-btn.is-primary:hover, .v-btn.is-primary.is-hovered {\n    background-color: #0d91e3;\n}\n.v-btn.is-primary:focus, .v-btn.is-primary.is-focused {\n    border-color: transparent;\n    color: #fff;\n}\n.v-btn.is-primary:focus:not(:active), .v-btn.is-primary.is-focused:not(:active) {\n      box-shadow: 0 0 0 0.125em rgba(28, 160, 242, 0.25);\n}\n.v-btn.is-primary.is-disabled, .v-btn.is-primary:disabled, .v-btn.is-primary[disabled] {\n    background-color: #1ca0f2 !important;\n    border-color: transparent !important;\n}\n.v-btn.is-primary:active, .v-btn.is-primary.is-active {\n    background-color: #0c84cf;\n}\n.v-btn.is-primary.is-loading::after {\n    border-left-color: #fff;\n    border-bottom-color: #fff;\n}\n.v-btn.is-info {\n  color: #fff;\n  border-color: #b361ff;\n  background-color: #b86bff;\n}\n.v-btn.is-info.is-outlined {\n    color: #b86bff;\n    background-color: #fff;\n    border-color: #b361ff;\n}\n.v-btn.is-info.is-outlined:hover, .v-btn.is-info.is-outlined.is-hovered {\n      color: #fff !important;\n}\n.v-btn.is-info.is-outlined:focus, .v-btn.is-info.is-outlined.is-focused {\n      border-color: transparent;\n      color: #b86bff;\n}\n.v-btn.is-info.is-outlined:focus:not(:active), .v-btn.is-info.is-outlined.is-focused:not(:active) {\n        box-shadow: 0 0 0 0.125em rgba(184, 107, 255, 0.25);\n}\n.v-btn.is-info.is-outlined.is-active, .v-btn.is-info.is-outlined:active {\n      color: #fff;\n}\n.v-btn.is-info.is-outlined.is-loading::after {\n      border-left-color: #b86bff;\n      border-bottom-color: #b86bff;\n}\n.v-btn.is-info:hover, .v-btn.is-info.is-hovered {\n    background-color: #a94dff;\n}\n.v-btn.is-info:focus, .v-btn.is-info.is-focused {\n    border-color: transparent;\n    color: #fff;\n}\n.v-btn.is-info:focus:not(:active), .v-btn.is-info.is-focused:not(:active) {\n      box-shadow: 0 0 0 0.125em rgba(184, 107, 255, 0.25);\n}\n.v-btn.is-info.is-disabled, .v-btn.is-info:disabled, .v-btn.is-info[disabled] {\n    background-color: #b86bff !important;\n    border-color: transparent !important;\n}\n.v-btn.is-info:active, .v-btn.is-info.is-active {\n    background-color: #9f38ff;\n}\n.v-btn.is-info.is-loading::after {\n    border-left-color: #fff;\n    border-bottom-color: #fff;\n}\n.v-btn.is-success {\n  color: #fff;\n  border-color: #22c95c;\n  background-color: #23d160;\n}\n.v-btn.is-success.is-outlined {\n    color: #23d160;\n    background-color: #fff;\n    border-color: #22c95c;\n}\n.v-btn.is-success.is-outlined:hover, .v-btn.is-success.is-outlined.is-hovered {\n      color: #fff !important;\n}\n.v-btn.is-success.is-outlined:focus, .v-btn.is-success.is-outlined.is-focused {\n      border-color: transparent;\n      color: #23d160;\n}\n.v-btn.is-success.is-outlined:focus:not(:active), .v-btn.is-success.is-outlined.is-focused:not(:active) {\n        box-shadow: 0 0 0 0.125em rgba(35, 209, 96, 0.25);\n}\n.v-btn.is-success.is-outlined.is-active, .v-btn.is-success.is-outlined:active {\n      color: #fff;\n}\n.v-btn.is-success.is-outlined.is-loading::after {\n      border-left-color: #23d160;\n      border-bottom-color: #23d160;\n}\n.v-btn.is-success:hover, .v-btn.is-success.is-hovered {\n    background-color: #1fb754;\n}\n.v-btn.is-success:focus, .v-btn.is-success.is-focused {\n    border-color: transparent;\n    color: #fff;\n}\n.v-btn.is-success:focus:not(:active), .v-btn.is-success.is-focused:not(:active) {\n      box-shadow: 0 0 0 0.125em rgba(35, 209, 96, 0.25);\n}\n.v-btn.is-success.is-disabled, .v-btn.is-success:disabled, .v-btn.is-success[disabled] {\n    background-color: #23d160 !important;\n    border-color: transparent !important;\n}\n.v-btn.is-success:active, .v-btn.is-success.is-active {\n    background-color: #1ca64c;\n}\n.v-btn.is-success.is-loading::after {\n    border-left-color: #fff;\n    border-bottom-color: #fff;\n}\n.v-btn.is-warning {\n  color: rgba(0, 0, 0, 0.7);\n  border-color: #ffdb4d;\n  background-color: #ffdd57;\n}\n.v-btn.is-warning.is-outlined {\n    color: #ffdd57;\n    background-color: rgba(0, 0, 0, 0.7);\n    border-color: #ffdb4d;\n}\n.v-btn.is-warning.is-outlined:hover, .v-btn.is-warning.is-outlined.is-hovered {\n      color: rgba(0, 0, 0, 0.7) !important;\n}\n.v-btn.is-warning.is-outlined:focus, .v-btn.is-warning.is-outlined.is-focused {\n      border-color: transparent;\n      color: #ffdd57;\n}\n.v-btn.is-warning.is-outlined:focus:not(:active), .v-btn.is-warning.is-outlined.is-focused:not(:active) {\n        box-shadow: 0 0 0 0.125em rgba(255, 221, 87, 0.25);\n}\n.v-btn.is-warning.is-outlined.is-active, .v-btn.is-warning.is-outlined:active {\n      color: rgba(0, 0, 0, 0.7);\n}\n.v-btn.is-warning.is-outlined.is-loading::after {\n      border-left-color: #ffdd57;\n      border-bottom-color: #ffdd57;\n}\n.v-btn.is-warning:hover, .v-btn.is-warning.is-hovered {\n    background-color: #ffd738;\n}\n.v-btn.is-warning:focus, .v-btn.is-warning.is-focused {\n    border-color: transparent;\n    color: rgba(0, 0, 0, 0.7);\n}\n.v-btn.is-warning:focus:not(:active), .v-btn.is-warning.is-focused:not(:active) {\n      box-shadow: 0 0 0 0.125em rgba(255, 221, 87, 0.25);\n}\n.v-btn.is-warning.is-disabled, .v-btn.is-warning:disabled, .v-btn.is-warning[disabled] {\n    background-color: #ffdd57 !important;\n    border-color: transparent !important;\n}\n.v-btn.is-warning:active, .v-btn.is-warning.is-active {\n    background-color: #ffd324;\n}\n.v-btn.is-warning.is-loading::after {\n    border-left-color: rgba(0, 0, 0, 0.7);\n    border-bottom-color: rgba(0, 0, 0, 0.7);\n}\n.v-btn.is-danger {\n  color: #fff;\n  border-color: #ff2e58;\n  background-color: #ff3860;\n}\n.v-btn.is-danger.is-outlined {\n    color: #ff3860;\n    background-color: #fff;\n    border-color: #ff2e58;\n}\n.v-btn.is-danger.is-outlined:hover, .v-btn.is-danger.is-outlined.is-hovered {\n      color: #fff !important;\n}\n.v-btn.is-danger.is-outlined:focus, .v-btn.is-danger.is-outlined.is-focused {\n      border-color: transparent;\n      color: #ff3860;\n}\n.v-btn.is-danger.is-outlined:focus:not(:active), .v-btn.is-danger.is-outlined.is-focused:not(:active) {\n        box-shadow: 0 0 0 0.125em rgba(255, 56, 96, 0.25);\n}\n.v-btn.is-danger.is-outlined.is-active, .v-btn.is-danger.is-outlined:active {\n      color: #fff;\n}\n.v-btn.is-danger.is-outlined.is-loading::after {\n      border-left-color: #ff3860;\n      border-bottom-color: #ff3860;\n}\n.v-btn.is-danger:hover, .v-btn.is-danger.is-hovered {\n    background-color: #ff1a47;\n}\n.v-btn.is-danger:focus, .v-btn.is-danger.is-focused {\n    border-color: transparent;\n    color: #fff;\n}\n.v-btn.is-danger:focus:not(:active), .v-btn.is-danger.is-focused:not(:active) {\n      box-shadow: 0 0 0 0.125em rgba(255, 56, 96, 0.25);\n}\n.v-btn.is-danger.is-disabled, .v-btn.is-danger:disabled, .v-btn.is-danger[disabled] {\n    background-color: #ff3860 !important;\n    border-color: transparent !important;\n}\n.v-btn.is-danger:active, .v-btn.is-danger.is-active {\n    background-color: #ff0537;\n}\n.v-btn.is-danger.is-loading::after {\n    border-left-color: #fff;\n    border-bottom-color: #fff;\n}\n.v-field:not(:last-child) {\n  margin-bottom: 0.75rem;\n}\n.v-field.has-addons {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: start;\n      -ms-flex-pack: start;\n          justify-content: flex-start;\n}\n.v-field.has-addons .v-control:not(:last-child) {\n    margin-right: -1px;\n}\n.v-field.has-addons .v-control:first-child .v-btn,\n  .v-field.has-addons .v-control:first-child .v-input,\n  .v-field.has-addons .v-control:first-child .v-select select {\n    border-bottom-left-radius: 3px;\n    border-top-left-radius: 3px;\n}\n.v-field.has-addons .v-control:last-child .v-btn,\n  .v-field.has-addons .v-control:last-child .v-input,\n  .v-field.has-addons .v-control:last-child .v-select select {\n    border-bottom-right-radius: 3px;\n    border-top-right-radius: 3px;\n}\n.v-field.has-addons .v-control .v-btn,\n  .v-field.has-addons .v-control .v-input,\n  .v-field.has-addons .v-control .v-select select {\n    border-radius: 0;\n}\n.v-field.has-addons .v-control .v-btn:hover, .v-field.has-addons .v-control .v-btn.is-hovered,\n    .v-field.has-addons .v-control .v-input:hover,\n    .v-field.has-addons .v-control .v-input.is-hovered,\n    .v-field.has-addons .v-control .v-select select:hover,\n    .v-field.has-addons .v-control .v-select select.is-hovered {\n      z-index: 2;\n}\n.v-field.has-addons .v-control .v-btn:focus, .v-field.has-addons .v-control .v-btn.is-focused, .v-field.has-addons .v-control .v-btn:active, .v-field.has-addons .v-control .v-btn.is-active,\n    .v-field.has-addons .v-control .v-input:focus,\n    .v-field.has-addons .v-control .v-input.is-focused,\n    .v-field.has-addons .v-control .v-input:active,\n    .v-field.has-addons .v-control .v-input.is-active,\n    .v-field.has-addons .v-control .v-select select:focus,\n    .v-field.has-addons .v-control .v-select select.is-focused,\n    .v-field.has-addons .v-control .v-select select:active,\n    .v-field.has-addons .v-control .v-select select.is-active {\n      z-index: 3;\n}\n.v-field.has-addons .v-control .v-btn:focus:hover, .v-field.has-addons .v-control .v-btn.is-focused:hover, .v-field.has-addons .v-control .v-btn:active:hover, .v-field.has-addons .v-control .v-btn.is-active:hover,\n      .v-field.has-addons .v-control .v-input:focus:hover,\n      .v-field.has-addons .v-control .v-input.is-focused:hover,\n      .v-field.has-addons .v-control .v-input:active:hover,\n      .v-field.has-addons .v-control .v-input.is-active:hover,\n      .v-field.has-addons .v-control .v-select select:focus:hover,\n      .v-field.has-addons .v-control .v-select select.is-focused:hover,\n      .v-field.has-addons .v-control .v-select select:active:hover,\n      .v-field.has-addons .v-control .v-select select.is-active:hover {\n        z-index: 4;\n}\n.v-field.has-addons .v-control.is-expanded {\n    -webkit-box-flex: 1;\n        -ms-flex-positive: 1;\n            flex-grow: 1;\n}\n.v-field.has-addons.has-addons-centered {\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n}\n.v-field.has-addons.has-addons-right {\n    -webkit-box-pack: end;\n        -ms-flex-pack: end;\n            justify-content: flex-end;\n}\n.v-field.has-addons.has-addons-fullwidth .v-control {\n    -webkit-box-flex: 1;\n        -ms-flex-positive: 1;\n            flex-grow: 1;\n    -ms-flex-negative: 0;\n        flex-shrink: 0;\n}\n.v-field.is-grouped {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: start;\n      -ms-flex-pack: start;\n          justify-content: flex-start;\n}\n.v-field.is-grouped > .v-control {\n    -ms-flex-negative: 0;\n        flex-shrink: 0;\n}\n.v-field.is-grouped > .v-control:not(:last-child) {\n      margin-bottom: 0;\n      margin-right: 0.75rem;\n}\n.v-field.is-grouped > .v-control.is-expanded {\n      -webkit-box-flex: 1;\n          -ms-flex-positive: 1;\n              flex-grow: 1;\n      -ms-flex-negative: 1;\n          flex-shrink: 1;\n}\n.v-field.is-grouped.is-grouped-centered {\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n}\n.v-field.is-grouped.is-grouped-right {\n    -webkit-box-pack: end;\n        -ms-flex-pack: end;\n            justify-content: flex-end;\n}\n.v-field.is-grouped.is-grouped-multiline {\n    -ms-flex-wrap: wrap;\n        flex-wrap: wrap;\n}\n.v-field.is-grouped.is-grouped-multiline > .ns-control:last-child, .v-field.is-grouped.is-grouped-multiline > .ns-control:not(:last-child) {\n      margin-bottom: 0.75rem;\n}\n.v-field.is-grouped.is-grouped-multiline:last-child {\n      margin-bottom: -0.75rem;\n}\n.v-field.is-grouped.is-grouped-multiline:not(:last-child) {\n      margin-bottom: 0;\n}\n.v-field.is-horizontal {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n}\n.v-field-label {\n  margin-bottom: 0.5rem;\n  -ms-flex-preferred-size: 0;\n      flex-basis: 0;\n  -webkit-box-flex: 1;\n      -ms-flex-positive: 1;\n          flex-grow: 1;\n  -ms-flex-negative: 0;\n      flex-shrink: 0;\n  margin-right: 1.5rem;\n  text-align: right;\n}\n.v-field-label .label {\n    font-size: inherit;\n}\n.v-field-label.is-small {\n    font-size: 0.75rem;\n    padding-top: 0.375em;\n}\n.v-field-label.is-normal {\n    padding-top: 0.375em;\n}\n.v-field-label.is-medium {\n    font-size: 1.25rem;\n    padding-top: 0.375em;\n}\n.v-field-label.is-large {\n    font-size: 1.5rem;\n    padding-top: 0.375em;\n}\n.v-field-body {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-preferred-size: 0;\n      flex-basis: 0;\n  -webkit-box-flex: 5;\n      -ms-flex-positive: 5;\n          flex-grow: 5;\n  -ms-flex-negative: 1;\n      flex-shrink: 1;\n}\n.v-field-body .v-field {\n    margin-bottom: 0;\n}\n.v-field-body > .v-field {\n    -ms-flex-negative: 1;\n        flex-shrink: 1;\n}\n.v-field-body > .v-field:not(.is-narrow) {\n      -webkit-box-flex: 1;\n          -ms-flex-positive: 1;\n              flex-grow: 1;\n}\n.v-field-body > .v-field:not(:last-child) {\n      margin-right: 0.75rem;\n}\n.v-control {\n  font-size: 1rem;\n  position: relative;\n  text-align: left;\n}\n.v-control.has-icons-left .v-input:focus ~ .has-icon,\n  .v-control.has-icons-left .v-select:focus ~ .has-icon, .v-control.has-icons-right .v-input:focus ~ .has-icon,\n  .v-control.has-icons-right .v-select:focus ~ .has-icon {\n    color: #7a7a7a;\n}\n.v-control.has-icons-left .v-input.is-small ~ .has-icon,\n  .v-control.has-icons-left .v-select.is-small ~ .has-icon, .v-control.has-icons-right .v-input.is-small ~ .has-icon,\n  .v-control.has-icons-right .v-select.is-small ~ .has-icon {\n    font-size: 0.75rem;\n}\n.v-control.has-icons-left .v-input.is-medium ~ .has-icon,\n  .v-control.has-icons-left .v-select.is-medium ~ .has-icon, .v-control.has-icons-right .v-input.is-medium ~ .has-icon,\n  .v-control.has-icons-right .v-select.is-medium ~ .has-icon {\n    font-size: 1.25rem;\n}\n.v-control.has-icons-left .v-input.is-large ~ .has-icon,\n  .v-control.has-icons-left .v-select.is-large ~ .has-icon, .v-control.has-icons-right .v-input.is-large ~ .has-icon,\n  .v-control.has-icons-right .v-select.is-large ~ .has-icon {\n    font-size: 1.5rem;\n}\n.v-control.has-icons-left .has-icon, .v-control.has-icons-right .has-icon {\n    color: #dbdbdb;\n    height: 2.25em;\n    pointer-events: none;\n    position: absolute;\n    top: 0;\n    width: 2.25em;\n    z-index: 4;\n}\n.v-control.has-icons-left .v-input,\n  .v-control.has-icons-left .v-select select {\n    padding-left: 2.25em;\n}\n.v-control.has-icons-left .has-icon.is-left {\n    left: 0;\n}\n.v-control.has-icons-right .v-input,\n  .v-control.has-icons-right .v-select select {\n    padding-right: 2.25em;\n}\n.v-control.has-icons-right .has-icon.is-right {\n    right: 0;\n}\n.v-control.is-loading::after {\n    -webkit-animation: v-kf-spin-around 500ms infinite linear;\n            animation: v-kf-spin-around 500ms infinite linear;\n    border: 2px solid #dbdbdb;\n    border-radius: 290486px;\n    border-right-color: transparent;\n    border-top-color: transparent;\n    content: \"\";\n    display: block;\n    box-sizing: border-box;\n    height: 1em;\n    width: 1em;\n    position: relative;\n    position: absolute !important;\n    right: 0.625em;\n    top: 0.625em;\n}\n.v-control.is-loading.is-small:after {\n    font-size: 0.75rem;\n}\n.v-control.is-loading.is-medium:after {\n    font-size: 1.25rem;\n}\n.v-control.is-loading.is-large:after {\n    font-size: 1.5rem;\n}\n.v-input,\n.v-textarea {\n  -moz-appearance: none;\n  -webkit-appearance: none;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  border: 1px solid transparent;\n  border-radius: 3px;\n  box-shadow: none;\n  display: -webkit-inline-box;\n  display: -ms-inline-flexbox;\n  display: inline-flex;\n  font-size: 1rem;\n  height: 2.25em;\n  -webkit-box-pack: start;\n      -ms-flex-pack: start;\n          justify-content: flex-start;\n  line-height: 1.5;\n  padding: calc(0.375em - 1px) calc(0.625em - 1px);\n  position: relative;\n  vertical-align: top;\n  background-color: white;\n  border-color: #dbdbdb;\n  color: #363636;\n  max-width: 100%;\n  width: 100%;\n}\n.v-input:focus, .v-input.is-focused, .v-input:active, .v-input.is-active,\n  .v-textarea:focus,\n  .v-textarea.is-focused,\n  .v-textarea:active,\n  .v-textarea.is-active {\n    outline: none;\n}\n.v-input[disabled],\n  .v-textarea[disabled] {\n    cursor: not-allowed;\n}\n.v-input:hover, .v-input.is-hovered,\n  .v-textarea:hover,\n  .v-textarea.is-hovered {\n    border-color: #b5b5b5;\n}\n.v-input:focus, .v-input.is-focused, .v-input:active, .v-input.is-active,\n  .v-textarea:focus,\n  .v-textarea.is-focused,\n  .v-textarea:active,\n  .v-textarea.is-active {\n    border-color: #1ca0f2;\n    box-shadow: 0 0 0 0.125em rgba(28, 160, 242, 0.25);\n}\n.v-input[disabled],\n  .v-textarea[disabled] {\n    background-color: whitesmoke;\n    border-color: whitesmoke;\n    box-shadow: none;\n    color: #7a7a7a;\n}\n.v-input[disabled]::-moz-placeholder,\n    .v-textarea[disabled]::-moz-placeholder {\n      color: rgba(122, 122, 122, 0.3);\n}\n.v-input[disabled]::-webkit-input-placeholder,\n    .v-textarea[disabled]::-webkit-input-placeholder {\n      color: rgba(122, 122, 122, 0.3);\n}\n.v-input[disabled]:-moz-placeholder,\n    .v-textarea[disabled]:-moz-placeholder {\n      color: rgba(122, 122, 122, 0.3);\n}\n.v-input[disabled]:-ms-input-placeholder,\n    .v-textarea[disabled]:-ms-input-placeholder {\n      color: rgba(122, 122, 122, 0.3);\n}\n.v-input[type=\"search\"],\n  .v-textarea[type=\"search\"] {\n    border-radius: 290486px;\n}\n.v-input.is-white,\n  .v-textarea.is-white {\n    border-color: white;\n}\n.v-input.is-white:focus, .v-input.is-white.is-focused, .v-input.is-white:active, .v-input.is-white.is-active,\n    .v-textarea.is-white:focus,\n    .v-textarea.is-white.is-focused,\n    .v-textarea.is-white:active,\n    .v-textarea.is-white.is-active {\n      box-shadow: 0 0 0 0.125em rgba(255, 255, 255, 0.25);\n}\n.v-input.is-black,\n  .v-textarea.is-black {\n    border-color: #0a0a0a;\n}\n.v-input.is-black:focus, .v-input.is-black.is-focused, .v-input.is-black:active, .v-input.is-black.is-active,\n    .v-textarea.is-black:focus,\n    .v-textarea.is-black.is-focused,\n    .v-textarea.is-black:active,\n    .v-textarea.is-black.is-active {\n      box-shadow: 0 0 0 0.125em rgba(10, 10, 10, 0.25);\n}\n.v-input.is-light,\n  .v-textarea.is-light {\n    border-color: whitesmoke;\n}\n.v-input.is-light:focus, .v-input.is-light.is-focused, .v-input.is-light:active, .v-input.is-light.is-active,\n    .v-textarea.is-light:focus,\n    .v-textarea.is-light.is-focused,\n    .v-textarea.is-light:active,\n    .v-textarea.is-light.is-active {\n      box-shadow: 0 0 0 0.125em rgba(245, 245, 245, 0.25);\n}\n.v-input.is-dark,\n  .v-textarea.is-dark {\n    border-color: #363636;\n}\n.v-input.is-dark:focus, .v-input.is-dark.is-focused, .v-input.is-dark:active, .v-input.is-dark.is-active,\n    .v-textarea.is-dark:focus,\n    .v-textarea.is-dark.is-focused,\n    .v-textarea.is-dark:active,\n    .v-textarea.is-dark.is-active {\n      box-shadow: 0 0 0 0.125em rgba(54, 54, 54, 0.25);\n}\n.v-input.is-primary,\n  .v-textarea.is-primary {\n    border-color: #1ca0f2;\n}\n.v-input.is-primary:focus, .v-input.is-primary.is-focused, .v-input.is-primary:active, .v-input.is-primary.is-active,\n    .v-textarea.is-primary:focus,\n    .v-textarea.is-primary.is-focused,\n    .v-textarea.is-primary:active,\n    .v-textarea.is-primary.is-active {\n      box-shadow: 0 0 0 0.125em rgba(28, 160, 242, 0.25);\n}\n.v-input.is-info,\n  .v-textarea.is-info {\n    border-color: #b86bff;\n}\n.v-input.is-info:focus, .v-input.is-info.is-focused, .v-input.is-info:active, .v-input.is-info.is-active,\n    .v-textarea.is-info:focus,\n    .v-textarea.is-info.is-focused,\n    .v-textarea.is-info:active,\n    .v-textarea.is-info.is-active {\n      box-shadow: 0 0 0 0.125em rgba(184, 107, 255, 0.25);\n}\n.v-input.is-success,\n  .v-textarea.is-success {\n    border-color: #23d160;\n}\n.v-input.is-success:focus, .v-input.is-success.is-focused, .v-input.is-success:active, .v-input.is-success.is-active,\n    .v-textarea.is-success:focus,\n    .v-textarea.is-success.is-focused,\n    .v-textarea.is-success:active,\n    .v-textarea.is-success.is-active {\n      box-shadow: 0 0 0 0.125em rgba(35, 209, 96, 0.25);\n}\n.v-input.is-warning,\n  .v-textarea.is-warning {\n    border-color: #ffdd57;\n}\n.v-input.is-warning:focus, .v-input.is-warning.is-focused, .v-input.is-warning:active, .v-input.is-warning.is-active,\n    .v-textarea.is-warning:focus,\n    .v-textarea.is-warning.is-focused,\n    .v-textarea.is-warning:active,\n    .v-textarea.is-warning.is-active {\n      box-shadow: 0 0 0 0.125em rgba(255, 221, 87, 0.25);\n}\n.v-input.is-danger,\n  .v-textarea.is-danger {\n    border-color: #ff3860;\n}\n.v-input.is-danger:focus, .v-input.is-danger.is-focused, .v-input.is-danger:active, .v-input.is-danger.is-active,\n    .v-textarea.is-danger:focus,\n    .v-textarea.is-danger.is-focused,\n    .v-textarea.is-danger:active,\n    .v-textarea.is-danger.is-active {\n      box-shadow: 0 0 0 0.125em rgba(255, 56, 96, 0.25);\n}\n.v-input.is-small,\n  .v-textarea.is-small {\n    border-radius: 2px;\n    font-size: 0.75rem;\n}\n.v-input.is-medium,\n  .v-textarea.is-medium {\n    font-size: 1.25rem;\n}\n.v-input.is-large,\n  .v-textarea.is-large {\n    font-size: 1.5rem;\n}\n.v-input.is-fullwidth,\n  .v-textarea.is-fullwidth {\n    display: block;\n    width: 100%;\n}\n.v-input.is-inline,\n  .v-textarea.is-inline {\n    display: inline;\n    width: auto;\n}\n.v-select {\n  display: inline-block;\n  max-width: 100%;\n  position: relative;\n  vertical-align: top;\n  box-sizing: border-box;\n}\n.v-select:not(.is-multiple) {\n    height: 2.25em;\n}\n.v-select:not(.is-multiple)::after {\n      border: 1px solid #1ca0f2;\n      border-right: 0;\n      border-top: 0;\n      content: \" \";\n      display: block;\n      height: 0.5em;\n      pointer-events: none;\n      position: absolute;\n      -webkit-transform: rotate(-45deg);\n              transform: rotate(-45deg);\n      width: 0.5em;\n      margin-top: -0.375em;\n      right: 1.125em;\n      top: 50%;\n      z-index: 4;\n}\n.v-select select {\n    -moz-appearance: none;\n    -webkit-appearance: none;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    border: 1px solid transparent;\n    border-radius: 3px;\n    box-shadow: none;\n    display: -webkit-inline-box;\n    display: -ms-inline-flexbox;\n    display: inline-flex;\n    font-size: 1rem;\n    height: 2.25em;\n    -webkit-box-pack: start;\n        -ms-flex-pack: start;\n            justify-content: flex-start;\n    line-height: 1.5;\n    padding: calc(0.375em - 1px) calc(0.625em - 1px);\n    position: relative;\n    vertical-align: top;\n    background-color: white;\n    border-color: #dbdbdb;\n    color: #363636;\n    cursor: pointer;\n    display: block;\n    font-size: 1em;\n    max-width: 100%;\n    outline: none;\n}\n.v-select select:focus, .v-select select.is-focused, .v-select select:active, .v-select select.is-active {\n      outline: none;\n}\n.v-select select[disabled] {\n      cursor: not-allowed;\n}\n.v-select select:hover, .v-select select.is-hovered {\n      border-color: #b5b5b5;\n}\n.v-select select:focus, .v-select select.is-focused, .v-select select:active, .v-select select.is-active {\n      border-color: #1ca0f2;\n      box-shadow: 0 0 0 0.125em rgba(28, 160, 242, 0.25);\n}\n.v-select select[disabled] {\n      background-color: whitesmoke;\n      border-color: whitesmoke;\n      box-shadow: none;\n      color: #7a7a7a;\n}\n.v-select select[disabled]::-moz-placeholder {\n        color: rgba(122, 122, 122, 0.3);\n}\n.v-select select[disabled]::-webkit-input-placeholder {\n        color: rgba(122, 122, 122, 0.3);\n}\n.v-select select[disabled]:-moz-placeholder {\n        color: rgba(122, 122, 122, 0.3);\n}\n.v-select select[disabled]:-ms-input-placeholder {\n        color: rgba(122, 122, 122, 0.3);\n}\n.v-select select::-ms-expand {\n      display: none;\n}\n.v-select select[disabled]:hover {\n      border-color: whitesmoke;\n}\n.v-select select:not([multiple]) {\n      padding-right: 2.5em;\n}\n.v-select select[multiple] {\n      height: unset;\n      padding: 0;\n}\n.v-select select[multiple] option {\n        padding: 0.5em 1em;\n}\n.v-select:hover::after {\n    border-color: #363636;\n}\n.v-select.is-white select {\n    border-color: white;\n}\n.v-select.is-white select:focus, .v-select.is-white select.is-focused, .v-select.is-white select:active, .v-select.is-white select.is-active {\n      box-shadow: 0 0 0 0.125em rgba(255, 255, 255, 0.25);\n}\n.v-select.is-black select {\n    border-color: #0a0a0a;\n}\n.v-select.is-black select:focus, .v-select.is-black select.is-focused, .v-select.is-black select:active, .v-select.is-black select.is-active {\n      box-shadow: 0 0 0 0.125em rgba(10, 10, 10, 0.25);\n}\n.v-select.is-light select {\n    border-color: whitesmoke;\n}\n.v-select.is-light select:focus, .v-select.is-light select.is-focused, .v-select.is-light select:active, .v-select.is-light select.is-active {\n      box-shadow: 0 0 0 0.125em rgba(245, 245, 245, 0.25);\n}\n.v-select.is-dark select {\n    border-color: #363636;\n}\n.v-select.is-dark select:focus, .v-select.is-dark select.is-focused, .v-select.is-dark select:active, .v-select.is-dark select.is-active {\n      box-shadow: 0 0 0 0.125em rgba(54, 54, 54, 0.25);\n}\n.v-select.is-primary select {\n    border-color: #1ca0f2;\n}\n.v-select.is-primary select:focus, .v-select.is-primary select.is-focused, .v-select.is-primary select:active, .v-select.is-primary select.is-active {\n      box-shadow: 0 0 0 0.125em rgba(28, 160, 242, 0.25);\n}\n.v-select.is-info select {\n    border-color: #b86bff;\n}\n.v-select.is-info select:focus, .v-select.is-info select.is-focused, .v-select.is-info select:active, .v-select.is-info select.is-active {\n      box-shadow: 0 0 0 0.125em rgba(184, 107, 255, 0.25);\n}\n.v-select.is-success select {\n    border-color: #23d160;\n}\n.v-select.is-success select:focus, .v-select.is-success select.is-focused, .v-select.is-success select:active, .v-select.is-success select.is-active {\n      box-shadow: 0 0 0 0.125em rgba(35, 209, 96, 0.25);\n}\n.v-select.is-warning select {\n    border-color: #ffdd57;\n}\n.v-select.is-warning select:focus, .v-select.is-warning select.is-focused, .v-select.is-warning select:active, .v-select.is-warning select.is-active {\n      box-shadow: 0 0 0 0.125em rgba(255, 221, 87, 0.25);\n}\n.v-select.is-danger select {\n    border-color: #ff3860;\n}\n.v-select.is-danger select:focus, .v-select.is-danger select.is-focused, .v-select.is-danger select:active, .v-select.is-danger select.is-active {\n      box-shadow: 0 0 0 0.125em rgba(255, 56, 96, 0.25);\n}\n.v-select.is-small {\n    border-radius: 2px;\n    font-size: 0.75rem;\n}\n.v-select.is-medium {\n    font-size: 1.25rem;\n}\n.v-select.is-large {\n    font-size: 1.5rem;\n}\n.v-select.is-disabled::after {\n    border-color: #7a7a7a;\n}\n.v-select.is-fullwidth {\n    width: 100%;\n}\n.v-select.is-fullwidth select {\n      width: 100%;\n}\n.v-select.is-loading::after {\n    -webkit-animation: v-kf-spin-around 500ms infinite linear;\n            animation: v-kf-spin-around 500ms infinite linear;\n    border: 2px solid #dbdbdb;\n    border-radius: 290486px;\n    border-right-color: transparent;\n    border-top-color: transparent;\n    content: \"\";\n    display: block;\n    box-sizing: border-box;\n    height: 1em;\n    width: 1em;\n    position: relative;\n    margin-top: 0;\n    position: absolute;\n    right: 0.625em;\n    top: 0.625em;\n    -webkit-transform: none;\n            transform: none;\n}\n.v-select.is-loading.is-small:after {\n    font-size: 0.75rem;\n}\n.v-select.is-loading.is-medium:after {\n    font-size: 1.25rem;\n}\n.v-select.is-loading.is-large:after {\n    font-size: 1.5rem;\n}\n.v-textarea {\n  display: block;\n  max-width: 100%;\n  min-width: 100%;\n  padding: 0.625em;\n  resize: vertical;\n}\n.v-textarea:not([rows]) {\n    max-height: 600px;\n    min-height: 120px;\n}\n.v-textarea[rows] {\n    height: unset;\n}\n.v-textarea.has-fixed-size {\n    resize: none;\n}\n.v-checkbox,\n.v-radio {\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  cursor: pointer;\n  display: inline-block;\n  line-height: 1.25;\n  position: relative;\n}\n.v-checkbox input,\n  .v-radio input {\n    cursor: pointer;\n}\n.v-checkbox:hover,\n  .v-radio:hover {\n    color: #363636;\n}\n.v-checkbox[disabled],\n  .v-radio[disabled] {\n    color: #7a7a7a;\n    cursor: not-allowed;\n}\n.v-radio + .v-radio {\n  margin-left: 1em;\n}\n.v-label {\n  color: #363636;\n  display: block;\n  font-size: 1rem;\n  font-weight: 700;\n  line-height: 1.5em;\n}\n.v-label:not(:last-child) {\n    margin-bottom: 0.5em;\n}\n.v-label.is-small {\n    font-size: 0.75rem;\n}\n.v-label.is-medium {\n    font-size: 1.25rem;\n}\n.v-label.is-large {\n    font-size: 1.5rem;\n}\n.v-help {\n  display: block;\n  font-size: 0.75rem;\n  margin-top: 0.25rem;\n}\n.v-help.is-white {\n    color: white;\n}\n.v-help.is-black {\n    color: #0a0a0a;\n}\n.v-help.is-light {\n    color: whitesmoke;\n}\n.v-help.is-dark {\n    color: #363636;\n}\n.v-help.is-primary {\n    color: #1ca0f2;\n}\n.v-help.is-info {\n    color: #b86bff;\n}\n.v-help.is-success {\n    color: #23d160;\n}\n.v-help.is-warning {\n    color: #ffdd57;\n}\n.v-help.is-danger {\n    color: #ff3860;\n}\n.v-content:not(:last-child) {\n  margin-bottom: 1.5rem;\n}\n.v-content li + li {\n  margin-top: 0.25em;\n}\n.v-content p:not(:last-child),\n.v-content dl:not(:last-child),\n.v-content ol:not(:last-child),\n.v-content ul:not(:last-child),\n.v-content blockquote:not(:last-child),\n.v-content pre:not(:last-child),\n.v-content table:not(:last-child) {\n  margin-bottom: 1em;\n}\n.v-content h1,\n.v-content h2,\n.v-content h3,\n.v-content h4,\n.v-content h5,\n.v-content h6 {\n  color: #363636;\n  font-weight: 400;\n  line-height: 1.125;\n}\n.v-content h1 {\n  font-size: 2em;\n  margin-bottom: 0.5em;\n}\n.v-content h1:not(:first-child) {\n    margin-top: 1em;\n}\n.v-content h2 {\n  font-size: 1.75em;\n  margin-bottom: 0.5714em;\n}\n.v-content h2:not(:first-child) {\n    margin-top: 1.1428em;\n}\n.v-content h3 {\n  font-size: 1.5em;\n  margin-bottom: 0.6666em;\n}\n.v-content h3:not(:first-child) {\n    margin-top: 1.3333em;\n}\n.v-content h4 {\n  font-size: 1.25em;\n  margin-bottom: 0.8em;\n}\n.v-content h5 {\n  font-size: 1.125em;\n  margin-bottom: 0.8888em;\n}\n.v-content h6 {\n  font-size: 1em;\n  margin-bottom: 1em;\n}\n.v-content blockquote {\n  background-color: whitesmoke;\n  border-left: 5px solid #dbdbdb;\n  padding: 1.25em 1.5em;\n}\n.v-content ol {\n  list-style: decimal outside;\n  margin-left: 2em;\n  margin-top: 1em;\n}\n.v-content ul {\n  list-style: disc outside;\n  margin-left: 2em;\n  margin-top: 1em;\n}\n.v-content ul ul {\n    list-style-type: circle;\n    margin-top: 0.5em;\n}\n.v-content ul ul ul {\n      list-style-type: square;\n}\n.v-content dd {\n  margin-left: 2em;\n}\n.v-content figure {\n  margin-left: 2em;\n  margin-right: 2em;\n  text-align: center;\n}\n.v-content figure:not(:first-child) {\n    margin-top: 2em;\n}\n.v-content figure:not(:last-child) {\n    margin-bottom: 2em;\n}\n.v-content figure img {\n    display: inline-block;\n}\n.v-content figure figcaption {\n    font-style: italic;\n}\n.v-content pre {\n  -webkit-overflow-scrolling: touch;\n  overflow-x: auto;\n  padding: 1.25em 1.5em;\n  white-space: pre;\n  word-wrap: normal;\n}\n.v-content sup,\n.v-content sub {\n  font-size: 75%;\n}\n.v-content table {\n  width: 100%;\n}\n.v-content table td,\n  .v-content table th {\n    border: 1px solid #dbdbdb;\n    border-width: 0 0 1px;\n    padding: 0.5em 0.75em;\n    vertical-align: top;\n}\n.v-content table th {\n    color: #363636;\n    text-align: left;\n}\n.v-content table tr:hover {\n    background-color: whitesmoke;\n}\n.v-content table thead td,\n  .v-content table thead th {\n    border-width: 0 0 2px;\n    color: #363636;\n}\n.v-content table tfoot td,\n  .v-content table tfoot th {\n    border-width: 2px 0 0;\n    color: #363636;\n}\n.v-content table tbody tr:last-child td,\n  .v-content table tbody tr:last-child th {\n    border-bottom-width: 0;\n}\n.v-content.is-small {\n  font-size: 0.75rem;\n}\n.v-content.is-medium {\n  font-size: 1.25rem;\n}\n.v-content.is-large {\n  font-size: 1.5rem;\n}\n.v-media {\n  -webkit-box-align: start;\n      -ms-flex-align: start;\n          align-items: flex-start;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  text-align: left;\n}\n.v-media .v-content:not(:last-child) {\n    margin-bottom: 0.75rem;\n}\n.v-media .v-media {\n    border-top: 1px solid rgba(219, 219, 219, 0.5);\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    padding-top: 0.75rem;\n}\n.v-media .v-media .v-content:not(:last-child),\n    .v-media .v-media .v-control:not(:last-child) {\n      margin-bottom: 0.5rem;\n}\n.v-media .v-media .v-media {\n      padding-top: 0.5rem;\n}\n.v-media .v-media .v-media + .v-media {\n        margin-top: 0.5rem;\n}\n.v-media + .v-media {\n    border-top: 1px solid rgba(219, 219, 219, 0.5);\n    margin-top: 1rem;\n    padding-top: 1rem;\n}\n.v-media.is-large + .v-media {\n    margin-top: 1.5rem;\n    padding-top: 1.5rem;\n}\n.v-media-left,\n.v-media-right {\n  -ms-flex-preferred-size: auto;\n      flex-basis: auto;\n  -webkit-box-flex: 0;\n      -ms-flex-positive: 0;\n          flex-grow: 0;\n  -ms-flex-negative: 0;\n      flex-shrink: 0;\n}\n.v-media-left {\n  margin-right: 1rem;\n}\n.v-media-right {\n  margin-left: 1rem;\n}\n.v-media-content {\n  -ms-flex-preferred-size: auto;\n      flex-basis: auto;\n  -webkit-box-flex: 1;\n      -ms-flex-positive: 1;\n          flex-grow: 1;\n  -ms-flex-negative: 1;\n      flex-shrink: 1;\n  text-align: left;\n}\n.v-box {\n  background-color: white;\n  border-radius: 5px;\n  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);\n  color: #4a4a4a;\n  display: block;\n  padding: 1.25rem;\n}\n.v-box:not(:last-child) {\n    margin-bottom: 1.5rem;\n}\na.v-box:hover, a.v-box:focus {\n  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px #1ca0f2;\n}\na.v-box:active {\n  box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.2), 0 0 0 1px #1ca0f2;\n}\n.v-content:not(:last-child) {\n  margin-bottom: 1.5rem;\n}\n.v-content li + li {\n  margin-top: 0.25em;\n}\n.v-content p:not(:last-child),\n.v-content dl:not(:last-child),\n.v-content ol:not(:last-child),\n.v-content ul:not(:last-child),\n.v-content blockquote:not(:last-child),\n.v-content pre:not(:last-child),\n.v-content table:not(:last-child) {\n  margin-bottom: 1em;\n}\n.v-content h1,\n.v-content h2,\n.v-content h3,\n.v-content h4,\n.v-content h5,\n.v-content h6 {\n  color: #363636;\n  font-weight: 400;\n  line-height: 1.125;\n}\n.v-content h1 {\n  font-size: 2em;\n  margin-bottom: 0.5em;\n}\n.v-content h1:not(:first-child) {\n    margin-top: 1em;\n}\n.v-content h2 {\n  font-size: 1.75em;\n  margin-bottom: 0.5714em;\n}\n.v-content h2:not(:first-child) {\n    margin-top: 1.1428em;\n}\n.v-content h3 {\n  font-size: 1.5em;\n  margin-bottom: 0.6666em;\n}\n.v-content h3:not(:first-child) {\n    margin-top: 1.3333em;\n}\n.v-content h4 {\n  font-size: 1.25em;\n  margin-bottom: 0.8em;\n}\n.v-content h5 {\n  font-size: 1.125em;\n  margin-bottom: 0.8888em;\n}\n.v-content h6 {\n  font-size: 1em;\n  margin-bottom: 1em;\n}\n.v-content blockquote {\n  background-color: whitesmoke;\n  border-left: 5px solid #dbdbdb;\n  padding: 1.25em 1.5em;\n}\n.v-content ol {\n  list-style: decimal outside;\n  margin-left: 2em;\n  margin-top: 1em;\n}\n.v-content ul {\n  list-style: disc outside;\n  margin-left: 2em;\n  margin-top: 1em;\n}\n.v-content ul ul {\n    list-style-type: circle;\n    margin-top: 0.5em;\n}\n.v-content ul ul ul {\n      list-style-type: square;\n}\n.v-content dd {\n  margin-left: 2em;\n}\n.v-content figure {\n  margin-left: 2em;\n  margin-right: 2em;\n  text-align: center;\n}\n.v-content figure:not(:first-child) {\n    margin-top: 2em;\n}\n.v-content figure:not(:last-child) {\n    margin-bottom: 2em;\n}\n.v-content figure img {\n    display: inline-block;\n}\n.v-content figure figcaption {\n    font-style: italic;\n}\n.v-content pre {\n  -webkit-overflow-scrolling: touch;\n  overflow-x: auto;\n  padding: 1.25em 1.5em;\n  white-space: pre;\n  word-wrap: normal;\n}\n.v-content sup,\n.v-content sub {\n  font-size: 75%;\n}\n.v-content table {\n  width: 100%;\n}\n.v-content table td,\n  .v-content table th {\n    border: 1px solid #dbdbdb;\n    border-width: 0 0 1px;\n    padding: 0.5em 0.75em;\n    vertical-align: top;\n}\n.v-content table th {\n    color: #363636;\n    text-align: left;\n}\n.v-content table tr:hover {\n    background-color: whitesmoke;\n}\n.v-content table thead td,\n  .v-content table thead th {\n    border-width: 0 0 2px;\n    color: #363636;\n}\n.v-content table tfoot td,\n  .v-content table tfoot th {\n    border-width: 2px 0 0;\n    color: #363636;\n}\n.v-content table tbody tr:last-child td,\n  .v-content table tbody tr:last-child th {\n    border-bottom-width: 0;\n}\n.v-content.is-small {\n  font-size: 0.75rem;\n}\n.v-content.is-medium {\n  font-size: 1.25rem;\n}\n.v-content.is-large {\n  font-size: 1.5rem;\n}\n.v-notification {\n  background-color: whitesmoke;\n  border-radius: 3px;\n  padding: 1.25rem 2.5rem 1.25rem 1.5rem;\n  position: relative;\n}\n.v-notification:not(:last-child) {\n    margin-bottom: 1.5rem;\n}\n.v-notification a:not(.button) {\n    color: currentColor;\n    text-decoration: underline;\n}\n.v-notification strong {\n    color: currentColor;\n}\n.v-notification code,\n  .v-notification pre {\n    background: white;\n}\n.v-notification pre code {\n    background: transparent;\n}\n.v-notification > .v-close {\n    position: absolute;\n    right: 0.5em;\n    top: 0.5em;\n}\n.v-notification .v-title,\n  .v-notification .v-subtitle,\n  .v-notification .v-content {\n    color: currentColor;\n}\n.v-notification.is-white {\n    background-color: white;\n    color: #0a0a0a;\n}\n.v-notification.is-black {\n    background-color: #0a0a0a;\n    color: white;\n}\n.v-notification.is-light {\n    background-color: whitesmoke;\n    color: #363636;\n}\n.v-notification.is-dark {\n    background-color: #363636;\n    color: whitesmoke;\n}\n.v-notification.is-primary {\n    background-color: #1ca0f2;\n    color: #fff;\n}\n.v-notification.is-info {\n    background-color: #b86bff;\n    color: #fff;\n}\n.v-notification.is-success {\n    background-color: #23d160;\n    color: #fff;\n}\n.v-notification.is-warning {\n    background-color: #ffdd57;\n    color: rgba(0, 0, 0, 0.7);\n}\n.v-notification.is-danger {\n    background-color: #ff3860;\n    color: #fff;\n}\n.v-notification-popup {\n  position: fixed;\n  right: 16px;\n  box-shadow: 0 0 3px rgba(0, 0, 0, 0.04), 0 1px 4px rgba(0, 0, 0, 0.15);\n  transition: opacity 0.3s, right .3s, top 0.4s, -webkit-transform .3s;\n  transition: opacity 0.3s, transform .3s, right .3s, top 0.4s;\n  transition: opacity 0.3s, transform .3s, right .3s, top 0.4s, -webkit-transform .3s;\n  overflow: hidden;\n  z-index: 1010;\n  max-width: 480px;\n}\n.v-notification-popup > .v-notification {\n    padding-top: 1rem;\n}\n.v-notification-popup .has-title {\n    padding: 0;\n    margin: 0;\n    font-size: 1.25rem;\n}\n.v-notification-popup .has-content {\n    padding-top: 0.25rem;\n}\n.v-table {\n  width: 100%;\n  border-spacing: 0;\n  border-collapse: collapse;\n  display: table;\n  cursor: default;\n  color: #363636;\n  margin-bottom: 1.5rem;\n}\n.v-table th, .v-table td {\n    border: 0;\n}\n.v-table th {\n    text-align: left;\n    font-weight: bold;\n}\n.v-table td,\n  .v-table th {\n    border: 1px solid #dbdbdb;\n    border-width: 0 0 1px;\n    padding: 0.65em 0.75em;\n    vertical-align: top;\n}\n.v-table td.is-white,\n    .v-table th.is-white {\n      background-color: white;\n      border-color: white;\n      color: #0a0a0a;\n}\n.v-table td.is-black,\n    .v-table th.is-black {\n      background-color: #0a0a0a;\n      border-color: #0a0a0a;\n      color: white;\n}\n.v-table td.is-light,\n    .v-table th.is-light {\n      background-color: whitesmoke;\n      border-color: whitesmoke;\n      color: #363636;\n}\n.v-table td.is-dark,\n    .v-table th.is-dark {\n      background-color: #363636;\n      border-color: #363636;\n      color: whitesmoke;\n}\n.v-table td.is-primary,\n    .v-table th.is-primary {\n      background-color: #1ca0f2;\n      border-color: #1ca0f2;\n      color: #fff;\n}\n.v-table td.is-info,\n    .v-table th.is-info {\n      background-color: #b86bff;\n      border-color: #b86bff;\n      color: #fff;\n}\n.v-table td.is-success,\n    .v-table th.is-success {\n      background-color: #23d160;\n      border-color: #23d160;\n      color: #fff;\n}\n.v-table td.is-warning,\n    .v-table th.is-warning {\n      background-color: #ffdd57;\n      border-color: #ffdd57;\n      color: rgba(0, 0, 0, 0.7);\n}\n.v-table td.is-danger,\n    .v-table th.is-danger {\n      background-color: #ff3860;\n      border-color: #ff3860;\n      color: #fff;\n}\n.v-table td.is-narrow,\n    .v-table th.is-narrow {\n      white-space: nowrap;\n      width: 1%;\n}\n.v-table th {\n    color: #363636;\n    text-align: left;\n    background-color: #ededed;\n}\n.v-table tr:hover {\n    background-color: #fafafa;\n}\n.v-table tr.is-selected {\n    background-color: #1ca0f2;\n    color: #fff;\n}\n.v-table tr.is-selected a,\n    .v-table tr.is-selected strong {\n      color: currentColor;\n}\n.v-table tr.is-selected td,\n    .v-table tr.is-selected th {\n      border-color: #fff;\n      color: currentColor;\n}\n.v-table thead td,\n  .v-table thead th {\n    border-width: 0 0 2px;\n    color: #363636;\n}\n.v-table tfoot td,\n  .v-table tfoot th {\n    border-width: 2px 0 0;\n    color: #363636;\n}\n.v-table tbody tr:last-child td,\n  .v-table tbody tr:last-child th {\n    border-bottom-width: 0;\n}\n.v-table.is-bordered td,\n  .v-table.is-bordered th {\n    border-width: 1px;\n}\n.v-table.is-bordered tr:last-child td,\n  .v-table.is-bordered tr:last-child th {\n    border-bottom-width: 1px;\n}\n.v-table.is-fit-content {\n    width: auto;\n}\n.v-table.is-narrow td,\n  .v-table.is-narrow th {\n    padding: 0.25em 0.5em;\n}\n.v-table.is-striped tbody tr:not(.is-selected):nth-child(even) {\n    background-color: #fafafa;\n}\n.v-table.is-striped tbody tr:not(.is-selected):nth-child(even):hover {\n      background-color: whitesmoke;\n}\n.v-badge {\n  position: relative;\n  display: inline-block;\n  line-height: 1;\n  vertical-align: middle;\n}\n.v-badge .has-badge {\n    width: 42px;\n    height: 42px;\n    background: #eee;\n    border-radius: 6px;\n    display: inline-block;\n}\n.v-badge .has-badge-dot, .v-badge .has-badge-count {\n    position: absolute;\n    -webkit-transform: translateX(-50%);\n            transform: translateX(-50%);\n    -webkit-transform-origin: 0 center;\n            transform-origin: 0 center;\n    top: -4px;\n    right: -8px;\n    height: 8px;\n    min-width: 8px;\n    border-radius: 100%;\n    background: #ed3f14;\n    z-index: 10;\n    box-shadow: 0 0 0 1px white;\n}\n.v-badge .has-badge-count {\n    -webkit-transform: translateX(50%);\n            transform: translateX(50%);\n    top: -10px;\n    right: 0;\n    height: 20px;\n    border-radius: 10px;\n    min-width: 20px;\n    background: #ed3f14;\n    border: 1px solid transparent;\n    color: white;\n    line-height: 18px;\n    text-align: center;\n    padding: 0 6px;\n    font-size: 12px;\n    white-space: nowrap;\n    -webkit-transform-origin: -10% center;\n            transform-origin: -10% center;\n    z-index: 10;\n    box-sizing: border-box;\n    box-shadow: 0 0 0 1px white;\n}\n.v-close {\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  -moz-appearance: none;\n  -webkit-appearance: none;\n  background-color: rgba(10, 10, 10, 0.2);\n  border: none;\n  border-radius: 290486px;\n  cursor: pointer;\n  display: inline-block;\n  -webkit-box-flex: 0;\n      -ms-flex-positive: 0;\n          flex-grow: 0;\n  -ms-flex-negative: 0;\n      flex-shrink: 0;\n  font-size: 1rem;\n  height: 20px;\n  max-height: 20px;\n  max-width: 20px;\n  min-height: 20px;\n  min-width: 20px;\n  outline: none;\n  position: relative;\n  vertical-align: top;\n  width: 20px;\n}\n.v-close:before, .v-close:after {\n    background-color: white;\n    content: \"\";\n    display: block;\n    left: 50%;\n    position: absolute;\n    top: 50%;\n    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);\n            transform: translateX(-50%) translateY(-50%) rotate(45deg);\n    -webkit-transform-origin: center center;\n            transform-origin: center center;\n}\n.v-close:before {\n    height: 2px;\n    width: 50%;\n}\n.v-close:after {\n    height: 50%;\n    width: 2px;\n}\n.v-close:hover, .v-close:focus {\n    background-color: rgba(10, 10, 10, 0.3);\n}\n.v-close:active {\n    background-color: rgba(10, 10, 10, 0.4);\n}\n.v-close.is-white {\n    background-color: rgba(255, 255, 255, 0.4);\n}\n.v-close.is-white:hover, .v-close.is-white:focus {\n      background-color: rgba(255, 255, 255, 0.6);\n}\n.v-close.is-white:active {\n      background-color: rgba(255, 255, 255, 0.9);\n}\n.v-close.is-black {\n    background-color: rgba(10, 10, 10, 0.4);\n}\n.v-close.is-black:hover, .v-close.is-black:focus {\n      background-color: rgba(10, 10, 10, 0.6);\n}\n.v-close.is-black:active {\n      background-color: rgba(10, 10, 10, 0.9);\n}\n.v-close.is-light {\n    background-color: rgba(245, 245, 245, 0.4);\n}\n.v-close.is-light:hover, .v-close.is-light:focus {\n      background-color: rgba(245, 245, 245, 0.6);\n}\n.v-close.is-light:active {\n      background-color: rgba(245, 245, 245, 0.9);\n}\n.v-close.is-dark {\n    background-color: rgba(54, 54, 54, 0.4);\n}\n.v-close.is-dark:hover, .v-close.is-dark:focus {\n      background-color: rgba(54, 54, 54, 0.6);\n}\n.v-close.is-dark:active {\n      background-color: rgba(54, 54, 54, 0.9);\n}\n.v-close.is-primary {\n    background-color: rgba(28, 160, 242, 0.4);\n}\n.v-close.is-primary:hover, .v-close.is-primary:focus {\n      background-color: rgba(28, 160, 242, 0.6);\n}\n.v-close.is-primary:active {\n      background-color: rgba(28, 160, 242, 0.9);\n}\n.v-close.is-info {\n    background-color: rgba(184, 107, 255, 0.4);\n}\n.v-close.is-info:hover, .v-close.is-info:focus {\n      background-color: rgba(184, 107, 255, 0.6);\n}\n.v-close.is-info:active {\n      background-color: rgba(184, 107, 255, 0.9);\n}\n.v-close.is-success {\n    background-color: rgba(35, 209, 96, 0.4);\n}\n.v-close.is-success:hover, .v-close.is-success:focus {\n      background-color: rgba(35, 209, 96, 0.6);\n}\n.v-close.is-success:active {\n      background-color: rgba(35, 209, 96, 0.9);\n}\n.v-close.is-warning {\n    background-color: rgba(255, 221, 87, 0.4);\n}\n.v-close.is-warning:hover, .v-close.is-warning:focus {\n      background-color: rgba(255, 221, 87, 0.6);\n}\n.v-close.is-warning:active {\n      background-color: rgba(255, 221, 87, 0.9);\n}\n.v-close.is-danger {\n    background-color: rgba(255, 56, 96, 0.4);\n}\n.v-close.is-danger:hover, .v-close.is-danger:focus {\n      background-color: rgba(255, 56, 96, 0.6);\n}\n.v-close.is-danger:active {\n      background-color: rgba(255, 56, 96, 0.9);\n}\n.v-close.is-small {\n    height: 16px;\n    max-height: 16px;\n    max-width: 16px;\n    min-height: 16px;\n    min-width: 16px;\n    width: 16px;\n}\n.v-close.is-medium {\n    height: 24px;\n    max-height: 24px;\n    max-width: 24px;\n    min-height: 24px;\n    min-width: 24px;\n    width: 24px;\n}\n.v-close.is-large {\n    height: 32px;\n    max-height: 32px;\n    max-width: 32px;\n    min-height: 32px;\n    min-width: 32px;\n    width: 32px;\n}\n.v-close.is-transparent {\n    background-color: transparent !important;\n}\n.v-close.is-transparent:before, .v-close.is-transparent:after {\n      background-color: rgba(10, 10, 10, 0.6);\n}\n.v-close.is-transparent:hover::before, .v-close.is-transparent:hover::after, .v-close.is-transparent:focus::before, .v-close.is-transparent:focus::after {\n      background-color: rgba(10, 10, 10, 0.8);\n}\n.v-close.is-transparent:active::before, .v-close.is-transparent:active::after {\n      background-color: #0a0a0a;\n}\n.v-close.is-transparent.is-white::before, .v-close.is-transparent.is-white::after {\n      background-color: rgba(255, 255, 255, 0.6);\n}\n.v-close.is-transparent.is-white:hover::before, .v-close.is-transparent.is-white:hover::after, .v-close.is-transparent.is-white:focus::before, .v-close.is-transparent.is-white:focus::after {\n      background-color: rgba(255, 255, 255, 0.8);\n}\n.v-close.is-transparent.is-white:active::before, .v-close.is-transparent.is-white:active::after {\n      background-color: white;\n}\n.v-close.is-transparent.is-black::before, .v-close.is-transparent.is-black::after {\n      background-color: rgba(10, 10, 10, 0.6);\n}\n.v-close.is-transparent.is-black:hover::before, .v-close.is-transparent.is-black:hover::after, .v-close.is-transparent.is-black:focus::before, .v-close.is-transparent.is-black:focus::after {\n      background-color: rgba(10, 10, 10, 0.8);\n}\n.v-close.is-transparent.is-black:active::before, .v-close.is-transparent.is-black:active::after {\n      background-color: #0a0a0a;\n}\n.v-close.is-transparent.is-light::before, .v-close.is-transparent.is-light::after {\n      background-color: rgba(245, 245, 245, 0.6);\n}\n.v-close.is-transparent.is-light:hover::before, .v-close.is-transparent.is-light:hover::after, .v-close.is-transparent.is-light:focus::before, .v-close.is-transparent.is-light:focus::after {\n      background-color: rgba(245, 245, 245, 0.8);\n}\n.v-close.is-transparent.is-light:active::before, .v-close.is-transparent.is-light:active::after {\n      background-color: whitesmoke;\n}\n.v-close.is-transparent.is-dark::before, .v-close.is-transparent.is-dark::after {\n      background-color: rgba(54, 54, 54, 0.6);\n}\n.v-close.is-transparent.is-dark:hover::before, .v-close.is-transparent.is-dark:hover::after, .v-close.is-transparent.is-dark:focus::before, .v-close.is-transparent.is-dark:focus::after {\n      background-color: rgba(54, 54, 54, 0.8);\n}\n.v-close.is-transparent.is-dark:active::before, .v-close.is-transparent.is-dark:active::after {\n      background-color: #363636;\n}\n.v-close.is-transparent.is-primary::before, .v-close.is-transparent.is-primary::after {\n      background-color: rgba(28, 160, 242, 0.6);\n}\n.v-close.is-transparent.is-primary:hover::before, .v-close.is-transparent.is-primary:hover::after, .v-close.is-transparent.is-primary:focus::before, .v-close.is-transparent.is-primary:focus::after {\n      background-color: rgba(28, 160, 242, 0.8);\n}\n.v-close.is-transparent.is-primary:active::before, .v-close.is-transparent.is-primary:active::after {\n      background-color: #1ca0f2;\n}\n.v-close.is-transparent.is-info::before, .v-close.is-transparent.is-info::after {\n      background-color: rgba(184, 107, 255, 0.6);\n}\n.v-close.is-transparent.is-info:hover::before, .v-close.is-transparent.is-info:hover::after, .v-close.is-transparent.is-info:focus::before, .v-close.is-transparent.is-info:focus::after {\n      background-color: rgba(184, 107, 255, 0.8);\n}\n.v-close.is-transparent.is-info:active::before, .v-close.is-transparent.is-info:active::after {\n      background-color: #b86bff;\n}\n.v-close.is-transparent.is-success::before, .v-close.is-transparent.is-success::after {\n      background-color: rgba(35, 209, 96, 0.6);\n}\n.v-close.is-transparent.is-success:hover::before, .v-close.is-transparent.is-success:hover::after, .v-close.is-transparent.is-success:focus::before, .v-close.is-transparent.is-success:focus::after {\n      background-color: rgba(35, 209, 96, 0.8);\n}\n.v-close.is-transparent.is-success:active::before, .v-close.is-transparent.is-success:active::after {\n      background-color: #23d160;\n}\n.v-close.is-transparent.is-warning::before, .v-close.is-transparent.is-warning::after {\n      background-color: rgba(255, 221, 87, 0.6);\n}\n.v-close.is-transparent.is-warning:hover::before, .v-close.is-transparent.is-warning:hover::after, .v-close.is-transparent.is-warning:focus::before, .v-close.is-transparent.is-warning:focus::after {\n      background-color: rgba(255, 221, 87, 0.8);\n}\n.v-close.is-transparent.is-warning:active::before, .v-close.is-transparent.is-warning:active::after {\n      background-color: #ffdd57;\n}\n.v-close.is-transparent.is-danger::before, .v-close.is-transparent.is-danger::after {\n      background-color: rgba(255, 56, 96, 0.6);\n}\n.v-close.is-transparent.is-danger:hover::before, .v-close.is-transparent.is-danger:hover::after, .v-close.is-transparent.is-danger:focus::before, .v-close.is-transparent.is-danger:focus::after {\n      background-color: rgba(255, 56, 96, 0.8);\n}\n.v-close.is-transparent.is-danger:active::before, .v-close.is-transparent.is-danger:active::after {\n      background-color: #ff3860;\n}\n.v-modal {\n  bottom: 0;\n  left: 0;\n  position: absolute;\n  right: 0;\n  top: 0;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  display: none;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  overflow: hidden;\n  position: fixed;\n  z-index: 1011;\n}\n.v-modal.is-active {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n}\n.v-modal-overlay {\n  bottom: 0;\n  left: 0;\n  position: absolute;\n  right: 0;\n  top: 0;\n  background-color: rgba(10, 10, 10, 0.8);\n}\n.v-modal-content,\n.v-modal-card {\n  margin: 0 20px;\n  max-height: calc(100vh - 160px);\n  overflow: auto;\n  position: relative;\n  width: 640px;\n  -webkit-animation-duration: 1s;\n          animation-duration: 1s;\n  -webkit-animation-fill-mode: both;\n          animation-fill-mode: both;\n  -webkit-animation: v-kf-fade-in-down 800ms ease;\n          animation: v-kf-fade-in-down 800ms ease;\n}\n.v-modal-content.is-small,\n  .v-modal-card.is-small {\n    width: 420px;\n}\n.v-modal-content.is-medium,\n  .v-modal-card.is-medium {\n    width: 840px;\n}\n.v-modal-content.is-large,\n  .v-modal-card.is-large {\n    width: 980px;\n}\n.v-modal-close {\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  -moz-appearance: none;\n  -webkit-appearance: none;\n  background-color: rgba(10, 10, 10, 0.2);\n  border: none;\n  border-radius: 290486px;\n  cursor: pointer;\n  display: inline-block;\n  -webkit-box-flex: 0;\n      -ms-flex-positive: 0;\n          flex-grow: 0;\n  -ms-flex-negative: 0;\n      flex-shrink: 0;\n  font-size: 1rem;\n  height: 20px;\n  max-height: 20px;\n  max-width: 20px;\n  min-height: 20px;\n  min-width: 20px;\n  outline: none;\n  position: relative;\n  vertical-align: top;\n  width: 20px;\n  background: none;\n  height: 40px;\n  position: fixed;\n  right: 20px;\n  top: 20px;\n  width: 40px;\n}\n.v-modal-close:before, .v-modal-close:after {\n    background-color: white;\n    content: \"\";\n    display: block;\n    left: 50%;\n    position: absolute;\n    top: 50%;\n    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);\n            transform: translateX(-50%) translateY(-50%) rotate(45deg);\n    -webkit-transform-origin: center center;\n            transform-origin: center center;\n}\n.v-modal-close:before {\n    height: 2px;\n    width: 50%;\n}\n.v-modal-close:after {\n    height: 50%;\n    width: 2px;\n}\n.v-modal-close:hover, .v-modal-close:focus {\n    background-color: rgba(10, 10, 10, 0.3);\n}\n.v-modal-close:active {\n    background-color: rgba(10, 10, 10, 0.4);\n}\n.v-modal-close.is-white {\n    background-color: rgba(255, 255, 255, 0.4);\n}\n.v-modal-close.is-white:hover, .v-modal-close.is-white:focus {\n      background-color: rgba(255, 255, 255, 0.6);\n}\n.v-modal-close.is-white:active {\n      background-color: rgba(255, 255, 255, 0.9);\n}\n.v-modal-close.is-black {\n    background-color: rgba(10, 10, 10, 0.4);\n}\n.v-modal-close.is-black:hover, .v-modal-close.is-black:focus {\n      background-color: rgba(10, 10, 10, 0.6);\n}\n.v-modal-close.is-black:active {\n      background-color: rgba(10, 10, 10, 0.9);\n}\n.v-modal-close.is-light {\n    background-color: rgba(245, 245, 245, 0.4);\n}\n.v-modal-close.is-light:hover, .v-modal-close.is-light:focus {\n      background-color: rgba(245, 245, 245, 0.6);\n}\n.v-modal-close.is-light:active {\n      background-color: rgba(245, 245, 245, 0.9);\n}\n.v-modal-close.is-dark {\n    background-color: rgba(54, 54, 54, 0.4);\n}\n.v-modal-close.is-dark:hover, .v-modal-close.is-dark:focus {\n      background-color: rgba(54, 54, 54, 0.6);\n}\n.v-modal-close.is-dark:active {\n      background-color: rgba(54, 54, 54, 0.9);\n}\n.v-modal-close.is-primary {\n    background-color: rgba(28, 160, 242, 0.4);\n}\n.v-modal-close.is-primary:hover, .v-modal-close.is-primary:focus {\n      background-color: rgba(28, 160, 242, 0.6);\n}\n.v-modal-close.is-primary:active {\n      background-color: rgba(28, 160, 242, 0.9);\n}\n.v-modal-close.is-info {\n    background-color: rgba(184, 107, 255, 0.4);\n}\n.v-modal-close.is-info:hover, .v-modal-close.is-info:focus {\n      background-color: rgba(184, 107, 255, 0.6);\n}\n.v-modal-close.is-info:active {\n      background-color: rgba(184, 107, 255, 0.9);\n}\n.v-modal-close.is-success {\n    background-color: rgba(35, 209, 96, 0.4);\n}\n.v-modal-close.is-success:hover, .v-modal-close.is-success:focus {\n      background-color: rgba(35, 209, 96, 0.6);\n}\n.v-modal-close.is-success:active {\n      background-color: rgba(35, 209, 96, 0.9);\n}\n.v-modal-close.is-warning {\n    background-color: rgba(255, 221, 87, 0.4);\n}\n.v-modal-close.is-warning:hover, .v-modal-close.is-warning:focus {\n      background-color: rgba(255, 221, 87, 0.6);\n}\n.v-modal-close.is-warning:active {\n      background-color: rgba(255, 221, 87, 0.9);\n}\n.v-modal-close.is-danger {\n    background-color: rgba(255, 56, 96, 0.4);\n}\n.v-modal-close.is-danger:hover, .v-modal-close.is-danger:focus {\n      background-color: rgba(255, 56, 96, 0.6);\n}\n.v-modal-close.is-danger:active {\n      background-color: rgba(255, 56, 96, 0.9);\n}\n.v-modal-close.is-small {\n    height: 16px;\n    max-height: 16px;\n    max-width: 16px;\n    min-height: 16px;\n    min-width: 16px;\n    width: 16px;\n}\n.v-modal-close.is-medium {\n    height: 24px;\n    max-height: 24px;\n    max-width: 24px;\n    min-height: 24px;\n    min-width: 24px;\n    width: 24px;\n}\n.v-modal-close.is-large {\n    height: 32px;\n    max-height: 32px;\n    max-width: 32px;\n    min-height: 32px;\n    min-width: 32px;\n    width: 32px;\n}\n.v-modal-close.is-transparent {\n    background-color: transparent !important;\n}\n.v-modal-close.is-transparent:before, .v-modal-close.is-transparent:after {\n      background-color: rgba(10, 10, 10, 0.6);\n}\n.v-modal-close.is-transparent:hover::before, .v-modal-close.is-transparent:hover::after, .v-modal-close.is-transparent:focus::before, .v-modal-close.is-transparent:focus::after {\n      background-color: rgba(10, 10, 10, 0.8);\n}\n.v-modal-close.is-transparent:active::before, .v-modal-close.is-transparent:active::after {\n      background-color: #0a0a0a;\n}\n.v-modal-close.is-transparent.is-white::before, .v-modal-close.is-transparent.is-white::after {\n      background-color: rgba(255, 255, 255, 0.6);\n}\n.v-modal-close.is-transparent.is-white:hover::before, .v-modal-close.is-transparent.is-white:hover::after, .v-modal-close.is-transparent.is-white:focus::before, .v-modal-close.is-transparent.is-white:focus::after {\n      background-color: rgba(255, 255, 255, 0.8);\n}\n.v-modal-close.is-transparent.is-white:active::before, .v-modal-close.is-transparent.is-white:active::after {\n      background-color: white;\n}\n.v-modal-close.is-transparent.is-black::before, .v-modal-close.is-transparent.is-black::after {\n      background-color: rgba(10, 10, 10, 0.6);\n}\n.v-modal-close.is-transparent.is-black:hover::before, .v-modal-close.is-transparent.is-black:hover::after, .v-modal-close.is-transparent.is-black:focus::before, .v-modal-close.is-transparent.is-black:focus::after {\n      background-color: rgba(10, 10, 10, 0.8);\n}\n.v-modal-close.is-transparent.is-black:active::before, .v-modal-close.is-transparent.is-black:active::after {\n      background-color: #0a0a0a;\n}\n.v-modal-close.is-transparent.is-light::before, .v-modal-close.is-transparent.is-light::after {\n      background-color: rgba(245, 245, 245, 0.6);\n}\n.v-modal-close.is-transparent.is-light:hover::before, .v-modal-close.is-transparent.is-light:hover::after, .v-modal-close.is-transparent.is-light:focus::before, .v-modal-close.is-transparent.is-light:focus::after {\n      background-color: rgba(245, 245, 245, 0.8);\n}\n.v-modal-close.is-transparent.is-light:active::before, .v-modal-close.is-transparent.is-light:active::after {\n      background-color: whitesmoke;\n}\n.v-modal-close.is-transparent.is-dark::before, .v-modal-close.is-transparent.is-dark::after {\n      background-color: rgba(54, 54, 54, 0.6);\n}\n.v-modal-close.is-transparent.is-dark:hover::before, .v-modal-close.is-transparent.is-dark:hover::after, .v-modal-close.is-transparent.is-dark:focus::before, .v-modal-close.is-transparent.is-dark:focus::after {\n      background-color: rgba(54, 54, 54, 0.8);\n}\n.v-modal-close.is-transparent.is-dark:active::before, .v-modal-close.is-transparent.is-dark:active::after {\n      background-color: #363636;\n}\n.v-modal-close.is-transparent.is-primary::before, .v-modal-close.is-transparent.is-primary::after {\n      background-color: rgba(28, 160, 242, 0.6);\n}\n.v-modal-close.is-transparent.is-primary:hover::before, .v-modal-close.is-transparent.is-primary:hover::after, .v-modal-close.is-transparent.is-primary:focus::before, .v-modal-close.is-transparent.is-primary:focus::after {\n      background-color: rgba(28, 160, 242, 0.8);\n}\n.v-modal-close.is-transparent.is-primary:active::before, .v-modal-close.is-transparent.is-primary:active::after {\n      background-color: #1ca0f2;\n}\n.v-modal-close.is-transparent.is-info::before, .v-modal-close.is-transparent.is-info::after {\n      background-color: rgba(184, 107, 255, 0.6);\n}\n.v-modal-close.is-transparent.is-info:hover::before, .v-modal-close.is-transparent.is-info:hover::after, .v-modal-close.is-transparent.is-info:focus::before, .v-modal-close.is-transparent.is-info:focus::after {\n      background-color: rgba(184, 107, 255, 0.8);\n}\n.v-modal-close.is-transparent.is-info:active::before, .v-modal-close.is-transparent.is-info:active::after {\n      background-color: #b86bff;\n}\n.v-modal-close.is-transparent.is-success::before, .v-modal-close.is-transparent.is-success::after {\n      background-color: rgba(35, 209, 96, 0.6);\n}\n.v-modal-close.is-transparent.is-success:hover::before, .v-modal-close.is-transparent.is-success:hover::after, .v-modal-close.is-transparent.is-success:focus::before, .v-modal-close.is-transparent.is-success:focus::after {\n      background-color: rgba(35, 209, 96, 0.8);\n}\n.v-modal-close.is-transparent.is-success:active::before, .v-modal-close.is-transparent.is-success:active::after {\n      background-color: #23d160;\n}\n.v-modal-close.is-transparent.is-warning::before, .v-modal-close.is-transparent.is-warning::after {\n      background-color: rgba(255, 221, 87, 0.6);\n}\n.v-modal-close.is-transparent.is-warning:hover::before, .v-modal-close.is-transparent.is-warning:hover::after, .v-modal-close.is-transparent.is-warning:focus::before, .v-modal-close.is-transparent.is-warning:focus::after {\n      background-color: rgba(255, 221, 87, 0.8);\n}\n.v-modal-close.is-transparent.is-warning:active::before, .v-modal-close.is-transparent.is-warning:active::after {\n      background-color: #ffdd57;\n}\n.v-modal-close.is-transparent.is-danger::before, .v-modal-close.is-transparent.is-danger::after {\n      background-color: rgba(255, 56, 96, 0.6);\n}\n.v-modal-close.is-transparent.is-danger:hover::before, .v-modal-close.is-transparent.is-danger:hover::after, .v-modal-close.is-transparent.is-danger:focus::before, .v-modal-close.is-transparent.is-danger:focus::after {\n      background-color: rgba(255, 56, 96, 0.8);\n}\n.v-modal-close.is-transparent.is-danger:active::before, .v-modal-close.is-transparent.is-danger:active::after {\n      background-color: #ff3860;\n}\n.v-modal-card {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  max-height: calc(100vh - 40px);\n  overflow: hidden;\n}\n.v-modal-card-head,\n.v-modal-card-foot {\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  background-color: whitesmoke;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-negative: 0;\n      flex-shrink: 0;\n  -webkit-box-pack: start;\n      -ms-flex-pack: start;\n          justify-content: flex-start;\n  padding: 20px;\n  position: relative;\n}\n.v-modal-card-head {\n  border-bottom: 1px solid #dbdbdb;\n  border-top-left-radius: 5px;\n  border-top-right-radius: 5px;\n}\n.v-modal-card-title {\n  color: #363636;\n  -webkit-box-flex: 1;\n      -ms-flex-positive: 1;\n          flex-grow: 1;\n  -ms-flex-negative: 0;\n      flex-shrink: 0;\n  font-size: 1.5rem;\n  line-height: 1;\n}\n.v-modal-card-foot {\n  border-bottom-left-radius: 5px;\n  border-bottom-right-radius: 5px;\n  border-top: 1px solid #dbdbdb;\n}\n.v-modal-card-foot .v-btn:not(:last-child) {\n    margin-right: 10px;\n}\n.v-modal-card-body {\n  -webkit-overflow-scrolling: touch;\n  background-color: white;\n  -webkit-box-flex: 1;\n      -ms-flex-positive: 1;\n          flex-grow: 1;\n  -ms-flex-negative: 1;\n      flex-shrink: 1;\n  overflow: auto;\n  padding: 20px;\n}\n.v-dropdown {\n  display: -webkit-inline-box;\n  display: -ms-inline-flexbox;\n  display: inline-flex;\n  position: relative;\n  vertical-align: top;\n}\n.v-dropdown.is-active .v-dropdown-menu, .v-dropdown.is-hoverable:hover .v-dropdown-menu {\n    display: block;\n}\n.v-dropdown.is-right .v-dropdown-menu {\n    left: auto;\n    right: 0;\n}\n.v-dropdown.is-up .v-dropdown-menu {\n    bottom: 100%;\n    padding-bottom: 4px;\n    padding-top: unset;\n    top: auto;\n}\n.v-dropdown-menu {\n  display: none;\n  left: 0;\n  min-width: 12rem;\n  padding-top: 4px;\n  position: absolute;\n  top: 100%;\n  z-index: 20;\n}\n.v-dropdown-content {\n  background-color: white;\n  border-radius: 3px;\n  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);\n  padding-bottom: 0.5rem;\n  padding-top: 0.5rem;\n}\n.v-dropdown-item {\n  color: #4a4a4a;\n  display: block;\n  font-size: 0.875rem;\n  line-height: 1.5;\n  padding: 0.375rem 1rem;\n  position: relative;\n}\na.v-dropdown-item {\n  padding-right: 3rem;\n  white-space: nowrap;\n}\na.v-dropdown-item:hover {\n    background-color: whitesmoke;\n    color: #0a0a0a;\n}\na.v-dropdown-item.is-active {\n    background-color: #1ca0f2;\n    color: #fff;\n}\n.v-dropdown-divider {\n  background-color: #dbdbdb;\n  border: none;\n  display: block;\n  height: 1px;\n  margin: 0.5rem 0;\n}\n.v-sidebar {\n  font-size: 1rem;\n}\n.v-sidebar.is-small {\n    font-size: 0.75rem;\n}\n.v-sidebar.is-medium {\n    font-size: 1.25rem;\n}\n.v-sidebar.is-large {\n    font-size: 1.5rem;\n}\n.v-sidebar-list {\n  list-style: none;\n  margin: 0;\n  padding: 0;\n  margin: 0;\n  padding: 0;\n  line-height: 1.25;\n}\n.v-sidebar-list a {\n    border-radius: 2px;\n    color: #4a4a4a;\n    display: block;\n    padding: 0.5em 0.75em;\n}\n.v-sidebar-list a:hover {\n      background-color: whitesmoke;\n      color: #363636;\n}\n.v-sidebar-list a.is-active {\n      background-color: #1ca0f2;\n      color: #fff;\n}\n.v-sidebar-list li ul {\n    list-style: none;\n    margin: 0;\n    padding: 0;\n    border-left: 1px solid #dbdbdb;\n    margin: 0.75em;\n    padding-left: 0.75em;\n}\n.v-sidebar-label {\n  color: #7a7a7a;\n  font-size: 0.75em;\n  letter-spacing: 0.1em;\n  text-transform: uppercase;\n}\n.v-sidebar-label:not(:first-child) {\n    margin-top: 1em;\n}\n.v-sidebar-label:not(:last-child) {\n    margin-bottom: 1em;\n}\n.v-navbar {\n  background-color: white;\n  min-height: 3.25rem;\n  position: relative;\n}\n.v-navbar.is-white {\n    background-color: white;\n    color: #0a0a0a;\n}\n.v-navbar.is-white .v-navbar-brand > .v-navbar-item,\n    .v-navbar.is-white .v-navbar-brand .v-navbar-link {\n      color: #0a0a0a;\n}\n.v-navbar.is-white .v-navbar-brand > a.v-navbar-item:hover, .v-navbar.is-white .v-navbar-brand > a.v-navbar-item.is-active,\n    .v-navbar.is-white .v-navbar-brand .v-navbar-link:hover,\n    .v-navbar.is-white .v-navbar-brand .v-navbar-link.is-active {\n      background-color: #f2f2f2;\n      color: #0a0a0a;\n}\n.v-navbar.is-white .v-navbar-brand .v-navbar-link::after {\n      border-color: #0a0a0a;\n}\n.v-navbar.is-white .v-navbar-start > .v-navbar-item,\n    .v-navbar.is-white .v-navbar-start .v-navbar-link,\n    .v-navbar.is-white .v-navbar-end > .v-navbar-item,\n    .v-navbar.is-white .v-navbar-end .v-navbar-link {\n      color: #0a0a0a;\n}\n.v-navbar.is-white .v-navbar-start > a.v-navbar-item:hover, .v-navbar.is-white .v-navbar-start > a.v-navbar-item.is-active,\n    .v-navbar.is-white .v-navbar-start .v-navbar-link:hover,\n    .v-navbar.is-white .v-navbar-start .v-navbar-link.is-active,\n    .v-navbar.is-white .v-navbar-end > a.v-navbar-item:hover,\n    .v-navbar.is-white .v-navbar-end > a.v-navbar-item.is-active,\n    .v-navbar.is-white .v-navbar-end .v-navbar-link:hover,\n    .v-navbar.is-white .v-navbar-end .v-navbar-link.is-active {\n      background-color: #f2f2f2;\n      color: #0a0a0a;\n}\n.v-navbar.is-white .v-navbar-start .v-navbar-link::after,\n    .v-navbar.is-white .v-navbar-end .v-navbar-link::after {\n      border-color: #0a0a0a;\n}\n.v-navbar.is-white .v-navbar-item.has-dropdown:hover .v-navbar-link,\n    .v-navbar.is-white .v-navbar-item.has-dropdown.is-active .v-navbar-link {\n      background-color: #f2f2f2;\n      color: #0a0a0a;\n}\n.v-navbar.is-white .v-navbar-dropdown a.v-navbar-item.is-active {\n      background-color: white;\n      color: #0a0a0a;\n}\n.v-navbar.is-black {\n    background-color: #0a0a0a;\n    color: white;\n}\n.v-navbar.is-black .v-navbar-brand > .v-navbar-item,\n    .v-navbar.is-black .v-navbar-brand .v-navbar-link {\n      color: white;\n}\n.v-navbar.is-black .v-navbar-brand > a.v-navbar-item:hover, .v-navbar.is-black .v-navbar-brand > a.v-navbar-item.is-active,\n    .v-navbar.is-black .v-navbar-brand .v-navbar-link:hover,\n    .v-navbar.is-black .v-navbar-brand .v-navbar-link.is-active {\n      background-color: black;\n      color: white;\n}\n.v-navbar.is-black .v-navbar-brand .v-navbar-link::after {\n      border-color: white;\n}\n.v-navbar.is-black .v-navbar-start > .v-navbar-item,\n    .v-navbar.is-black .v-navbar-start .v-navbar-link,\n    .v-navbar.is-black .v-navbar-end > .v-navbar-item,\n    .v-navbar.is-black .v-navbar-end .v-navbar-link {\n      color: white;\n}\n.v-navbar.is-black .v-navbar-start > a.v-navbar-item:hover, .v-navbar.is-black .v-navbar-start > a.v-navbar-item.is-active,\n    .v-navbar.is-black .v-navbar-start .v-navbar-link:hover,\n    .v-navbar.is-black .v-navbar-start .v-navbar-link.is-active,\n    .v-navbar.is-black .v-navbar-end > a.v-navbar-item:hover,\n    .v-navbar.is-black .v-navbar-end > a.v-navbar-item.is-active,\n    .v-navbar.is-black .v-navbar-end .v-navbar-link:hover,\n    .v-navbar.is-black .v-navbar-end .v-navbar-link.is-active {\n      background-color: black;\n      color: white;\n}\n.v-navbar.is-black .v-navbar-start .v-navbar-link::after,\n    .v-navbar.is-black .v-navbar-end .v-navbar-link::after {\n      border-color: white;\n}\n.v-navbar.is-black .v-navbar-item.has-dropdown:hover .v-navbar-link,\n    .v-navbar.is-black .v-navbar-item.has-dropdown.is-active .v-navbar-link {\n      background-color: black;\n      color: white;\n}\n.v-navbar.is-black .v-navbar-dropdown a.v-navbar-item.is-active {\n      background-color: #0a0a0a;\n      color: white;\n}\n.v-navbar.is-light {\n    background-color: whitesmoke;\n    color: #363636;\n}\n.v-navbar.is-light .v-navbar-brand > .v-navbar-item,\n    .v-navbar.is-light .v-navbar-brand .v-navbar-link {\n      color: #363636;\n}\n.v-navbar.is-light .v-navbar-brand > a.v-navbar-item:hover, .v-navbar.is-light .v-navbar-brand > a.v-navbar-item.is-active,\n    .v-navbar.is-light .v-navbar-brand .v-navbar-link:hover,\n    .v-navbar.is-light .v-navbar-brand .v-navbar-link.is-active {\n      background-color: #e8e8e8;\n      color: #363636;\n}\n.v-navbar.is-light .v-navbar-brand .v-navbar-link::after {\n      border-color: #363636;\n}\n.v-navbar.is-light .v-navbar-start > .v-navbar-item,\n    .v-navbar.is-light .v-navbar-start .v-navbar-link,\n    .v-navbar.is-light .v-navbar-end > .v-navbar-item,\n    .v-navbar.is-light .v-navbar-end .v-navbar-link {\n      color: #363636;\n}\n.v-navbar.is-light .v-navbar-start > a.v-navbar-item:hover, .v-navbar.is-light .v-navbar-start > a.v-navbar-item.is-active,\n    .v-navbar.is-light .v-navbar-start .v-navbar-link:hover,\n    .v-navbar.is-light .v-navbar-start .v-navbar-link.is-active,\n    .v-navbar.is-light .v-navbar-end > a.v-navbar-item:hover,\n    .v-navbar.is-light .v-navbar-end > a.v-navbar-item.is-active,\n    .v-navbar.is-light .v-navbar-end .v-navbar-link:hover,\n    .v-navbar.is-light .v-navbar-end .v-navbar-link.is-active {\n      background-color: #e8e8e8;\n      color: #363636;\n}\n.v-navbar.is-light .v-navbar-start .v-navbar-link::after,\n    .v-navbar.is-light .v-navbar-end .v-navbar-link::after {\n      border-color: #363636;\n}\n.v-navbar.is-light .v-navbar-item.has-dropdown:hover .v-navbar-link,\n    .v-navbar.is-light .v-navbar-item.has-dropdown.is-active .v-navbar-link {\n      background-color: #e8e8e8;\n      color: #363636;\n}\n.v-navbar.is-light .v-navbar-dropdown a.v-navbar-item.is-active {\n      background-color: whitesmoke;\n      color: #363636;\n}\n.v-navbar.is-dark {\n    background-color: #363636;\n    color: whitesmoke;\n}\n.v-navbar.is-dark .v-navbar-brand > .v-navbar-item,\n    .v-navbar.is-dark .v-navbar-brand .v-navbar-link {\n      color: whitesmoke;\n}\n.v-navbar.is-dark .v-navbar-brand > a.v-navbar-item:hover, .v-navbar.is-dark .v-navbar-brand > a.v-navbar-item.is-active,\n    .v-navbar.is-dark .v-navbar-brand .v-navbar-link:hover,\n    .v-navbar.is-dark .v-navbar-brand .v-navbar-link.is-active {\n      background-color: #292929;\n      color: whitesmoke;\n}\n.v-navbar.is-dark .v-navbar-brand .v-navbar-link::after {\n      border-color: whitesmoke;\n}\n.v-navbar.is-dark .v-navbar-start > .v-navbar-item,\n    .v-navbar.is-dark .v-navbar-start .v-navbar-link,\n    .v-navbar.is-dark .v-navbar-end > .v-navbar-item,\n    .v-navbar.is-dark .v-navbar-end .v-navbar-link {\n      color: whitesmoke;\n}\n.v-navbar.is-dark .v-navbar-start > a.v-navbar-item:hover, .v-navbar.is-dark .v-navbar-start > a.v-navbar-item.is-active,\n    .v-navbar.is-dark .v-navbar-start .v-navbar-link:hover,\n    .v-navbar.is-dark .v-navbar-start .v-navbar-link.is-active,\n    .v-navbar.is-dark .v-navbar-end > a.v-navbar-item:hover,\n    .v-navbar.is-dark .v-navbar-end > a.v-navbar-item.is-active,\n    .v-navbar.is-dark .v-navbar-end .v-navbar-link:hover,\n    .v-navbar.is-dark .v-navbar-end .v-navbar-link.is-active {\n      background-color: #292929;\n      color: whitesmoke;\n}\n.v-navbar.is-dark .v-navbar-start .v-navbar-link::after,\n    .v-navbar.is-dark .v-navbar-end .v-navbar-link::after {\n      border-color: whitesmoke;\n}\n.v-navbar.is-dark .v-navbar-item.has-dropdown:hover .v-navbar-link,\n    .v-navbar.is-dark .v-navbar-item.has-dropdown.is-active .v-navbar-link {\n      background-color: #292929;\n      color: whitesmoke;\n}\n.v-navbar.is-dark .v-navbar-dropdown a.v-navbar-item.is-active {\n      background-color: #363636;\n      color: whitesmoke;\n}\n.v-navbar.is-primary {\n    background-color: #1ca0f2;\n    color: #fff;\n}\n.v-navbar.is-primary .v-navbar-brand > .v-navbar-item,\n    .v-navbar.is-primary .v-navbar-brand .v-navbar-link {\n      color: #fff;\n}\n.v-navbar.is-primary .v-navbar-brand > a.v-navbar-item:hover, .v-navbar.is-primary .v-navbar-brand > a.v-navbar-item.is-active,\n    .v-navbar.is-primary .v-navbar-brand .v-navbar-link:hover,\n    .v-navbar.is-primary .v-navbar-brand .v-navbar-link.is-active {\n      background-color: #0d94e7;\n      color: #fff;\n}\n.v-navbar.is-primary .v-navbar-brand .v-navbar-link::after {\n      border-color: #fff;\n}\n.v-navbar.is-primary .v-navbar-start > .v-navbar-item,\n    .v-navbar.is-primary .v-navbar-start .v-navbar-link,\n    .v-navbar.is-primary .v-navbar-end > .v-navbar-item,\n    .v-navbar.is-primary .v-navbar-end .v-navbar-link {\n      color: #fff;\n}\n.v-navbar.is-primary .v-navbar-start > a.v-navbar-item:hover, .v-navbar.is-primary .v-navbar-start > a.v-navbar-item.is-active,\n    .v-navbar.is-primary .v-navbar-start .v-navbar-link:hover,\n    .v-navbar.is-primary .v-navbar-start .v-navbar-link.is-active,\n    .v-navbar.is-primary .v-navbar-end > a.v-navbar-item:hover,\n    .v-navbar.is-primary .v-navbar-end > a.v-navbar-item.is-active,\n    .v-navbar.is-primary .v-navbar-end .v-navbar-link:hover,\n    .v-navbar.is-primary .v-navbar-end .v-navbar-link.is-active {\n      background-color: #0d94e7;\n      color: #fff;\n}\n.v-navbar.is-primary .v-navbar-start .v-navbar-link::after,\n    .v-navbar.is-primary .v-navbar-end .v-navbar-link::after {\n      border-color: #fff;\n}\n.v-navbar.is-primary .v-navbar-item.has-dropdown:hover .v-navbar-link,\n    .v-navbar.is-primary .v-navbar-item.has-dropdown.is-active .v-navbar-link {\n      background-color: #0d94e7;\n      color: #fff;\n}\n.v-navbar.is-primary .v-navbar-dropdown a.v-navbar-item.is-active {\n      background-color: #1ca0f2;\n      color: #fff;\n}\n.v-navbar.is-info {\n    background-color: #b86bff;\n    color: #fff;\n}\n.v-navbar.is-info .v-navbar-brand > .v-navbar-item,\n    .v-navbar.is-info .v-navbar-brand .v-navbar-link {\n      color: #fff;\n}\n.v-navbar.is-info .v-navbar-brand > a.v-navbar-item:hover, .v-navbar.is-info .v-navbar-brand > a.v-navbar-item.is-active,\n    .v-navbar.is-info .v-navbar-brand .v-navbar-link:hover,\n    .v-navbar.is-info .v-navbar-brand .v-navbar-link.is-active {\n      background-color: #ab52ff;\n      color: #fff;\n}\n.v-navbar.is-info .v-navbar-brand .v-navbar-link::after {\n      border-color: #fff;\n}\n.v-navbar.is-info .v-navbar-start > .v-navbar-item,\n    .v-navbar.is-info .v-navbar-start .v-navbar-link,\n    .v-navbar.is-info .v-navbar-end > .v-navbar-item,\n    .v-navbar.is-info .v-navbar-end .v-navbar-link {\n      color: #fff;\n}\n.v-navbar.is-info .v-navbar-start > a.v-navbar-item:hover, .v-navbar.is-info .v-navbar-start > a.v-navbar-item.is-active,\n    .v-navbar.is-info .v-navbar-start .v-navbar-link:hover,\n    .v-navbar.is-info .v-navbar-start .v-navbar-link.is-active,\n    .v-navbar.is-info .v-navbar-end > a.v-navbar-item:hover,\n    .v-navbar.is-info .v-navbar-end > a.v-navbar-item.is-active,\n    .v-navbar.is-info .v-navbar-end .v-navbar-link:hover,\n    .v-navbar.is-info .v-navbar-end .v-navbar-link.is-active {\n      background-color: #ab52ff;\n      color: #fff;\n}\n.v-navbar.is-info .v-navbar-start .v-navbar-link::after,\n    .v-navbar.is-info .v-navbar-end .v-navbar-link::after {\n      border-color: #fff;\n}\n.v-navbar.is-info .v-navbar-item.has-dropdown:hover .v-navbar-link,\n    .v-navbar.is-info .v-navbar-item.has-dropdown.is-active .v-navbar-link {\n      background-color: #ab52ff;\n      color: #fff;\n}\n.v-navbar.is-info .v-navbar-dropdown a.v-navbar-item.is-active {\n      background-color: #b86bff;\n      color: #fff;\n}\n.v-navbar.is-success {\n    background-color: #23d160;\n    color: #fff;\n}\n.v-navbar.is-success .v-navbar-brand > .v-navbar-item,\n    .v-navbar.is-success .v-navbar-brand .v-navbar-link {\n      color: #fff;\n}\n.v-navbar.is-success .v-navbar-brand > a.v-navbar-item:hover, .v-navbar.is-success .v-navbar-brand > a.v-navbar-item.is-active,\n    .v-navbar.is-success .v-navbar-brand .v-navbar-link:hover,\n    .v-navbar.is-success .v-navbar-brand .v-navbar-link.is-active {\n      background-color: #20bc56;\n      color: #fff;\n}\n.v-navbar.is-success .v-navbar-brand .v-navbar-link::after {\n      border-color: #fff;\n}\n.v-navbar.is-success .v-navbar-start > .v-navbar-item,\n    .v-navbar.is-success .v-navbar-start .v-navbar-link,\n    .v-navbar.is-success .v-navbar-end > .v-navbar-item,\n    .v-navbar.is-success .v-navbar-end .v-navbar-link {\n      color: #fff;\n}\n.v-navbar.is-success .v-navbar-start > a.v-navbar-item:hover, .v-navbar.is-success .v-navbar-start > a.v-navbar-item.is-active,\n    .v-navbar.is-success .v-navbar-start .v-navbar-link:hover,\n    .v-navbar.is-success .v-navbar-start .v-navbar-link.is-active,\n    .v-navbar.is-success .v-navbar-end > a.v-navbar-item:hover,\n    .v-navbar.is-success .v-navbar-end > a.v-navbar-item.is-active,\n    .v-navbar.is-success .v-navbar-end .v-navbar-link:hover,\n    .v-navbar.is-success .v-navbar-end .v-navbar-link.is-active {\n      background-color: #20bc56;\n      color: #fff;\n}\n.v-navbar.is-success .v-navbar-start .v-navbar-link::after,\n    .v-navbar.is-success .v-navbar-end .v-navbar-link::after {\n      border-color: #fff;\n}\n.v-navbar.is-success .v-navbar-item.has-dropdown:hover .v-navbar-link,\n    .v-navbar.is-success .v-navbar-item.has-dropdown.is-active .v-navbar-link {\n      background-color: #20bc56;\n      color: #fff;\n}\n.v-navbar.is-success .v-navbar-dropdown a.v-navbar-item.is-active {\n      background-color: #23d160;\n      color: #fff;\n}\n.v-navbar.is-warning {\n    background-color: #ffdd57;\n    color: rgba(0, 0, 0, 0.7);\n}\n.v-navbar.is-warning .v-navbar-brand > .v-navbar-item,\n    .v-navbar.is-warning .v-navbar-brand .v-navbar-link {\n      color: rgba(0, 0, 0, 0.7);\n}\n.v-navbar.is-warning .v-navbar-brand > a.v-navbar-item:hover, .v-navbar.is-warning .v-navbar-brand > a.v-navbar-item.is-active,\n    .v-navbar.is-warning .v-navbar-brand .v-navbar-link:hover,\n    .v-navbar.is-warning .v-navbar-brand .v-navbar-link.is-active {\n      background-color: #ffd83d;\n      color: rgba(0, 0, 0, 0.7);\n}\n.v-navbar.is-warning .v-navbar-brand .v-navbar-link::after {\n      border-color: rgba(0, 0, 0, 0.7);\n}\n.v-navbar.is-warning .v-navbar-start > .v-navbar-item,\n    .v-navbar.is-warning .v-navbar-start .v-navbar-link,\n    .v-navbar.is-warning .v-navbar-end > .v-navbar-item,\n    .v-navbar.is-warning .v-navbar-end .v-navbar-link {\n      color: rgba(0, 0, 0, 0.7);\n}\n.v-navbar.is-warning .v-navbar-start > a.v-navbar-item:hover, .v-navbar.is-warning .v-navbar-start > a.v-navbar-item.is-active,\n    .v-navbar.is-warning .v-navbar-start .v-navbar-link:hover,\n    .v-navbar.is-warning .v-navbar-start .v-navbar-link.is-active,\n    .v-navbar.is-warning .v-navbar-end > a.v-navbar-item:hover,\n    .v-navbar.is-warning .v-navbar-end > a.v-navbar-item.is-active,\n    .v-navbar.is-warning .v-navbar-end .v-navbar-link:hover,\n    .v-navbar.is-warning .v-navbar-end .v-navbar-link.is-active {\n      background-color: #ffd83d;\n      color: rgba(0, 0, 0, 0.7);\n}\n.v-navbar.is-warning .v-navbar-start .v-navbar-link::after,\n    .v-navbar.is-warning .v-navbar-end .v-navbar-link::after {\n      border-color: rgba(0, 0, 0, 0.7);\n}\n.v-navbar.is-warning .v-navbar-item.has-dropdown:hover .v-navbar-link,\n    .v-navbar.is-warning .v-navbar-item.has-dropdown.is-active .v-navbar-link {\n      background-color: #ffd83d;\n      color: rgba(0, 0, 0, 0.7);\n}\n.v-navbar.is-warning .v-navbar-dropdown a.v-navbar-item.is-active {\n      background-color: #ffdd57;\n      color: rgba(0, 0, 0, 0.7);\n}\n.v-navbar.is-danger {\n    background-color: #ff3860;\n    color: #fff;\n}\n.v-navbar.is-danger .v-navbar-brand > .v-navbar-item,\n    .v-navbar.is-danger .v-navbar-brand .v-navbar-link {\n      color: #fff;\n}\n.v-navbar.is-danger .v-navbar-brand > a.v-navbar-item:hover, .v-navbar.is-danger .v-navbar-brand > a.v-navbar-item.is-active,\n    .v-navbar.is-danger .v-navbar-brand .v-navbar-link:hover,\n    .v-navbar.is-danger .v-navbar-brand .v-navbar-link.is-active {\n      background-color: #ff1f4b;\n      color: #fff;\n}\n.v-navbar.is-danger .v-navbar-brand .v-navbar-link::after {\n      border-color: #fff;\n}\n.v-navbar.is-danger .v-navbar-start > .v-navbar-item,\n    .v-navbar.is-danger .v-navbar-start .v-navbar-link,\n    .v-navbar.is-danger .v-navbar-end > .v-navbar-item,\n    .v-navbar.is-danger .v-navbar-end .v-navbar-link {\n      color: #fff;\n}\n.v-navbar.is-danger .v-navbar-start > a.v-navbar-item:hover, .v-navbar.is-danger .v-navbar-start > a.v-navbar-item.is-active,\n    .v-navbar.is-danger .v-navbar-start .v-navbar-link:hover,\n    .v-navbar.is-danger .v-navbar-start .v-navbar-link.is-active,\n    .v-navbar.is-danger .v-navbar-end > a.v-navbar-item:hover,\n    .v-navbar.is-danger .v-navbar-end > a.v-navbar-item.is-active,\n    .v-navbar.is-danger .v-navbar-end .v-navbar-link:hover,\n    .v-navbar.is-danger .v-navbar-end .v-navbar-link.is-active {\n      background-color: #ff1f4b;\n      color: #fff;\n}\n.v-navbar.is-danger .v-navbar-start .v-navbar-link::after,\n    .v-navbar.is-danger .v-navbar-end .v-navbar-link::after {\n      border-color: #fff;\n}\n.v-navbar.is-danger .v-navbar-item.has-dropdown:hover .v-navbar-link,\n    .v-navbar.is-danger .v-navbar-item.has-dropdown.is-active .v-navbar-link {\n      background-color: #ff1f4b;\n      color: #fff;\n}\n.v-navbar.is-danger .v-navbar-dropdown a.v-navbar-item.is-active {\n      background-color: #ff3860;\n      color: #fff;\n}\n.v-navbar > .container {\n    -webkit-box-align: stretch;\n        -ms-flex-align: stretch;\n            align-items: stretch;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    min-height: 3.25rem;\n    width: 100%;\n}\n.v-navbar.has-shadow {\n    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1);\n}\n.v-navbar-item {\n  -webkit-box-flex: 0;\n      -ms-flex-positive: 0;\n          flex-grow: 0;\n  -ms-flex-negative: 0;\n      flex-shrink: 0;\n}\n.v-navbar-item img {\n    max-height: 1.75rem;\n}\n.v-navbar-item.has-dropdown {\n    padding: 0;\n}\n.v-navbar-item.is-tab {\n    border-bottom: 1px solid transparent;\n    min-height: 3.25rem;\n    padding-bottom: calc(0.5em - 1px);\n}\n.v-navbar-item.is-tab:hover {\n      background-color: transparent;\n      border-bottom-color: #1ca0f2;\n}\n.v-navbar-item.is-tab.is-active {\n      background-color: transparent;\n      border-bottom-color: #1ca0f2;\n      border-bottom-style: solid;\n      border-bottom-width: 3px;\n      color: #1ca0f2;\n      padding-bottom: calc(0.5em - 3px);\n}\n.v-navbar-item,\n.v-navbar-link {\n  color: #4a4a4a;\n  display: block;\n  line-height: 1.5;\n  padding: 0.5rem 1rem;\n  position: relative;\n}\na.v-navbar-item:hover, a.v-navbar-item.is-active,\n.v-navbar-link:hover,\n.v-navbar-link.is-active {\n  background-color: whitesmoke;\n  color: #0a0a0a;\n}\n.v-navbar-brand,\n.v-navbar-tabs {\n  -webkit-box-align: stretch;\n      -ms-flex-align: stretch;\n          align-items: stretch;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-negative: 0;\n      flex-shrink: 0;\n  min-height: 3.25rem;\n}\n.v-navbar,\n.v-navbar-menu,\n.v-navbar-start,\n.v-navbar-end {\n  -webkit-box-align: stretch;\n      -ms-flex-align: stretch;\n          align-items: stretch;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n}\n.v-navbar {\n  min-height: 3.25rem;\n}\n.v-navbar.is-transparent a.v-navbar-item:hover, .v-navbar.is-transparent a.v-navbar-item.is-active,\n  .v-navbar.is-transparent .v-navbar-link:hover,\n  .v-navbar.is-transparent .v-navbar-link.is-active {\n    background-color: transparent;\n}\n.v-navbar.is-transparent .v-navbar-item.has-dropdown.is-active .v-navbar-link, .v-navbar.is-transparent .v-navbar-item.has-dropdown.is-hoverable:hover .v-navbar-link {\n    background-color: transparent;\n}\n.v-navbar.is-transparent .v-navbar-dropdown a.v-navbar-item:hover {\n    background-color: whitesmoke;\n    color: #0a0a0a;\n}\n.v-navbar.is-transparent .v-navbar-dropdown a.v-navbar-item.is-active {\n    background-color: whitesmoke;\n    color: #1ca0f2;\n}\n.v-navbar-item,\n.v-navbar-link {\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n}\n.v-navbar-item.has-dropdown {\n  -webkit-box-align: stretch;\n      -ms-flex-align: stretch;\n          align-items: stretch;\n}\n.v-navbar-item.is-active .v-navbar-dropdown, .v-navbar-item.is-hoverable:hover .v-navbar-dropdown {\n  display: block;\n}\n.v-navbar-item.is-active .v-navbar-dropdown.is-boxed, .v-navbar-item.is-hoverable:hover .v-navbar-dropdown.is-boxed {\n    opacity: 1;\n    pointer-events: auto;\n    -webkit-transform: translateY(0);\n            transform: translateY(0);\n}\n.v-navbar-menu {\n  -webkit-box-flex: 1;\n      -ms-flex-positive: 1;\n          flex-grow: 1;\n  -ms-flex-negative: 0;\n      flex-shrink: 0;\n}\n.v-navbar-start {\n  -webkit-box-pack: start;\n      -ms-flex-pack: start;\n          justify-content: flex-start;\n  margin-right: auto;\n}\n.v-navbar-end {\n  -webkit-box-pack: end;\n      -ms-flex-pack: end;\n          justify-content: flex-end;\n  margin-left: auto;\n}\n.v-message {\n  background-color: whitesmoke;\n  border-radius: 3px;\n  font-size: 1rem;\n}\n.v-message:not(:last-child) {\n    margin-bottom: 1.5rem;\n}\n.v-message strong {\n    color: currentColor;\n}\n.v-message a:not(.button):not(.tag) {\n    color: currentColor;\n    text-decoration: underline;\n}\n.v-message.is-small {\n    font-size: 0.75rem;\n}\n.v-message.is-medium {\n    font-size: 1.25rem;\n}\n.v-message.is-large {\n    font-size: 1.5rem;\n}\n.v-message.is-white {\n    background-color: white;\n}\n.v-message.is-white .v-message-header {\n      background-color: white;\n      color: #0a0a0a;\n}\n.v-message.is-white .v-message-body {\n      border-color: white;\n      color: #4d4d4d;\n}\n.v-message.is-black {\n    background-color: #fafafa;\n}\n.v-message.is-black .v-message-header {\n      background-color: #0a0a0a;\n      color: white;\n}\n.v-message.is-black .v-message-body {\n      border-color: #0a0a0a;\n      color: #090909;\n}\n.v-message.is-light {\n    background-color: #fafafa;\n}\n.v-message.is-light .v-message-header {\n      background-color: whitesmoke;\n      color: #363636;\n}\n.v-message.is-light .v-message-body {\n      border-color: whitesmoke;\n      color: #505050;\n}\n.v-message.is-dark {\n    background-color: #fafafa;\n}\n.v-message.is-dark .v-message-header {\n      background-color: #363636;\n      color: whitesmoke;\n}\n.v-message.is-dark .v-message-body {\n      border-color: #363636;\n      color: #2a2a2a;\n}\n.v-message.is-primary {\n    background-color: #f5fbfe;\n}\n.v-message.is-primary .v-message-header {\n      background-color: #1ca0f2;\n      color: #fff;\n}\n.v-message.is-primary .v-message-body {\n      border-color: #1ca0f2;\n      color: #0f527b;\n}\n.v-message.is-info {\n    background-color: #faf5ff;\n}\n.v-message.is-info .v-message-header {\n      background-color: #b86bff;\n      color: #fff;\n}\n.v-message.is-info .v-message-body {\n      border-color: #b86bff;\n      color: #7d0ce8;\n}\n.v-message.is-success {\n    background-color: #f6fef9;\n}\n.v-message.is-success .v-message-header {\n      background-color: #23d160;\n      color: #fff;\n}\n.v-message.is-success .v-message-body {\n      border-color: #23d160;\n      color: #0e301a;\n}\n.v-message.is-warning {\n    background-color: #fffdf5;\n}\n.v-message.is-warning .v-message-header {\n      background-color: #ffdd57;\n      color: rgba(0, 0, 0, 0.7);\n}\n.v-message.is-warning .v-message-body {\n      border-color: #ffdd57;\n      color: #3b3108;\n}\n.v-message.is-danger {\n    background-color: #fff5f7;\n}\n.v-message.is-danger .v-message-header {\n      background-color: #ff3860;\n      color: #fff;\n}\n.v-message.is-danger .v-message-body {\n      border-color: #ff3860;\n      color: #cd0930;\n}\n.v-message-header {\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  background-color: #4a4a4a;\n  border-radius: 3px 3px 0 0;\n  color: #fff;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  line-height: 1.25;\n  padding: 0.5em 0.75em;\n  position: relative;\n}\n.v-message-header .v-close {\n    -webkit-box-flex: 0;\n        -ms-flex-positive: 0;\n            flex-grow: 0;\n    -ms-flex-negative: 0;\n        flex-shrink: 0;\n    margin-left: 0.75em;\n}\n.v-message-header + .v-message-body {\n    border-top-left-radius: 0;\n    border-top-right-radius: 0;\n    border-top: none;\n}\n.v-message-body {\n  border: 1px solid #dbdbdb;\n  border-radius: 3px;\n  color: #4a4a4a;\n  padding: 1em 1.25em;\n}\n.v-message-body code,\n  .v-message-body pre {\n    background-color: white;\n}\n.v-message-body pre code {\n    background-color: transparent;\n}\n.v-message-popup {\n  position: fixed;\n  top: 1em;\n  z-index: 2010;\n  border-radius: 3px;\n  width: 100%;\n  left: 0;\n  right: 0;\n  background: transparent;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  padding: 0 5vw;\n}\n.v-message-popup > .v-message {\n    box-shadow: 1px 1px 10px #aaa;\n}\n.v-message-popup .v-message-body {\n    padding: 0.5em 1em;\n}\n.v-tabs {\n  -webkit-overflow-scrolling: touch;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  -webkit-box-align: stretch;\n      -ms-flex-align: stretch;\n          align-items: stretch;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  font-size: 1rem;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  overflow: hidden;\n  overflow-x: auto;\n  white-space: nowrap;\n}\n.v-tabs:not(:last-child) {\n    margin-bottom: 1.5rem;\n}\n.v-tabs a {\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    border-bottom-color: #dbdbdb;\n    border-bottom-style: solid;\n    border-bottom-width: 1px;\n    color: #4a4a4a;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    margin-bottom: -1px;\n    padding: 0.5em 1em;\n    vertical-align: top;\n}\n.v-tabs a:hover {\n      border-bottom-color: #363636;\n      color: #363636;\n}\n.v-tabs li {\n    display: block;\n}\n.v-tabs li.is-active a {\n      border-bottom-color: #1ca0f2;\n      color: #1ca0f2;\n}\n.v-tabs ul {\n    list-style: none;\n    margin: 0;\n    padding: 0;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    border-bottom-color: #dbdbdb;\n    border-bottom-style: solid;\n    border-bottom-width: 1px;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-flex: 1;\n        -ms-flex-positive: 1;\n            flex-grow: 1;\n    -ms-flex-negative: 0;\n        flex-shrink: 0;\n    -webkit-box-pack: start;\n        -ms-flex-pack: start;\n            justify-content: flex-start;\n}\n.v-tabs ul.is-left {\n      padding-right: 0.75em;\n}\n.v-tabs ul.is-center {\n      -webkit-box-flex: 0;\n          -ms-flex: none;\n              flex: none;\n      -webkit-box-pack: center;\n          -ms-flex-pack: center;\n              justify-content: center;\n      padding-left: 0.75em;\n      padding-right: 0.75em;\n}\n.v-tabs ul.is-right {\n      -webkit-box-pack: end;\n          -ms-flex-pack: end;\n              justify-content: flex-end;\n      padding-left: 0.75em;\n}\n.v-tabs .has-icon:first-child {\n    margin-right: 0.5em;\n}\n.v-tabs .has-icon:last-child {\n    margin-left: 0.5em;\n}\n.v-tabs.is-centered ul {\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n}\n.v-tabs.is-right ul {\n    -webkit-box-pack: end;\n        -ms-flex-pack: end;\n            justify-content: flex-end;\n}\n.v-tabs.is-boxed a {\n    border: 1px solid transparent;\n    border-radius: 3px 3px 0 0;\n}\n.v-tabs.is-boxed a:hover {\n      background-color: whitesmoke;\n      border-bottom-color: #dbdbdb;\n}\n.v-tabs.is-boxed li.is-active a {\n    background-color: white;\n    border-color: #dbdbdb;\n    border-bottom-color: transparent !important;\n}\n.v-tabs.is-fullwidth li {\n    -webkit-box-flex: 1;\n        -ms-flex-positive: 1;\n            flex-grow: 1;\n    -ms-flex-negative: 0;\n        flex-shrink: 0;\n}\n.v-tabs.is-toggle a {\n    border-color: #dbdbdb;\n    border-style: solid;\n    border-width: 1px;\n    margin-bottom: 0;\n    position: relative;\n}\n.v-tabs.is-toggle a:hover {\n      background-color: whitesmoke;\n      border-color: #b5b5b5;\n      z-index: 2;\n}\n.v-tabs.is-toggle li + li {\n    margin-left: -1px;\n}\n.v-tabs.is-toggle li:first-child a {\n    border-radius: 3px 0 0 3px;\n}\n.v-tabs.is-toggle li:last-child a {\n    border-radius: 0 3px 3px 0;\n}\n.v-tabs.is-toggle li.is-active a {\n    background-color: #1ca0f2;\n    border-color: #1ca0f2;\n    color: #fff;\n    z-index: 1;\n}\n.v-tabs.is-toggle ul {\n    border-bottom: none;\n}\n.v-tabs.is-small {\n    font-size: 0.75rem;\n}\n.v-tabs.is-medium {\n    font-size: 1.25rem;\n}\n.v-tabs.is-large {\n    font-size: 1.5rem;\n}\n.v-breadcrumb {\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  -webkit-box-align: stretch;\n      -ms-flex-align: stretch;\n          align-items: stretch;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  font-size: 1rem;\n  overflow: hidden;\n  overflow-x: auto;\n  white-space: nowrap;\n}\n.v-breadcrumb:not(:last-child) {\n    margin-bottom: 1.5rem;\n}\n.v-breadcrumb a {\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    color: #7a7a7a;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    text-decoration: none;\n    padding: 0.5em 0.75em;\n}\n.v-breadcrumb a:hover {\n      color: #363636;\n}\n.v-breadcrumb li {\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n}\n.v-breadcrumb li:first-child a {\n      padding-left: 0;\n}\n.v-breadcrumb li.is-active a {\n      color: #363636;\n      cursor: default;\n      pointer-events: none;\n}\n.v-breadcrumb li + li::before {\n      color: #4a4a4a;\n      content: \"/\";\n}\n.v-breadcrumb ul, .v-breadcrumb ol {\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-flex: 1;\n        -ms-flex-positive: 1;\n            flex-grow: 1;\n    -ms-flex-negative: 0;\n        flex-shrink: 0;\n    -webkit-box-pack: start;\n        -ms-flex-pack: start;\n            justify-content: flex-start;\n}\n.v-breadcrumb .has-icon:first-child {\n    margin-right: 0.5em;\n}\n.v-breadcrumb .has-icon:last-child {\n    margin-left: 0.5em;\n}\n.v-breadcrumb.is-centered ol, .v-breadcrumb.is-centered ul {\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n}\n.v-breadcrumb.is-right ol, .v-breadcrumb.is-right ul {\n    -webkit-box-pack: end;\n        -ms-flex-pack: end;\n            justify-content: flex-end;\n}\n.v-breadcrumb.is-small {\n    font-size: 0.75rem;\n}\n.v-breadcrumb.is-medium {\n    font-size: 1.25rem;\n}\n.v-breadcrumb.is-large {\n    font-size: 1.5rem;\n}\n.v-breadcrumb.has-arrow-separator li + li::before {\n    content: \"→\";\n}\n.v-breadcrumb.has-bullet-separator li + li::before {\n    content: \"•\";\n}\n.v-breadcrumb.has-dot-separator li + li::before {\n    content: \"·\";\n}\n.v-breadcrumb.has-succeeds-separator li + li::before {\n    content: \"≻\";\n}\n.sav-tooltip {\n  position: fixed;\n  line-height: 1.2;\n  font-size: 14px;\n  padding: 0.5rem;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  box-sizing: border-box;\n  z-index: 10001;\n  top: 0;\n  left: 0;\n  max-width: 250px;\n  color: #4c4c4c;\n  background-color: #ffdd0a;\n  border: 1px solid #d0b300;\n  border-radius: 3px;\n  pointer-events: none;\n  transition: none;\n  display: none;\n  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);\n}\n.v-popover {\n  display: block;\n  visibility: visible;\n  font-size: 12px;\n  line-height: 1.5;\n  position: absolute;\n  z-index: 1060;\n  min-width: 150px;\n}\n.v-popover .has-arrow, .v-popover .has-arrow:after {\n    display: block;\n    width: 0;\n    height: 0;\n    position: absolute;\n    border-width: 6px;\n    border-color: transparent;\n    border-style: solid;\n}\n.v-popover .has-arrow:after {\n      content: \" \";\n      border-width: 5px;\n}\n.v-popover[x-placement^=\"top\"] {\n    padding: 5px 0 8px;\n}\n.v-popover[x-placement^=\"top\"] .has-arrow, .v-popover[x-placement^=\"top\"] .has-arrow:after {\n      left: 50%;\n      margin-left: -5px;\n      bottom: 3px;\n      border-width: 5px 5px 0;\n      border-top-color: #ffffff;\n}\n.v-popover[x-placement^=\"top\"] .has-arrow:after {\n        content: \" \";\n        bottom: 1px;\n        margin-left: -5px;\n        border-bottom-width: 0;\n        border-top-color: #ffffff;\n}\n.v-popover[x-placement^=\"right\"] {\n    padding: 0 5px 0 8px;\n}\n.v-popover[x-placement^=\"right\"] .has-arrow, .v-popover[x-placement^=\"right\"] .has-arrow:after {\n      display: none;\n      top: 50%;\n      margin-top: -5px;\n      left: 3px;\n      border-width: 5px 5px 5px 0;\n      border-right-color: #d6d7d8;\n}\n.v-popover[x-placement^=\"right\"] .has-arrow:after {\n        content: \" \";\n        left: 1px;\n        bottom: -5px;\n        border-left-width: 0;\n        border-right-color: white;\n}\n.v-popover[x-placement^=\"bottom\"] {\n    padding: 8px 0 5px;\n}\n.v-popover[x-placement^=\"bottom\"] .has-arrow, .v-popover[x-placement^=\"bottom\"] .has-arrow:after {\n      left: 50%;\n      margin-left: -5px;\n      top: 3px;\n      border-width: 0 5px 5px;\n      border-bottom-color: #d6d7d8;\n}\n.v-popover[x-placement^=\"bottom\"] .has-arrow:after {\n        content: \" \";\n        top: 1px;\n        margin-left: -5px;\n        border-top-width: 0;\n        border-bottom-color: #ffffff;\n}\n.v-popover[x-placement^=\"left\"] {\n    padding: 0 8px 0 5px;\n}\n.v-popover[x-placement^=\"left\"] .has-arrow, .v-popover[x-placement^=\"left\"] .has-arrow:after {\n      top: 0px;\n      margin-top: -5px;\n      right: 3px;\n      border-width: 5px 0 5px 5px;\n      border-left-color: #d6d7d8;\n}\n.v-popover[x-placement^=\"left\"] .has-arrow:after {\n        content: \" \";\n        right: 1px;\n        border-right-width: 0;\n        border-left-color: #ffffff;\n        bottom: -5px;\n}\n.v-popover-inner {\n  width: 100%;\n  background-color: white;\n  background-clip: padding-box;\n  border-radius: 2px;\n  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);\n  white-space: nowrap;\n  border: 1px solid #d6d7d8;\n}\n.v-popover-inner .has-title {\n    padding: 10px 0.5rem 5px 0.5rem;\n    position: relative;\n    font-size: 14px;\n    font-weight: bold;\n    display: block;\n    line-height: 1em;\n    background-color: #ffffff;\n}\n.v-popover-inner .has-title:after {\n      content: \"\";\n      display: none;\n      height: 1px;\n      position: absolute;\n      left: 0;\n      right: 0;\n      bottom: 0;\n      background-color: #e9eaec;\n}\n.v-popover-body {\n  padding: 0 0.5rem 0.5rem 0.5rem;\n}\n.v-popover-body .has-content {\n    word-break: break-all;\n    white-space: normal;\n    overflow: auto;\n    color: #495060;\n}\n.popover-fade-enter-active {\n  -webkit-animation: v-kf-fade-in .5s;\n          animation: v-kf-fade-in .5s;\n}\n.popover-fade-leave-active {\n  -webkit-animation: v-kf-fade-out .2s;\n          animation: v-kf-fade-out .2s;\n}\n.demo-box {\n  padding: 25px 0;\n}\n.demo-box.has-pad-sm {\n    padding: 5px 0;\n}\n.demo-box a, .demo-box button, .demo-box input {\n    font-weight: inherit;\n    color: inherit;\n}\n.demo-box.sd-with-icon-bg .has-icon {\n    background-color: whitesmoke;\n}\n.demo-box .has-icon.is-medium .iconfont {\n    font-size: 1.5rem;\n}\n.demo-box .has-icon.is-large .iconfont {\n    font-size: 2.5rem;\n}\n.demo-box.sd-form-example-cnt {\n    padding: 30px 25px !important;\n    width: 95%;\n    border: 1px solid #eeeeee;\n    border-radius: 4px;\n    position: relative;\n    margin: 40px 0;\n}\n.demo-box.sd-form-example-cnt:after {\n      content: \"Form Example\";\n      position: absolute;\n      top: -10px;\n      left: 15px;\n      background-color: #f9da00;\n      color: #393f48;\n      font-size: 12px;\n      line-height: 1em;\n      padding: 4px 5px;\n      border-radius: 2px;\n}\np.v-help {\n  line-height: normal;\n  font-size: 0.75rem;\n  margin-top: 0.25rem;\n}\np.v-control {\n  margin: 0;\n}\np.v-modal-card-title {\n  margin: 0;\n}\n.markdown-section figure, .markdown-section p, .markdown-section ul, .markdown-section ol {\n  margin: 0.5em 0;\n}\n.markdown-section ul, .markdown-section ol {\n  padding-left: 1rem;\n}\n.sd-loading {\n  font-size: 2rem;\n  -webkit-animation: v-kf-spin-around 500ms infinite linear;\n          animation: v-kf-spin-around 500ms infinite linear;\n  border: 2px solid #dbdbdb;\n  border-radius: 290486px;\n  border-right-color: transparent;\n  border-top-color: transparent;\n  content: \"\";\n  display: block;\n  box-sizing: border-box;\n  height: 1em;\n  width: 1em;\n  position: relative;\n}\n.__too-long-hl-code {\n  max-height: 180px;\n  overflow: scroll;\n  opacity: .6;\n  cursor: pointer;\n  position: relative;\n  transition: opacity .5s;\n}\n.__too-long-hl-code:after {\n    content: \"点击展开\";\n}\n.__too-long-hl-code:hover {\n    opacity: 1;\n}\n"],"sourceRoot":"webpack://"}]);
+exports.push([module.i, "\n@charset \"UTF-8\";\n@-webkit-keyframes v-kf-spin-around {\nfrom {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n}\nto {\n    -webkit-transform: rotate(359deg);\n            transform: rotate(359deg);\n}\n}\n@keyframes v-kf-spin-around {\nfrom {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n}\nto {\n    -webkit-transform: rotate(359deg);\n            transform: rotate(359deg);\n}\n}\n@-webkit-keyframes v-kf-fade-in {\nfrom {\n    opacity: 0;\n}\nto {\n    opacity: 1;\n}\n}\n@keyframes v-kf-fade-in {\nfrom {\n    opacity: 0;\n}\nto {\n    opacity: 1;\n}\n}\n@-webkit-keyframes v-kf-fade-out {\nfrom {\n    opacity: 1;\n}\nto {\n    opacity: 0;\n}\n}\n@keyframes v-kf-fade-out {\nfrom {\n    opacity: 1;\n}\nto {\n    opacity: 0;\n}\n}\n@-webkit-keyframes v-kf-fade-in-down {\nfrom {\n    opacity: 0;\n    -webkit-transform: translate3d(0, -100%, 0);\n            transform: translate3d(0, -100%, 0);\n}\nto {\n    opacity: 1;\n    -webkit-transform: none;\n            transform: none;\n}\n}\n@keyframes v-kf-fade-in-down {\nfrom {\n    opacity: 0;\n    -webkit-transform: translate3d(0, -100%, 0);\n            transform: translate3d(0, -100%, 0);\n}\nto {\n    opacity: 1;\n    -webkit-transform: none;\n            transform: none;\n}\n}\n@-webkit-keyframes v-kf-fade-out-down {\nfrom {\n    opacity: 1;\n}\nto {\n    opacity: 0;\n    -webkit-transform: translate3d(0, 100%, 0);\n            transform: translate3d(0, 100%, 0);\n}\n}\n@keyframes v-kf-fade-out-down {\nfrom {\n    opacity: 1;\n}\nto {\n    opacity: 0;\n    -webkit-transform: translate3d(0, 100%, 0);\n            transform: translate3d(0, 100%, 0);\n}\n}\n.v-container {\n  margin: 0 auto;\n  position: relative;\n}\n.v-cols {\n  margin-left: -0.5rem;\n  margin-right: -0.5rem;\n  margin-top: -0.5rem;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n}\n.v-cols:last-child {\n    margin-bottom: -0.5rem;\n}\n.v-cols:not(:last-child) {\n    margin-bottom: calc(1rem - 0.5rem);\n}\n.v-cols.is-centered {\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n}\n.v-cols.is-gapless {\n    margin-left: 0;\n    margin-right: 0;\n    margin-top: 0;\n}\n.v-cols.is-gapless > .v-column {\n      margin: 0;\n      padding: 0 !important;\n}\n.v-cols.is-gapless:not(:last-child) {\n      margin-bottom: 1rem;\n}\n.v-cols.is-gapless:last-child {\n      margin-bottom: 0;\n}\n.v-cols.is-multiline {\n    -ms-flex-wrap: wrap;\n        flex-wrap: wrap;\n}\n.v-cols.is-vcentered {\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n}\n.v-col {\n  display: block;\n  -ms-flex-preferred-size: 0;\n      flex-basis: 0;\n  -webkit-box-flex: 1;\n      -ms-flex-positive: 1;\n          flex-grow: 1;\n  -ms-flex-negative: 1;\n      flex-shrink: 1;\n  padding: 0.5rem;\n}\n.v-col.is-narrow, .v-col.is-narrow-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n}\n.v-col.is-full, .v-col.is-full-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 100%;\n}\n.v-col.is-three-quarters, .v-col.is-three-quarters-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 75%;\n}\n.v-col.is-two-thirds, .v-col.is-two-thirds-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 66.6666%;\n}\n.v-col.is-half, .v-col.is-half-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 50%;\n}\n.v-col.is-one-third, .v-col.is-one-third-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 33.3333%;\n}\n.v-col.is-one-quarter, .v-col.is-one-quarter-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 25%;\n}\n.v-col.is-offset-three-quarters, .v-col.is-offset-three-quarters-desktop {\n    margin-left: 75%;\n}\n.v-col.is-offset-two-quarter, .v-col.is-offset-two-thirds-desktop {\n    margin-left: 66.6666%;\n}\n.v-col.is-offset-half, .v-col.is-offset-half-desktop {\n    margin-left: 50%;\n}\n.v-col.is-offset-one-third, .v-col.is-offset-one-third-desktop {\n    margin-left: 33.3333%;\n}\n.v-col.is-offset-one-quarter, .v-col.is-offset-one-quarter-desktop {\n    margin-left: 25%;\n}\n.v-col.is-1, .v-col.is-1-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 8.33333%;\n}\n.v-col.is-offset-1, .v-col.is-offset-1-desktop {\n    margin-left: 8.33333%;\n}\n.v-col.is-2, .v-col.is-2-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 16.66667%;\n}\n.v-col.is-offset-2, .v-col.is-offset-2-desktop {\n    margin-left: 16.66667%;\n}\n.v-col.is-3, .v-col.is-3-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 25%;\n}\n.v-col.is-offset-3, .v-col.is-offset-3-desktop {\n    margin-left: 25%;\n}\n.v-col.is-4, .v-col.is-4-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 33.33333%;\n}\n.v-col.is-offset-4, .v-col.is-offset-4-desktop {\n    margin-left: 33.33333%;\n}\n.v-col.is-5, .v-col.is-5-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 41.66667%;\n}\n.v-col.is-offset-5, .v-col.is-offset-5-desktop {\n    margin-left: 41.66667%;\n}\n.v-col.is-6, .v-col.is-6-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 50%;\n}\n.v-col.is-offset-6, .v-col.is-offset-6-desktop {\n    margin-left: 50%;\n}\n.v-col.is-7, .v-col.is-7-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 58.33333%;\n}\n.v-col.is-offset-7, .v-col.is-offset-7-desktop {\n    margin-left: 58.33333%;\n}\n.v-col.is-8, .v-col.is-8-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 66.66667%;\n}\n.v-col.is-offset-8, .v-col.is-offset-8-desktop {\n    margin-left: 66.66667%;\n}\n.v-col.is-9, .v-col.is-9-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 75%;\n}\n.v-col.is-offset-9, .v-col.is-offset-9-desktop {\n    margin-left: 75%;\n}\n.v-col.is-10, .v-col.is-10-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 83.33333%;\n}\n.v-col.is-offset-10, .v-col.is-offset-10-desktop {\n    margin-left: 83.33333%;\n}\n.v-col.is-11, .v-col.is-11-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 91.66667%;\n}\n.v-col.is-offset-11, .v-col.is-offset-11-desktop {\n    margin-left: 91.66667%;\n}\n.v-col.is-12, .v-col.is-12-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 100%;\n}\n.v-col.is-offset-12, .v-col.is-offset-12-desktop {\n    margin-left: 100%;\n}\n.has-icon {\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  display: -webkit-inline-box;\n  display: -ms-inline-flexbox;\n  display: inline-flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  height: 1.5rem;\n  width: 1.5rem;\n}\n.has-icon.is-small {\n    height: 1rem;\n    width: 1rem;\n}\n.has-icon.is-medium {\n    height: 2rem;\n    width: 2rem;\n}\n.has-icon.is-large {\n    height: 3rem;\n    width: 3rem;\n}\n.has-icon.has-text-white {\n    color: white;\n}\n.has-icon.has-text-black {\n    color: #0a0a0a;\n}\n.has-icon.has-text-light {\n    color: whitesmoke;\n}\n.has-icon.has-text-dark {\n    color: #363636;\n}\n.has-icon.has-text-primary {\n    color: #1ca0f2;\n}\n.has-icon.has-text-info {\n    color: #b86bff;\n}\n.has-icon.has-text-success {\n    color: #23d160;\n}\n.has-icon.has-text-warning {\n    color: #ffdd57;\n}\n.has-icon.has-text-danger {\n    color: #ff3860;\n}\n.has-icon.is-primary .is-icon-arrow::after {\n    border-left-color: white;\n    border-top-color: white;\n}\n.has-icon.is-primary .is-icon-caret::after {\n    border-top-color: white;\n}\n.has-icon.is-primary .is-icon-right::after {\n    border-left-color: white;\n    border-bottom-color: white;\n}\n.has-icon.is-primary .is-icon-close::before, .has-icon.is-primary .is-icon-close::after {\n    background-color: white;\n}\n.has-icon.is-primary.is-outline .is-icon-arrow::after {\n    border-left-color: #1ca0f2;\n    border-top-color: #1ca0f2;\n}\n.has-icon.is-primary.is-outline .is-icon-caret::after {\n    border-top-color: #1ca0f2;\n}\n.has-icon.is-primary.is-outline .is-icon-right::after {\n    border-left-color: #1ca0f2;\n    border-bottom-color: #1ca0f2;\n}\n.has-icon.is-primary.is-outline .is-icon-close::before, .has-icon.is-primary.is-outline .is-icon-close::after {\n    background-color: #1ca0f2;\n}\n.has-icon.is-primary.is-outline:hover .is-icon-arrow::after, .has-icon.is-primary.is-outline:focus .is-icon-arrow::after, .has-icon.is-primary.is-outline.is-active .is-icon-arrow::after, .has-icon.is-primary.is-outline:active .is-icon-arrow::after {\n    border-left-color: white;\n    border-top-color: white;\n}\n.has-icon.is-primary.is-outline:hover .is-icon-caret::after, .has-icon.is-primary.is-outline:focus .is-icon-caret::after, .has-icon.is-primary.is-outline.is-active .is-icon-caret::after, .has-icon.is-primary.is-outline:active .is-icon-caret::after {\n    border-top-color: white;\n}\n.has-icon.is-primary.is-outline:hover .is-icon-right::after, .has-icon.is-primary.is-outline:focus .is-icon-right::after, .has-icon.is-primary.is-outline.is-active .is-icon-right::after, .has-icon.is-primary.is-outline:active .is-icon-right::after {\n    border-left-color: white;\n    border-bottom-color: white;\n}\n.has-icon.is-primary.is-outline:hover .is-icon-close::before, .has-icon.is-primary.is-outline:hover .is-icon-close::after, .has-icon.is-primary.is-outline:focus .is-icon-close::before, .has-icon.is-primary.is-outline:focus .is-icon-close::after, .has-icon.is-primary.is-outline.is-active .is-icon-close::before, .has-icon.is-primary.is-outline.is-active .is-icon-close::after, .has-icon.is-primary.is-outline:active .is-icon-close::before, .has-icon.is-primary.is-outline:active .is-icon-close::after {\n    background-color: white;\n}\n.has-icon.is-primary.is-icon-arrow::after {\n    border-left-color: #1ca0f2;\n    border-top-color: #1ca0f2;\n}\n.has-icon.is-primary.is-icon-caret::after {\n    border-top-color: #1ca0f2;\n}\n.has-icon.is-primary.is-icon-right::after {\n    border-left-color: #1ca0f2;\n    border-bottom-color: #1ca0f2;\n}\n.has-icon.is-primary.is-icon-close::before, .has-icon.is-primary.is-icon-close::after {\n    background-color: #1ca0f2;\n}\n.has-icon.is-secondary .is-icon-arrow::after {\n    border-left-color: white;\n    border-top-color: white;\n}\n.has-icon.is-secondary .is-icon-caret::after {\n    border-top-color: white;\n}\n.has-icon.is-secondary .is-icon-right::after {\n    border-left-color: white;\n    border-bottom-color: white;\n}\n.has-icon.is-secondary .is-icon-close::before, .has-icon.is-secondary .is-icon-close::after {\n    background-color: white;\n}\n.has-icon.is-secondary.is-outline .is-icon-arrow::after {\n    border-left-color: #35aaf3;\n    border-top-color: #35aaf3;\n}\n.has-icon.is-secondary.is-outline .is-icon-caret::after {\n    border-top-color: #35aaf3;\n}\n.has-icon.is-secondary.is-outline .is-icon-right::after {\n    border-left-color: #35aaf3;\n    border-bottom-color: #35aaf3;\n}\n.has-icon.is-secondary.is-outline .is-icon-close::before, .has-icon.is-secondary.is-outline .is-icon-close::after {\n    background-color: #35aaf3;\n}\n.has-icon.is-secondary.is-outline:hover .is-icon-arrow::after, .has-icon.is-secondary.is-outline:focus .is-icon-arrow::after, .has-icon.is-secondary.is-outline.is-active .is-icon-arrow::after, .has-icon.is-secondary.is-outline:active .is-icon-arrow::after {\n    border-left-color: white;\n    border-top-color: white;\n}\n.has-icon.is-secondary.is-outline:hover .is-icon-caret::after, .has-icon.is-secondary.is-outline:focus .is-icon-caret::after, .has-icon.is-secondary.is-outline.is-active .is-icon-caret::after, .has-icon.is-secondary.is-outline:active .is-icon-caret::after {\n    border-top-color: white;\n}\n.has-icon.is-secondary.is-outline:hover .is-icon-right::after, .has-icon.is-secondary.is-outline:focus .is-icon-right::after, .has-icon.is-secondary.is-outline.is-active .is-icon-right::after, .has-icon.is-secondary.is-outline:active .is-icon-right::after {\n    border-left-color: white;\n    border-bottom-color: white;\n}\n.has-icon.is-secondary.is-outline:hover .is-icon-close::before, .has-icon.is-secondary.is-outline:hover .is-icon-close::after, .has-icon.is-secondary.is-outline:focus .is-icon-close::before, .has-icon.is-secondary.is-outline:focus .is-icon-close::after, .has-icon.is-secondary.is-outline.is-active .is-icon-close::before, .has-icon.is-secondary.is-outline.is-active .is-icon-close::after, .has-icon.is-secondary.is-outline:active .is-icon-close::before, .has-icon.is-secondary.is-outline:active .is-icon-close::after {\n    background-color: white;\n}\n.has-icon.is-secondary.is-icon-arrow::after {\n    border-left-color: #35aaf3;\n    border-top-color: #35aaf3;\n}\n.has-icon.is-secondary.is-icon-caret::after {\n    border-top-color: #35aaf3;\n}\n.has-icon.is-secondary.is-icon-right::after {\n    border-left-color: #35aaf3;\n    border-bottom-color: #35aaf3;\n}\n.has-icon.is-secondary.is-icon-close::before, .has-icon.is-secondary.is-icon-close::after {\n    background-color: #35aaf3;\n}\n.has-icon.is-warn .is-icon-arrow::after {\n    border-left-color: white;\n    border-top-color: white;\n}\n.has-icon.is-warn .is-icon-caret::after {\n    border-top-color: white;\n}\n.has-icon.is-warn .is-icon-right::after {\n    border-left-color: white;\n    border-bottom-color: white;\n}\n.has-icon.is-warn .is-icon-close::before, .has-icon.is-warn .is-icon-close::after {\n    background-color: white;\n}\n.has-icon.is-warn.is-outline .is-icon-arrow::after {\n    border-left-color: #ffdd57;\n    border-top-color: #ffdd57;\n}\n.has-icon.is-warn.is-outline .is-icon-caret::after {\n    border-top-color: #ffdd57;\n}\n.has-icon.is-warn.is-outline .is-icon-right::after {\n    border-left-color: #ffdd57;\n    border-bottom-color: #ffdd57;\n}\n.has-icon.is-warn.is-outline .is-icon-close::before, .has-icon.is-warn.is-outline .is-icon-close::after {\n    background-color: #ffdd57;\n}\n.has-icon.is-warn.is-outline:hover .is-icon-arrow::after, .has-icon.is-warn.is-outline:focus .is-icon-arrow::after, .has-icon.is-warn.is-outline.is-active .is-icon-arrow::after, .has-icon.is-warn.is-outline:active .is-icon-arrow::after {\n    border-left-color: white;\n    border-top-color: white;\n}\n.has-icon.is-warn.is-outline:hover .is-icon-caret::after, .has-icon.is-warn.is-outline:focus .is-icon-caret::after, .has-icon.is-warn.is-outline.is-active .is-icon-caret::after, .has-icon.is-warn.is-outline:active .is-icon-caret::after {\n    border-top-color: white;\n}\n.has-icon.is-warn.is-outline:hover .is-icon-right::after, .has-icon.is-warn.is-outline:focus .is-icon-right::after, .has-icon.is-warn.is-outline.is-active .is-icon-right::after, .has-icon.is-warn.is-outline:active .is-icon-right::after {\n    border-left-color: white;\n    border-bottom-color: white;\n}\n.has-icon.is-warn.is-outline:hover .is-icon-close::before, .has-icon.is-warn.is-outline:hover .is-icon-close::after, .has-icon.is-warn.is-outline:focus .is-icon-close::before, .has-icon.is-warn.is-outline:focus .is-icon-close::after, .has-icon.is-warn.is-outline.is-active .is-icon-close::before, .has-icon.is-warn.is-outline.is-active .is-icon-close::after, .has-icon.is-warn.is-outline:active .is-icon-close::before, .has-icon.is-warn.is-outline:active .is-icon-close::after {\n    background-color: white;\n}\n.has-icon.is-warn.is-icon-arrow::after {\n    border-left-color: #ffdd57;\n    border-top-color: #ffdd57;\n}\n.has-icon.is-warn.is-icon-caret::after {\n    border-top-color: #ffdd57;\n}\n.has-icon.is-warn.is-icon-right::after {\n    border-left-color: #ffdd57;\n    border-bottom-color: #ffdd57;\n}\n.has-icon.is-warn.is-icon-close::before, .has-icon.is-warn.is-icon-close::after {\n    background-color: #ffdd57;\n}\n.has-icon.is-success .is-icon-arrow::after {\n    border-left-color: white;\n    border-top-color: white;\n}\n.has-icon.is-success .is-icon-caret::after {\n    border-top-color: white;\n}\n.has-icon.is-success .is-icon-right::after {\n    border-left-color: white;\n    border-bottom-color: white;\n}\n.has-icon.is-success .is-icon-close::before, .has-icon.is-success .is-icon-close::after {\n    background-color: white;\n}\n.has-icon.is-success.is-outline .is-icon-arrow::after {\n    border-left-color: #23d160;\n    border-top-color: #23d160;\n}\n.has-icon.is-success.is-outline .is-icon-caret::after {\n    border-top-color: #23d160;\n}\n.has-icon.is-success.is-outline .is-icon-right::after {\n    border-left-color: #23d160;\n    border-bottom-color: #23d160;\n}\n.has-icon.is-success.is-outline .is-icon-close::before, .has-icon.is-success.is-outline .is-icon-close::after {\n    background-color: #23d160;\n}\n.has-icon.is-success.is-outline:hover .is-icon-arrow::after, .has-icon.is-success.is-outline:focus .is-icon-arrow::after, .has-icon.is-success.is-outline.is-active .is-icon-arrow::after, .has-icon.is-success.is-outline:active .is-icon-arrow::after {\n    border-left-color: white;\n    border-top-color: white;\n}\n.has-icon.is-success.is-outline:hover .is-icon-caret::after, .has-icon.is-success.is-outline:focus .is-icon-caret::after, .has-icon.is-success.is-outline.is-active .is-icon-caret::after, .has-icon.is-success.is-outline:active .is-icon-caret::after {\n    border-top-color: white;\n}\n.has-icon.is-success.is-outline:hover .is-icon-right::after, .has-icon.is-success.is-outline:focus .is-icon-right::after, .has-icon.is-success.is-outline.is-active .is-icon-right::after, .has-icon.is-success.is-outline:active .is-icon-right::after {\n    border-left-color: white;\n    border-bottom-color: white;\n}\n.has-icon.is-success.is-outline:hover .is-icon-close::before, .has-icon.is-success.is-outline:hover .is-icon-close::after, .has-icon.is-success.is-outline:focus .is-icon-close::before, .has-icon.is-success.is-outline:focus .is-icon-close::after, .has-icon.is-success.is-outline.is-active .is-icon-close::before, .has-icon.is-success.is-outline.is-active .is-icon-close::after, .has-icon.is-success.is-outline:active .is-icon-close::before, .has-icon.is-success.is-outline:active .is-icon-close::after {\n    background-color: white;\n}\n.has-icon.is-success.is-icon-arrow::after {\n    border-left-color: #23d160;\n    border-top-color: #23d160;\n}\n.has-icon.is-success.is-icon-caret::after {\n    border-top-color: #23d160;\n}\n.has-icon.is-success.is-icon-right::after {\n    border-left-color: #23d160;\n    border-bottom-color: #23d160;\n}\n.has-icon.is-success.is-icon-close::before, .has-icon.is-success.is-icon-close::after {\n    background-color: #23d160;\n}\n.has-icon.is-error .is-icon-arrow::after {\n    border-left-color: white;\n    border-top-color: white;\n}\n.has-icon.is-error .is-icon-caret::after {\n    border-top-color: white;\n}\n.has-icon.is-error .is-icon-right::after {\n    border-left-color: white;\n    border-bottom-color: white;\n}\n.has-icon.is-error .is-icon-close::before, .has-icon.is-error .is-icon-close::after {\n    background-color: white;\n}\n.has-icon.is-error.is-outline .is-icon-arrow::after {\n    border-left-color: #ff3860;\n    border-top-color: #ff3860;\n}\n.has-icon.is-error.is-outline .is-icon-caret::after {\n    border-top-color: #ff3860;\n}\n.has-icon.is-error.is-outline .is-icon-right::after {\n    border-left-color: #ff3860;\n    border-bottom-color: #ff3860;\n}\n.has-icon.is-error.is-outline .is-icon-close::before, .has-icon.is-error.is-outline .is-icon-close::after {\n    background-color: #ff3860;\n}\n.has-icon.is-error.is-outline:hover .is-icon-arrow::after, .has-icon.is-error.is-outline:focus .is-icon-arrow::after, .has-icon.is-error.is-outline.is-active .is-icon-arrow::after, .has-icon.is-error.is-outline:active .is-icon-arrow::after {\n    border-left-color: white;\n    border-top-color: white;\n}\n.has-icon.is-error.is-outline:hover .is-icon-caret::after, .has-icon.is-error.is-outline:focus .is-icon-caret::after, .has-icon.is-error.is-outline.is-active .is-icon-caret::after, .has-icon.is-error.is-outline:active .is-icon-caret::after {\n    border-top-color: white;\n}\n.has-icon.is-error.is-outline:hover .is-icon-right::after, .has-icon.is-error.is-outline:focus .is-icon-right::after, .has-icon.is-error.is-outline.is-active .is-icon-right::after, .has-icon.is-error.is-outline:active .is-icon-right::after {\n    border-left-color: white;\n    border-bottom-color: white;\n}\n.has-icon.is-error.is-outline:hover .is-icon-close::before, .has-icon.is-error.is-outline:hover .is-icon-close::after, .has-icon.is-error.is-outline:focus .is-icon-close::before, .has-icon.is-error.is-outline:focus .is-icon-close::after, .has-icon.is-error.is-outline.is-active .is-icon-close::before, .has-icon.is-error.is-outline.is-active .is-icon-close::after, .has-icon.is-error.is-outline:active .is-icon-close::before, .has-icon.is-error.is-outline:active .is-icon-close::after {\n    background-color: white;\n}\n.has-icon.is-error.is-icon-arrow::after {\n    border-left-color: #ff3860;\n    border-top-color: #ff3860;\n}\n.has-icon.is-error.is-icon-caret::after {\n    border-top-color: #ff3860;\n}\n.has-icon.is-error.is-icon-right::after {\n    border-left-color: #ff3860;\n    border-bottom-color: #ff3860;\n}\n.has-icon.is-error.is-icon-close::before, .has-icon.is-error.is-icon-close::after {\n    background-color: #ff3860;\n}\n.is-icon-caret::after {\n  border: 0.45em solid transparent;\n  position: absolute;\n  top: 0.3em;\n  content: \"\";\n  transition: all 0.3s;\n  box-sizing: border-box;\n  border-top-color: #C6C6C6;\n}\n.is-icon-right::after {\n  border: 2px solid transparent;\n  position: absolute;\n  width: 1em;\n  height: 0.55em;\n  min-height: 8px;\n  content: \"\";\n  transform: rotate(-55deg);\n  -webkit-transform: rotate(-55deg) translate3d(0, 0, 0);\n  box-sizing: border-box;\n  border-left-color: #C6C6C6;\n  border-bottom-color: #C6C6C6;\n}\n.is-icon-arrow::after {\n  border: 2px solid transparent;\n  position: absolute;\n  width: 0.7em;\n  height: 0.72em;\n  top: -0.1em;\n  left: 0.15em;\n  content: \"\";\n  border-radius: 2px;\n  transform: rotate(222deg);\n  -webkit-transform: rotate(222deg) translate3d(0, 0, 0);\n  transition: all 0.3s;\n  box-sizing: border-box;\n  border-left-color: #C6C6C6;\n  border-top-color: #C6C6C6;\n}\n.is-icon-close::before, .is-icon-close::after {\n  position: absolute;\n  content: \"\";\n  width: 100%;\n  top: 0.3em;\n  height: 2px;\n  background-color: #C6C6C6;\n}\n.is-icon-close::before {\n  -webkit-transform: rotate(45deg);\n  transform: rotate(45deg);\n}\n.is-icon-close::after {\n  -webkit-transform: rotate(-45deg);\n  transform: rotate(-45deg);\n}\n.is-icon-wrap,\n.is-icon-caret,\n.is-icon-right,\n.is-icon-arrow,\n.is-icon-close {\n  text-align: left;\n  display: inline-block;\n  position: relative;\n  width: 1em;\n  height: 1em;\n  vertical-align: middle;\n}\n.is-open .is-icon-caret::after,\n.has-hover-open:hover .is-icon-caret::after {\n  -webkit-transform: rotate(180deg) translateY(50%);\n  transform: rotate(180deg) translateY(50%);\n}\n.is-open .is-icon-arrow::after,\n.has-hover-open:hover .is-icon-arrow::after {\n  -webkit-transform: rotate(408deg);\n  transform: rotate(408deg);\n  top: 0.35em;\n  height: 0.7em;\n}\n.v-btn {\n  -moz-appearance: none;\n  -webkit-appearance: none;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  border: 1px solid transparent;\n  border-radius: 3px;\n  box-shadow: none;\n  display: -webkit-inline-box;\n  display: -ms-inline-flexbox;\n  display: inline-flex;\n  font-size: 1rem;\n  height: 2.25em;\n  -webkit-box-pack: start;\n      -ms-flex-pack: start;\n          justify-content: flex-start;\n  line-height: 1.5;\n  padding: calc(0.375em - 1px) calc(0.625em - 1px);\n  position: relative;\n  vertical-align: top;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  background-color: white;\n  border-color: #C6C6C6;\n  color: black;\n  cursor: pointer;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  padding-left: 0.75em;\n  padding-right: 0.75em;\n  text-align: center;\n  white-space: nowrap;\n  text-decoration: none;\n}\n.v-btn:focus, .v-btn.is-focused, .v-btn:active, .v-btn.is-active {\n    outline: none;\n}\n.v-btn[disabled] {\n    cursor: not-allowed;\n}\n.v-btn strong {\n    color: inherit;\n}\n.v-btn:hover, .v-btn.is-hovered {\n    background-color: #f2f2f2;\n}\n.v-btn.is-active, .v-btn:active {\n    color: black;\n    background-color: #e6e6e6;\n}\n.v-btn.is-disabled, .v-btn:disabled, .v-btn[disabled] {\n    pointer-events: none;\n    cursor: not-allowed;\n    background-color: #F2F2F2;\n    border-color: #cccccc;\n    box-shadow: none !important;\n    opacity: .5;\n}\n.v-btn:focus, .v-btn.is-focused {\n    border-color: #1ca0f2;\n    color: #363636;\n}\n.v-btn:focus:not(:active), .v-btn.is-focused:not(:active) {\n      box-shadow: 0 0 0 0.125em rgba(28, 160, 242, 0.25);\n}\n.v-btn.is-small {\n    border-radius: 2px;\n    font-size: 0.75rem;\n}\n.v-btn.is-medium {\n    font-size: 1.25rem;\n}\n.v-btn.is-large {\n    font-size: 1.5rem;\n}\n.v-btn.is-loading {\n    pointer-events: none;\n    color: transparent !important;\n}\n.v-btn.is-loading .as-icon {\n      opacity: 0;\n}\n.v-btn.is-loading::after {\n      border: 2px solid #dbdbdb;\n      border-radius: 290486px;\n      border-right-color: transparent;\n      border-top-color: transparent;\n      content: \"\";\n      display: block;\n      position: relative;\n      height: 1em;\n      width: 1em;\n      -webkit-animation: v-kf-spin-around 500ms infinite linear;\n              animation: v-kf-spin-around 500ms infinite linear;\n      position: absolute;\n      left: calc(50% - (1.2em / 2) - 0.5px);\n      top: calc(50% - (1.2em / 2) - 0.5px);\n}\n.v-btn.is-circle {\n    border-radius: 50%;\n}\n.v-btn.is-square, .v-btn.is-circle {\n    width: calc(18px + 1rem);\n    height: calc(18px + 1rem);\n}\n.v-btn.is-square.is-small, .v-btn.is-circle.is-small {\n      width: calc(16px + 0.7rem);\n      height: calc(16px + 0.7rem);\n}\n.v-btn.is-square.is-large, .v-btn.is-circle.is-large {\n      width: calc(21px + 1.5rem);\n      height: calc(21px + 1.5rem);\n}\n.v-btn.is-link {\n    background-color: transparent;\n    border-color: transparent;\n    color: #4a4a4a;\n    text-decoration: none;\n}\n.v-btn.is-link:hover, .v-btn.is-link.is-hovered, .v-btn.is-link:focus, .v-btn.is-link.is-focused {\n      background-color: whitesmoke;\n      color: #363636;\n}\n.v-btn.is-link:active, .v-btn.is-link.is-active {\n      background-color: #e8e8e8;\n      color: #363636;\n}\n.v-btn.is-link[disabled] {\n      background-color: transparent;\n      border-color: transparent;\n      box-shadow: none;\n}\n.v-btn .has-icon, .v-btn .has-icon.is-small, .v-btn .has-icon.is-medium, .v-btn .has-icon.is-large {\n    height: 1.5em;\n    width: 1.5em;\n}\n.v-btn .has-icon:first-child:not(:last-child) {\n    margin-left: calc(-0.375em - 1px);\n    margin-right: 0.1875em;\n}\n.v-btn .has-icon:last-child:not(:first-child) {\n    margin-left: 0.1875em;\n    margin-right: calc(-0.375em - 1px);\n}\n.v-btn .has-icon:first-child:last-child {\n    margin-left: calc(-0.375em - 1px);\n    margin-right: calc(-0.375em - 1px);\n}\n.v-btn-group.is-horizontal {\n  display: inline-block;\n  vertical-align: middle;\n}\n.v-btn-group.is-horizontal::after {\n    clear: both;\n    content: \" \";\n    display: table;\n}\n.v-btn-group.is-horizontal .v-btn {\n    float: left;\n    margin-left: -1px;\n}\n.v-btn-group.is-horizontal .v-btn:not(:first-child):not(:last-child) {\n      border-radius: 0;\n}\n.v-btn-group.is-horizontal .v-btn:first-child {\n      margin-left: 0;\n}\n.v-btn-group.is-horizontal .v-btn:first-child:not(:last-child) {\n        border-bottom-right-radius: 0;\n        border-top-right-radius: 0;\n}\n.v-btn-group.is-horizontal .v-btn:last-child:not(:first-child) {\n      border-bottom-left-radius: 0;\n      border-top-left-radius: 0;\n}\n.v-btn-group.is-vertical {\n  display: inline-block;\n  vertical-align: middle;\n}\n.v-btn-group.is-vertical .v-btn {\n    display: block;\n    margin-top: -1px;\n    width: 100%;\n    max-width: 100%;\n}\n.v-btn-group.is-vertical .v-btn:not(:first-child):not(:last-child) {\n      border-radius: 0;\n}\n.v-btn-group.is-vertical .v-btn:first-child {\n      margin-top: 0;\n}\n.v-btn-group.is-vertical .v-btn:first-child:not(:last-child) {\n        border-bottom-left-radius: 0;\n        border-bottom-right-radius: 0;\n}\n.v-btn-group.is-vertical .v-btn:last-child:not(:first-child) {\n      border-top-left-radius: 0;\n      border-top-right-radius: 0;\n}\n.v-btn.is-white {\n  color: #0a0a0a;\n  border-color: #fafafa;\n  background-color: white;\n}\n.v-btn.is-white.is-outlined {\n    color: white;\n    background-color: #0a0a0a;\n    border-color: #fafafa;\n}\n.v-btn.is-white.is-outlined:hover, .v-btn.is-white.is-outlined.is-hovered {\n      color: #0a0a0a !important;\n}\n.v-btn.is-white.is-outlined:focus, .v-btn.is-white.is-outlined.is-focused {\n      border-color: transparent;\n      color: white;\n}\n.v-btn.is-white.is-outlined:focus:not(:active), .v-btn.is-white.is-outlined.is-focused:not(:active) {\n        box-shadow: 0 0 0 0.125em rgba(255, 255, 255, 0.25);\n}\n.v-btn.is-white.is-outlined.is-active, .v-btn.is-white.is-outlined:active {\n      color: #0a0a0a;\n}\n.v-btn.is-white.is-outlined.is-loading::after {\n      border-left-color: white;\n      border-bottom-color: white;\n}\n.v-btn.is-white:hover, .v-btn.is-white.is-hovered {\n    background-color: #f0f0f0;\n}\n.v-btn.is-white:focus, .v-btn.is-white.is-focused {\n    border-color: transparent;\n    color: #0a0a0a;\n}\n.v-btn.is-white:focus:not(:active), .v-btn.is-white.is-focused:not(:active) {\n      box-shadow: 0 0 0 0.125em rgba(255, 255, 255, 0.25);\n}\n.v-btn.is-white.is-disabled, .v-btn.is-white:disabled, .v-btn.is-white[disabled] {\n    background-color: white !important;\n    border-color: transparent !important;\n}\n.v-btn.is-white:active, .v-btn.is-white.is-active {\n    background-color: #e6e6e6;\n}\n.v-btn.is-white.is-loading::after {\n    border-left-color: #0a0a0a;\n    border-bottom-color: #0a0a0a;\n}\n.v-btn.is-black {\n  color: white;\n  border-color: #050505;\n  background-color: #0a0a0a;\n}\n.v-btn.is-black.is-outlined {\n    color: #0a0a0a;\n    background-color: white;\n    border-color: #050505;\n}\n.v-btn.is-black.is-outlined:hover, .v-btn.is-black.is-outlined.is-hovered {\n      color: white !important;\n}\n.v-btn.is-black.is-outlined:focus, .v-btn.is-black.is-outlined.is-focused {\n      border-color: transparent;\n      color: #0a0a0a;\n}\n.v-btn.is-black.is-outlined:focus:not(:active), .v-btn.is-black.is-outlined.is-focused:not(:active) {\n        box-shadow: 0 0 0 0.125em rgba(10, 10, 10, 0.25);\n}\n.v-btn.is-black.is-outlined.is-active, .v-btn.is-black.is-outlined:active {\n      color: white;\n}\n.v-btn.is-black.is-outlined.is-loading::after {\n      border-left-color: #0a0a0a;\n      border-bottom-color: #0a0a0a;\n}\n.v-btn.is-black:hover, .v-btn.is-black.is-hovered {\n    background-color: black;\n}\n.v-btn.is-black:focus, .v-btn.is-black.is-focused {\n    border-color: transparent;\n    color: white;\n}\n.v-btn.is-black:focus:not(:active), .v-btn.is-black.is-focused:not(:active) {\n      box-shadow: 0 0 0 0.125em rgba(10, 10, 10, 0.25);\n}\n.v-btn.is-black.is-disabled, .v-btn.is-black:disabled, .v-btn.is-black[disabled] {\n    background-color: #0a0a0a !important;\n    border-color: transparent !important;\n}\n.v-btn.is-black:active, .v-btn.is-black.is-active {\n    background-color: black;\n}\n.v-btn.is-black.is-loading::after {\n    border-left-color: white;\n    border-bottom-color: white;\n}\n.v-btn.is-light {\n  color: #363636;\n  border-color: #f0f0f0;\n  background-color: whitesmoke;\n}\n.v-btn.is-light.is-outlined {\n    color: whitesmoke;\n    background-color: #363636;\n    border-color: #f0f0f0;\n}\n.v-btn.is-light.is-outlined:hover, .v-btn.is-light.is-outlined.is-hovered {\n      color: #363636 !important;\n}\n.v-btn.is-light.is-outlined:focus, .v-btn.is-light.is-outlined.is-focused {\n      border-color: transparent;\n      color: whitesmoke;\n}\n.v-btn.is-light.is-outlined:focus:not(:active), .v-btn.is-light.is-outlined.is-focused:not(:active) {\n        box-shadow: 0 0 0 0.125em rgba(245, 245, 245, 0.25);\n}\n.v-btn.is-light.is-outlined.is-active, .v-btn.is-light.is-outlined:active {\n      color: #363636;\n}\n.v-btn.is-light.is-outlined.is-loading::after {\n      border-left-color: whitesmoke;\n      border-bottom-color: whitesmoke;\n}\n.v-btn.is-light:hover, .v-btn.is-light.is-hovered {\n    background-color: #e6e6e6;\n}\n.v-btn.is-light:focus, .v-btn.is-light.is-focused {\n    border-color: transparent;\n    color: #363636;\n}\n.v-btn.is-light:focus:not(:active), .v-btn.is-light.is-focused:not(:active) {\n      box-shadow: 0 0 0 0.125em rgba(245, 245, 245, 0.25);\n}\n.v-btn.is-light.is-disabled, .v-btn.is-light:disabled, .v-btn.is-light[disabled] {\n    background-color: whitesmoke !important;\n    border-color: transparent !important;\n}\n.v-btn.is-light:active, .v-btn.is-light.is-active {\n    background-color: #dbdbdb;\n}\n.v-btn.is-light.is-loading::after {\n    border-left-color: #363636;\n    border-bottom-color: #363636;\n}\n.v-btn.is-dark {\n  color: whitesmoke;\n  border-color: #303030;\n  background-color: #363636;\n}\n.v-btn.is-dark.is-outlined {\n    color: #363636;\n    background-color: whitesmoke;\n    border-color: #303030;\n}\n.v-btn.is-dark.is-outlined:hover, .v-btn.is-dark.is-outlined.is-hovered {\n      color: whitesmoke !important;\n}\n.v-btn.is-dark.is-outlined:focus, .v-btn.is-dark.is-outlined.is-focused {\n      border-color: transparent;\n      color: #363636;\n}\n.v-btn.is-dark.is-outlined:focus:not(:active), .v-btn.is-dark.is-outlined.is-focused:not(:active) {\n        box-shadow: 0 0 0 0.125em rgba(54, 54, 54, 0.25);\n}\n.v-btn.is-dark.is-outlined.is-active, .v-btn.is-dark.is-outlined:active {\n      color: whitesmoke;\n}\n.v-btn.is-dark.is-outlined.is-loading::after {\n      border-left-color: #363636;\n      border-bottom-color: #363636;\n}\n.v-btn.is-dark:hover, .v-btn.is-dark.is-hovered {\n    background-color: #262626;\n}\n.v-btn.is-dark:focus, .v-btn.is-dark.is-focused {\n    border-color: transparent;\n    color: whitesmoke;\n}\n.v-btn.is-dark:focus:not(:active), .v-btn.is-dark.is-focused:not(:active) {\n      box-shadow: 0 0 0 0.125em rgba(54, 54, 54, 0.25);\n}\n.v-btn.is-dark.is-disabled, .v-btn.is-dark:disabled, .v-btn.is-dark[disabled] {\n    background-color: #363636 !important;\n    border-color: transparent !important;\n}\n.v-btn.is-dark:active, .v-btn.is-dark.is-active {\n    background-color: #1c1c1c;\n}\n.v-btn.is-dark.is-loading::after {\n    border-left-color: whitesmoke;\n    border-bottom-color: whitesmoke;\n}\n.v-btn.is-primary {\n  color: #fff;\n  border-color: #139cf1;\n  background-color: #1ca0f2;\n}\n.v-btn.is-primary.is-outlined {\n    color: #1ca0f2;\n    background-color: #fff;\n    border-color: #139cf1;\n}\n.v-btn.is-primary.is-outlined:hover, .v-btn.is-primary.is-outlined.is-hovered {\n      color: #fff !important;\n}\n.v-btn.is-primary.is-outlined:focus, .v-btn.is-primary.is-outlined.is-focused {\n      border-color: transparent;\n      color: #1ca0f2;\n}\n.v-btn.is-primary.is-outlined:focus:not(:active), .v-btn.is-primary.is-outlined.is-focused:not(:active) {\n        box-shadow: 0 0 0 0.125em rgba(28, 160, 242, 0.25);\n}\n.v-btn.is-primary.is-outlined.is-active, .v-btn.is-primary.is-outlined:active {\n      color: #fff;\n}\n.v-btn.is-primary.is-outlined.is-loading::after {\n      border-left-color: #1ca0f2;\n      border-bottom-color: #1ca0f2;\n}\n.v-btn.is-primary:hover, .v-btn.is-primary.is-hovered {\n    background-color: #0d91e3;\n}\n.v-btn.is-primary:focus, .v-btn.is-primary.is-focused {\n    border-color: transparent;\n    color: #fff;\n}\n.v-btn.is-primary:focus:not(:active), .v-btn.is-primary.is-focused:not(:active) {\n      box-shadow: 0 0 0 0.125em rgba(28, 160, 242, 0.25);\n}\n.v-btn.is-primary.is-disabled, .v-btn.is-primary:disabled, .v-btn.is-primary[disabled] {\n    background-color: #1ca0f2 !important;\n    border-color: transparent !important;\n}\n.v-btn.is-primary:active, .v-btn.is-primary.is-active {\n    background-color: #0c84cf;\n}\n.v-btn.is-primary.is-loading::after {\n    border-left-color: #fff;\n    border-bottom-color: #fff;\n}\n.v-btn.is-info {\n  color: #fff;\n  border-color: #b361ff;\n  background-color: #b86bff;\n}\n.v-btn.is-info.is-outlined {\n    color: #b86bff;\n    background-color: #fff;\n    border-color: #b361ff;\n}\n.v-btn.is-info.is-outlined:hover, .v-btn.is-info.is-outlined.is-hovered {\n      color: #fff !important;\n}\n.v-btn.is-info.is-outlined:focus, .v-btn.is-info.is-outlined.is-focused {\n      border-color: transparent;\n      color: #b86bff;\n}\n.v-btn.is-info.is-outlined:focus:not(:active), .v-btn.is-info.is-outlined.is-focused:not(:active) {\n        box-shadow: 0 0 0 0.125em rgba(184, 107, 255, 0.25);\n}\n.v-btn.is-info.is-outlined.is-active, .v-btn.is-info.is-outlined:active {\n      color: #fff;\n}\n.v-btn.is-info.is-outlined.is-loading::after {\n      border-left-color: #b86bff;\n      border-bottom-color: #b86bff;\n}\n.v-btn.is-info:hover, .v-btn.is-info.is-hovered {\n    background-color: #a94dff;\n}\n.v-btn.is-info:focus, .v-btn.is-info.is-focused {\n    border-color: transparent;\n    color: #fff;\n}\n.v-btn.is-info:focus:not(:active), .v-btn.is-info.is-focused:not(:active) {\n      box-shadow: 0 0 0 0.125em rgba(184, 107, 255, 0.25);\n}\n.v-btn.is-info.is-disabled, .v-btn.is-info:disabled, .v-btn.is-info[disabled] {\n    background-color: #b86bff !important;\n    border-color: transparent !important;\n}\n.v-btn.is-info:active, .v-btn.is-info.is-active {\n    background-color: #9f38ff;\n}\n.v-btn.is-info.is-loading::after {\n    border-left-color: #fff;\n    border-bottom-color: #fff;\n}\n.v-btn.is-success {\n  color: #fff;\n  border-color: #22c95c;\n  background-color: #23d160;\n}\n.v-btn.is-success.is-outlined {\n    color: #23d160;\n    background-color: #fff;\n    border-color: #22c95c;\n}\n.v-btn.is-success.is-outlined:hover, .v-btn.is-success.is-outlined.is-hovered {\n      color: #fff !important;\n}\n.v-btn.is-success.is-outlined:focus, .v-btn.is-success.is-outlined.is-focused {\n      border-color: transparent;\n      color: #23d160;\n}\n.v-btn.is-success.is-outlined:focus:not(:active), .v-btn.is-success.is-outlined.is-focused:not(:active) {\n        box-shadow: 0 0 0 0.125em rgba(35, 209, 96, 0.25);\n}\n.v-btn.is-success.is-outlined.is-active, .v-btn.is-success.is-outlined:active {\n      color: #fff;\n}\n.v-btn.is-success.is-outlined.is-loading::after {\n      border-left-color: #23d160;\n      border-bottom-color: #23d160;\n}\n.v-btn.is-success:hover, .v-btn.is-success.is-hovered {\n    background-color: #1fb754;\n}\n.v-btn.is-success:focus, .v-btn.is-success.is-focused {\n    border-color: transparent;\n    color: #fff;\n}\n.v-btn.is-success:focus:not(:active), .v-btn.is-success.is-focused:not(:active) {\n      box-shadow: 0 0 0 0.125em rgba(35, 209, 96, 0.25);\n}\n.v-btn.is-success.is-disabled, .v-btn.is-success:disabled, .v-btn.is-success[disabled] {\n    background-color: #23d160 !important;\n    border-color: transparent !important;\n}\n.v-btn.is-success:active, .v-btn.is-success.is-active {\n    background-color: #1ca64c;\n}\n.v-btn.is-success.is-loading::after {\n    border-left-color: #fff;\n    border-bottom-color: #fff;\n}\n.v-btn.is-warning {\n  color: rgba(0, 0, 0, 0.7);\n  border-color: #ffdb4d;\n  background-color: #ffdd57;\n}\n.v-btn.is-warning.is-outlined {\n    color: #ffdd57;\n    background-color: rgba(0, 0, 0, 0.7);\n    border-color: #ffdb4d;\n}\n.v-btn.is-warning.is-outlined:hover, .v-btn.is-warning.is-outlined.is-hovered {\n      color: rgba(0, 0, 0, 0.7) !important;\n}\n.v-btn.is-warning.is-outlined:focus, .v-btn.is-warning.is-outlined.is-focused {\n      border-color: transparent;\n      color: #ffdd57;\n}\n.v-btn.is-warning.is-outlined:focus:not(:active), .v-btn.is-warning.is-outlined.is-focused:not(:active) {\n        box-shadow: 0 0 0 0.125em rgba(255, 221, 87, 0.25);\n}\n.v-btn.is-warning.is-outlined.is-active, .v-btn.is-warning.is-outlined:active {\n      color: rgba(0, 0, 0, 0.7);\n}\n.v-btn.is-warning.is-outlined.is-loading::after {\n      border-left-color: #ffdd57;\n      border-bottom-color: #ffdd57;\n}\n.v-btn.is-warning:hover, .v-btn.is-warning.is-hovered {\n    background-color: #ffd738;\n}\n.v-btn.is-warning:focus, .v-btn.is-warning.is-focused {\n    border-color: transparent;\n    color: rgba(0, 0, 0, 0.7);\n}\n.v-btn.is-warning:focus:not(:active), .v-btn.is-warning.is-focused:not(:active) {\n      box-shadow: 0 0 0 0.125em rgba(255, 221, 87, 0.25);\n}\n.v-btn.is-warning.is-disabled, .v-btn.is-warning:disabled, .v-btn.is-warning[disabled] {\n    background-color: #ffdd57 !important;\n    border-color: transparent !important;\n}\n.v-btn.is-warning:active, .v-btn.is-warning.is-active {\n    background-color: #ffd324;\n}\n.v-btn.is-warning.is-loading::after {\n    border-left-color: rgba(0, 0, 0, 0.7);\n    border-bottom-color: rgba(0, 0, 0, 0.7);\n}\n.v-btn.is-danger {\n  color: #fff;\n  border-color: #ff2e58;\n  background-color: #ff3860;\n}\n.v-btn.is-danger.is-outlined {\n    color: #ff3860;\n    background-color: #fff;\n    border-color: #ff2e58;\n}\n.v-btn.is-danger.is-outlined:hover, .v-btn.is-danger.is-outlined.is-hovered {\n      color: #fff !important;\n}\n.v-btn.is-danger.is-outlined:focus, .v-btn.is-danger.is-outlined.is-focused {\n      border-color: transparent;\n      color: #ff3860;\n}\n.v-btn.is-danger.is-outlined:focus:not(:active), .v-btn.is-danger.is-outlined.is-focused:not(:active) {\n        box-shadow: 0 0 0 0.125em rgba(255, 56, 96, 0.25);\n}\n.v-btn.is-danger.is-outlined.is-active, .v-btn.is-danger.is-outlined:active {\n      color: #fff;\n}\n.v-btn.is-danger.is-outlined.is-loading::after {\n      border-left-color: #ff3860;\n      border-bottom-color: #ff3860;\n}\n.v-btn.is-danger:hover, .v-btn.is-danger.is-hovered {\n    background-color: #ff1a47;\n}\n.v-btn.is-danger:focus, .v-btn.is-danger.is-focused {\n    border-color: transparent;\n    color: #fff;\n}\n.v-btn.is-danger:focus:not(:active), .v-btn.is-danger.is-focused:not(:active) {\n      box-shadow: 0 0 0 0.125em rgba(255, 56, 96, 0.25);\n}\n.v-btn.is-danger.is-disabled, .v-btn.is-danger:disabled, .v-btn.is-danger[disabled] {\n    background-color: #ff3860 !important;\n    border-color: transparent !important;\n}\n.v-btn.is-danger:active, .v-btn.is-danger.is-active {\n    background-color: #ff0537;\n}\n.v-btn.is-danger.is-loading::after {\n    border-left-color: #fff;\n    border-bottom-color: #fff;\n}\n.v-field:not(:last-child) {\n  margin-bottom: 0.75rem;\n}\n.v-field.has-addons {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: start;\n      -ms-flex-pack: start;\n          justify-content: flex-start;\n}\n.v-field.has-addons .v-control:not(:last-child) {\n    margin-right: -1px;\n}\n.v-field.has-addons .v-control:first-child .v-btn,\n  .v-field.has-addons .v-control:first-child .v-input,\n  .v-field.has-addons .v-control:first-child .v-select select {\n    border-bottom-left-radius: 3px;\n    border-top-left-radius: 3px;\n}\n.v-field.has-addons .v-control:last-child .v-btn,\n  .v-field.has-addons .v-control:last-child .v-input,\n  .v-field.has-addons .v-control:last-child .v-select select {\n    border-bottom-right-radius: 3px;\n    border-top-right-radius: 3px;\n}\n.v-field.has-addons .v-control .v-btn,\n  .v-field.has-addons .v-control .v-input,\n  .v-field.has-addons .v-control .v-select select {\n    border-radius: 0;\n}\n.v-field.has-addons .v-control .v-btn:hover, .v-field.has-addons .v-control .v-btn.is-hovered,\n    .v-field.has-addons .v-control .v-input:hover,\n    .v-field.has-addons .v-control .v-input.is-hovered,\n    .v-field.has-addons .v-control .v-select select:hover,\n    .v-field.has-addons .v-control .v-select select.is-hovered {\n      z-index: 2;\n}\n.v-field.has-addons .v-control .v-btn:focus, .v-field.has-addons .v-control .v-btn.is-focused, .v-field.has-addons .v-control .v-btn:active, .v-field.has-addons .v-control .v-btn.is-active,\n    .v-field.has-addons .v-control .v-input:focus,\n    .v-field.has-addons .v-control .v-input.is-focused,\n    .v-field.has-addons .v-control .v-input:active,\n    .v-field.has-addons .v-control .v-input.is-active,\n    .v-field.has-addons .v-control .v-select select:focus,\n    .v-field.has-addons .v-control .v-select select.is-focused,\n    .v-field.has-addons .v-control .v-select select:active,\n    .v-field.has-addons .v-control .v-select select.is-active {\n      z-index: 3;\n}\n.v-field.has-addons .v-control .v-btn:focus:hover, .v-field.has-addons .v-control .v-btn.is-focused:hover, .v-field.has-addons .v-control .v-btn:active:hover, .v-field.has-addons .v-control .v-btn.is-active:hover,\n      .v-field.has-addons .v-control .v-input:focus:hover,\n      .v-field.has-addons .v-control .v-input.is-focused:hover,\n      .v-field.has-addons .v-control .v-input:active:hover,\n      .v-field.has-addons .v-control .v-input.is-active:hover,\n      .v-field.has-addons .v-control .v-select select:focus:hover,\n      .v-field.has-addons .v-control .v-select select.is-focused:hover,\n      .v-field.has-addons .v-control .v-select select:active:hover,\n      .v-field.has-addons .v-control .v-select select.is-active:hover {\n        z-index: 4;\n}\n.v-field.has-addons .v-control.is-expanded {\n    -webkit-box-flex: 1;\n        -ms-flex-positive: 1;\n            flex-grow: 1;\n}\n.v-field.has-addons.has-addons-centered {\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n}\n.v-field.has-addons.has-addons-right {\n    -webkit-box-pack: end;\n        -ms-flex-pack: end;\n            justify-content: flex-end;\n}\n.v-field.has-addons.has-addons-fullwidth .v-control {\n    -webkit-box-flex: 1;\n        -ms-flex-positive: 1;\n            flex-grow: 1;\n    -ms-flex-negative: 0;\n        flex-shrink: 0;\n}\n.v-field.is-grouped {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: start;\n      -ms-flex-pack: start;\n          justify-content: flex-start;\n}\n.v-field.is-grouped > .v-control {\n    -ms-flex-negative: 0;\n        flex-shrink: 0;\n}\n.v-field.is-grouped > .v-control:not(:last-child) {\n      margin-bottom: 0;\n      margin-right: 0.75rem;\n}\n.v-field.is-grouped > .v-control.is-expanded {\n      -webkit-box-flex: 1;\n          -ms-flex-positive: 1;\n              flex-grow: 1;\n      -ms-flex-negative: 1;\n          flex-shrink: 1;\n}\n.v-field.is-grouped.is-grouped-centered {\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n}\n.v-field.is-grouped.is-grouped-right {\n    -webkit-box-pack: end;\n        -ms-flex-pack: end;\n            justify-content: flex-end;\n}\n.v-field.is-grouped.is-grouped-multiline {\n    -ms-flex-wrap: wrap;\n        flex-wrap: wrap;\n}\n.v-field.is-grouped.is-grouped-multiline > .ns-control:last-child, .v-field.is-grouped.is-grouped-multiline > .ns-control:not(:last-child) {\n      margin-bottom: 0.75rem;\n}\n.v-field.is-grouped.is-grouped-multiline:last-child {\n      margin-bottom: -0.75rem;\n}\n.v-field.is-grouped.is-grouped-multiline:not(:last-child) {\n      margin-bottom: 0;\n}\n.v-field.is-horizontal {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n}\n.v-field-label {\n  margin-bottom: 0.5rem;\n  -ms-flex-preferred-size: 0;\n      flex-basis: 0;\n  -webkit-box-flex: 1;\n      -ms-flex-positive: 1;\n          flex-grow: 1;\n  -ms-flex-negative: 0;\n      flex-shrink: 0;\n  margin-right: 1.5rem;\n  text-align: right;\n}\n.v-field-label .label {\n    font-size: inherit;\n}\n.v-field-label.is-small {\n    font-size: 0.75rem;\n    padding-top: 0.375em;\n}\n.v-field-label.is-normal {\n    padding-top: 0.375em;\n}\n.v-field-label.is-medium {\n    font-size: 1.25rem;\n    padding-top: 0.375em;\n}\n.v-field-label.is-large {\n    font-size: 1.5rem;\n    padding-top: 0.375em;\n}\n.v-field-body {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-preferred-size: 0;\n      flex-basis: 0;\n  -webkit-box-flex: 5;\n      -ms-flex-positive: 5;\n          flex-grow: 5;\n  -ms-flex-negative: 1;\n      flex-shrink: 1;\n}\n.v-field-body .v-field {\n    margin-bottom: 0;\n}\n.v-field-body > .v-field {\n    -ms-flex-negative: 1;\n        flex-shrink: 1;\n}\n.v-field-body > .v-field:not(.is-narrow) {\n      -webkit-box-flex: 1;\n          -ms-flex-positive: 1;\n              flex-grow: 1;\n}\n.v-field-body > .v-field:not(:last-child) {\n      margin-right: 0.75rem;\n}\n.v-control {\n  font-size: 1rem;\n  position: relative;\n  text-align: left;\n}\n.v-control.has-icons-left .v-input:focus ~ .has-icon,\n  .v-control.has-icons-left .v-select:focus ~ .has-icon, .v-control.has-icons-right .v-input:focus ~ .has-icon,\n  .v-control.has-icons-right .v-select:focus ~ .has-icon {\n    color: #7a7a7a;\n}\n.v-control.has-icons-left .v-input.is-small ~ .has-icon,\n  .v-control.has-icons-left .v-select.is-small ~ .has-icon, .v-control.has-icons-right .v-input.is-small ~ .has-icon,\n  .v-control.has-icons-right .v-select.is-small ~ .has-icon {\n    font-size: 0.75rem;\n}\n.v-control.has-icons-left .v-input.is-medium ~ .has-icon,\n  .v-control.has-icons-left .v-select.is-medium ~ .has-icon, .v-control.has-icons-right .v-input.is-medium ~ .has-icon,\n  .v-control.has-icons-right .v-select.is-medium ~ .has-icon {\n    font-size: 1.25rem;\n}\n.v-control.has-icons-left .v-input.is-large ~ .has-icon,\n  .v-control.has-icons-left .v-select.is-large ~ .has-icon, .v-control.has-icons-right .v-input.is-large ~ .has-icon,\n  .v-control.has-icons-right .v-select.is-large ~ .has-icon {\n    font-size: 1.5rem;\n}\n.v-control.has-icons-left .has-icon, .v-control.has-icons-right .has-icon {\n    color: #dbdbdb;\n    height: 2.25em;\n    pointer-events: none;\n    position: absolute;\n    top: 0;\n    width: 2.25em;\n    z-index: 4;\n}\n.v-control.has-icons-left .v-input,\n  .v-control.has-icons-left .v-select select {\n    padding-left: 2.25em;\n}\n.v-control.has-icons-left .has-icon.is-left {\n    left: 0;\n}\n.v-control.has-icons-right .v-input,\n  .v-control.has-icons-right .v-select select {\n    padding-right: 2.25em;\n}\n.v-control.has-icons-right .has-icon.is-right {\n    right: 0;\n}\n.v-control.is-loading::after {\n    -webkit-animation: v-kf-spin-around 500ms infinite linear;\n            animation: v-kf-spin-around 500ms infinite linear;\n    border: 2px solid #dbdbdb;\n    border-radius: 290486px;\n    border-right-color: transparent;\n    border-top-color: transparent;\n    content: \"\";\n    display: block;\n    box-sizing: border-box;\n    height: 1em;\n    width: 1em;\n    position: relative;\n    position: absolute !important;\n    right: 0.625em;\n    top: 0.625em;\n}\n.v-control.is-loading.is-small:after {\n    font-size: 0.75rem;\n}\n.v-control.is-loading.is-medium:after {\n    font-size: 1.25rem;\n}\n.v-control.is-loading.is-large:after {\n    font-size: 1.5rem;\n}\n.v-input,\n.v-textarea {\n  -moz-appearance: none;\n  -webkit-appearance: none;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  border: 1px solid transparent;\n  border-radius: 3px;\n  box-shadow: none;\n  display: -webkit-inline-box;\n  display: -ms-inline-flexbox;\n  display: inline-flex;\n  font-size: 1rem;\n  height: 2.25em;\n  -webkit-box-pack: start;\n      -ms-flex-pack: start;\n          justify-content: flex-start;\n  line-height: 1.5;\n  padding: calc(0.375em - 1px) calc(0.625em - 1px);\n  position: relative;\n  vertical-align: top;\n  background-color: white;\n  border-color: #dbdbdb;\n  color: #363636;\n  max-width: 100%;\n  width: 100%;\n}\n.v-input:focus, .v-input.is-focused, .v-input:active, .v-input.is-active,\n  .v-textarea:focus,\n  .v-textarea.is-focused,\n  .v-textarea:active,\n  .v-textarea.is-active {\n    outline: none;\n}\n.v-input[disabled],\n  .v-textarea[disabled] {\n    cursor: not-allowed;\n}\n.v-input:hover, .v-input.is-hovered,\n  .v-textarea:hover,\n  .v-textarea.is-hovered {\n    border-color: #b5b5b5;\n}\n.v-input:focus, .v-input.is-focused, .v-input:active, .v-input.is-active,\n  .v-textarea:focus,\n  .v-textarea.is-focused,\n  .v-textarea:active,\n  .v-textarea.is-active {\n    border-color: #1ca0f2;\n    box-shadow: 0 0 0 0.125em rgba(28, 160, 242, 0.25);\n}\n.v-input[disabled],\n  .v-textarea[disabled] {\n    background-color: whitesmoke;\n    border-color: whitesmoke;\n    box-shadow: none;\n    color: #7a7a7a;\n}\n.v-input[disabled]::-moz-placeholder,\n    .v-textarea[disabled]::-moz-placeholder {\n      color: rgba(122, 122, 122, 0.3);\n}\n.v-input[disabled]::-webkit-input-placeholder,\n    .v-textarea[disabled]::-webkit-input-placeholder {\n      color: rgba(122, 122, 122, 0.3);\n}\n.v-input[disabled]:-moz-placeholder,\n    .v-textarea[disabled]:-moz-placeholder {\n      color: rgba(122, 122, 122, 0.3);\n}\n.v-input[disabled]:-ms-input-placeholder,\n    .v-textarea[disabled]:-ms-input-placeholder {\n      color: rgba(122, 122, 122, 0.3);\n}\n.v-input[type=\"search\"],\n  .v-textarea[type=\"search\"] {\n    border-radius: 290486px;\n}\n.v-input.is-white,\n  .v-textarea.is-white {\n    border-color: white;\n}\n.v-input.is-white:focus, .v-input.is-white.is-focused, .v-input.is-white:active, .v-input.is-white.is-active,\n    .v-textarea.is-white:focus,\n    .v-textarea.is-white.is-focused,\n    .v-textarea.is-white:active,\n    .v-textarea.is-white.is-active {\n      box-shadow: 0 0 0 0.125em rgba(255, 255, 255, 0.25);\n}\n.v-input.is-black,\n  .v-textarea.is-black {\n    border-color: #0a0a0a;\n}\n.v-input.is-black:focus, .v-input.is-black.is-focused, .v-input.is-black:active, .v-input.is-black.is-active,\n    .v-textarea.is-black:focus,\n    .v-textarea.is-black.is-focused,\n    .v-textarea.is-black:active,\n    .v-textarea.is-black.is-active {\n      box-shadow: 0 0 0 0.125em rgba(10, 10, 10, 0.25);\n}\n.v-input.is-light,\n  .v-textarea.is-light {\n    border-color: whitesmoke;\n}\n.v-input.is-light:focus, .v-input.is-light.is-focused, .v-input.is-light:active, .v-input.is-light.is-active,\n    .v-textarea.is-light:focus,\n    .v-textarea.is-light.is-focused,\n    .v-textarea.is-light:active,\n    .v-textarea.is-light.is-active {\n      box-shadow: 0 0 0 0.125em rgba(245, 245, 245, 0.25);\n}\n.v-input.is-dark,\n  .v-textarea.is-dark {\n    border-color: #363636;\n}\n.v-input.is-dark:focus, .v-input.is-dark.is-focused, .v-input.is-dark:active, .v-input.is-dark.is-active,\n    .v-textarea.is-dark:focus,\n    .v-textarea.is-dark.is-focused,\n    .v-textarea.is-dark:active,\n    .v-textarea.is-dark.is-active {\n      box-shadow: 0 0 0 0.125em rgba(54, 54, 54, 0.25);\n}\n.v-input.is-primary,\n  .v-textarea.is-primary {\n    border-color: #1ca0f2;\n}\n.v-input.is-primary:focus, .v-input.is-primary.is-focused, .v-input.is-primary:active, .v-input.is-primary.is-active,\n    .v-textarea.is-primary:focus,\n    .v-textarea.is-primary.is-focused,\n    .v-textarea.is-primary:active,\n    .v-textarea.is-primary.is-active {\n      box-shadow: 0 0 0 0.125em rgba(28, 160, 242, 0.25);\n}\n.v-input.is-info,\n  .v-textarea.is-info {\n    border-color: #b86bff;\n}\n.v-input.is-info:focus, .v-input.is-info.is-focused, .v-input.is-info:active, .v-input.is-info.is-active,\n    .v-textarea.is-info:focus,\n    .v-textarea.is-info.is-focused,\n    .v-textarea.is-info:active,\n    .v-textarea.is-info.is-active {\n      box-shadow: 0 0 0 0.125em rgba(184, 107, 255, 0.25);\n}\n.v-input.is-success,\n  .v-textarea.is-success {\n    border-color: #23d160;\n}\n.v-input.is-success:focus, .v-input.is-success.is-focused, .v-input.is-success:active, .v-input.is-success.is-active,\n    .v-textarea.is-success:focus,\n    .v-textarea.is-success.is-focused,\n    .v-textarea.is-success:active,\n    .v-textarea.is-success.is-active {\n      box-shadow: 0 0 0 0.125em rgba(35, 209, 96, 0.25);\n}\n.v-input.is-warning,\n  .v-textarea.is-warning {\n    border-color: #ffdd57;\n}\n.v-input.is-warning:focus, .v-input.is-warning.is-focused, .v-input.is-warning:active, .v-input.is-warning.is-active,\n    .v-textarea.is-warning:focus,\n    .v-textarea.is-warning.is-focused,\n    .v-textarea.is-warning:active,\n    .v-textarea.is-warning.is-active {\n      box-shadow: 0 0 0 0.125em rgba(255, 221, 87, 0.25);\n}\n.v-input.is-danger,\n  .v-textarea.is-danger {\n    border-color: #ff3860;\n}\n.v-input.is-danger:focus, .v-input.is-danger.is-focused, .v-input.is-danger:active, .v-input.is-danger.is-active,\n    .v-textarea.is-danger:focus,\n    .v-textarea.is-danger.is-focused,\n    .v-textarea.is-danger:active,\n    .v-textarea.is-danger.is-active {\n      box-shadow: 0 0 0 0.125em rgba(255, 56, 96, 0.25);\n}\n.v-input.is-small,\n  .v-textarea.is-small {\n    border-radius: 2px;\n    font-size: 0.75rem;\n}\n.v-input.is-medium,\n  .v-textarea.is-medium {\n    font-size: 1.25rem;\n}\n.v-input.is-large,\n  .v-textarea.is-large {\n    font-size: 1.5rem;\n}\n.v-input.is-fullwidth,\n  .v-textarea.is-fullwidth {\n    display: block;\n    width: 100%;\n}\n.v-input.is-inline,\n  .v-textarea.is-inline {\n    display: inline;\n    width: auto;\n}\n.v-select {\n  display: inline-block;\n  max-width: 100%;\n  position: relative;\n  vertical-align: top;\n  box-sizing: border-box;\n}\n.v-select:not(.is-multiple) {\n    height: 2.25em;\n}\n.v-select:not(.is-multiple)::after {\n      border: 1px solid #1ca0f2;\n      border-right: 0;\n      border-top: 0;\n      content: \" \";\n      display: block;\n      height: 0.5em;\n      pointer-events: none;\n      position: absolute;\n      -webkit-transform: rotate(-45deg);\n              transform: rotate(-45deg);\n      width: 0.5em;\n      margin-top: -0.375em;\n      right: 1.125em;\n      top: 50%;\n      z-index: 4;\n}\n.v-select select {\n    -moz-appearance: none;\n    -webkit-appearance: none;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    border: 1px solid transparent;\n    border-radius: 3px;\n    box-shadow: none;\n    display: -webkit-inline-box;\n    display: -ms-inline-flexbox;\n    display: inline-flex;\n    font-size: 1rem;\n    height: 2.25em;\n    -webkit-box-pack: start;\n        -ms-flex-pack: start;\n            justify-content: flex-start;\n    line-height: 1.5;\n    padding: calc(0.375em - 1px) calc(0.625em - 1px);\n    position: relative;\n    vertical-align: top;\n    background-color: white;\n    border-color: #dbdbdb;\n    color: #363636;\n    cursor: pointer;\n    display: block;\n    font-size: 1em;\n    max-width: 100%;\n    outline: none;\n}\n.v-select select:focus, .v-select select.is-focused, .v-select select:active, .v-select select.is-active {\n      outline: none;\n}\n.v-select select[disabled] {\n      cursor: not-allowed;\n}\n.v-select select:hover, .v-select select.is-hovered {\n      border-color: #b5b5b5;\n}\n.v-select select:focus, .v-select select.is-focused, .v-select select:active, .v-select select.is-active {\n      border-color: #1ca0f2;\n      box-shadow: 0 0 0 0.125em rgba(28, 160, 242, 0.25);\n}\n.v-select select[disabled] {\n      background-color: whitesmoke;\n      border-color: whitesmoke;\n      box-shadow: none;\n      color: #7a7a7a;\n}\n.v-select select[disabled]::-moz-placeholder {\n        color: rgba(122, 122, 122, 0.3);\n}\n.v-select select[disabled]::-webkit-input-placeholder {\n        color: rgba(122, 122, 122, 0.3);\n}\n.v-select select[disabled]:-moz-placeholder {\n        color: rgba(122, 122, 122, 0.3);\n}\n.v-select select[disabled]:-ms-input-placeholder {\n        color: rgba(122, 122, 122, 0.3);\n}\n.v-select select::-ms-expand {\n      display: none;\n}\n.v-select select[disabled]:hover {\n      border-color: whitesmoke;\n}\n.v-select select:not([multiple]) {\n      padding-right: 2.5em;\n}\n.v-select select[multiple] {\n      height: unset;\n      padding: 0;\n}\n.v-select select[multiple] option {\n        padding: 0.5em 1em;\n}\n.v-select:hover::after {\n    border-color: #363636;\n}\n.v-select.is-white select {\n    border-color: white;\n}\n.v-select.is-white select:focus, .v-select.is-white select.is-focused, .v-select.is-white select:active, .v-select.is-white select.is-active {\n      box-shadow: 0 0 0 0.125em rgba(255, 255, 255, 0.25);\n}\n.v-select.is-black select {\n    border-color: #0a0a0a;\n}\n.v-select.is-black select:focus, .v-select.is-black select.is-focused, .v-select.is-black select:active, .v-select.is-black select.is-active {\n      box-shadow: 0 0 0 0.125em rgba(10, 10, 10, 0.25);\n}\n.v-select.is-light select {\n    border-color: whitesmoke;\n}\n.v-select.is-light select:focus, .v-select.is-light select.is-focused, .v-select.is-light select:active, .v-select.is-light select.is-active {\n      box-shadow: 0 0 0 0.125em rgba(245, 245, 245, 0.25);\n}\n.v-select.is-dark select {\n    border-color: #363636;\n}\n.v-select.is-dark select:focus, .v-select.is-dark select.is-focused, .v-select.is-dark select:active, .v-select.is-dark select.is-active {\n      box-shadow: 0 0 0 0.125em rgba(54, 54, 54, 0.25);\n}\n.v-select.is-primary select {\n    border-color: #1ca0f2;\n}\n.v-select.is-primary select:focus, .v-select.is-primary select.is-focused, .v-select.is-primary select:active, .v-select.is-primary select.is-active {\n      box-shadow: 0 0 0 0.125em rgba(28, 160, 242, 0.25);\n}\n.v-select.is-info select {\n    border-color: #b86bff;\n}\n.v-select.is-info select:focus, .v-select.is-info select.is-focused, .v-select.is-info select:active, .v-select.is-info select.is-active {\n      box-shadow: 0 0 0 0.125em rgba(184, 107, 255, 0.25);\n}\n.v-select.is-success select {\n    border-color: #23d160;\n}\n.v-select.is-success select:focus, .v-select.is-success select.is-focused, .v-select.is-success select:active, .v-select.is-success select.is-active {\n      box-shadow: 0 0 0 0.125em rgba(35, 209, 96, 0.25);\n}\n.v-select.is-warning select {\n    border-color: #ffdd57;\n}\n.v-select.is-warning select:focus, .v-select.is-warning select.is-focused, .v-select.is-warning select:active, .v-select.is-warning select.is-active {\n      box-shadow: 0 0 0 0.125em rgba(255, 221, 87, 0.25);\n}\n.v-select.is-danger select {\n    border-color: #ff3860;\n}\n.v-select.is-danger select:focus, .v-select.is-danger select.is-focused, .v-select.is-danger select:active, .v-select.is-danger select.is-active {\n      box-shadow: 0 0 0 0.125em rgba(255, 56, 96, 0.25);\n}\n.v-select.is-small {\n    border-radius: 2px;\n    font-size: 0.75rem;\n}\n.v-select.is-medium {\n    font-size: 1.25rem;\n}\n.v-select.is-large {\n    font-size: 1.5rem;\n}\n.v-select.is-disabled::after {\n    border-color: #7a7a7a;\n}\n.v-select.is-fullwidth {\n    width: 100%;\n}\n.v-select.is-fullwidth select {\n      width: 100%;\n}\n.v-select.is-loading::after {\n    -webkit-animation: v-kf-spin-around 500ms infinite linear;\n            animation: v-kf-spin-around 500ms infinite linear;\n    border: 2px solid #dbdbdb;\n    border-radius: 290486px;\n    border-right-color: transparent;\n    border-top-color: transparent;\n    content: \"\";\n    display: block;\n    box-sizing: border-box;\n    height: 1em;\n    width: 1em;\n    position: relative;\n    margin-top: 0;\n    position: absolute;\n    right: 0.625em;\n    top: 0.625em;\n    -webkit-transform: none;\n            transform: none;\n}\n.v-select.is-loading.is-small:after {\n    font-size: 0.75rem;\n}\n.v-select.is-loading.is-medium:after {\n    font-size: 1.25rem;\n}\n.v-select.is-loading.is-large:after {\n    font-size: 1.5rem;\n}\n.v-textarea {\n  display: block;\n  max-width: 100%;\n  min-width: 100%;\n  padding: 0.625em;\n  resize: vertical;\n}\n.v-textarea:not([rows]) {\n    max-height: 600px;\n    min-height: 120px;\n}\n.v-textarea[rows] {\n    height: unset;\n}\n.v-textarea.has-fixed-size {\n    resize: none;\n}\n.v-checkbox,\n.v-radio {\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  cursor: pointer;\n  display: inline-block;\n  line-height: 1.25;\n  position: relative;\n}\n.v-checkbox input,\n  .v-radio input {\n    cursor: pointer;\n}\n.v-checkbox:hover,\n  .v-radio:hover {\n    color: #363636;\n}\n.v-checkbox[disabled],\n  .v-radio[disabled] {\n    color: #7a7a7a;\n    cursor: not-allowed;\n}\n.v-radio + .v-radio {\n  margin-left: 1em;\n}\n.v-label {\n  color: #363636;\n  display: block;\n  font-size: 1rem;\n  font-weight: 700;\n  line-height: 1.5em;\n}\n.v-label:not(:last-child) {\n    margin-bottom: 0.5em;\n}\n.v-label.is-small {\n    font-size: 0.75rem;\n}\n.v-label.is-medium {\n    font-size: 1.25rem;\n}\n.v-label.is-large {\n    font-size: 1.5rem;\n}\n.v-help {\n  display: block;\n  font-size: 0.75rem;\n  margin-top: 0.25rem;\n}\n.v-help.is-white {\n    color: white;\n}\n.v-help.is-black {\n    color: #0a0a0a;\n}\n.v-help.is-light {\n    color: whitesmoke;\n}\n.v-help.is-dark {\n    color: #363636;\n}\n.v-help.is-primary {\n    color: #1ca0f2;\n}\n.v-help.is-info {\n    color: #b86bff;\n}\n.v-help.is-success {\n    color: #23d160;\n}\n.v-help.is-warning {\n    color: #ffdd57;\n}\n.v-help.is-danger {\n    color: #ff3860;\n}\n.v-content:not(:last-child) {\n  margin-bottom: 1.5rem;\n}\n.v-content li + li {\n  margin-top: 0.25em;\n}\n.v-content p:not(:last-child),\n.v-content dl:not(:last-child),\n.v-content ol:not(:last-child),\n.v-content ul:not(:last-child),\n.v-content blockquote:not(:last-child),\n.v-content pre:not(:last-child),\n.v-content table:not(:last-child) {\n  margin-bottom: 1em;\n}\n.v-content h1,\n.v-content h2,\n.v-content h3,\n.v-content h4,\n.v-content h5,\n.v-content h6 {\n  color: #363636;\n  font-weight: 400;\n  line-height: 1.125;\n}\n.v-content h1 {\n  font-size: 2em;\n  margin-bottom: 0.5em;\n}\n.v-content h1:not(:first-child) {\n    margin-top: 1em;\n}\n.v-content h2 {\n  font-size: 1.75em;\n  margin-bottom: 0.5714em;\n}\n.v-content h2:not(:first-child) {\n    margin-top: 1.1428em;\n}\n.v-content h3 {\n  font-size: 1.5em;\n  margin-bottom: 0.6666em;\n}\n.v-content h3:not(:first-child) {\n    margin-top: 1.3333em;\n}\n.v-content h4 {\n  font-size: 1.25em;\n  margin-bottom: 0.8em;\n}\n.v-content h5 {\n  font-size: 1.125em;\n  margin-bottom: 0.8888em;\n}\n.v-content h6 {\n  font-size: 1em;\n  margin-bottom: 1em;\n}\n.v-content blockquote {\n  background-color: whitesmoke;\n  border-left: 5px solid #dbdbdb;\n  padding: 1.25em 1.5em;\n}\n.v-content ol {\n  list-style: decimal outside;\n  margin-left: 2em;\n  margin-top: 1em;\n}\n.v-content ul {\n  list-style: disc outside;\n  margin-left: 2em;\n  margin-top: 1em;\n}\n.v-content ul ul {\n    list-style-type: circle;\n    margin-top: 0.5em;\n}\n.v-content ul ul ul {\n      list-style-type: square;\n}\n.v-content dd {\n  margin-left: 2em;\n}\n.v-content figure {\n  margin-left: 2em;\n  margin-right: 2em;\n  text-align: center;\n}\n.v-content figure:not(:first-child) {\n    margin-top: 2em;\n}\n.v-content figure:not(:last-child) {\n    margin-bottom: 2em;\n}\n.v-content figure img {\n    display: inline-block;\n}\n.v-content figure figcaption {\n    font-style: italic;\n}\n.v-content pre {\n  -webkit-overflow-scrolling: touch;\n  overflow-x: auto;\n  padding: 1.25em 1.5em;\n  white-space: pre;\n  word-wrap: normal;\n}\n.v-content sup,\n.v-content sub {\n  font-size: 75%;\n}\n.v-content table {\n  width: 100%;\n}\n.v-content table td,\n  .v-content table th {\n    border: 1px solid #dbdbdb;\n    border-width: 0 0 1px;\n    padding: 0.5em 0.75em;\n    vertical-align: top;\n}\n.v-content table th {\n    color: #363636;\n    text-align: left;\n}\n.v-content table tr:hover {\n    background-color: whitesmoke;\n}\n.v-content table thead td,\n  .v-content table thead th {\n    border-width: 0 0 2px;\n    color: #363636;\n}\n.v-content table tfoot td,\n  .v-content table tfoot th {\n    border-width: 2px 0 0;\n    color: #363636;\n}\n.v-content table tbody tr:last-child td,\n  .v-content table tbody tr:last-child th {\n    border-bottom-width: 0;\n}\n.v-content.is-small {\n  font-size: 0.75rem;\n}\n.v-content.is-medium {\n  font-size: 1.25rem;\n}\n.v-content.is-large {\n  font-size: 1.5rem;\n}\n.v-media {\n  -webkit-box-align: start;\n      -ms-flex-align: start;\n          align-items: flex-start;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  text-align: left;\n}\n.v-media .v-content:not(:last-child) {\n    margin-bottom: 0.75rem;\n}\n.v-media .v-media {\n    border-top: 1px solid rgba(219, 219, 219, 0.5);\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    padding-top: 0.75rem;\n}\n.v-media .v-media .v-content:not(:last-child),\n    .v-media .v-media .v-control:not(:last-child) {\n      margin-bottom: 0.5rem;\n}\n.v-media .v-media .v-media {\n      padding-top: 0.5rem;\n}\n.v-media .v-media .v-media + .v-media {\n        margin-top: 0.5rem;\n}\n.v-media + .v-media {\n    border-top: 1px solid rgba(219, 219, 219, 0.5);\n    margin-top: 1rem;\n    padding-top: 1rem;\n}\n.v-media.is-large + .v-media {\n    margin-top: 1.5rem;\n    padding-top: 1.5rem;\n}\n.v-media-left,\n.v-media-right {\n  -ms-flex-preferred-size: auto;\n      flex-basis: auto;\n  -webkit-box-flex: 0;\n      -ms-flex-positive: 0;\n          flex-grow: 0;\n  -ms-flex-negative: 0;\n      flex-shrink: 0;\n}\n.v-media-left {\n  margin-right: 1rem;\n}\n.v-media-right {\n  margin-left: 1rem;\n}\n.v-media-content {\n  -ms-flex-preferred-size: auto;\n      flex-basis: auto;\n  -webkit-box-flex: 1;\n      -ms-flex-positive: 1;\n          flex-grow: 1;\n  -ms-flex-negative: 1;\n      flex-shrink: 1;\n  text-align: left;\n}\n.v-box {\n  background-color: white;\n  border-radius: 5px;\n  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);\n  color: #4a4a4a;\n  display: block;\n  padding: 1.25rem;\n}\n.v-box:not(:last-child) {\n    margin-bottom: 1.5rem;\n}\na.v-box:hover, a.v-box:focus {\n  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px #1ca0f2;\n}\na.v-box:active {\n  box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.2), 0 0 0 1px #1ca0f2;\n}\n.v-content:not(:last-child) {\n  margin-bottom: 1.5rem;\n}\n.v-content li + li {\n  margin-top: 0.25em;\n}\n.v-content p:not(:last-child),\n.v-content dl:not(:last-child),\n.v-content ol:not(:last-child),\n.v-content ul:not(:last-child),\n.v-content blockquote:not(:last-child),\n.v-content pre:not(:last-child),\n.v-content table:not(:last-child) {\n  margin-bottom: 1em;\n}\n.v-content h1,\n.v-content h2,\n.v-content h3,\n.v-content h4,\n.v-content h5,\n.v-content h6 {\n  color: #363636;\n  font-weight: 400;\n  line-height: 1.125;\n}\n.v-content h1 {\n  font-size: 2em;\n  margin-bottom: 0.5em;\n}\n.v-content h1:not(:first-child) {\n    margin-top: 1em;\n}\n.v-content h2 {\n  font-size: 1.75em;\n  margin-bottom: 0.5714em;\n}\n.v-content h2:not(:first-child) {\n    margin-top: 1.1428em;\n}\n.v-content h3 {\n  font-size: 1.5em;\n  margin-bottom: 0.6666em;\n}\n.v-content h3:not(:first-child) {\n    margin-top: 1.3333em;\n}\n.v-content h4 {\n  font-size: 1.25em;\n  margin-bottom: 0.8em;\n}\n.v-content h5 {\n  font-size: 1.125em;\n  margin-bottom: 0.8888em;\n}\n.v-content h6 {\n  font-size: 1em;\n  margin-bottom: 1em;\n}\n.v-content blockquote {\n  background-color: whitesmoke;\n  border-left: 5px solid #dbdbdb;\n  padding: 1.25em 1.5em;\n}\n.v-content ol {\n  list-style: decimal outside;\n  margin-left: 2em;\n  margin-top: 1em;\n}\n.v-content ul {\n  list-style: disc outside;\n  margin-left: 2em;\n  margin-top: 1em;\n}\n.v-content ul ul {\n    list-style-type: circle;\n    margin-top: 0.5em;\n}\n.v-content ul ul ul {\n      list-style-type: square;\n}\n.v-content dd {\n  margin-left: 2em;\n}\n.v-content figure {\n  margin-left: 2em;\n  margin-right: 2em;\n  text-align: center;\n}\n.v-content figure:not(:first-child) {\n    margin-top: 2em;\n}\n.v-content figure:not(:last-child) {\n    margin-bottom: 2em;\n}\n.v-content figure img {\n    display: inline-block;\n}\n.v-content figure figcaption {\n    font-style: italic;\n}\n.v-content pre {\n  -webkit-overflow-scrolling: touch;\n  overflow-x: auto;\n  padding: 1.25em 1.5em;\n  white-space: pre;\n  word-wrap: normal;\n}\n.v-content sup,\n.v-content sub {\n  font-size: 75%;\n}\n.v-content table {\n  width: 100%;\n}\n.v-content table td,\n  .v-content table th {\n    border: 1px solid #dbdbdb;\n    border-width: 0 0 1px;\n    padding: 0.5em 0.75em;\n    vertical-align: top;\n}\n.v-content table th {\n    color: #363636;\n    text-align: left;\n}\n.v-content table tr:hover {\n    background-color: whitesmoke;\n}\n.v-content table thead td,\n  .v-content table thead th {\n    border-width: 0 0 2px;\n    color: #363636;\n}\n.v-content table tfoot td,\n  .v-content table tfoot th {\n    border-width: 2px 0 0;\n    color: #363636;\n}\n.v-content table tbody tr:last-child td,\n  .v-content table tbody tr:last-child th {\n    border-bottom-width: 0;\n}\n.v-content.is-small {\n  font-size: 0.75rem;\n}\n.v-content.is-medium {\n  font-size: 1.25rem;\n}\n.v-content.is-large {\n  font-size: 1.5rem;\n}\n.v-notification {\n  background-color: whitesmoke;\n  border-radius: 3px;\n  padding: 1.25rem 2.5rem 1.25rem 1.5rem;\n  position: relative;\n}\n.v-notification:not(:last-child) {\n    margin-bottom: 1.5rem;\n}\n.v-notification a:not(.button) {\n    color: currentColor;\n    text-decoration: underline;\n}\n.v-notification strong {\n    color: currentColor;\n}\n.v-notification code,\n  .v-notification pre {\n    background: white;\n}\n.v-notification pre code {\n    background: transparent;\n}\n.v-notification > .v-close {\n    position: absolute;\n    right: 0.5em;\n    top: 0.5em;\n}\n.v-notification .v-title,\n  .v-notification .v-subtitle,\n  .v-notification .v-content {\n    color: currentColor;\n}\n.v-notification.is-white {\n    background-color: white;\n    color: #0a0a0a;\n}\n.v-notification.is-black {\n    background-color: #0a0a0a;\n    color: white;\n}\n.v-notification.is-light {\n    background-color: whitesmoke;\n    color: #363636;\n}\n.v-notification.is-dark {\n    background-color: #363636;\n    color: whitesmoke;\n}\n.v-notification.is-primary {\n    background-color: #1ca0f2;\n    color: #fff;\n}\n.v-notification.is-info {\n    background-color: #b86bff;\n    color: #fff;\n}\n.v-notification.is-success {\n    background-color: #23d160;\n    color: #fff;\n}\n.v-notification.is-warning {\n    background-color: #ffdd57;\n    color: rgba(0, 0, 0, 0.7);\n}\n.v-notification.is-danger {\n    background-color: #ff3860;\n    color: #fff;\n}\n.v-notification-popup {\n  position: fixed;\n  right: 16px;\n  box-shadow: 0 0 3px rgba(0, 0, 0, 0.04), 0 1px 4px rgba(0, 0, 0, 0.15);\n  transition: opacity 0.3s, right .3s, top 0.4s, -webkit-transform .3s;\n  transition: opacity 0.3s, transform .3s, right .3s, top 0.4s;\n  transition: opacity 0.3s, transform .3s, right .3s, top 0.4s, -webkit-transform .3s;\n  overflow: hidden;\n  z-index: 1010;\n  max-width: 480px;\n}\n.v-notification-popup > .v-notification {\n    padding-top: 1rem;\n}\n.v-notification-popup .has-title {\n    padding: 0;\n    margin: 0;\n    font-size: 1.25rem;\n}\n.v-notification-popup .has-content {\n    padding-top: 0.25rem;\n}\n.v-table {\n  width: 100%;\n  border-spacing: 0;\n  border-collapse: collapse;\n  display: table;\n  cursor: default;\n  color: #363636;\n  margin-bottom: 1.5rem;\n}\n.v-table th, .v-table td {\n    border: 0;\n}\n.v-table th {\n    text-align: left;\n    font-weight: bold;\n}\n.v-table td,\n  .v-table th {\n    border: 1px solid #dbdbdb;\n    border-width: 0 0 1px;\n    padding: 0.65em 0.75em;\n    vertical-align: top;\n}\n.v-table td.is-white,\n    .v-table th.is-white {\n      background-color: white;\n      border-color: white;\n      color: #0a0a0a;\n}\n.v-table td.is-black,\n    .v-table th.is-black {\n      background-color: #0a0a0a;\n      border-color: #0a0a0a;\n      color: white;\n}\n.v-table td.is-light,\n    .v-table th.is-light {\n      background-color: whitesmoke;\n      border-color: whitesmoke;\n      color: #363636;\n}\n.v-table td.is-dark,\n    .v-table th.is-dark {\n      background-color: #363636;\n      border-color: #363636;\n      color: whitesmoke;\n}\n.v-table td.is-primary,\n    .v-table th.is-primary {\n      background-color: #1ca0f2;\n      border-color: #1ca0f2;\n      color: #fff;\n}\n.v-table td.is-info,\n    .v-table th.is-info {\n      background-color: #b86bff;\n      border-color: #b86bff;\n      color: #fff;\n}\n.v-table td.is-success,\n    .v-table th.is-success {\n      background-color: #23d160;\n      border-color: #23d160;\n      color: #fff;\n}\n.v-table td.is-warning,\n    .v-table th.is-warning {\n      background-color: #ffdd57;\n      border-color: #ffdd57;\n      color: rgba(0, 0, 0, 0.7);\n}\n.v-table td.is-danger,\n    .v-table th.is-danger {\n      background-color: #ff3860;\n      border-color: #ff3860;\n      color: #fff;\n}\n.v-table td.is-narrow,\n    .v-table th.is-narrow {\n      white-space: nowrap;\n      width: 1%;\n}\n.v-table th {\n    color: #363636;\n    text-align: left;\n    background-color: #ededed;\n}\n.v-table tr:hover {\n    background-color: #fafafa;\n}\n.v-table tr.is-selected {\n    background-color: #1ca0f2;\n    color: #fff;\n}\n.v-table tr.is-selected a,\n    .v-table tr.is-selected strong {\n      color: currentColor;\n}\n.v-table tr.is-selected td,\n    .v-table tr.is-selected th {\n      border-color: #fff;\n      color: currentColor;\n}\n.v-table thead td,\n  .v-table thead th {\n    border-width: 0 0 2px;\n    color: #363636;\n}\n.v-table tfoot td,\n  .v-table tfoot th {\n    border-width: 2px 0 0;\n    color: #363636;\n}\n.v-table tbody tr:last-child td,\n  .v-table tbody tr:last-child th {\n    border-bottom-width: 0;\n}\n.v-table.is-bordered td,\n  .v-table.is-bordered th {\n    border-width: 1px;\n}\n.v-table.is-bordered tr:last-child td,\n  .v-table.is-bordered tr:last-child th {\n    border-bottom-width: 1px;\n}\n.v-table.is-fit-content {\n    width: auto;\n}\n.v-table.is-narrow td,\n  .v-table.is-narrow th {\n    padding: 0.25em 0.5em;\n}\n.v-table.is-striped tbody tr:not(.is-selected):nth-child(even) {\n    background-color: #fafafa;\n}\n.v-table.is-striped tbody tr:not(.is-selected):nth-child(even):hover {\n      background-color: whitesmoke;\n}\n.v-badge {\n  position: relative;\n  display: inline-block;\n  line-height: 1;\n  vertical-align: middle;\n}\n.v-badge .has-badge {\n    width: 42px;\n    height: 42px;\n    background: #eee;\n    border-radius: 6px;\n    display: inline-block;\n}\n.v-badge .has-badge-dot, .v-badge .has-badge-count {\n    position: absolute;\n    -webkit-transform: translateX(-50%);\n            transform: translateX(-50%);\n    -webkit-transform-origin: 0 center;\n            transform-origin: 0 center;\n    top: -4px;\n    right: -8px;\n    height: 8px;\n    min-width: 8px;\n    border-radius: 100%;\n    background: #ed3f14;\n    z-index: 10;\n    box-shadow: 0 0 0 1px white;\n}\n.v-badge .has-badge-count {\n    -webkit-transform: translateX(50%);\n            transform: translateX(50%);\n    top: -10px;\n    right: 0;\n    height: 20px;\n    border-radius: 10px;\n    min-width: 20px;\n    background: #ed3f14;\n    border: 1px solid transparent;\n    color: white;\n    line-height: 18px;\n    text-align: center;\n    padding: 0 6px;\n    font-size: 12px;\n    white-space: nowrap;\n    -webkit-transform-origin: -10% center;\n            transform-origin: -10% center;\n    z-index: 10;\n    box-sizing: border-box;\n    box-shadow: 0 0 0 1px white;\n}\n.v-close {\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  -moz-appearance: none;\n  -webkit-appearance: none;\n  background-color: rgba(10, 10, 10, 0.2);\n  border: none;\n  border-radius: 290486px;\n  cursor: pointer;\n  display: inline-block;\n  -webkit-box-flex: 0;\n      -ms-flex-positive: 0;\n          flex-grow: 0;\n  -ms-flex-negative: 0;\n      flex-shrink: 0;\n  font-size: 1rem;\n  height: 20px;\n  max-height: 20px;\n  max-width: 20px;\n  min-height: 20px;\n  min-width: 20px;\n  outline: none;\n  position: relative;\n  vertical-align: top;\n  width: 20px;\n}\n.v-close:before, .v-close:after {\n    background-color: white;\n    content: \"\";\n    display: block;\n    left: 50%;\n    position: absolute;\n    top: 50%;\n    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);\n            transform: translateX(-50%) translateY(-50%) rotate(45deg);\n    -webkit-transform-origin: center center;\n            transform-origin: center center;\n}\n.v-close:before {\n    height: 2px;\n    width: 50%;\n}\n.v-close:after {\n    height: 50%;\n    width: 2px;\n}\n.v-close:hover, .v-close:focus {\n    background-color: rgba(10, 10, 10, 0.3);\n}\n.v-close:active {\n    background-color: rgba(10, 10, 10, 0.4);\n}\n.v-close.is-white {\n    background-color: rgba(255, 255, 255, 0.4);\n}\n.v-close.is-white:hover, .v-close.is-white:focus {\n      background-color: rgba(255, 255, 255, 0.6);\n}\n.v-close.is-white:active {\n      background-color: rgba(255, 255, 255, 0.9);\n}\n.v-close.is-black {\n    background-color: rgba(10, 10, 10, 0.4);\n}\n.v-close.is-black:hover, .v-close.is-black:focus {\n      background-color: rgba(10, 10, 10, 0.6);\n}\n.v-close.is-black:active {\n      background-color: rgba(10, 10, 10, 0.9);\n}\n.v-close.is-light {\n    background-color: rgba(245, 245, 245, 0.4);\n}\n.v-close.is-light:hover, .v-close.is-light:focus {\n      background-color: rgba(245, 245, 245, 0.6);\n}\n.v-close.is-light:active {\n      background-color: rgba(245, 245, 245, 0.9);\n}\n.v-close.is-dark {\n    background-color: rgba(54, 54, 54, 0.4);\n}\n.v-close.is-dark:hover, .v-close.is-dark:focus {\n      background-color: rgba(54, 54, 54, 0.6);\n}\n.v-close.is-dark:active {\n      background-color: rgba(54, 54, 54, 0.9);\n}\n.v-close.is-primary {\n    background-color: rgba(28, 160, 242, 0.4);\n}\n.v-close.is-primary:hover, .v-close.is-primary:focus {\n      background-color: rgba(28, 160, 242, 0.6);\n}\n.v-close.is-primary:active {\n      background-color: rgba(28, 160, 242, 0.9);\n}\n.v-close.is-info {\n    background-color: rgba(184, 107, 255, 0.4);\n}\n.v-close.is-info:hover, .v-close.is-info:focus {\n      background-color: rgba(184, 107, 255, 0.6);\n}\n.v-close.is-info:active {\n      background-color: rgba(184, 107, 255, 0.9);\n}\n.v-close.is-success {\n    background-color: rgba(35, 209, 96, 0.4);\n}\n.v-close.is-success:hover, .v-close.is-success:focus {\n      background-color: rgba(35, 209, 96, 0.6);\n}\n.v-close.is-success:active {\n      background-color: rgba(35, 209, 96, 0.9);\n}\n.v-close.is-warning {\n    background-color: rgba(255, 221, 87, 0.4);\n}\n.v-close.is-warning:hover, .v-close.is-warning:focus {\n      background-color: rgba(255, 221, 87, 0.6);\n}\n.v-close.is-warning:active {\n      background-color: rgba(255, 221, 87, 0.9);\n}\n.v-close.is-danger {\n    background-color: rgba(255, 56, 96, 0.4);\n}\n.v-close.is-danger:hover, .v-close.is-danger:focus {\n      background-color: rgba(255, 56, 96, 0.6);\n}\n.v-close.is-danger:active {\n      background-color: rgba(255, 56, 96, 0.9);\n}\n.v-close.is-small {\n    height: 16px;\n    max-height: 16px;\n    max-width: 16px;\n    min-height: 16px;\n    min-width: 16px;\n    width: 16px;\n}\n.v-close.is-medium {\n    height: 24px;\n    max-height: 24px;\n    max-width: 24px;\n    min-height: 24px;\n    min-width: 24px;\n    width: 24px;\n}\n.v-close.is-large {\n    height: 32px;\n    max-height: 32px;\n    max-width: 32px;\n    min-height: 32px;\n    min-width: 32px;\n    width: 32px;\n}\n.v-close.is-transparent {\n    background-color: transparent !important;\n}\n.v-close.is-transparent:before, .v-close.is-transparent:after {\n      background-color: rgba(10, 10, 10, 0.6);\n}\n.v-close.is-transparent:hover::before, .v-close.is-transparent:hover::after, .v-close.is-transparent:focus::before, .v-close.is-transparent:focus::after {\n      background-color: rgba(10, 10, 10, 0.8);\n}\n.v-close.is-transparent:active::before, .v-close.is-transparent:active::after {\n      background-color: #0a0a0a;\n}\n.v-close.is-transparent.is-white::before, .v-close.is-transparent.is-white::after {\n      background-color: rgba(255, 255, 255, 0.6);\n}\n.v-close.is-transparent.is-white:hover::before, .v-close.is-transparent.is-white:hover::after, .v-close.is-transparent.is-white:focus::before, .v-close.is-transparent.is-white:focus::after {\n      background-color: rgba(255, 255, 255, 0.8);\n}\n.v-close.is-transparent.is-white:active::before, .v-close.is-transparent.is-white:active::after {\n      background-color: white;\n}\n.v-close.is-transparent.is-black::before, .v-close.is-transparent.is-black::after {\n      background-color: rgba(10, 10, 10, 0.6);\n}\n.v-close.is-transparent.is-black:hover::before, .v-close.is-transparent.is-black:hover::after, .v-close.is-transparent.is-black:focus::before, .v-close.is-transparent.is-black:focus::after {\n      background-color: rgba(10, 10, 10, 0.8);\n}\n.v-close.is-transparent.is-black:active::before, .v-close.is-transparent.is-black:active::after {\n      background-color: #0a0a0a;\n}\n.v-close.is-transparent.is-light::before, .v-close.is-transparent.is-light::after {\n      background-color: rgba(245, 245, 245, 0.6);\n}\n.v-close.is-transparent.is-light:hover::before, .v-close.is-transparent.is-light:hover::after, .v-close.is-transparent.is-light:focus::before, .v-close.is-transparent.is-light:focus::after {\n      background-color: rgba(245, 245, 245, 0.8);\n}\n.v-close.is-transparent.is-light:active::before, .v-close.is-transparent.is-light:active::after {\n      background-color: whitesmoke;\n}\n.v-close.is-transparent.is-dark::before, .v-close.is-transparent.is-dark::after {\n      background-color: rgba(54, 54, 54, 0.6);\n}\n.v-close.is-transparent.is-dark:hover::before, .v-close.is-transparent.is-dark:hover::after, .v-close.is-transparent.is-dark:focus::before, .v-close.is-transparent.is-dark:focus::after {\n      background-color: rgba(54, 54, 54, 0.8);\n}\n.v-close.is-transparent.is-dark:active::before, .v-close.is-transparent.is-dark:active::after {\n      background-color: #363636;\n}\n.v-close.is-transparent.is-primary::before, .v-close.is-transparent.is-primary::after {\n      background-color: rgba(28, 160, 242, 0.6);\n}\n.v-close.is-transparent.is-primary:hover::before, .v-close.is-transparent.is-primary:hover::after, .v-close.is-transparent.is-primary:focus::before, .v-close.is-transparent.is-primary:focus::after {\n      background-color: rgba(28, 160, 242, 0.8);\n}\n.v-close.is-transparent.is-primary:active::before, .v-close.is-transparent.is-primary:active::after {\n      background-color: #1ca0f2;\n}\n.v-close.is-transparent.is-info::before, .v-close.is-transparent.is-info::after {\n      background-color: rgba(184, 107, 255, 0.6);\n}\n.v-close.is-transparent.is-info:hover::before, .v-close.is-transparent.is-info:hover::after, .v-close.is-transparent.is-info:focus::before, .v-close.is-transparent.is-info:focus::after {\n      background-color: rgba(184, 107, 255, 0.8);\n}\n.v-close.is-transparent.is-info:active::before, .v-close.is-transparent.is-info:active::after {\n      background-color: #b86bff;\n}\n.v-close.is-transparent.is-success::before, .v-close.is-transparent.is-success::after {\n      background-color: rgba(35, 209, 96, 0.6);\n}\n.v-close.is-transparent.is-success:hover::before, .v-close.is-transparent.is-success:hover::after, .v-close.is-transparent.is-success:focus::before, .v-close.is-transparent.is-success:focus::after {\n      background-color: rgba(35, 209, 96, 0.8);\n}\n.v-close.is-transparent.is-success:active::before, .v-close.is-transparent.is-success:active::after {\n      background-color: #23d160;\n}\n.v-close.is-transparent.is-warning::before, .v-close.is-transparent.is-warning::after {\n      background-color: rgba(255, 221, 87, 0.6);\n}\n.v-close.is-transparent.is-warning:hover::before, .v-close.is-transparent.is-warning:hover::after, .v-close.is-transparent.is-warning:focus::before, .v-close.is-transparent.is-warning:focus::after {\n      background-color: rgba(255, 221, 87, 0.8);\n}\n.v-close.is-transparent.is-warning:active::before, .v-close.is-transparent.is-warning:active::after {\n      background-color: #ffdd57;\n}\n.v-close.is-transparent.is-danger::before, .v-close.is-transparent.is-danger::after {\n      background-color: rgba(255, 56, 96, 0.6);\n}\n.v-close.is-transparent.is-danger:hover::before, .v-close.is-transparent.is-danger:hover::after, .v-close.is-transparent.is-danger:focus::before, .v-close.is-transparent.is-danger:focus::after {\n      background-color: rgba(255, 56, 96, 0.8);\n}\n.v-close.is-transparent.is-danger:active::before, .v-close.is-transparent.is-danger:active::after {\n      background-color: #ff3860;\n}\n.v-modal {\n  bottom: 0;\n  left: 0;\n  position: absolute;\n  right: 0;\n  top: 0;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  display: none;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  overflow: hidden;\n  position: fixed;\n  z-index: 1011;\n}\n.v-modal.is-active {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n}\n.v-modal-overlay {\n  bottom: 0;\n  left: 0;\n  position: absolute;\n  right: 0;\n  top: 0;\n  background-color: rgba(10, 10, 10, 0.8);\n}\n.v-modal-content,\n.v-modal-card {\n  margin: 0 20px;\n  max-height: calc(100vh - 160px);\n  overflow: auto;\n  position: relative;\n  width: 640px;\n  -webkit-animation-duration: 1s;\n          animation-duration: 1s;\n  -webkit-animation-fill-mode: both;\n          animation-fill-mode: both;\n  -webkit-animation: v-kf-fade-in-down 800ms ease;\n          animation: v-kf-fade-in-down 800ms ease;\n}\n.v-modal-content.is-small,\n  .v-modal-card.is-small {\n    width: 420px;\n}\n.v-modal-content.is-medium,\n  .v-modal-card.is-medium {\n    width: 840px;\n}\n.v-modal-content.is-large,\n  .v-modal-card.is-large {\n    width: 980px;\n}\n.v-modal-close {\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  -moz-appearance: none;\n  -webkit-appearance: none;\n  background-color: rgba(10, 10, 10, 0.2);\n  border: none;\n  border-radius: 290486px;\n  cursor: pointer;\n  display: inline-block;\n  -webkit-box-flex: 0;\n      -ms-flex-positive: 0;\n          flex-grow: 0;\n  -ms-flex-negative: 0;\n      flex-shrink: 0;\n  font-size: 1rem;\n  height: 20px;\n  max-height: 20px;\n  max-width: 20px;\n  min-height: 20px;\n  min-width: 20px;\n  outline: none;\n  position: relative;\n  vertical-align: top;\n  width: 20px;\n  background: none;\n  height: 40px;\n  position: fixed;\n  right: 20px;\n  top: 20px;\n  width: 40px;\n}\n.v-modal-close:before, .v-modal-close:after {\n    background-color: white;\n    content: \"\";\n    display: block;\n    left: 50%;\n    position: absolute;\n    top: 50%;\n    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);\n            transform: translateX(-50%) translateY(-50%) rotate(45deg);\n    -webkit-transform-origin: center center;\n            transform-origin: center center;\n}\n.v-modal-close:before {\n    height: 2px;\n    width: 50%;\n}\n.v-modal-close:after {\n    height: 50%;\n    width: 2px;\n}\n.v-modal-close:hover, .v-modal-close:focus {\n    background-color: rgba(10, 10, 10, 0.3);\n}\n.v-modal-close:active {\n    background-color: rgba(10, 10, 10, 0.4);\n}\n.v-modal-close.is-white {\n    background-color: rgba(255, 255, 255, 0.4);\n}\n.v-modal-close.is-white:hover, .v-modal-close.is-white:focus {\n      background-color: rgba(255, 255, 255, 0.6);\n}\n.v-modal-close.is-white:active {\n      background-color: rgba(255, 255, 255, 0.9);\n}\n.v-modal-close.is-black {\n    background-color: rgba(10, 10, 10, 0.4);\n}\n.v-modal-close.is-black:hover, .v-modal-close.is-black:focus {\n      background-color: rgba(10, 10, 10, 0.6);\n}\n.v-modal-close.is-black:active {\n      background-color: rgba(10, 10, 10, 0.9);\n}\n.v-modal-close.is-light {\n    background-color: rgba(245, 245, 245, 0.4);\n}\n.v-modal-close.is-light:hover, .v-modal-close.is-light:focus {\n      background-color: rgba(245, 245, 245, 0.6);\n}\n.v-modal-close.is-light:active {\n      background-color: rgba(245, 245, 245, 0.9);\n}\n.v-modal-close.is-dark {\n    background-color: rgba(54, 54, 54, 0.4);\n}\n.v-modal-close.is-dark:hover, .v-modal-close.is-dark:focus {\n      background-color: rgba(54, 54, 54, 0.6);\n}\n.v-modal-close.is-dark:active {\n      background-color: rgba(54, 54, 54, 0.9);\n}\n.v-modal-close.is-primary {\n    background-color: rgba(28, 160, 242, 0.4);\n}\n.v-modal-close.is-primary:hover, .v-modal-close.is-primary:focus {\n      background-color: rgba(28, 160, 242, 0.6);\n}\n.v-modal-close.is-primary:active {\n      background-color: rgba(28, 160, 242, 0.9);\n}\n.v-modal-close.is-info {\n    background-color: rgba(184, 107, 255, 0.4);\n}\n.v-modal-close.is-info:hover, .v-modal-close.is-info:focus {\n      background-color: rgba(184, 107, 255, 0.6);\n}\n.v-modal-close.is-info:active {\n      background-color: rgba(184, 107, 255, 0.9);\n}\n.v-modal-close.is-success {\n    background-color: rgba(35, 209, 96, 0.4);\n}\n.v-modal-close.is-success:hover, .v-modal-close.is-success:focus {\n      background-color: rgba(35, 209, 96, 0.6);\n}\n.v-modal-close.is-success:active {\n      background-color: rgba(35, 209, 96, 0.9);\n}\n.v-modal-close.is-warning {\n    background-color: rgba(255, 221, 87, 0.4);\n}\n.v-modal-close.is-warning:hover, .v-modal-close.is-warning:focus {\n      background-color: rgba(255, 221, 87, 0.6);\n}\n.v-modal-close.is-warning:active {\n      background-color: rgba(255, 221, 87, 0.9);\n}\n.v-modal-close.is-danger {\n    background-color: rgba(255, 56, 96, 0.4);\n}\n.v-modal-close.is-danger:hover, .v-modal-close.is-danger:focus {\n      background-color: rgba(255, 56, 96, 0.6);\n}\n.v-modal-close.is-danger:active {\n      background-color: rgba(255, 56, 96, 0.9);\n}\n.v-modal-close.is-small {\n    height: 16px;\n    max-height: 16px;\n    max-width: 16px;\n    min-height: 16px;\n    min-width: 16px;\n    width: 16px;\n}\n.v-modal-close.is-medium {\n    height: 24px;\n    max-height: 24px;\n    max-width: 24px;\n    min-height: 24px;\n    min-width: 24px;\n    width: 24px;\n}\n.v-modal-close.is-large {\n    height: 32px;\n    max-height: 32px;\n    max-width: 32px;\n    min-height: 32px;\n    min-width: 32px;\n    width: 32px;\n}\n.v-modal-close.is-transparent {\n    background-color: transparent !important;\n}\n.v-modal-close.is-transparent:before, .v-modal-close.is-transparent:after {\n      background-color: rgba(10, 10, 10, 0.6);\n}\n.v-modal-close.is-transparent:hover::before, .v-modal-close.is-transparent:hover::after, .v-modal-close.is-transparent:focus::before, .v-modal-close.is-transparent:focus::after {\n      background-color: rgba(10, 10, 10, 0.8);\n}\n.v-modal-close.is-transparent:active::before, .v-modal-close.is-transparent:active::after {\n      background-color: #0a0a0a;\n}\n.v-modal-close.is-transparent.is-white::before, .v-modal-close.is-transparent.is-white::after {\n      background-color: rgba(255, 255, 255, 0.6);\n}\n.v-modal-close.is-transparent.is-white:hover::before, .v-modal-close.is-transparent.is-white:hover::after, .v-modal-close.is-transparent.is-white:focus::before, .v-modal-close.is-transparent.is-white:focus::after {\n      background-color: rgba(255, 255, 255, 0.8);\n}\n.v-modal-close.is-transparent.is-white:active::before, .v-modal-close.is-transparent.is-white:active::after {\n      background-color: white;\n}\n.v-modal-close.is-transparent.is-black::before, .v-modal-close.is-transparent.is-black::after {\n      background-color: rgba(10, 10, 10, 0.6);\n}\n.v-modal-close.is-transparent.is-black:hover::before, .v-modal-close.is-transparent.is-black:hover::after, .v-modal-close.is-transparent.is-black:focus::before, .v-modal-close.is-transparent.is-black:focus::after {\n      background-color: rgba(10, 10, 10, 0.8);\n}\n.v-modal-close.is-transparent.is-black:active::before, .v-modal-close.is-transparent.is-black:active::after {\n      background-color: #0a0a0a;\n}\n.v-modal-close.is-transparent.is-light::before, .v-modal-close.is-transparent.is-light::after {\n      background-color: rgba(245, 245, 245, 0.6);\n}\n.v-modal-close.is-transparent.is-light:hover::before, .v-modal-close.is-transparent.is-light:hover::after, .v-modal-close.is-transparent.is-light:focus::before, .v-modal-close.is-transparent.is-light:focus::after {\n      background-color: rgba(245, 245, 245, 0.8);\n}\n.v-modal-close.is-transparent.is-light:active::before, .v-modal-close.is-transparent.is-light:active::after {\n      background-color: whitesmoke;\n}\n.v-modal-close.is-transparent.is-dark::before, .v-modal-close.is-transparent.is-dark::after {\n      background-color: rgba(54, 54, 54, 0.6);\n}\n.v-modal-close.is-transparent.is-dark:hover::before, .v-modal-close.is-transparent.is-dark:hover::after, .v-modal-close.is-transparent.is-dark:focus::before, .v-modal-close.is-transparent.is-dark:focus::after {\n      background-color: rgba(54, 54, 54, 0.8);\n}\n.v-modal-close.is-transparent.is-dark:active::before, .v-modal-close.is-transparent.is-dark:active::after {\n      background-color: #363636;\n}\n.v-modal-close.is-transparent.is-primary::before, .v-modal-close.is-transparent.is-primary::after {\n      background-color: rgba(28, 160, 242, 0.6);\n}\n.v-modal-close.is-transparent.is-primary:hover::before, .v-modal-close.is-transparent.is-primary:hover::after, .v-modal-close.is-transparent.is-primary:focus::before, .v-modal-close.is-transparent.is-primary:focus::after {\n      background-color: rgba(28, 160, 242, 0.8);\n}\n.v-modal-close.is-transparent.is-primary:active::before, .v-modal-close.is-transparent.is-primary:active::after {\n      background-color: #1ca0f2;\n}\n.v-modal-close.is-transparent.is-info::before, .v-modal-close.is-transparent.is-info::after {\n      background-color: rgba(184, 107, 255, 0.6);\n}\n.v-modal-close.is-transparent.is-info:hover::before, .v-modal-close.is-transparent.is-info:hover::after, .v-modal-close.is-transparent.is-info:focus::before, .v-modal-close.is-transparent.is-info:focus::after {\n      background-color: rgba(184, 107, 255, 0.8);\n}\n.v-modal-close.is-transparent.is-info:active::before, .v-modal-close.is-transparent.is-info:active::after {\n      background-color: #b86bff;\n}\n.v-modal-close.is-transparent.is-success::before, .v-modal-close.is-transparent.is-success::after {\n      background-color: rgba(35, 209, 96, 0.6);\n}\n.v-modal-close.is-transparent.is-success:hover::before, .v-modal-close.is-transparent.is-success:hover::after, .v-modal-close.is-transparent.is-success:focus::before, .v-modal-close.is-transparent.is-success:focus::after {\n      background-color: rgba(35, 209, 96, 0.8);\n}\n.v-modal-close.is-transparent.is-success:active::before, .v-modal-close.is-transparent.is-success:active::after {\n      background-color: #23d160;\n}\n.v-modal-close.is-transparent.is-warning::before, .v-modal-close.is-transparent.is-warning::after {\n      background-color: rgba(255, 221, 87, 0.6);\n}\n.v-modal-close.is-transparent.is-warning:hover::before, .v-modal-close.is-transparent.is-warning:hover::after, .v-modal-close.is-transparent.is-warning:focus::before, .v-modal-close.is-transparent.is-warning:focus::after {\n      background-color: rgba(255, 221, 87, 0.8);\n}\n.v-modal-close.is-transparent.is-warning:active::before, .v-modal-close.is-transparent.is-warning:active::after {\n      background-color: #ffdd57;\n}\n.v-modal-close.is-transparent.is-danger::before, .v-modal-close.is-transparent.is-danger::after {\n      background-color: rgba(255, 56, 96, 0.6);\n}\n.v-modal-close.is-transparent.is-danger:hover::before, .v-modal-close.is-transparent.is-danger:hover::after, .v-modal-close.is-transparent.is-danger:focus::before, .v-modal-close.is-transparent.is-danger:focus::after {\n      background-color: rgba(255, 56, 96, 0.8);\n}\n.v-modal-close.is-transparent.is-danger:active::before, .v-modal-close.is-transparent.is-danger:active::after {\n      background-color: #ff3860;\n}\n.v-modal-card {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  max-height: calc(100vh - 40px);\n  overflow: hidden;\n}\n.v-modal-card-head,\n.v-modal-card-foot {\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  background-color: whitesmoke;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-negative: 0;\n      flex-shrink: 0;\n  -webkit-box-pack: start;\n      -ms-flex-pack: start;\n          justify-content: flex-start;\n  padding: 20px;\n  position: relative;\n}\n.v-modal-card-head {\n  border-bottom: 1px solid #dbdbdb;\n  border-top-left-radius: 5px;\n  border-top-right-radius: 5px;\n}\n.v-modal-card-title {\n  color: #363636;\n  -webkit-box-flex: 1;\n      -ms-flex-positive: 1;\n          flex-grow: 1;\n  -ms-flex-negative: 0;\n      flex-shrink: 0;\n  font-size: 1.5rem;\n  line-height: 1;\n}\n.v-modal-card-foot {\n  border-bottom-left-radius: 5px;\n  border-bottom-right-radius: 5px;\n  border-top: 1px solid #dbdbdb;\n}\n.v-modal-card-foot .v-btn:not(:last-child) {\n    margin-right: 10px;\n}\n.v-modal-card-body {\n  -webkit-overflow-scrolling: touch;\n  background-color: white;\n  -webkit-box-flex: 1;\n      -ms-flex-positive: 1;\n          flex-grow: 1;\n  -ms-flex-negative: 1;\n      flex-shrink: 1;\n  overflow: auto;\n  padding: 20px;\n}\n.v-dropdown {\n  display: -webkit-inline-box;\n  display: -ms-inline-flexbox;\n  display: inline-flex;\n  position: relative;\n  vertical-align: top;\n}\n.v-dropdown.is-active .v-dropdown-menu, .v-dropdown.is-hoverable:hover .v-dropdown-menu {\n    display: block;\n}\n.v-dropdown.is-right .v-dropdown-menu {\n    left: auto;\n    right: 0;\n}\n.v-dropdown.is-up .v-dropdown-menu {\n    bottom: 100%;\n    padding-bottom: 4px;\n    padding-top: unset;\n    top: auto;\n}\n.v-dropdown-menu {\n  display: none;\n  left: 0;\n  min-width: 12rem;\n  padding-top: 4px;\n  position: absolute;\n  top: 100%;\n  z-index: 20;\n}\n.v-ani-menu-enter-active {\n  -webkit-animation: v-kf-fade-in .5s;\n          animation: v-kf-fade-in .5s;\n}\n.v-ani-menu-leave-active {\n  -webkit-animation: v-kf-fade-out .5s;\n          animation: v-kf-fade-out .5s;\n}\n.v-dropdown-content {\n  background-color: white;\n  border-radius: 3px;\n  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);\n  padding-bottom: 0.5rem;\n  padding-top: 0.5rem;\n}\n.v-dropdown-item {\n  color: #4a4a4a;\n  display: block;\n  font-size: 0.875rem;\n  line-height: 1.5;\n  padding: 0.375rem 1rem;\n  position: relative;\n}\na.v-dropdown-item {\n  padding-right: 3rem;\n  white-space: nowrap;\n}\na.v-dropdown-item:hover {\n    background-color: whitesmoke;\n    color: #0a0a0a;\n}\na.v-dropdown-item.is-active {\n    background-color: #1ca0f2;\n    color: #fff;\n}\n.v-dropdown-divider {\n  background-color: #dbdbdb;\n  border: none;\n  display: block;\n  height: 1px;\n  margin: 0.5rem 0;\n}\n.v-sidebar {\n  font-size: 1rem;\n}\n.v-sidebar.is-small {\n    font-size: 0.75rem;\n}\n.v-sidebar.is-medium {\n    font-size: 1.25rem;\n}\n.v-sidebar.is-large {\n    font-size: 1.5rem;\n}\n.v-sidebar-list {\n  list-style: none;\n  margin: 0;\n  padding: 0;\n  margin: 0;\n  padding: 0;\n  line-height: 1.25;\n}\n.v-sidebar-list a {\n    border-radius: 2px;\n    color: #4a4a4a;\n    display: block;\n    padding: 0.5em 0.75em;\n}\n.v-sidebar-list a:hover {\n      background-color: whitesmoke;\n      color: #363636;\n}\n.v-sidebar-list a.is-active {\n      background-color: #1ca0f2;\n      color: #fff;\n}\n.v-sidebar-list li ul {\n    list-style: none;\n    margin: 0;\n    padding: 0;\n    border-left: 1px solid #dbdbdb;\n    margin: 0.75em;\n    padding-left: 0.75em;\n}\n.v-sidebar-label {\n  color: #7a7a7a;\n  font-size: 0.75em;\n  letter-spacing: 0.1em;\n  text-transform: uppercase;\n}\n.v-sidebar-label:not(:first-child) {\n    margin-top: 1em;\n}\n.v-sidebar-label:not(:last-child) {\n    margin-bottom: 1em;\n}\n.v-navbar {\n  background-color: white;\n  min-height: 3.25rem;\n  position: relative;\n}\n.v-navbar.is-white {\n    background-color: white;\n    color: #0a0a0a;\n}\n.v-navbar.is-white .v-navbar-brand > .v-navbar-item,\n    .v-navbar.is-white .v-navbar-brand .v-navbar-link {\n      color: #0a0a0a;\n}\n.v-navbar.is-white .v-navbar-brand > a.v-navbar-item:hover, .v-navbar.is-white .v-navbar-brand > a.v-navbar-item.is-active,\n    .v-navbar.is-white .v-navbar-brand .v-navbar-link:hover,\n    .v-navbar.is-white .v-navbar-brand .v-navbar-link.is-active {\n      background-color: #f2f2f2;\n      color: #0a0a0a;\n}\n.v-navbar.is-white .v-navbar-brand .v-navbar-link::after {\n      border-color: #0a0a0a;\n}\n.v-navbar.is-white .v-navbar-start > .v-navbar-item,\n    .v-navbar.is-white .v-navbar-start .v-navbar-link,\n    .v-navbar.is-white .v-navbar-end > .v-navbar-item,\n    .v-navbar.is-white .v-navbar-end .v-navbar-link {\n      color: #0a0a0a;\n}\n.v-navbar.is-white .v-navbar-start > a.v-navbar-item:hover, .v-navbar.is-white .v-navbar-start > a.v-navbar-item.is-active,\n    .v-navbar.is-white .v-navbar-start .v-navbar-link:hover,\n    .v-navbar.is-white .v-navbar-start .v-navbar-link.is-active,\n    .v-navbar.is-white .v-navbar-end > a.v-navbar-item:hover,\n    .v-navbar.is-white .v-navbar-end > a.v-navbar-item.is-active,\n    .v-navbar.is-white .v-navbar-end .v-navbar-link:hover,\n    .v-navbar.is-white .v-navbar-end .v-navbar-link.is-active {\n      background-color: #f2f2f2;\n      color: #0a0a0a;\n}\n.v-navbar.is-white .v-navbar-start .v-navbar-link::after,\n    .v-navbar.is-white .v-navbar-end .v-navbar-link::after {\n      border-color: #0a0a0a;\n}\n.v-navbar.is-white .v-navbar-item.has-dropdown:hover .v-navbar-link,\n    .v-navbar.is-white .v-navbar-item.has-dropdown.is-active .v-navbar-link {\n      background-color: #f2f2f2;\n      color: #0a0a0a;\n}\n.v-navbar.is-white .v-navbar-dropdown a.v-navbar-item.is-active {\n      background-color: white;\n      color: #0a0a0a;\n}\n.v-navbar.is-black {\n    background-color: #0a0a0a;\n    color: white;\n}\n.v-navbar.is-black .v-navbar-brand > .v-navbar-item,\n    .v-navbar.is-black .v-navbar-brand .v-navbar-link {\n      color: white;\n}\n.v-navbar.is-black .v-navbar-brand > a.v-navbar-item:hover, .v-navbar.is-black .v-navbar-brand > a.v-navbar-item.is-active,\n    .v-navbar.is-black .v-navbar-brand .v-navbar-link:hover,\n    .v-navbar.is-black .v-navbar-brand .v-navbar-link.is-active {\n      background-color: black;\n      color: white;\n}\n.v-navbar.is-black .v-navbar-brand .v-navbar-link::after {\n      border-color: white;\n}\n.v-navbar.is-black .v-navbar-start > .v-navbar-item,\n    .v-navbar.is-black .v-navbar-start .v-navbar-link,\n    .v-navbar.is-black .v-navbar-end > .v-navbar-item,\n    .v-navbar.is-black .v-navbar-end .v-navbar-link {\n      color: white;\n}\n.v-navbar.is-black .v-navbar-start > a.v-navbar-item:hover, .v-navbar.is-black .v-navbar-start > a.v-navbar-item.is-active,\n    .v-navbar.is-black .v-navbar-start .v-navbar-link:hover,\n    .v-navbar.is-black .v-navbar-start .v-navbar-link.is-active,\n    .v-navbar.is-black .v-navbar-end > a.v-navbar-item:hover,\n    .v-navbar.is-black .v-navbar-end > a.v-navbar-item.is-active,\n    .v-navbar.is-black .v-navbar-end .v-navbar-link:hover,\n    .v-navbar.is-black .v-navbar-end .v-navbar-link.is-active {\n      background-color: black;\n      color: white;\n}\n.v-navbar.is-black .v-navbar-start .v-navbar-link::after,\n    .v-navbar.is-black .v-navbar-end .v-navbar-link::after {\n      border-color: white;\n}\n.v-navbar.is-black .v-navbar-item.has-dropdown:hover .v-navbar-link,\n    .v-navbar.is-black .v-navbar-item.has-dropdown.is-active .v-navbar-link {\n      background-color: black;\n      color: white;\n}\n.v-navbar.is-black .v-navbar-dropdown a.v-navbar-item.is-active {\n      background-color: #0a0a0a;\n      color: white;\n}\n.v-navbar.is-light {\n    background-color: whitesmoke;\n    color: #363636;\n}\n.v-navbar.is-light .v-navbar-brand > .v-navbar-item,\n    .v-navbar.is-light .v-navbar-brand .v-navbar-link {\n      color: #363636;\n}\n.v-navbar.is-light .v-navbar-brand > a.v-navbar-item:hover, .v-navbar.is-light .v-navbar-brand > a.v-navbar-item.is-active,\n    .v-navbar.is-light .v-navbar-brand .v-navbar-link:hover,\n    .v-navbar.is-light .v-navbar-brand .v-navbar-link.is-active {\n      background-color: #e8e8e8;\n      color: #363636;\n}\n.v-navbar.is-light .v-navbar-brand .v-navbar-link::after {\n      border-color: #363636;\n}\n.v-navbar.is-light .v-navbar-start > .v-navbar-item,\n    .v-navbar.is-light .v-navbar-start .v-navbar-link,\n    .v-navbar.is-light .v-navbar-end > .v-navbar-item,\n    .v-navbar.is-light .v-navbar-end .v-navbar-link {\n      color: #363636;\n}\n.v-navbar.is-light .v-navbar-start > a.v-navbar-item:hover, .v-navbar.is-light .v-navbar-start > a.v-navbar-item.is-active,\n    .v-navbar.is-light .v-navbar-start .v-navbar-link:hover,\n    .v-navbar.is-light .v-navbar-start .v-navbar-link.is-active,\n    .v-navbar.is-light .v-navbar-end > a.v-navbar-item:hover,\n    .v-navbar.is-light .v-navbar-end > a.v-navbar-item.is-active,\n    .v-navbar.is-light .v-navbar-end .v-navbar-link:hover,\n    .v-navbar.is-light .v-navbar-end .v-navbar-link.is-active {\n      background-color: #e8e8e8;\n      color: #363636;\n}\n.v-navbar.is-light .v-navbar-start .v-navbar-link::after,\n    .v-navbar.is-light .v-navbar-end .v-navbar-link::after {\n      border-color: #363636;\n}\n.v-navbar.is-light .v-navbar-item.has-dropdown:hover .v-navbar-link,\n    .v-navbar.is-light .v-navbar-item.has-dropdown.is-active .v-navbar-link {\n      background-color: #e8e8e8;\n      color: #363636;\n}\n.v-navbar.is-light .v-navbar-dropdown a.v-navbar-item.is-active {\n      background-color: whitesmoke;\n      color: #363636;\n}\n.v-navbar.is-dark {\n    background-color: #363636;\n    color: whitesmoke;\n}\n.v-navbar.is-dark .v-navbar-brand > .v-navbar-item,\n    .v-navbar.is-dark .v-navbar-brand .v-navbar-link {\n      color: whitesmoke;\n}\n.v-navbar.is-dark .v-navbar-brand > a.v-navbar-item:hover, .v-navbar.is-dark .v-navbar-brand > a.v-navbar-item.is-active,\n    .v-navbar.is-dark .v-navbar-brand .v-navbar-link:hover,\n    .v-navbar.is-dark .v-navbar-brand .v-navbar-link.is-active {\n      background-color: #292929;\n      color: whitesmoke;\n}\n.v-navbar.is-dark .v-navbar-brand .v-navbar-link::after {\n      border-color: whitesmoke;\n}\n.v-navbar.is-dark .v-navbar-start > .v-navbar-item,\n    .v-navbar.is-dark .v-navbar-start .v-navbar-link,\n    .v-navbar.is-dark .v-navbar-end > .v-navbar-item,\n    .v-navbar.is-dark .v-navbar-end .v-navbar-link {\n      color: whitesmoke;\n}\n.v-navbar.is-dark .v-navbar-start > a.v-navbar-item:hover, .v-navbar.is-dark .v-navbar-start > a.v-navbar-item.is-active,\n    .v-navbar.is-dark .v-navbar-start .v-navbar-link:hover,\n    .v-navbar.is-dark .v-navbar-start .v-navbar-link.is-active,\n    .v-navbar.is-dark .v-navbar-end > a.v-navbar-item:hover,\n    .v-navbar.is-dark .v-navbar-end > a.v-navbar-item.is-active,\n    .v-navbar.is-dark .v-navbar-end .v-navbar-link:hover,\n    .v-navbar.is-dark .v-navbar-end .v-navbar-link.is-active {\n      background-color: #292929;\n      color: whitesmoke;\n}\n.v-navbar.is-dark .v-navbar-start .v-navbar-link::after,\n    .v-navbar.is-dark .v-navbar-end .v-navbar-link::after {\n      border-color: whitesmoke;\n}\n.v-navbar.is-dark .v-navbar-item.has-dropdown:hover .v-navbar-link,\n    .v-navbar.is-dark .v-navbar-item.has-dropdown.is-active .v-navbar-link {\n      background-color: #292929;\n      color: whitesmoke;\n}\n.v-navbar.is-dark .v-navbar-dropdown a.v-navbar-item.is-active {\n      background-color: #363636;\n      color: whitesmoke;\n}\n.v-navbar.is-primary {\n    background-color: #1ca0f2;\n    color: #fff;\n}\n.v-navbar.is-primary .v-navbar-brand > .v-navbar-item,\n    .v-navbar.is-primary .v-navbar-brand .v-navbar-link {\n      color: #fff;\n}\n.v-navbar.is-primary .v-navbar-brand > a.v-navbar-item:hover, .v-navbar.is-primary .v-navbar-brand > a.v-navbar-item.is-active,\n    .v-navbar.is-primary .v-navbar-brand .v-navbar-link:hover,\n    .v-navbar.is-primary .v-navbar-brand .v-navbar-link.is-active {\n      background-color: #0d94e7;\n      color: #fff;\n}\n.v-navbar.is-primary .v-navbar-brand .v-navbar-link::after {\n      border-color: #fff;\n}\n.v-navbar.is-primary .v-navbar-start > .v-navbar-item,\n    .v-navbar.is-primary .v-navbar-start .v-navbar-link,\n    .v-navbar.is-primary .v-navbar-end > .v-navbar-item,\n    .v-navbar.is-primary .v-navbar-end .v-navbar-link {\n      color: #fff;\n}\n.v-navbar.is-primary .v-navbar-start > a.v-navbar-item:hover, .v-navbar.is-primary .v-navbar-start > a.v-navbar-item.is-active,\n    .v-navbar.is-primary .v-navbar-start .v-navbar-link:hover,\n    .v-navbar.is-primary .v-navbar-start .v-navbar-link.is-active,\n    .v-navbar.is-primary .v-navbar-end > a.v-navbar-item:hover,\n    .v-navbar.is-primary .v-navbar-end > a.v-navbar-item.is-active,\n    .v-navbar.is-primary .v-navbar-end .v-navbar-link:hover,\n    .v-navbar.is-primary .v-navbar-end .v-navbar-link.is-active {\n      background-color: #0d94e7;\n      color: #fff;\n}\n.v-navbar.is-primary .v-navbar-start .v-navbar-link::after,\n    .v-navbar.is-primary .v-navbar-end .v-navbar-link::after {\n      border-color: #fff;\n}\n.v-navbar.is-primary .v-navbar-item.has-dropdown:hover .v-navbar-link,\n    .v-navbar.is-primary .v-navbar-item.has-dropdown.is-active .v-navbar-link {\n      background-color: #0d94e7;\n      color: #fff;\n}\n.v-navbar.is-primary .v-navbar-dropdown a.v-navbar-item.is-active {\n      background-color: #1ca0f2;\n      color: #fff;\n}\n.v-navbar.is-info {\n    background-color: #b86bff;\n    color: #fff;\n}\n.v-navbar.is-info .v-navbar-brand > .v-navbar-item,\n    .v-navbar.is-info .v-navbar-brand .v-navbar-link {\n      color: #fff;\n}\n.v-navbar.is-info .v-navbar-brand > a.v-navbar-item:hover, .v-navbar.is-info .v-navbar-brand > a.v-navbar-item.is-active,\n    .v-navbar.is-info .v-navbar-brand .v-navbar-link:hover,\n    .v-navbar.is-info .v-navbar-brand .v-navbar-link.is-active {\n      background-color: #ab52ff;\n      color: #fff;\n}\n.v-navbar.is-info .v-navbar-brand .v-navbar-link::after {\n      border-color: #fff;\n}\n.v-navbar.is-info .v-navbar-start > .v-navbar-item,\n    .v-navbar.is-info .v-navbar-start .v-navbar-link,\n    .v-navbar.is-info .v-navbar-end > .v-navbar-item,\n    .v-navbar.is-info .v-navbar-end .v-navbar-link {\n      color: #fff;\n}\n.v-navbar.is-info .v-navbar-start > a.v-navbar-item:hover, .v-navbar.is-info .v-navbar-start > a.v-navbar-item.is-active,\n    .v-navbar.is-info .v-navbar-start .v-navbar-link:hover,\n    .v-navbar.is-info .v-navbar-start .v-navbar-link.is-active,\n    .v-navbar.is-info .v-navbar-end > a.v-navbar-item:hover,\n    .v-navbar.is-info .v-navbar-end > a.v-navbar-item.is-active,\n    .v-navbar.is-info .v-navbar-end .v-navbar-link:hover,\n    .v-navbar.is-info .v-navbar-end .v-navbar-link.is-active {\n      background-color: #ab52ff;\n      color: #fff;\n}\n.v-navbar.is-info .v-navbar-start .v-navbar-link::after,\n    .v-navbar.is-info .v-navbar-end .v-navbar-link::after {\n      border-color: #fff;\n}\n.v-navbar.is-info .v-navbar-item.has-dropdown:hover .v-navbar-link,\n    .v-navbar.is-info .v-navbar-item.has-dropdown.is-active .v-navbar-link {\n      background-color: #ab52ff;\n      color: #fff;\n}\n.v-navbar.is-info .v-navbar-dropdown a.v-navbar-item.is-active {\n      background-color: #b86bff;\n      color: #fff;\n}\n.v-navbar.is-success {\n    background-color: #23d160;\n    color: #fff;\n}\n.v-navbar.is-success .v-navbar-brand > .v-navbar-item,\n    .v-navbar.is-success .v-navbar-brand .v-navbar-link {\n      color: #fff;\n}\n.v-navbar.is-success .v-navbar-brand > a.v-navbar-item:hover, .v-navbar.is-success .v-navbar-brand > a.v-navbar-item.is-active,\n    .v-navbar.is-success .v-navbar-brand .v-navbar-link:hover,\n    .v-navbar.is-success .v-navbar-brand .v-navbar-link.is-active {\n      background-color: #20bc56;\n      color: #fff;\n}\n.v-navbar.is-success .v-navbar-brand .v-navbar-link::after {\n      border-color: #fff;\n}\n.v-navbar.is-success .v-navbar-start > .v-navbar-item,\n    .v-navbar.is-success .v-navbar-start .v-navbar-link,\n    .v-navbar.is-success .v-navbar-end > .v-navbar-item,\n    .v-navbar.is-success .v-navbar-end .v-navbar-link {\n      color: #fff;\n}\n.v-navbar.is-success .v-navbar-start > a.v-navbar-item:hover, .v-navbar.is-success .v-navbar-start > a.v-navbar-item.is-active,\n    .v-navbar.is-success .v-navbar-start .v-navbar-link:hover,\n    .v-navbar.is-success .v-navbar-start .v-navbar-link.is-active,\n    .v-navbar.is-success .v-navbar-end > a.v-navbar-item:hover,\n    .v-navbar.is-success .v-navbar-end > a.v-navbar-item.is-active,\n    .v-navbar.is-success .v-navbar-end .v-navbar-link:hover,\n    .v-navbar.is-success .v-navbar-end .v-navbar-link.is-active {\n      background-color: #20bc56;\n      color: #fff;\n}\n.v-navbar.is-success .v-navbar-start .v-navbar-link::after,\n    .v-navbar.is-success .v-navbar-end .v-navbar-link::after {\n      border-color: #fff;\n}\n.v-navbar.is-success .v-navbar-item.has-dropdown:hover .v-navbar-link,\n    .v-navbar.is-success .v-navbar-item.has-dropdown.is-active .v-navbar-link {\n      background-color: #20bc56;\n      color: #fff;\n}\n.v-navbar.is-success .v-navbar-dropdown a.v-navbar-item.is-active {\n      background-color: #23d160;\n      color: #fff;\n}\n.v-navbar.is-warning {\n    background-color: #ffdd57;\n    color: rgba(0, 0, 0, 0.7);\n}\n.v-navbar.is-warning .v-navbar-brand > .v-navbar-item,\n    .v-navbar.is-warning .v-navbar-brand .v-navbar-link {\n      color: rgba(0, 0, 0, 0.7);\n}\n.v-navbar.is-warning .v-navbar-brand > a.v-navbar-item:hover, .v-navbar.is-warning .v-navbar-brand > a.v-navbar-item.is-active,\n    .v-navbar.is-warning .v-navbar-brand .v-navbar-link:hover,\n    .v-navbar.is-warning .v-navbar-brand .v-navbar-link.is-active {\n      background-color: #ffd83d;\n      color: rgba(0, 0, 0, 0.7);\n}\n.v-navbar.is-warning .v-navbar-brand .v-navbar-link::after {\n      border-color: rgba(0, 0, 0, 0.7);\n}\n.v-navbar.is-warning .v-navbar-start > .v-navbar-item,\n    .v-navbar.is-warning .v-navbar-start .v-navbar-link,\n    .v-navbar.is-warning .v-navbar-end > .v-navbar-item,\n    .v-navbar.is-warning .v-navbar-end .v-navbar-link {\n      color: rgba(0, 0, 0, 0.7);\n}\n.v-navbar.is-warning .v-navbar-start > a.v-navbar-item:hover, .v-navbar.is-warning .v-navbar-start > a.v-navbar-item.is-active,\n    .v-navbar.is-warning .v-navbar-start .v-navbar-link:hover,\n    .v-navbar.is-warning .v-navbar-start .v-navbar-link.is-active,\n    .v-navbar.is-warning .v-navbar-end > a.v-navbar-item:hover,\n    .v-navbar.is-warning .v-navbar-end > a.v-navbar-item.is-active,\n    .v-navbar.is-warning .v-navbar-end .v-navbar-link:hover,\n    .v-navbar.is-warning .v-navbar-end .v-navbar-link.is-active {\n      background-color: #ffd83d;\n      color: rgba(0, 0, 0, 0.7);\n}\n.v-navbar.is-warning .v-navbar-start .v-navbar-link::after,\n    .v-navbar.is-warning .v-navbar-end .v-navbar-link::after {\n      border-color: rgba(0, 0, 0, 0.7);\n}\n.v-navbar.is-warning .v-navbar-item.has-dropdown:hover .v-navbar-link,\n    .v-navbar.is-warning .v-navbar-item.has-dropdown.is-active .v-navbar-link {\n      background-color: #ffd83d;\n      color: rgba(0, 0, 0, 0.7);\n}\n.v-navbar.is-warning .v-navbar-dropdown a.v-navbar-item.is-active {\n      background-color: #ffdd57;\n      color: rgba(0, 0, 0, 0.7);\n}\n.v-navbar.is-danger {\n    background-color: #ff3860;\n    color: #fff;\n}\n.v-navbar.is-danger .v-navbar-brand > .v-navbar-item,\n    .v-navbar.is-danger .v-navbar-brand .v-navbar-link {\n      color: #fff;\n}\n.v-navbar.is-danger .v-navbar-brand > a.v-navbar-item:hover, .v-navbar.is-danger .v-navbar-brand > a.v-navbar-item.is-active,\n    .v-navbar.is-danger .v-navbar-brand .v-navbar-link:hover,\n    .v-navbar.is-danger .v-navbar-brand .v-navbar-link.is-active {\n      background-color: #ff1f4b;\n      color: #fff;\n}\n.v-navbar.is-danger .v-navbar-brand .v-navbar-link::after {\n      border-color: #fff;\n}\n.v-navbar.is-danger .v-navbar-start > .v-navbar-item,\n    .v-navbar.is-danger .v-navbar-start .v-navbar-link,\n    .v-navbar.is-danger .v-navbar-end > .v-navbar-item,\n    .v-navbar.is-danger .v-navbar-end .v-navbar-link {\n      color: #fff;\n}\n.v-navbar.is-danger .v-navbar-start > a.v-navbar-item:hover, .v-navbar.is-danger .v-navbar-start > a.v-navbar-item.is-active,\n    .v-navbar.is-danger .v-navbar-start .v-navbar-link:hover,\n    .v-navbar.is-danger .v-navbar-start .v-navbar-link.is-active,\n    .v-navbar.is-danger .v-navbar-end > a.v-navbar-item:hover,\n    .v-navbar.is-danger .v-navbar-end > a.v-navbar-item.is-active,\n    .v-navbar.is-danger .v-navbar-end .v-navbar-link:hover,\n    .v-navbar.is-danger .v-navbar-end .v-navbar-link.is-active {\n      background-color: #ff1f4b;\n      color: #fff;\n}\n.v-navbar.is-danger .v-navbar-start .v-navbar-link::after,\n    .v-navbar.is-danger .v-navbar-end .v-navbar-link::after {\n      border-color: #fff;\n}\n.v-navbar.is-danger .v-navbar-item.has-dropdown:hover .v-navbar-link,\n    .v-navbar.is-danger .v-navbar-item.has-dropdown.is-active .v-navbar-link {\n      background-color: #ff1f4b;\n      color: #fff;\n}\n.v-navbar.is-danger .v-navbar-dropdown a.v-navbar-item.is-active {\n      background-color: #ff3860;\n      color: #fff;\n}\n.v-navbar > .container {\n    -webkit-box-align: stretch;\n        -ms-flex-align: stretch;\n            align-items: stretch;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    min-height: 3.25rem;\n    width: 100%;\n}\n.v-navbar.has-shadow {\n    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1);\n}\n.v-navbar-item {\n  -webkit-box-flex: 0;\n      -ms-flex-positive: 0;\n          flex-grow: 0;\n  -ms-flex-negative: 0;\n      flex-shrink: 0;\n}\n.v-navbar-item img {\n    max-height: 1.75rem;\n}\n.v-navbar-item.has-dropdown {\n    padding: 0;\n}\n.v-navbar-item.is-tab {\n    border-bottom: 1px solid transparent;\n    min-height: 3.25rem;\n    padding-bottom: calc(0.5em - 1px);\n}\n.v-navbar-item.is-tab:hover {\n      background-color: transparent;\n      border-bottom-color: #1ca0f2;\n}\n.v-navbar-item.is-tab.is-active {\n      background-color: transparent;\n      border-bottom-color: #1ca0f2;\n      border-bottom-style: solid;\n      border-bottom-width: 3px;\n      color: #1ca0f2;\n      padding-bottom: calc(0.5em - 3px);\n}\n.v-navbar-item,\n.v-navbar-link {\n  color: #4a4a4a;\n  display: block;\n  line-height: 1.5;\n  padding: 0.5rem 1rem;\n  position: relative;\n}\na.v-navbar-item:hover, a.v-navbar-item.is-active,\n.v-navbar-link:hover,\n.v-navbar-link.is-active {\n  background-color: whitesmoke;\n  color: #0a0a0a;\n}\n.v-navbar-brand,\n.v-navbar-tabs {\n  -webkit-box-align: stretch;\n      -ms-flex-align: stretch;\n          align-items: stretch;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-negative: 0;\n      flex-shrink: 0;\n  min-height: 3.25rem;\n}\n.v-navbar,\n.v-navbar-menu,\n.v-navbar-start,\n.v-navbar-end {\n  -webkit-box-align: stretch;\n      -ms-flex-align: stretch;\n          align-items: stretch;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n}\n.v-navbar {\n  min-height: 3.25rem;\n}\n.v-navbar.is-transparent a.v-navbar-item:hover, .v-navbar.is-transparent a.v-navbar-item.is-active,\n  .v-navbar.is-transparent .v-navbar-link:hover,\n  .v-navbar.is-transparent .v-navbar-link.is-active {\n    background-color: transparent;\n}\n.v-navbar.is-transparent .v-navbar-item.has-dropdown.is-active .v-navbar-link, .v-navbar.is-transparent .v-navbar-item.has-dropdown.is-hoverable:hover .v-navbar-link {\n    background-color: transparent;\n}\n.v-navbar.is-transparent .v-navbar-dropdown a.v-navbar-item:hover {\n    background-color: whitesmoke;\n    color: #0a0a0a;\n}\n.v-navbar.is-transparent .v-navbar-dropdown a.v-navbar-item.is-active {\n    background-color: whitesmoke;\n    color: #1ca0f2;\n}\n.v-navbar-item,\n.v-navbar-link {\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n}\n.v-navbar-item.has-dropdown {\n  -webkit-box-align: stretch;\n      -ms-flex-align: stretch;\n          align-items: stretch;\n}\n.v-navbar-item.is-active .v-navbar-dropdown, .v-navbar-item.is-hoverable:hover .v-navbar-dropdown {\n  display: block;\n}\n.v-navbar-item.is-active .v-navbar-dropdown.is-boxed, .v-navbar-item.is-hoverable:hover .v-navbar-dropdown.is-boxed {\n    opacity: 1;\n    pointer-events: auto;\n    -webkit-transform: translateY(0);\n            transform: translateY(0);\n}\n.v-navbar-menu {\n  -webkit-box-flex: 1;\n      -ms-flex-positive: 1;\n          flex-grow: 1;\n  -ms-flex-negative: 0;\n      flex-shrink: 0;\n}\n.v-navbar-start {\n  -webkit-box-pack: start;\n      -ms-flex-pack: start;\n          justify-content: flex-start;\n  margin-right: auto;\n}\n.v-navbar-end {\n  -webkit-box-pack: end;\n      -ms-flex-pack: end;\n          justify-content: flex-end;\n  margin-left: auto;\n}\n.v-message {\n  background-color: whitesmoke;\n  border-radius: 3px;\n  font-size: 1rem;\n}\n.v-message:not(:last-child) {\n    margin-bottom: 1.5rem;\n}\n.v-message strong {\n    color: currentColor;\n}\n.v-message a:not(.button):not(.tag) {\n    color: currentColor;\n    text-decoration: underline;\n}\n.v-message.is-small {\n    font-size: 0.75rem;\n}\n.v-message.is-medium {\n    font-size: 1.25rem;\n}\n.v-message.is-large {\n    font-size: 1.5rem;\n}\n.v-message.is-white {\n    background-color: white;\n}\n.v-message.is-white .v-message-header {\n      background-color: white;\n      color: #0a0a0a;\n}\n.v-message.is-white .v-message-body {\n      border-color: white;\n      color: #4d4d4d;\n}\n.v-message.is-black {\n    background-color: #fafafa;\n}\n.v-message.is-black .v-message-header {\n      background-color: #0a0a0a;\n      color: white;\n}\n.v-message.is-black .v-message-body {\n      border-color: #0a0a0a;\n      color: #090909;\n}\n.v-message.is-light {\n    background-color: #fafafa;\n}\n.v-message.is-light .v-message-header {\n      background-color: whitesmoke;\n      color: #363636;\n}\n.v-message.is-light .v-message-body {\n      border-color: whitesmoke;\n      color: #505050;\n}\n.v-message.is-dark {\n    background-color: #fafafa;\n}\n.v-message.is-dark .v-message-header {\n      background-color: #363636;\n      color: whitesmoke;\n}\n.v-message.is-dark .v-message-body {\n      border-color: #363636;\n      color: #2a2a2a;\n}\n.v-message.is-primary {\n    background-color: #f5fbfe;\n}\n.v-message.is-primary .v-message-header {\n      background-color: #1ca0f2;\n      color: #fff;\n}\n.v-message.is-primary .v-message-body {\n      border-color: #1ca0f2;\n      color: #0f527b;\n}\n.v-message.is-info {\n    background-color: #faf5ff;\n}\n.v-message.is-info .v-message-header {\n      background-color: #b86bff;\n      color: #fff;\n}\n.v-message.is-info .v-message-body {\n      border-color: #b86bff;\n      color: #7d0ce8;\n}\n.v-message.is-success {\n    background-color: #f6fef9;\n}\n.v-message.is-success .v-message-header {\n      background-color: #23d160;\n      color: #fff;\n}\n.v-message.is-success .v-message-body {\n      border-color: #23d160;\n      color: #0e301a;\n}\n.v-message.is-warning {\n    background-color: #fffdf5;\n}\n.v-message.is-warning .v-message-header {\n      background-color: #ffdd57;\n      color: rgba(0, 0, 0, 0.7);\n}\n.v-message.is-warning .v-message-body {\n      border-color: #ffdd57;\n      color: #3b3108;\n}\n.v-message.is-danger {\n    background-color: #fff5f7;\n}\n.v-message.is-danger .v-message-header {\n      background-color: #ff3860;\n      color: #fff;\n}\n.v-message.is-danger .v-message-body {\n      border-color: #ff3860;\n      color: #cd0930;\n}\n.v-message-header {\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  background-color: #4a4a4a;\n  border-radius: 3px 3px 0 0;\n  color: #fff;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  line-height: 1.25;\n  padding: 0.5em 0.75em;\n  position: relative;\n}\n.v-message-header .v-close {\n    -webkit-box-flex: 0;\n        -ms-flex-positive: 0;\n            flex-grow: 0;\n    -ms-flex-negative: 0;\n        flex-shrink: 0;\n    margin-left: 0.75em;\n}\n.v-message-header + .v-message-body {\n    border-top-left-radius: 0;\n    border-top-right-radius: 0;\n    border-top: none;\n}\n.v-message-body {\n  border: 1px solid #dbdbdb;\n  border-radius: 3px;\n  color: #4a4a4a;\n  padding: 1em 1.25em;\n}\n.v-message-body code,\n  .v-message-body pre {\n    background-color: white;\n}\n.v-message-body pre code {\n    background-color: transparent;\n}\n.v-message-popup {\n  position: fixed;\n  top: 1em;\n  z-index: 2010;\n  border-radius: 3px;\n  width: 100%;\n  left: 0;\n  right: 0;\n  background: transparent;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  padding: 0 5vw;\n}\n.v-message-popup > .v-message {\n    box-shadow: 1px 1px 10px #aaa;\n}\n.v-message-popup .v-message-body {\n    padding: 0.5em 1em;\n}\n.v-tabs {\n  -webkit-overflow-scrolling: touch;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  -webkit-box-align: stretch;\n      -ms-flex-align: stretch;\n          align-items: stretch;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  font-size: 1rem;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  overflow: hidden;\n  overflow-x: auto;\n  white-space: nowrap;\n}\n.v-tabs:not(:last-child) {\n    margin-bottom: 1.5rem;\n}\n.v-tabs a {\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    border-bottom-color: #dbdbdb;\n    border-bottom-style: solid;\n    border-bottom-width: 1px;\n    color: #4a4a4a;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    margin-bottom: -1px;\n    padding: 0.5em 1em;\n    vertical-align: top;\n}\n.v-tabs a:hover {\n      border-bottom-color: #363636;\n      color: #363636;\n}\n.v-tabs li {\n    display: block;\n}\n.v-tabs li.is-active a {\n      border-bottom-color: #1ca0f2;\n      color: #1ca0f2;\n}\n.v-tabs ul {\n    list-style: none;\n    margin: 0;\n    padding: 0;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    border-bottom-color: #dbdbdb;\n    border-bottom-style: solid;\n    border-bottom-width: 1px;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-flex: 1;\n        -ms-flex-positive: 1;\n            flex-grow: 1;\n    -ms-flex-negative: 0;\n        flex-shrink: 0;\n    -webkit-box-pack: start;\n        -ms-flex-pack: start;\n            justify-content: flex-start;\n}\n.v-tabs ul.is-left {\n      padding-right: 0.75em;\n}\n.v-tabs ul.is-center {\n      -webkit-box-flex: 0;\n          -ms-flex: none;\n              flex: none;\n      -webkit-box-pack: center;\n          -ms-flex-pack: center;\n              justify-content: center;\n      padding-left: 0.75em;\n      padding-right: 0.75em;\n}\n.v-tabs ul.is-right {\n      -webkit-box-pack: end;\n          -ms-flex-pack: end;\n              justify-content: flex-end;\n      padding-left: 0.75em;\n}\n.v-tabs .has-icon:first-child {\n    margin-right: 0.5em;\n}\n.v-tabs .has-icon:last-child {\n    margin-left: 0.5em;\n}\n.v-tabs.is-centered ul {\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n}\n.v-tabs.is-right ul {\n    -webkit-box-pack: end;\n        -ms-flex-pack: end;\n            justify-content: flex-end;\n}\n.v-tabs.is-boxed a {\n    border: 1px solid transparent;\n    border-radius: 3px 3px 0 0;\n}\n.v-tabs.is-boxed a:hover {\n      background-color: whitesmoke;\n      border-bottom-color: #dbdbdb;\n}\n.v-tabs.is-boxed li.is-active a {\n    background-color: white;\n    border-color: #dbdbdb;\n    border-bottom-color: transparent !important;\n}\n.v-tabs.is-fullwidth li {\n    -webkit-box-flex: 1;\n        -ms-flex-positive: 1;\n            flex-grow: 1;\n    -ms-flex-negative: 0;\n        flex-shrink: 0;\n}\n.v-tabs.is-toggle a {\n    border-color: #dbdbdb;\n    border-style: solid;\n    border-width: 1px;\n    margin-bottom: 0;\n    position: relative;\n}\n.v-tabs.is-toggle a:hover {\n      background-color: whitesmoke;\n      border-color: #b5b5b5;\n      z-index: 2;\n}\n.v-tabs.is-toggle li + li {\n    margin-left: -1px;\n}\n.v-tabs.is-toggle li:first-child a {\n    border-radius: 3px 0 0 3px;\n}\n.v-tabs.is-toggle li:last-child a {\n    border-radius: 0 3px 3px 0;\n}\n.v-tabs.is-toggle li.is-active a {\n    background-color: #1ca0f2;\n    border-color: #1ca0f2;\n    color: #fff;\n    z-index: 1;\n}\n.v-tabs.is-toggle ul {\n    border-bottom: none;\n}\n.v-tabs.is-small {\n    font-size: 0.75rem;\n}\n.v-tabs.is-medium {\n    font-size: 1.25rem;\n}\n.v-tabs.is-large {\n    font-size: 1.5rem;\n}\n.v-breadcrumb {\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  -webkit-box-align: stretch;\n      -ms-flex-align: stretch;\n          align-items: stretch;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  font-size: 1rem;\n  overflow: hidden;\n  overflow-x: auto;\n  white-space: nowrap;\n}\n.v-breadcrumb:not(:last-child) {\n    margin-bottom: 1.5rem;\n}\n.v-breadcrumb a {\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    color: #7a7a7a;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    text-decoration: none;\n    padding: 0.5em 0.75em;\n}\n.v-breadcrumb a:hover {\n      color: #363636;\n}\n.v-breadcrumb li {\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n}\n.v-breadcrumb li:first-child a {\n      padding-left: 0;\n}\n.v-breadcrumb li.is-active a {\n      color: #363636;\n      cursor: default;\n      pointer-events: none;\n}\n.v-breadcrumb li + li::before {\n      color: #4a4a4a;\n      content: \"/\";\n}\n.v-breadcrumb ul, .v-breadcrumb ol {\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-flex: 1;\n        -ms-flex-positive: 1;\n            flex-grow: 1;\n    -ms-flex-negative: 0;\n        flex-shrink: 0;\n    -webkit-box-pack: start;\n        -ms-flex-pack: start;\n            justify-content: flex-start;\n}\n.v-breadcrumb .has-icon:first-child {\n    margin-right: 0.5em;\n}\n.v-breadcrumb .has-icon:last-child {\n    margin-left: 0.5em;\n}\n.v-breadcrumb.is-centered ol, .v-breadcrumb.is-centered ul {\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n}\n.v-breadcrumb.is-right ol, .v-breadcrumb.is-right ul {\n    -webkit-box-pack: end;\n        -ms-flex-pack: end;\n            justify-content: flex-end;\n}\n.v-breadcrumb.is-small {\n    font-size: 0.75rem;\n}\n.v-breadcrumb.is-medium {\n    font-size: 1.25rem;\n}\n.v-breadcrumb.is-large {\n    font-size: 1.5rem;\n}\n.v-breadcrumb.has-arrow-separator li + li::before {\n    content: \"\\2192\";\n}\n.v-breadcrumb.has-bullet-separator li + li::before {\n    content: \"\\2022\";\n}\n.v-breadcrumb.has-dot-separator li + li::before {\n    content: \"\\B7\";\n}\n.v-breadcrumb.has-succeeds-separator li + li::before {\n    content: \"\\227B\";\n}\n.sav-tooltip {\n  position: fixed;\n  line-height: 1.2;\n  font-size: 14px;\n  padding: 0.5rem;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  box-sizing: border-box;\n  z-index: 10001;\n  top: 0;\n  left: 0;\n  max-width: 250px;\n  color: #4c4c4c;\n  background-color: #ffdd0a;\n  border: 1px solid #d0b300;\n  border-radius: 3px;\n  pointer-events: none;\n  transition: none;\n  display: none;\n  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);\n}\n.v-popover {\n  display: block;\n  visibility: visible;\n  font-size: 12px;\n  line-height: 1.5;\n  position: absolute;\n  z-index: 1060;\n  min-width: 150px;\n}\n.v-popover .has-arrow, .v-popover .has-arrow:after {\n    display: block;\n    width: 0;\n    height: 0;\n    position: absolute;\n    border-width: 6px;\n    border-color: transparent;\n    border-style: solid;\n}\n.v-popover .has-arrow:after {\n      content: \" \";\n      border-width: 5px;\n}\n.v-popover[x-placement^=\"top\"] {\n    padding: 5px 0 8px;\n}\n.v-popover[x-placement^=\"top\"] .has-arrow, .v-popover[x-placement^=\"top\"] .has-arrow:after {\n      left: 50%;\n      margin-left: -5px;\n      bottom: 3px;\n      border-width: 5px 5px 0;\n      border-top-color: #ffffff;\n}\n.v-popover[x-placement^=\"top\"] .has-arrow:after {\n        content: \" \";\n        bottom: 1px;\n        margin-left: -5px;\n        border-bottom-width: 0;\n        border-top-color: #ffffff;\n}\n.v-popover[x-placement^=\"right\"] {\n    padding: 0 5px 0 8px;\n}\n.v-popover[x-placement^=\"right\"] .has-arrow, .v-popover[x-placement^=\"right\"] .has-arrow:after {\n      display: none;\n      top: 50%;\n      margin-top: -5px;\n      left: 3px;\n      border-width: 5px 5px 5px 0;\n      border-right-color: #d6d7d8;\n}\n.v-popover[x-placement^=\"right\"] .has-arrow:after {\n        content: \" \";\n        left: 1px;\n        bottom: -5px;\n        border-left-width: 0;\n        border-right-color: white;\n}\n.v-popover[x-placement^=\"bottom\"] {\n    padding: 8px 0 5px;\n}\n.v-popover[x-placement^=\"bottom\"] .has-arrow, .v-popover[x-placement^=\"bottom\"] .has-arrow:after {\n      left: 50%;\n      margin-left: -5px;\n      top: 3px;\n      border-width: 0 5px 5px;\n      border-bottom-color: #d6d7d8;\n}\n.v-popover[x-placement^=\"bottom\"] .has-arrow:after {\n        content: \" \";\n        top: 1px;\n        margin-left: -5px;\n        border-top-width: 0;\n        border-bottom-color: #ffffff;\n}\n.v-popover[x-placement^=\"left\"] {\n    padding: 0 8px 0 5px;\n}\n.v-popover[x-placement^=\"left\"] .has-arrow, .v-popover[x-placement^=\"left\"] .has-arrow:after {\n      top: 0px;\n      margin-top: -5px;\n      right: 3px;\n      border-width: 5px 0 5px 5px;\n      border-left-color: #d6d7d8;\n}\n.v-popover[x-placement^=\"left\"] .has-arrow:after {\n        content: \" \";\n        right: 1px;\n        border-right-width: 0;\n        border-left-color: #ffffff;\n        bottom: -5px;\n}\n.v-popover-inner {\n  width: 100%;\n  background-color: white;\n  background-clip: padding-box;\n  border-radius: 2px;\n  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);\n  white-space: nowrap;\n  border: 1px solid #d6d7d8;\n}\n.v-popover-inner .has-title {\n    padding: 10px 0.5rem 5px 0.5rem;\n    position: relative;\n    font-size: 14px;\n    font-weight: bold;\n    display: block;\n    line-height: 1em;\n    background-color: #ffffff;\n}\n.v-popover-inner .has-title:after {\n      content: \"\";\n      display: none;\n      height: 1px;\n      position: absolute;\n      left: 0;\n      right: 0;\n      bottom: 0;\n      background-color: #e9eaec;\n}\n.v-popover-body {\n  padding: 0 0.5rem 0.5rem 0.5rem;\n}\n.v-popover-body .has-content {\n    word-break: break-all;\n    white-space: normal;\n    overflow: auto;\n    color: #495060;\n}\n.popover-fade-enter-active {\n  -webkit-animation: v-kf-fade-in .5s;\n          animation: v-kf-fade-in .5s;\n}\n.popover-fade-leave-active {\n  -webkit-animation: v-kf-fade-out .2s;\n          animation: v-kf-fade-out .2s;\n}\n.demo-box {\n  padding: 25px 0;\n}\n.demo-box.has-pad-sm {\n    padding: 5px 0;\n}\n.demo-box a, .demo-box button, .demo-box input {\n    font-weight: inherit;\n    color: inherit;\n}\n.demo-box.sd-with-icon-bg .has-icon {\n    background-color: whitesmoke;\n}\n.demo-box .has-icon.is-medium .iconfont {\n    font-size: 1.5rem;\n}\n.demo-box .has-icon.is-large .iconfont {\n    font-size: 2.5rem;\n}\n.demo-box.sd-form-example-cnt {\n    padding: 30px 25px !important;\n    width: 95%;\n    border: 1px solid #eeeeee;\n    border-radius: 4px;\n    position: relative;\n    margin: 40px 0;\n}\n.demo-box.sd-form-example-cnt:after {\n      content: \"Form Example\";\n      position: absolute;\n      top: -10px;\n      left: 15px;\n      background-color: #f9da00;\n      color: #393f48;\n      font-size: 12px;\n      line-height: 1em;\n      padding: 4px 5px;\n      border-radius: 2px;\n}\np.v-help {\n  line-height: normal;\n  font-size: 0.75rem;\n  margin-top: 0.25rem;\n}\np.v-control {\n  margin: 0;\n}\np.v-modal-card-title {\n  margin: 0;\n}\n.markdown-section figure, .markdown-section p, .markdown-section ul, .markdown-section ol {\n  margin: 0.5em 0;\n}\n.markdown-section ul, .markdown-section ol {\n  padding-left: 1rem;\n}\n.sd-loading {\n  font-size: 2rem;\n  -webkit-animation: v-kf-spin-around 500ms infinite linear;\n          animation: v-kf-spin-around 500ms infinite linear;\n  border: 2px solid #dbdbdb;\n  border-radius: 290486px;\n  border-right-color: transparent;\n  border-top-color: transparent;\n  content: \"\";\n  display: block;\n  box-sizing: border-box;\n  height: 1em;\n  width: 1em;\n  position: relative;\n}\n.__too-long-hl-code {\n  max-height: 180px;\n  overflow: scroll;\n  opacity: .6;\n  cursor: pointer;\n  position: relative;\n  transition: opacity .5s;\n}\n.__too-long-hl-code:after {\n    content: \"\\70B9\\51FB\\5C55\\5F00\";\n}\n.__too-long-hl-code:hover {\n    opacity: 1;\n}\n", "", {"version":3,"sources":["/./pages/summary.vue"],"names":[],"mappings":";AACA,iBAAiB;AAIjB;AACA;IACI,gCAAgC;YACxB,wBAAwB;CACnC;AACD;IACI,kCAAkC;YAC1B,0BAA0B;CACrC;CACA;AACD;AACA;IACI,gCAAgC;YACxB,wBAAwB;CACnC;AACD;IACI,kCAAkC;YAC1B,0BAA0B;CACrC;CACA;AACD;AACA;IACI,WAAW;CACd;AACD;IACI,WAAW;CACd;CACA;AACD;AACA;IACI,WAAW;CACd;AACD;IACI,WAAW;CACd;CACA;AACD;AACA;IACI,WAAW;CACd;AACD;IACI,WAAW;CACd;CACA;AACD;AACA;IACI,WAAW;CACd;AACD;IACI,WAAW;CACd;CACA;AACD;AACA;IACI,WAAW;IACX,4CAA4C;YACpC,oCAAoC;CAC/C;AACD;IACI,WAAW;IACX,wBAAwB;YAChB,gBAAgB;CAC3B;CACA;AACD;AACA;IACI,WAAW;IACX,4CAA4C;YACpC,oCAAoC;CAC/C;AACD;IACI,WAAW;IACX,wBAAwB;YAChB,gBAAgB;CAC3B;CACA;AACD;AACA;IACI,WAAW;CACd;AACD;IACI,WAAW;IACX,2CAA2C;YACnC,mCAAmC;CAC9C;CACA;AACD;AACA;IACI,WAAW;CACd;AACD;IACI,WAAW;IACX,2CAA2C;YACnC,mCAAmC;CAC9C;CACA;AACD;EACE,eAAe;EACf,mBAAmB;CACpB;AACD;EACE,qBAAqB;EACrB,sBAAsB;EACtB,oBAAoB;EACpB,qBAAqB;EACrB,qBAAqB;EACrB,cAAc;CACf;AACD;IACI,uBAAuB;CAC1B;AACD;IACI,mCAAmC;CACtC;AACD;IACI,yBAAyB;QACrB,sBAAsB;YAClB,wBAAwB;CACnC;AACD;IACI,eAAe;IACf,gBAAgB;IAChB,cAAc;CACjB;AACD;MACM,UAAU;MACV,sBAAsB;CAC3B;AACD;MACM,oBAAoB;CACzB;AACD;MACM,iBAAiB;CACtB;AACD;IACI,oBAAoB;QAChB,gBAAgB;CACvB;AACD;IACI,0BAA0B;QACtB,uBAAuB;YACnB,oBAAoB;CAC/B;AACD;EACE,eAAe;EACf,2BAA2B;MACvB,cAAc;EAClB,oBAAoB;MAChB,qBAAqB;UACjB,aAAa;EACrB,qBAAqB;MACjB,eAAe;EACnB,gBAAgB;CACjB;AACD;IACI,oBAAoB;QAChB,eAAe;YACX,WAAW;CACtB;AACD;IACI,oBAAoB;QAChB,eAAe;YACX,WAAW;IACnB,YAAY;CACf;AACD;IACI,oBAAoB;QAChB,eAAe;YACX,WAAW;IACnB,WAAW;CACd;AACD;IACI,oBAAoB;QAChB,eAAe;YACX,WAAW;IACnB,gBAAgB;CACnB;AACD;IACI,oBAAoB;QAChB,eAAe;YACX,WAAW;IACnB,WAAW;CACd;AACD;IACI,oBAAoB;QAChB,eAAe;YACX,WAAW;IACnB,gBAAgB;CACnB;AACD;IACI,oBAAoB;QAChB,eAAe;YACX,WAAW;IACnB,WAAW;CACd;AACD;IACI,iBAAiB;CACpB;AACD;IACI,sBAAsB;CACzB;AACD;IACI,iBAAiB;CACpB;AACD;IACI,sBAAsB;CACzB;AACD;IACI,iBAAiB;CACpB;AACD;IACI,oBAAoB;QAChB,eAAe;YACX,WAAW;IACnB,gBAAgB;CACnB;AACD;IACI,sBAAsB;CACzB;AACD;IACI,oBAAoB;QAChB,eAAe;YACX,WAAW;IACnB,iBAAiB;CACpB;AACD;IACI,uBAAuB;CAC1B;AACD;IACI,oBAAoB;QAChB,eAAe;YACX,WAAW;IACnB,WAAW;CACd;AACD;IACI,iBAAiB;CACpB;AACD;IACI,oBAAoB;QAChB,eAAe;YACX,WAAW;IACnB,iBAAiB;CACpB;AACD;IACI,uBAAuB;CAC1B;AACD;IACI,oBAAoB;QAChB,eAAe;YACX,WAAW;IACnB,iBAAiB;CACpB;AACD;IACI,uBAAuB;CAC1B;AACD;IACI,oBAAoB;QAChB,eAAe;YACX,WAAW;IACnB,WAAW;CACd;AACD;IACI,iBAAiB;CACpB;AACD;IACI,oBAAoB;QAChB,eAAe;YACX,WAAW;IACnB,iBAAiB;CACpB;AACD;IACI,uBAAuB;CAC1B;AACD;IACI,oBAAoB;QAChB,eAAe;YACX,WAAW;IACnB,iBAAiB;CACpB;AACD;IACI,uBAAuB;CAC1B;AACD;IACI,oBAAoB;QAChB,eAAe;YACX,WAAW;IACnB,WAAW;CACd;AACD;IACI,iBAAiB;CACpB;AACD;IACI,oBAAoB;QAChB,eAAe;YACX,WAAW;IACnB,iBAAiB;CACpB;AACD;IACI,uBAAuB;CAC1B;AACD;IACI,oBAAoB;QAChB,eAAe;YACX,WAAW;IACnB,iBAAiB;CACpB;AACD;IACI,uBAAuB;CAC1B;AACD;IACI,oBAAoB;QAChB,eAAe;YACX,WAAW;IACnB,YAAY;CACf;AACD;IACI,kBAAkB;CACrB;AACD;EACE,0BAA0B;MACtB,uBAAuB;UACnB,oBAAoB;EAC5B,4BAA4B;EAC5B,4BAA4B;EAC5B,qBAAqB;EACrB,yBAAyB;MACrB,sBAAsB;UAClB,wBAAwB;EAChC,eAAe;EACf,cAAc;CACf;AACD;IACI,aAAa;IACb,YAAY;CACf;AACD;IACI,aAAa;IACb,YAAY;CACf;AACD;IACI,aAAa;IACb,YAAY;CACf;AACD;IACI,aAAa;CAChB;AACD;IACI,eAAe;CAClB;AACD;IACI,kBAAkB;CACrB;AACD;IACI,eAAe;CAClB;AACD;IACI,eAAe;CAClB;AACD;IACI,eAAe;CAClB;AACD;IACI,eAAe;CAClB;AACD;IACI,eAAe;CAClB;AACD;IACI,eAAe;CAClB;AACD;IACI,yBAAyB;IACzB,wBAAwB;CAC3B;AACD;IACI,wBAAwB;CAC3B;AACD;IACI,yBAAyB;IACzB,2BAA2B;CAC9B;AACD;IACI,wBAAwB;CAC3B;AACD;IACI,2BAA2B;IAC3B,0BAA0B;CAC7B;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,2BAA2B;IAC3B,6BAA6B;CAChC;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,yBAAyB;IACzB,wBAAwB;CAC3B;AACD;IACI,wBAAwB;CAC3B;AACD;IACI,yBAAyB;IACzB,2BAA2B;CAC9B;AACD;IACI,wBAAwB;CAC3B;AACD;IACI,2BAA2B;IAC3B,0BAA0B;CAC7B;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,2BAA2B;IAC3B,6BAA6B;CAChC;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,yBAAyB;IACzB,wBAAwB;CAC3B;AACD;IACI,wBAAwB;CAC3B;AACD;IACI,yBAAyB;IACzB,2BAA2B;CAC9B;AACD;IACI,wBAAwB;CAC3B;AACD;IACI,2BAA2B;IAC3B,0BAA0B;CAC7B;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,2BAA2B;IAC3B,6BAA6B;CAChC;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,yBAAyB;IACzB,wBAAwB;CAC3B;AACD;IACI,wBAAwB;CAC3B;AACD;IACI,yBAAyB;IACzB,2BAA2B;CAC9B;AACD;IACI,wBAAwB;CAC3B;AACD;IACI,2BAA2B;IAC3B,0BAA0B;CAC7B;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,2BAA2B;IAC3B,6BAA6B;CAChC;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,yBAAyB;IACzB,wBAAwB;CAC3B;AACD;IACI,wBAAwB;CAC3B;AACD;IACI,yBAAyB;IACzB,2BAA2B;CAC9B;AACD;IACI,wBAAwB;CAC3B;AACD;IACI,2BAA2B;IAC3B,0BAA0B;CAC7B;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,2BAA2B;IAC3B,6BAA6B;CAChC;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,yBAAyB;IACzB,wBAAwB;CAC3B;AACD;IACI,wBAAwB;CAC3B;AACD;IACI,yBAAyB;IACzB,2BAA2B;CAC9B;AACD;IACI,wBAAwB;CAC3B;AACD;IACI,2BAA2B;IAC3B,0BAA0B;CAC7B;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,2BAA2B;IAC3B,6BAA6B;CAChC;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,yBAAyB;IACzB,wBAAwB;CAC3B;AACD;IACI,wBAAwB;CAC3B;AACD;IACI,yBAAyB;IACzB,2BAA2B;CAC9B;AACD;IACI,wBAAwB;CAC3B;AACD;IACI,2BAA2B;IAC3B,0BAA0B;CAC7B;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,2BAA2B;IAC3B,6BAA6B;CAChC;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,yBAAyB;IACzB,wBAAwB;CAC3B;AACD;IACI,wBAAwB;CAC3B;AACD;IACI,yBAAyB;IACzB,2BAA2B;CAC9B;AACD;IACI,wBAAwB;CAC3B;AACD;IACI,2BAA2B;IAC3B,0BAA0B;CAC7B;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,2BAA2B;IAC3B,6BAA6B;CAChC;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,yBAAyB;IACzB,wBAAwB;CAC3B;AACD;IACI,wBAAwB;CAC3B;AACD;IACI,yBAAyB;IACzB,2BAA2B;CAC9B;AACD;IACI,wBAAwB;CAC3B;AACD;IACI,2BAA2B;IAC3B,0BAA0B;CAC7B;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,2BAA2B;IAC3B,6BAA6B;CAChC;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,yBAAyB;IACzB,wBAAwB;CAC3B;AACD;IACI,wBAAwB;CAC3B;AACD;IACI,yBAAyB;IACzB,2BAA2B;CAC9B;AACD;IACI,wBAAwB;CAC3B;AACD;IACI,2BAA2B;IAC3B,0BAA0B;CAC7B;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,2BAA2B;IAC3B,6BAA6B;CAChC;AACD;IACI,0BAA0B;CAC7B;AACD;EACE,iCAAiC;EACjC,mBAAmB;EACnB,WAAW;EACX,YAAY;EACZ,qBAAqB;EACrB,uBAAuB;EACvB,0BAA0B;CAC3B;AACD;EACE,8BAA8B;EAC9B,mBAAmB;EACnB,WAAW;EACX,eAAe;EACf,gBAAgB;EAChB,YAAY;EACZ,0BAA0B;EAC1B,uDAAuD;EACvD,uBAAuB;EACvB,2BAA2B;EAC3B,6BAA6B;CAC9B;AACD;EACE,8BAA8B;EAC9B,mBAAmB;EACnB,aAAa;EACb,eAAe;EACf,YAAY;EACZ,aAAa;EACb,YAAY;EACZ,mBAAmB;EACnB,0BAA0B;EAC1B,uDAAuD;EACvD,qBAAqB;EACrB,uBAAuB;EACvB,2BAA2B;EAC3B,0BAA0B;CAC3B;AACD;EACE,mBAAmB;EACnB,YAAY;EACZ,YAAY;EACZ,WAAW;EACX,YAAY;EACZ,0BAA0B;CAC3B;AACD;EACE,iCAAiC;EACjC,yBAAyB;CAC1B;AACD;EACE,kCAAkC;EAClC,0BAA0B;CAC3B;AACD;;;;;EAKE,iBAAiB;EACjB,sBAAsB;EACtB,mBAAmB;EACnB,WAAW;EACX,YAAY;EACZ,uBAAuB;CACxB;AACD;;EAEE,kDAAkD;EAClD,0CAA0C;CAC3C;AACD;;EAEE,kCAAkC;EAClC,0BAA0B;EAC1B,YAAY;EACZ,cAAc;CACf;AACD;EACE,sBAAsB;EACtB,yBAAyB;EACzB,0BAA0B;MACtB,uBAAuB;UACnB,oBAAoB;EAC5B,8BAA8B;EAC9B,mBAAmB;EACnB,iBAAiB;EACjB,4BAA4B;EAC5B,4BAA4B;EAC5B,qBAAqB;EACrB,gBAAgB;EAChB,eAAe;EACf,wBAAwB;MACpB,qBAAqB;UACjB,4BAA4B;EACpC,iBAAiB;EACjB,iDAAiD;EACjD,mBAAmB;EACnB,oBAAoB;EACpB,0BAA0B;EAC1B,uBAAuB;EACvB,sBAAsB;EACtB,kBAAkB;EAClB,wBAAwB;EACxB,sBAAsB;EACtB,aAAa;EACb,gBAAgB;EAChB,yBAAyB;MACrB,sBAAsB;UAClB,wBAAwB;EAChC,qBAAqB;EACrB,sBAAsB;EACtB,mBAAmB;EACnB,oBAAoB;EACpB,sBAAsB;CACvB;AACD;IACI,cAAc;CACjB;AACD;IACI,oBAAoB;CACvB;AACD;IACI,eAAe;CAClB;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,aAAa;IACb,0BAA0B;CAC7B;AACD;IACI,qBAAqB;IACrB,oBAAoB;IACpB,0BAA0B;IAC1B,sBAAsB;IACtB,4BAA4B;IAC5B,YAAY;CACf;AACD;IACI,sBAAsB;IACtB,eAAe;CAClB;AACD;MACM,mDAAmD;CACxD;AACD;IACI,mBAAmB;IACnB,mBAAmB;CACtB;AACD;IACI,mBAAmB;CACtB;AACD;IACI,kBAAkB;CACrB;AACD;IACI,qBAAqB;IACrB,8BAA8B;CACjC;AACD;MACM,WAAW;CAChB;AACD;MACM,0BAA0B;MAC1B,wBAAwB;MACxB,gCAAgC;MAChC,8BAA8B;MAC9B,YAAY;MACZ,eAAe;MACf,mBAAmB;MACnB,YAAY;MACZ,WAAW;MACX,0DAA0D;cAClD,kDAAkD;MAC1D,mBAAmB;MACnB,sCAAsC;MACtC,qCAAqC;CAC1C;AACD;IACI,mBAAmB;CACtB;AACD;IACI,yBAAyB;IACzB,0BAA0B;CAC7B;AACD;MACM,2BAA2B;MAC3B,4BAA4B;CACjC;AACD;MACM,2BAA2B;MAC3B,4BAA4B;CACjC;AACD;IACI,8BAA8B;IAC9B,0BAA0B;IAC1B,eAAe;IACf,sBAAsB;CACzB;AACD;MACM,6BAA6B;MAC7B,eAAe;CACpB;AACD;MACM,0BAA0B;MAC1B,eAAe;CACpB;AACD;MACM,8BAA8B;MAC9B,0BAA0B;MAC1B,iBAAiB;CACtB;AACD;IACI,cAAc;IACd,aAAa;CAChB;AACD;IACI,kCAAkC;IAClC,uBAAuB;CAC1B;AACD;IACI,sBAAsB;IACtB,mCAAmC;CACtC;AACD;IACI,kCAAkC;IAClC,mCAAmC;CACtC;AACD;EACE,sBAAsB;EACtB,uBAAuB;CACxB;AACD;IACI,YAAY;IACZ,aAAa;IACb,eAAe;CAClB;AACD;IACI,YAAY;IACZ,kBAAkB;CACrB;AACD;MACM,iBAAiB;CACtB;AACD;MACM,eAAe;CACpB;AACD;QACQ,8BAA8B;QAC9B,2BAA2B;CAClC;AACD;MACM,6BAA6B;MAC7B,0BAA0B;CAC/B;AACD;EACE,sBAAsB;EACtB,uBAAuB;CACxB;AACD;IACI,eAAe;IACf,iBAAiB;IACjB,YAAY;IACZ,gBAAgB;CACnB;AACD;MACM,iBAAiB;CACtB;AACD;MACM,cAAc;CACnB;AACD;QACQ,6BAA6B;QAC7B,8BAA8B;CACrC;AACD;MACM,0BAA0B;MAC1B,2BAA2B;CAChC;AACD;EACE,eAAe;EACf,sBAAsB;EACtB,wBAAwB;CACzB;AACD;IACI,aAAa;IACb,0BAA0B;IAC1B,sBAAsB;CACzB;AACD;MACM,0BAA0B;CAC/B;AACD;MACM,0BAA0B;MAC1B,aAAa;CAClB;AACD;QACQ,oDAAoD;CAC3D;AACD;MACM,eAAe;CACpB;AACD;MACM,yBAAyB;MACzB,2BAA2B;CAChC;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,0BAA0B;IAC1B,eAAe;CAClB;AACD;MACM,oDAAoD;CACzD;AACD;IACI,mCAAmC;IACnC,qCAAqC;CACxC;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,2BAA2B;IAC3B,6BAA6B;CAChC;AACD;EACE,aAAa;EACb,sBAAsB;EACtB,0BAA0B;CAC3B;AACD;IACI,eAAe;IACf,wBAAwB;IACxB,sBAAsB;CACzB;AACD;MACM,wBAAwB;CAC7B;AACD;MACM,0BAA0B;MAC1B,eAAe;CACpB;AACD;QACQ,iDAAiD;CACxD;AACD;MACM,aAAa;CAClB;AACD;MACM,2BAA2B;MAC3B,6BAA6B;CAClC;AACD;IACI,wBAAwB;CAC3B;AACD;IACI,0BAA0B;IAC1B,aAAa;CAChB;AACD;MACM,iDAAiD;CACtD;AACD;IACI,qCAAqC;IACrC,qCAAqC;CACxC;AACD;IACI,wBAAwB;CAC3B;AACD;IACI,yBAAyB;IACzB,2BAA2B;CAC9B;AACD;EACE,eAAe;EACf,sBAAsB;EACtB,6BAA6B;CAC9B;AACD;IACI,kBAAkB;IAClB,0BAA0B;IAC1B,sBAAsB;CACzB;AACD;MACM,0BAA0B;CAC/B;AACD;MACM,0BAA0B;MAC1B,kBAAkB;CACvB;AACD;QACQ,oDAAoD;CAC3D;AACD;MACM,eAAe;CACpB;AACD;MACM,8BAA8B;MAC9B,gCAAgC;CACrC;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,0BAA0B;IAC1B,eAAe;CAClB;AACD;MACM,oDAAoD;CACzD;AACD;IACI,wCAAwC;IACxC,qCAAqC;CACxC;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,2BAA2B;IAC3B,6BAA6B;CAChC;AACD;EACE,kBAAkB;EAClB,sBAAsB;EACtB,0BAA0B;CAC3B;AACD;IACI,eAAe;IACf,6BAA6B;IAC7B,sBAAsB;CACzB;AACD;MACM,6BAA6B;CAClC;AACD;MACM,0BAA0B;MAC1B,eAAe;CACpB;AACD;QACQ,iDAAiD;CACxD;AACD;MACM,kBAAkB;CACvB;AACD;MACM,2BAA2B;MAC3B,6BAA6B;CAClC;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,0BAA0B;IAC1B,kBAAkB;CACrB;AACD;MACM,iDAAiD;CACtD;AACD;IACI,qCAAqC;IACrC,qCAAqC;CACxC;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,8BAA8B;IAC9B,gCAAgC;CACnC;AACD;EACE,YAAY;EACZ,sBAAsB;EACtB,0BAA0B;CAC3B;AACD;IACI,eAAe;IACf,uBAAuB;IACvB,sBAAsB;CACzB;AACD;MACM,uBAAuB;CAC5B;AACD;MACM,0BAA0B;MAC1B,eAAe;CACpB;AACD;QACQ,mDAAmD;CAC1D;AACD;MACM,YAAY;CACjB;AACD;MACM,2BAA2B;MAC3B,6BAA6B;CAClC;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,0BAA0B;IAC1B,YAAY;CACf;AACD;MACM,mDAAmD;CACxD;AACD;IACI,qCAAqC;IACrC,qCAAqC;CACxC;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,wBAAwB;IACxB,0BAA0B;CAC7B;AACD;EACE,YAAY;EACZ,sBAAsB;EACtB,0BAA0B;CAC3B;AACD;IACI,eAAe;IACf,uBAAuB;IACvB,sBAAsB;CACzB;AACD;MACM,uBAAuB;CAC5B;AACD;MACM,0BAA0B;MAC1B,eAAe;CACpB;AACD;QACQ,oDAAoD;CAC3D;AACD;MACM,YAAY;CACjB;AACD;MACM,2BAA2B;MAC3B,6BAA6B;CAClC;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,0BAA0B;IAC1B,YAAY;CACf;AACD;MACM,oDAAoD;CACzD;AACD;IACI,qCAAqC;IACrC,qCAAqC;CACxC;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,wBAAwB;IACxB,0BAA0B;CAC7B;AACD;EACE,YAAY;EACZ,sBAAsB;EACtB,0BAA0B;CAC3B;AACD;IACI,eAAe;IACf,uBAAuB;IACvB,sBAAsB;CACzB;AACD;MACM,uBAAuB;CAC5B;AACD;MACM,0BAA0B;MAC1B,eAAe;CACpB;AACD;QACQ,kDAAkD;CACzD;AACD;MACM,YAAY;CACjB;AACD;MACM,2BAA2B;MAC3B,6BAA6B;CAClC;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,0BAA0B;IAC1B,YAAY;CACf;AACD;MACM,kDAAkD;CACvD;AACD;IACI,qCAAqC;IACrC,qCAAqC;CACxC;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,wBAAwB;IACxB,0BAA0B;CAC7B;AACD;EACE,0BAA0B;EAC1B,sBAAsB;EACtB,0BAA0B;CAC3B;AACD;IACI,eAAe;IACf,qCAAqC;IACrC,sBAAsB;CACzB;AACD;MACM,qCAAqC;CAC1C;AACD;MACM,0BAA0B;MAC1B,eAAe;CACpB;AACD;QACQ,mDAAmD;CAC1D;AACD;MACM,0BAA0B;CAC/B;AACD;MACM,2BAA2B;MAC3B,6BAA6B;CAClC;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,0BAA0B;IAC1B,0BAA0B;CAC7B;AACD;MACM,mDAAmD;CACxD;AACD;IACI,qCAAqC;IACrC,qCAAqC;CACxC;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,sCAAsC;IACtC,wCAAwC;CAC3C;AACD;EACE,YAAY;EACZ,sBAAsB;EACtB,0BAA0B;CAC3B;AACD;IACI,eAAe;IACf,uBAAuB;IACvB,sBAAsB;CACzB;AACD;MACM,uBAAuB;CAC5B;AACD;MACM,0BAA0B;MAC1B,eAAe;CACpB;AACD;QACQ,kDAAkD;CACzD;AACD;MACM,YAAY;CACjB;AACD;MACM,2BAA2B;MAC3B,6BAA6B;CAClC;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,0BAA0B;IAC1B,YAAY;CACf;AACD;MACM,kDAAkD;CACvD;AACD;IACI,qCAAqC;IACrC,qCAAqC;CACxC;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,wBAAwB;IACxB,0BAA0B;CAC7B;AACD;EACE,uBAAuB;CACxB;AACD;EACE,qBAAqB;EACrB,qBAAqB;EACrB,cAAc;EACd,wBAAwB;MACpB,qBAAqB;UACjB,4BAA4B;CACrC;AACD;IACI,mBAAmB;CACtB;AACD;;;IAGI,+BAA+B;IAC/B,4BAA4B;CAC/B;AACD;;;IAGI,gCAAgC;IAChC,6BAA6B;CAChC;AACD;;;IAGI,iBAAiB;CACpB;AACD;;;;;MAKM,WAAW;CAChB;AACD;;;;;;;;;MASM,WAAW;CAChB;AACD;;;;;;;;;QASQ,WAAW;CAClB;AACD;IACI,oBAAoB;QAChB,qBAAqB;YACjB,aAAa;CACxB;AACD;IACI,yBAAyB;QACrB,sBAAsB;YAClB,wBAAwB;CACnC;AACD;IACI,sBAAsB;QAClB,mBAAmB;YACf,0BAA0B;CACrC;AACD;IACI,oBAAoB;QAChB,qBAAqB;YACjB,aAAa;IACrB,qBAAqB;QACjB,eAAe;CACtB;AACD;EACE,qBAAqB;EACrB,qBAAqB;EACrB,cAAc;EACd,wBAAwB;MACpB,qBAAqB;UACjB,4BAA4B;CACrC;AACD;IACI,qBAAqB;QACjB,eAAe;CACtB;AACD;MACM,iBAAiB;MACjB,sBAAsB;CAC3B;AACD;MACM,oBAAoB;UAChB,qBAAqB;cACjB,aAAa;MACrB,qBAAqB;UACjB,eAAe;CACxB;AACD;IACI,yBAAyB;QACrB,sBAAsB;YAClB,wBAAwB;CACnC;AACD;IACI,sBAAsB;QAClB,mBAAmB;YACf,0BAA0B;CACrC;AACD;IACI,oBAAoB;QAChB,gBAAgB;CACvB;AACD;MACM,uBAAuB;CAC5B;AACD;MACM,wBAAwB;CAC7B;AACD;MACM,iBAAiB;CACtB;AACD;EACE,qBAAqB;EACrB,qBAAqB;EACrB,cAAc;CACf;AACD;EACE,sBAAsB;EACtB,2BAA2B;MACvB,cAAc;EAClB,oBAAoB;MAChB,qBAAqB;UACjB,aAAa;EACrB,qBAAqB;MACjB,eAAe;EACnB,qBAAqB;EACrB,kBAAkB;CACnB;AACD;IACI,mBAAmB;CACtB;AACD;IACI,mBAAmB;IACnB,qBAAqB;CACxB;AACD;IACI,qBAAqB;CACxB;AACD;IACI,mBAAmB;IACnB,qBAAqB;CACxB;AACD;IACI,kBAAkB;IAClB,qBAAqB;CACxB;AACD;EACE,qBAAqB;EACrB,qBAAqB;EACrB,cAAc;EACd,2BAA2B;MACvB,cAAc;EAClB,oBAAoB;MAChB,qBAAqB;UACjB,aAAa;EACrB,qBAAqB;MACjB,eAAe;CACpB;AACD;IACI,iBAAiB;CACpB;AACD;IACI,qBAAqB;QACjB,eAAe;CACtB;AACD;MACM,oBAAoB;UAChB,qBAAqB;cACjB,aAAa;CAC1B;AACD;MACM,sBAAsB;CAC3B;AACD;EACE,gBAAgB;EAChB,mBAAmB;EACnB,iBAAiB;CAClB;AACD;;;IAGI,eAAe;CAClB;AACD;;;IAGI,mBAAmB;CACtB;AACD;;;IAGI,mBAAmB;CACtB;AACD;;;IAGI,kBAAkB;CACrB;AACD;IACI,eAAe;IACf,eAAe;IACf,qBAAqB;IACrB,mBAAmB;IACnB,OAAO;IACP,cAAc;IACd,WAAW;CACd;AACD;;IAEI,qBAAqB;CACxB;AACD;IACI,QAAQ;CACX;AACD;;IAEI,sBAAsB;CACzB;AACD;IACI,SAAS;CACZ;AACD;IACI,0DAA0D;YAClD,kDAAkD;IAC1D,0BAA0B;IAC1B,wBAAwB;IACxB,gCAAgC;IAChC,8BAA8B;IAC9B,YAAY;IACZ,eAAe;IACf,uBAAuB;IACvB,YAAY;IACZ,WAAW;IACX,mBAAmB;IACnB,8BAA8B;IAC9B,eAAe;IACf,aAAa;CAChB;AACD;IACI,mBAAmB;CACtB;AACD;IACI,mBAAmB;CACtB;AACD;IACI,kBAAkB;CACrB;AACD;;EAEE,sBAAsB;EACtB,yBAAyB;EACzB,0BAA0B;MACtB,uBAAuB;UACnB,oBAAoB;EAC5B,8BAA8B;EAC9B,mBAAmB;EACnB,iBAAiB;EACjB,4BAA4B;EAC5B,4BAA4B;EAC5B,qBAAqB;EACrB,gBAAgB;EAChB,eAAe;EACf,wBAAwB;MACpB,qBAAqB;UACjB,4BAA4B;EACpC,iBAAiB;EACjB,iDAAiD;EACjD,mBAAmB;EACnB,oBAAoB;EACpB,wBAAwB;EACxB,sBAAsB;EACtB,eAAe;EACf,gBAAgB;EAChB,YAAY;CACb;AACD;;;;;IAKI,cAAc;CACjB;AACD;;IAEI,oBAAoB;CACvB;AACD;;;IAGI,sBAAsB;CACzB;AACD;;;;;IAKI,sBAAsB;IACtB,mDAAmD;CACtD;AACD;;IAEI,6BAA6B;IAC7B,yBAAyB;IACzB,iBAAiB;IACjB,eAAe;CAClB;AACD;;MAEM,gCAAgC;CACrC;AACD;;MAEM,gCAAgC;CACrC;AACD;;MAEM,gCAAgC;CACrC;AACD;;MAEM,gCAAgC;CACrC;AACD;;IAEI,wBAAwB;CAC3B;AACD;;IAEI,oBAAoB;CACvB;AACD;;;;;MAKM,oDAAoD;CACzD;AACD;;IAEI,sBAAsB;CACzB;AACD;;;;;MAKM,iDAAiD;CACtD;AACD;;IAEI,yBAAyB;CAC5B;AACD;;;;;MAKM,oDAAoD;CACzD;AACD;;IAEI,sBAAsB;CACzB;AACD;;;;;MAKM,iDAAiD;CACtD;AACD;;IAEI,sBAAsB;CACzB;AACD;;;;;MAKM,mDAAmD;CACxD;AACD;;IAEI,sBAAsB;CACzB;AACD;;;;;MAKM,oDAAoD;CACzD;AACD;;IAEI,sBAAsB;CACzB;AACD;;;;;MAKM,kDAAkD;CACvD;AACD;;IAEI,sBAAsB;CACzB;AACD;;;;;MAKM,mDAAmD;CACxD;AACD;;IAEI,sBAAsB;CACzB;AACD;;;;;MAKM,kDAAkD;CACvD;AACD;;IAEI,mBAAmB;IACnB,mBAAmB;CACtB;AACD;;IAEI,mBAAmB;CACtB;AACD;;IAEI,kBAAkB;CACrB;AACD;;IAEI,eAAe;IACf,YAAY;CACf;AACD;;IAEI,gBAAgB;IAChB,YAAY;CACf;AACD;EACE,sBAAsB;EACtB,gBAAgB;EAChB,mBAAmB;EACnB,oBAAoB;EACpB,uBAAuB;CACxB;AACD;IACI,eAAe;CAClB;AACD;MACM,0BAA0B;MAC1B,gBAAgB;MAChB,cAAc;MACd,aAAa;MACb,eAAe;MACf,cAAc;MACd,qBAAqB;MACrB,mBAAmB;MACnB,kCAAkC;cAC1B,0BAA0B;MAClC,aAAa;MACb,qBAAqB;MACrB,eAAe;MACf,SAAS;MACT,WAAW;CAChB;AACD;IACI,sBAAsB;IACtB,yBAAyB;IACzB,0BAA0B;QACtB,uBAAuB;YACnB,oBAAoB;IAC5B,8BAA8B;IAC9B,mBAAmB;IACnB,iBAAiB;IACjB,4BAA4B;IAC5B,4BAA4B;IAC5B,qBAAqB;IACrB,gBAAgB;IAChB,eAAe;IACf,wBAAwB;QACpB,qBAAqB;YACjB,4BAA4B;IACpC,iBAAiB;IACjB,iDAAiD;IACjD,mBAAmB;IACnB,oBAAoB;IACpB,wBAAwB;IACxB,sBAAsB;IACtB,eAAe;IACf,gBAAgB;IAChB,eAAe;IACf,eAAe;IACf,gBAAgB;IAChB,cAAc;CACjB;AACD;MACM,cAAc;CACnB;AACD;MACM,oBAAoB;CACzB;AACD;MACM,sBAAsB;CAC3B;AACD;MACM,sBAAsB;MACtB,mDAAmD;CACxD;AACD;MACM,6BAA6B;MAC7B,yBAAyB;MACzB,iBAAiB;MACjB,eAAe;CACpB;AACD;QACQ,gCAAgC;CACvC;AACD;QACQ,gCAAgC;CACvC;AACD;QACQ,gCAAgC;CACvC;AACD;QACQ,gCAAgC;CACvC;AACD;MACM,cAAc;CACnB;AACD;MACM,yBAAyB;CAC9B;AACD;MACM,qBAAqB;CAC1B;AACD;MACM,cAAc;MACd,WAAW;CAChB;AACD;QACQ,mBAAmB;CAC1B;AACD;IACI,sBAAsB;CACzB;AACD;IACI,oBAAoB;CACvB;AACD;MACM,oDAAoD;CACzD;AACD;IACI,sBAAsB;CACzB;AACD;MACM,iDAAiD;CACtD;AACD;IACI,yBAAyB;CAC5B;AACD;MACM,oDAAoD;CACzD;AACD;IACI,sBAAsB;CACzB;AACD;MACM,iDAAiD;CACtD;AACD;IACI,sBAAsB;CACzB;AACD;MACM,mDAAmD;CACxD;AACD;IACI,sBAAsB;CACzB;AACD;MACM,oDAAoD;CACzD;AACD;IACI,sBAAsB;CACzB;AACD;MACM,kDAAkD;CACvD;AACD;IACI,sBAAsB;CACzB;AACD;MACM,mDAAmD;CACxD;AACD;IACI,sBAAsB;CACzB;AACD;MACM,kDAAkD;CACvD;AACD;IACI,mBAAmB;IACnB,mBAAmB;CACtB;AACD;IACI,mBAAmB;CACtB;AACD;IACI,kBAAkB;CACrB;AACD;IACI,sBAAsB;CACzB;AACD;IACI,YAAY;CACf;AACD;MACM,YAAY;CACjB;AACD;IACI,0DAA0D;YAClD,kDAAkD;IAC1D,0BAA0B;IAC1B,wBAAwB;IACxB,gCAAgC;IAChC,8BAA8B;IAC9B,YAAY;IACZ,eAAe;IACf,uBAAuB;IACvB,YAAY;IACZ,WAAW;IACX,mBAAmB;IACnB,cAAc;IACd,mBAAmB;IACnB,eAAe;IACf,aAAa;IACb,wBAAwB;YAChB,gBAAgB;CAC3B;AACD;IACI,mBAAmB;CACtB;AACD;IACI,mBAAmB;CACtB;AACD;IACI,kBAAkB;CACrB;AACD;EACE,eAAe;EACf,gBAAgB;EAChB,gBAAgB;EAChB,iBAAiB;EACjB,iBAAiB;CAClB;AACD;IACI,kBAAkB;IAClB,kBAAkB;CACrB;AACD;IACI,cAAc;CACjB;AACD;IACI,aAAa;CAChB;AACD;;EAEE,0BAA0B;EAC1B,uBAAuB;EACvB,sBAAsB;EACtB,kBAAkB;EAClB,gBAAgB;EAChB,sBAAsB;EACtB,kBAAkB;EAClB,mBAAmB;CACpB;AACD;;IAEI,gBAAgB;CACnB;AACD;;IAEI,eAAe;CAClB;AACD;;IAEI,eAAe;IACf,oBAAoB;CACvB;AACD;EACE,iBAAiB;CAClB;AACD;EACE,eAAe;EACf,eAAe;EACf,gBAAgB;EAChB,iBAAiB;EACjB,mBAAmB;CACpB;AACD;IACI,qBAAqB;CACxB;AACD;IACI,mBAAmB;CACtB;AACD;IACI,mBAAmB;CACtB;AACD;IACI,kBAAkB;CACrB;AACD;EACE,eAAe;EACf,mBAAmB;EACnB,oBAAoB;CACrB;AACD;IACI,aAAa;CAChB;AACD;IACI,eAAe;CAClB;AACD;IACI,kBAAkB;CACrB;AACD;IACI,eAAe;CAClB;AACD;IACI,eAAe;CAClB;AACD;IACI,eAAe;CAClB;AACD;IACI,eAAe;CAClB;AACD;IACI,eAAe;CAClB;AACD;IACI,eAAe;CAClB;AACD;EACE,sBAAsB;CACvB;AACD;EACE,mBAAmB;CACpB;AACD;;;;;;;EAOE,mBAAmB;CACpB;AACD;;;;;;EAME,eAAe;EACf,iBAAiB;EACjB,mBAAmB;CACpB;AACD;EACE,eAAe;EACf,qBAAqB;CACtB;AACD;IACI,gBAAgB;CACnB;AACD;EACE,kBAAkB;EAClB,wBAAwB;CACzB;AACD;IACI,qBAAqB;CACxB;AACD;EACE,iBAAiB;EACjB,wBAAwB;CACzB;AACD;IACI,qBAAqB;CACxB;AACD;EACE,kBAAkB;EAClB,qBAAqB;CACtB;AACD;EACE,mBAAmB;EACnB,wBAAwB;CACzB;AACD;EACE,eAAe;EACf,mBAAmB;CACpB;AACD;EACE,6BAA6B;EAC7B,+BAA+B;EAC/B,sBAAsB;CACvB;AACD;EACE,4BAA4B;EAC5B,iBAAiB;EACjB,gBAAgB;CACjB;AACD;EACE,yBAAyB;EACzB,iBAAiB;EACjB,gBAAgB;CACjB;AACD;IACI,wBAAwB;IACxB,kBAAkB;CACrB;AACD;MACM,wBAAwB;CAC7B;AACD;EACE,iBAAiB;CAClB;AACD;EACE,iBAAiB;EACjB,kBAAkB;EAClB,mBAAmB;CACpB;AACD;IACI,gBAAgB;CACnB;AACD;IACI,mBAAmB;CACtB;AACD;IACI,sBAAsB;CACzB;AACD;IACI,mBAAmB;CACtB;AACD;EACE,kCAAkC;EAClC,iBAAiB;EACjB,sBAAsB;EACtB,iBAAiB;EACjB,kBAAkB;CACnB;AACD;;EAEE,eAAe;CAChB;AACD;EACE,YAAY;CACb;AACD;;IAEI,0BAA0B;IAC1B,sBAAsB;IACtB,sBAAsB;IACtB,oBAAoB;CACvB;AACD;IACI,eAAe;IACf,iBAAiB;CACpB;AACD;IACI,6BAA6B;CAChC;AACD;;IAEI,sBAAsB;IACtB,eAAe;CAClB;AACD;;IAEI,sBAAsB;IACtB,eAAe;CAClB;AACD;;IAEI,uBAAuB;CAC1B;AACD;EACE,mBAAmB;CACpB;AACD;EACE,mBAAmB;CACpB;AACD;EACE,kBAAkB;CACnB;AACD;EACE,yBAAyB;MACrB,sBAAsB;UAClB,wBAAwB;EAChC,qBAAqB;EACrB,qBAAqB;EACrB,cAAc;EACd,iBAAiB;CAClB;AACD;IACI,uBAAuB;CAC1B;AACD;IACI,+CAA+C;IAC/C,qBAAqB;IACrB,qBAAqB;IACrB,cAAc;IACd,qBAAqB;CACxB;AACD;;MAEM,sBAAsB;CAC3B;AACD;MACM,oBAAoB;CACzB;AACD;QACQ,mBAAmB;CAC1B;AACD;IACI,+CAA+C;IAC/C,iBAAiB;IACjB,kBAAkB;CACrB;AACD;IACI,mBAAmB;IACnB,oBAAoB;CACvB;AACD;;EAEE,8BAA8B;MAC1B,iBAAiB;EACrB,oBAAoB;MAChB,qBAAqB;UACjB,aAAa;EACrB,qBAAqB;MACjB,eAAe;CACpB;AACD;EACE,mBAAmB;CACpB;AACD;EACE,kBAAkB;CACnB;AACD;EACE,8BAA8B;MAC1B,iBAAiB;EACrB,oBAAoB;MAChB,qBAAqB;UACjB,aAAa;EACrB,qBAAqB;MACjB,eAAe;EACnB,iBAAiB;CAClB;AACD;EACE,wBAAwB;EACxB,mBAAmB;EACnB,6EAA6E;EAC7E,eAAe;EACf,eAAe;EACf,iBAAiB;CAClB;AACD;IACI,sBAAsB;CACzB;AACD;EACE,+DAA+D;CAChE;AACD;EACE,qEAAqE;CACtE;AACD;EACE,sBAAsB;CACvB;AACD;EACE,mBAAmB;CACpB;AACD;;;;;;;EAOE,mBAAmB;CACpB;AACD;;;;;;EAME,eAAe;EACf,iBAAiB;EACjB,mBAAmB;CACpB;AACD;EACE,eAAe;EACf,qBAAqB;CACtB;AACD;IACI,gBAAgB;CACnB;AACD;EACE,kBAAkB;EAClB,wBAAwB;CACzB;AACD;IACI,qBAAqB;CACxB;AACD;EACE,iBAAiB;EACjB,wBAAwB;CACzB;AACD;IACI,qBAAqB;CACxB;AACD;EACE,kBAAkB;EAClB,qBAAqB;CACtB;AACD;EACE,mBAAmB;EACnB,wBAAwB;CACzB;AACD;EACE,eAAe;EACf,mBAAmB;CACpB;AACD;EACE,6BAA6B;EAC7B,+BAA+B;EAC/B,sBAAsB;CACvB;AACD;EACE,4BAA4B;EAC5B,iBAAiB;EACjB,gBAAgB;CACjB;AACD;EACE,yBAAyB;EACzB,iBAAiB;EACjB,gBAAgB;CACjB;AACD;IACI,wBAAwB;IACxB,kBAAkB;CACrB;AACD;MACM,wBAAwB;CAC7B;AACD;EACE,iBAAiB;CAClB;AACD;EACE,iBAAiB;EACjB,kBAAkB;EAClB,mBAAmB;CACpB;AACD;IACI,gBAAgB;CACnB;AACD;IACI,mBAAmB;CACtB;AACD;IACI,sBAAsB;CACzB;AACD;IACI,mBAAmB;CACtB;AACD;EACE,kCAAkC;EAClC,iBAAiB;EACjB,sBAAsB;EACtB,iBAAiB;EACjB,kBAAkB;CACnB;AACD;;EAEE,eAAe;CAChB;AACD;EACE,YAAY;CACb;AACD;;IAEI,0BAA0B;IAC1B,sBAAsB;IACtB,sBAAsB;IACtB,oBAAoB;CACvB;AACD;IACI,eAAe;IACf,iBAAiB;CACpB;AACD;IACI,6BAA6B;CAChC;AACD;;IAEI,sBAAsB;IACtB,eAAe;CAClB;AACD;;IAEI,sBAAsB;IACtB,eAAe;CAClB;AACD;;IAEI,uBAAuB;CAC1B;AACD;EACE,mBAAmB;CACpB;AACD;EACE,mBAAmB;CACpB;AACD;EACE,kBAAkB;CACnB;AACD;EACE,6BAA6B;EAC7B,mBAAmB;EACnB,uCAAuC;EACvC,mBAAmB;CACpB;AACD;IACI,sBAAsB;CACzB;AACD;IACI,oBAAoB;IACpB,2BAA2B;CAC9B;AACD;IACI,oBAAoB;CACvB;AACD;;IAEI,kBAAkB;CACrB;AACD;IACI,wBAAwB;CAC3B;AACD;IACI,mBAAmB;IACnB,aAAa;IACb,WAAW;CACd;AACD;;;IAGI,oBAAoB;CACvB;AACD;IACI,wBAAwB;IACxB,eAAe;CAClB;AACD;IACI,0BAA0B;IAC1B,aAAa;CAChB;AACD;IACI,6BAA6B;IAC7B,eAAe;CAClB;AACD;IACI,0BAA0B;IAC1B,kBAAkB;CACrB;AACD;IACI,0BAA0B;IAC1B,YAAY;CACf;AACD;IACI,0BAA0B;IAC1B,YAAY;CACf;AACD;IACI,0BAA0B;IAC1B,YAAY;CACf;AACD;IACI,0BAA0B;IAC1B,0BAA0B;CAC7B;AACD;IACI,0BAA0B;IAC1B,YAAY;CACf;AACD;EACE,gBAAgB;EAChB,YAAY;EACZ,uEAAuE;EACvE,qEAAqE;EACrE,6DAA6D;EAC7D,oFAAoF;EACpF,iBAAiB;EACjB,cAAc;EACd,iBAAiB;CAClB;AACD;IACI,kBAAkB;CACrB;AACD;IACI,WAAW;IACX,UAAU;IACV,mBAAmB;CACtB;AACD;IACI,qBAAqB;CACxB;AACD;EACE,YAAY;EACZ,kBAAkB;EAClB,0BAA0B;EAC1B,eAAe;EACf,gBAAgB;EAChB,eAAe;EACf,sBAAsB;CACvB;AACD;IACI,UAAU;CACb;AACD;IACI,iBAAiB;IACjB,kBAAkB;CACrB;AACD;;IAEI,0BAA0B;IAC1B,sBAAsB;IACtB,uBAAuB;IACvB,oBAAoB;CACvB;AACD;;MAEM,wBAAwB;MACxB,oBAAoB;MACpB,eAAe;CACpB;AACD;;MAEM,0BAA0B;MAC1B,sBAAsB;MACtB,aAAa;CAClB;AACD;;MAEM,6BAA6B;MAC7B,yBAAyB;MACzB,eAAe;CACpB;AACD;;MAEM,0BAA0B;MAC1B,sBAAsB;MACtB,kBAAkB;CACvB;AACD;;MAEM,0BAA0B;MAC1B,sBAAsB;MACtB,YAAY;CACjB;AACD;;MAEM,0BAA0B;MAC1B,sBAAsB;MACtB,YAAY;CACjB;AACD;;MAEM,0BAA0B;MAC1B,sBAAsB;MACtB,YAAY;CACjB;AACD;;MAEM,0BAA0B;MAC1B,sBAAsB;MACtB,0BAA0B;CAC/B;AACD;;MAEM,0BAA0B;MAC1B,sBAAsB;MACtB,YAAY;CACjB;AACD;;MAEM,oBAAoB;MACpB,UAAU;CACf;AACD;IACI,eAAe;IACf,iBAAiB;IACjB,0BAA0B;CAC7B;AACD;IACI,0BAA0B;CAC7B;AACD;IACI,0BAA0B;IAC1B,YAAY;CACf;AACD;;MAEM,oBAAoB;CACzB;AACD;;MAEM,mBAAmB;MACnB,oBAAoB;CACzB;AACD;;IAEI,sBAAsB;IACtB,eAAe;CAClB;AACD;;IAEI,sBAAsB;IACtB,eAAe;CAClB;AACD;;IAEI,uBAAuB;CAC1B;AACD;;IAEI,kBAAkB;CACrB;AACD;;IAEI,yBAAyB;CAC5B;AACD;IACI,YAAY;CACf;AACD;;IAEI,sBAAsB;CACzB;AACD;IACI,0BAA0B;CAC7B;AACD;MACM,6BAA6B;CAClC;AACD;EACE,mBAAmB;EACnB,sBAAsB;EACtB,eAAe;EACf,uBAAuB;CACxB;AACD;IACI,YAAY;IACZ,aAAa;IACb,iBAAiB;IACjB,mBAAmB;IACnB,sBAAsB;CACzB;AACD;IACI,mBAAmB;IACnB,oCAAoC;YAC5B,4BAA4B;IACpC,mCAAmC;YAC3B,2BAA2B;IACnC,UAAU;IACV,YAAY;IACZ,YAAY;IACZ,eAAe;IACf,oBAAoB;IACpB,oBAAoB;IACpB,YAAY;IACZ,4BAA4B;CAC/B;AACD;IACI,mCAAmC;YAC3B,2BAA2B;IACnC,WAAW;IACX,SAAS;IACT,aAAa;IACb,oBAAoB;IACpB,gBAAgB;IAChB,oBAAoB;IACpB,8BAA8B;IAC9B,aAAa;IACb,kBAAkB;IAClB,mBAAmB;IACnB,eAAe;IACf,gBAAgB;IAChB,oBAAoB;IACpB,sCAAsC;YAC9B,8BAA8B;IACtC,YAAY;IACZ,uBAAuB;IACvB,4BAA4B;CAC/B;AACD;EACE,0BAA0B;EAC1B,uBAAuB;EACvB,sBAAsB;EACtB,kBAAkB;EAClB,sBAAsB;EACtB,yBAAyB;EACzB,wCAAwC;EACxC,aAAa;EACb,wBAAwB;EACxB,gBAAgB;EAChB,sBAAsB;EACtB,oBAAoB;MAChB,qBAAqB;UACjB,aAAa;EACrB,qBAAqB;MACjB,eAAe;EACnB,gBAAgB;EAChB,aAAa;EACb,iBAAiB;EACjB,gBAAgB;EAChB,iBAAiB;EACjB,gBAAgB;EAChB,cAAc;EACd,mBAAmB;EACnB,oBAAoB;EACpB,YAAY;CACb;AACD;IACI,wBAAwB;IACxB,YAAY;IACZ,eAAe;IACf,UAAU;IACV,mBAAmB;IACnB,SAAS;IACT,mEAAmE;YAC3D,2DAA2D;IACnE,wCAAwC;YAChC,gCAAgC;CAC3C;AACD;IACI,YAAY;IACZ,WAAW;CACd;AACD;IACI,YAAY;IACZ,WAAW;CACd;AACD;IACI,wCAAwC;CAC3C;AACD;IACI,wCAAwC;CAC3C;AACD;IACI,2CAA2C;CAC9C;AACD;MACM,2CAA2C;CAChD;AACD;MACM,2CAA2C;CAChD;AACD;IACI,wCAAwC;CAC3C;AACD;MACM,wCAAwC;CAC7C;AACD;MACM,wCAAwC;CAC7C;AACD;IACI,2CAA2C;CAC9C;AACD;MACM,2CAA2C;CAChD;AACD;MACM,2CAA2C;CAChD;AACD;IACI,wCAAwC;CAC3C;AACD;MACM,wCAAwC;CAC7C;AACD;MACM,wCAAwC;CAC7C;AACD;IACI,0CAA0C;CAC7C;AACD;MACM,0CAA0C;CAC/C;AACD;MACM,0CAA0C;CAC/C;AACD;IACI,2CAA2C;CAC9C;AACD;MACM,2CAA2C;CAChD;AACD;MACM,2CAA2C;CAChD;AACD;IACI,yCAAyC;CAC5C;AACD;MACM,yCAAyC;CAC9C;AACD;MACM,yCAAyC;CAC9C;AACD;IACI,0CAA0C;CAC7C;AACD;MACM,0CAA0C;CAC/C;AACD;MACM,0CAA0C;CAC/C;AACD;IACI,yCAAyC;CAC5C;AACD;MACM,yCAAyC;CAC9C;AACD;MACM,yCAAyC;CAC9C;AACD;IACI,aAAa;IACb,iBAAiB;IACjB,gBAAgB;IAChB,iBAAiB;IACjB,gBAAgB;IAChB,YAAY;CACf;AACD;IACI,aAAa;IACb,iBAAiB;IACjB,gBAAgB;IAChB,iBAAiB;IACjB,gBAAgB;IAChB,YAAY;CACf;AACD;IACI,aAAa;IACb,iBAAiB;IACjB,gBAAgB;IAChB,iBAAiB;IACjB,gBAAgB;IAChB,YAAY;CACf;AACD;IACI,yCAAyC;CAC5C;AACD;MACM,wCAAwC;CAC7C;AACD;MACM,wCAAwC;CAC7C;AACD;MACM,0BAA0B;CAC/B;AACD;MACM,2CAA2C;CAChD;AACD;MACM,2CAA2C;CAChD;AACD;MACM,wBAAwB;CAC7B;AACD;MACM,wCAAwC;CAC7C;AACD;MACM,wCAAwC;CAC7C;AACD;MACM,0BAA0B;CAC/B;AACD;MACM,2CAA2C;CAChD;AACD;MACM,2CAA2C;CAChD;AACD;MACM,6BAA6B;CAClC;AACD;MACM,wCAAwC;CAC7C;AACD;MACM,wCAAwC;CAC7C;AACD;MACM,0BAA0B;CAC/B;AACD;MACM,0CAA0C;CAC/C;AACD;MACM,0CAA0C;CAC/C;AACD;MACM,0BAA0B;CAC/B;AACD;MACM,2CAA2C;CAChD;AACD;MACM,2CAA2C;CAChD;AACD;MACM,0BAA0B;CAC/B;AACD;MACM,yCAAyC;CAC9C;AACD;MACM,yCAAyC;CAC9C;AACD;MACM,0BAA0B;CAC/B;AACD;MACM,0CAA0C;CAC/C;AACD;MACM,0CAA0C;CAC/C;AACD;MACM,0BAA0B;CAC/B;AACD;MACM,yCAAyC;CAC9C;AACD;MACM,yCAAyC;CAC9C;AACD;MACM,0BAA0B;CAC/B;AACD;EACE,UAAU;EACV,QAAQ;EACR,mBAAmB;EACnB,SAAS;EACT,OAAO;EACP,0BAA0B;MACtB,uBAAuB;UACnB,oBAAoB;EAC5B,cAAc;EACd,yBAAyB;MACrB,sBAAsB;UAClB,wBAAwB;EAChC,iBAAiB;EACjB,gBAAgB;EAChB,cAAc;CACf;AACD;IACI,qBAAqB;IACrB,qBAAqB;IACrB,cAAc;CACjB;AACD;EACE,UAAU;EACV,QAAQ;EACR,mBAAmB;EACnB,SAAS;EACT,OAAO;EACP,wCAAwC;CACzC;AACD;;EAEE,eAAe;EACf,gCAAgC;EAChC,eAAe;EACf,mBAAmB;EACnB,aAAa;EACb,+BAA+B;UACvB,uBAAuB;EAC/B,kCAAkC;UAC1B,0BAA0B;EAClC,gDAAgD;UACxC,wCAAwC;CACjD;AACD;;IAEI,aAAa;CAChB;AACD;;IAEI,aAAa;CAChB;AACD;;IAEI,aAAa;CAChB;AACD;EACE,0BAA0B;EAC1B,uBAAuB;EACvB,sBAAsB;EACtB,kBAAkB;EAClB,sBAAsB;EACtB,yBAAyB;EACzB,wCAAwC;EACxC,aAAa;EACb,wBAAwB;EACxB,gBAAgB;EAChB,sBAAsB;EACtB,oBAAoB;MAChB,qBAAqB;UACjB,aAAa;EACrB,qBAAqB;MACjB,eAAe;EACnB,gBAAgB;EAChB,aAAa;EACb,iBAAiB;EACjB,gBAAgB;EAChB,iBAAiB;EACjB,gBAAgB;EAChB,cAAc;EACd,mBAAmB;EACnB,oBAAoB;EACpB,YAAY;EACZ,iBAAiB;EACjB,aAAa;EACb,gBAAgB;EAChB,YAAY;EACZ,UAAU;EACV,YAAY;CACb;AACD;IACI,wBAAwB;IACxB,YAAY;IACZ,eAAe;IACf,UAAU;IACV,mBAAmB;IACnB,SAAS;IACT,mEAAmE;YAC3D,2DAA2D;IACnE,wCAAwC;YAChC,gCAAgC;CAC3C;AACD;IACI,YAAY;IACZ,WAAW;CACd;AACD;IACI,YAAY;IACZ,WAAW;CACd;AACD;IACI,wCAAwC;CAC3C;AACD;IACI,wCAAwC;CAC3C;AACD;IACI,2CAA2C;CAC9C;AACD;MACM,2CAA2C;CAChD;AACD;MACM,2CAA2C;CAChD;AACD;IACI,wCAAwC;CAC3C;AACD;MACM,wCAAwC;CAC7C;AACD;MACM,wCAAwC;CAC7C;AACD;IACI,2CAA2C;CAC9C;AACD;MACM,2CAA2C;CAChD;AACD;MACM,2CAA2C;CAChD;AACD;IACI,wCAAwC;CAC3C;AACD;MACM,wCAAwC;CAC7C;AACD;MACM,wCAAwC;CAC7C;AACD;IACI,0CAA0C;CAC7C;AACD;MACM,0CAA0C;CAC/C;AACD;MACM,0CAA0C;CAC/C;AACD;IACI,2CAA2C;CAC9C;AACD;MACM,2CAA2C;CAChD;AACD;MACM,2CAA2C;CAChD;AACD;IACI,yCAAyC;CAC5C;AACD;MACM,yCAAyC;CAC9C;AACD;MACM,yCAAyC;CAC9C;AACD;IACI,0CAA0C;CAC7C;AACD;MACM,0CAA0C;CAC/C;AACD;MACM,0CAA0C;CAC/C;AACD;IACI,yCAAyC;CAC5C;AACD;MACM,yCAAyC;CAC9C;AACD;MACM,yCAAyC;CAC9C;AACD;IACI,aAAa;IACb,iBAAiB;IACjB,gBAAgB;IAChB,iBAAiB;IACjB,gBAAgB;IAChB,YAAY;CACf;AACD;IACI,aAAa;IACb,iBAAiB;IACjB,gBAAgB;IAChB,iBAAiB;IACjB,gBAAgB;IAChB,YAAY;CACf;AACD;IACI,aAAa;IACb,iBAAiB;IACjB,gBAAgB;IAChB,iBAAiB;IACjB,gBAAgB;IAChB,YAAY;CACf;AACD;IACI,yCAAyC;CAC5C;AACD;MACM,wCAAwC;CAC7C;AACD;MACM,wCAAwC;CAC7C;AACD;MACM,0BAA0B;CAC/B;AACD;MACM,2CAA2C;CAChD;AACD;MACM,2CAA2C;CAChD;AACD;MACM,wBAAwB;CAC7B;AACD;MACM,wCAAwC;CAC7C;AACD;MACM,wCAAwC;CAC7C;AACD;MACM,0BAA0B;CAC/B;AACD;MACM,2CAA2C;CAChD;AACD;MACM,2CAA2C;CAChD;AACD;MACM,6BAA6B;CAClC;AACD;MACM,wCAAwC;CAC7C;AACD;MACM,wCAAwC;CAC7C;AACD;MACM,0BAA0B;CAC/B;AACD;MACM,0CAA0C;CAC/C;AACD;MACM,0CAA0C;CAC/C;AACD;MACM,0BAA0B;CAC/B;AACD;MACM,2CAA2C;CAChD;AACD;MACM,2CAA2C;CAChD;AACD;MACM,0BAA0B;CAC/B;AACD;MACM,yCAAyC;CAC9C;AACD;MACM,yCAAyC;CAC9C;AACD;MACM,0BAA0B;CAC/B;AACD;MACM,0CAA0C;CAC/C;AACD;MACM,0CAA0C;CAC/C;AACD;MACM,0BAA0B;CAC/B;AACD;MACM,yCAAyC;CAC9C;AACD;MACM,yCAAyC;CAC9C;AACD;MACM,0BAA0B;CAC/B;AACD;EACE,qBAAqB;EACrB,qBAAqB;EACrB,cAAc;EACd,6BAA6B;EAC7B,8BAA8B;MAC1B,2BAA2B;UACvB,uBAAuB;EAC/B,+BAA+B;EAC/B,iBAAiB;CAClB;AACD;;EAEE,0BAA0B;MACtB,uBAAuB;UACnB,oBAAoB;EAC5B,6BAA6B;EAC7B,qBAAqB;EACrB,qBAAqB;EACrB,cAAc;EACd,qBAAqB;MACjB,eAAe;EACnB,wBAAwB;MACpB,qBAAqB;UACjB,4BAA4B;EACpC,cAAc;EACd,mBAAmB;CACpB;AACD;EACE,iCAAiC;EACjC,4BAA4B;EAC5B,6BAA6B;CAC9B;AACD;EACE,eAAe;EACf,oBAAoB;MAChB,qBAAqB;UACjB,aAAa;EACrB,qBAAqB;MACjB,eAAe;EACnB,kBAAkB;EAClB,eAAe;CAChB;AACD;EACE,+BAA+B;EAC/B,gCAAgC;EAChC,8BAA8B;CAC/B;AACD;IACI,mBAAmB;CACtB;AACD;EACE,kCAAkC;EAClC,wBAAwB;EACxB,oBAAoB;MAChB,qBAAqB;UACjB,aAAa;EACrB,qBAAqB;MACjB,eAAe;EACnB,eAAe;EACf,cAAc;CACf;AACD;EACE,4BAA4B;EAC5B,4BAA4B;EAC5B,qBAAqB;EACrB,mBAAmB;EACnB,oBAAoB;CACrB;AACD;IACI,eAAe;CAClB;AACD;IACI,WAAW;IACX,SAAS;CACZ;AACD;IACI,aAAa;IACb,oBAAoB;IACpB,mBAAmB;IACnB,UAAU;CACb;AACD;EACE,cAAc;EACd,QAAQ;EACR,iBAAiB;EACjB,iBAAiB;EACjB,mBAAmB;EACnB,UAAU;EACV,YAAY;CACb;AACD;EACE,oCAAoC;UAC5B,4BAA4B;CACrC;AACD;EACE,qCAAqC;UAC7B,6BAA6B;CACtC;AACD;EACE,wBAAwB;EACxB,mBAAmB;EACnB,6EAA6E;EAC7E,uBAAuB;EACvB,oBAAoB;CACrB;AACD;EACE,eAAe;EACf,eAAe;EACf,oBAAoB;EACpB,iBAAiB;EACjB,uBAAuB;EACvB,mBAAmB;CACpB;AACD;EACE,oBAAoB;EACpB,oBAAoB;CACrB;AACD;IACI,6BAA6B;IAC7B,eAAe;CAClB;AACD;IACI,0BAA0B;IAC1B,YAAY;CACf;AACD;EACE,0BAA0B;EAC1B,aAAa;EACb,eAAe;EACf,YAAY;EACZ,iBAAiB;CAClB;AACD;EACE,gBAAgB;CACjB;AACD;IACI,mBAAmB;CACtB;AACD;IACI,mBAAmB;CACtB;AACD;IACI,kBAAkB;CACrB;AACD;EACE,iBAAiB;EACjB,UAAU;EACV,WAAW;EACX,UAAU;EACV,WAAW;EACX,kBAAkB;CACnB;AACD;IACI,mBAAmB;IACnB,eAAe;IACf,eAAe;IACf,sBAAsB;CACzB;AACD;MACM,6BAA6B;MAC7B,eAAe;CACpB;AACD;MACM,0BAA0B;MAC1B,YAAY;CACjB;AACD;IACI,iBAAiB;IACjB,UAAU;IACV,WAAW;IACX,+BAA+B;IAC/B,eAAe;IACf,qBAAqB;CACxB;AACD;EACE,eAAe;EACf,kBAAkB;EAClB,sBAAsB;EACtB,0BAA0B;CAC3B;AACD;IACI,gBAAgB;CACnB;AACD;IACI,mBAAmB;CACtB;AACD;EACE,wBAAwB;EACxB,oBAAoB;EACpB,mBAAmB;CACpB;AACD;IACI,wBAAwB;IACxB,eAAe;CAClB;AACD;;MAEM,eAAe;CACpB;AACD;;;MAGM,0BAA0B;MAC1B,eAAe;CACpB;AACD;MACM,sBAAsB;CAC3B;AACD;;;;MAIM,eAAe;CACpB;AACD;;;;;;;MAOM,0BAA0B;MAC1B,eAAe;CACpB;AACD;;MAEM,sBAAsB;CAC3B;AACD;;MAEM,0BAA0B;MAC1B,eAAe;CACpB;AACD;MACM,wBAAwB;MACxB,eAAe;CACpB;AACD;IACI,0BAA0B;IAC1B,aAAa;CAChB;AACD;;MAEM,aAAa;CAClB;AACD;;;MAGM,wBAAwB;MACxB,aAAa;CAClB;AACD;MACM,oBAAoB;CACzB;AACD;;;;MAIM,aAAa;CAClB;AACD;;;;;;;MAOM,wBAAwB;MACxB,aAAa;CAClB;AACD;;MAEM,oBAAoB;CACzB;AACD;;MAEM,wBAAwB;MACxB,aAAa;CAClB;AACD;MACM,0BAA0B;MAC1B,aAAa;CAClB;AACD;IACI,6BAA6B;IAC7B,eAAe;CAClB;AACD;;MAEM,eAAe;CACpB;AACD;;;MAGM,0BAA0B;MAC1B,eAAe;CACpB;AACD;MACM,sBAAsB;CAC3B;AACD;;;;MAIM,eAAe;CACpB;AACD;;;;;;;MAOM,0BAA0B;MAC1B,eAAe;CACpB;AACD;;MAEM,sBAAsB;CAC3B;AACD;;MAEM,0BAA0B;MAC1B,eAAe;CACpB;AACD;MACM,6BAA6B;MAC7B,eAAe;CACpB;AACD;IACI,0BAA0B;IAC1B,kBAAkB;CACrB;AACD;;MAEM,kBAAkB;CACvB;AACD;;;MAGM,0BAA0B;MAC1B,kBAAkB;CACvB;AACD;MACM,yBAAyB;CAC9B;AACD;;;;MAIM,kBAAkB;CACvB;AACD;;;;;;;MAOM,0BAA0B;MAC1B,kBAAkB;CACvB;AACD;;MAEM,yBAAyB;CAC9B;AACD;;MAEM,0BAA0B;MAC1B,kBAAkB;CACvB;AACD;MACM,0BAA0B;MAC1B,kBAAkB;CACvB;AACD;IACI,0BAA0B;IAC1B,YAAY;CACf;AACD;;MAEM,YAAY;CACjB;AACD;;;MAGM,0BAA0B;MAC1B,YAAY;CACjB;AACD;MACM,mBAAmB;CACxB;AACD;;;;MAIM,YAAY;CACjB;AACD;;;;;;;MAOM,0BAA0B;MAC1B,YAAY;CACjB;AACD;;MAEM,mBAAmB;CACxB;AACD;;MAEM,0BAA0B;MAC1B,YAAY;CACjB;AACD;MACM,0BAA0B;MAC1B,YAAY;CACjB;AACD;IACI,0BAA0B;IAC1B,YAAY;CACf;AACD;;MAEM,YAAY;CACjB;AACD;;;MAGM,0BAA0B;MAC1B,YAAY;CACjB;AACD;MACM,mBAAmB;CACxB;AACD;;;;MAIM,YAAY;CACjB;AACD;;;;;;;MAOM,0BAA0B;MAC1B,YAAY;CACjB;AACD;;MAEM,mBAAmB;CACxB;AACD;;MAEM,0BAA0B;MAC1B,YAAY;CACjB;AACD;MACM,0BAA0B;MAC1B,YAAY;CACjB;AACD;IACI,0BAA0B;IAC1B,YAAY;CACf;AACD;;MAEM,YAAY;CACjB;AACD;;;MAGM,0BAA0B;MAC1B,YAAY;CACjB;AACD;MACM,mBAAmB;CACxB;AACD;;;;MAIM,YAAY;CACjB;AACD;;;;;;;MAOM,0BAA0B;MAC1B,YAAY;CACjB;AACD;;MAEM,mBAAmB;CACxB;AACD;;MAEM,0BAA0B;MAC1B,YAAY;CACjB;AACD;MACM,0BAA0B;MAC1B,YAAY;CACjB;AACD;IACI,0BAA0B;IAC1B,0BAA0B;CAC7B;AACD;;MAEM,0BAA0B;CAC/B;AACD;;;MAGM,0BAA0B;MAC1B,0BAA0B;CAC/B;AACD;MACM,iCAAiC;CACtC;AACD;;;;MAIM,0BAA0B;CAC/B;AACD;;;;;;;MAOM,0BAA0B;MAC1B,0BAA0B;CAC/B;AACD;;MAEM,iCAAiC;CACtC;AACD;;MAEM,0BAA0B;MAC1B,0BAA0B;CAC/B;AACD;MACM,0BAA0B;MAC1B,0BAA0B;CAC/B;AACD;IACI,0BAA0B;IAC1B,YAAY;CACf;AACD;;MAEM,YAAY;CACjB;AACD;;;MAGM,0BAA0B;MAC1B,YAAY;CACjB;AACD;MACM,mBAAmB;CACxB;AACD;;;;MAIM,YAAY;CACjB;AACD;;;;;;;MAOM,0BAA0B;MAC1B,YAAY;CACjB;AACD;;MAEM,mBAAmB;CACxB;AACD;;MAEM,0BAA0B;MAC1B,YAAY;CACjB;AACD;MACM,0BAA0B;MAC1B,YAAY;CACjB;AACD;IACI,2BAA2B;QACvB,wBAAwB;YACpB,qBAAqB;IAC7B,qBAAqB;IACrB,qBAAqB;IACrB,cAAc;IACd,oBAAoB;IACpB,YAAY;CACf;AACD;IACI,4CAA4C;CAC/C;AACD;EACE,oBAAoB;MAChB,qBAAqB;UACjB,aAAa;EACrB,qBAAqB;MACjB,eAAe;CACpB;AACD;IACI,oBAAoB;CACvB;AACD;IACI,WAAW;CACd;AACD;IACI,qCAAqC;IACrC,oBAAoB;IACpB,kCAAkC;CACrC;AACD;MACM,8BAA8B;MAC9B,6BAA6B;CAClC;AACD;MACM,8BAA8B;MAC9B,6BAA6B;MAC7B,2BAA2B;MAC3B,yBAAyB;MACzB,eAAe;MACf,kCAAkC;CACvC;AACD;;EAEE,eAAe;EACf,eAAe;EACf,iBAAiB;EACjB,qBAAqB;EACrB,mBAAmB;CACpB;AACD;;;EAGE,6BAA6B;EAC7B,eAAe;CAChB;AACD;;EAEE,2BAA2B;MACvB,wBAAwB;UACpB,qBAAqB;EAC7B,qBAAqB;EACrB,qBAAqB;EACrB,cAAc;EACd,qBAAqB;MACjB,eAAe;EACnB,oBAAoB;CACrB;AACD;;;;EAIE,2BAA2B;MACvB,wBAAwB;UACpB,qBAAqB;EAC7B,qBAAqB;EACrB,qBAAqB;EACrB,cAAc;CACf;AACD;EACE,oBAAoB;CACrB;AACD;;;IAGI,8BAA8B;CACjC;AACD;IACI,8BAA8B;CACjC;AACD;IACI,6BAA6B;IAC7B,eAAe;CAClB;AACD;IACI,6BAA6B;IAC7B,eAAe;CAClB;AACD;;EAEE,0BAA0B;MACtB,uBAAuB;UACnB,oBAAoB;EAC5B,qBAAqB;EACrB,qBAAqB;EACrB,cAAc;CACf;AACD;EACE,2BAA2B;MACvB,wBAAwB;UACpB,qBAAqB;CAC9B;AACD;EACE,eAAe;CAChB;AACD;IACI,WAAW;IACX,qBAAqB;IACrB,iCAAiC;YACzB,yBAAyB;CACpC;AACD;EACE,oBAAoB;MAChB,qBAAqB;UACjB,aAAa;EACrB,qBAAqB;MACjB,eAAe;CACpB;AACD;EACE,wBAAwB;MACpB,qBAAqB;UACjB,4BAA4B;EACpC,mBAAmB;CACpB;AACD;EACE,sBAAsB;MAClB,mBAAmB;UACf,0BAA0B;EAClC,kBAAkB;CACnB;AACD;EACE,6BAA6B;EAC7B,mBAAmB;EACnB,gBAAgB;CACjB;AACD;IACI,sBAAsB;CACzB;AACD;IACI,oBAAoB;CACvB;AACD;IACI,oBAAoB;IACpB,2BAA2B;CAC9B;AACD;IACI,mBAAmB;CACtB;AACD;IACI,mBAAmB;CACtB;AACD;IACI,kBAAkB;CACrB;AACD;IACI,wBAAwB;CAC3B;AACD;MACM,wBAAwB;MACxB,eAAe;CACpB;AACD;MACM,oBAAoB;MACpB,eAAe;CACpB;AACD;IACI,0BAA0B;CAC7B;AACD;MACM,0BAA0B;MAC1B,aAAa;CAClB;AACD;MACM,sBAAsB;MACtB,eAAe;CACpB;AACD;IACI,0BAA0B;CAC7B;AACD;MACM,6BAA6B;MAC7B,eAAe;CACpB;AACD;MACM,yBAAyB;MACzB,eAAe;CACpB;AACD;IACI,0BAA0B;CAC7B;AACD;MACM,0BAA0B;MAC1B,kBAAkB;CACvB;AACD;MACM,sBAAsB;MACtB,eAAe;CACpB;AACD;IACI,0BAA0B;CAC7B;AACD;MACM,0BAA0B;MAC1B,YAAY;CACjB;AACD;MACM,sBAAsB;MACtB,eAAe;CACpB;AACD;IACI,0BAA0B;CAC7B;AACD;MACM,0BAA0B;MAC1B,YAAY;CACjB;AACD;MACM,sBAAsB;MACtB,eAAe;CACpB;AACD;IACI,0BAA0B;CAC7B;AACD;MACM,0BAA0B;MAC1B,YAAY;CACjB;AACD;MACM,sBAAsB;MACtB,eAAe;CACpB;AACD;IACI,0BAA0B;CAC7B;AACD;MACM,0BAA0B;MAC1B,0BAA0B;CAC/B;AACD;MACM,sBAAsB;MACtB,eAAe;CACpB;AACD;IACI,0BAA0B;CAC7B;AACD;MACM,0BAA0B;MAC1B,YAAY;CACjB;AACD;MACM,sBAAsB;MACtB,eAAe;CACpB;AACD;EACE,0BAA0B;MACtB,uBAAuB;UACnB,oBAAoB;EAC5B,0BAA0B;EAC1B,2BAA2B;EAC3B,YAAY;EACZ,qBAAqB;EACrB,qBAAqB;EACrB,cAAc;EACd,0BAA0B;MACtB,uBAAuB;UACnB,+BAA+B;EACvC,kBAAkB;EAClB,sBAAsB;EACtB,mBAAmB;CACpB;AACD;IACI,oBAAoB;QAChB,qBAAqB;YACjB,aAAa;IACrB,qBAAqB;QACjB,eAAe;IACnB,oBAAoB;CACvB;AACD;IACI,0BAA0B;IAC1B,2BAA2B;IAC3B,iBAAiB;CACpB;AACD;EACE,0BAA0B;EAC1B,mBAAmB;EACnB,eAAe;EACf,oBAAoB;CACrB;AACD;;IAEI,wBAAwB;CAC3B;AACD;IACI,8BAA8B;CACjC;AACD;EACE,gBAAgB;EAChB,SAAS;EACT,cAAc;EACd,mBAAmB;EACnB,YAAY;EACZ,QAAQ;EACR,SAAS;EACT,wBAAwB;EACxB,qBAAqB;EACrB,qBAAqB;EACrB,cAAc;EACd,yBAAyB;MACrB,sBAAsB;UAClB,wBAAwB;EAChC,eAAe;CAChB;AACD;IACI,8BAA8B;CACjC;AACD;IACI,mBAAmB;CACtB;AACD;EACE,kCAAkC;EAClC,0BAA0B;EAC1B,uBAAuB;EACvB,sBAAsB;EACtB,kBAAkB;EAClB,2BAA2B;MACvB,wBAAwB;UACpB,qBAAqB;EAC7B,qBAAqB;EACrB,qBAAqB;EACrB,cAAc;EACd,gBAAgB;EAChB,0BAA0B;MACtB,uBAAuB;UACnB,+BAA+B;EACvC,iBAAiB;EACjB,iBAAiB;EACjB,oBAAoB;CACrB;AACD;IACI,sBAAsB;CACzB;AACD;IACI,0BAA0B;QACtB,uBAAuB;YACnB,oBAAoB;IAC5B,6BAA6B;IAC7B,2BAA2B;IAC3B,yBAAyB;IACzB,eAAe;IACf,qBAAqB;IACrB,qBAAqB;IACrB,cAAc;IACd,yBAAyB;QACrB,sBAAsB;YAClB,wBAAwB;IAChC,oBAAoB;IACpB,mBAAmB;IACnB,oBAAoB;CACvB;AACD;MACM,6BAA6B;MAC7B,eAAe;CACpB;AACD;IACI,eAAe;CAClB;AACD;MACM,6BAA6B;MAC7B,eAAe;CACpB;AACD;IACI,iBAAiB;IACjB,UAAU;IACV,WAAW;IACX,0BAA0B;QACtB,uBAAuB;YACnB,oBAAoB;IAC5B,6BAA6B;IAC7B,2BAA2B;IAC3B,yBAAyB;IACzB,qBAAqB;IACrB,qBAAqB;IACrB,cAAc;IACd,oBAAoB;QAChB,qBAAqB;YACjB,aAAa;IACrB,qBAAqB;QACjB,eAAe;IACnB,wBAAwB;QACpB,qBAAqB;YACjB,4BAA4B;CACvC;AACD;MACM,sBAAsB;CAC3B;AACD;MACM,oBAAoB;UAChB,eAAe;cACX,WAAW;MACnB,yBAAyB;UACrB,sBAAsB;cAClB,wBAAwB;MAChC,qBAAqB;MACrB,sBAAsB;CAC3B;AACD;MACM,sBAAsB;UAClB,mBAAmB;cACf,0BAA0B;MAClC,qBAAqB;CAC1B;AACD;IACI,oBAAoB;CACvB;AACD;IACI,mBAAmB;CACtB;AACD;IACI,yBAAyB;QACrB,sBAAsB;YAClB,wBAAwB;CACnC;AACD;IACI,sBAAsB;QAClB,mBAAmB;YACf,0BAA0B;CACrC;AACD;IACI,8BAA8B;IAC9B,2BAA2B;CAC9B;AACD;MACM,6BAA6B;MAC7B,6BAA6B;CAClC;AACD;IACI,wBAAwB;IACxB,sBAAsB;IACtB,4CAA4C;CAC/C;AACD;IACI,oBAAoB;QAChB,qBAAqB;YACjB,aAAa;IACrB,qBAAqB;QACjB,eAAe;CACtB;AACD;IACI,sBAAsB;IACtB,oBAAoB;IACpB,kBAAkB;IAClB,iBAAiB;IACjB,mBAAmB;CACtB;AACD;MACM,6BAA6B;MAC7B,sBAAsB;MACtB,WAAW;CAChB;AACD;IACI,kBAAkB;CACrB;AACD;IACI,2BAA2B;CAC9B;AACD;IACI,2BAA2B;CAC9B;AACD;IACI,0BAA0B;IAC1B,sBAAsB;IACtB,YAAY;IACZ,WAAW;CACd;AACD;IACI,oBAAoB;CACvB;AACD;IACI,mBAAmB;CACtB;AACD;IACI,mBAAmB;CACtB;AACD;IACI,kBAAkB;CACrB;AACD;EACE,0BAA0B;EAC1B,uBAAuB;EACvB,sBAAsB;EACtB,kBAAkB;EAClB,2BAA2B;MACvB,wBAAwB;UACpB,qBAAqB;EAC7B,qBAAqB;EACrB,qBAAqB;EACrB,cAAc;EACd,gBAAgB;EAChB,iBAAiB;EACjB,iBAAiB;EACjB,oBAAoB;CACrB;AACD;IACI,sBAAsB;CACzB;AACD;IACI,0BAA0B;QACtB,uBAAuB;YACnB,oBAAoB;IAC5B,eAAe;IACf,qBAAqB;IACrB,qBAAqB;IACrB,cAAc;IACd,yBAAyB;QACrB,sBAAsB;YAClB,wBAAwB;IAChC,sBAAsB;IACtB,sBAAsB;CACzB;AACD;MACM,eAAe;CACpB;AACD;IACI,0BAA0B;QACtB,uBAAuB;YACnB,oBAAoB;IAC5B,qBAAqB;IACrB,qBAAqB;IACrB,cAAc;CACjB;AACD;MACM,gBAAgB;CACrB;AACD;MACM,eAAe;MACf,gBAAgB;MAChB,qBAAqB;CAC1B;AACD;MACM,eAAe;MACf,aAAa;CAClB;AACD;IACI,0BAA0B;QACtB,uBAAuB;YACnB,oBAAoB;IAC5B,qBAAqB;IACrB,qBAAqB;IACrB,cAAc;IACd,oBAAoB;QAChB,qBAAqB;YACjB,aAAa;IACrB,qBAAqB;QACjB,eAAe;IACnB,wBAAwB;QACpB,qBAAqB;YACjB,4BAA4B;CACvC;AACD;IACI,oBAAoB;CACvB;AACD;IACI,mBAAmB;CACtB;AACD;IACI,yBAAyB;QACrB,sBAAsB;YAClB,wBAAwB;CACnC;AACD;IACI,sBAAsB;QAClB,mBAAmB;YACf,0BAA0B;CACrC;AACD;IACI,mBAAmB;CACtB;AACD;IACI,mBAAmB;CACtB;AACD;IACI,kBAAkB;CACrB;AACD;IACI,iBAAa;CAChB;AACD;IACI,iBAAa;CAChB;AACD;IACI,eAAa;CAChB;AACD;IACI,iBAAa;CAChB;AACD;EACE,gBAAgB;EAChB,iBAAiB;EACjB,gBAAgB;EAChB,gBAAgB;EAChB,0BAA0B;EAC1B,uBAAuB;EACvB,sBAAsB;EACtB,kBAAkB;EAClB,uBAAuB;EACvB,eAAe;EACf,OAAO;EACP,QAAQ;EACR,iBAAiB;EACjB,eAAe;EACf,0BAA0B;EAC1B,0BAA0B;EAC1B,mBAAmB;EACnB,qBAAqB;EACrB,iBAAiB;EACjB,cAAc;EACd,4CAA4C;CAC7C;AACD;EACE,eAAe;EACf,oBAAoB;EACpB,gBAAgB;EAChB,iBAAiB;EACjB,mBAAmB;EACnB,cAAc;EACd,iBAAiB;CAClB;AACD;IACI,eAAe;IACf,SAAS;IACT,UAAU;IACV,mBAAmB;IACnB,kBAAkB;IAClB,0BAA0B;IAC1B,oBAAoB;CACvB;AACD;MACM,aAAa;MACb,kBAAkB;CACvB;AACD;IACI,mBAAmB;CACtB;AACD;MACM,UAAU;MACV,kBAAkB;MAClB,YAAY;MACZ,wBAAwB;MACxB,0BAA0B;CAC/B;AACD;QACQ,aAAa;QACb,YAAY;QACZ,kBAAkB;QAClB,uBAAuB;QACvB,0BAA0B;CACjC;AACD;IACI,qBAAqB;CACxB;AACD;MACM,cAAc;MACd,SAAS;MACT,iBAAiB;MACjB,UAAU;MACV,4BAA4B;MAC5B,4BAA4B;CACjC;AACD;QACQ,aAAa;QACb,UAAU;QACV,aAAa;QACb,qBAAqB;QACrB,0BAA0B;CACjC;AACD;IACI,mBAAmB;CACtB;AACD;MACM,UAAU;MACV,kBAAkB;MAClB,SAAS;MACT,wBAAwB;MACxB,6BAA6B;CAClC;AACD;QACQ,aAAa;QACb,SAAS;QACT,kBAAkB;QAClB,oBAAoB;QACpB,6BAA6B;CACpC;AACD;IACI,qBAAqB;CACxB;AACD;MACM,SAAS;MACT,iBAAiB;MACjB,WAAW;MACX,4BAA4B;MAC5B,2BAA2B;CAChC;AACD;QACQ,aAAa;QACb,WAAW;QACX,sBAAsB;QACtB,2BAA2B;QAC3B,aAAa;CACpB;AACD;EACE,YAAY;EACZ,wBAAwB;EACxB,6BAA6B;EAC7B,mBAAmB;EACnB,yCAAyC;EACzC,oBAAoB;EACpB,0BAA0B;CAC3B;AACD;IACI,gCAAgC;IAChC,mBAAmB;IACnB,gBAAgB;IAChB,kBAAkB;IAClB,eAAe;IACf,iBAAiB;IACjB,0BAA0B;CAC7B;AACD;MACM,YAAY;MACZ,cAAc;MACd,YAAY;MACZ,mBAAmB;MACnB,QAAQ;MACR,SAAS;MACT,UAAU;MACV,0BAA0B;CAC/B;AACD;EACE,gCAAgC;CACjC;AACD;IACI,sBAAsB;IACtB,oBAAoB;IACpB,eAAe;IACf,eAAe;CAClB;AACD;EACE,oCAAoC;UAC5B,4BAA4B;CACrC;AACD;EACE,qCAAqC;UAC7B,6BAA6B;CACtC;AACD;EACE,gBAAgB;CACjB;AACD;IACI,eAAe;CAClB;AACD;IACI,qBAAqB;IACrB,eAAe;CAClB;AACD;IACI,6BAA6B;CAChC;AACD;IACI,kBAAkB;CACrB;AACD;IACI,kBAAkB;CACrB;AACD;IACI,8BAA8B;IAC9B,WAAW;IACX,0BAA0B;IAC1B,mBAAmB;IACnB,mBAAmB;IACnB,eAAe;CAClB;AACD;MACM,wBAAwB;MACxB,mBAAmB;MACnB,WAAW;MACX,WAAW;MACX,0BAA0B;MAC1B,eAAe;MACf,gBAAgB;MAChB,iBAAiB;MACjB,iBAAiB;MACjB,mBAAmB;CACxB;AACD;EACE,oBAAoB;EACpB,mBAAmB;EACnB,oBAAoB;CACrB;AACD;EACE,UAAU;CACX;AACD;EACE,UAAU;CACX;AACD;EACE,gBAAgB;CACjB;AACD;EACE,mBAAmB;CACpB;AACD;EACE,gBAAgB;EAChB,0DAA0D;UAClD,kDAAkD;EAC1D,0BAA0B;EAC1B,wBAAwB;EACxB,gCAAgC;EAChC,8BAA8B;EAC9B,YAAY;EACZ,eAAe;EACf,uBAAuB;EACvB,YAAY;EACZ,WAAW;EACX,mBAAmB;CACpB;AACD;EACE,kBAAkB;EAClB,iBAAiB;EACjB,YAAY;EACZ,gBAAgB;EAChB,mBAAmB;EACnB,wBAAwB;CACzB;AACD;IACI,gCAAgB;CACnB;AACD;IACI,WAAW;CACd","file":"summary.vue","sourcesContent":["\n@charset \"UTF-8\";\n@import url(\"https://cdn.bootcss.com/animate.css/3.5.2/animate.css\");\n@import url(\"https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\");\n@import url(\"https://at.alicdn.com/t/font_299456_81qcthgrkonu3di.css\");\n@-webkit-keyframes v-kf-spin-around {\nfrom {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n}\nto {\n    -webkit-transform: rotate(359deg);\n            transform: rotate(359deg);\n}\n}\n@keyframes v-kf-spin-around {\nfrom {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n}\nto {\n    -webkit-transform: rotate(359deg);\n            transform: rotate(359deg);\n}\n}\n@-webkit-keyframes v-kf-fade-in {\nfrom {\n    opacity: 0;\n}\nto {\n    opacity: 1;\n}\n}\n@keyframes v-kf-fade-in {\nfrom {\n    opacity: 0;\n}\nto {\n    opacity: 1;\n}\n}\n@-webkit-keyframes v-kf-fade-out {\nfrom {\n    opacity: 1;\n}\nto {\n    opacity: 0;\n}\n}\n@keyframes v-kf-fade-out {\nfrom {\n    opacity: 1;\n}\nto {\n    opacity: 0;\n}\n}\n@-webkit-keyframes v-kf-fade-in-down {\nfrom {\n    opacity: 0;\n    -webkit-transform: translate3d(0, -100%, 0);\n            transform: translate3d(0, -100%, 0);\n}\nto {\n    opacity: 1;\n    -webkit-transform: none;\n            transform: none;\n}\n}\n@keyframes v-kf-fade-in-down {\nfrom {\n    opacity: 0;\n    -webkit-transform: translate3d(0, -100%, 0);\n            transform: translate3d(0, -100%, 0);\n}\nto {\n    opacity: 1;\n    -webkit-transform: none;\n            transform: none;\n}\n}\n@-webkit-keyframes v-kf-fade-out-down {\nfrom {\n    opacity: 1;\n}\nto {\n    opacity: 0;\n    -webkit-transform: translate3d(0, 100%, 0);\n            transform: translate3d(0, 100%, 0);\n}\n}\n@keyframes v-kf-fade-out-down {\nfrom {\n    opacity: 1;\n}\nto {\n    opacity: 0;\n    -webkit-transform: translate3d(0, 100%, 0);\n            transform: translate3d(0, 100%, 0);\n}\n}\n.v-container {\n  margin: 0 auto;\n  position: relative;\n}\n.v-cols {\n  margin-left: -0.5rem;\n  margin-right: -0.5rem;\n  margin-top: -0.5rem;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n}\n.v-cols:last-child {\n    margin-bottom: -0.5rem;\n}\n.v-cols:not(:last-child) {\n    margin-bottom: calc(1rem - 0.5rem);\n}\n.v-cols.is-centered {\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n}\n.v-cols.is-gapless {\n    margin-left: 0;\n    margin-right: 0;\n    margin-top: 0;\n}\n.v-cols.is-gapless > .v-column {\n      margin: 0;\n      padding: 0 !important;\n}\n.v-cols.is-gapless:not(:last-child) {\n      margin-bottom: 1rem;\n}\n.v-cols.is-gapless:last-child {\n      margin-bottom: 0;\n}\n.v-cols.is-multiline {\n    -ms-flex-wrap: wrap;\n        flex-wrap: wrap;\n}\n.v-cols.is-vcentered {\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n}\n.v-col {\n  display: block;\n  -ms-flex-preferred-size: 0;\n      flex-basis: 0;\n  -webkit-box-flex: 1;\n      -ms-flex-positive: 1;\n          flex-grow: 1;\n  -ms-flex-negative: 1;\n      flex-shrink: 1;\n  padding: 0.5rem;\n}\n.v-col.is-narrow, .v-col.is-narrow-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n}\n.v-col.is-full, .v-col.is-full-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 100%;\n}\n.v-col.is-three-quarters, .v-col.is-three-quarters-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 75%;\n}\n.v-col.is-two-thirds, .v-col.is-two-thirds-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 66.6666%;\n}\n.v-col.is-half, .v-col.is-half-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 50%;\n}\n.v-col.is-one-third, .v-col.is-one-third-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 33.3333%;\n}\n.v-col.is-one-quarter, .v-col.is-one-quarter-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 25%;\n}\n.v-col.is-offset-three-quarters, .v-col.is-offset-three-quarters-desktop {\n    margin-left: 75%;\n}\n.v-col.is-offset-two-quarter, .v-col.is-offset-two-thirds-desktop {\n    margin-left: 66.6666%;\n}\n.v-col.is-offset-half, .v-col.is-offset-half-desktop {\n    margin-left: 50%;\n}\n.v-col.is-offset-one-third, .v-col.is-offset-one-third-desktop {\n    margin-left: 33.3333%;\n}\n.v-col.is-offset-one-quarter, .v-col.is-offset-one-quarter-desktop {\n    margin-left: 25%;\n}\n.v-col.is-1, .v-col.is-1-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 8.33333%;\n}\n.v-col.is-offset-1, .v-col.is-offset-1-desktop {\n    margin-left: 8.33333%;\n}\n.v-col.is-2, .v-col.is-2-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 16.66667%;\n}\n.v-col.is-offset-2, .v-col.is-offset-2-desktop {\n    margin-left: 16.66667%;\n}\n.v-col.is-3, .v-col.is-3-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 25%;\n}\n.v-col.is-offset-3, .v-col.is-offset-3-desktop {\n    margin-left: 25%;\n}\n.v-col.is-4, .v-col.is-4-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 33.33333%;\n}\n.v-col.is-offset-4, .v-col.is-offset-4-desktop {\n    margin-left: 33.33333%;\n}\n.v-col.is-5, .v-col.is-5-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 41.66667%;\n}\n.v-col.is-offset-5, .v-col.is-offset-5-desktop {\n    margin-left: 41.66667%;\n}\n.v-col.is-6, .v-col.is-6-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 50%;\n}\n.v-col.is-offset-6, .v-col.is-offset-6-desktop {\n    margin-left: 50%;\n}\n.v-col.is-7, .v-col.is-7-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 58.33333%;\n}\n.v-col.is-offset-7, .v-col.is-offset-7-desktop {\n    margin-left: 58.33333%;\n}\n.v-col.is-8, .v-col.is-8-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 66.66667%;\n}\n.v-col.is-offset-8, .v-col.is-offset-8-desktop {\n    margin-left: 66.66667%;\n}\n.v-col.is-9, .v-col.is-9-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 75%;\n}\n.v-col.is-offset-9, .v-col.is-offset-9-desktop {\n    margin-left: 75%;\n}\n.v-col.is-10, .v-col.is-10-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 83.33333%;\n}\n.v-col.is-offset-10, .v-col.is-offset-10-desktop {\n    margin-left: 83.33333%;\n}\n.v-col.is-11, .v-col.is-11-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 91.66667%;\n}\n.v-col.is-offset-11, .v-col.is-offset-11-desktop {\n    margin-left: 91.66667%;\n}\n.v-col.is-12, .v-col.is-12-desktop {\n    -webkit-box-flex: 0;\n        -ms-flex: none;\n            flex: none;\n    width: 100%;\n}\n.v-col.is-offset-12, .v-col.is-offset-12-desktop {\n    margin-left: 100%;\n}\n.has-icon {\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  display: -webkit-inline-box;\n  display: -ms-inline-flexbox;\n  display: inline-flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  height: 1.5rem;\n  width: 1.5rem;\n}\n.has-icon.is-small {\n    height: 1rem;\n    width: 1rem;\n}\n.has-icon.is-medium {\n    height: 2rem;\n    width: 2rem;\n}\n.has-icon.is-large {\n    height: 3rem;\n    width: 3rem;\n}\n.has-icon.has-text-white {\n    color: white;\n}\n.has-icon.has-text-black {\n    color: #0a0a0a;\n}\n.has-icon.has-text-light {\n    color: whitesmoke;\n}\n.has-icon.has-text-dark {\n    color: #363636;\n}\n.has-icon.has-text-primary {\n    color: #1ca0f2;\n}\n.has-icon.has-text-info {\n    color: #b86bff;\n}\n.has-icon.has-text-success {\n    color: #23d160;\n}\n.has-icon.has-text-warning {\n    color: #ffdd57;\n}\n.has-icon.has-text-danger {\n    color: #ff3860;\n}\n.has-icon.is-primary .is-icon-arrow::after {\n    border-left-color: white;\n    border-top-color: white;\n}\n.has-icon.is-primary .is-icon-caret::after {\n    border-top-color: white;\n}\n.has-icon.is-primary .is-icon-right::after {\n    border-left-color: white;\n    border-bottom-color: white;\n}\n.has-icon.is-primary .is-icon-close::before, .has-icon.is-primary .is-icon-close::after {\n    background-color: white;\n}\n.has-icon.is-primary.is-outline .is-icon-arrow::after {\n    border-left-color: #1ca0f2;\n    border-top-color: #1ca0f2;\n}\n.has-icon.is-primary.is-outline .is-icon-caret::after {\n    border-top-color: #1ca0f2;\n}\n.has-icon.is-primary.is-outline .is-icon-right::after {\n    border-left-color: #1ca0f2;\n    border-bottom-color: #1ca0f2;\n}\n.has-icon.is-primary.is-outline .is-icon-close::before, .has-icon.is-primary.is-outline .is-icon-close::after {\n    background-color: #1ca0f2;\n}\n.has-icon.is-primary.is-outline:hover .is-icon-arrow::after, .has-icon.is-primary.is-outline:focus .is-icon-arrow::after, .has-icon.is-primary.is-outline.is-active .is-icon-arrow::after, .has-icon.is-primary.is-outline:active .is-icon-arrow::after {\n    border-left-color: white;\n    border-top-color: white;\n}\n.has-icon.is-primary.is-outline:hover .is-icon-caret::after, .has-icon.is-primary.is-outline:focus .is-icon-caret::after, .has-icon.is-primary.is-outline.is-active .is-icon-caret::after, .has-icon.is-primary.is-outline:active .is-icon-caret::after {\n    border-top-color: white;\n}\n.has-icon.is-primary.is-outline:hover .is-icon-right::after, .has-icon.is-primary.is-outline:focus .is-icon-right::after, .has-icon.is-primary.is-outline.is-active .is-icon-right::after, .has-icon.is-primary.is-outline:active .is-icon-right::after {\n    border-left-color: white;\n    border-bottom-color: white;\n}\n.has-icon.is-primary.is-outline:hover .is-icon-close::before, .has-icon.is-primary.is-outline:hover .is-icon-close::after, .has-icon.is-primary.is-outline:focus .is-icon-close::before, .has-icon.is-primary.is-outline:focus .is-icon-close::after, .has-icon.is-primary.is-outline.is-active .is-icon-close::before, .has-icon.is-primary.is-outline.is-active .is-icon-close::after, .has-icon.is-primary.is-outline:active .is-icon-close::before, .has-icon.is-primary.is-outline:active .is-icon-close::after {\n    background-color: white;\n}\n.has-icon.is-primary.is-icon-arrow::after {\n    border-left-color: #1ca0f2;\n    border-top-color: #1ca0f2;\n}\n.has-icon.is-primary.is-icon-caret::after {\n    border-top-color: #1ca0f2;\n}\n.has-icon.is-primary.is-icon-right::after {\n    border-left-color: #1ca0f2;\n    border-bottom-color: #1ca0f2;\n}\n.has-icon.is-primary.is-icon-close::before, .has-icon.is-primary.is-icon-close::after {\n    background-color: #1ca0f2;\n}\n.has-icon.is-secondary .is-icon-arrow::after {\n    border-left-color: white;\n    border-top-color: white;\n}\n.has-icon.is-secondary .is-icon-caret::after {\n    border-top-color: white;\n}\n.has-icon.is-secondary .is-icon-right::after {\n    border-left-color: white;\n    border-bottom-color: white;\n}\n.has-icon.is-secondary .is-icon-close::before, .has-icon.is-secondary .is-icon-close::after {\n    background-color: white;\n}\n.has-icon.is-secondary.is-outline .is-icon-arrow::after {\n    border-left-color: #35aaf3;\n    border-top-color: #35aaf3;\n}\n.has-icon.is-secondary.is-outline .is-icon-caret::after {\n    border-top-color: #35aaf3;\n}\n.has-icon.is-secondary.is-outline .is-icon-right::after {\n    border-left-color: #35aaf3;\n    border-bottom-color: #35aaf3;\n}\n.has-icon.is-secondary.is-outline .is-icon-close::before, .has-icon.is-secondary.is-outline .is-icon-close::after {\n    background-color: #35aaf3;\n}\n.has-icon.is-secondary.is-outline:hover .is-icon-arrow::after, .has-icon.is-secondary.is-outline:focus .is-icon-arrow::after, .has-icon.is-secondary.is-outline.is-active .is-icon-arrow::after, .has-icon.is-secondary.is-outline:active .is-icon-arrow::after {\n    border-left-color: white;\n    border-top-color: white;\n}\n.has-icon.is-secondary.is-outline:hover .is-icon-caret::after, .has-icon.is-secondary.is-outline:focus .is-icon-caret::after, .has-icon.is-secondary.is-outline.is-active .is-icon-caret::after, .has-icon.is-secondary.is-outline:active .is-icon-caret::after {\n    border-top-color: white;\n}\n.has-icon.is-secondary.is-outline:hover .is-icon-right::after, .has-icon.is-secondary.is-outline:focus .is-icon-right::after, .has-icon.is-secondary.is-outline.is-active .is-icon-right::after, .has-icon.is-secondary.is-outline:active .is-icon-right::after {\n    border-left-color: white;\n    border-bottom-color: white;\n}\n.has-icon.is-secondary.is-outline:hover .is-icon-close::before, .has-icon.is-secondary.is-outline:hover .is-icon-close::after, .has-icon.is-secondary.is-outline:focus .is-icon-close::before, .has-icon.is-secondary.is-outline:focus .is-icon-close::after, .has-icon.is-secondary.is-outline.is-active .is-icon-close::before, .has-icon.is-secondary.is-outline.is-active .is-icon-close::after, .has-icon.is-secondary.is-outline:active .is-icon-close::before, .has-icon.is-secondary.is-outline:active .is-icon-close::after {\n    background-color: white;\n}\n.has-icon.is-secondary.is-icon-arrow::after {\n    border-left-color: #35aaf3;\n    border-top-color: #35aaf3;\n}\n.has-icon.is-secondary.is-icon-caret::after {\n    border-top-color: #35aaf3;\n}\n.has-icon.is-secondary.is-icon-right::after {\n    border-left-color: #35aaf3;\n    border-bottom-color: #35aaf3;\n}\n.has-icon.is-secondary.is-icon-close::before, .has-icon.is-secondary.is-icon-close::after {\n    background-color: #35aaf3;\n}\n.has-icon.is-warn .is-icon-arrow::after {\n    border-left-color: white;\n    border-top-color: white;\n}\n.has-icon.is-warn .is-icon-caret::after {\n    border-top-color: white;\n}\n.has-icon.is-warn .is-icon-right::after {\n    border-left-color: white;\n    border-bottom-color: white;\n}\n.has-icon.is-warn .is-icon-close::before, .has-icon.is-warn .is-icon-close::after {\n    background-color: white;\n}\n.has-icon.is-warn.is-outline .is-icon-arrow::after {\n    border-left-color: #ffdd57;\n    border-top-color: #ffdd57;\n}\n.has-icon.is-warn.is-outline .is-icon-caret::after {\n    border-top-color: #ffdd57;\n}\n.has-icon.is-warn.is-outline .is-icon-right::after {\n    border-left-color: #ffdd57;\n    border-bottom-color: #ffdd57;\n}\n.has-icon.is-warn.is-outline .is-icon-close::before, .has-icon.is-warn.is-outline .is-icon-close::after {\n    background-color: #ffdd57;\n}\n.has-icon.is-warn.is-outline:hover .is-icon-arrow::after, .has-icon.is-warn.is-outline:focus .is-icon-arrow::after, .has-icon.is-warn.is-outline.is-active .is-icon-arrow::after, .has-icon.is-warn.is-outline:active .is-icon-arrow::after {\n    border-left-color: white;\n    border-top-color: white;\n}\n.has-icon.is-warn.is-outline:hover .is-icon-caret::after, .has-icon.is-warn.is-outline:focus .is-icon-caret::after, .has-icon.is-warn.is-outline.is-active .is-icon-caret::after, .has-icon.is-warn.is-outline:active .is-icon-caret::after {\n    border-top-color: white;\n}\n.has-icon.is-warn.is-outline:hover .is-icon-right::after, .has-icon.is-warn.is-outline:focus .is-icon-right::after, .has-icon.is-warn.is-outline.is-active .is-icon-right::after, .has-icon.is-warn.is-outline:active .is-icon-right::after {\n    border-left-color: white;\n    border-bottom-color: white;\n}\n.has-icon.is-warn.is-outline:hover .is-icon-close::before, .has-icon.is-warn.is-outline:hover .is-icon-close::after, .has-icon.is-warn.is-outline:focus .is-icon-close::before, .has-icon.is-warn.is-outline:focus .is-icon-close::after, .has-icon.is-warn.is-outline.is-active .is-icon-close::before, .has-icon.is-warn.is-outline.is-active .is-icon-close::after, .has-icon.is-warn.is-outline:active .is-icon-close::before, .has-icon.is-warn.is-outline:active .is-icon-close::after {\n    background-color: white;\n}\n.has-icon.is-warn.is-icon-arrow::after {\n    border-left-color: #ffdd57;\n    border-top-color: #ffdd57;\n}\n.has-icon.is-warn.is-icon-caret::after {\n    border-top-color: #ffdd57;\n}\n.has-icon.is-warn.is-icon-right::after {\n    border-left-color: #ffdd57;\n    border-bottom-color: #ffdd57;\n}\n.has-icon.is-warn.is-icon-close::before, .has-icon.is-warn.is-icon-close::after {\n    background-color: #ffdd57;\n}\n.has-icon.is-success .is-icon-arrow::after {\n    border-left-color: white;\n    border-top-color: white;\n}\n.has-icon.is-success .is-icon-caret::after {\n    border-top-color: white;\n}\n.has-icon.is-success .is-icon-right::after {\n    border-left-color: white;\n    border-bottom-color: white;\n}\n.has-icon.is-success .is-icon-close::before, .has-icon.is-success .is-icon-close::after {\n    background-color: white;\n}\n.has-icon.is-success.is-outline .is-icon-arrow::after {\n    border-left-color: #23d160;\n    border-top-color: #23d160;\n}\n.has-icon.is-success.is-outline .is-icon-caret::after {\n    border-top-color: #23d160;\n}\n.has-icon.is-success.is-outline .is-icon-right::after {\n    border-left-color: #23d160;\n    border-bottom-color: #23d160;\n}\n.has-icon.is-success.is-outline .is-icon-close::before, .has-icon.is-success.is-outline .is-icon-close::after {\n    background-color: #23d160;\n}\n.has-icon.is-success.is-outline:hover .is-icon-arrow::after, .has-icon.is-success.is-outline:focus .is-icon-arrow::after, .has-icon.is-success.is-outline.is-active .is-icon-arrow::after, .has-icon.is-success.is-outline:active .is-icon-arrow::after {\n    border-left-color: white;\n    border-top-color: white;\n}\n.has-icon.is-success.is-outline:hover .is-icon-caret::after, .has-icon.is-success.is-outline:focus .is-icon-caret::after, .has-icon.is-success.is-outline.is-active .is-icon-caret::after, .has-icon.is-success.is-outline:active .is-icon-caret::after {\n    border-top-color: white;\n}\n.has-icon.is-success.is-outline:hover .is-icon-right::after, .has-icon.is-success.is-outline:focus .is-icon-right::after, .has-icon.is-success.is-outline.is-active .is-icon-right::after, .has-icon.is-success.is-outline:active .is-icon-right::after {\n    border-left-color: white;\n    border-bottom-color: white;\n}\n.has-icon.is-success.is-outline:hover .is-icon-close::before, .has-icon.is-success.is-outline:hover .is-icon-close::after, .has-icon.is-success.is-outline:focus .is-icon-close::before, .has-icon.is-success.is-outline:focus .is-icon-close::after, .has-icon.is-success.is-outline.is-active .is-icon-close::before, .has-icon.is-success.is-outline.is-active .is-icon-close::after, .has-icon.is-success.is-outline:active .is-icon-close::before, .has-icon.is-success.is-outline:active .is-icon-close::after {\n    background-color: white;\n}\n.has-icon.is-success.is-icon-arrow::after {\n    border-left-color: #23d160;\n    border-top-color: #23d160;\n}\n.has-icon.is-success.is-icon-caret::after {\n    border-top-color: #23d160;\n}\n.has-icon.is-success.is-icon-right::after {\n    border-left-color: #23d160;\n    border-bottom-color: #23d160;\n}\n.has-icon.is-success.is-icon-close::before, .has-icon.is-success.is-icon-close::after {\n    background-color: #23d160;\n}\n.has-icon.is-error .is-icon-arrow::after {\n    border-left-color: white;\n    border-top-color: white;\n}\n.has-icon.is-error .is-icon-caret::after {\n    border-top-color: white;\n}\n.has-icon.is-error .is-icon-right::after {\n    border-left-color: white;\n    border-bottom-color: white;\n}\n.has-icon.is-error .is-icon-close::before, .has-icon.is-error .is-icon-close::after {\n    background-color: white;\n}\n.has-icon.is-error.is-outline .is-icon-arrow::after {\n    border-left-color: #ff3860;\n    border-top-color: #ff3860;\n}\n.has-icon.is-error.is-outline .is-icon-caret::after {\n    border-top-color: #ff3860;\n}\n.has-icon.is-error.is-outline .is-icon-right::after {\n    border-left-color: #ff3860;\n    border-bottom-color: #ff3860;\n}\n.has-icon.is-error.is-outline .is-icon-close::before, .has-icon.is-error.is-outline .is-icon-close::after {\n    background-color: #ff3860;\n}\n.has-icon.is-error.is-outline:hover .is-icon-arrow::after, .has-icon.is-error.is-outline:focus .is-icon-arrow::after, .has-icon.is-error.is-outline.is-active .is-icon-arrow::after, .has-icon.is-error.is-outline:active .is-icon-arrow::after {\n    border-left-color: white;\n    border-top-color: white;\n}\n.has-icon.is-error.is-outline:hover .is-icon-caret::after, .has-icon.is-error.is-outline:focus .is-icon-caret::after, .has-icon.is-error.is-outline.is-active .is-icon-caret::after, .has-icon.is-error.is-outline:active .is-icon-caret::after {\n    border-top-color: white;\n}\n.has-icon.is-error.is-outline:hover .is-icon-right::after, .has-icon.is-error.is-outline:focus .is-icon-right::after, .has-icon.is-error.is-outline.is-active .is-icon-right::after, .has-icon.is-error.is-outline:active .is-icon-right::after {\n    border-left-color: white;\n    border-bottom-color: white;\n}\n.has-icon.is-error.is-outline:hover .is-icon-close::before, .has-icon.is-error.is-outline:hover .is-icon-close::after, .has-icon.is-error.is-outline:focus .is-icon-close::before, .has-icon.is-error.is-outline:focus .is-icon-close::after, .has-icon.is-error.is-outline.is-active .is-icon-close::before, .has-icon.is-error.is-outline.is-active .is-icon-close::after, .has-icon.is-error.is-outline:active .is-icon-close::before, .has-icon.is-error.is-outline:active .is-icon-close::after {\n    background-color: white;\n}\n.has-icon.is-error.is-icon-arrow::after {\n    border-left-color: #ff3860;\n    border-top-color: #ff3860;\n}\n.has-icon.is-error.is-icon-caret::after {\n    border-top-color: #ff3860;\n}\n.has-icon.is-error.is-icon-right::after {\n    border-left-color: #ff3860;\n    border-bottom-color: #ff3860;\n}\n.has-icon.is-error.is-icon-close::before, .has-icon.is-error.is-icon-close::after {\n    background-color: #ff3860;\n}\n.is-icon-caret::after {\n  border: 0.45em solid transparent;\n  position: absolute;\n  top: 0.3em;\n  content: \"\";\n  transition: all 0.3s;\n  box-sizing: border-box;\n  border-top-color: #C6C6C6;\n}\n.is-icon-right::after {\n  border: 2px solid transparent;\n  position: absolute;\n  width: 1em;\n  height: 0.55em;\n  min-height: 8px;\n  content: \"\";\n  transform: rotate(-55deg);\n  -webkit-transform: rotate(-55deg) translate3d(0, 0, 0);\n  box-sizing: border-box;\n  border-left-color: #C6C6C6;\n  border-bottom-color: #C6C6C6;\n}\n.is-icon-arrow::after {\n  border: 2px solid transparent;\n  position: absolute;\n  width: 0.7em;\n  height: 0.72em;\n  top: -0.1em;\n  left: 0.15em;\n  content: \"\";\n  border-radius: 2px;\n  transform: rotate(222deg);\n  -webkit-transform: rotate(222deg) translate3d(0, 0, 0);\n  transition: all 0.3s;\n  box-sizing: border-box;\n  border-left-color: #C6C6C6;\n  border-top-color: #C6C6C6;\n}\n.is-icon-close::before, .is-icon-close::after {\n  position: absolute;\n  content: \"\";\n  width: 100%;\n  top: 0.3em;\n  height: 2px;\n  background-color: #C6C6C6;\n}\n.is-icon-close::before {\n  -webkit-transform: rotate(45deg);\n  transform: rotate(45deg);\n}\n.is-icon-close::after {\n  -webkit-transform: rotate(-45deg);\n  transform: rotate(-45deg);\n}\n.is-icon-wrap,\n.is-icon-caret,\n.is-icon-right,\n.is-icon-arrow,\n.is-icon-close {\n  text-align: left;\n  display: inline-block;\n  position: relative;\n  width: 1em;\n  height: 1em;\n  vertical-align: middle;\n}\n.is-open .is-icon-caret::after,\n.has-hover-open:hover .is-icon-caret::after {\n  -webkit-transform: rotate(180deg) translateY(50%);\n  transform: rotate(180deg) translateY(50%);\n}\n.is-open .is-icon-arrow::after,\n.has-hover-open:hover .is-icon-arrow::after {\n  -webkit-transform: rotate(408deg);\n  transform: rotate(408deg);\n  top: 0.35em;\n  height: 0.7em;\n}\n.v-btn {\n  -moz-appearance: none;\n  -webkit-appearance: none;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  border: 1px solid transparent;\n  border-radius: 3px;\n  box-shadow: none;\n  display: -webkit-inline-box;\n  display: -ms-inline-flexbox;\n  display: inline-flex;\n  font-size: 1rem;\n  height: 2.25em;\n  -webkit-box-pack: start;\n      -ms-flex-pack: start;\n          justify-content: flex-start;\n  line-height: 1.5;\n  padding: calc(0.375em - 1px) calc(0.625em - 1px);\n  position: relative;\n  vertical-align: top;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  background-color: white;\n  border-color: #C6C6C6;\n  color: black;\n  cursor: pointer;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  padding-left: 0.75em;\n  padding-right: 0.75em;\n  text-align: center;\n  white-space: nowrap;\n  text-decoration: none;\n}\n.v-btn:focus, .v-btn.is-focused, .v-btn:active, .v-btn.is-active {\n    outline: none;\n}\n.v-btn[disabled] {\n    cursor: not-allowed;\n}\n.v-btn strong {\n    color: inherit;\n}\n.v-btn:hover, .v-btn.is-hovered {\n    background-color: #f2f2f2;\n}\n.v-btn.is-active, .v-btn:active {\n    color: black;\n    background-color: #e6e6e6;\n}\n.v-btn.is-disabled, .v-btn:disabled, .v-btn[disabled] {\n    pointer-events: none;\n    cursor: not-allowed;\n    background-color: #F2F2F2;\n    border-color: #cccccc;\n    box-shadow: none !important;\n    opacity: .5;\n}\n.v-btn:focus, .v-btn.is-focused {\n    border-color: #1ca0f2;\n    color: #363636;\n}\n.v-btn:focus:not(:active), .v-btn.is-focused:not(:active) {\n      box-shadow: 0 0 0 0.125em rgba(28, 160, 242, 0.25);\n}\n.v-btn.is-small {\n    border-radius: 2px;\n    font-size: 0.75rem;\n}\n.v-btn.is-medium {\n    font-size: 1.25rem;\n}\n.v-btn.is-large {\n    font-size: 1.5rem;\n}\n.v-btn.is-loading {\n    pointer-events: none;\n    color: transparent !important;\n}\n.v-btn.is-loading .as-icon {\n      opacity: 0;\n}\n.v-btn.is-loading::after {\n      border: 2px solid #dbdbdb;\n      border-radius: 290486px;\n      border-right-color: transparent;\n      border-top-color: transparent;\n      content: \"\";\n      display: block;\n      position: relative;\n      height: 1em;\n      width: 1em;\n      -webkit-animation: v-kf-spin-around 500ms infinite linear;\n              animation: v-kf-spin-around 500ms infinite linear;\n      position: absolute;\n      left: calc(50% - (1.2em / 2) - 0.5px);\n      top: calc(50% - (1.2em / 2) - 0.5px);\n}\n.v-btn.is-circle {\n    border-radius: 50%;\n}\n.v-btn.is-square, .v-btn.is-circle {\n    width: calc(18px + 1rem);\n    height: calc(18px + 1rem);\n}\n.v-btn.is-square.is-small, .v-btn.is-circle.is-small {\n      width: calc(16px + 0.7rem);\n      height: calc(16px + 0.7rem);\n}\n.v-btn.is-square.is-large, .v-btn.is-circle.is-large {\n      width: calc(21px + 1.5rem);\n      height: calc(21px + 1.5rem);\n}\n.v-btn.is-link {\n    background-color: transparent;\n    border-color: transparent;\n    color: #4a4a4a;\n    text-decoration: none;\n}\n.v-btn.is-link:hover, .v-btn.is-link.is-hovered, .v-btn.is-link:focus, .v-btn.is-link.is-focused {\n      background-color: whitesmoke;\n      color: #363636;\n}\n.v-btn.is-link:active, .v-btn.is-link.is-active {\n      background-color: #e8e8e8;\n      color: #363636;\n}\n.v-btn.is-link[disabled] {\n      background-color: transparent;\n      border-color: transparent;\n      box-shadow: none;\n}\n.v-btn .has-icon, .v-btn .has-icon.is-small, .v-btn .has-icon.is-medium, .v-btn .has-icon.is-large {\n    height: 1.5em;\n    width: 1.5em;\n}\n.v-btn .has-icon:first-child:not(:last-child) {\n    margin-left: calc(-0.375em - 1px);\n    margin-right: 0.1875em;\n}\n.v-btn .has-icon:last-child:not(:first-child) {\n    margin-left: 0.1875em;\n    margin-right: calc(-0.375em - 1px);\n}\n.v-btn .has-icon:first-child:last-child {\n    margin-left: calc(-0.375em - 1px);\n    margin-right: calc(-0.375em - 1px);\n}\n.v-btn-group.is-horizontal {\n  display: inline-block;\n  vertical-align: middle;\n}\n.v-btn-group.is-horizontal::after {\n    clear: both;\n    content: \" \";\n    display: table;\n}\n.v-btn-group.is-horizontal .v-btn {\n    float: left;\n    margin-left: -1px;\n}\n.v-btn-group.is-horizontal .v-btn:not(:first-child):not(:last-child) {\n      border-radius: 0;\n}\n.v-btn-group.is-horizontal .v-btn:first-child {\n      margin-left: 0;\n}\n.v-btn-group.is-horizontal .v-btn:first-child:not(:last-child) {\n        border-bottom-right-radius: 0;\n        border-top-right-radius: 0;\n}\n.v-btn-group.is-horizontal .v-btn:last-child:not(:first-child) {\n      border-bottom-left-radius: 0;\n      border-top-left-radius: 0;\n}\n.v-btn-group.is-vertical {\n  display: inline-block;\n  vertical-align: middle;\n}\n.v-btn-group.is-vertical .v-btn {\n    display: block;\n    margin-top: -1px;\n    width: 100%;\n    max-width: 100%;\n}\n.v-btn-group.is-vertical .v-btn:not(:first-child):not(:last-child) {\n      border-radius: 0;\n}\n.v-btn-group.is-vertical .v-btn:first-child {\n      margin-top: 0;\n}\n.v-btn-group.is-vertical .v-btn:first-child:not(:last-child) {\n        border-bottom-left-radius: 0;\n        border-bottom-right-radius: 0;\n}\n.v-btn-group.is-vertical .v-btn:last-child:not(:first-child) {\n      border-top-left-radius: 0;\n      border-top-right-radius: 0;\n}\n.v-btn.is-white {\n  color: #0a0a0a;\n  border-color: #fafafa;\n  background-color: white;\n}\n.v-btn.is-white.is-outlined {\n    color: white;\n    background-color: #0a0a0a;\n    border-color: #fafafa;\n}\n.v-btn.is-white.is-outlined:hover, .v-btn.is-white.is-outlined.is-hovered {\n      color: #0a0a0a !important;\n}\n.v-btn.is-white.is-outlined:focus, .v-btn.is-white.is-outlined.is-focused {\n      border-color: transparent;\n      color: white;\n}\n.v-btn.is-white.is-outlined:focus:not(:active), .v-btn.is-white.is-outlined.is-focused:not(:active) {\n        box-shadow: 0 0 0 0.125em rgba(255, 255, 255, 0.25);\n}\n.v-btn.is-white.is-outlined.is-active, .v-btn.is-white.is-outlined:active {\n      color: #0a0a0a;\n}\n.v-btn.is-white.is-outlined.is-loading::after {\n      border-left-color: white;\n      border-bottom-color: white;\n}\n.v-btn.is-white:hover, .v-btn.is-white.is-hovered {\n    background-color: #f0f0f0;\n}\n.v-btn.is-white:focus, .v-btn.is-white.is-focused {\n    border-color: transparent;\n    color: #0a0a0a;\n}\n.v-btn.is-white:focus:not(:active), .v-btn.is-white.is-focused:not(:active) {\n      box-shadow: 0 0 0 0.125em rgba(255, 255, 255, 0.25);\n}\n.v-btn.is-white.is-disabled, .v-btn.is-white:disabled, .v-btn.is-white[disabled] {\n    background-color: white !important;\n    border-color: transparent !important;\n}\n.v-btn.is-white:active, .v-btn.is-white.is-active {\n    background-color: #e6e6e6;\n}\n.v-btn.is-white.is-loading::after {\n    border-left-color: #0a0a0a;\n    border-bottom-color: #0a0a0a;\n}\n.v-btn.is-black {\n  color: white;\n  border-color: #050505;\n  background-color: #0a0a0a;\n}\n.v-btn.is-black.is-outlined {\n    color: #0a0a0a;\n    background-color: white;\n    border-color: #050505;\n}\n.v-btn.is-black.is-outlined:hover, .v-btn.is-black.is-outlined.is-hovered {\n      color: white !important;\n}\n.v-btn.is-black.is-outlined:focus, .v-btn.is-black.is-outlined.is-focused {\n      border-color: transparent;\n      color: #0a0a0a;\n}\n.v-btn.is-black.is-outlined:focus:not(:active), .v-btn.is-black.is-outlined.is-focused:not(:active) {\n        box-shadow: 0 0 0 0.125em rgba(10, 10, 10, 0.25);\n}\n.v-btn.is-black.is-outlined.is-active, .v-btn.is-black.is-outlined:active {\n      color: white;\n}\n.v-btn.is-black.is-outlined.is-loading::after {\n      border-left-color: #0a0a0a;\n      border-bottom-color: #0a0a0a;\n}\n.v-btn.is-black:hover, .v-btn.is-black.is-hovered {\n    background-color: black;\n}\n.v-btn.is-black:focus, .v-btn.is-black.is-focused {\n    border-color: transparent;\n    color: white;\n}\n.v-btn.is-black:focus:not(:active), .v-btn.is-black.is-focused:not(:active) {\n      box-shadow: 0 0 0 0.125em rgba(10, 10, 10, 0.25);\n}\n.v-btn.is-black.is-disabled, .v-btn.is-black:disabled, .v-btn.is-black[disabled] {\n    background-color: #0a0a0a !important;\n    border-color: transparent !important;\n}\n.v-btn.is-black:active, .v-btn.is-black.is-active {\n    background-color: black;\n}\n.v-btn.is-black.is-loading::after {\n    border-left-color: white;\n    border-bottom-color: white;\n}\n.v-btn.is-light {\n  color: #363636;\n  border-color: #f0f0f0;\n  background-color: whitesmoke;\n}\n.v-btn.is-light.is-outlined {\n    color: whitesmoke;\n    background-color: #363636;\n    border-color: #f0f0f0;\n}\n.v-btn.is-light.is-outlined:hover, .v-btn.is-light.is-outlined.is-hovered {\n      color: #363636 !important;\n}\n.v-btn.is-light.is-outlined:focus, .v-btn.is-light.is-outlined.is-focused {\n      border-color: transparent;\n      color: whitesmoke;\n}\n.v-btn.is-light.is-outlined:focus:not(:active), .v-btn.is-light.is-outlined.is-focused:not(:active) {\n        box-shadow: 0 0 0 0.125em rgba(245, 245, 245, 0.25);\n}\n.v-btn.is-light.is-outlined.is-active, .v-btn.is-light.is-outlined:active {\n      color: #363636;\n}\n.v-btn.is-light.is-outlined.is-loading::after {\n      border-left-color: whitesmoke;\n      border-bottom-color: whitesmoke;\n}\n.v-btn.is-light:hover, .v-btn.is-light.is-hovered {\n    background-color: #e6e6e6;\n}\n.v-btn.is-light:focus, .v-btn.is-light.is-focused {\n    border-color: transparent;\n    color: #363636;\n}\n.v-btn.is-light:focus:not(:active), .v-btn.is-light.is-focused:not(:active) {\n      box-shadow: 0 0 0 0.125em rgba(245, 245, 245, 0.25);\n}\n.v-btn.is-light.is-disabled, .v-btn.is-light:disabled, .v-btn.is-light[disabled] {\n    background-color: whitesmoke !important;\n    border-color: transparent !important;\n}\n.v-btn.is-light:active, .v-btn.is-light.is-active {\n    background-color: #dbdbdb;\n}\n.v-btn.is-light.is-loading::after {\n    border-left-color: #363636;\n    border-bottom-color: #363636;\n}\n.v-btn.is-dark {\n  color: whitesmoke;\n  border-color: #303030;\n  background-color: #363636;\n}\n.v-btn.is-dark.is-outlined {\n    color: #363636;\n    background-color: whitesmoke;\n    border-color: #303030;\n}\n.v-btn.is-dark.is-outlined:hover, .v-btn.is-dark.is-outlined.is-hovered {\n      color: whitesmoke !important;\n}\n.v-btn.is-dark.is-outlined:focus, .v-btn.is-dark.is-outlined.is-focused {\n      border-color: transparent;\n      color: #363636;\n}\n.v-btn.is-dark.is-outlined:focus:not(:active), .v-btn.is-dark.is-outlined.is-focused:not(:active) {\n        box-shadow: 0 0 0 0.125em rgba(54, 54, 54, 0.25);\n}\n.v-btn.is-dark.is-outlined.is-active, .v-btn.is-dark.is-outlined:active {\n      color: whitesmoke;\n}\n.v-btn.is-dark.is-outlined.is-loading::after {\n      border-left-color: #363636;\n      border-bottom-color: #363636;\n}\n.v-btn.is-dark:hover, .v-btn.is-dark.is-hovered {\n    background-color: #262626;\n}\n.v-btn.is-dark:focus, .v-btn.is-dark.is-focused {\n    border-color: transparent;\n    color: whitesmoke;\n}\n.v-btn.is-dark:focus:not(:active), .v-btn.is-dark.is-focused:not(:active) {\n      box-shadow: 0 0 0 0.125em rgba(54, 54, 54, 0.25);\n}\n.v-btn.is-dark.is-disabled, .v-btn.is-dark:disabled, .v-btn.is-dark[disabled] {\n    background-color: #363636 !important;\n    border-color: transparent !important;\n}\n.v-btn.is-dark:active, .v-btn.is-dark.is-active {\n    background-color: #1c1c1c;\n}\n.v-btn.is-dark.is-loading::after {\n    border-left-color: whitesmoke;\n    border-bottom-color: whitesmoke;\n}\n.v-btn.is-primary {\n  color: #fff;\n  border-color: #139cf1;\n  background-color: #1ca0f2;\n}\n.v-btn.is-primary.is-outlined {\n    color: #1ca0f2;\n    background-color: #fff;\n    border-color: #139cf1;\n}\n.v-btn.is-primary.is-outlined:hover, .v-btn.is-primary.is-outlined.is-hovered {\n      color: #fff !important;\n}\n.v-btn.is-primary.is-outlined:focus, .v-btn.is-primary.is-outlined.is-focused {\n      border-color: transparent;\n      color: #1ca0f2;\n}\n.v-btn.is-primary.is-outlined:focus:not(:active), .v-btn.is-primary.is-outlined.is-focused:not(:active) {\n        box-shadow: 0 0 0 0.125em rgba(28, 160, 242, 0.25);\n}\n.v-btn.is-primary.is-outlined.is-active, .v-btn.is-primary.is-outlined:active {\n      color: #fff;\n}\n.v-btn.is-primary.is-outlined.is-loading::after {\n      border-left-color: #1ca0f2;\n      border-bottom-color: #1ca0f2;\n}\n.v-btn.is-primary:hover, .v-btn.is-primary.is-hovered {\n    background-color: #0d91e3;\n}\n.v-btn.is-primary:focus, .v-btn.is-primary.is-focused {\n    border-color: transparent;\n    color: #fff;\n}\n.v-btn.is-primary:focus:not(:active), .v-btn.is-primary.is-focused:not(:active) {\n      box-shadow: 0 0 0 0.125em rgba(28, 160, 242, 0.25);\n}\n.v-btn.is-primary.is-disabled, .v-btn.is-primary:disabled, .v-btn.is-primary[disabled] {\n    background-color: #1ca0f2 !important;\n    border-color: transparent !important;\n}\n.v-btn.is-primary:active, .v-btn.is-primary.is-active {\n    background-color: #0c84cf;\n}\n.v-btn.is-primary.is-loading::after {\n    border-left-color: #fff;\n    border-bottom-color: #fff;\n}\n.v-btn.is-info {\n  color: #fff;\n  border-color: #b361ff;\n  background-color: #b86bff;\n}\n.v-btn.is-info.is-outlined {\n    color: #b86bff;\n    background-color: #fff;\n    border-color: #b361ff;\n}\n.v-btn.is-info.is-outlined:hover, .v-btn.is-info.is-outlined.is-hovered {\n      color: #fff !important;\n}\n.v-btn.is-info.is-outlined:focus, .v-btn.is-info.is-outlined.is-focused {\n      border-color: transparent;\n      color: #b86bff;\n}\n.v-btn.is-info.is-outlined:focus:not(:active), .v-btn.is-info.is-outlined.is-focused:not(:active) {\n        box-shadow: 0 0 0 0.125em rgba(184, 107, 255, 0.25);\n}\n.v-btn.is-info.is-outlined.is-active, .v-btn.is-info.is-outlined:active {\n      color: #fff;\n}\n.v-btn.is-info.is-outlined.is-loading::after {\n      border-left-color: #b86bff;\n      border-bottom-color: #b86bff;\n}\n.v-btn.is-info:hover, .v-btn.is-info.is-hovered {\n    background-color: #a94dff;\n}\n.v-btn.is-info:focus, .v-btn.is-info.is-focused {\n    border-color: transparent;\n    color: #fff;\n}\n.v-btn.is-info:focus:not(:active), .v-btn.is-info.is-focused:not(:active) {\n      box-shadow: 0 0 0 0.125em rgba(184, 107, 255, 0.25);\n}\n.v-btn.is-info.is-disabled, .v-btn.is-info:disabled, .v-btn.is-info[disabled] {\n    background-color: #b86bff !important;\n    border-color: transparent !important;\n}\n.v-btn.is-info:active, .v-btn.is-info.is-active {\n    background-color: #9f38ff;\n}\n.v-btn.is-info.is-loading::after {\n    border-left-color: #fff;\n    border-bottom-color: #fff;\n}\n.v-btn.is-success {\n  color: #fff;\n  border-color: #22c95c;\n  background-color: #23d160;\n}\n.v-btn.is-success.is-outlined {\n    color: #23d160;\n    background-color: #fff;\n    border-color: #22c95c;\n}\n.v-btn.is-success.is-outlined:hover, .v-btn.is-success.is-outlined.is-hovered {\n      color: #fff !important;\n}\n.v-btn.is-success.is-outlined:focus, .v-btn.is-success.is-outlined.is-focused {\n      border-color: transparent;\n      color: #23d160;\n}\n.v-btn.is-success.is-outlined:focus:not(:active), .v-btn.is-success.is-outlined.is-focused:not(:active) {\n        box-shadow: 0 0 0 0.125em rgba(35, 209, 96, 0.25);\n}\n.v-btn.is-success.is-outlined.is-active, .v-btn.is-success.is-outlined:active {\n      color: #fff;\n}\n.v-btn.is-success.is-outlined.is-loading::after {\n      border-left-color: #23d160;\n      border-bottom-color: #23d160;\n}\n.v-btn.is-success:hover, .v-btn.is-success.is-hovered {\n    background-color: #1fb754;\n}\n.v-btn.is-success:focus, .v-btn.is-success.is-focused {\n    border-color: transparent;\n    color: #fff;\n}\n.v-btn.is-success:focus:not(:active), .v-btn.is-success.is-focused:not(:active) {\n      box-shadow: 0 0 0 0.125em rgba(35, 209, 96, 0.25);\n}\n.v-btn.is-success.is-disabled, .v-btn.is-success:disabled, .v-btn.is-success[disabled] {\n    background-color: #23d160 !important;\n    border-color: transparent !important;\n}\n.v-btn.is-success:active, .v-btn.is-success.is-active {\n    background-color: #1ca64c;\n}\n.v-btn.is-success.is-loading::after {\n    border-left-color: #fff;\n    border-bottom-color: #fff;\n}\n.v-btn.is-warning {\n  color: rgba(0, 0, 0, 0.7);\n  border-color: #ffdb4d;\n  background-color: #ffdd57;\n}\n.v-btn.is-warning.is-outlined {\n    color: #ffdd57;\n    background-color: rgba(0, 0, 0, 0.7);\n    border-color: #ffdb4d;\n}\n.v-btn.is-warning.is-outlined:hover, .v-btn.is-warning.is-outlined.is-hovered {\n      color: rgba(0, 0, 0, 0.7) !important;\n}\n.v-btn.is-warning.is-outlined:focus, .v-btn.is-warning.is-outlined.is-focused {\n      border-color: transparent;\n      color: #ffdd57;\n}\n.v-btn.is-warning.is-outlined:focus:not(:active), .v-btn.is-warning.is-outlined.is-focused:not(:active) {\n        box-shadow: 0 0 0 0.125em rgba(255, 221, 87, 0.25);\n}\n.v-btn.is-warning.is-outlined.is-active, .v-btn.is-warning.is-outlined:active {\n      color: rgba(0, 0, 0, 0.7);\n}\n.v-btn.is-warning.is-outlined.is-loading::after {\n      border-left-color: #ffdd57;\n      border-bottom-color: #ffdd57;\n}\n.v-btn.is-warning:hover, .v-btn.is-warning.is-hovered {\n    background-color: #ffd738;\n}\n.v-btn.is-warning:focus, .v-btn.is-warning.is-focused {\n    border-color: transparent;\n    color: rgba(0, 0, 0, 0.7);\n}\n.v-btn.is-warning:focus:not(:active), .v-btn.is-warning.is-focused:not(:active) {\n      box-shadow: 0 0 0 0.125em rgba(255, 221, 87, 0.25);\n}\n.v-btn.is-warning.is-disabled, .v-btn.is-warning:disabled, .v-btn.is-warning[disabled] {\n    background-color: #ffdd57 !important;\n    border-color: transparent !important;\n}\n.v-btn.is-warning:active, .v-btn.is-warning.is-active {\n    background-color: #ffd324;\n}\n.v-btn.is-warning.is-loading::after {\n    border-left-color: rgba(0, 0, 0, 0.7);\n    border-bottom-color: rgba(0, 0, 0, 0.7);\n}\n.v-btn.is-danger {\n  color: #fff;\n  border-color: #ff2e58;\n  background-color: #ff3860;\n}\n.v-btn.is-danger.is-outlined {\n    color: #ff3860;\n    background-color: #fff;\n    border-color: #ff2e58;\n}\n.v-btn.is-danger.is-outlined:hover, .v-btn.is-danger.is-outlined.is-hovered {\n      color: #fff !important;\n}\n.v-btn.is-danger.is-outlined:focus, .v-btn.is-danger.is-outlined.is-focused {\n      border-color: transparent;\n      color: #ff3860;\n}\n.v-btn.is-danger.is-outlined:focus:not(:active), .v-btn.is-danger.is-outlined.is-focused:not(:active) {\n        box-shadow: 0 0 0 0.125em rgba(255, 56, 96, 0.25);\n}\n.v-btn.is-danger.is-outlined.is-active, .v-btn.is-danger.is-outlined:active {\n      color: #fff;\n}\n.v-btn.is-danger.is-outlined.is-loading::after {\n      border-left-color: #ff3860;\n      border-bottom-color: #ff3860;\n}\n.v-btn.is-danger:hover, .v-btn.is-danger.is-hovered {\n    background-color: #ff1a47;\n}\n.v-btn.is-danger:focus, .v-btn.is-danger.is-focused {\n    border-color: transparent;\n    color: #fff;\n}\n.v-btn.is-danger:focus:not(:active), .v-btn.is-danger.is-focused:not(:active) {\n      box-shadow: 0 0 0 0.125em rgba(255, 56, 96, 0.25);\n}\n.v-btn.is-danger.is-disabled, .v-btn.is-danger:disabled, .v-btn.is-danger[disabled] {\n    background-color: #ff3860 !important;\n    border-color: transparent !important;\n}\n.v-btn.is-danger:active, .v-btn.is-danger.is-active {\n    background-color: #ff0537;\n}\n.v-btn.is-danger.is-loading::after {\n    border-left-color: #fff;\n    border-bottom-color: #fff;\n}\n.v-field:not(:last-child) {\n  margin-bottom: 0.75rem;\n}\n.v-field.has-addons {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: start;\n      -ms-flex-pack: start;\n          justify-content: flex-start;\n}\n.v-field.has-addons .v-control:not(:last-child) {\n    margin-right: -1px;\n}\n.v-field.has-addons .v-control:first-child .v-btn,\n  .v-field.has-addons .v-control:first-child .v-input,\n  .v-field.has-addons .v-control:first-child .v-select select {\n    border-bottom-left-radius: 3px;\n    border-top-left-radius: 3px;\n}\n.v-field.has-addons .v-control:last-child .v-btn,\n  .v-field.has-addons .v-control:last-child .v-input,\n  .v-field.has-addons .v-control:last-child .v-select select {\n    border-bottom-right-radius: 3px;\n    border-top-right-radius: 3px;\n}\n.v-field.has-addons .v-control .v-btn,\n  .v-field.has-addons .v-control .v-input,\n  .v-field.has-addons .v-control .v-select select {\n    border-radius: 0;\n}\n.v-field.has-addons .v-control .v-btn:hover, .v-field.has-addons .v-control .v-btn.is-hovered,\n    .v-field.has-addons .v-control .v-input:hover,\n    .v-field.has-addons .v-control .v-input.is-hovered,\n    .v-field.has-addons .v-control .v-select select:hover,\n    .v-field.has-addons .v-control .v-select select.is-hovered {\n      z-index: 2;\n}\n.v-field.has-addons .v-control .v-btn:focus, .v-field.has-addons .v-control .v-btn.is-focused, .v-field.has-addons .v-control .v-btn:active, .v-field.has-addons .v-control .v-btn.is-active,\n    .v-field.has-addons .v-control .v-input:focus,\n    .v-field.has-addons .v-control .v-input.is-focused,\n    .v-field.has-addons .v-control .v-input:active,\n    .v-field.has-addons .v-control .v-input.is-active,\n    .v-field.has-addons .v-control .v-select select:focus,\n    .v-field.has-addons .v-control .v-select select.is-focused,\n    .v-field.has-addons .v-control .v-select select:active,\n    .v-field.has-addons .v-control .v-select select.is-active {\n      z-index: 3;\n}\n.v-field.has-addons .v-control .v-btn:focus:hover, .v-field.has-addons .v-control .v-btn.is-focused:hover, .v-field.has-addons .v-control .v-btn:active:hover, .v-field.has-addons .v-control .v-btn.is-active:hover,\n      .v-field.has-addons .v-control .v-input:focus:hover,\n      .v-field.has-addons .v-control .v-input.is-focused:hover,\n      .v-field.has-addons .v-control .v-input:active:hover,\n      .v-field.has-addons .v-control .v-input.is-active:hover,\n      .v-field.has-addons .v-control .v-select select:focus:hover,\n      .v-field.has-addons .v-control .v-select select.is-focused:hover,\n      .v-field.has-addons .v-control .v-select select:active:hover,\n      .v-field.has-addons .v-control .v-select select.is-active:hover {\n        z-index: 4;\n}\n.v-field.has-addons .v-control.is-expanded {\n    -webkit-box-flex: 1;\n        -ms-flex-positive: 1;\n            flex-grow: 1;\n}\n.v-field.has-addons.has-addons-centered {\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n}\n.v-field.has-addons.has-addons-right {\n    -webkit-box-pack: end;\n        -ms-flex-pack: end;\n            justify-content: flex-end;\n}\n.v-field.has-addons.has-addons-fullwidth .v-control {\n    -webkit-box-flex: 1;\n        -ms-flex-positive: 1;\n            flex-grow: 1;\n    -ms-flex-negative: 0;\n        flex-shrink: 0;\n}\n.v-field.is-grouped {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: start;\n      -ms-flex-pack: start;\n          justify-content: flex-start;\n}\n.v-field.is-grouped > .v-control {\n    -ms-flex-negative: 0;\n        flex-shrink: 0;\n}\n.v-field.is-grouped > .v-control:not(:last-child) {\n      margin-bottom: 0;\n      margin-right: 0.75rem;\n}\n.v-field.is-grouped > .v-control.is-expanded {\n      -webkit-box-flex: 1;\n          -ms-flex-positive: 1;\n              flex-grow: 1;\n      -ms-flex-negative: 1;\n          flex-shrink: 1;\n}\n.v-field.is-grouped.is-grouped-centered {\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n}\n.v-field.is-grouped.is-grouped-right {\n    -webkit-box-pack: end;\n        -ms-flex-pack: end;\n            justify-content: flex-end;\n}\n.v-field.is-grouped.is-grouped-multiline {\n    -ms-flex-wrap: wrap;\n        flex-wrap: wrap;\n}\n.v-field.is-grouped.is-grouped-multiline > .ns-control:last-child, .v-field.is-grouped.is-grouped-multiline > .ns-control:not(:last-child) {\n      margin-bottom: 0.75rem;\n}\n.v-field.is-grouped.is-grouped-multiline:last-child {\n      margin-bottom: -0.75rem;\n}\n.v-field.is-grouped.is-grouped-multiline:not(:last-child) {\n      margin-bottom: 0;\n}\n.v-field.is-horizontal {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n}\n.v-field-label {\n  margin-bottom: 0.5rem;\n  -ms-flex-preferred-size: 0;\n      flex-basis: 0;\n  -webkit-box-flex: 1;\n      -ms-flex-positive: 1;\n          flex-grow: 1;\n  -ms-flex-negative: 0;\n      flex-shrink: 0;\n  margin-right: 1.5rem;\n  text-align: right;\n}\n.v-field-label .label {\n    font-size: inherit;\n}\n.v-field-label.is-small {\n    font-size: 0.75rem;\n    padding-top: 0.375em;\n}\n.v-field-label.is-normal {\n    padding-top: 0.375em;\n}\n.v-field-label.is-medium {\n    font-size: 1.25rem;\n    padding-top: 0.375em;\n}\n.v-field-label.is-large {\n    font-size: 1.5rem;\n    padding-top: 0.375em;\n}\n.v-field-body {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-preferred-size: 0;\n      flex-basis: 0;\n  -webkit-box-flex: 5;\n      -ms-flex-positive: 5;\n          flex-grow: 5;\n  -ms-flex-negative: 1;\n      flex-shrink: 1;\n}\n.v-field-body .v-field {\n    margin-bottom: 0;\n}\n.v-field-body > .v-field {\n    -ms-flex-negative: 1;\n        flex-shrink: 1;\n}\n.v-field-body > .v-field:not(.is-narrow) {\n      -webkit-box-flex: 1;\n          -ms-flex-positive: 1;\n              flex-grow: 1;\n}\n.v-field-body > .v-field:not(:last-child) {\n      margin-right: 0.75rem;\n}\n.v-control {\n  font-size: 1rem;\n  position: relative;\n  text-align: left;\n}\n.v-control.has-icons-left .v-input:focus ~ .has-icon,\n  .v-control.has-icons-left .v-select:focus ~ .has-icon, .v-control.has-icons-right .v-input:focus ~ .has-icon,\n  .v-control.has-icons-right .v-select:focus ~ .has-icon {\n    color: #7a7a7a;\n}\n.v-control.has-icons-left .v-input.is-small ~ .has-icon,\n  .v-control.has-icons-left .v-select.is-small ~ .has-icon, .v-control.has-icons-right .v-input.is-small ~ .has-icon,\n  .v-control.has-icons-right .v-select.is-small ~ .has-icon {\n    font-size: 0.75rem;\n}\n.v-control.has-icons-left .v-input.is-medium ~ .has-icon,\n  .v-control.has-icons-left .v-select.is-medium ~ .has-icon, .v-control.has-icons-right .v-input.is-medium ~ .has-icon,\n  .v-control.has-icons-right .v-select.is-medium ~ .has-icon {\n    font-size: 1.25rem;\n}\n.v-control.has-icons-left .v-input.is-large ~ .has-icon,\n  .v-control.has-icons-left .v-select.is-large ~ .has-icon, .v-control.has-icons-right .v-input.is-large ~ .has-icon,\n  .v-control.has-icons-right .v-select.is-large ~ .has-icon {\n    font-size: 1.5rem;\n}\n.v-control.has-icons-left .has-icon, .v-control.has-icons-right .has-icon {\n    color: #dbdbdb;\n    height: 2.25em;\n    pointer-events: none;\n    position: absolute;\n    top: 0;\n    width: 2.25em;\n    z-index: 4;\n}\n.v-control.has-icons-left .v-input,\n  .v-control.has-icons-left .v-select select {\n    padding-left: 2.25em;\n}\n.v-control.has-icons-left .has-icon.is-left {\n    left: 0;\n}\n.v-control.has-icons-right .v-input,\n  .v-control.has-icons-right .v-select select {\n    padding-right: 2.25em;\n}\n.v-control.has-icons-right .has-icon.is-right {\n    right: 0;\n}\n.v-control.is-loading::after {\n    -webkit-animation: v-kf-spin-around 500ms infinite linear;\n            animation: v-kf-spin-around 500ms infinite linear;\n    border: 2px solid #dbdbdb;\n    border-radius: 290486px;\n    border-right-color: transparent;\n    border-top-color: transparent;\n    content: \"\";\n    display: block;\n    box-sizing: border-box;\n    height: 1em;\n    width: 1em;\n    position: relative;\n    position: absolute !important;\n    right: 0.625em;\n    top: 0.625em;\n}\n.v-control.is-loading.is-small:after {\n    font-size: 0.75rem;\n}\n.v-control.is-loading.is-medium:after {\n    font-size: 1.25rem;\n}\n.v-control.is-loading.is-large:after {\n    font-size: 1.5rem;\n}\n.v-input,\n.v-textarea {\n  -moz-appearance: none;\n  -webkit-appearance: none;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  border: 1px solid transparent;\n  border-radius: 3px;\n  box-shadow: none;\n  display: -webkit-inline-box;\n  display: -ms-inline-flexbox;\n  display: inline-flex;\n  font-size: 1rem;\n  height: 2.25em;\n  -webkit-box-pack: start;\n      -ms-flex-pack: start;\n          justify-content: flex-start;\n  line-height: 1.5;\n  padding: calc(0.375em - 1px) calc(0.625em - 1px);\n  position: relative;\n  vertical-align: top;\n  background-color: white;\n  border-color: #dbdbdb;\n  color: #363636;\n  max-width: 100%;\n  width: 100%;\n}\n.v-input:focus, .v-input.is-focused, .v-input:active, .v-input.is-active,\n  .v-textarea:focus,\n  .v-textarea.is-focused,\n  .v-textarea:active,\n  .v-textarea.is-active {\n    outline: none;\n}\n.v-input[disabled],\n  .v-textarea[disabled] {\n    cursor: not-allowed;\n}\n.v-input:hover, .v-input.is-hovered,\n  .v-textarea:hover,\n  .v-textarea.is-hovered {\n    border-color: #b5b5b5;\n}\n.v-input:focus, .v-input.is-focused, .v-input:active, .v-input.is-active,\n  .v-textarea:focus,\n  .v-textarea.is-focused,\n  .v-textarea:active,\n  .v-textarea.is-active {\n    border-color: #1ca0f2;\n    box-shadow: 0 0 0 0.125em rgba(28, 160, 242, 0.25);\n}\n.v-input[disabled],\n  .v-textarea[disabled] {\n    background-color: whitesmoke;\n    border-color: whitesmoke;\n    box-shadow: none;\n    color: #7a7a7a;\n}\n.v-input[disabled]::-moz-placeholder,\n    .v-textarea[disabled]::-moz-placeholder {\n      color: rgba(122, 122, 122, 0.3);\n}\n.v-input[disabled]::-webkit-input-placeholder,\n    .v-textarea[disabled]::-webkit-input-placeholder {\n      color: rgba(122, 122, 122, 0.3);\n}\n.v-input[disabled]:-moz-placeholder,\n    .v-textarea[disabled]:-moz-placeholder {\n      color: rgba(122, 122, 122, 0.3);\n}\n.v-input[disabled]:-ms-input-placeholder,\n    .v-textarea[disabled]:-ms-input-placeholder {\n      color: rgba(122, 122, 122, 0.3);\n}\n.v-input[type=\"search\"],\n  .v-textarea[type=\"search\"] {\n    border-radius: 290486px;\n}\n.v-input.is-white,\n  .v-textarea.is-white {\n    border-color: white;\n}\n.v-input.is-white:focus, .v-input.is-white.is-focused, .v-input.is-white:active, .v-input.is-white.is-active,\n    .v-textarea.is-white:focus,\n    .v-textarea.is-white.is-focused,\n    .v-textarea.is-white:active,\n    .v-textarea.is-white.is-active {\n      box-shadow: 0 0 0 0.125em rgba(255, 255, 255, 0.25);\n}\n.v-input.is-black,\n  .v-textarea.is-black {\n    border-color: #0a0a0a;\n}\n.v-input.is-black:focus, .v-input.is-black.is-focused, .v-input.is-black:active, .v-input.is-black.is-active,\n    .v-textarea.is-black:focus,\n    .v-textarea.is-black.is-focused,\n    .v-textarea.is-black:active,\n    .v-textarea.is-black.is-active {\n      box-shadow: 0 0 0 0.125em rgba(10, 10, 10, 0.25);\n}\n.v-input.is-light,\n  .v-textarea.is-light {\n    border-color: whitesmoke;\n}\n.v-input.is-light:focus, .v-input.is-light.is-focused, .v-input.is-light:active, .v-input.is-light.is-active,\n    .v-textarea.is-light:focus,\n    .v-textarea.is-light.is-focused,\n    .v-textarea.is-light:active,\n    .v-textarea.is-light.is-active {\n      box-shadow: 0 0 0 0.125em rgba(245, 245, 245, 0.25);\n}\n.v-input.is-dark,\n  .v-textarea.is-dark {\n    border-color: #363636;\n}\n.v-input.is-dark:focus, .v-input.is-dark.is-focused, .v-input.is-dark:active, .v-input.is-dark.is-active,\n    .v-textarea.is-dark:focus,\n    .v-textarea.is-dark.is-focused,\n    .v-textarea.is-dark:active,\n    .v-textarea.is-dark.is-active {\n      box-shadow: 0 0 0 0.125em rgba(54, 54, 54, 0.25);\n}\n.v-input.is-primary,\n  .v-textarea.is-primary {\n    border-color: #1ca0f2;\n}\n.v-input.is-primary:focus, .v-input.is-primary.is-focused, .v-input.is-primary:active, .v-input.is-primary.is-active,\n    .v-textarea.is-primary:focus,\n    .v-textarea.is-primary.is-focused,\n    .v-textarea.is-primary:active,\n    .v-textarea.is-primary.is-active {\n      box-shadow: 0 0 0 0.125em rgba(28, 160, 242, 0.25);\n}\n.v-input.is-info,\n  .v-textarea.is-info {\n    border-color: #b86bff;\n}\n.v-input.is-info:focus, .v-input.is-info.is-focused, .v-input.is-info:active, .v-input.is-info.is-active,\n    .v-textarea.is-info:focus,\n    .v-textarea.is-info.is-focused,\n    .v-textarea.is-info:active,\n    .v-textarea.is-info.is-active {\n      box-shadow: 0 0 0 0.125em rgba(184, 107, 255, 0.25);\n}\n.v-input.is-success,\n  .v-textarea.is-success {\n    border-color: #23d160;\n}\n.v-input.is-success:focus, .v-input.is-success.is-focused, .v-input.is-success:active, .v-input.is-success.is-active,\n    .v-textarea.is-success:focus,\n    .v-textarea.is-success.is-focused,\n    .v-textarea.is-success:active,\n    .v-textarea.is-success.is-active {\n      box-shadow: 0 0 0 0.125em rgba(35, 209, 96, 0.25);\n}\n.v-input.is-warning,\n  .v-textarea.is-warning {\n    border-color: #ffdd57;\n}\n.v-input.is-warning:focus, .v-input.is-warning.is-focused, .v-input.is-warning:active, .v-input.is-warning.is-active,\n    .v-textarea.is-warning:focus,\n    .v-textarea.is-warning.is-focused,\n    .v-textarea.is-warning:active,\n    .v-textarea.is-warning.is-active {\n      box-shadow: 0 0 0 0.125em rgba(255, 221, 87, 0.25);\n}\n.v-input.is-danger,\n  .v-textarea.is-danger {\n    border-color: #ff3860;\n}\n.v-input.is-danger:focus, .v-input.is-danger.is-focused, .v-input.is-danger:active, .v-input.is-danger.is-active,\n    .v-textarea.is-danger:focus,\n    .v-textarea.is-danger.is-focused,\n    .v-textarea.is-danger:active,\n    .v-textarea.is-danger.is-active {\n      box-shadow: 0 0 0 0.125em rgba(255, 56, 96, 0.25);\n}\n.v-input.is-small,\n  .v-textarea.is-small {\n    border-radius: 2px;\n    font-size: 0.75rem;\n}\n.v-input.is-medium,\n  .v-textarea.is-medium {\n    font-size: 1.25rem;\n}\n.v-input.is-large,\n  .v-textarea.is-large {\n    font-size: 1.5rem;\n}\n.v-input.is-fullwidth,\n  .v-textarea.is-fullwidth {\n    display: block;\n    width: 100%;\n}\n.v-input.is-inline,\n  .v-textarea.is-inline {\n    display: inline;\n    width: auto;\n}\n.v-select {\n  display: inline-block;\n  max-width: 100%;\n  position: relative;\n  vertical-align: top;\n  box-sizing: border-box;\n}\n.v-select:not(.is-multiple) {\n    height: 2.25em;\n}\n.v-select:not(.is-multiple)::after {\n      border: 1px solid #1ca0f2;\n      border-right: 0;\n      border-top: 0;\n      content: \" \";\n      display: block;\n      height: 0.5em;\n      pointer-events: none;\n      position: absolute;\n      -webkit-transform: rotate(-45deg);\n              transform: rotate(-45deg);\n      width: 0.5em;\n      margin-top: -0.375em;\n      right: 1.125em;\n      top: 50%;\n      z-index: 4;\n}\n.v-select select {\n    -moz-appearance: none;\n    -webkit-appearance: none;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    border: 1px solid transparent;\n    border-radius: 3px;\n    box-shadow: none;\n    display: -webkit-inline-box;\n    display: -ms-inline-flexbox;\n    display: inline-flex;\n    font-size: 1rem;\n    height: 2.25em;\n    -webkit-box-pack: start;\n        -ms-flex-pack: start;\n            justify-content: flex-start;\n    line-height: 1.5;\n    padding: calc(0.375em - 1px) calc(0.625em - 1px);\n    position: relative;\n    vertical-align: top;\n    background-color: white;\n    border-color: #dbdbdb;\n    color: #363636;\n    cursor: pointer;\n    display: block;\n    font-size: 1em;\n    max-width: 100%;\n    outline: none;\n}\n.v-select select:focus, .v-select select.is-focused, .v-select select:active, .v-select select.is-active {\n      outline: none;\n}\n.v-select select[disabled] {\n      cursor: not-allowed;\n}\n.v-select select:hover, .v-select select.is-hovered {\n      border-color: #b5b5b5;\n}\n.v-select select:focus, .v-select select.is-focused, .v-select select:active, .v-select select.is-active {\n      border-color: #1ca0f2;\n      box-shadow: 0 0 0 0.125em rgba(28, 160, 242, 0.25);\n}\n.v-select select[disabled] {\n      background-color: whitesmoke;\n      border-color: whitesmoke;\n      box-shadow: none;\n      color: #7a7a7a;\n}\n.v-select select[disabled]::-moz-placeholder {\n        color: rgba(122, 122, 122, 0.3);\n}\n.v-select select[disabled]::-webkit-input-placeholder {\n        color: rgba(122, 122, 122, 0.3);\n}\n.v-select select[disabled]:-moz-placeholder {\n        color: rgba(122, 122, 122, 0.3);\n}\n.v-select select[disabled]:-ms-input-placeholder {\n        color: rgba(122, 122, 122, 0.3);\n}\n.v-select select::-ms-expand {\n      display: none;\n}\n.v-select select[disabled]:hover {\n      border-color: whitesmoke;\n}\n.v-select select:not([multiple]) {\n      padding-right: 2.5em;\n}\n.v-select select[multiple] {\n      height: unset;\n      padding: 0;\n}\n.v-select select[multiple] option {\n        padding: 0.5em 1em;\n}\n.v-select:hover::after {\n    border-color: #363636;\n}\n.v-select.is-white select {\n    border-color: white;\n}\n.v-select.is-white select:focus, .v-select.is-white select.is-focused, .v-select.is-white select:active, .v-select.is-white select.is-active {\n      box-shadow: 0 0 0 0.125em rgba(255, 255, 255, 0.25);\n}\n.v-select.is-black select {\n    border-color: #0a0a0a;\n}\n.v-select.is-black select:focus, .v-select.is-black select.is-focused, .v-select.is-black select:active, .v-select.is-black select.is-active {\n      box-shadow: 0 0 0 0.125em rgba(10, 10, 10, 0.25);\n}\n.v-select.is-light select {\n    border-color: whitesmoke;\n}\n.v-select.is-light select:focus, .v-select.is-light select.is-focused, .v-select.is-light select:active, .v-select.is-light select.is-active {\n      box-shadow: 0 0 0 0.125em rgba(245, 245, 245, 0.25);\n}\n.v-select.is-dark select {\n    border-color: #363636;\n}\n.v-select.is-dark select:focus, .v-select.is-dark select.is-focused, .v-select.is-dark select:active, .v-select.is-dark select.is-active {\n      box-shadow: 0 0 0 0.125em rgba(54, 54, 54, 0.25);\n}\n.v-select.is-primary select {\n    border-color: #1ca0f2;\n}\n.v-select.is-primary select:focus, .v-select.is-primary select.is-focused, .v-select.is-primary select:active, .v-select.is-primary select.is-active {\n      box-shadow: 0 0 0 0.125em rgba(28, 160, 242, 0.25);\n}\n.v-select.is-info select {\n    border-color: #b86bff;\n}\n.v-select.is-info select:focus, .v-select.is-info select.is-focused, .v-select.is-info select:active, .v-select.is-info select.is-active {\n      box-shadow: 0 0 0 0.125em rgba(184, 107, 255, 0.25);\n}\n.v-select.is-success select {\n    border-color: #23d160;\n}\n.v-select.is-success select:focus, .v-select.is-success select.is-focused, .v-select.is-success select:active, .v-select.is-success select.is-active {\n      box-shadow: 0 0 0 0.125em rgba(35, 209, 96, 0.25);\n}\n.v-select.is-warning select {\n    border-color: #ffdd57;\n}\n.v-select.is-warning select:focus, .v-select.is-warning select.is-focused, .v-select.is-warning select:active, .v-select.is-warning select.is-active {\n      box-shadow: 0 0 0 0.125em rgba(255, 221, 87, 0.25);\n}\n.v-select.is-danger select {\n    border-color: #ff3860;\n}\n.v-select.is-danger select:focus, .v-select.is-danger select.is-focused, .v-select.is-danger select:active, .v-select.is-danger select.is-active {\n      box-shadow: 0 0 0 0.125em rgba(255, 56, 96, 0.25);\n}\n.v-select.is-small {\n    border-radius: 2px;\n    font-size: 0.75rem;\n}\n.v-select.is-medium {\n    font-size: 1.25rem;\n}\n.v-select.is-large {\n    font-size: 1.5rem;\n}\n.v-select.is-disabled::after {\n    border-color: #7a7a7a;\n}\n.v-select.is-fullwidth {\n    width: 100%;\n}\n.v-select.is-fullwidth select {\n      width: 100%;\n}\n.v-select.is-loading::after {\n    -webkit-animation: v-kf-spin-around 500ms infinite linear;\n            animation: v-kf-spin-around 500ms infinite linear;\n    border: 2px solid #dbdbdb;\n    border-radius: 290486px;\n    border-right-color: transparent;\n    border-top-color: transparent;\n    content: \"\";\n    display: block;\n    box-sizing: border-box;\n    height: 1em;\n    width: 1em;\n    position: relative;\n    margin-top: 0;\n    position: absolute;\n    right: 0.625em;\n    top: 0.625em;\n    -webkit-transform: none;\n            transform: none;\n}\n.v-select.is-loading.is-small:after {\n    font-size: 0.75rem;\n}\n.v-select.is-loading.is-medium:after {\n    font-size: 1.25rem;\n}\n.v-select.is-loading.is-large:after {\n    font-size: 1.5rem;\n}\n.v-textarea {\n  display: block;\n  max-width: 100%;\n  min-width: 100%;\n  padding: 0.625em;\n  resize: vertical;\n}\n.v-textarea:not([rows]) {\n    max-height: 600px;\n    min-height: 120px;\n}\n.v-textarea[rows] {\n    height: unset;\n}\n.v-textarea.has-fixed-size {\n    resize: none;\n}\n.v-checkbox,\n.v-radio {\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  cursor: pointer;\n  display: inline-block;\n  line-height: 1.25;\n  position: relative;\n}\n.v-checkbox input,\n  .v-radio input {\n    cursor: pointer;\n}\n.v-checkbox:hover,\n  .v-radio:hover {\n    color: #363636;\n}\n.v-checkbox[disabled],\n  .v-radio[disabled] {\n    color: #7a7a7a;\n    cursor: not-allowed;\n}\n.v-radio + .v-radio {\n  margin-left: 1em;\n}\n.v-label {\n  color: #363636;\n  display: block;\n  font-size: 1rem;\n  font-weight: 700;\n  line-height: 1.5em;\n}\n.v-label:not(:last-child) {\n    margin-bottom: 0.5em;\n}\n.v-label.is-small {\n    font-size: 0.75rem;\n}\n.v-label.is-medium {\n    font-size: 1.25rem;\n}\n.v-label.is-large {\n    font-size: 1.5rem;\n}\n.v-help {\n  display: block;\n  font-size: 0.75rem;\n  margin-top: 0.25rem;\n}\n.v-help.is-white {\n    color: white;\n}\n.v-help.is-black {\n    color: #0a0a0a;\n}\n.v-help.is-light {\n    color: whitesmoke;\n}\n.v-help.is-dark {\n    color: #363636;\n}\n.v-help.is-primary {\n    color: #1ca0f2;\n}\n.v-help.is-info {\n    color: #b86bff;\n}\n.v-help.is-success {\n    color: #23d160;\n}\n.v-help.is-warning {\n    color: #ffdd57;\n}\n.v-help.is-danger {\n    color: #ff3860;\n}\n.v-content:not(:last-child) {\n  margin-bottom: 1.5rem;\n}\n.v-content li + li {\n  margin-top: 0.25em;\n}\n.v-content p:not(:last-child),\n.v-content dl:not(:last-child),\n.v-content ol:not(:last-child),\n.v-content ul:not(:last-child),\n.v-content blockquote:not(:last-child),\n.v-content pre:not(:last-child),\n.v-content table:not(:last-child) {\n  margin-bottom: 1em;\n}\n.v-content h1,\n.v-content h2,\n.v-content h3,\n.v-content h4,\n.v-content h5,\n.v-content h6 {\n  color: #363636;\n  font-weight: 400;\n  line-height: 1.125;\n}\n.v-content h1 {\n  font-size: 2em;\n  margin-bottom: 0.5em;\n}\n.v-content h1:not(:first-child) {\n    margin-top: 1em;\n}\n.v-content h2 {\n  font-size: 1.75em;\n  margin-bottom: 0.5714em;\n}\n.v-content h2:not(:first-child) {\n    margin-top: 1.1428em;\n}\n.v-content h3 {\n  font-size: 1.5em;\n  margin-bottom: 0.6666em;\n}\n.v-content h3:not(:first-child) {\n    margin-top: 1.3333em;\n}\n.v-content h4 {\n  font-size: 1.25em;\n  margin-bottom: 0.8em;\n}\n.v-content h5 {\n  font-size: 1.125em;\n  margin-bottom: 0.8888em;\n}\n.v-content h6 {\n  font-size: 1em;\n  margin-bottom: 1em;\n}\n.v-content blockquote {\n  background-color: whitesmoke;\n  border-left: 5px solid #dbdbdb;\n  padding: 1.25em 1.5em;\n}\n.v-content ol {\n  list-style: decimal outside;\n  margin-left: 2em;\n  margin-top: 1em;\n}\n.v-content ul {\n  list-style: disc outside;\n  margin-left: 2em;\n  margin-top: 1em;\n}\n.v-content ul ul {\n    list-style-type: circle;\n    margin-top: 0.5em;\n}\n.v-content ul ul ul {\n      list-style-type: square;\n}\n.v-content dd {\n  margin-left: 2em;\n}\n.v-content figure {\n  margin-left: 2em;\n  margin-right: 2em;\n  text-align: center;\n}\n.v-content figure:not(:first-child) {\n    margin-top: 2em;\n}\n.v-content figure:not(:last-child) {\n    margin-bottom: 2em;\n}\n.v-content figure img {\n    display: inline-block;\n}\n.v-content figure figcaption {\n    font-style: italic;\n}\n.v-content pre {\n  -webkit-overflow-scrolling: touch;\n  overflow-x: auto;\n  padding: 1.25em 1.5em;\n  white-space: pre;\n  word-wrap: normal;\n}\n.v-content sup,\n.v-content sub {\n  font-size: 75%;\n}\n.v-content table {\n  width: 100%;\n}\n.v-content table td,\n  .v-content table th {\n    border: 1px solid #dbdbdb;\n    border-width: 0 0 1px;\n    padding: 0.5em 0.75em;\n    vertical-align: top;\n}\n.v-content table th {\n    color: #363636;\n    text-align: left;\n}\n.v-content table tr:hover {\n    background-color: whitesmoke;\n}\n.v-content table thead td,\n  .v-content table thead th {\n    border-width: 0 0 2px;\n    color: #363636;\n}\n.v-content table tfoot td,\n  .v-content table tfoot th {\n    border-width: 2px 0 0;\n    color: #363636;\n}\n.v-content table tbody tr:last-child td,\n  .v-content table tbody tr:last-child th {\n    border-bottom-width: 0;\n}\n.v-content.is-small {\n  font-size: 0.75rem;\n}\n.v-content.is-medium {\n  font-size: 1.25rem;\n}\n.v-content.is-large {\n  font-size: 1.5rem;\n}\n.v-media {\n  -webkit-box-align: start;\n      -ms-flex-align: start;\n          align-items: flex-start;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  text-align: left;\n}\n.v-media .v-content:not(:last-child) {\n    margin-bottom: 0.75rem;\n}\n.v-media .v-media {\n    border-top: 1px solid rgba(219, 219, 219, 0.5);\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    padding-top: 0.75rem;\n}\n.v-media .v-media .v-content:not(:last-child),\n    .v-media .v-media .v-control:not(:last-child) {\n      margin-bottom: 0.5rem;\n}\n.v-media .v-media .v-media {\n      padding-top: 0.5rem;\n}\n.v-media .v-media .v-media + .v-media {\n        margin-top: 0.5rem;\n}\n.v-media + .v-media {\n    border-top: 1px solid rgba(219, 219, 219, 0.5);\n    margin-top: 1rem;\n    padding-top: 1rem;\n}\n.v-media.is-large + .v-media {\n    margin-top: 1.5rem;\n    padding-top: 1.5rem;\n}\n.v-media-left,\n.v-media-right {\n  -ms-flex-preferred-size: auto;\n      flex-basis: auto;\n  -webkit-box-flex: 0;\n      -ms-flex-positive: 0;\n          flex-grow: 0;\n  -ms-flex-negative: 0;\n      flex-shrink: 0;\n}\n.v-media-left {\n  margin-right: 1rem;\n}\n.v-media-right {\n  margin-left: 1rem;\n}\n.v-media-content {\n  -ms-flex-preferred-size: auto;\n      flex-basis: auto;\n  -webkit-box-flex: 1;\n      -ms-flex-positive: 1;\n          flex-grow: 1;\n  -ms-flex-negative: 1;\n      flex-shrink: 1;\n  text-align: left;\n}\n.v-box {\n  background-color: white;\n  border-radius: 5px;\n  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);\n  color: #4a4a4a;\n  display: block;\n  padding: 1.25rem;\n}\n.v-box:not(:last-child) {\n    margin-bottom: 1.5rem;\n}\na.v-box:hover, a.v-box:focus {\n  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px #1ca0f2;\n}\na.v-box:active {\n  box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.2), 0 0 0 1px #1ca0f2;\n}\n.v-content:not(:last-child) {\n  margin-bottom: 1.5rem;\n}\n.v-content li + li {\n  margin-top: 0.25em;\n}\n.v-content p:not(:last-child),\n.v-content dl:not(:last-child),\n.v-content ol:not(:last-child),\n.v-content ul:not(:last-child),\n.v-content blockquote:not(:last-child),\n.v-content pre:not(:last-child),\n.v-content table:not(:last-child) {\n  margin-bottom: 1em;\n}\n.v-content h1,\n.v-content h2,\n.v-content h3,\n.v-content h4,\n.v-content h5,\n.v-content h6 {\n  color: #363636;\n  font-weight: 400;\n  line-height: 1.125;\n}\n.v-content h1 {\n  font-size: 2em;\n  margin-bottom: 0.5em;\n}\n.v-content h1:not(:first-child) {\n    margin-top: 1em;\n}\n.v-content h2 {\n  font-size: 1.75em;\n  margin-bottom: 0.5714em;\n}\n.v-content h2:not(:first-child) {\n    margin-top: 1.1428em;\n}\n.v-content h3 {\n  font-size: 1.5em;\n  margin-bottom: 0.6666em;\n}\n.v-content h3:not(:first-child) {\n    margin-top: 1.3333em;\n}\n.v-content h4 {\n  font-size: 1.25em;\n  margin-bottom: 0.8em;\n}\n.v-content h5 {\n  font-size: 1.125em;\n  margin-bottom: 0.8888em;\n}\n.v-content h6 {\n  font-size: 1em;\n  margin-bottom: 1em;\n}\n.v-content blockquote {\n  background-color: whitesmoke;\n  border-left: 5px solid #dbdbdb;\n  padding: 1.25em 1.5em;\n}\n.v-content ol {\n  list-style: decimal outside;\n  margin-left: 2em;\n  margin-top: 1em;\n}\n.v-content ul {\n  list-style: disc outside;\n  margin-left: 2em;\n  margin-top: 1em;\n}\n.v-content ul ul {\n    list-style-type: circle;\n    margin-top: 0.5em;\n}\n.v-content ul ul ul {\n      list-style-type: square;\n}\n.v-content dd {\n  margin-left: 2em;\n}\n.v-content figure {\n  margin-left: 2em;\n  margin-right: 2em;\n  text-align: center;\n}\n.v-content figure:not(:first-child) {\n    margin-top: 2em;\n}\n.v-content figure:not(:last-child) {\n    margin-bottom: 2em;\n}\n.v-content figure img {\n    display: inline-block;\n}\n.v-content figure figcaption {\n    font-style: italic;\n}\n.v-content pre {\n  -webkit-overflow-scrolling: touch;\n  overflow-x: auto;\n  padding: 1.25em 1.5em;\n  white-space: pre;\n  word-wrap: normal;\n}\n.v-content sup,\n.v-content sub {\n  font-size: 75%;\n}\n.v-content table {\n  width: 100%;\n}\n.v-content table td,\n  .v-content table th {\n    border: 1px solid #dbdbdb;\n    border-width: 0 0 1px;\n    padding: 0.5em 0.75em;\n    vertical-align: top;\n}\n.v-content table th {\n    color: #363636;\n    text-align: left;\n}\n.v-content table tr:hover {\n    background-color: whitesmoke;\n}\n.v-content table thead td,\n  .v-content table thead th {\n    border-width: 0 0 2px;\n    color: #363636;\n}\n.v-content table tfoot td,\n  .v-content table tfoot th {\n    border-width: 2px 0 0;\n    color: #363636;\n}\n.v-content table tbody tr:last-child td,\n  .v-content table tbody tr:last-child th {\n    border-bottom-width: 0;\n}\n.v-content.is-small {\n  font-size: 0.75rem;\n}\n.v-content.is-medium {\n  font-size: 1.25rem;\n}\n.v-content.is-large {\n  font-size: 1.5rem;\n}\n.v-notification {\n  background-color: whitesmoke;\n  border-radius: 3px;\n  padding: 1.25rem 2.5rem 1.25rem 1.5rem;\n  position: relative;\n}\n.v-notification:not(:last-child) {\n    margin-bottom: 1.5rem;\n}\n.v-notification a:not(.button) {\n    color: currentColor;\n    text-decoration: underline;\n}\n.v-notification strong {\n    color: currentColor;\n}\n.v-notification code,\n  .v-notification pre {\n    background: white;\n}\n.v-notification pre code {\n    background: transparent;\n}\n.v-notification > .v-close {\n    position: absolute;\n    right: 0.5em;\n    top: 0.5em;\n}\n.v-notification .v-title,\n  .v-notification .v-subtitle,\n  .v-notification .v-content {\n    color: currentColor;\n}\n.v-notification.is-white {\n    background-color: white;\n    color: #0a0a0a;\n}\n.v-notification.is-black {\n    background-color: #0a0a0a;\n    color: white;\n}\n.v-notification.is-light {\n    background-color: whitesmoke;\n    color: #363636;\n}\n.v-notification.is-dark {\n    background-color: #363636;\n    color: whitesmoke;\n}\n.v-notification.is-primary {\n    background-color: #1ca0f2;\n    color: #fff;\n}\n.v-notification.is-info {\n    background-color: #b86bff;\n    color: #fff;\n}\n.v-notification.is-success {\n    background-color: #23d160;\n    color: #fff;\n}\n.v-notification.is-warning {\n    background-color: #ffdd57;\n    color: rgba(0, 0, 0, 0.7);\n}\n.v-notification.is-danger {\n    background-color: #ff3860;\n    color: #fff;\n}\n.v-notification-popup {\n  position: fixed;\n  right: 16px;\n  box-shadow: 0 0 3px rgba(0, 0, 0, 0.04), 0 1px 4px rgba(0, 0, 0, 0.15);\n  transition: opacity 0.3s, right .3s, top 0.4s, -webkit-transform .3s;\n  transition: opacity 0.3s, transform .3s, right .3s, top 0.4s;\n  transition: opacity 0.3s, transform .3s, right .3s, top 0.4s, -webkit-transform .3s;\n  overflow: hidden;\n  z-index: 1010;\n  max-width: 480px;\n}\n.v-notification-popup > .v-notification {\n    padding-top: 1rem;\n}\n.v-notification-popup .has-title {\n    padding: 0;\n    margin: 0;\n    font-size: 1.25rem;\n}\n.v-notification-popup .has-content {\n    padding-top: 0.25rem;\n}\n.v-table {\n  width: 100%;\n  border-spacing: 0;\n  border-collapse: collapse;\n  display: table;\n  cursor: default;\n  color: #363636;\n  margin-bottom: 1.5rem;\n}\n.v-table th, .v-table td {\n    border: 0;\n}\n.v-table th {\n    text-align: left;\n    font-weight: bold;\n}\n.v-table td,\n  .v-table th {\n    border: 1px solid #dbdbdb;\n    border-width: 0 0 1px;\n    padding: 0.65em 0.75em;\n    vertical-align: top;\n}\n.v-table td.is-white,\n    .v-table th.is-white {\n      background-color: white;\n      border-color: white;\n      color: #0a0a0a;\n}\n.v-table td.is-black,\n    .v-table th.is-black {\n      background-color: #0a0a0a;\n      border-color: #0a0a0a;\n      color: white;\n}\n.v-table td.is-light,\n    .v-table th.is-light {\n      background-color: whitesmoke;\n      border-color: whitesmoke;\n      color: #363636;\n}\n.v-table td.is-dark,\n    .v-table th.is-dark {\n      background-color: #363636;\n      border-color: #363636;\n      color: whitesmoke;\n}\n.v-table td.is-primary,\n    .v-table th.is-primary {\n      background-color: #1ca0f2;\n      border-color: #1ca0f2;\n      color: #fff;\n}\n.v-table td.is-info,\n    .v-table th.is-info {\n      background-color: #b86bff;\n      border-color: #b86bff;\n      color: #fff;\n}\n.v-table td.is-success,\n    .v-table th.is-success {\n      background-color: #23d160;\n      border-color: #23d160;\n      color: #fff;\n}\n.v-table td.is-warning,\n    .v-table th.is-warning {\n      background-color: #ffdd57;\n      border-color: #ffdd57;\n      color: rgba(0, 0, 0, 0.7);\n}\n.v-table td.is-danger,\n    .v-table th.is-danger {\n      background-color: #ff3860;\n      border-color: #ff3860;\n      color: #fff;\n}\n.v-table td.is-narrow,\n    .v-table th.is-narrow {\n      white-space: nowrap;\n      width: 1%;\n}\n.v-table th {\n    color: #363636;\n    text-align: left;\n    background-color: #ededed;\n}\n.v-table tr:hover {\n    background-color: #fafafa;\n}\n.v-table tr.is-selected {\n    background-color: #1ca0f2;\n    color: #fff;\n}\n.v-table tr.is-selected a,\n    .v-table tr.is-selected strong {\n      color: currentColor;\n}\n.v-table tr.is-selected td,\n    .v-table tr.is-selected th {\n      border-color: #fff;\n      color: currentColor;\n}\n.v-table thead td,\n  .v-table thead th {\n    border-width: 0 0 2px;\n    color: #363636;\n}\n.v-table tfoot td,\n  .v-table tfoot th {\n    border-width: 2px 0 0;\n    color: #363636;\n}\n.v-table tbody tr:last-child td,\n  .v-table tbody tr:last-child th {\n    border-bottom-width: 0;\n}\n.v-table.is-bordered td,\n  .v-table.is-bordered th {\n    border-width: 1px;\n}\n.v-table.is-bordered tr:last-child td,\n  .v-table.is-bordered tr:last-child th {\n    border-bottom-width: 1px;\n}\n.v-table.is-fit-content {\n    width: auto;\n}\n.v-table.is-narrow td,\n  .v-table.is-narrow th {\n    padding: 0.25em 0.5em;\n}\n.v-table.is-striped tbody tr:not(.is-selected):nth-child(even) {\n    background-color: #fafafa;\n}\n.v-table.is-striped tbody tr:not(.is-selected):nth-child(even):hover {\n      background-color: whitesmoke;\n}\n.v-badge {\n  position: relative;\n  display: inline-block;\n  line-height: 1;\n  vertical-align: middle;\n}\n.v-badge .has-badge {\n    width: 42px;\n    height: 42px;\n    background: #eee;\n    border-radius: 6px;\n    display: inline-block;\n}\n.v-badge .has-badge-dot, .v-badge .has-badge-count {\n    position: absolute;\n    -webkit-transform: translateX(-50%);\n            transform: translateX(-50%);\n    -webkit-transform-origin: 0 center;\n            transform-origin: 0 center;\n    top: -4px;\n    right: -8px;\n    height: 8px;\n    min-width: 8px;\n    border-radius: 100%;\n    background: #ed3f14;\n    z-index: 10;\n    box-shadow: 0 0 0 1px white;\n}\n.v-badge .has-badge-count {\n    -webkit-transform: translateX(50%);\n            transform: translateX(50%);\n    top: -10px;\n    right: 0;\n    height: 20px;\n    border-radius: 10px;\n    min-width: 20px;\n    background: #ed3f14;\n    border: 1px solid transparent;\n    color: white;\n    line-height: 18px;\n    text-align: center;\n    padding: 0 6px;\n    font-size: 12px;\n    white-space: nowrap;\n    -webkit-transform-origin: -10% center;\n            transform-origin: -10% center;\n    z-index: 10;\n    box-sizing: border-box;\n    box-shadow: 0 0 0 1px white;\n}\n.v-close {\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  -moz-appearance: none;\n  -webkit-appearance: none;\n  background-color: rgba(10, 10, 10, 0.2);\n  border: none;\n  border-radius: 290486px;\n  cursor: pointer;\n  display: inline-block;\n  -webkit-box-flex: 0;\n      -ms-flex-positive: 0;\n          flex-grow: 0;\n  -ms-flex-negative: 0;\n      flex-shrink: 0;\n  font-size: 1rem;\n  height: 20px;\n  max-height: 20px;\n  max-width: 20px;\n  min-height: 20px;\n  min-width: 20px;\n  outline: none;\n  position: relative;\n  vertical-align: top;\n  width: 20px;\n}\n.v-close:before, .v-close:after {\n    background-color: white;\n    content: \"\";\n    display: block;\n    left: 50%;\n    position: absolute;\n    top: 50%;\n    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);\n            transform: translateX(-50%) translateY(-50%) rotate(45deg);\n    -webkit-transform-origin: center center;\n            transform-origin: center center;\n}\n.v-close:before {\n    height: 2px;\n    width: 50%;\n}\n.v-close:after {\n    height: 50%;\n    width: 2px;\n}\n.v-close:hover, .v-close:focus {\n    background-color: rgba(10, 10, 10, 0.3);\n}\n.v-close:active {\n    background-color: rgba(10, 10, 10, 0.4);\n}\n.v-close.is-white {\n    background-color: rgba(255, 255, 255, 0.4);\n}\n.v-close.is-white:hover, .v-close.is-white:focus {\n      background-color: rgba(255, 255, 255, 0.6);\n}\n.v-close.is-white:active {\n      background-color: rgba(255, 255, 255, 0.9);\n}\n.v-close.is-black {\n    background-color: rgba(10, 10, 10, 0.4);\n}\n.v-close.is-black:hover, .v-close.is-black:focus {\n      background-color: rgba(10, 10, 10, 0.6);\n}\n.v-close.is-black:active {\n      background-color: rgba(10, 10, 10, 0.9);\n}\n.v-close.is-light {\n    background-color: rgba(245, 245, 245, 0.4);\n}\n.v-close.is-light:hover, .v-close.is-light:focus {\n      background-color: rgba(245, 245, 245, 0.6);\n}\n.v-close.is-light:active {\n      background-color: rgba(245, 245, 245, 0.9);\n}\n.v-close.is-dark {\n    background-color: rgba(54, 54, 54, 0.4);\n}\n.v-close.is-dark:hover, .v-close.is-dark:focus {\n      background-color: rgba(54, 54, 54, 0.6);\n}\n.v-close.is-dark:active {\n      background-color: rgba(54, 54, 54, 0.9);\n}\n.v-close.is-primary {\n    background-color: rgba(28, 160, 242, 0.4);\n}\n.v-close.is-primary:hover, .v-close.is-primary:focus {\n      background-color: rgba(28, 160, 242, 0.6);\n}\n.v-close.is-primary:active {\n      background-color: rgba(28, 160, 242, 0.9);\n}\n.v-close.is-info {\n    background-color: rgba(184, 107, 255, 0.4);\n}\n.v-close.is-info:hover, .v-close.is-info:focus {\n      background-color: rgba(184, 107, 255, 0.6);\n}\n.v-close.is-info:active {\n      background-color: rgba(184, 107, 255, 0.9);\n}\n.v-close.is-success {\n    background-color: rgba(35, 209, 96, 0.4);\n}\n.v-close.is-success:hover, .v-close.is-success:focus {\n      background-color: rgba(35, 209, 96, 0.6);\n}\n.v-close.is-success:active {\n      background-color: rgba(35, 209, 96, 0.9);\n}\n.v-close.is-warning {\n    background-color: rgba(255, 221, 87, 0.4);\n}\n.v-close.is-warning:hover, .v-close.is-warning:focus {\n      background-color: rgba(255, 221, 87, 0.6);\n}\n.v-close.is-warning:active {\n      background-color: rgba(255, 221, 87, 0.9);\n}\n.v-close.is-danger {\n    background-color: rgba(255, 56, 96, 0.4);\n}\n.v-close.is-danger:hover, .v-close.is-danger:focus {\n      background-color: rgba(255, 56, 96, 0.6);\n}\n.v-close.is-danger:active {\n      background-color: rgba(255, 56, 96, 0.9);\n}\n.v-close.is-small {\n    height: 16px;\n    max-height: 16px;\n    max-width: 16px;\n    min-height: 16px;\n    min-width: 16px;\n    width: 16px;\n}\n.v-close.is-medium {\n    height: 24px;\n    max-height: 24px;\n    max-width: 24px;\n    min-height: 24px;\n    min-width: 24px;\n    width: 24px;\n}\n.v-close.is-large {\n    height: 32px;\n    max-height: 32px;\n    max-width: 32px;\n    min-height: 32px;\n    min-width: 32px;\n    width: 32px;\n}\n.v-close.is-transparent {\n    background-color: transparent !important;\n}\n.v-close.is-transparent:before, .v-close.is-transparent:after {\n      background-color: rgba(10, 10, 10, 0.6);\n}\n.v-close.is-transparent:hover::before, .v-close.is-transparent:hover::after, .v-close.is-transparent:focus::before, .v-close.is-transparent:focus::after {\n      background-color: rgba(10, 10, 10, 0.8);\n}\n.v-close.is-transparent:active::before, .v-close.is-transparent:active::after {\n      background-color: #0a0a0a;\n}\n.v-close.is-transparent.is-white::before, .v-close.is-transparent.is-white::after {\n      background-color: rgba(255, 255, 255, 0.6);\n}\n.v-close.is-transparent.is-white:hover::before, .v-close.is-transparent.is-white:hover::after, .v-close.is-transparent.is-white:focus::before, .v-close.is-transparent.is-white:focus::after {\n      background-color: rgba(255, 255, 255, 0.8);\n}\n.v-close.is-transparent.is-white:active::before, .v-close.is-transparent.is-white:active::after {\n      background-color: white;\n}\n.v-close.is-transparent.is-black::before, .v-close.is-transparent.is-black::after {\n      background-color: rgba(10, 10, 10, 0.6);\n}\n.v-close.is-transparent.is-black:hover::before, .v-close.is-transparent.is-black:hover::after, .v-close.is-transparent.is-black:focus::before, .v-close.is-transparent.is-black:focus::after {\n      background-color: rgba(10, 10, 10, 0.8);\n}\n.v-close.is-transparent.is-black:active::before, .v-close.is-transparent.is-black:active::after {\n      background-color: #0a0a0a;\n}\n.v-close.is-transparent.is-light::before, .v-close.is-transparent.is-light::after {\n      background-color: rgba(245, 245, 245, 0.6);\n}\n.v-close.is-transparent.is-light:hover::before, .v-close.is-transparent.is-light:hover::after, .v-close.is-transparent.is-light:focus::before, .v-close.is-transparent.is-light:focus::after {\n      background-color: rgba(245, 245, 245, 0.8);\n}\n.v-close.is-transparent.is-light:active::before, .v-close.is-transparent.is-light:active::after {\n      background-color: whitesmoke;\n}\n.v-close.is-transparent.is-dark::before, .v-close.is-transparent.is-dark::after {\n      background-color: rgba(54, 54, 54, 0.6);\n}\n.v-close.is-transparent.is-dark:hover::before, .v-close.is-transparent.is-dark:hover::after, .v-close.is-transparent.is-dark:focus::before, .v-close.is-transparent.is-dark:focus::after {\n      background-color: rgba(54, 54, 54, 0.8);\n}\n.v-close.is-transparent.is-dark:active::before, .v-close.is-transparent.is-dark:active::after {\n      background-color: #363636;\n}\n.v-close.is-transparent.is-primary::before, .v-close.is-transparent.is-primary::after {\n      background-color: rgba(28, 160, 242, 0.6);\n}\n.v-close.is-transparent.is-primary:hover::before, .v-close.is-transparent.is-primary:hover::after, .v-close.is-transparent.is-primary:focus::before, .v-close.is-transparent.is-primary:focus::after {\n      background-color: rgba(28, 160, 242, 0.8);\n}\n.v-close.is-transparent.is-primary:active::before, .v-close.is-transparent.is-primary:active::after {\n      background-color: #1ca0f2;\n}\n.v-close.is-transparent.is-info::before, .v-close.is-transparent.is-info::after {\n      background-color: rgba(184, 107, 255, 0.6);\n}\n.v-close.is-transparent.is-info:hover::before, .v-close.is-transparent.is-info:hover::after, .v-close.is-transparent.is-info:focus::before, .v-close.is-transparent.is-info:focus::after {\n      background-color: rgba(184, 107, 255, 0.8);\n}\n.v-close.is-transparent.is-info:active::before, .v-close.is-transparent.is-info:active::after {\n      background-color: #b86bff;\n}\n.v-close.is-transparent.is-success::before, .v-close.is-transparent.is-success::after {\n      background-color: rgba(35, 209, 96, 0.6);\n}\n.v-close.is-transparent.is-success:hover::before, .v-close.is-transparent.is-success:hover::after, .v-close.is-transparent.is-success:focus::before, .v-close.is-transparent.is-success:focus::after {\n      background-color: rgba(35, 209, 96, 0.8);\n}\n.v-close.is-transparent.is-success:active::before, .v-close.is-transparent.is-success:active::after {\n      background-color: #23d160;\n}\n.v-close.is-transparent.is-warning::before, .v-close.is-transparent.is-warning::after {\n      background-color: rgba(255, 221, 87, 0.6);\n}\n.v-close.is-transparent.is-warning:hover::before, .v-close.is-transparent.is-warning:hover::after, .v-close.is-transparent.is-warning:focus::before, .v-close.is-transparent.is-warning:focus::after {\n      background-color: rgba(255, 221, 87, 0.8);\n}\n.v-close.is-transparent.is-warning:active::before, .v-close.is-transparent.is-warning:active::after {\n      background-color: #ffdd57;\n}\n.v-close.is-transparent.is-danger::before, .v-close.is-transparent.is-danger::after {\n      background-color: rgba(255, 56, 96, 0.6);\n}\n.v-close.is-transparent.is-danger:hover::before, .v-close.is-transparent.is-danger:hover::after, .v-close.is-transparent.is-danger:focus::before, .v-close.is-transparent.is-danger:focus::after {\n      background-color: rgba(255, 56, 96, 0.8);\n}\n.v-close.is-transparent.is-danger:active::before, .v-close.is-transparent.is-danger:active::after {\n      background-color: #ff3860;\n}\n.v-modal {\n  bottom: 0;\n  left: 0;\n  position: absolute;\n  right: 0;\n  top: 0;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  display: none;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  overflow: hidden;\n  position: fixed;\n  z-index: 1011;\n}\n.v-modal.is-active {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n}\n.v-modal-overlay {\n  bottom: 0;\n  left: 0;\n  position: absolute;\n  right: 0;\n  top: 0;\n  background-color: rgba(10, 10, 10, 0.8);\n}\n.v-modal-content,\n.v-modal-card {\n  margin: 0 20px;\n  max-height: calc(100vh - 160px);\n  overflow: auto;\n  position: relative;\n  width: 640px;\n  -webkit-animation-duration: 1s;\n          animation-duration: 1s;\n  -webkit-animation-fill-mode: both;\n          animation-fill-mode: both;\n  -webkit-animation: v-kf-fade-in-down 800ms ease;\n          animation: v-kf-fade-in-down 800ms ease;\n}\n.v-modal-content.is-small,\n  .v-modal-card.is-small {\n    width: 420px;\n}\n.v-modal-content.is-medium,\n  .v-modal-card.is-medium {\n    width: 840px;\n}\n.v-modal-content.is-large,\n  .v-modal-card.is-large {\n    width: 980px;\n}\n.v-modal-close {\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  -moz-appearance: none;\n  -webkit-appearance: none;\n  background-color: rgba(10, 10, 10, 0.2);\n  border: none;\n  border-radius: 290486px;\n  cursor: pointer;\n  display: inline-block;\n  -webkit-box-flex: 0;\n      -ms-flex-positive: 0;\n          flex-grow: 0;\n  -ms-flex-negative: 0;\n      flex-shrink: 0;\n  font-size: 1rem;\n  height: 20px;\n  max-height: 20px;\n  max-width: 20px;\n  min-height: 20px;\n  min-width: 20px;\n  outline: none;\n  position: relative;\n  vertical-align: top;\n  width: 20px;\n  background: none;\n  height: 40px;\n  position: fixed;\n  right: 20px;\n  top: 20px;\n  width: 40px;\n}\n.v-modal-close:before, .v-modal-close:after {\n    background-color: white;\n    content: \"\";\n    display: block;\n    left: 50%;\n    position: absolute;\n    top: 50%;\n    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);\n            transform: translateX(-50%) translateY(-50%) rotate(45deg);\n    -webkit-transform-origin: center center;\n            transform-origin: center center;\n}\n.v-modal-close:before {\n    height: 2px;\n    width: 50%;\n}\n.v-modal-close:after {\n    height: 50%;\n    width: 2px;\n}\n.v-modal-close:hover, .v-modal-close:focus {\n    background-color: rgba(10, 10, 10, 0.3);\n}\n.v-modal-close:active {\n    background-color: rgba(10, 10, 10, 0.4);\n}\n.v-modal-close.is-white {\n    background-color: rgba(255, 255, 255, 0.4);\n}\n.v-modal-close.is-white:hover, .v-modal-close.is-white:focus {\n      background-color: rgba(255, 255, 255, 0.6);\n}\n.v-modal-close.is-white:active {\n      background-color: rgba(255, 255, 255, 0.9);\n}\n.v-modal-close.is-black {\n    background-color: rgba(10, 10, 10, 0.4);\n}\n.v-modal-close.is-black:hover, .v-modal-close.is-black:focus {\n      background-color: rgba(10, 10, 10, 0.6);\n}\n.v-modal-close.is-black:active {\n      background-color: rgba(10, 10, 10, 0.9);\n}\n.v-modal-close.is-light {\n    background-color: rgba(245, 245, 245, 0.4);\n}\n.v-modal-close.is-light:hover, .v-modal-close.is-light:focus {\n      background-color: rgba(245, 245, 245, 0.6);\n}\n.v-modal-close.is-light:active {\n      background-color: rgba(245, 245, 245, 0.9);\n}\n.v-modal-close.is-dark {\n    background-color: rgba(54, 54, 54, 0.4);\n}\n.v-modal-close.is-dark:hover, .v-modal-close.is-dark:focus {\n      background-color: rgba(54, 54, 54, 0.6);\n}\n.v-modal-close.is-dark:active {\n      background-color: rgba(54, 54, 54, 0.9);\n}\n.v-modal-close.is-primary {\n    background-color: rgba(28, 160, 242, 0.4);\n}\n.v-modal-close.is-primary:hover, .v-modal-close.is-primary:focus {\n      background-color: rgba(28, 160, 242, 0.6);\n}\n.v-modal-close.is-primary:active {\n      background-color: rgba(28, 160, 242, 0.9);\n}\n.v-modal-close.is-info {\n    background-color: rgba(184, 107, 255, 0.4);\n}\n.v-modal-close.is-info:hover, .v-modal-close.is-info:focus {\n      background-color: rgba(184, 107, 255, 0.6);\n}\n.v-modal-close.is-info:active {\n      background-color: rgba(184, 107, 255, 0.9);\n}\n.v-modal-close.is-success {\n    background-color: rgba(35, 209, 96, 0.4);\n}\n.v-modal-close.is-success:hover, .v-modal-close.is-success:focus {\n      background-color: rgba(35, 209, 96, 0.6);\n}\n.v-modal-close.is-success:active {\n      background-color: rgba(35, 209, 96, 0.9);\n}\n.v-modal-close.is-warning {\n    background-color: rgba(255, 221, 87, 0.4);\n}\n.v-modal-close.is-warning:hover, .v-modal-close.is-warning:focus {\n      background-color: rgba(255, 221, 87, 0.6);\n}\n.v-modal-close.is-warning:active {\n      background-color: rgba(255, 221, 87, 0.9);\n}\n.v-modal-close.is-danger {\n    background-color: rgba(255, 56, 96, 0.4);\n}\n.v-modal-close.is-danger:hover, .v-modal-close.is-danger:focus {\n      background-color: rgba(255, 56, 96, 0.6);\n}\n.v-modal-close.is-danger:active {\n      background-color: rgba(255, 56, 96, 0.9);\n}\n.v-modal-close.is-small {\n    height: 16px;\n    max-height: 16px;\n    max-width: 16px;\n    min-height: 16px;\n    min-width: 16px;\n    width: 16px;\n}\n.v-modal-close.is-medium {\n    height: 24px;\n    max-height: 24px;\n    max-width: 24px;\n    min-height: 24px;\n    min-width: 24px;\n    width: 24px;\n}\n.v-modal-close.is-large {\n    height: 32px;\n    max-height: 32px;\n    max-width: 32px;\n    min-height: 32px;\n    min-width: 32px;\n    width: 32px;\n}\n.v-modal-close.is-transparent {\n    background-color: transparent !important;\n}\n.v-modal-close.is-transparent:before, .v-modal-close.is-transparent:after {\n      background-color: rgba(10, 10, 10, 0.6);\n}\n.v-modal-close.is-transparent:hover::before, .v-modal-close.is-transparent:hover::after, .v-modal-close.is-transparent:focus::before, .v-modal-close.is-transparent:focus::after {\n      background-color: rgba(10, 10, 10, 0.8);\n}\n.v-modal-close.is-transparent:active::before, .v-modal-close.is-transparent:active::after {\n      background-color: #0a0a0a;\n}\n.v-modal-close.is-transparent.is-white::before, .v-modal-close.is-transparent.is-white::after {\n      background-color: rgba(255, 255, 255, 0.6);\n}\n.v-modal-close.is-transparent.is-white:hover::before, .v-modal-close.is-transparent.is-white:hover::after, .v-modal-close.is-transparent.is-white:focus::before, .v-modal-close.is-transparent.is-white:focus::after {\n      background-color: rgba(255, 255, 255, 0.8);\n}\n.v-modal-close.is-transparent.is-white:active::before, .v-modal-close.is-transparent.is-white:active::after {\n      background-color: white;\n}\n.v-modal-close.is-transparent.is-black::before, .v-modal-close.is-transparent.is-black::after {\n      background-color: rgba(10, 10, 10, 0.6);\n}\n.v-modal-close.is-transparent.is-black:hover::before, .v-modal-close.is-transparent.is-black:hover::after, .v-modal-close.is-transparent.is-black:focus::before, .v-modal-close.is-transparent.is-black:focus::after {\n      background-color: rgba(10, 10, 10, 0.8);\n}\n.v-modal-close.is-transparent.is-black:active::before, .v-modal-close.is-transparent.is-black:active::after {\n      background-color: #0a0a0a;\n}\n.v-modal-close.is-transparent.is-light::before, .v-modal-close.is-transparent.is-light::after {\n      background-color: rgba(245, 245, 245, 0.6);\n}\n.v-modal-close.is-transparent.is-light:hover::before, .v-modal-close.is-transparent.is-light:hover::after, .v-modal-close.is-transparent.is-light:focus::before, .v-modal-close.is-transparent.is-light:focus::after {\n      background-color: rgba(245, 245, 245, 0.8);\n}\n.v-modal-close.is-transparent.is-light:active::before, .v-modal-close.is-transparent.is-light:active::after {\n      background-color: whitesmoke;\n}\n.v-modal-close.is-transparent.is-dark::before, .v-modal-close.is-transparent.is-dark::after {\n      background-color: rgba(54, 54, 54, 0.6);\n}\n.v-modal-close.is-transparent.is-dark:hover::before, .v-modal-close.is-transparent.is-dark:hover::after, .v-modal-close.is-transparent.is-dark:focus::before, .v-modal-close.is-transparent.is-dark:focus::after {\n      background-color: rgba(54, 54, 54, 0.8);\n}\n.v-modal-close.is-transparent.is-dark:active::before, .v-modal-close.is-transparent.is-dark:active::after {\n      background-color: #363636;\n}\n.v-modal-close.is-transparent.is-primary::before, .v-modal-close.is-transparent.is-primary::after {\n      background-color: rgba(28, 160, 242, 0.6);\n}\n.v-modal-close.is-transparent.is-primary:hover::before, .v-modal-close.is-transparent.is-primary:hover::after, .v-modal-close.is-transparent.is-primary:focus::before, .v-modal-close.is-transparent.is-primary:focus::after {\n      background-color: rgba(28, 160, 242, 0.8);\n}\n.v-modal-close.is-transparent.is-primary:active::before, .v-modal-close.is-transparent.is-primary:active::after {\n      background-color: #1ca0f2;\n}\n.v-modal-close.is-transparent.is-info::before, .v-modal-close.is-transparent.is-info::after {\n      background-color: rgba(184, 107, 255, 0.6);\n}\n.v-modal-close.is-transparent.is-info:hover::before, .v-modal-close.is-transparent.is-info:hover::after, .v-modal-close.is-transparent.is-info:focus::before, .v-modal-close.is-transparent.is-info:focus::after {\n      background-color: rgba(184, 107, 255, 0.8);\n}\n.v-modal-close.is-transparent.is-info:active::before, .v-modal-close.is-transparent.is-info:active::after {\n      background-color: #b86bff;\n}\n.v-modal-close.is-transparent.is-success::before, .v-modal-close.is-transparent.is-success::after {\n      background-color: rgba(35, 209, 96, 0.6);\n}\n.v-modal-close.is-transparent.is-success:hover::before, .v-modal-close.is-transparent.is-success:hover::after, .v-modal-close.is-transparent.is-success:focus::before, .v-modal-close.is-transparent.is-success:focus::after {\n      background-color: rgba(35, 209, 96, 0.8);\n}\n.v-modal-close.is-transparent.is-success:active::before, .v-modal-close.is-transparent.is-success:active::after {\n      background-color: #23d160;\n}\n.v-modal-close.is-transparent.is-warning::before, .v-modal-close.is-transparent.is-warning::after {\n      background-color: rgba(255, 221, 87, 0.6);\n}\n.v-modal-close.is-transparent.is-warning:hover::before, .v-modal-close.is-transparent.is-warning:hover::after, .v-modal-close.is-transparent.is-warning:focus::before, .v-modal-close.is-transparent.is-warning:focus::after {\n      background-color: rgba(255, 221, 87, 0.8);\n}\n.v-modal-close.is-transparent.is-warning:active::before, .v-modal-close.is-transparent.is-warning:active::after {\n      background-color: #ffdd57;\n}\n.v-modal-close.is-transparent.is-danger::before, .v-modal-close.is-transparent.is-danger::after {\n      background-color: rgba(255, 56, 96, 0.6);\n}\n.v-modal-close.is-transparent.is-danger:hover::before, .v-modal-close.is-transparent.is-danger:hover::after, .v-modal-close.is-transparent.is-danger:focus::before, .v-modal-close.is-transparent.is-danger:focus::after {\n      background-color: rgba(255, 56, 96, 0.8);\n}\n.v-modal-close.is-transparent.is-danger:active::before, .v-modal-close.is-transparent.is-danger:active::after {\n      background-color: #ff3860;\n}\n.v-modal-card {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  max-height: calc(100vh - 40px);\n  overflow: hidden;\n}\n.v-modal-card-head,\n.v-modal-card-foot {\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  background-color: whitesmoke;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-negative: 0;\n      flex-shrink: 0;\n  -webkit-box-pack: start;\n      -ms-flex-pack: start;\n          justify-content: flex-start;\n  padding: 20px;\n  position: relative;\n}\n.v-modal-card-head {\n  border-bottom: 1px solid #dbdbdb;\n  border-top-left-radius: 5px;\n  border-top-right-radius: 5px;\n}\n.v-modal-card-title {\n  color: #363636;\n  -webkit-box-flex: 1;\n      -ms-flex-positive: 1;\n          flex-grow: 1;\n  -ms-flex-negative: 0;\n      flex-shrink: 0;\n  font-size: 1.5rem;\n  line-height: 1;\n}\n.v-modal-card-foot {\n  border-bottom-left-radius: 5px;\n  border-bottom-right-radius: 5px;\n  border-top: 1px solid #dbdbdb;\n}\n.v-modal-card-foot .v-btn:not(:last-child) {\n    margin-right: 10px;\n}\n.v-modal-card-body {\n  -webkit-overflow-scrolling: touch;\n  background-color: white;\n  -webkit-box-flex: 1;\n      -ms-flex-positive: 1;\n          flex-grow: 1;\n  -ms-flex-negative: 1;\n      flex-shrink: 1;\n  overflow: auto;\n  padding: 20px;\n}\n.v-dropdown {\n  display: -webkit-inline-box;\n  display: -ms-inline-flexbox;\n  display: inline-flex;\n  position: relative;\n  vertical-align: top;\n}\n.v-dropdown.is-active .v-dropdown-menu, .v-dropdown.is-hoverable:hover .v-dropdown-menu {\n    display: block;\n}\n.v-dropdown.is-right .v-dropdown-menu {\n    left: auto;\n    right: 0;\n}\n.v-dropdown.is-up .v-dropdown-menu {\n    bottom: 100%;\n    padding-bottom: 4px;\n    padding-top: unset;\n    top: auto;\n}\n.v-dropdown-menu {\n  display: none;\n  left: 0;\n  min-width: 12rem;\n  padding-top: 4px;\n  position: absolute;\n  top: 100%;\n  z-index: 20;\n}\n.v-ani-menu-enter-active {\n  -webkit-animation: v-kf-fade-in .5s;\n          animation: v-kf-fade-in .5s;\n}\n.v-ani-menu-leave-active {\n  -webkit-animation: v-kf-fade-out .5s;\n          animation: v-kf-fade-out .5s;\n}\n.v-dropdown-content {\n  background-color: white;\n  border-radius: 3px;\n  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);\n  padding-bottom: 0.5rem;\n  padding-top: 0.5rem;\n}\n.v-dropdown-item {\n  color: #4a4a4a;\n  display: block;\n  font-size: 0.875rem;\n  line-height: 1.5;\n  padding: 0.375rem 1rem;\n  position: relative;\n}\na.v-dropdown-item {\n  padding-right: 3rem;\n  white-space: nowrap;\n}\na.v-dropdown-item:hover {\n    background-color: whitesmoke;\n    color: #0a0a0a;\n}\na.v-dropdown-item.is-active {\n    background-color: #1ca0f2;\n    color: #fff;\n}\n.v-dropdown-divider {\n  background-color: #dbdbdb;\n  border: none;\n  display: block;\n  height: 1px;\n  margin: 0.5rem 0;\n}\n.v-sidebar {\n  font-size: 1rem;\n}\n.v-sidebar.is-small {\n    font-size: 0.75rem;\n}\n.v-sidebar.is-medium {\n    font-size: 1.25rem;\n}\n.v-sidebar.is-large {\n    font-size: 1.5rem;\n}\n.v-sidebar-list {\n  list-style: none;\n  margin: 0;\n  padding: 0;\n  margin: 0;\n  padding: 0;\n  line-height: 1.25;\n}\n.v-sidebar-list a {\n    border-radius: 2px;\n    color: #4a4a4a;\n    display: block;\n    padding: 0.5em 0.75em;\n}\n.v-sidebar-list a:hover {\n      background-color: whitesmoke;\n      color: #363636;\n}\n.v-sidebar-list a.is-active {\n      background-color: #1ca0f2;\n      color: #fff;\n}\n.v-sidebar-list li ul {\n    list-style: none;\n    margin: 0;\n    padding: 0;\n    border-left: 1px solid #dbdbdb;\n    margin: 0.75em;\n    padding-left: 0.75em;\n}\n.v-sidebar-label {\n  color: #7a7a7a;\n  font-size: 0.75em;\n  letter-spacing: 0.1em;\n  text-transform: uppercase;\n}\n.v-sidebar-label:not(:first-child) {\n    margin-top: 1em;\n}\n.v-sidebar-label:not(:last-child) {\n    margin-bottom: 1em;\n}\n.v-navbar {\n  background-color: white;\n  min-height: 3.25rem;\n  position: relative;\n}\n.v-navbar.is-white {\n    background-color: white;\n    color: #0a0a0a;\n}\n.v-navbar.is-white .v-navbar-brand > .v-navbar-item,\n    .v-navbar.is-white .v-navbar-brand .v-navbar-link {\n      color: #0a0a0a;\n}\n.v-navbar.is-white .v-navbar-brand > a.v-navbar-item:hover, .v-navbar.is-white .v-navbar-brand > a.v-navbar-item.is-active,\n    .v-navbar.is-white .v-navbar-brand .v-navbar-link:hover,\n    .v-navbar.is-white .v-navbar-brand .v-navbar-link.is-active {\n      background-color: #f2f2f2;\n      color: #0a0a0a;\n}\n.v-navbar.is-white .v-navbar-brand .v-navbar-link::after {\n      border-color: #0a0a0a;\n}\n.v-navbar.is-white .v-navbar-start > .v-navbar-item,\n    .v-navbar.is-white .v-navbar-start .v-navbar-link,\n    .v-navbar.is-white .v-navbar-end > .v-navbar-item,\n    .v-navbar.is-white .v-navbar-end .v-navbar-link {\n      color: #0a0a0a;\n}\n.v-navbar.is-white .v-navbar-start > a.v-navbar-item:hover, .v-navbar.is-white .v-navbar-start > a.v-navbar-item.is-active,\n    .v-navbar.is-white .v-navbar-start .v-navbar-link:hover,\n    .v-navbar.is-white .v-navbar-start .v-navbar-link.is-active,\n    .v-navbar.is-white .v-navbar-end > a.v-navbar-item:hover,\n    .v-navbar.is-white .v-navbar-end > a.v-navbar-item.is-active,\n    .v-navbar.is-white .v-navbar-end .v-navbar-link:hover,\n    .v-navbar.is-white .v-navbar-end .v-navbar-link.is-active {\n      background-color: #f2f2f2;\n      color: #0a0a0a;\n}\n.v-navbar.is-white .v-navbar-start .v-navbar-link::after,\n    .v-navbar.is-white .v-navbar-end .v-navbar-link::after {\n      border-color: #0a0a0a;\n}\n.v-navbar.is-white .v-navbar-item.has-dropdown:hover .v-navbar-link,\n    .v-navbar.is-white .v-navbar-item.has-dropdown.is-active .v-navbar-link {\n      background-color: #f2f2f2;\n      color: #0a0a0a;\n}\n.v-navbar.is-white .v-navbar-dropdown a.v-navbar-item.is-active {\n      background-color: white;\n      color: #0a0a0a;\n}\n.v-navbar.is-black {\n    background-color: #0a0a0a;\n    color: white;\n}\n.v-navbar.is-black .v-navbar-brand > .v-navbar-item,\n    .v-navbar.is-black .v-navbar-brand .v-navbar-link {\n      color: white;\n}\n.v-navbar.is-black .v-navbar-brand > a.v-navbar-item:hover, .v-navbar.is-black .v-navbar-brand > a.v-navbar-item.is-active,\n    .v-navbar.is-black .v-navbar-brand .v-navbar-link:hover,\n    .v-navbar.is-black .v-navbar-brand .v-navbar-link.is-active {\n      background-color: black;\n      color: white;\n}\n.v-navbar.is-black .v-navbar-brand .v-navbar-link::after {\n      border-color: white;\n}\n.v-navbar.is-black .v-navbar-start > .v-navbar-item,\n    .v-navbar.is-black .v-navbar-start .v-navbar-link,\n    .v-navbar.is-black .v-navbar-end > .v-navbar-item,\n    .v-navbar.is-black .v-navbar-end .v-navbar-link {\n      color: white;\n}\n.v-navbar.is-black .v-navbar-start > a.v-navbar-item:hover, .v-navbar.is-black .v-navbar-start > a.v-navbar-item.is-active,\n    .v-navbar.is-black .v-navbar-start .v-navbar-link:hover,\n    .v-navbar.is-black .v-navbar-start .v-navbar-link.is-active,\n    .v-navbar.is-black .v-navbar-end > a.v-navbar-item:hover,\n    .v-navbar.is-black .v-navbar-end > a.v-navbar-item.is-active,\n    .v-navbar.is-black .v-navbar-end .v-navbar-link:hover,\n    .v-navbar.is-black .v-navbar-end .v-navbar-link.is-active {\n      background-color: black;\n      color: white;\n}\n.v-navbar.is-black .v-navbar-start .v-navbar-link::after,\n    .v-navbar.is-black .v-navbar-end .v-navbar-link::after {\n      border-color: white;\n}\n.v-navbar.is-black .v-navbar-item.has-dropdown:hover .v-navbar-link,\n    .v-navbar.is-black .v-navbar-item.has-dropdown.is-active .v-navbar-link {\n      background-color: black;\n      color: white;\n}\n.v-navbar.is-black .v-navbar-dropdown a.v-navbar-item.is-active {\n      background-color: #0a0a0a;\n      color: white;\n}\n.v-navbar.is-light {\n    background-color: whitesmoke;\n    color: #363636;\n}\n.v-navbar.is-light .v-navbar-brand > .v-navbar-item,\n    .v-navbar.is-light .v-navbar-brand .v-navbar-link {\n      color: #363636;\n}\n.v-navbar.is-light .v-navbar-brand > a.v-navbar-item:hover, .v-navbar.is-light .v-navbar-brand > a.v-navbar-item.is-active,\n    .v-navbar.is-light .v-navbar-brand .v-navbar-link:hover,\n    .v-navbar.is-light .v-navbar-brand .v-navbar-link.is-active {\n      background-color: #e8e8e8;\n      color: #363636;\n}\n.v-navbar.is-light .v-navbar-brand .v-navbar-link::after {\n      border-color: #363636;\n}\n.v-navbar.is-light .v-navbar-start > .v-navbar-item,\n    .v-navbar.is-light .v-navbar-start .v-navbar-link,\n    .v-navbar.is-light .v-navbar-end > .v-navbar-item,\n    .v-navbar.is-light .v-navbar-end .v-navbar-link {\n      color: #363636;\n}\n.v-navbar.is-light .v-navbar-start > a.v-navbar-item:hover, .v-navbar.is-light .v-navbar-start > a.v-navbar-item.is-active,\n    .v-navbar.is-light .v-navbar-start .v-navbar-link:hover,\n    .v-navbar.is-light .v-navbar-start .v-navbar-link.is-active,\n    .v-navbar.is-light .v-navbar-end > a.v-navbar-item:hover,\n    .v-navbar.is-light .v-navbar-end > a.v-navbar-item.is-active,\n    .v-navbar.is-light .v-navbar-end .v-navbar-link:hover,\n    .v-navbar.is-light .v-navbar-end .v-navbar-link.is-active {\n      background-color: #e8e8e8;\n      color: #363636;\n}\n.v-navbar.is-light .v-navbar-start .v-navbar-link::after,\n    .v-navbar.is-light .v-navbar-end .v-navbar-link::after {\n      border-color: #363636;\n}\n.v-navbar.is-light .v-navbar-item.has-dropdown:hover .v-navbar-link,\n    .v-navbar.is-light .v-navbar-item.has-dropdown.is-active .v-navbar-link {\n      background-color: #e8e8e8;\n      color: #363636;\n}\n.v-navbar.is-light .v-navbar-dropdown a.v-navbar-item.is-active {\n      background-color: whitesmoke;\n      color: #363636;\n}\n.v-navbar.is-dark {\n    background-color: #363636;\n    color: whitesmoke;\n}\n.v-navbar.is-dark .v-navbar-brand > .v-navbar-item,\n    .v-navbar.is-dark .v-navbar-brand .v-navbar-link {\n      color: whitesmoke;\n}\n.v-navbar.is-dark .v-navbar-brand > a.v-navbar-item:hover, .v-navbar.is-dark .v-navbar-brand > a.v-navbar-item.is-active,\n    .v-navbar.is-dark .v-navbar-brand .v-navbar-link:hover,\n    .v-navbar.is-dark .v-navbar-brand .v-navbar-link.is-active {\n      background-color: #292929;\n      color: whitesmoke;\n}\n.v-navbar.is-dark .v-navbar-brand .v-navbar-link::after {\n      border-color: whitesmoke;\n}\n.v-navbar.is-dark .v-navbar-start > .v-navbar-item,\n    .v-navbar.is-dark .v-navbar-start .v-navbar-link,\n    .v-navbar.is-dark .v-navbar-end > .v-navbar-item,\n    .v-navbar.is-dark .v-navbar-end .v-navbar-link {\n      color: whitesmoke;\n}\n.v-navbar.is-dark .v-navbar-start > a.v-navbar-item:hover, .v-navbar.is-dark .v-navbar-start > a.v-navbar-item.is-active,\n    .v-navbar.is-dark .v-navbar-start .v-navbar-link:hover,\n    .v-navbar.is-dark .v-navbar-start .v-navbar-link.is-active,\n    .v-navbar.is-dark .v-navbar-end > a.v-navbar-item:hover,\n    .v-navbar.is-dark .v-navbar-end > a.v-navbar-item.is-active,\n    .v-navbar.is-dark .v-navbar-end .v-navbar-link:hover,\n    .v-navbar.is-dark .v-navbar-end .v-navbar-link.is-active {\n      background-color: #292929;\n      color: whitesmoke;\n}\n.v-navbar.is-dark .v-navbar-start .v-navbar-link::after,\n    .v-navbar.is-dark .v-navbar-end .v-navbar-link::after {\n      border-color: whitesmoke;\n}\n.v-navbar.is-dark .v-navbar-item.has-dropdown:hover .v-navbar-link,\n    .v-navbar.is-dark .v-navbar-item.has-dropdown.is-active .v-navbar-link {\n      background-color: #292929;\n      color: whitesmoke;\n}\n.v-navbar.is-dark .v-navbar-dropdown a.v-navbar-item.is-active {\n      background-color: #363636;\n      color: whitesmoke;\n}\n.v-navbar.is-primary {\n    background-color: #1ca0f2;\n    color: #fff;\n}\n.v-navbar.is-primary .v-navbar-brand > .v-navbar-item,\n    .v-navbar.is-primary .v-navbar-brand .v-navbar-link {\n      color: #fff;\n}\n.v-navbar.is-primary .v-navbar-brand > a.v-navbar-item:hover, .v-navbar.is-primary .v-navbar-brand > a.v-navbar-item.is-active,\n    .v-navbar.is-primary .v-navbar-brand .v-navbar-link:hover,\n    .v-navbar.is-primary .v-navbar-brand .v-navbar-link.is-active {\n      background-color: #0d94e7;\n      color: #fff;\n}\n.v-navbar.is-primary .v-navbar-brand .v-navbar-link::after {\n      border-color: #fff;\n}\n.v-navbar.is-primary .v-navbar-start > .v-navbar-item,\n    .v-navbar.is-primary .v-navbar-start .v-navbar-link,\n    .v-navbar.is-primary .v-navbar-end > .v-navbar-item,\n    .v-navbar.is-primary .v-navbar-end .v-navbar-link {\n      color: #fff;\n}\n.v-navbar.is-primary .v-navbar-start > a.v-navbar-item:hover, .v-navbar.is-primary .v-navbar-start > a.v-navbar-item.is-active,\n    .v-navbar.is-primary .v-navbar-start .v-navbar-link:hover,\n    .v-navbar.is-primary .v-navbar-start .v-navbar-link.is-active,\n    .v-navbar.is-primary .v-navbar-end > a.v-navbar-item:hover,\n    .v-navbar.is-primary .v-navbar-end > a.v-navbar-item.is-active,\n    .v-navbar.is-primary .v-navbar-end .v-navbar-link:hover,\n    .v-navbar.is-primary .v-navbar-end .v-navbar-link.is-active {\n      background-color: #0d94e7;\n      color: #fff;\n}\n.v-navbar.is-primary .v-navbar-start .v-navbar-link::after,\n    .v-navbar.is-primary .v-navbar-end .v-navbar-link::after {\n      border-color: #fff;\n}\n.v-navbar.is-primary .v-navbar-item.has-dropdown:hover .v-navbar-link,\n    .v-navbar.is-primary .v-navbar-item.has-dropdown.is-active .v-navbar-link {\n      background-color: #0d94e7;\n      color: #fff;\n}\n.v-navbar.is-primary .v-navbar-dropdown a.v-navbar-item.is-active {\n      background-color: #1ca0f2;\n      color: #fff;\n}\n.v-navbar.is-info {\n    background-color: #b86bff;\n    color: #fff;\n}\n.v-navbar.is-info .v-navbar-brand > .v-navbar-item,\n    .v-navbar.is-info .v-navbar-brand .v-navbar-link {\n      color: #fff;\n}\n.v-navbar.is-info .v-navbar-brand > a.v-navbar-item:hover, .v-navbar.is-info .v-navbar-brand > a.v-navbar-item.is-active,\n    .v-navbar.is-info .v-navbar-brand .v-navbar-link:hover,\n    .v-navbar.is-info .v-navbar-brand .v-navbar-link.is-active {\n      background-color: #ab52ff;\n      color: #fff;\n}\n.v-navbar.is-info .v-navbar-brand .v-navbar-link::after {\n      border-color: #fff;\n}\n.v-navbar.is-info .v-navbar-start > .v-navbar-item,\n    .v-navbar.is-info .v-navbar-start .v-navbar-link,\n    .v-navbar.is-info .v-navbar-end > .v-navbar-item,\n    .v-navbar.is-info .v-navbar-end .v-navbar-link {\n      color: #fff;\n}\n.v-navbar.is-info .v-navbar-start > a.v-navbar-item:hover, .v-navbar.is-info .v-navbar-start > a.v-navbar-item.is-active,\n    .v-navbar.is-info .v-navbar-start .v-navbar-link:hover,\n    .v-navbar.is-info .v-navbar-start .v-navbar-link.is-active,\n    .v-navbar.is-info .v-navbar-end > a.v-navbar-item:hover,\n    .v-navbar.is-info .v-navbar-end > a.v-navbar-item.is-active,\n    .v-navbar.is-info .v-navbar-end .v-navbar-link:hover,\n    .v-navbar.is-info .v-navbar-end .v-navbar-link.is-active {\n      background-color: #ab52ff;\n      color: #fff;\n}\n.v-navbar.is-info .v-navbar-start .v-navbar-link::after,\n    .v-navbar.is-info .v-navbar-end .v-navbar-link::after {\n      border-color: #fff;\n}\n.v-navbar.is-info .v-navbar-item.has-dropdown:hover .v-navbar-link,\n    .v-navbar.is-info .v-navbar-item.has-dropdown.is-active .v-navbar-link {\n      background-color: #ab52ff;\n      color: #fff;\n}\n.v-navbar.is-info .v-navbar-dropdown a.v-navbar-item.is-active {\n      background-color: #b86bff;\n      color: #fff;\n}\n.v-navbar.is-success {\n    background-color: #23d160;\n    color: #fff;\n}\n.v-navbar.is-success .v-navbar-brand > .v-navbar-item,\n    .v-navbar.is-success .v-navbar-brand .v-navbar-link {\n      color: #fff;\n}\n.v-navbar.is-success .v-navbar-brand > a.v-navbar-item:hover, .v-navbar.is-success .v-navbar-brand > a.v-navbar-item.is-active,\n    .v-navbar.is-success .v-navbar-brand .v-navbar-link:hover,\n    .v-navbar.is-success .v-navbar-brand .v-navbar-link.is-active {\n      background-color: #20bc56;\n      color: #fff;\n}\n.v-navbar.is-success .v-navbar-brand .v-navbar-link::after {\n      border-color: #fff;\n}\n.v-navbar.is-success .v-navbar-start > .v-navbar-item,\n    .v-navbar.is-success .v-navbar-start .v-navbar-link,\n    .v-navbar.is-success .v-navbar-end > .v-navbar-item,\n    .v-navbar.is-success .v-navbar-end .v-navbar-link {\n      color: #fff;\n}\n.v-navbar.is-success .v-navbar-start > a.v-navbar-item:hover, .v-navbar.is-success .v-navbar-start > a.v-navbar-item.is-active,\n    .v-navbar.is-success .v-navbar-start .v-navbar-link:hover,\n    .v-navbar.is-success .v-navbar-start .v-navbar-link.is-active,\n    .v-navbar.is-success .v-navbar-end > a.v-navbar-item:hover,\n    .v-navbar.is-success .v-navbar-end > a.v-navbar-item.is-active,\n    .v-navbar.is-success .v-navbar-end .v-navbar-link:hover,\n    .v-navbar.is-success .v-navbar-end .v-navbar-link.is-active {\n      background-color: #20bc56;\n      color: #fff;\n}\n.v-navbar.is-success .v-navbar-start .v-navbar-link::after,\n    .v-navbar.is-success .v-navbar-end .v-navbar-link::after {\n      border-color: #fff;\n}\n.v-navbar.is-success .v-navbar-item.has-dropdown:hover .v-navbar-link,\n    .v-navbar.is-success .v-navbar-item.has-dropdown.is-active .v-navbar-link {\n      background-color: #20bc56;\n      color: #fff;\n}\n.v-navbar.is-success .v-navbar-dropdown a.v-navbar-item.is-active {\n      background-color: #23d160;\n      color: #fff;\n}\n.v-navbar.is-warning {\n    background-color: #ffdd57;\n    color: rgba(0, 0, 0, 0.7);\n}\n.v-navbar.is-warning .v-navbar-brand > .v-navbar-item,\n    .v-navbar.is-warning .v-navbar-brand .v-navbar-link {\n      color: rgba(0, 0, 0, 0.7);\n}\n.v-navbar.is-warning .v-navbar-brand > a.v-navbar-item:hover, .v-navbar.is-warning .v-navbar-brand > a.v-navbar-item.is-active,\n    .v-navbar.is-warning .v-navbar-brand .v-navbar-link:hover,\n    .v-navbar.is-warning .v-navbar-brand .v-navbar-link.is-active {\n      background-color: #ffd83d;\n      color: rgba(0, 0, 0, 0.7);\n}\n.v-navbar.is-warning .v-navbar-brand .v-navbar-link::after {\n      border-color: rgba(0, 0, 0, 0.7);\n}\n.v-navbar.is-warning .v-navbar-start > .v-navbar-item,\n    .v-navbar.is-warning .v-navbar-start .v-navbar-link,\n    .v-navbar.is-warning .v-navbar-end > .v-navbar-item,\n    .v-navbar.is-warning .v-navbar-end .v-navbar-link {\n      color: rgba(0, 0, 0, 0.7);\n}\n.v-navbar.is-warning .v-navbar-start > a.v-navbar-item:hover, .v-navbar.is-warning .v-navbar-start > a.v-navbar-item.is-active,\n    .v-navbar.is-warning .v-navbar-start .v-navbar-link:hover,\n    .v-navbar.is-warning .v-navbar-start .v-navbar-link.is-active,\n    .v-navbar.is-warning .v-navbar-end > a.v-navbar-item:hover,\n    .v-navbar.is-warning .v-navbar-end > a.v-navbar-item.is-active,\n    .v-navbar.is-warning .v-navbar-end .v-navbar-link:hover,\n    .v-navbar.is-warning .v-navbar-end .v-navbar-link.is-active {\n      background-color: #ffd83d;\n      color: rgba(0, 0, 0, 0.7);\n}\n.v-navbar.is-warning .v-navbar-start .v-navbar-link::after,\n    .v-navbar.is-warning .v-navbar-end .v-navbar-link::after {\n      border-color: rgba(0, 0, 0, 0.7);\n}\n.v-navbar.is-warning .v-navbar-item.has-dropdown:hover .v-navbar-link,\n    .v-navbar.is-warning .v-navbar-item.has-dropdown.is-active .v-navbar-link {\n      background-color: #ffd83d;\n      color: rgba(0, 0, 0, 0.7);\n}\n.v-navbar.is-warning .v-navbar-dropdown a.v-navbar-item.is-active {\n      background-color: #ffdd57;\n      color: rgba(0, 0, 0, 0.7);\n}\n.v-navbar.is-danger {\n    background-color: #ff3860;\n    color: #fff;\n}\n.v-navbar.is-danger .v-navbar-brand > .v-navbar-item,\n    .v-navbar.is-danger .v-navbar-brand .v-navbar-link {\n      color: #fff;\n}\n.v-navbar.is-danger .v-navbar-brand > a.v-navbar-item:hover, .v-navbar.is-danger .v-navbar-brand > a.v-navbar-item.is-active,\n    .v-navbar.is-danger .v-navbar-brand .v-navbar-link:hover,\n    .v-navbar.is-danger .v-navbar-brand .v-navbar-link.is-active {\n      background-color: #ff1f4b;\n      color: #fff;\n}\n.v-navbar.is-danger .v-navbar-brand .v-navbar-link::after {\n      border-color: #fff;\n}\n.v-navbar.is-danger .v-navbar-start > .v-navbar-item,\n    .v-navbar.is-danger .v-navbar-start .v-navbar-link,\n    .v-navbar.is-danger .v-navbar-end > .v-navbar-item,\n    .v-navbar.is-danger .v-navbar-end .v-navbar-link {\n      color: #fff;\n}\n.v-navbar.is-danger .v-navbar-start > a.v-navbar-item:hover, .v-navbar.is-danger .v-navbar-start > a.v-navbar-item.is-active,\n    .v-navbar.is-danger .v-navbar-start .v-navbar-link:hover,\n    .v-navbar.is-danger .v-navbar-start .v-navbar-link.is-active,\n    .v-navbar.is-danger .v-navbar-end > a.v-navbar-item:hover,\n    .v-navbar.is-danger .v-navbar-end > a.v-navbar-item.is-active,\n    .v-navbar.is-danger .v-navbar-end .v-navbar-link:hover,\n    .v-navbar.is-danger .v-navbar-end .v-navbar-link.is-active {\n      background-color: #ff1f4b;\n      color: #fff;\n}\n.v-navbar.is-danger .v-navbar-start .v-navbar-link::after,\n    .v-navbar.is-danger .v-navbar-end .v-navbar-link::after {\n      border-color: #fff;\n}\n.v-navbar.is-danger .v-navbar-item.has-dropdown:hover .v-navbar-link,\n    .v-navbar.is-danger .v-navbar-item.has-dropdown.is-active .v-navbar-link {\n      background-color: #ff1f4b;\n      color: #fff;\n}\n.v-navbar.is-danger .v-navbar-dropdown a.v-navbar-item.is-active {\n      background-color: #ff3860;\n      color: #fff;\n}\n.v-navbar > .container {\n    -webkit-box-align: stretch;\n        -ms-flex-align: stretch;\n            align-items: stretch;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    min-height: 3.25rem;\n    width: 100%;\n}\n.v-navbar.has-shadow {\n    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1);\n}\n.v-navbar-item {\n  -webkit-box-flex: 0;\n      -ms-flex-positive: 0;\n          flex-grow: 0;\n  -ms-flex-negative: 0;\n      flex-shrink: 0;\n}\n.v-navbar-item img {\n    max-height: 1.75rem;\n}\n.v-navbar-item.has-dropdown {\n    padding: 0;\n}\n.v-navbar-item.is-tab {\n    border-bottom: 1px solid transparent;\n    min-height: 3.25rem;\n    padding-bottom: calc(0.5em - 1px);\n}\n.v-navbar-item.is-tab:hover {\n      background-color: transparent;\n      border-bottom-color: #1ca0f2;\n}\n.v-navbar-item.is-tab.is-active {\n      background-color: transparent;\n      border-bottom-color: #1ca0f2;\n      border-bottom-style: solid;\n      border-bottom-width: 3px;\n      color: #1ca0f2;\n      padding-bottom: calc(0.5em - 3px);\n}\n.v-navbar-item,\n.v-navbar-link {\n  color: #4a4a4a;\n  display: block;\n  line-height: 1.5;\n  padding: 0.5rem 1rem;\n  position: relative;\n}\na.v-navbar-item:hover, a.v-navbar-item.is-active,\n.v-navbar-link:hover,\n.v-navbar-link.is-active {\n  background-color: whitesmoke;\n  color: #0a0a0a;\n}\n.v-navbar-brand,\n.v-navbar-tabs {\n  -webkit-box-align: stretch;\n      -ms-flex-align: stretch;\n          align-items: stretch;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-negative: 0;\n      flex-shrink: 0;\n  min-height: 3.25rem;\n}\n.v-navbar,\n.v-navbar-menu,\n.v-navbar-start,\n.v-navbar-end {\n  -webkit-box-align: stretch;\n      -ms-flex-align: stretch;\n          align-items: stretch;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n}\n.v-navbar {\n  min-height: 3.25rem;\n}\n.v-navbar.is-transparent a.v-navbar-item:hover, .v-navbar.is-transparent a.v-navbar-item.is-active,\n  .v-navbar.is-transparent .v-navbar-link:hover,\n  .v-navbar.is-transparent .v-navbar-link.is-active {\n    background-color: transparent;\n}\n.v-navbar.is-transparent .v-navbar-item.has-dropdown.is-active .v-navbar-link, .v-navbar.is-transparent .v-navbar-item.has-dropdown.is-hoverable:hover .v-navbar-link {\n    background-color: transparent;\n}\n.v-navbar.is-transparent .v-navbar-dropdown a.v-navbar-item:hover {\n    background-color: whitesmoke;\n    color: #0a0a0a;\n}\n.v-navbar.is-transparent .v-navbar-dropdown a.v-navbar-item.is-active {\n    background-color: whitesmoke;\n    color: #1ca0f2;\n}\n.v-navbar-item,\n.v-navbar-link {\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n}\n.v-navbar-item.has-dropdown {\n  -webkit-box-align: stretch;\n      -ms-flex-align: stretch;\n          align-items: stretch;\n}\n.v-navbar-item.is-active .v-navbar-dropdown, .v-navbar-item.is-hoverable:hover .v-navbar-dropdown {\n  display: block;\n}\n.v-navbar-item.is-active .v-navbar-dropdown.is-boxed, .v-navbar-item.is-hoverable:hover .v-navbar-dropdown.is-boxed {\n    opacity: 1;\n    pointer-events: auto;\n    -webkit-transform: translateY(0);\n            transform: translateY(0);\n}\n.v-navbar-menu {\n  -webkit-box-flex: 1;\n      -ms-flex-positive: 1;\n          flex-grow: 1;\n  -ms-flex-negative: 0;\n      flex-shrink: 0;\n}\n.v-navbar-start {\n  -webkit-box-pack: start;\n      -ms-flex-pack: start;\n          justify-content: flex-start;\n  margin-right: auto;\n}\n.v-navbar-end {\n  -webkit-box-pack: end;\n      -ms-flex-pack: end;\n          justify-content: flex-end;\n  margin-left: auto;\n}\n.v-message {\n  background-color: whitesmoke;\n  border-radius: 3px;\n  font-size: 1rem;\n}\n.v-message:not(:last-child) {\n    margin-bottom: 1.5rem;\n}\n.v-message strong {\n    color: currentColor;\n}\n.v-message a:not(.button):not(.tag) {\n    color: currentColor;\n    text-decoration: underline;\n}\n.v-message.is-small {\n    font-size: 0.75rem;\n}\n.v-message.is-medium {\n    font-size: 1.25rem;\n}\n.v-message.is-large {\n    font-size: 1.5rem;\n}\n.v-message.is-white {\n    background-color: white;\n}\n.v-message.is-white .v-message-header {\n      background-color: white;\n      color: #0a0a0a;\n}\n.v-message.is-white .v-message-body {\n      border-color: white;\n      color: #4d4d4d;\n}\n.v-message.is-black {\n    background-color: #fafafa;\n}\n.v-message.is-black .v-message-header {\n      background-color: #0a0a0a;\n      color: white;\n}\n.v-message.is-black .v-message-body {\n      border-color: #0a0a0a;\n      color: #090909;\n}\n.v-message.is-light {\n    background-color: #fafafa;\n}\n.v-message.is-light .v-message-header {\n      background-color: whitesmoke;\n      color: #363636;\n}\n.v-message.is-light .v-message-body {\n      border-color: whitesmoke;\n      color: #505050;\n}\n.v-message.is-dark {\n    background-color: #fafafa;\n}\n.v-message.is-dark .v-message-header {\n      background-color: #363636;\n      color: whitesmoke;\n}\n.v-message.is-dark .v-message-body {\n      border-color: #363636;\n      color: #2a2a2a;\n}\n.v-message.is-primary {\n    background-color: #f5fbfe;\n}\n.v-message.is-primary .v-message-header {\n      background-color: #1ca0f2;\n      color: #fff;\n}\n.v-message.is-primary .v-message-body {\n      border-color: #1ca0f2;\n      color: #0f527b;\n}\n.v-message.is-info {\n    background-color: #faf5ff;\n}\n.v-message.is-info .v-message-header {\n      background-color: #b86bff;\n      color: #fff;\n}\n.v-message.is-info .v-message-body {\n      border-color: #b86bff;\n      color: #7d0ce8;\n}\n.v-message.is-success {\n    background-color: #f6fef9;\n}\n.v-message.is-success .v-message-header {\n      background-color: #23d160;\n      color: #fff;\n}\n.v-message.is-success .v-message-body {\n      border-color: #23d160;\n      color: #0e301a;\n}\n.v-message.is-warning {\n    background-color: #fffdf5;\n}\n.v-message.is-warning .v-message-header {\n      background-color: #ffdd57;\n      color: rgba(0, 0, 0, 0.7);\n}\n.v-message.is-warning .v-message-body {\n      border-color: #ffdd57;\n      color: #3b3108;\n}\n.v-message.is-danger {\n    background-color: #fff5f7;\n}\n.v-message.is-danger .v-message-header {\n      background-color: #ff3860;\n      color: #fff;\n}\n.v-message.is-danger .v-message-body {\n      border-color: #ff3860;\n      color: #cd0930;\n}\n.v-message-header {\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  background-color: #4a4a4a;\n  border-radius: 3px 3px 0 0;\n  color: #fff;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  line-height: 1.25;\n  padding: 0.5em 0.75em;\n  position: relative;\n}\n.v-message-header .v-close {\n    -webkit-box-flex: 0;\n        -ms-flex-positive: 0;\n            flex-grow: 0;\n    -ms-flex-negative: 0;\n        flex-shrink: 0;\n    margin-left: 0.75em;\n}\n.v-message-header + .v-message-body {\n    border-top-left-radius: 0;\n    border-top-right-radius: 0;\n    border-top: none;\n}\n.v-message-body {\n  border: 1px solid #dbdbdb;\n  border-radius: 3px;\n  color: #4a4a4a;\n  padding: 1em 1.25em;\n}\n.v-message-body code,\n  .v-message-body pre {\n    background-color: white;\n}\n.v-message-body pre code {\n    background-color: transparent;\n}\n.v-message-popup {\n  position: fixed;\n  top: 1em;\n  z-index: 2010;\n  border-radius: 3px;\n  width: 100%;\n  left: 0;\n  right: 0;\n  background: transparent;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  padding: 0 5vw;\n}\n.v-message-popup > .v-message {\n    box-shadow: 1px 1px 10px #aaa;\n}\n.v-message-popup .v-message-body {\n    padding: 0.5em 1em;\n}\n.v-tabs {\n  -webkit-overflow-scrolling: touch;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  -webkit-box-align: stretch;\n      -ms-flex-align: stretch;\n          align-items: stretch;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  font-size: 1rem;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  overflow: hidden;\n  overflow-x: auto;\n  white-space: nowrap;\n}\n.v-tabs:not(:last-child) {\n    margin-bottom: 1.5rem;\n}\n.v-tabs a {\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    border-bottom-color: #dbdbdb;\n    border-bottom-style: solid;\n    border-bottom-width: 1px;\n    color: #4a4a4a;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    margin-bottom: -1px;\n    padding: 0.5em 1em;\n    vertical-align: top;\n}\n.v-tabs a:hover {\n      border-bottom-color: #363636;\n      color: #363636;\n}\n.v-tabs li {\n    display: block;\n}\n.v-tabs li.is-active a {\n      border-bottom-color: #1ca0f2;\n      color: #1ca0f2;\n}\n.v-tabs ul {\n    list-style: none;\n    margin: 0;\n    padding: 0;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    border-bottom-color: #dbdbdb;\n    border-bottom-style: solid;\n    border-bottom-width: 1px;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-flex: 1;\n        -ms-flex-positive: 1;\n            flex-grow: 1;\n    -ms-flex-negative: 0;\n        flex-shrink: 0;\n    -webkit-box-pack: start;\n        -ms-flex-pack: start;\n            justify-content: flex-start;\n}\n.v-tabs ul.is-left {\n      padding-right: 0.75em;\n}\n.v-tabs ul.is-center {\n      -webkit-box-flex: 0;\n          -ms-flex: none;\n              flex: none;\n      -webkit-box-pack: center;\n          -ms-flex-pack: center;\n              justify-content: center;\n      padding-left: 0.75em;\n      padding-right: 0.75em;\n}\n.v-tabs ul.is-right {\n      -webkit-box-pack: end;\n          -ms-flex-pack: end;\n              justify-content: flex-end;\n      padding-left: 0.75em;\n}\n.v-tabs .has-icon:first-child {\n    margin-right: 0.5em;\n}\n.v-tabs .has-icon:last-child {\n    margin-left: 0.5em;\n}\n.v-tabs.is-centered ul {\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n}\n.v-tabs.is-right ul {\n    -webkit-box-pack: end;\n        -ms-flex-pack: end;\n            justify-content: flex-end;\n}\n.v-tabs.is-boxed a {\n    border: 1px solid transparent;\n    border-radius: 3px 3px 0 0;\n}\n.v-tabs.is-boxed a:hover {\n      background-color: whitesmoke;\n      border-bottom-color: #dbdbdb;\n}\n.v-tabs.is-boxed li.is-active a {\n    background-color: white;\n    border-color: #dbdbdb;\n    border-bottom-color: transparent !important;\n}\n.v-tabs.is-fullwidth li {\n    -webkit-box-flex: 1;\n        -ms-flex-positive: 1;\n            flex-grow: 1;\n    -ms-flex-negative: 0;\n        flex-shrink: 0;\n}\n.v-tabs.is-toggle a {\n    border-color: #dbdbdb;\n    border-style: solid;\n    border-width: 1px;\n    margin-bottom: 0;\n    position: relative;\n}\n.v-tabs.is-toggle a:hover {\n      background-color: whitesmoke;\n      border-color: #b5b5b5;\n      z-index: 2;\n}\n.v-tabs.is-toggle li + li {\n    margin-left: -1px;\n}\n.v-tabs.is-toggle li:first-child a {\n    border-radius: 3px 0 0 3px;\n}\n.v-tabs.is-toggle li:last-child a {\n    border-radius: 0 3px 3px 0;\n}\n.v-tabs.is-toggle li.is-active a {\n    background-color: #1ca0f2;\n    border-color: #1ca0f2;\n    color: #fff;\n    z-index: 1;\n}\n.v-tabs.is-toggle ul {\n    border-bottom: none;\n}\n.v-tabs.is-small {\n    font-size: 0.75rem;\n}\n.v-tabs.is-medium {\n    font-size: 1.25rem;\n}\n.v-tabs.is-large {\n    font-size: 1.5rem;\n}\n.v-breadcrumb {\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  -webkit-box-align: stretch;\n      -ms-flex-align: stretch;\n          align-items: stretch;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  font-size: 1rem;\n  overflow: hidden;\n  overflow-x: auto;\n  white-space: nowrap;\n}\n.v-breadcrumb:not(:last-child) {\n    margin-bottom: 1.5rem;\n}\n.v-breadcrumb a {\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    color: #7a7a7a;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    text-decoration: none;\n    padding: 0.5em 0.75em;\n}\n.v-breadcrumb a:hover {\n      color: #363636;\n}\n.v-breadcrumb li {\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n}\n.v-breadcrumb li:first-child a {\n      padding-left: 0;\n}\n.v-breadcrumb li.is-active a {\n      color: #363636;\n      cursor: default;\n      pointer-events: none;\n}\n.v-breadcrumb li + li::before {\n      color: #4a4a4a;\n      content: \"/\";\n}\n.v-breadcrumb ul, .v-breadcrumb ol {\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-flex: 1;\n        -ms-flex-positive: 1;\n            flex-grow: 1;\n    -ms-flex-negative: 0;\n        flex-shrink: 0;\n    -webkit-box-pack: start;\n        -ms-flex-pack: start;\n            justify-content: flex-start;\n}\n.v-breadcrumb .has-icon:first-child {\n    margin-right: 0.5em;\n}\n.v-breadcrumb .has-icon:last-child {\n    margin-left: 0.5em;\n}\n.v-breadcrumb.is-centered ol, .v-breadcrumb.is-centered ul {\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n}\n.v-breadcrumb.is-right ol, .v-breadcrumb.is-right ul {\n    -webkit-box-pack: end;\n        -ms-flex-pack: end;\n            justify-content: flex-end;\n}\n.v-breadcrumb.is-small {\n    font-size: 0.75rem;\n}\n.v-breadcrumb.is-medium {\n    font-size: 1.25rem;\n}\n.v-breadcrumb.is-large {\n    font-size: 1.5rem;\n}\n.v-breadcrumb.has-arrow-separator li + li::before {\n    content: \"→\";\n}\n.v-breadcrumb.has-bullet-separator li + li::before {\n    content: \"•\";\n}\n.v-breadcrumb.has-dot-separator li + li::before {\n    content: \"·\";\n}\n.v-breadcrumb.has-succeeds-separator li + li::before {\n    content: \"≻\";\n}\n.sav-tooltip {\n  position: fixed;\n  line-height: 1.2;\n  font-size: 14px;\n  padding: 0.5rem;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  box-sizing: border-box;\n  z-index: 10001;\n  top: 0;\n  left: 0;\n  max-width: 250px;\n  color: #4c4c4c;\n  background-color: #ffdd0a;\n  border: 1px solid #d0b300;\n  border-radius: 3px;\n  pointer-events: none;\n  transition: none;\n  display: none;\n  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);\n}\n.v-popover {\n  display: block;\n  visibility: visible;\n  font-size: 12px;\n  line-height: 1.5;\n  position: absolute;\n  z-index: 1060;\n  min-width: 150px;\n}\n.v-popover .has-arrow, .v-popover .has-arrow:after {\n    display: block;\n    width: 0;\n    height: 0;\n    position: absolute;\n    border-width: 6px;\n    border-color: transparent;\n    border-style: solid;\n}\n.v-popover .has-arrow:after {\n      content: \" \";\n      border-width: 5px;\n}\n.v-popover[x-placement^=\"top\"] {\n    padding: 5px 0 8px;\n}\n.v-popover[x-placement^=\"top\"] .has-arrow, .v-popover[x-placement^=\"top\"] .has-arrow:after {\n      left: 50%;\n      margin-left: -5px;\n      bottom: 3px;\n      border-width: 5px 5px 0;\n      border-top-color: #ffffff;\n}\n.v-popover[x-placement^=\"top\"] .has-arrow:after {\n        content: \" \";\n        bottom: 1px;\n        margin-left: -5px;\n        border-bottom-width: 0;\n        border-top-color: #ffffff;\n}\n.v-popover[x-placement^=\"right\"] {\n    padding: 0 5px 0 8px;\n}\n.v-popover[x-placement^=\"right\"] .has-arrow, .v-popover[x-placement^=\"right\"] .has-arrow:after {\n      display: none;\n      top: 50%;\n      margin-top: -5px;\n      left: 3px;\n      border-width: 5px 5px 5px 0;\n      border-right-color: #d6d7d8;\n}\n.v-popover[x-placement^=\"right\"] .has-arrow:after {\n        content: \" \";\n        left: 1px;\n        bottom: -5px;\n        border-left-width: 0;\n        border-right-color: white;\n}\n.v-popover[x-placement^=\"bottom\"] {\n    padding: 8px 0 5px;\n}\n.v-popover[x-placement^=\"bottom\"] .has-arrow, .v-popover[x-placement^=\"bottom\"] .has-arrow:after {\n      left: 50%;\n      margin-left: -5px;\n      top: 3px;\n      border-width: 0 5px 5px;\n      border-bottom-color: #d6d7d8;\n}\n.v-popover[x-placement^=\"bottom\"] .has-arrow:after {\n        content: \" \";\n        top: 1px;\n        margin-left: -5px;\n        border-top-width: 0;\n        border-bottom-color: #ffffff;\n}\n.v-popover[x-placement^=\"left\"] {\n    padding: 0 8px 0 5px;\n}\n.v-popover[x-placement^=\"left\"] .has-arrow, .v-popover[x-placement^=\"left\"] .has-arrow:after {\n      top: 0px;\n      margin-top: -5px;\n      right: 3px;\n      border-width: 5px 0 5px 5px;\n      border-left-color: #d6d7d8;\n}\n.v-popover[x-placement^=\"left\"] .has-arrow:after {\n        content: \" \";\n        right: 1px;\n        border-right-width: 0;\n        border-left-color: #ffffff;\n        bottom: -5px;\n}\n.v-popover-inner {\n  width: 100%;\n  background-color: white;\n  background-clip: padding-box;\n  border-radius: 2px;\n  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);\n  white-space: nowrap;\n  border: 1px solid #d6d7d8;\n}\n.v-popover-inner .has-title {\n    padding: 10px 0.5rem 5px 0.5rem;\n    position: relative;\n    font-size: 14px;\n    font-weight: bold;\n    display: block;\n    line-height: 1em;\n    background-color: #ffffff;\n}\n.v-popover-inner .has-title:after {\n      content: \"\";\n      display: none;\n      height: 1px;\n      position: absolute;\n      left: 0;\n      right: 0;\n      bottom: 0;\n      background-color: #e9eaec;\n}\n.v-popover-body {\n  padding: 0 0.5rem 0.5rem 0.5rem;\n}\n.v-popover-body .has-content {\n    word-break: break-all;\n    white-space: normal;\n    overflow: auto;\n    color: #495060;\n}\n.popover-fade-enter-active {\n  -webkit-animation: v-kf-fade-in .5s;\n          animation: v-kf-fade-in .5s;\n}\n.popover-fade-leave-active {\n  -webkit-animation: v-kf-fade-out .2s;\n          animation: v-kf-fade-out .2s;\n}\n.demo-box {\n  padding: 25px 0;\n}\n.demo-box.has-pad-sm {\n    padding: 5px 0;\n}\n.demo-box a, .demo-box button, .demo-box input {\n    font-weight: inherit;\n    color: inherit;\n}\n.demo-box.sd-with-icon-bg .has-icon {\n    background-color: whitesmoke;\n}\n.demo-box .has-icon.is-medium .iconfont {\n    font-size: 1.5rem;\n}\n.demo-box .has-icon.is-large .iconfont {\n    font-size: 2.5rem;\n}\n.demo-box.sd-form-example-cnt {\n    padding: 30px 25px !important;\n    width: 95%;\n    border: 1px solid #eeeeee;\n    border-radius: 4px;\n    position: relative;\n    margin: 40px 0;\n}\n.demo-box.sd-form-example-cnt:after {\n      content: \"Form Example\";\n      position: absolute;\n      top: -10px;\n      left: 15px;\n      background-color: #f9da00;\n      color: #393f48;\n      font-size: 12px;\n      line-height: 1em;\n      padding: 4px 5px;\n      border-radius: 2px;\n}\np.v-help {\n  line-height: normal;\n  font-size: 0.75rem;\n  margin-top: 0.25rem;\n}\np.v-control {\n  margin: 0;\n}\np.v-modal-card-title {\n  margin: 0;\n}\n.markdown-section figure, .markdown-section p, .markdown-section ul, .markdown-section ol {\n  margin: 0.5em 0;\n}\n.markdown-section ul, .markdown-section ol {\n  padding-left: 1rem;\n}\n.sd-loading {\n  font-size: 2rem;\n  -webkit-animation: v-kf-spin-around 500ms infinite linear;\n          animation: v-kf-spin-around 500ms infinite linear;\n  border: 2px solid #dbdbdb;\n  border-radius: 290486px;\n  border-right-color: transparent;\n  border-top-color: transparent;\n  content: \"\";\n  display: block;\n  box-sizing: border-box;\n  height: 1em;\n  width: 1em;\n  position: relative;\n}\n.__too-long-hl-code {\n  max-height: 180px;\n  overflow: scroll;\n  opacity: .6;\n  cursor: pointer;\n  position: relative;\n  transition: opacity .5s;\n}\n.__too-long-hl-code:after {\n    content: \"点击展开\";\n}\n.__too-long-hl-code:hover {\n    opacity: 1;\n}\n"],"sourceRoot":"webpack://"}]);
 
 // exports
 
 
 /***/ }),
-/* 159 */
+/* 154 */
 /*!********************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-36d8ce4c"}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./pages/summary.vue ***!
   \********************************************************************************************************************************************************************/
@@ -29572,9 +27957,13 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "to": "/pages/components/tab.md"
     }
-  }, [_vm._v("Tabs")])], 1)])]), _vm._v(" "), _vm._m(0), _vm._v(" "), _c('li', [_c('p', [_vm._v("Advanced(进阶)")]), _vm._v(" "), _c('ul', [_c('li', [_vm._v("Customize")]), _vm._v(" "), _c('li', [_c('router-link', {
+  }, [_vm._v("Tabs")])], 1)])]), _vm._v(" "), _vm._m(0), _vm._v(" "), _c('li', [_c('p', [_vm._v("Advanced(进阶)")]), _vm._v(" "), _c('ul', [_c('li', [_c('router-link', {
     attrs: {
-      "to": "/pages/examples.md"
+      "to": "/pages/customize.md"
+    }
+  }, [_vm._v("Customize")])], 1), _vm._v(" "), _c('li', [_c('router-link', {
+    attrs: {
+      "to": "/pages/examples2.md"
     }
   }, [_vm._v("Examples")])], 1)])])])])
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -29591,7 +27980,7 @@ if (false) {
 }
 
 /***/ }),
-/* 160 */
+/* 155 */
 /*!***********************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-84f85d80"}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./components/summary_container.vue ***!
   \***********************************************************************************************************************************************************************************/
