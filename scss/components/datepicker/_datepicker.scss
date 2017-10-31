@@ -1,98 +1,80 @@
-.sav-datetime-picker {
-  position: relative;
-  display: inline-block;
-  font-family: "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei";
-  -webkit-font-smoothing: antialiased;
-  color: #333;
+.#{$ns}-datepicker {
+  font-size: 0.875 * $size-unit;
 
-  * {
-    -webkit-user-select:​ none {}
-
-    user-select:​ none {}
-  }
-
-  .picker-wrap {
-    position: absolute;
-    z-index: 1000;
-    width: 238px;
-    height: 280px;
-    margin-top: 2px;
-    background-color: #fff;
-    box-shadow: 0 0 6px #ccc;
-  }
-
-  table {
+  .#{$ns}-dropdown,
+  .#{$ns}-dropdown-trigger {
     width: 100%;
-    border-collapse: collapse;
-    border-spacing: 0;
-    text-align: center;
-    font-size: 13px;
   }
 
-  tr {
-    height: 34px;
-    border: 0 none;
+  .#{$ns}-dropdown-item {
+    font-size: inherit;
   }
 
-  th, td {
-    user-select: none;
-    width: 34px;
-    height: 34px;
-    padding: 0;
-    border: 0 none;
-    line-height: 34px;
-    text-align: center;
+  &-header {
+    padding-bottom: 0.875 * $size-unit;
+    margin-bottom: 0.875 * $size-unit;
+    border-bottom: 1px solid $grey-lighter;
   }
 
-  td {
-    cursor: pointer;
+  &-footer {
+    padding-top: 0.875 * $size-unit;
+    border-top: 1px solid $grey-lighter;
+  }
 
-    &:hover {
-      background-color: #f0f0f0;
+  &-table {
+    display: table;
+    margin: 0 auto 0.875 * $size-unit auto;
+    .table-cell {
+      text-align: center;
+      vertical-align: middle;
+      display: table-cell;
+      border-radius: $radius;
+      padding: 0.5 * $size-unit 0.75 * $size-unit;
     }
-
-    &.date-pass, &.date-future {
-      color: #aaa;
+    .table-header {
+      @extend .#{$ns}-datepicker-header;
+      display: table-header-group;
+      .table-cell {
+        color: $grey;
+        font-weight: $weight-semibold;
+      }
     }
-
-    &.date-active {
-      background-color: #ececec;
-      color: #3bb4f2;
+    .table-body {
+      display: table-row-group;
+      .table-row {
+        display: table-row;
+        .table-cell {
+          &.is-unselectable {
+            color: $grey-light;
+          }
+          &.is-today {
+            border: solid 1px rgba($primary, 0.5);
+          }
+          &.is-selectable {
+            color: $grey-dark;
+            &:hover:not(.is-selected),
+            &:focus:not(.is-selected) {
+              background-color: $background;
+              color: $black;
+              cursor: pointer;
+            }
+          }
+          &.is-selected {
+            background-color: $primary;
+            color: $primary-invert;
+          }
+        }
+      }
     }
   }
 
-  .date-head {
-    background-color: #fff;
-    text-align: center;
-    color: #333;
-    font-size: 14px;
+  &.is-small {
+    @include control-small;
   }
-
-  .date-days {
-    color: #3bb4f2;
-    font-size: 14px;
+  &.is-medium {
+    @include control-medium;
   }
-
-  .show-year {
-    display: inline-block;
-    min-width: 62px;
-    vertical-align: middle;
-  }
-
-  .show-month {
-    display: inline-block;
-    min-width: 28px;
-    vertical-align: middle;
-  }
-
-  .btn-prev, .btn-next {
-    cursor: pointer;
-    display: inline-block;
-    padding: 0 5px;
-    vertical-align: middle;
-  }
-
-  .btn-prev:hover, .btn-next:hover {
-    background: #f0f0f0;
+  &.is-large {
+    @include control-large;
   }
 }

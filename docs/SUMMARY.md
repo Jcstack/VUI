@@ -35,7 +35,7 @@
 
 * Advanced(进阶)
   * [Customize](customize.md)
-  * [Examples](examples2.md)
+  * [Examples](components/datepicker.md)
 
 <style lang="scss">
   @import url("https://cdn.bootcss.com/animate.css/3.5.2/animate.css");
