@@ -82,7 +82,7 @@
         m = moment()
       }
 
-      this._syncYearAndMonth(m)
+      this._syncLocalYearAndMonth(m)
     },
 
     watch: {
@@ -90,12 +90,12 @@
         const m = moment(val)
         if (!val || !m.isValid()) return
 
-        // @todo sync year/month
         const {scalendar} = this.$refs.datepicker.$options
 
-        this.inputYear = m.year()
-        this.inputMonth = m.month() + 1
+        // update year/month picker
+        this._syncLocalYearAndMonth(m)
 
+        // update child-datepicker date
         scalendar.date = m
       },
 
@@ -125,7 +125,7 @@
     },
 
     methods: {
-      _syncYearAndMonth (m) {
+      _syncLocalYearAndMonth (m) {
         this.inputYear = m.year()
         this.inputMonth = (m.month() + 1)
       },
