@@ -16,7 +16,7 @@
 
     data () {
       return {
-        date: ''
+        date: '1999-09-15'
       }
     },
 

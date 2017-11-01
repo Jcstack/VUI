@@ -1,12 +1,12 @@
 <template>
   <div class="v-datepicker-table">
     <div class="table-header">
-            <span class="table-cell" v-for="it in weekdaysData">
+            <span class="table-cell" v-for="it in weeks">
               {{ it }}
             </span>
     </div>
     <div class="table-body">
-      <div class="table-row" v-for="row in rowsData">
+      <div class="table-row" v-for="row in days">
         <div class="table-cell"
              :class="{
                     'is-unselectable': el.disabled,
@@ -32,11 +32,12 @@
     mixins: [emitter],
 
     props: {
-      weekdaysData: {
+      weeks: {
         type: Array,
+        required: true,
         'default': Array
       },
-      rowsData: {
+      days: {
         type: Array,
         'default': Array
       },

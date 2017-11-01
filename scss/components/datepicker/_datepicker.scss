@@ -11,7 +11,9 @@
   }
 
   &-header {
-    padding-bottom: 0.875 * $size-unit;
+    padding-bottom: 0.5 * $size-unit;
+    padding-left: 0.5 * $size-unit;
+    padding-right: 0.5 * $size-unit;
     margin-bottom: 0.875 * $size-unit;
     border-bottom: 1px solid $grey-lighter;
   }
@@ -24,6 +26,7 @@
   &-table {
     display: table;
     margin: 0 auto 0.875 * $size-unit auto;
+    padding: 6px;
     .table-cell {
       text-align: center;
       vertical-align: middle;
@@ -76,5 +79,13 @@
   }
   &.is-large {
     @include control-large;
+  }
+
+  &.has-input {
+    .#{$ns}-datepicker-header {
+      .v-field {
+        justify-content: space-between;
+      }
+    }
   }
 }

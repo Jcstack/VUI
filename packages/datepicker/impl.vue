@@ -1,10 +1,12 @@
 <template>
   <div class="v-datepicker-panel">
+    <slot name="header"></slot>
     <v-datepicker-table
-        :weekdays-data="tableWeekdaysData"
-        :rows-data="tableRowsData"
+        :weeks="tableWeekdaysData"
+        :days="tableRowsData"
         :active-date="selectedDate"
     ></v-datepicker-table>
+    <slot name="footer"></slot>
   </div>
 </template>
 
