@@ -38,6 +38,33 @@
   <button @click="_addRow">Add new Row</button>
 </div>
 
+
+<div class="demo-box">
+  <v-form>
+    <v-field
+        label="username"
+        message="我是帮助信息"
+    >
+      <v-input :has-counter="true"
+               :maxlength="10"
+               type="textarea"
+               v-model="formData.note"
+      ></v-input>
+    </v-field>
+    <v-field
+        type="danger"
+    >
+      <v-select
+          placeholder="--cities--"
+          v-model="formData.tag"
+      >
+        <option value="666">666</option>
+        <option value="888">888</option>
+      </v-select>
+    </v-field>
+  </v-form>
+</div>
+
 <div class="demo-box">
   <h2>{{ formData.isCheap }}</h2>
   <v-switch
@@ -52,6 +79,11 @@
   import Dropdown, { DropdownItem } from 'packages/dropdown'
   import VTable from 'packages/table'
   import VSwitch from 'packages/switch'
+  import VForm, {
+    Field as VField,
+    Input as VInput,
+    Select as VSelect
+  } from 'packages/form'
 
   export default {
 
@@ -59,7 +91,9 @@
       return {
         formData: {
           price: '请选择价格',
-          isCheap: true
+          isCheap: true,
+          note: 'hello',
+          tag: null
         },
         tableCols: [ '__select|', 'first', 'second|第二'],
         tableRows: [
@@ -83,7 +117,9 @@
     components: {
       Dropdown,
       DropdownItem,
-      VTable, VSwitch
+      VTable, VSwitch,
+      VForm, VField, VInput,
+      VSelect
     }
   }
 </script>
