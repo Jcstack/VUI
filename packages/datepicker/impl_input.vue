@@ -109,7 +109,7 @@
       },
 
       /**
-       * @param month {Number} `1` base
+       * @param month {Number} `1` started index base
        * @param bMonth
        */
       'inputMonth' (month, bMonth) {

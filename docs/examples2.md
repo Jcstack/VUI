@@ -38,16 +38,28 @@
   <button @click="_addRow">Add new Row</button>
 </div>
 
+<div class="demo-box">
+  <h2>{{ formData.isCheap }}</h2>
+  <v-switch
+      color="info"
+      v-model="formData.isCheap"
+  >
+    <strong> {{ formData.isCheap ? '' : '不' }}符合饭菜标准 </strong>
+  </v-switch>
+</div>
+
 <script>
   import Dropdown, { DropdownItem } from 'packages/dropdown'
   import VTable from 'packages/table'
+  import VSwitch from 'packages/switch'
 
   export default {
 
     data () {
       return {
         formData: {
-          price: '请选择价格'
+          price: '请选择价格',
+          isCheap: true
         },
         tableCols: [ '__select|', 'first', 'second|第二'],
         tableRows: [
@@ -71,7 +83,7 @@
     components: {
       Dropdown,
       DropdownItem,
-      VTable
+      VTable, VSwitch
     }
   }
 </script>
