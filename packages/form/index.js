@@ -7,6 +7,8 @@ import Form from './impl.vue'
 import Field from './impl_field.vue'
 import Input from './impl_input.vue'
 import Select from './impl_select.vue'
+import Checkbox from './impl_checkbox.vue'
+import Radio from './impl_radio.vue'
 
 Form.install = function (Vue) {
   Vue.component(Form.name, Form)
@@ -18,5 +20,6 @@ Form.install = function (Vue) {
 export {
   Form as default,
   Field, Input,
-  Select
+  Select, Checkbox,
+  Radio
 }

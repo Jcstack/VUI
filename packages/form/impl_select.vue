@@ -63,19 +63,10 @@
     },
 
     watch: {
-      /**
-       * When v-model is changed:
-       *   1. Set the selected option.
-       *   2. If it's invalid, validate again.
-       */
       value (value) {
         this.selected = value
       },
-      /**
-       * When selected:
-       *   1. Emit input event to update the user v-model.
-       *   3. If it's invalid, validate again.
-       */
+
       selected (value) {
         this.$emit('input', value)
       }

@@ -62,6 +62,24 @@
         <option value="888">888</option>
       </v-select>
     </v-field>
+    <v-field>
+      <div class="v-control">
+        <v-checkbox
+            v-model="formData.schoolCheck"
+            name="a"
+            native-value="香港中文大学">香港中文大学</v-checkbox>
+        <v-checkbox
+            v-model="formData.schoolCheck"
+            name="b"
+            native-value="香港中文大学2">香港中文大学2</v-checkbox>
+      </div>
+    </v-field>
+    <v-field>
+      <div class="v-control">
+        <v-radio v-model="formData.isOwn" native-value="1">是</v-radio>
+        <v-radio v-model="formData.isOwn" native-value="0">否</v-radio>
+      </div>
+    </v-field>
   </v-form>
 </div>
 
@@ -82,7 +100,9 @@
   import VForm, {
     Field as VField,
     Input as VInput,
-    Select as VSelect
+    Select as VSelect,
+    Checkbox as VCheckbox,
+    Radio as VRadio
   } from 'packages/form'
 
   export default {
@@ -93,7 +113,9 @@
           price: '请选择价格',
           isCheap: true,
           note: 'hello',
-          tag: null
+          tag: null,
+          schoolCheck: [],
+          isOwn: null
         },
         tableCols: [ '__select|', 'first', 'second|第二'],
         tableRows: [
@@ -119,7 +141,7 @@
       DropdownItem,
       VTable, VSwitch,
       VForm, VField, VInput,
-      VSelect
+      VSelect, VCheckbox, VRadio
     }
   }
 </script>

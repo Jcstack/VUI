@@ -69,15 +69,10 @@
     },
 
     computed: {
-      /**
-       * Check if have any icon in the right side.
-       */
       hasIconRight () {
         return this.passwordReveal || this.loading || this.statusType
       },
-      /**
-       * Position of the icon or if it's both sides.
-       */
+
       iconPosition () {
         if (this.icon && this.hasIconRight) {
           return 'has-icons-left has-icons-right'
@@ -87,9 +82,7 @@
           return 'has-icons-left'
         }
       },
-      /**
-       * Icon name (MDI) based on the type.
-       */
+
       statusTypeMDIcon () {
         switch (this.statusType) {
           case 'is-success':
@@ -102,21 +95,15 @@
             return 'warning'
         }
       },
-      /**
-       * Check if have any message prop from parent if it's a Field.
-       */
+
       hasMessage () {
         return this.$parent.newMessage
       },
-      /**
-       * Current password-reveal icon name.
-       */
+
       passwordVisibleIcon () {
         return !this.isPasswordVisible ? 'visibility' : 'visibility_off'
       },
-      /**
-       * Get value length
-       */
+
       valueLength () {
         return this.newValue ? this.newValue.length : 0
       }
@@ -131,10 +118,7 @@
       value (value) {
         this.newValue = value
       },
-      /**
-       * Update user's v-model and validate again whenever
-       * internal value is changed.
-       */
+
       newValue (value) {
         this.$emit('input', value)
       }
