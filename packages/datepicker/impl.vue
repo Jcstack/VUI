@@ -105,6 +105,14 @@
       }
     },
 
+    watch: {
+      'date' (val) {
+        const scalendar = this.$options.scalendar
+
+        scalendar.date = val
+      }
+    },
+
     computed: {
       selectedDateBag () {
         let bag = {}

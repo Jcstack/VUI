@@ -32,6 +32,9 @@
               </div>
             </div>
             <div class="v-control">
+              <button class="v-btn" @click="$emit('input', new Date())">今天</button>
+            </div>
+            <div class="v-control">
               <div class="v-select">
                 <select v-model="inputMonth">
                   <option :value="el" v-for="el in months">{{el}}月份</option>
@@ -65,7 +68,7 @@
 
     props: {
       value: {
-        type: String,
+        type: [String, Date],
         required: true,
         'default': null
       },
@@ -90,13 +93,8 @@
         const m = moment(val)
         if (!val || !m.isValid()) return
 
-        const {scalendar} = this.$refs.datepicker.$options
-
         // update year/month picker
         this._syncLocalYearAndMonth(m)
-
-        // update child-datepicker date
-        scalendar.date = m
       },
 
       'inputYear' (year, bYear) {
@@ -136,6 +134,8 @@
         }
       }
     },
+
+    computed: {},
 
     components: {
       VDropdown,
