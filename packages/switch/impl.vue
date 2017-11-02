@@ -9,7 +9,7 @@
          @mouseup="isMouseDown = false"
          @mouseout="isMouseDown = false"
          @blur="isMouseDown = false">
-    <input v-model="newValue"
+    <input v-model="localValue"
            type="checkbox"
            :name="name"
            :disabled="disabled"
@@ -43,7 +43,7 @@
     },
     data () {
       return {
-        newValue: this.value,
+        localValue: this.value,
         isMouseDown: false
       }
     },
@@ -52,12 +52,12 @@
        * When v-model change, set internal value.
        */
       value (value) {
-        this.newValue = value
+        this.localValue = value
       },
       /**
        * Emit input event to update the user v-model.
        */
-      newValue (value) {
+      localValue (value) {
         this.$emit('input', value)
       }
     }

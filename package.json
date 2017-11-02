@@ -33,16 +33,17 @@
     "browser-env": "^3.2.1",
     "font-awesome": "^4.7.0",
     "fs-extra": "^3.0.1",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
     "node-sass": "^4.5.3",
     "require-extension-hooks": "^0.3.2",
     "require-extension-hooks-babel": "^0.1.1",
     "require-extension-hooks-vue": "^0.4.1",
+    "standard": "^10.0.3",
     "standard-sass": "0.0.6",
     "vue": "^2.5.2",
     "vue-router": "^2.5.3",
-    "watch-cli": "^0.2.1",
-    "gulp": "^3.9.1",
-    "gulp-clean": "^0.3.2"
+    "watch-cli": "^0.2.1"
   },
   "dependencies": {
     "is-type-of": "^1.2.0",

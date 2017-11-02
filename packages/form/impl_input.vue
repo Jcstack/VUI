@@ -10,10 +10,10 @@
            ref="input"
            class="v-input"
            :class="[statusType, sizeModifier]"
-           :type="newType"
+           :type="localType"
            :autocomplete="autocomplete"
            :maxlength="maxlength"
-           :value="newValue"
+           :value="localValue"
            @input="_handleInput"
            @blur="$emit('blur', $event)"
            @focus="$emit('focus', $event)">
@@ -23,7 +23,7 @@
               class="v-textarea"
               :class="[statusType, sizeModifier]"
               :maxlength="maxlength"
-              :value="newValue"
+              :value="localValue"
               v-bind="$attrs"
               @input="_handleInput"
               @blur="$emit('blur', $event)"
@@ -59,8 +59,8 @@
 
     data () {
       return {
-        newValue: this.value,
-        newType: this.type, // maybe write
+        localValue: this.value,
+        localType: this.type, // maybe write
         isPasswordVisible: false,
         _elementRef: this.type === 'textarea'
           ? 'textarea'
@@ -97,7 +97,7 @@
       },
 
       hasMessage () {
-        return this.$parent.newMessage
+        return this.$parent.localMessage
       },
 
       passwordVisibleIcon () {
@@ -105,7 +105,7 @@
       },
 
       valueLength () {
-        return this.newValue ? this.newValue.length : 0
+        return this.localValue ? this.localValue.length : 0
       }
     },
 
@@ -116,10 +116,10 @@
        *   2. If it's invalid, validate again.
        */
       value (value) {
-        this.newValue = value
+        this.localValue = value
       },
 
-      newValue (value) {
+      localValue (value) {
         this.$emit('input', value)
       }
     },
@@ -131,7 +131,7 @@
        */
       _togglePasswordVisibility () {
         this.isPasswordVisible = !this.isPasswordVisible
-        this.newType = this.isPasswordVisible ? 'text' : 'password'
+        this.localType = this.isPasswordVisible ? 'text' : 'password'
         this.$nextTick(() => {
           this.$refs.input.focus()
         })
@@ -141,7 +141,7 @@
        * before ui update, helps when using masks (Cleavejs and potentially others).
        */
       _handleInput (event) {
-        this.$nextTick(() => { this.newValue = event.target.value })
+        this.$nextTick(() => { this.localValue = event.target.value })
       }
     }
   }

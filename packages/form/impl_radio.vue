@@ -5,7 +5,7 @@
          :disabled="disabled"
          :tabindex="disabled ? false : 0"
          @keydown.prevent.enter.space="$refs.label.click()">
-    <input v-model="newValue"
+    <input v-model="localValue"
            type="radio"
            :disabled="disabled"
            :name="name"
@@ -30,15 +30,15 @@
 
     data () {
       return {
-        newValue: this.value
+        localValue: this.value
       }
     },
 
     watch: {
       value (value) {
-        this.newValue = value
+        this.localValue = value
       },
-      newValue (value) {
+      localValue (value) {
         // only trigger input event
         if (value === this.nativeValue) {
           this.$emit('input', value)
