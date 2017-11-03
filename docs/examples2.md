@@ -1,6 +1,17 @@
 # Examples
 
 <div class="demo-box">
+  <v-pagination
+      :page.sync="page"
+      :total="99"
+      size="small"
+      align="centered"
+      @on-page="_handleOnPage"
+      ref="pager"
+  ></v-pagination>
+</div>
+
+<div class="demo-box">
   <dropdown magic="right" v-model="formData.price">
     <button
         slot="trigger"
@@ -97,6 +108,7 @@
   import Dropdown, { DropdownItem } from 'packages/dropdown'
   import VTable from 'packages/table'
   import VSwitch from 'packages/switch'
+  import VPagination from 'packages/pagination'
   import VForm, {
     Field as VField,
     Input as VInput,
@@ -117,6 +129,7 @@
           schoolCheck: [],
           isOwn: null
         },
+        page: 6,
         tableCols: [ '__select|', 'first', 'second|第二'],
         tableRows: [
           {
@@ -133,6 +146,14 @@
           first: 'cc',
           second: 'dd'
         })
+      },
+
+      _handleOnPage (page) {
+        console.debug('async ...', page)
+        this.$refs.pager.disabled = true
+        setTimeout(n => {
+          this.$refs.pager.disabled = false
+        }, 3000)
       }
     },
 
@@ -141,7 +162,8 @@
       DropdownItem,
       VTable, VSwitch,
       VForm, VField, VInput,
-      VSelect, VCheckbox, VRadio
+      VSelect, VCheckbox, VRadio,
+      VPagination
     }
   }
 </script>
