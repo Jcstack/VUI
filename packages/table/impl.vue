@@ -3,7 +3,7 @@
     <thead>
     <tr>
       <th v-for="cc in thColumns"
-          @click="_headClick(cc)"
+          @click="_headClick(cc, $event)"
       >
 
         <slot v-if="`${cc[0].indexOf('__')}` == -1"
@@ -190,7 +190,7 @@
         this.sortableState.activeColumn = col
         this.$emit('order-by-column', col)
       },
-      _headClick (col) {
+      _headClick (col, e) {
         this.sortable && this._orderByColumn(col)
       }
     }
