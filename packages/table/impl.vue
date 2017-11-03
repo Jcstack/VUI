@@ -91,7 +91,7 @@
         thColumns: [],
         tdColumns: [],
         sortableState: null,
-        vFeatState: {}
+        featureState: {}
       }
     },
 
@@ -102,16 +102,16 @@
         }
       }
 
-      this._preparedInternalColumns()
+      this._preparedLocalColumns()
 
       // `__` feature
-      this.vFeatState.select_all_initialized = false
+      this.featureState.select_all_initialized = false
       this._supportedPrefixFeature('__select')
     },
 
     watch: {
       'columns' () {
-        this._preparedInternalColumns()
+        this._preparedLocalColumns()
       },
       'rows' () {
         this._supportedPrefixFeature('__select')
@@ -123,7 +123,7 @@
         get () {
           let switcher = false
 
-          if (this.vFeatState.select_all_initialized && this.rows.length) {
+          if (this.featureState.select_all_initialized && this.rows.length) {
             switcher = this.rows.every(n => {
               return Boolean(n.v__selected)
             })
@@ -134,7 +134,7 @@
 
         set (switcher) {
           console.log(switcher)
-          if (this.vFeatState.select_all_initialized && this.rows.length) {
+          if (this.featureState.select_all_initialized && this.rows.length) {
             this.rows.forEach(n => {
               n.v__selected = switcher
             })
@@ -151,8 +151,8 @@
             case 'select':
               this._injectRowItemField('v__selected', false)
 
-              if (!this.vFeatState.select_all_initialized) {
-                this.$set(this.vFeatState, 'select_all_initialized', true)
+              if (!this.featureState.select_all_initialized) {
+                this.$set(this.featureState, 'select_all_initialized', true)
                 this.$on('v-select-all', (switcher) => {
                   this.v__selected_all = switcher
                 })
@@ -169,7 +169,7 @@
           }
         })
       },
-      _preparedInternalColumns () {
+      _preparedLocalColumns () {
         this.thColumns = []
         this.tdColumns = []
         Array.isArray(this.columns) && this.columns.forEach((it) => {
