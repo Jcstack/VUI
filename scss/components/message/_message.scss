@@ -15,7 +15,6 @@ $message-body-pre-background-color: $white !default;
 $message-body-pre-code-background-color: transparent !default;
 
 $message-popup-top: 1em !default;
-$message-popup-zindex: 2010 !default;
 $message-popup-body-padding: 0.5em 1em !default;
 
 .#{$ns}-message {
@@ -29,7 +28,7 @@ $message-popup-body-padding: 0.5em 1em !default;
     color: currentColor;
   }
 
-  a:not(.button):not(.tag) {
+  a:not(.#{$ns}-btn):not(.tag) {
     color: currentColor;
     text-decoration: underline;
   }
@@ -116,7 +115,7 @@ $message-popup-body-padding: 0.5em 1em !default;
   position: fixed;
   top: $message-popup-top;
   //left: 50%;
-  z-index: $message-popup-zindex;
+  z-index: $zindex-message;
   //transform: translateX(-50%);
   border-radius: $message-body-radius;
   //max-width: 60vw;

@@ -3,7 +3,6 @@ $dropdown-content-arrow: $link !default;
 $dropdown-content-offset: 4px !default;
 $dropdown-content-radius: $radius !default;
 $dropdown-content-shadow: 0 2px 3px rgba($black, 0.1), 0 0 0 1px rgba($black, 0.1) !default;
-$dropdown-content-z: 20 !default;
 
 $dropdown-item-color: $grey-dark !default;
 $dropdown-item-hover-color: $black !default;
@@ -49,7 +48,7 @@ $dropdown-divider-background-color: $border !default;
   padding-top: $dropdown-content-offset;
   position: absolute;
   top: 100%;
-  z-index: $dropdown-content-z;
+  z-index: $zindex-dropdown;
 }
 
 .#{$ns}-ani-menu {

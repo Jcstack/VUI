@@ -9,7 +9,7 @@ $popover-arrow-outer-width: $popover-arrow-width + 1 !default;
   font-size: 12px;
   line-height: 1.5;
   position: absolute;
-  z-index: 1060;
+  z-index: $zindex-popover;
   min-width: 150px;
 
   .has-arrow {

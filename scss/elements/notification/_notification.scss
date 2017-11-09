@@ -1,7 +1,6 @@
 $notification-background-color: $background !default;
 $notification-radius: $radius !default;
 $notification-padding: 1.25rem 2.5rem 1.25rem 1.5rem !default;
-$notification-popup-zindex: 1010 !default;
 
 .#{$ns}-notification {
   @include block-row;
@@ -11,7 +10,7 @@ $notification-popup-zindex: 1010 !default;
   padding: $notification-padding;
   position: relative;
 
-  a:not(.button) {
+  a:not(.#{$ns}-btn) {
     color: currentColor;
     text-decoration: underline;
   }
@@ -60,11 +59,11 @@ $notification-popup-zindex: 1010 !default;
   box-shadow: 0 0 3px rgba(0, 0, 0, .04), 0 1px 4px rgba(0, 0, 0, .15);
   transition: opacity 0.3s, transform .3s, right .3s, top 0.4s;
   overflow: hidden;
-  z-index: $notification-popup-zindex;
+  z-index: $zindex-notification;
   max-width: 480px;
 
   > .#{$ns}-notification {
-    padding-top: 1rem;
+    padding-top: $size-unit;
   }
 
   .has-title {
@@ -74,6 +73,6 @@ $notification-popup-zindex: 1010 !default;
   }
 
   .has-content {
-    padding-top: 0.25rem;
+    padding-top: 0.25 * $size-unit;
   }
 }
