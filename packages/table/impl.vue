@@ -61,6 +61,10 @@
 </template>
 
 <script>
+
+  const ORDER_ASC = 'asc'
+  const ORDER_DESC = 'desc'
+
   export default {
     name: 'VTable',
 
@@ -97,9 +101,7 @@
 
     created () {
       if (this.sortable) {
-        this.sortableState = {
-          activeColumn: false,
-        }
+        this.sortableState = {}
       }
 
       this._preparedLocalColumns()
@@ -145,6 +147,13 @@
     },
 
     methods: {
+      _makeSortableColumnState (column, isDesc = true) {
+        return {
+          [`${column.toLowerCase()}`]: {
+            isDesc
+          }
+        }
+      },
       _supportedPrefixFeature (feat) {
         if (feat && !!~this.tdColumns.indexOf(feat)) {
           switch (feat.replace(/__/g, '')) {
@@ -186,12 +195,30 @@
           }
         })
       },
-      _orderByColumn (col) {
-        this.sortableState.activeColumn = col
-        this.$emit('order-by-column', col)
+      _orderByColumn (col, toggleDesc = false) {
+        const k = col.toLowerCase()
+
+        if (toggleDesc) {
+          let s = this.sortableState[k]
+
+          if (s == null) {
+            s = this._makeSortableColumnState(col)[k]
+          }
+
+          // toggle order state
+          s.isDesc = !s.isDesc
+
+          if (this.sortableState[k] !== s) {
+            this.sortableState[k] = s
+          }
+        }
+
+        this.$emit('order-by-column', this.sortableState, k)
       },
-      _headClick (col, e) {
-        this.sortable && this._orderByColumn(col)
+      _headClick (col) {
+        if (this.sortable) {
+          this._orderByColumn(col, true)
+        }
       }
     }
   }
