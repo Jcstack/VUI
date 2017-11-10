@@ -1,5 +1,3 @@
-$badge-bd-color: #ed3f14 !default;
-
 .#{$ns}-badge {
   position: relative;
   display: inline-block;
@@ -23,7 +21,7 @@ $badge-bd-color: #ed3f14 !default;
     height: 8px;
     min-width: 8px;
     border-radius: 100%;
-    background: $badge-bd-color;
+    background: $danger;
     z-index: 10;
     box-shadow: 0 0 0 1px $is-text-light-color;
   }
@@ -37,7 +35,7 @@ $badge-bd-color: #ed3f14 !default;
     height: 20px;
     border-radius: 10px;
     min-width: 20px;
-    background: $badge-bd-color;
+    background: $danger;
     border: 1px solid transparent;
     color: $is-text-light-color;
     line-height: 18px;
