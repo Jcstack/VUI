@@ -42,6 +42,7 @@
     "standard": "^10.0.3",
     "standard-sass": "0.0.6",
     "vue": "^2.5.3",
+    "vue-loader": "^13.5.0",
     "vue-router": "^2.5.3",
     "watch-cli": "^0.2.1"
   },

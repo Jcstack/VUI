@@ -45,6 +45,33 @@ export const once = function (el, event, fn) {
   on(el, event, listener)
 }
 
+// Determine if an element is an HTML Element
+export function isElement (el) {
+  return el && el.nodeType === Node.ELEMENT_NODE
+}
+
+// Determine if an HTML element is visible - Faster than CSS check
+export function isVisibleInBody (el) {
+  return isElement(el) &&
+    document.body.contains(el) &&
+    el.getBoundingClientRect().height > 0 &&
+    el.getBoundingClientRect().width > 0
+}
+
+// Determine if an element is disabled
+export function isDisabled (el) {
+  return !isElement(el) ||
+    el.disabled ||
+    el.classList.contains('disabled') ||
+    Boolean(el.getAttribute('disabled'))
+}
+
+// Cause/wait-for an element to reflow it's content (adjusting it's height/width)
+export function reflow (el) {
+  // requesting an elements offsetHeight will trigger a reflow of the element content
+  return isElement(el) && el.offsetHeight
+}
+
 /* istanbul ignore next */
 export function hasClass (el, cls) {
   if (!el || !cls) return false
