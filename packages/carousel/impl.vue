@@ -1,7 +1,12 @@
 <template>
-  <div class="v-carousel">
+  <div class="v-carousel"
+       @mouseenter="pause"
+       @mouseleave="restart"
+       @focusin="pause"
+       @focusout="restart"
+  >
     <div class="v-carousel-inner">
-      <!-- a item -->
+      <!-- an item -->
       <div v-for="(el, $index) in slides" class="v-carousel-item"
            :class="[
              _transitionModeCls($index),
@@ -12,20 +17,38 @@
       >
         <div class="item-inner"
         >
-          <strong>
-            {{ $index }}
-          </strong>
+          <slot name="item-body"
+                :item="el"
+                :index="$index"
+          >
+            <strong>
+              {{ $index }}
+            </strong>
+          </slot>
         </div>
       </div>
     </div>
-    <a class="v-carousel-control-prev" @click="prev">Left</a>
-    <a class="v-carousel-control-next" @click="next">right</a>
+    <template v-if="hasControls">
+      <a class="v-carousel-control-prev" @click="prev"></a>
+      <a class="v-carousel-control-next" @click="next"></a>
+    </template>
+    <template v-if="hasIndicators">
+      <ul class="v-carousel-indicators">
+        <li v-for="(el, $index) in slides"
+            @click="setSlide($index)"
+            :key="`slide_${$index}`"
+            :class="{ 'is-active': $index === index }"
+        >
+          {{ $index }}
+        </li>
+      </ul>
+    </template>
   </div>
 </template>
 
 <script>
   import { on, off, reflow } from '../../sources/utils/dom'
-  // Transition Event names
+
   const TransitionEndEvents = {
     WebkitTransition: 'webkitTransitionEnd',
     MozTransition: 'transitionend',
@@ -33,7 +56,6 @@
     transition: 'transitionend'
   }
 
-  // Slide directional classes
   const DIRECTION = {
     next: {
       outClass: 'to-left',
@@ -48,14 +70,13 @@
   // Fallback Transition duration (with a little buffer) in ms
   const TRANS_DURATION = 600 + 50
 
-  // Return the browser specific transitionend event name
   function getTransitionEndEvent (el) {
     for (const name in TransitionEndEvents) {
       if (el.style[name] !== undefined) {
         return TransitionEndEvents[name]
       }
     }
-    // fallback
+
     return null
   }
 
@@ -63,26 +84,49 @@
     name: 'VCarousel',
 
     props: {
-      value: [String, Number]
+      value: [String, Number],
+      hasControls: Boolean,
+      hasIndicators: {
+        type: Boolean,
+        'default': true
+      },
+      interval: {
+        type: Number,
+        'default': 5000
+      },
+      items: {
+        type: Array,
+        required: true
+      }
     },
 
     data () {
       return {
         isSliding: false,
         index: this.value || 0,
-        slides: [1, 2, 3, 4, 5],
+        slides: this.items,
         transitionEndEvent: null,
         transitionState: null
       }
     },
 
     created () {
+      this._intervalId = null
       this._animationTimeout = null
     },
 
     methods: {
       setSlide (slide) {
         const len = this.slides.length
+        if (len === 0) {
+          return
+        }
+
+        if (this.isSliding) {
+          // Schedule slide after sliding complete
+          this.$once('sliding-end', () => this.setSlide(slide))
+          return
+        }
 
         // Make sure we have an integer (you never know!)
         slide = Math.floor(slide)
@@ -96,6 +140,35 @@
 
       next () {
         this.setSlide(this.index + 1)
+      },
+
+      pause () {
+        if (Boolean(this._intervalId)) {
+          clearInterval(this._intervalId)
+          this._intervalId = null
+          // Make current slide focusable for screen readers
+          this._elSlides[this.index].tabIndex = 0
+        }
+      },
+
+      start () {
+        if (!Boolean(this.interval)) {
+          return
+        }
+
+        Object.values(this._elSlides).forEach(slide => {
+          slide.tabIndex = -1
+        })
+
+        this._intervalId = setInterval(() => {
+          this.next()
+        }, Math.max(1000, this.interval))
+      },
+
+      restart (evt) {
+        if (!this.$el.contains(document.activeElement)) {
+          this.start()
+        }
       },
 
       _transitionModeCls (index) {
@@ -134,7 +207,6 @@
         }
 
         const elSlides = this._elSlides
-        debugger
         const elToSlide = elSlides[a]
         const elFromSlide = elSlides[b]
 
@@ -169,8 +241,8 @@
             return
           }
 
-          console.log('YET TransitionEnd')
           called = true
+          console.debug('[TransitionEnd]', elToSlide)
 
           if (this.transitionEndEvent) {
             const events = this.transitionEndEvent.split(/\s+/)
@@ -200,17 +272,25 @@
         this.isSliding = true
 
         // Fallback to setTimeout
-         this._animationTimeout = setTimeout(onceTransEnd, TRANS_DURATION)
+        this._animationTimeout = setTimeout(onceTransEnd, TRANS_DURATION)
+      },
+
+      'items' () {
+        throw new Error('@todo implementation')
       }
     },
 
     mounted () {
       this.transitionEndEvent = getTransitionEndEvent(this.$el) || null
+
+      // start sliding
+      this.start()
     },
 
     computed: {},
 
-    destroy () {
+    destroyed () {
+      clearInterval(this._intervalId)
       clearTimeout(this._animationTimeout)
       this._animationTimeout = null
     },
@@ -228,30 +308,3 @@
     }
   }
 </script>
-
-<style lang="scss">
-  .v-carousel {
-    margin-top: 20px;
-    width: 100%;
-  }
-
-  .v-carousel-item {
-    background-color: rgba(239, 242, 246, 0.64);
-    .item-inner {
-      min-height: 320px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-  }
-
-  $color-list: red, blue, orange, green, black;
-
-  @each $color in $color-list {
-    $index: index($color-list, $color) - 1;
-    .color-#{$index} strong {
-      color: $color;
-      font-size: 60px;
-    }
-  }
-</style>
