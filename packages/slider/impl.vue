@@ -1,11 +1,16 @@
 <template>
   <div class="v-range-slider"
-       :class="{ 'is-dragging': isDragging, 'is-vertical': vertical, 'is-horizontal': !vertical }"
+       :class="[
+         {'is-dragging': isDragging, 'is-vertical': vertical, 'is-horizontal': !vertical},
+         colorModifier
+       ]"
        v-collect-client-size="volatileSize">
     <div class="v-range-progress-bar"
          @click="_onClickBarHandler"
          data-progress>
-      <span class="v-range-progress-bar-line"></span>
+      <span class="v-range-progress-bar-line"
+            :style="[ realLineOffsetStyle ]"
+      ></span>
       <span class="v-range-progress-point"
             @mousedown="_onMouseDownHandler"
             :style="[ realPointOffsetStyle ]"
@@ -15,8 +20,12 @@
 </template>
 
 <script>
+  import { createMixins } from '../../sources/utils/mixin'
+
   export default {
     name: 'VRangeSlider',
+
+    mixins: [createMixins(['color', 'state'])],
 
     props: {
       value: {
@@ -86,18 +95,35 @@
     },
 
     computed: {
-      realPointOffsetStyle () {
-        // percent value
+      styleOffsetValue () {
         let pv = this.localPercentValue * 100
 
         // filter step
-        // const step = 1
-        // pv = Math.floor(pv / step) * step
+        if (this.vertical) {
+          // ignore decimal offset . it maybe not smooth with wide bar
+          pv = 100 - this.value
+        }
+
+        return pv
+      },
+
+      realPointOffsetStyle () {
+        const pv = this.styleOffsetValue
 
         return this.vertical ? {
           top: `${ (pv) }%`,
         } : {
           left: `${ (pv) }%`
+        }
+      },
+
+      realLineOffsetStyle () {
+        const pv = this.styleOffsetValue
+
+        return this.vertical ? {
+          height: `${ (100 - pv) }%`,
+        } : {
+          width: `${ (pv) }%`
         }
       }
     },
@@ -148,13 +174,14 @@
             if (
               (DELTA < 0 && pointOffsetPositive <= 0) ||
               (DELTA > 0 && pointOffsetPositive >= rangeOffsetLength)) {
+
               vm.localPercentValue = DELTA < 0 ? 0 : 1
 
-              // update relative center point
+              // update relative origin point
               if (isVer) {
                 Object.assign(vs, {
-                  _startClientY: DELTA < 0 ? vs._pointMinClientY : vs._pointMaxClientY,
-                  _startOffsetTop: DELTA < 0 ? 0 : vs._pointMaxOffsetTop
+                  _startClientY: deltaY < 0 ? vs._pointMinClientY : vs._pointMaxClientY,
+                  _startOffsetTop: deltaY < 0 ? 0 : vs._pointMaxOffsetTop
                 })
               } else {
                 Object.assign(vs, {
@@ -170,10 +197,18 @@
               console.debug(`[VRange]((!${isVer} ? ${vs._startOffsetLeft} : ${vs._startOffsetTop}) + ${DELTA}) / ${rangeOffsetLength}`)
 
               let v = (( (!isVer ? vs._startOffsetLeft : vs._startOffsetTop) + DELTA) / rangeOffsetLength)
-              vm.localPercentValue = v > 1 ? (console.warn(`[VRange] delta percent value error . it can not be greater than 1`, v), 1)
-                : v
+              console.debug(`[VRange] fuzzy percentage`, v)
+
+              if (v > 1) {
+                console.warn(`[VRange] delta percent value error . it can not be greater than 1`, v)
+                v = 1
+              } else if (v < 0) {
+                v = 0
+              }
+
+              vm.localPercentValue = v
               // end
-              console.debug('[VRange][Point Center :X :Y]', `[ ${vs._startClientX}, ${vs._startClientY} ]`, deltaX, deltaY)
+              console.debug('[VRange][Point Center :X :Y]', `[ ${vs._startClientX}, ${vs._startClientY} ]`, deltaX, deltaY, '[new]', v)
             }
 
             vm._updatePercentStepVal()
@@ -188,8 +223,10 @@
         let pv = this.vertical ? (1 - vm.localPercentValue) : vm.localPercentValue
 
         pv = Math.round(pv * 100)
-//        pv = (pv % vm.step) === 0 ? pv : (Math.floor(pv / vm.step) * vm.step + (pv % vm.step < (vm.step / 2) ? 0 : vm.step))
-        pv = (pv % vm.step) === 0 ? pv : (Math.floor(pv / vm.step) * vm.step)
+        // handle step unit `pv` equal one step
+        pv = (pv % vm.step) === 0 ? pv : (
+          pv > vm.step ? (Math.floor(pv / vm.step) * vm.step) : vm.step
+        )
 
         // emit value
         if (pv !== this.value) {
@@ -222,7 +259,7 @@
     },
 
     watch: {
-      'localPercentValue' () {
+      'localPercentValue' (a, b) {
         this.syncVolatileSize()
       }
     },
@@ -254,9 +291,9 @@
                     _startOffsetLeft: elPoint.offsetLeft,
                     _startOffsetTop: elPoint.offsetTop,
                     _pointMinClientX: pBound.left,
-                    _pointMaxClientX: pBound.left + elProgress.offsetWidth + vm.volatileSize.POINT_RADIUS,
+                    _pointMaxClientX: pBound.left + elProgress.offsetWidth,
                     _pointMinClientY: pBound.top,
-                    _pointMaxClientY: pBound.top + elProgress.offsetHeight + vm.volatileSize.POINT_RADIUS,
+                    _pointMaxClientY: pBound.top + elProgress.offsetHeight,
                     _pointMaxOffsetLeft: elProgress.offsetWidth,
                     _pointMaxOffsetTop: elProgress.offsetHeight,
                     rangeOffsetWidth: elProgress.offsetWidth, // maybe dynamic

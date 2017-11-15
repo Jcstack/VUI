@@ -1,45 +1,72 @@
-$slider-range-line-bar-weight: 4px;
-$slider-range-point-width: 16px;
+$slider-range-line-bar-weight: 6px !default;
+$slider-range-point-width: 14px !default;
+$slider-bar-background-color: $border !default;
+$slider-bar-line-background-color: $text !default;
+$slider-pointer-color: $primary !default;
 
 .#{$ns}-range-slider {
   position: relative;
-  background-color: brown;
-  padding: 15px 10px;
   width: 100%;
 
   &.is-dragging {
-    .sav-range-progress-point {
+    .#{$ns}-range-progress-point {
       /*cursor: grabbing;*/
-      opacity: .5;
+      transform: translate(-50%, -50%) scale(1.25, 1.25) !important;
     }
   }
 
   &.is-vertical {
     height: 320px; /* need be calculated */
-    width: 24px;
-    padding: 5px 10px;
-    background-color: #0e729f;
+    width: $slider-range-line-bar-weight;
     .#{$ns}-range-progress-bar {
       height: 100%;
       width: $slider-range-line-bar-weight;
       &-line {
-        height: 100%;
+        position: absolute;
+        left: 0;
+        height: 0;
+        width: $slider-range-line-bar-weight;
+        bottom: 0;
       }
     }
 
     .#{$ns}-range-progress-point {
-      background-color: #00c3b1;
-      left: -($slider-range-point-width - $slider-range-line-bar-weight) / 2;
+      left: ($slider-range-line-bar-weight) / 2;
       top: 0;
-      transform: translateY(-50%);
+      transform: translate(-50%, -50%);
+      &:hover {
+        transform: translate(-50%, -50%) scale(1.25, 1.25) !important;
+      }
     }
   }
 
   &.is-horizontal {
     .#{$ns}-range-progress-point {
-      top: -($slider-range-point-width - $slider-range-line-bar-weight) / 2;
+      top: ($slider-range-line-bar-weight) / 2;
       left: 0;
-      transform: translateX(-50%);
+      transform: translate(-50%, -50%);
+      &:hover {
+        transform: translate(-50%, -50%) scale(1.25, 1.25) !important;
+      }
+    }
+  }
+
+  // Colors
+  @each $name, $pair in $colors {
+    $color: nth($pair, 1);
+
+    &.is-#{$name} {
+      .#{$ns}-range-progress {
+        &-point {
+          border-color: $color;
+        }
+
+        &-bar {
+          &-line {
+            background-color: $color;
+          }
+        }
+      }
     }
   }
 }
@@ -48,12 +75,15 @@ $slider-range-point-width: 16px;
   &-bar {
     position: relative;
     height: $slider-range-line-bar-weight;
-    background-color: transparent;
+    background-color: $slider-bar-background-color;
+    border-radius: 290486px;
     width: 100%;
     &-line {
       height: $slider-range-line-bar-weight;
-      background-color: #ffffff;
+      background-color: transparent;
       display: block;
+      width: 0;
+      border-radius: 290486px;
     }
   }
 
@@ -61,7 +91,8 @@ $slider-range-point-width: 16px;
     position: absolute;
     width: $slider-range-point-width;
     height: $slider-range-point-width;
-    background-color: rosybrown;
+    background-color: $white;
+    border: 2px solid $slider-pointer-color;
     border-radius: $slider-range-point-width;
     user-select: none;
     opacity: 1;
