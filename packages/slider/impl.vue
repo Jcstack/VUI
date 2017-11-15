@@ -141,15 +141,9 @@
 
         document.addEventListener('mousemove', this._mouseMovingHandler, true)
         document.addEventListener('mouseup', this._cleanDragging, true)
-
-        evt.stopPropagation()
-        evt.preventDefault()
       },
 
       _mouseMovingHandler (evt) {
-        evt.stopPropagation()
-        evt.preventDefault()
-
         if (!this.isDragging) {
           return
         }
