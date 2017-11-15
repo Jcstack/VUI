@@ -1,0 +1,134 @@
+$progress-bar-background-color: $border !default;
+$progress-value-background-color: $text !default;
+
+.#{$ns}-progress {
+  @include block-row;
+
+  overflow: hidden;
+  padding: 0;
+  width: 100%;
+  display: flex;
+
+  &-line-bar {
+    padding-right: 50px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    margin-right: -55px;
+    box-sizing: border-box;
+  }
+
+  &-line-bar-outer {
+    height: 6px;
+    border-radius: 100px;
+    background-color: $progress-bar-background-color;
+    overflow: hidden;
+    position: relative;
+    vertical-align: middle;
+  }
+
+  &-line-bar-value {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: $progress-value-background-color;
+    text-align: right;
+    border-radius: 100px;
+    line-height: 1;
+    white-space: nowrap;
+    transition: width .5s;
+  }
+
+  // Colors
+  @each $name, $pair in $colors {
+    $color: nth($pair, 1);
+
+    &.is-#{$name} {
+      .#{$ns}-progress-line-bar-value {
+        background-color: $color;
+      }
+    }
+  }
+
+  // circle
+  &-circle {
+    &-bar {
+      display: inline-block;
+      position: relative;
+      .inner-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        line-height: 1;
+        font-size: 14px;
+        color: #aaa;
+        transform: translate(-45%, -50%);
+      }
+    }
+  }
+}
+
+// raw <progress>
+progress.#{$ns}-progress {
+  @include block-row;
+
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  border-radius: 290486px;
+  display: block;
+  height: $size-normal;
+  overflow: hidden;
+  padding: 0;
+  width: 100%;
+
+  &::-webkit-progress-bar {
+    background-color: $progress-bar-background-color;
+  }
+
+  &::-webkit-progress-value {
+    background-color: $progress-value-background-color;
+  }
+
+  &::-moz-progress-bar {
+    background-color: $progress-value-background-color;
+  }
+
+  // Colors
+  @each $name, $pair in $colors {
+    $color: nth($pair, 1);
+
+    &.is-#{$name} {
+      &::-webkit-progress-value {
+        background-color: $color;
+      }
+
+      &::-moz-progress-bar {
+        background-color: $color;
+      }
+    }
+  }
+
+  // Sizes
+  &.is-small {
+    height: $size-small;
+  }
+
+  &.is-medium {
+    height: $size-medium;
+  }
+
+  &.is-large {
+    height: $size-large;
+  }
+}
+
+@keyframes v-kf-progress {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 32px 0;
+  }
+}

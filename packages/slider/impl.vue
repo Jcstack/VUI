@@ -44,8 +44,8 @@
       const vm = this
 
       return {
-        _moveTimer: null,
-        _percentUnits: 100,
+        localPercentValue: 0,
+        isDragging: false,
         volatileSize: {
           POINT_RADIUS: 0, // could be calculated
           _jumperPointOffsetX: -1,
@@ -62,14 +62,16 @@
           pointOffsetLeft: 0,
           rangeOffsetWidth: 0,
           sync: () => vm
-        },
-        proxyPercentValue: 0,
-        isDragging: false
+        }
       }
     },
 
     created () {
       let percentVal = this.value
+
+      // instance properties
+      this._moveTimer = null
+      this._percentUnits = 100
 
       if (typeof this.value === 'string') {
         percentVal = /^(\d{1,3})%$/.test(this.value) ? +(RegExp.$1) : parseInt(percentVal)
@@ -77,21 +79,25 @@
       }
 
       // @todo float
-      percentVal /= this.$data._percentUnits
+      percentVal /= this._percentUnits
 
       percentVal = percentVal > 1 ? 1 : ( percentVal < 0 ? 0 : percentVal)
-      this.proxyPercentValue = this.vertical ? (1 - percentVal) : percentVal
+      this.localPercentValue = this.vertical ? (1 - percentVal) : percentVal
     },
 
     computed: {
       realPointOffsetStyle () {
         // percent value
-        let pv = this.proxyPercentValue
+        let pv = this.localPercentValue * 100
+
+        // filter step
+        // const step = 1
+        // pv = Math.floor(pv / step) * step
 
         return this.vertical ? {
-          top: `${ (pv) * 100}%`,
+          top: `${ (pv) }%`,
         } : {
-          left: `${ (pv) * 100}%`
+          left: `${ (pv) }%`
         }
       }
     },
@@ -124,9 +130,9 @@
 
         const vm = this
 
-        vm.$data._moveTimer && clearTimeout(vm.$data._moveTimer)
+        vm._moveTimer && clearTimeout(vm._moveTimer)
 
-        vm.$data._moveTimer = setTimeout(() => {
+        vm._moveTimer = setTimeout(() => {
           // recollect important
           this.syncVolatileSize()
 
@@ -142,7 +148,7 @@
             if (
               (DELTA < 0 && pointOffsetPositive <= 0) ||
               (DELTA > 0 && pointOffsetPositive >= rangeOffsetLength)) {
-              vm.proxyPercentValue = DELTA < 0 ? 0 : 1
+              vm.localPercentValue = DELTA < 0 ? 0 : 1
 
               // update relative center point
               if (isVer) {
@@ -157,17 +163,17 @@
                 })
               }
 
-              console.debug('[Save Range][Reset Start Center :X :Y DELTA]', `[ ${vs._startClientX}, ${vs._startClientY} ]`, deltaX, deltaY)
+              console.debug('[VRange][Reset Start Center :X :Y DELTA]', `[ ${vs._startClientX}, ${vs._startClientY} ]`, deltaX, deltaY)
             } else {
               // calculate percent
-              console.debug(`[Sav Range]((!isVer ? vs._startOffsetLeft : vs._startOffsetTop) + DELTA) / rangeOffsetLength`)
-              console.debug(`[Sav Range]((!${isVer} ? ${vs._startOffsetLeft} : ${vs._startOffsetTop}) + ${DELTA}) / ${rangeOffsetLength}`)
+              console.debug(`[VRange]((!isVer ? vs._startOffsetLeft : vs._startOffsetTop) + DELTA) / rangeOffsetLength`)
+              console.debug(`[VRange]((!${isVer} ? ${vs._startOffsetLeft} : ${vs._startOffsetTop}) + ${DELTA}) / ${rangeOffsetLength}`)
 
               let v = (( (!isVer ? vs._startOffsetLeft : vs._startOffsetTop) + DELTA) / rangeOffsetLength)
-              vm.proxyPercentValue = v > 1 ? (console.warn(`[Sav Range] delta percent value error . it can not be greater than 1`, v), 1)
+              vm.localPercentValue = v > 1 ? (console.warn(`[VRange] delta percent value error . it can not be greater than 1`, v), 1)
                 : v
               // end
-              console.debug('[Sav Range][Point Center :X :Y]', `[ ${vs._startClientX}, ${vs._startClientY} ]`, deltaX, deltaY)
+              console.debug('[VRange][Point Center :X :Y]', `[ ${vs._startClientX}, ${vs._startClientY} ]`, deltaX, deltaY)
             }
 
             vm._updatePercentStepVal()
@@ -179,13 +185,16 @@
       _updatePercentStepVal () {
         let vm = this
         // step value
-        let pv = this.vertical ? (1 - vm.proxyPercentValue) : vm.proxyPercentValue
+        let pv = this.vertical ? (1 - vm.localPercentValue) : vm.localPercentValue
 
         pv = Math.round(pv * 100)
-        pv = (pv % vm.step) === 0 ? pv : (Math.floor(pv / vm.step) * vm.step + (pv % vm.step < (vm.step / 2) ? 0 : vm.step))
+//        pv = (pv % vm.step) === 0 ? pv : (Math.floor(pv / vm.step) * vm.step + (pv % vm.step < (vm.step / 2) ? 0 : vm.step))
+        pv = (pv % vm.step) === 0 ? pv : (Math.floor(pv / vm.step) * vm.step)
 
         // emit value
-        vm.$emit('input', pv)
+        if (pv !== this.value) {
+          vm.$emit('input', pv)
+        }
       },
 
       _cleanDragging () {
@@ -206,14 +215,14 @@
         const vs = this.volatileSize
 
         if (vs._jumperPointOffsetX !== -1) {
-          this.proxyPercentValue = (vs._jumperPointOffsetX / vs.rangeOffsetWidth)
+          this.localPercentValue = (vs._jumperPointOffsetX / vs.rangeOffsetWidth)
           this._updatePercentStepVal()
         }
       }
     },
 
     watch: {
-      'proxyPercentValue' () {
+      'localPercentValue' () {
         this.syncVolatileSize()
       }
     },

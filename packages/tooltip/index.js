@@ -13,6 +13,7 @@ Tooltip.install = function (Vue) {
   // install directive
   Vue.directive('tip', savTipDirective)
 
+  // setup global installation for once
   installSavTip()
 }
 
