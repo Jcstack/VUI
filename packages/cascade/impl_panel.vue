@@ -1,31 +1,43 @@
 <template>
   <div class="v-cascade-panel">
-    <div class="v-cascade-panel-inner">
-      <strong>
-        {{ content }}
-      </strong>
+    <div class="as-head"
+         v-if="title != null"
+    >
+      <a v-if="level >0"
+         @click="vDispatch('VCascade', 'panel-prev')"
+      >
+        <i class="as-icon fa fa-angle-left"></i>
+        {{ title }}
+      </a>
+      <span v-else>
+        {{ title }}
+      </span>
+    </div>
+    <div class="as-body">
+      <slot>
+        <strong>
+          {{ content }}
+        </strong>
+      </slot>
     </div>
   </div>
 </template>
 
 <script>
+  import Emitter from '../../sources/mixins/emitter'
+
   export default {
+    name: 'VCascadePanel',
+
+    mixins: [Emitter],
+
     props: {
-      content: String
+      content: String,
+      title: String,
+      level: {
+        type: Number,
+        'default': 0
+      }
     }
   }
 </script>
-
-<style lang="scss" type="text/scss">
-  .v-cascade-panel {
-    padding-top: 6px;
-    min-width: 200px;
-    &-inner {
-      border-radius: 3px;
-      border: 1px solid #8e9bad;
-      background-color: #eef4fb;
-      box-shadow: 1px 1px 5px #d6d6d6;
-      padding: 12px;
-    }
-  }
-</style>

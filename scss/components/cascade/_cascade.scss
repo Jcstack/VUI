@@ -1,0 +1,110 @@
+$cascade-slide-transition: transform .5s ease !default;
+
+.#{$ns}-cascade {
+
+}
+
+.#{$ns}-cascade-panel {
+  > .as-head {
+    display: flex;
+    padding: 0.75em;
+    background-color: lighten($grey-lighter, 9);
+    :first-child {
+      color: $dark;
+      line-height: 1em;
+    }
+  }
+
+  > .as-body {
+    min-height: 200px;
+    display: flex;
+  }
+
+  > .as-foot {
+  }
+
+  $topSelectorInner: v-cascade-panel-inner;
+
+  &.is-active {
+    .#{$topSelectorInner} {
+    }
+  }
+}
+
+.#{$ns}-cascade-menu {
+  width: 100%;
+  &.#{$ns}-dropdown-content {
+    box-shadow: none;
+  }
+
+  .#{$ns}-dropdown-item {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75em 1em;
+
+    > .as-left {
+      display: flex;
+      align-items: center;
+      .as-icon {
+        margin-right: 0.25em;
+        font-size: $size-normal * 1.25;
+      }
+    }
+    
+    &.has-more {
+      .as-arrow-link {
+        font-size: 12px;
+        color: $grey;
+      }
+    }
+  }
+}
+
+.#{$ns}-seamless-slide-item {
+  position: relative;
+  display: none;
+  width: 100%;
+  transition: $cascade-slide-transition;
+  backface-visibility: hidden;
+  perspective: 1000px;
+
+  &.is-active,
+  &.from-next,
+  &.from-prev {
+    display: block;
+  }
+
+  &.from-next,
+  &.from-prev {
+    position: absolute;
+    top: 0;
+  }
+
+  &.from-next.to-left,
+  &.from-prev.to-right {
+    // CSS3 transforms when supported by the browser
+    transform: translateX(0);
+
+    @supports (transform-style: preserve-3d) {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  &.from-next, &.to-right.is-active {
+    transform: translateX(100%);
+
+    @supports (transform-style: preserve-3d) {
+      transform: translate3d(100%, 0, 0);
+    }
+  }
+
+  &.from-prev, &.to-left.is-active {
+    transform: translateX(-100%);
+
+    @supports (transform-style: preserve-3d) {
+      transform: translate3d(-100%, 0, 0);
+    }
+  }
+}
