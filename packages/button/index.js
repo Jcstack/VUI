@@ -1,4 +1,4 @@
-import Button from './impl.vue'
+import Button from './button.js'
 
 /* istanbul ignore next */
 Button.install = function (Vue) {

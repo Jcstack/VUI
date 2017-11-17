@@ -1,9 +1,8 @@
 import { mount } from 'avoriaz'
 import test from 'ava'
-import Button from './impl.vue'
+import Button from './button.js'
 
-
-test.serial('test button', t => {
+test.only.serial('test button', t => {
   const wrapper = mount(Button, {
     propsData: {
       color: 'primary',
