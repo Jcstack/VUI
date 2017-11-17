@@ -6,7 +6,7 @@
       <a v-if="level >0"
          @click="vDispatch('VCascade', 'panel-prev')"
       >
-        <i class="as-icon fa fa-angle-left"></i>
+        <iconfont icon="left"></iconfont>
         {{ title }}
       </a>
       <span v-else>
@@ -24,6 +24,7 @@
 </template>
 
 <script>
+  import Iconfont from '../icon/iconfont.js'
   import Emitter from '../../sources/mixins/emitter'
 
   export default {
@@ -38,6 +39,10 @@
         type: Number,
         'default': 0
       }
+    },
+
+    components: {
+      Iconfont
     }
   }
 </script>

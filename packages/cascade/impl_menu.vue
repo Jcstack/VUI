@@ -5,15 +5,18 @@
          class="v-dropdown-item has-more"
          v-if="it !== '-'"
       >
-        <span class="as-left" v-if="typeof it === 'object'">
-          <i :class="['as-icon', it.icon]"
-             v-if="it.icon"></i>
+        <div class="as-left" v-if="typeof it === 'object'">
+          <span class="has-icon" v-if="it.icon">
+            <i :class="[it.icon]"></i>
+          </span>
           {{ it.text }}
-        </span>
+        </div>
         <span class="as-left" v-else>
           {{ it }}
         </span>
-        <i class="as-arrow-link fa fa-angle-right"></i>
+        <iconfont class="as-arrow-link"
+                  icon="right"
+        ></iconfont>
       </a>
       <span class="v-dropdown-divider" v-else></span>
     </template>
@@ -21,6 +24,7 @@
 </template>
 
 <script>
+  import Iconfont from '../icon/iconfont.js'
   import Emitter from '../../sources/mixins/emitter'
 
   export default {
@@ -33,6 +37,10 @@
         type: Array,
         'default': Array
       }
+    },
+
+    components: {
+      Iconfont
     }
   }
 </script>
