@@ -1,8 +1,14 @@
 // install all packages
+import Layout from './layout'
 import Button from './button'
+import Dropdown from './dropdown'
+import Icon from './icon'
 
 const components = [
-  Button
+  Layout,
+  Icon,
+  Button,
+  Dropdown
 ]
 
 export function install (Vue) {

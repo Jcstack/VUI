@@ -8,15 +8,17 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="./static/themes/vue.css" title="vue">
-  <link type="text/css" rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.12.0/styles/github-gist.min.css"/>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.2/vue.js"></script>
+  <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.12.0/styles/github-gist.min.css"/>
+  <script src="//cdn.bootcss.com/vue/2.4.4/vue.js"></script>
   <style>
     #sdoc {
       height: 100%;
     }
+
     .sidebar {
       padding-top: 15px;
     }
+
     .sidebar-nav > section > h1 {
       border-bottom: 1px solid #f7f7f7;
       padding-bottom: 10px;
@@ -30,18 +32,20 @@
   <main :class="{ close: hideSidebar }">
     <!-- sidebar toggle button -->
     <button class="sidebar-toggle">
-      <div class="sidebar-toggle-button" @click="hideSidebar = !hideSidebar"><span></span><span></span><span></span></div>
+      <div class="sidebar-toggle-button" @click="hideSidebar = !hideSidebar">
+        <span></span><span></span><span></span>
+      </div>
     </button>
     <!-- global sidebar -->
     <summary-sidebar></summary-sidebar>
     <!-- global content -->
     <section class="content">
-      <article class="markdown-section" id="main">
+      <article class="main-markdown-section" id="main">
         <router-view></router-view>
       </article>
     </section>
     <!-- end -->
   </main>
 </div>
-<script type="text/javascript" src="./main.a644bbb.js"></script></body>
+<script type="text/javascript" src="./main.96569e0.js"></script></body>
 </html>

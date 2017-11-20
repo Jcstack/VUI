@@ -3,9 +3,9 @@ import Row from './impl_row.vue'
 import Col from './impl_col.vue'
 
 Container.install = function (Vue) {
-  Vue.install(Container.name, Container)
-  Vue.install(Row.name, Row)
-  Vue.install(Col.name, Col)
+  Vue.component(Container.name, Container)
+  Vue.component(Row.name, Row)
+  Vue.component(Col.name, Col)
 }
 
 export {

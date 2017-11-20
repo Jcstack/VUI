@@ -40,7 +40,6 @@
       },
 
       iconFontCls () {
-        debugger
         let cls = []
 
         if (this.ns == null) {

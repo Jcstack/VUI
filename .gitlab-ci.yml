@@ -29,7 +29,8 @@ deploy-branches:
     - rsync -avur -e 'ssh -o StrictHostKeyChecking=no' _tmpdir/ $PUB_TO/
 
     - echo "推送到开发节点 $PUB_TO/$CASE_PATH/"
-    - rsync -avur -e 'ssh -o StrictHostKeyChecking=no' --delete .sdocs-dist/ $PUB_TO/$CASE_PATH/
+    - rsync -avur -e 'ssh -o StrictHostKeyChecking=no' --delete .sdocs-dist/ $PUB_TO/$CASE_PATH/vui
+    - rsync -avur -e 'ssh -o StrictHostKeyChecking=no' --delete packages/.sdocs-dist/ $PUB_TO/$CASE_PATH/packages
 
 #    - echo "推送到dev $PUB_TO/$CASE_PATH/"
 #    - rsync -avurz --delete -e 'ssh -o StrictHostKeyChecking=no -i /home/gitlab-runner/.ssh/spub_key' dist/ dev@192.168.0.207:/opt/case/test-preschool/

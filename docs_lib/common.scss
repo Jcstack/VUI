@@ -2,7 +2,7 @@ body {
 }
 
 .demo-box {
-  padding: 25px 0;
+  padding: 15px 0;
   &.has-pad-sm {
     padding: 5px 0;
   }
@@ -68,12 +68,20 @@ p {
   }
 }
 
+.sidebar-nav {
+  > section {
+    > h1 {
+      font-size: 16px;
+    }
+  }
+}
+
 .markdown-section figure, .markdown-section p, .markdown-section ul, .markdown-section ol {
   margin: 0.5em 0;
 }
 
 .markdown-section ul, .markdown-section ol {
-  padding-left: 1rem;
+  //padding-left: 1rem;
 }
 
 .sd-loading {

@@ -6,10 +6,8 @@ export default {
   mixins: [elementMixins],
 
   props: {
-    isLoading: {
-      type: Boolean,
-      'default': false
-    }
+    isLoading: Boolean,
+    isOutlined: Boolean
   },
 
   render (h) {
@@ -31,6 +29,7 @@ export default {
       mode.push(this.stateModifier)
 
       this.isLoading && mode.push(`is-loading`)
+      this.isOutlined && mode.push(`is-outlined`)
 
       return mode
     }

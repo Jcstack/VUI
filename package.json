@@ -12,7 +12,9 @@
     "test": "npm run build",
     "test-units": "NODE_ENV=test-units ./node_modules/.bin/ava --tap tests/units/**/*.spec.js",
     "test-pkgs": "./node_modules/.bin/ava --tap packages/**/*.spec.js",
-    "watch-doc": "sd watch"
+    "watch-doc": "sd watch",
+    "build-vui-doc": "sd build",
+    "build-packages-doc": "sd build --src ./packages/docs --dest ./packages/.sdocs-dist"
   },
   "repository": {
     "type": "git",
