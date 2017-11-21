@@ -3,7 +3,6 @@
         fieldType,
         localPosition,
         {
-          'is-expanded': expanded,
           'is-grouped-multiline': groupMultiline
         }]">
     <label class="v-label" :for="labelFor" v-if="label">{{ label }}</label>
@@ -28,7 +27,6 @@
       grouped: Boolean,
       groupMultiline: Boolean,
       position: String, // centered , right, fullwidth
-      expanded: Boolean,
       horizontal: Boolean, // @todo implementation
       addons: {
         type: Boolean,

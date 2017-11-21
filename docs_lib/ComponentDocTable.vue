@@ -40,7 +40,7 @@
 </script>
 
 <style lang="scss">
-  $theme-color: orange;
+  $theme-color: #e96900;
   .vue-component-doc-table {
     table {
       display: table;

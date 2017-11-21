@@ -55,7 +55,10 @@
 
     props: {
       title: String,
-      visible: Boolean,
+      visible: {
+        type: Boolean,
+        required: true
+      },
       confirmText: {
         type: String,
         'default': '确定'

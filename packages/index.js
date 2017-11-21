@@ -3,12 +3,16 @@ import Layout from './layout'
 import Button from './button'
 import Dropdown from './dropdown'
 import Icon from './icon'
+import Form from './form'
+import Modal from './modal'
 
 const components = [
   Layout,
   Icon,
   Button,
-  Dropdown
+  Dropdown,
+  Form,
+  Modal
 ]
 
 export function install (Vue) {

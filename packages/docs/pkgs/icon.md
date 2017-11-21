@@ -6,7 +6,8 @@
   <v-iconfont
     :icon="type"
     :title="type"
-    v-for="type in icons"
+    v-for="(type, $index) in icons"
+    :key="$index"
   ></v-iconfont>
 </div>
 
@@ -14,7 +15,7 @@
 <v-iconfont
     :icon="type"
     :title="type"
-    v-for="type in icons"
+    v-for="(type, $index) in icons"
 ></v-iconfont>
 ```
 

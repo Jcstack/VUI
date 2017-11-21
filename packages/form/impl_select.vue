@@ -17,6 +17,7 @@
                     ref="select"
                     :multiple="multiple"
                     :size="nativeSize"
+                    v-bind="$attrs"
                     @blur="$emit('blur', $event)"
                     @focus="$emit('focus', $event)">
 

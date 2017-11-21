@@ -8,7 +8,7 @@
     <input v-model="localValue"
            type="checkbox"
            :disabled="disabled"
-           :name="name"
+           :name="nativeName"
            :value="nativeValue"
            :true-value="trueValue"
            :false-value="falseValue">
@@ -27,7 +27,7 @@
     props: {
       value: {},
       nativeValue: {},
-      name: String,
+      nativeName: String,
       trueValue: {
         type: [String, Number, Boolean, Object, Array, Symbol],
         'default': true
@@ -43,10 +43,12 @@
         localValue: this.value
       }
     },
+
     watch: {
       value (value) {
         this.localValue = value
       },
+
       localValue (value) {
         this.$emit('input', value)
       }

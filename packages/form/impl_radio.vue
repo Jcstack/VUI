@@ -8,7 +8,7 @@
     <input v-model="localValue"
            type="radio"
            :disabled="disabled"
-           :name="name"
+           :name="nativeName"
            :value="nativeValue">
     <span class="v-control-label"><slot></slot></span>
   </label>
@@ -23,8 +23,8 @@
     mixins: [createMixins(['size', 'disabled'])],
 
     props: {
-      name: String,
       value: {},
+      nativeName: String,
       nativeValue: {},
     },
 

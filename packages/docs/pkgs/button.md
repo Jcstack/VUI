@@ -65,7 +65,6 @@ is-outlined| 是否轮廓        | Boolean  | /      | `false`
 Name       | Description    | Scoped | Default
 ----       | -------------- | ------ | -------
 default    | 文字，按钮啥的~  | /      | /
-
 </div>
 </component-doc-table>
 </div>

@@ -14,6 +14,7 @@
            :autocomplete="autocomplete"
            :maxlength="maxlength"
            :value="localValue"
+           v-bind="$attrs"
            @input="_handleInput"
            @blur="$emit('blur', $event)"
            @focus="$emit('focus', $event)">
@@ -80,19 +81,6 @@
           return 'has-icons-right'
         } else if (this.icon) {
           return 'has-icons-left'
-        }
-      },
-
-      statusTypeMDIcon () {
-        switch (this.statusType) {
-          case 'is-success':
-            return 'done'
-          case 'is-danger':
-            return 'error'
-          case 'is-info':
-            return 'info'
-          case 'is-warning':
-            return 'warning'
         }
       },
 
