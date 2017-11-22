@@ -8,6 +8,6 @@
 
 <script>
   export default {
-    name: 'VPopover'
+    name: 'VPopoverSimple'
   }
 </script>

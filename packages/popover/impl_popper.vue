@@ -1,6 +1,6 @@
 <template>
   <span>
-    <transition :name="transition" @after-leave="doDestroy">
+    <transition :name="transition" @after-leave="_handleTransitionAfterLeave">
       <div
           class="v-popover"
           :class="[ popperClass ]"
@@ -29,7 +29,7 @@
   import { on, off } from '../../sources/utils/dom'
 
   export default {
-    name: 'VPopoverPopper',
+    name: 'VPopover',
 
     mixins: [PopperMixin],
 
@@ -49,7 +49,12 @@
       reference: {},
       popperClass: String,
       width: {},
+      autoDestroy: {
+        type: Boolean,
+        'default': true
+      },
       visibleArrow: {
+        type: Boolean,
         'default': true
       },
       transition: {
@@ -106,15 +111,22 @@
     },
 
     methods: {
+      _handleTransitionAfterLeave () {
+        return this.autoDestroy && this.doDestroy()
+      },
+
       doToggle () {
         this.showPopper = !this.showPopper
       },
+
       doShow () {
         this.showPopper = true
       },
+
       doClose () {
         this.showPopper = false
       },
+
       handleMouseEnter () {
         clearTimeout(this._timer)
         if (this.openDelay) {
@@ -125,12 +137,14 @@
           this.showPopper = true
         }
       },
+
       handleMouseLeave () {
         clearTimeout(this._timer)
         this._timer = setTimeout(() => {
           this.showPopper = false
         }, 200)
       },
+
       handleDocumentClick (e) {
         let reference = this.reference || this.$refs.reference
         const popper = this.popper || this.$refs.popper
@@ -147,7 +161,7 @@
       }
     },
 
-    destroyed () {
+    beforeDestroy () {
       const reference = this.reference
       off(reference, 'click', this.doToggle)
       off(reference, 'mouseup', this.doClose)

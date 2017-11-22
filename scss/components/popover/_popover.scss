@@ -115,7 +115,7 @@ $popover-arrow-outer-width: $popover-arrow-width + 1 !default;
   width: 100%;
   background-color: $is-text-light-color;
   background-clip: padding-box;
-  border-radius: 2px;
+  border-radius: $radius;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
   white-space: nowrap;
   border:1px solid $border-top-color;

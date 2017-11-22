@@ -1,9 +1,13 @@
+import throttle from '../utils/throttle'
+
+let throttleMove = throttle(250, move)
+
 export function installSavTip () {
   if (installed) {
     return
   }
   document.addEventListener('mousedown', click, false)
-  document.addEventListener('mousemove', move, false)
+  document.addEventListener('mousemove', throttleMove, false)
 }
 
 export function uninstallSavTip () {
@@ -12,7 +16,7 @@ export function uninstallSavTip () {
   }
 
   document.removeEventListener('mousedown', click, false)
-  document.removeEventListener('mousemove', move, false)
+  document.removeEventListener('mousemove', throttleMove, false)
 }
 
 let tip

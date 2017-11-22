@@ -65,10 +65,10 @@
 
 ```js
 /**
-* @params $slots {String|Object} 支持的slot模板数据
-* @params options {Object} 抽出来的组件选项, 已注入到slot内上下文
-* @params slotData {Object} slot内用的状态数据
-* @return Promise
+* @param $slots {String|Object} 支持的slot模板数据
+* @param options {Object} 抽出来的组件选项, 已注入到slot内上下文
+* @param slotData {Object} slot内用的状态数据
+* @return {Promise}  Event(`ok`) -> Fullfilled | Event(`error`) -> Rejected
 **/
 export function open ($slots, options = {}, slotData = {}) {}
 ```
@@ -161,6 +161,7 @@ _justOpenADialog () {
           </div>
         `, {
           propsData: {
+            title: 'Untitled',
             isCard: true,
             preConfirm () {
               return Promise.resolve('看起来没有输入错误，走起 ~')
@@ -196,11 +197,22 @@ preConfirm | `confirm`事件的前置钩子, 可返回Promise值标识状态 | F
 closable   | 可否关闭        | Boolean  |  /     |  `true`
 
 </div>
+<div slot="events">
+
+Name           | Description                 | Params
+----           | ------------                | --------
+dimission      | 所有`dimiss`行为的事件总线    | `string | Promise`
+close          | 关闭通知                     | `e`
+ok             | 成功通知(默认`confirm`, 确定按钮发出) | `e`
+error          | 错误通知(默认`Promise`状态下，触发`reject`) | `e`
+</div>
 <div slot="slots">
 
 Name       | Description    | Scoped | Default
 ----       | -------------- | ------ | -------
 default    | 内容            | /      | /
+header     | 头部(`card`模式) | /      | /
+footer     | 尾部(`card`模式) | /      | /
 </div>
 </component-doc-table>
 </div>

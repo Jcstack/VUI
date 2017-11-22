@@ -1,12 +1,10 @@
-import Popover from './impl.vue'
 import PopoverPopper from './impl_popper.vue'
 
-Popover.install = function (Vue) {
+PopoverPopper.install = function (Vue) {
   // install it
-  Vue.component(Popover.name, Popover)
+  Vue.component(PopoverPopper.name, PopoverPopper)
 }
 
 export {
-  Popover as default,
-  PopoverPopper
+  PopoverPopper as default,
 }

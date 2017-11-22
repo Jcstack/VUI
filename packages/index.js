@@ -5,6 +5,10 @@ import Dropdown from './dropdown'
 import Icon from './icon'
 import Form from './form'
 import Modal from './modal'
+import Popover from './popover'
+import Tooltip from './tooltip'
+import Badge from './badge'
+import Tag from './tag'
 
 const components = [
   Layout,
@@ -12,7 +16,11 @@ const components = [
   Button,
   Dropdown,
   Form,
-  Modal
+  Modal,
+  Popover,
+  Tooltip,
+  Badge,
+  Tag
 ]
 
 export function install (Vue) {

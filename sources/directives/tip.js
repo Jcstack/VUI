@@ -14,7 +14,13 @@ export default {
   update: applyBinding
 }
 
-function applyBinding (el, binding) {
+function applyBinding (el, binding, vnode) {
+  try {
+    vnode.context.$installSavTip()
+  } catch (e) {
+    console.error('[SavTip] Global Install Error')
+  }
+
   let ds = parseBinding(binding)
   if (!(ds || el.dataset)) {
     return

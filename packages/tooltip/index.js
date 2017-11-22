@@ -14,7 +14,7 @@ Tooltip.install = function (Vue) {
   Vue.directive('tip', savTipDirective)
 
   // setup global installation for once
-  installSavTip()
+  Vue.prototype.$installSavTip = installSavTip
 }
 
 export default Tooltip

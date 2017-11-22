@@ -8,7 +8,7 @@
   import Tooltip from '../../sources/plugins/tooltip'
 
   export default {
-    name: 'VCascade',
+    name: 'VTooltip',
 
     props: {
       title: String
