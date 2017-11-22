@@ -104,8 +104,8 @@ export function open ($slots, options = {}, slotData = {}) {
 
     // preConfirm ?:> ok
     vm.$on('ok', (e) => {
-      vm.$emit('close')
       resolve(e)
+      vm.$emit('close')
     })
 
     vm.$on('close', (e) => {
@@ -115,6 +115,7 @@ export function open ($slots, options = {}, slotData = {}) {
     // Fatal error !!
     vm.$on('error', e => {
       reject(e)
+      vm.$emit('close')
     })
   })
 }
