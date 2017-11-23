@@ -48,14 +48,22 @@
 
 Name       | Description    | Type     | Values | Default
 ----       | -------------- | -------- | ------ | -------
-isDot      | 是否小圆点       | Boolean | /      | `true`
-count      | 显示数字(`null`时不显示点点)| String|Number | /      | `null`
+size       | Vui尺寸修饰     | String   | /      | `true`
+color      | Vui颜色修饰     | String   | /      | /
+rounded    | 是否圆角        | Boolean  | /      | /
+closable   | 可否关闭        | Boolean  | /      | `false`
 </div>
 <div slot="slots">
 
 Name       | Description    | Scoped | Default
 ----       | -------------- | ------ | -------
-default    | 红点容器内容     | /      | /
+default    | 标签内容        | /      | /
+</div>
+<div slot="events">
+
+Name       | Description          | Params
+----       | ------------         | --------
+close      | 点击关闭按钮发出        | [`tagVm`, `e`]
 </div>
 </component-doc-table>
 </div>

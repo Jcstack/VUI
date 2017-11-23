@@ -1,9 +1,10 @@
 import Vue from 'vue'
 import Message from './impl.vue'
+import MessagePopup from './impl_popup.vue'
 import PopupManager from '../../sources/utils/popup'
 import { isVNode } from '../../sources/utils/index'
 
-const MessageConstructor = Vue.extend(Message)
+const MessageConstructor = Vue.extend(MessagePopup)
 
 let instance
 let instances = []
@@ -43,7 +44,7 @@ const MessageFactory = function (options) {
   return instance.vm
 };
 
-['success', 'warning', 'info', 'error'].forEach(type => {
+['success', 'warn', 'info', 'error'].forEach(type => {
   MessageFactory[type] = options => {
     if (typeof options === 'string') {
       options = {
@@ -73,7 +74,13 @@ MessageFactory.closeAll = function () {
   }
 }
 
+Message.install = function (Vue) {
+  Vue.component(Message.name, Message)
+
+  Vue.prototype.$VMessage = MessageFactory
+}
+
 export {
-  MessageFactory as default,
-  Message
+  Message as default,
+  MessageFactory
 }

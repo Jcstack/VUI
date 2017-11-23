@@ -12,8 +12,8 @@
   * [Tooltip 提示](pkgs/tooltip.md)
   * [Badge 徽章](pkgs/badge.md)
   * [Tag 标签](pkgs/tag.md)
-  * [Message 消息](/)
-  * [Notification 通知](/)
+  * [Message 消息](pkgs/message.md)
+  * [Notification 通知](pkgs/notification.md)
   * [Dropdown 下拉框](pkgs/dropdown.md)
   * [Progress 进度条](/)
   * [Slider 滑块](/)
@@ -40,6 +40,7 @@
 </script>
 
 <style lang="scss" type="text/scss">
+  @import url("https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css");
   @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
   @import url("//at.alicdn.com/t/font_478063_w38kzqqd5ilr3sor.css");
   @import "~root/scss/vui.scss";

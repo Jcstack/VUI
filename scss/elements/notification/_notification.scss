@@ -1,6 +1,6 @@
 $notification-background-color: $background !default;
 $notification-radius: $radius !default;
-$notification-padding: 1.25rem 2.5rem 1.25rem 1.5rem !default;
+$notification-padding: .75rem 2rem .75rem 1rem !default;
 
 .#{$ns}-notification {
   @include block-row;
@@ -22,22 +22,40 @@ $notification-padding: 1.25rem 2.5rem 1.25rem 1.5rem !default;
   code,
   pre {
     background: $white;
+    border-radius: $radius;
   }
 
   pre code {
     background: transparent;
   }
 
-  & > .#{$ns}-close {
+  > .#{$ns}-close {
     position: absolute;
     right: 0.5em;
     top: 0.5em;
   }
 
-  .#{$ns}-title,
-  .#{$ns}-subtitle,
-  .#{$ns}-content {
+  .has-title,
+  .has-subtitle,
+  .has-content {
     color: currentColor;
+  }
+
+  > .has-title,
+  > .has-subtitle {
+    margin: 0 !important;
+    line-height: 1em;
+  }
+
+  > .has-title {
+    padding-bottom: 0.25em !important;
+    font-size: 1.25 * $size-unit;
+  }
+
+  > .has-subtitle {
+    font-weight: 500;
+    padding-bottom: 0.25em !important;
+    font-size: 0.75 * $size-unit;
   }
 
   // Colors
@@ -59,8 +77,10 @@ $notification-padding: 1.25rem 2.5rem 1.25rem 1.5rem !default;
   box-shadow: 0 0 3px rgba(0, 0, 0, .04), 0 1px 4px rgba(0, 0, 0, .15);
   transition: opacity 0.3s, transform .3s, right .3s, top 0.4s;
   overflow: hidden;
+  border-radius: $radius;
   z-index: $zindex-notification;
   max-width: 480px;
+  min-width: 260px;
 
   > .#{$ns}-notification {
     padding-top: $size-unit;
@@ -69,10 +89,10 @@ $notification-padding: 1.25rem 2.5rem 1.25rem 1.5rem !default;
   .has-title {
     padding: 0;
     margin: 0;
-    font-size: $size-medium;
+    font-size: $size-normal;
   }
 
   .has-content {
-    padding-top: 0.25 * $size-unit;
+    padding-top: 0.2 * $size-unit;
   }
 }

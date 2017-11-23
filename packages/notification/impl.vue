@@ -1,101 +1,61 @@
 <template>
-  <transition
-      enter-active-class="animated bounceInRight"
-      leave-active-class="animated fadeOut"
-      @after-leave="_afterAnimatedLeave"
+
+  <div class="v-notification"
+       :class="[ colorModifier ]"
   >
-    <div class="v-notification-popup"
-         v-show="visible"
-         :style="{ top: top ? top + 'px' : 'auto' }"
-         @mouseenter="clearTimer()"
-         @mouseleave="startTimer()">
-      <div class="v-notification"
-           :class="[ `is-${typeClass}` ]"
-      >
-        <h2 class="has-title">
-          {{ title }}
-        </h2>
-        <div class="has-content">
-          {{ message }}
-        </div>
-        <a class="v-close" @click="handleClose()"></a>
-      </div>
+    <h1 class="has-title" v-if="title != null">
+      {{ title }}
+    </h1>
+    <h2 class="has-subtitle" v-if="subtitle != null">
+      {{ subtitle }}
+    </h2>
+    <div class="has-content">
+      <slot>
+        {{ message }}
+      </slot>
     </div>
-  </transition>
+    <slot name="close">
+      <a class="v-close"
+         @click="_handleClose"
+         v-if="closable"
+      ></a>
+    </slot>
+  </div>
 </template>
 
 <script>
-
-  const typeMaps = {
-    success: 'success',
-    info: 'info',
-    warning: 'warning',
-    error: 'danger'
-  }
+  import { createMixins } from '../../sources/utils/mixin'
 
   export default {
     name: 'VNotification',
-    data () {
-      return {
-        visible: false,
-        title: '',
-        message: '',
-        duration: 4000,
-        type: '',
-        onClose: null,
-        closed: false,
-        top: null,
-        timer: null
+
+    mixins: [ createMixins(['color']) ],
+
+    props: {
+      title: {
+        type: String,
+        'default': null
+      },
+
+      subtitle: {
+        type: String,
+        'default': null
+      },
+
+      message: {
+        type: String
+      },
+
+      closable: {
+        type: Boolean,
+        'default': true
       }
     },
-    computed: {
-      typeClass () {
-        return this.type && typeMaps[this.type] ? typeMaps[this.type] : ''
-      }
-    },
-    watch: {
-      closed: function (newVal) {
-        if (true === newVal) {
-          this.visible = false
-        }
-      }
-    },
+
     methods: {
-      _afterAnimatedLeave () {
-        // Clear
-        this.$nextTick(() => {
-          this.$destroy()
-            this.$el.parentNode.removeChild(this.$el)
-        })
-      },
-      handleClose () {
-        this.closed = true
-        if (typeof this.onClose === 'function') {
-          this.onClose()
-        }
-      },
-      clearTimer () {
-        clearTimeout(this.timer)
-      },
-      startTimer () {
-        if (this.duration > 0) {
-          this.timer = setTimeout(() => {
-            if (!this.closed) {
-              this.handleClose()
-            }
-          }, this.duration)
-        }
+      _handleClose (e) {
+        this.$emit('close', this, e)
       }
-    },
-    created () {
-      if (this.duration > 0) {
-        this.timer = setTimeout(() => {
-          if (!this.closed) {
-            this.handleClose()
-          }
-        }, this.duration)
-      }
-    },
-    components: {}
+    }
   }
 </script>

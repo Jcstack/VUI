@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Vui Entry</title>
+
+  <style>
+    body, html {
+      padding: 0;
+      margin: 0;
+    }
+    .container {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .link-item {
+      background-color: #f6f5c6;
+      padding: 15px 60px;
+      margin-bottom: 50px;
+      text-align: center;
+      font-family: 'Roboto Mono', Monaco, courier, monospace;
+      color: #101118;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color .5s;
+    }
+    .link-item:hover {
+      background-color: #49e7aa;
+    }
+    .link-item > strong {
+      display: block;
+      font-size: 32px;
+      padding: 0;
+    }
+    .link-item > span {
+      color: #737373;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <a href="vui/" class="link-item">
+    <strong>VUI</strong>
+    <span>CSS framework</span>
+  </a>
+
+  <a href="vpackages/" class="link-item">
+    <strong>VPackages</strong>
+    <span>UI components for Vue 2</span>
+  </a>
+</div>
+</body>
+</html>

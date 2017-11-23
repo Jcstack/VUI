@@ -9,6 +9,8 @@ import Popover from './popover'
 import Tooltip from './tooltip'
 import Badge from './badge'
 import Tag from './tag'
+import Message from './message'
+import Notification from './notification'
 
 const components = [
   Layout,
@@ -20,7 +22,9 @@ const components = [
   Popover,
   Tooltip,
   Badge,
-  Tag
+  Tag,
+  Message,
+  Notification
 ]
 
 export function install (Vue) {

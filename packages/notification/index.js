@@ -4,8 +4,9 @@
 
 import Vue from 'vue'
 import VNotification from './impl.vue'
+import VNotificationPopup from './impl_popup.vue'
 
-let NotificationConstructor = Vue.extend(VNotification)
+let NotificationConstructor = Vue.extend(VNotificationPopup)
 
 let instance
 let instances = []
@@ -13,13 +14,14 @@ let seed = 1
 
 const GUTTER_NOTICE = 16
 
-let Notification = function (options) {
+let NotificationFactory = function (options) {
   options = options || {}
+
   let userOnClose = options.onClose
   let id = `v-notification_${seed}++`
 
   options.onClose = function () {
-    Notification.close(id, userOnClose)
+    NotificationFactory.close(id, userOnClose)
   }
 
   instance = new NotificationConstructor({
@@ -44,7 +46,7 @@ let Notification = function (options) {
   return instance
 }
 
-Notification.close = function (id, userOnClose) {
+NotificationFactory.close = function (id, userOnClose) {
   let index
   let removedHeight
   let len = instances.length
@@ -67,53 +69,28 @@ Notification.close = function (id, userOnClose) {
   }
 }
 
-let NotificationFactory = {
-  alert (message, options) {
-    options = options || {}
-    options.message = message
+;['alert', 'warn', 'error', 'info', 'success'].forEach(type => {
+  NotificationFactory[type] = options => {
+    if (typeof options === 'string') {
+      options = {
+        message: options
+      }
+    }
+
+    options.type = type
     options.title = options.title || '提示'
 
-    return Notification(options)
-  },
-
-  success (message, options) {
-    options = options || {}
-    options.type = 'success'
-    options.message = message
-    options.title = options.title || '提示'
-
-    return Notification(options)
-  },
-
-  warn (message, options) {
-    options = options || {}
-    options.type = 'warning'
-    options.message = message
-    options.title = options.title || '提示'
-
-    return Notification(options)
-  },
-
-  error (message, options) {
-    options = options || {}
-    options.type = 'error'
-    options.message = message
-    options.title = options.title || '提示'
-
-    return Notification(options)
-  },
-
-  info (message, options) {
-    options = options || {}
-    options.type = 'info'
-    options.message = message
-    options.title = options.title || '提示'
-
-    return Notification(options)
+    return NotificationFactory(options)
   }
+})
+
+VNotification.install = function (Vue) {
+  Vue.component(VNotification.name, VNotification)
+
+  Vue.prototype.$VNotification = NotificationFactory
 }
 
 export {
-  NotificationFactory as default,
-  Notification
+  VNotification as default,
+  NotificationFactory
 }
