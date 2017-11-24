@@ -1,9 +1,12 @@
 <template>
-  <table class="v-table" :class="this.options.tableClasses">
+  <table class="v-table" :class="[
+    _tableClasses,
+    magicModifier
+  ]">
     <thead>
     <tr>
       <th v-for="cc in thColumns"
-          @click="_headClick(cc, $event)"
+          @click="_headClick(cc[0], $event)"
       >
 
         <slot v-if="`${cc[0].indexOf('__')}` == -1"
@@ -14,7 +17,7 @@
 
         <!-- feature of all select -->
         <slot v-if="cc[0] === '__select'"
-              name="v__th-select"
+              name="th-item__select"
         >
           <span class="v-th-select">
             <label class="v-checkbox">
@@ -31,6 +34,7 @@
         :class="{
           'is-selected': el.v__selected
         }"
+        :key="el.v__key"
     >
       <td v-for="c in tdColumns">
         <slot v-if="`${c.indexOf('__')}` == -1"
@@ -45,8 +49,9 @@
 
         <!-- feature of select -->
         <slot v-if="c === '__select'"
-              name="v__td-select"
+              name="td-item__select"
               :row="el"
+              :index="index"
         >
           <span class="v-td-select">
             <label class="v-checkbox">
@@ -61,6 +66,8 @@
 </template>
 
 <script>
+  import is from 'is-type-of'
+  import { createMixins } from '../../sources/utils/mixin'
 
   const ORDER_ASC = 'asc'
   const ORDER_DESC = 'desc'
@@ -68,22 +75,18 @@
   export default {
     name: 'VTable',
 
+    mixins: [ createMixins(['magic']) ],
+
     props: {
       rows: {
         type: Array,
       },
       columns: {
         type: Array,
-        'default': []
+        'default': Array
       },
-      options: {
-        type: Object,
-        'default' () {
-          return {
-            tableClasses: 'is-bordered is-striped'
-          }
-        }
-      },
+      bordered: Boolean,
+      striped: Boolean,
       sortable: {
         type: Boolean,
         'default': false
@@ -105,6 +108,7 @@
       }
 
       this._preparedLocalColumns()
+      this._preparedLocalRows()
 
       // `__` feature
       this.featureState.select_all_initialized = false
@@ -116,6 +120,7 @@
         this._preparedLocalColumns()
       },
       'rows' () {
+        this._preparedLocalRows()
         this._supportedPrefixFeature('__select')
       }
     },
@@ -135,15 +140,22 @@
         },
 
         set (switcher) {
-          console.log(switcher)
           if (this.featureState.select_all_initialized && this.rows.length) {
             this.rows.forEach(n => {
               n.v__selected = switcher
             })
           }
         }
-      }
+      },
 
+      _tableClasses () {
+        let cls = []
+
+        this.bordered && cls.push('is-bordered')
+        this.striped && cls.push('is-striped')
+
+        return cls
+      }
     },
 
     methods: {
@@ -154,6 +166,7 @@
           }
         }
       },
+
       _supportedPrefixFeature (feat) {
         if (feat && !!~this.tdColumns.indexOf(feat)) {
           switch (feat.replace(/__/g, '')) {
@@ -171,13 +184,15 @@
           }
         }
       },
+
       _injectRowItemField (key, value) {
-        this.rows && this.rows.forEach((it) => {
+        this.rows && this.rows.forEach((it, index) => {
           if (it && !it.hasOwnProperty(key)) {
-            this.$set(it, key, value) // force set row field reactive
+            this.$set(it, key, is.function(value) ? value(it, index) : value) // force set row field reactive
           }
         })
       },
+
       _preparedLocalColumns () {
         this.thColumns = []
         this.tdColumns = []
@@ -195,6 +210,14 @@
           }
         })
       },
+
+      _preparedLocalRows () {
+        // inject `key`
+        this._injectRowItemField('v__key', (n, index) => {
+          return `item_key_${(n && n.id) ? ('id_' + n.id) : ('index_' + index)}`
+        })
+      },
+
       _orderByColumn (col, toggleDesc = false) {
         const k = col.toLowerCase()
 
@@ -215,8 +238,13 @@
 
         this.$emit('order-by-column', this.sortableState, k)
       },
+
+      _isFeatureCol (tag) {
+        return tag && tag.indexOf('__') === 0
+      },
+
       _headClick (col) {
-        if (this.sortable) {
+        if (this.sortable && !this._isFeatureCol(col)) {
           this._orderByColumn(col, true)
         }
       }

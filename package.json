@@ -51,7 +51,8 @@
   "dependencies": {
     "is-type-of": "^1.2.0",
     "moment": "^2.19.2",
-    "vue-template-compiler": "^2.5.4"
+    "vue-template-compiler": "^2.5.4",
+    "is-type-of": "latest"
   },
   "license": "MIT"
 }
