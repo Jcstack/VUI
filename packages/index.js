@@ -11,6 +11,10 @@ import Badge from './badge'
 import Tag from './tag'
 import Message from './message'
 import Notification from './notification'
+import Progress from './progress'
+import RangeSlider from './slider'
+import Switch from './switch'
+import Table from './table'
 
 const components = [
   Layout,
@@ -24,7 +28,11 @@ const components = [
   Badge,
   Tag,
   Message,
-  Notification
+  Notification,
+  Progress,
+  RangeSlider,
+  Switch,
+  Table
 ]
 
 export function install (Vue) {

@@ -29,7 +29,7 @@
 
     props: {
       value: {
-        type: [String, Number],
+        type: Number,
         'default': 0
       },
 
@@ -52,7 +52,12 @@
     data () {
       const vm = this
 
+      // instance properties
+      vm._moveTimer = null
+      vm._percentUnits = 100
+
       return {
+        localValue: null,
         localPercentValue: 0,
         isDragging: false,
         volatileSize: {
@@ -75,24 +80,7 @@
       }
     },
 
-    created () {
-      let percentVal = this.value
-
-      // instance properties
-      this._moveTimer = null
-      this._percentUnits = 100
-
-      if (typeof this.value === 'string') {
-        percentVal = /^(\d{1,3})%$/.test(this.value) ? +(RegExp.$1) : parseInt(percentVal)
-        percentVal = Number.isNaN(percentVal) ? 0 : percentVal
-      }
-
-      // @todo float
-      percentVal /= this._percentUnits
-
-      percentVal = percentVal > 1 ? 1 : ( percentVal < 0 ? 0 : percentVal)
-      this.localPercentValue = this.vertical ? (1 - percentVal) : percentVal
-    },
+    created () {},
 
     computed: {
       styleOffsetValue () {
@@ -184,11 +172,11 @@
                 })
               }
 
-              console.debug('[VRange][Reset Start Center :X :Y DELTA]', `[ ${vs._startClientX}, ${vs._startClientY} ]`, deltaX, deltaY)
+//              console.debug('[VRange][Reset Start Center :X :Y DELTA]', `[ ${vs._startClientX}, ${vs._startClientY} ]`, deltaX, deltaY)
             } else {
               // calculate percent
-              console.debug(`[VRange]((!isVer ? vs._startOffsetLeft : vs._startOffsetTop) + DELTA) / rangeOffsetLength`)
-              console.debug(`[VRange]((!${isVer} ? ${vs._startOffsetLeft} : ${vs._startOffsetTop}) + ${DELTA}) / ${rangeOffsetLength}`)
+//              console.debug(`[VRange]((!isVer ? vs._startOffsetLeft : vs._startOffsetTop) + DELTA) / rangeOffsetLength`)
+//              console.debug(`[VRange]((!${isVer} ? ${vs._startOffsetLeft} : ${vs._startOffsetTop}) + ${DELTA}) / ${rangeOffsetLength}`)
 
               let v = (( (!isVer ? vs._startOffsetLeft : vs._startOffsetTop) + DELTA) / rangeOffsetLength)
               console.debug(`[VRange] fuzzy percentage`, v)
@@ -202,7 +190,7 @@
 
               vm.localPercentValue = v
               // end
-              console.debug('[VRange][Point Center :X :Y]', `[ ${vs._startClientX}, ${vs._startClientY} ]`, deltaX, deltaY, '[new]', v)
+//              console.debug('[VRange][Point Center :X :Y]', `[ ${vs._startClientX}, ${vs._startClientY} ]`, deltaX, deltaY, '[new]', v)
             }
 
             vm._updatePercentStepVal()
@@ -224,6 +212,7 @@
 
         // emit value
         if (pv !== this.value) {
+          this.localValue = pv
           vm.$emit('input', pv)
         }
       },
@@ -253,6 +242,21 @@
     },
 
     watch: {
+      'value': {
+        immediate: true,
+        handler (a, b) {
+          // @TODO reactor
+          if (b == null || this.localValue !== a) {
+            let percentVal = a
+
+            percentVal /= this._percentUnits
+
+            percentVal = percentVal > 1 ? 1 : ( percentVal < 0 ? 0 : percentVal)
+            this.localPercentValue = this.vertical ? (1 - percentVal) : percentVal
+            this.localValue = a
+          }
+        }
+      },
       'localPercentValue' (a, b) {
         this.syncVolatileSize()
       }
@@ -289,9 +293,7 @@
                     _pointMinClientY: pBound.top,
                     _pointMaxClientY: pBound.top + elProgress.offsetHeight,
                     _pointMaxOffsetLeft: elProgress.offsetWidth,
-                    _pointMaxOffsetTop: elProgress.offsetHeight,
-                    rangeOffsetWidth: elProgress.offsetWidth, // maybe dynamic
-                    rangeOffsetHeight: elProgress.offsetHeight,
+                    _pointMaxOffsetTop: elProgress.offsetHeight
                   })
                   break
                 case 'click':
@@ -314,7 +316,9 @@
               pointOffsetLeft: elPoint.offsetLeft, // dynamic
               pointOffsetTop: elPoint.offsetTop,
               pointClientWidth: POINT_CLIENT_WIDTH, // without border
-              pointClientHeight: POINT_CLIENT_HEIGHT
+              pointClientHeight: POINT_CLIENT_HEIGHT,
+              rangeOffsetWidth: elProgress.offsetWidth, // maybe dynamic
+              rangeOffsetHeight: elProgress.offsetHeight
             })
           }
 

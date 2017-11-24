@@ -48,7 +48,7 @@
 
 Name       | Description    | Type     | Values | Default
 ----       | -------------- | -------- | ------ | -------
-size       | Vui尺寸修饰     | String   | /      | `true`
+size       | Vui尺寸修饰     | String   | /      | /
 color      | Vui颜色修饰     | String   | /      | /
 rounded    | 是否圆角        | Boolean  | /      | /
 closable   | 可否关闭        | Boolean  | /      | `false`
