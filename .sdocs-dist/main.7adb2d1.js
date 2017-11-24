@@ -27585,7 +27585,7 @@ if (false) {
 
 
 __WEBPACK_IMPORTED_MODULE_0__impl_vue___default.a.install = function (Vue) {
-  Vue.install(__WEBPACK_IMPORTED_MODULE_0__impl_vue___default.a.name, __WEBPACK_IMPORTED_MODULE_0__impl_vue___default.a);
+  Vue.component(__WEBPACK_IMPORTED_MODULE_0__impl_vue___default.a.name, __WEBPACK_IMPORTED_MODULE_0__impl_vue___default.a);
 };
 
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0__impl_vue___default.a);
