@@ -72,8 +72,7 @@
     props: {
       value: {
         type: [String, Date],
-        required: true,
-        'default': null
+        required: true
       },
       format: {
         type: String,
