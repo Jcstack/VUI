@@ -2,22 +2,22 @@
 
 水平 .
 <div class="demo-box">
-  <v-range-slider
+  <v-slider
       v-model="sliderValue"
       :vertical="false"
       color="info"
-  ></v-range-slider>
+  ></v-slider>
   <p>
     <strong>{{ sliderValue }}%</strong>
   </p>
   <p>垂直 .</p>
   <v-row>
     <v-col style="display: flex; justify-content: center;">
-      <v-range-slider
+      <v-slider
           v-model="sliderValue"
           :vertical="true"
           color="danger"
-      ></v-range-slider>
+      ></v-slider>
     </v-col>
     <v-col>
       <v-progress
@@ -31,21 +31,21 @@
 </div>
 
 ```html
-<v-range-slider
+<v-slider
     v-model="sliderValue"
     :vertical="false"
     color="info"
-></v-range-slider>
+></v-slider>
 <p>
   <strong>{{ sliderValue }}%</strong>
 </p>
 <v-row>
   <v-col style="display: flex; justify-content: center;">
-    <v-range-slider
+    <v-slider
         v-model="sliderValue"
         :vertical="true"
         color="danger"
-    ></v-range-slider>
+    ></v-slider>
   </v-col>
   <v-col>
     <v-progress

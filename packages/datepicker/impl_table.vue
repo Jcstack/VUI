@@ -49,7 +49,7 @@
 
     methods: {
       _handleSelect (e) {
-        this.vDispatch('VDatepicker', 'day-item-click', e)
+        this.vDispatch('VDatepicker', 'table-day-item-click', e)
       }
     }
   }

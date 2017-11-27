@@ -4,9 +4,10 @@
   >
     <a class="v-pagination-previous" @click="_movePage(-1)">{{ prevPageText }}</a>
     <a class="v-pagination-next" @click="_movePage(1)">{{ nextPageText }}</a>
-    <ul class="v-pagination-list">
+    <ul class="v-pagination-list"
+        v-if="slideLabels && slideLabels.length"
+    >
       <li
-          v-if="slideLabels && slideLabels.length"
           v-for="el in slideLabels">
         <span class="v-pagination-ellipsis" v-if="el === 'DOT'">&hellip;</span>
         <a class="v-pagination-link"
@@ -19,7 +20,8 @@
 </template>
 
 <script>
-  import {createMixins} from '../../sources/utils/mixin'
+  import { createMixins } from '../../sources/utils/mixin'
+
   export default {
     name: 'VPagination',
 

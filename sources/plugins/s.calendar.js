@@ -47,7 +47,7 @@ class SCalendar {
     }
     if (moment.isMoment(value) && value.isValid()) {
       // compare equivalent
-      if (!this._date || !value.isSame(this._date)) {
+      if (!this._date || !value.isSame(this._date, 'day')) {
         const prevDate = this._date
         this._date = value
         this.emitter && this.emitter.emit(SCalendar.EVENT_DATE_CHANGE, {

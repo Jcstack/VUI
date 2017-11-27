@@ -1,6 +1,8 @@
 <template>
   <div class="v-datepicker has-input">
-    <v-dropdown>
+    <v-dropdown
+        ref="dropdown"
+    >
       <div class="v-control"
            slot="trigger"
       >
@@ -9,7 +11,7 @@
                autocomplete="off"
                class="v-input"
                readonly="readonly"
-               :value="value"
+               :value="formatDateValue"
         >
       </div>
 
@@ -23,7 +25,7 @@
           <div class="v-field is-horizontal">
             <div class="v-control">
               <div class="v-select">
-                <select v-model="inputYear">
+                <select v-model="localInputYear">
                   <option :value="el"
                           v-for="el in years"
                   >{{el}}年
@@ -36,7 +38,7 @@
             </div>
             <div class="v-control">
               <div class="v-select">
-                <select v-model="inputMonth">
+                <select v-model="localInputMonth">
                   <option :value="el" v-for="el in months">{{el}}月份</option>
                 </select>
               </div>
@@ -53,6 +55,7 @@
   import VDropdown from '../dropdown'
   import VDatepicker from './impl.vue'
   import moment from 'moment'
+  import is from 'is-type-of'
 
   export default {
     name: 'VDatepickerInput',
@@ -61,8 +64,6 @@
       return {
         years: Array(100).fill(0).map((n, i) => (1949 + i)),
         months: Array(12).fill(0).map((n, i) => (i + 1)),
-        inputYear: '',
-        inputMonth: ''
       }
     },
 
@@ -83,59 +84,88 @@
 
       if (!this.value || !(m = moment(this.value)).isValid()) {
         m = moment()
-      }
-
-      this._syncLocalYearAndMonth(m)
-    },
-
-    watch: {
-      'value' (val) {
-        const m = moment(val)
-        if (!val || !m.isValid()) return
-
-        // update year/month picker
-        this._syncLocalYearAndMonth(m)
-      },
-
-      'inputYear' (year, bYear) {
-        console.debug('inputYear Changed', year, bYear)
-
-        const {scalendar} = this.$refs.datepicker.$options
-
-        if (!bYear || !year || year === scalendar.date.year()) return
-
-        // update calendar
-        this.$emit('input', scalendar.date.clone().year(year).date(1).format(this.format))
-      },
-
-      /**
-       * @param month {Number} `1` started index base
-       * @param bMonth
-       */
-      'inputMonth' (month, bMonth) {
-        const {scalendar} = this.$refs.datepicker.$options
-
-        if (!bMonth || !month || (month - 1) === scalendar.date.month()) return
-
-        // update calendar
-        this.$emit('input', scalendar.date.clone().month(month - 1).date(1).format(this.format))
+        this.$emit('input', m.format(this.format))
       }
     },
+
+    mounted () {
+      // events
+      this.$refs.datepicker.$on('item-click', e => {
+        // toggle dropdown
+        this.$refs.dropdown._handleToggle()
+      })
+    },
+
+    watch: {},
 
     methods: {
-      _syncLocalYearAndMonth (m) {
-        this.inputYear = m.year()
-        this.inputMonth = (m.month() + 1)
-      },
-
       _handlePickerDateChange (e) {
         if (e && e.prevDate != null) {
-          this.$emit('input', e.currDate.format(this.format))
+          let to, lo
+
+          to = e.currDate.format(this.format)
+          e = moment(this.value)
+          lo = (this.value && e.isValid()) ? e.format(this.format) : false
+
+          lo && (lo !== to) && this.$emit('input', to)
         }
+      },
+
+      _validateDateValue () {
+        const m = moment(this.value)
+        if (!this.value || !m.isValid()) {
+          throw new Error('[VDatepickerInput] Error Date Value .')
+        }
+
+        return m
       }
     },
 
-    computed: {},
+    computed: {
+      localInputYear: {
+        get () {
+          const m = this._validateDateValue()
+
+          return m.year()
+        },
+
+        set (a) {
+          if (this.localInputYear === +a) return
+
+          const {scalendar} = this.$refs.datepicker.$options
+
+          // update calendar
+          this.$emit('input', scalendar.date.clone().year(+a).date(1).format(this.format))
+        }
+      },
+
+      localInputMonth: {
+        get () {
+          const m = this._validateDateValue()
+
+          return (m.month() + 1)
+        },
+
+        set (a) {
+          if (this.localInputMonth === +a) return
+
+          const {scalendar} = this.$refs.datepicker.$options
+
+          // update calendar
+          this.$emit('input', scalendar.date.clone().month(+a - 1).date(1).format(this.format))
+        }
+      },
+
+      formatDateValue () {
+        if (is.date(this.value)) {
+          return moment(this.val).format(this.format)
+        } else if (moment.isMoment(this.value)) {
+          return this.value.format(this.format)
+        }
+
+        return this.value
+      }
+    },
 
     components: {
       VDropdown,

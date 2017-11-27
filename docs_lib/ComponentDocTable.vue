@@ -3,17 +3,17 @@
     <!-- tabs -->
     <div class="v-tabs">
       <ul>
-        <li v-for="el in tabs" :class="{ 'is-active': el === active }">
+        <li v-for="el in localTabs" :class="{ 'is-active': el === localActive }">
           <a href="javascript:;"
-             @click="active = el"
+             @click="localActive = el"
           >{{ el }}</a>
         </li>
       </ul>
     </div>
     <!-- panels -->
     <div class="panels">
-      <template v-for="el in tabs">
-        <div class="panels-inner" v-if="el === active">
+      <template v-for="el in localTabs">
+        <div class="panels-inner" v-if="el === localActive">
           <slot :name="el">
             <p>
               没有对应支持 :)
@@ -29,12 +29,28 @@
   export default {
     name: 'VueComponentDocTable',
 
+    props: {
+      tabs: {
+        type: String,
+        'default': 'props,events,slots,methods'
+      },
+
+      active: String
+    },
+
     data () {
       return {
-        active: 'props',
-        tabs: ['props', 'events', 'slots', 'methods']
+        localActive: this.active || 'props'
       }
     },
+
+    computed: {
+      localTabs () {
+        let tabs = this.tabs.split(',')
+
+        return tabs.map(n => n.trim())
+      }
+    }
 
   }
 </script>

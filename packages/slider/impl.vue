@@ -23,7 +23,7 @@
   import { createMixins } from '../../sources/utils/mixin'
 
   export default {
-    name: 'VRangeSlider',
+    name: 'VSlider',
 
     mixins: [createMixins(['color', 'state'])],
 
@@ -172,17 +172,17 @@
                 })
               }
 
-//              console.debug('[VRange][Reset Start Center :X :Y DELTA]', `[ ${vs._startClientX}, ${vs._startClientY} ]`, deltaX, deltaY)
+//              console.debug('[VSlider][Reset Start Center :X :Y DELTA]', `[ ${vs._startClientX}, ${vs._startClientY} ]`, deltaX, deltaY)
             } else {
               // calculate percent
-//              console.debug(`[VRange]((!isVer ? vs._startOffsetLeft : vs._startOffsetTop) + DELTA) / rangeOffsetLength`)
-//              console.debug(`[VRange]((!${isVer} ? ${vs._startOffsetLeft} : ${vs._startOffsetTop}) + ${DELTA}) / ${rangeOffsetLength}`)
+//              console.debug(`[VSlider]((!isVer ? vs._startOffsetLeft : vs._startOffsetTop) + DELTA) / rangeOffsetLength`)
+//              console.debug(`[VSlider]((!${isVer} ? ${vs._startOffsetLeft} : ${vs._startOffsetTop}) + ${DELTA}) / ${rangeOffsetLength}`)
 
               let v = (( (!isVer ? vs._startOffsetLeft : vs._startOffsetTop) + DELTA) / rangeOffsetLength)
-              console.debug(`[VRange] fuzzy percentage`, v)
+              console.debug(`[VSlider] fuzzy percentage`, v)
 
               if (v > 1) {
-                console.warn(`[VRange] delta percent value error . it can not be greater than 1`, v)
+                console.warn(`[VSlider] delta percent value error . it can not be greater than 1`, v)
                 v = 1
               } else if (v < 0) {
                 v = 0
@@ -190,7 +190,7 @@
 
               vm.localPercentValue = v
               // end
-//              console.debug('[VRange][Point Center :X :Y]', `[ ${vs._startClientX}, ${vs._startClientY} ]`, deltaX, deltaY, '[new]', v)
+//              console.debug('[VSlider][Point Center :X :Y]', `[ ${vs._startClientX}, ${vs._startClientY} ]`, deltaX, deltaY, '[new]', v)
             }
 
             vm._updatePercentStepVal()

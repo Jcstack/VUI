@@ -63,7 +63,7 @@
         this.$emit('change', payload)
       })
 
-      this.$on('day-item-click', (payload) => {
+      this.$on('table-day-item-click', (payload) => {
         this._selectItem(payload)
 
         // items handle click event
