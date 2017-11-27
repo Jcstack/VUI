@@ -34,7 +34,7 @@
               </div>
             </div>
             <div class="v-control">
-              <button class="v-btn" @click="$emit('input', new Date())">今天</button>
+              <button class="v-btn" @click="goToToday">今天</button>
             </div>
             <div class="v-control">
               <div class="v-select">
@@ -118,6 +118,10 @@
         }
 
         return m
+      },
+
+      goToToday () {
+        this.$emit('input', moment(new Date()).format(this.format))
       }
     },
 
