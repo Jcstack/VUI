@@ -11,13 +11,15 @@
                autocomplete="off"
                class="v-input"
                readonly="readonly"
+               v-bind="$attrs"
                :value="formatDateValue"
         >
       </div>
 
       <!-- picker panel -->
       <v-datepicker
-          :date="value"
+          :date="localDateValue"
+          :format="format"
           @change="_handlePickerDateChange"
           ref="datepicker"
       >
@@ -79,21 +81,14 @@
       }
     },
 
-    created () {
-      let m = null
-
-      if (!this.value || !(m = moment(this.value)).isValid()) {
-        m = moment()
-        this.$emit('input', m.format(this.format))
-      }
-    },
+    created () {},
 
     mounted () {
       // events
-      this.$refs.datepicker.$on('item-click', e => {
-        // toggle dropdown
-        this.$refs.dropdown._handleToggle()
-      })
+//      this.$refs.datepicker.$on('item-click', e => {
+//        // toggle dropdown
+//        this.$refs.dropdown._handleToggle()
+//      })
     },
 
     watch: {},
@@ -105,15 +100,15 @@
 
           to = e.currDate.format(this.format)
           e = moment(this.value)
-          lo = (this.value && e.isValid()) ? e.format(this.format) : false
+          lo = (this.value && e.isValid()) ? e.format(this.format) : false;
 
-          lo && (lo !== to) && this.$emit('input', to)
+          (lo === false || lo !== to) && this.$emit('input', to)
         }
       },
 
       _validateDateValue () {
-        const m = moment(this.value)
-        if (!this.value || !m.isValid()) {
+        const m = moment(this.localDateValue)
+        if (!this.localDateValue || !m.isValid()) {
           throw new Error('[VDatepickerInput] Error Date Value .')
         }
 
@@ -126,6 +121,17 @@
     },
 
     computed: {
+      localDateValue () {
+        let m = this.value
+
+        if (!m || !moment(m).isValid()) {
+          m = moment()
+          return m.format(this.format)
+        }
+
+        return m
+      },
+
       localInputYear: {
         get () {
           const m = this._validateDateValue()

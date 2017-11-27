@@ -8,6 +8,7 @@
   </p>
   <v-datepicker-input
       v-model="date"
+      placeholder="Click to Select Date"
   ></v-datepicker-input>
 </div>
 
@@ -15,7 +16,7 @@
   export default {
     data () {
       return {
-        date: '1999-09-15'
+        date: ''
       }
     }
   }
