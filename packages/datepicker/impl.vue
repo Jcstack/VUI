@@ -1,11 +1,17 @@
 <template>
   <div class="v-datepicker-panel">
     <slot name="header"></slot>
-    <v-datepicker-table
-        :weeks="tableWeekdaysData"
-        :days="tableRowsData"
-        :active-date="selectedDate"
-    ></v-datepicker-table>
+    <slot name="table"
+          :weeks="tableWeekdaysData"
+          :days="tableRowsData"
+          :active-date="selectedDate"
+    >
+      <v-datepicker-table
+          :weeks="tableWeekdaysData"
+          :days="tableRowsData"
+          :active-date="selectedDate"
+      ></v-datepicker-table>
+    </slot>
     <slot name="footer"></slot>
   </div>
 </template>
@@ -90,7 +96,7 @@
           let rows = []
           scalendar.makeMonthBoard().forEach((n, i, k) => {
             (rows[k = Math.floor(i / 7)] || (rows[k] = []))
-            .push(n)
+              .push(n)
           })
 
           this.tableRowsData = rows
