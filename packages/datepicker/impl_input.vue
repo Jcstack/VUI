@@ -80,18 +80,6 @@
       }
     },
 
-    created () {},
-
-    mounted () {
-      // events
-//      this.$refs.datepicker.$on('item-click', e => {
-//        // toggle dropdown
-//        this.$refs.dropdown._handleToggle()
-//      })
-    },
-
-    watch: {},
-
     methods: {
       _handlePickerDateChange (e) {
         if (e && e.prevDate != null) {

@@ -1,14 +1,26 @@
 import Vue from 'vue'
 
-export const $bus = new Vue();
+function makeBus ($bus) {
+  if ($bus && $bus.on == null) {
+    ['on', 'off', 'emit', 'once'].forEach(type => {
+      $bus[type] = $bus['$' + type].bind($bus)
+    })
+  }
 
-['on', 'off', 'emit', 'once'].forEach(type => {
-  $bus[type] = $bus['$' + type].bind($bus)
-})
+  return $bus
+}
+
+export const $bus = makeBus(new Vue())
 
 export default {
+  methods: {
+    _makeSelfBus () {
+      return makeBus(this)
+    }
+  },
+
   computed: {
-    '_bus' () {
+    'vBus' () {
       return $bus
     }
   }

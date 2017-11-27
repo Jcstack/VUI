@@ -48,11 +48,11 @@
 
     created () {
       const calendar = this.$options.scalendar = new SCalendar({
-        emitter: this._bus
+        emitter: this._makeSelfBus()
       })
 
       // events
-      this._bus.on(SCalendar.EVENT_DATE_CHANGE, payload => {
+      this.$on(SCalendar.EVENT_DATE_CHANGE, payload => {
         const {prevDate, currDate} = payload
         // maybe the same month
         if (!prevDate || !currDate.isSame(prevDate, 'month')) {

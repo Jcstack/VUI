@@ -111,4 +111,3 @@ class SCalendar {
 Object.assign(SCalendar, _constants)
 
 export default SCalendar
-
