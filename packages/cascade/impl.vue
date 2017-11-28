@@ -3,16 +3,17 @@
        :class="{ 'is-pending': pending }"
   >
     <div class="v-cascade-wrapper">
-      <context-panel v-for="(el, $index) in panels"
-                     :key="el.id"
-                     :class="[
-                       'v-seamless-slide-item',
-                       _slideTransitionModeCls($index),
-                       _slideActiveModeCls($index)
-                       ]"
-                     :level="$index"
-                     :title="el.name"
-                     v-collect-slide-item="$index">
+      <context-panel
+         v-for="(el, $index) in panels"
+         :key="el.id"
+         :class="[
+           'v-seamless-slide-item',
+           _slideTransitionModeCls($index),
+           _slideActiveModeCls($index)
+           ]"
+         :level="$index"
+         :title="el.name"
+         v-collect-slide-item="$index">
         <template v-if="Array.isArray(el.items)">
           <context-menu :items="el.items"></context-menu>
         </template>
@@ -75,7 +76,7 @@
 
       this.$on('menu-next', (e) => {
         this.next({
-          query: e
+          params: e
         })
       })
 

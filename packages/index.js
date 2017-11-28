@@ -17,6 +17,8 @@ import Switch from './switch'
 import Table from './table'
 import Pagination from './pagination'
 import Datepicker from './datepicker'
+import Carousel from './carousel'
+import Cascade from './cascade'
 
 const components = [
   Layout,
@@ -36,7 +38,9 @@ const components = [
   Switch,
   Table,
   Pagination,
-  Datepicker
+  Datepicker,
+  Carousel,
+  Cascade
 ]
 
 export function install (Vue) {

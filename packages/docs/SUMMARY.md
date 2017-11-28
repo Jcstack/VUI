@@ -21,9 +21,9 @@
   * [Table 表格](pkgs/table.md)
   * [Pagination 分页](pkgs/pagination.md)
   * [Datepicker 日历选框](pkgs/datepicker.md)
-  * [Carousel 幻灯](/)
-  * [Cascade 级联菜单](/)
-  * [Embed 嵌入媒体](/)
+  * [Carousel 幻灯](pkgs/carousel.md)
+  * [Cascade 级联菜单](pkgs/cascade.md)
+  * [Embed 嵌入媒体](pkgs/embed.md)
 
 * Advanced
   * Business

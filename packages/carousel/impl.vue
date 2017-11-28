@@ -11,7 +11,6 @@
            :class="[
              _transitionModeCls($index),
              _activeModeCls($index),
-             `color-${$index}`
            ]"
            v-collect-item="$index"
       >
@@ -84,7 +83,7 @@
     name: 'VCarousel',
 
     props: {
-      value: [String, Number],
+      value: Number,
       hasControls: Boolean,
       hasIndicators: {
         type: Boolean,

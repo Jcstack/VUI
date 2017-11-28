@@ -9,16 +9,21 @@ coverage
 .nyc_output
 .grunt
 .lock-wscript
+.gitlab-ci.yml
+.flowconfig
 node_modules
+package-lock.json
 jspm_packages
 .npm
 .idea
 
 .sdocs
+.sdocs-dist
+flow
 _v1_bak
 test
+sc-example
 examples
 example
 demo
 __demo
-packages

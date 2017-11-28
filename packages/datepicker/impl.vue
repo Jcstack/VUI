@@ -34,9 +34,7 @@
       inline: Boolean,
       date: {
         type: [String, Date],
-        'default' () {
-          return new Date()
-        }
+        'default': Date
       },
       format: {
         type: String,
@@ -140,8 +138,6 @@
       VDatepickerTable
     },
 
-    beforeDestroy () {
-
-    }
+    beforeDestroy () {}
   }
 </script>
