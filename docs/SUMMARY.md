@@ -3,12 +3,12 @@
 * Get Started
   * [Installation](/)
 
-* Basis(基件) {is-dropdown}
+* Basis(基件)
   * [Color & Size & Font](basis/color_size.md)
   * [Grid & Layout](basis/layout.md)
   * [Modifier](basis/modifiers.md)
 
-* Elements(元件) {is-dropdown}
+* Elements(元件) 
   * [Icon](elements/icon.md)
   * [Button](elements/buttons.md)
   * [Form](elements/form.md)
@@ -21,16 +21,15 @@
   * [Notification](elements/notifications.md)
   * [Content](elements/content.md)
 
-* Components(组件) {is-dropdown}
+* Components(组件) 
   * [Modal](components/modal.md)
   * [Dropdown](components/dropdown.md)
   * [Sidebar](components/sidebar.md)
   * [Navbar](components/navbar.md)
   * [Message](components/message.md)
-  * [Card](components/card.md)
   * [Tabs](components/tab.md)
 
-* Business(业务) {is-dropdown}
+* Business(业务) 
   * Fuzzy
 
 * Advanced(进阶)

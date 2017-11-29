@@ -17,6 +17,7 @@ jspm_packages
 .npm
 .idea
 
+.installed
 .sdocs
 .sdocs-dist
 flow
