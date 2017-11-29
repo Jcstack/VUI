@@ -1,5 +1,6 @@
 import Popper from './popper.js'
 import is from 'is-type-of'
+import { addClass } from '../utils/dom'
 
 const DEFAULT_OPTIONS = {
   container: false,
@@ -7,8 +8,11 @@ const DEFAULT_OPTIONS = {
   html: false,
   placement: 'top',
   title: '',
-  template:
-    '<div class="tooltip" role="tooltip"><div class="tooltip-arrow" x-arrow></div><div class="tooltip-inner"></div></div>',
+  template: `
+    <div class="v-popper-tooltip">
+      <div class="tooltip-arrow" x-arrow></div>
+      <div class="tooltip-inner"></div>
+    </div>`,
   trigger: 'hover focus',
   offset: 0,
 }
@@ -68,6 +72,7 @@ export default class Tooltip {
         : []
 
     // set initial state
+    this._classes = null
     this._isOpen = false
     this._popperOptions = {}
 
@@ -134,7 +139,7 @@ export default class Tooltip {
    * @param {String} template
    * @param {String|HTMLElement|TitleFunction} title
    * @param {Boolean} allowHtml
-   * @return {HTMLelement} tooltipNode
+   * @return {HTMLElement} tooltipNode
    */
   _create (reference, template, title, allowHtml) {
     // create tooltip element
@@ -180,6 +185,8 @@ export default class Tooltip {
 
     // if the tooltipNode already exists, just show it
     if (this._tooltipNode) {
+      this._classes && addClass(this._tooltipNode, this._classes)
+
       this._tooltipNode.style.display = ''
       this._tooltipNode.setAttribute('aria-hidden', 'false')
       this.popperInstance.update()
@@ -237,6 +244,8 @@ export default class Tooltip {
       tooltipNode,
       this._popperOptions
     )
+
+    this._classes && addClass(tooltipNode, this._classes)
 
     this._tooltipNode = tooltipNode
 
@@ -413,6 +422,10 @@ export default class Tooltip {
     }
 
     return false
+  }
+
+  setClasses (cls) {
+    this._classes = cls
   }
 }
 

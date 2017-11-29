@@ -14,9 +14,7 @@
       title: String
     },
 
-    created () {
-      console.debug('Hi, ', this.title)
-    },
+    created () {},
 
     mounted () {
       // Get the default slot with the first node as the trigger element
@@ -39,8 +37,7 @@
 </script>
 
 <style lang="scss" type="text/scss">
-  .popper,
-  .tooltip {
+  .v-popper-tooltip {
     position: absolute;
     background: #1c1e26;
     color: white;
@@ -53,8 +50,7 @@
     z-index: 21;
   }
 
-  .popper .popper__arrow,
-  .tooltip .tooltip-arrow {
+  .v-popper-tooltip .tooltip-arrow {
     width: 0;
     height: 0;
     border-style: solid;
@@ -62,18 +58,15 @@
     margin: 5px;
   }
 
-  .tooltip .tooltip-arrow,
-  .popper .popper__arrow {
+  .v-popper-tooltip .tooltip-arrow {
     border-color: #1c1e26;
   }
 
-  .popper[x-placement^="top"],
-  .tooltip[x-placement^="top"] {
+  .v-popper-tooltip[x-placement^="top"] {
     margin-bottom: 5px;
   }
 
-  .popper[x-placement^="top"] .popper__arrow,
-  .tooltip[x-placement^="top"] .tooltip-arrow {
+  .v-popper-tooltip[x-placement^="top"] .tooltip-arrow {
     border-width: 5px 5px 0 5px;
     border-left-color: transparent;
     border-right-color: transparent;
@@ -84,13 +77,11 @@
     margin-bottom: 0;
   }
 
-  .popper[x-placement^="bottom"],
-  .tooltip[x-placement^="bottom"] {
+  .v-popper-tooltip[x-placement^="bottom"] {
     margin-top: 5px;
   }
 
-  .tooltip[x-placement^="bottom"] .tooltip-arrow,
-  .popper[x-placement^="bottom"] .popper__arrow {
+  .v-popper-tooltip[x-placement^="bottom"] .tooltip-arrow {
     border-width: 0 5px 5px 5px;
     border-left-color: transparent;
     border-right-color: transparent;
@@ -101,13 +92,11 @@
     margin-bottom: 0;
   }
 
-  .tooltip[x-placement^="right"],
-  .popper[x-placement^="right"] {
+  .v-popper-tooltip[x-placement^="right"] {
     margin-left: 5px;
   }
 
-  .popper[x-placement^="right"] .popper__arrow,
-  .tooltip[x-placement^="right"] .tooltip-arrow {
+  .v-popper-tooltip[x-placement^="right"] .tooltip-arrow {
     border-width: 5px 5px 5px 0;
     border-left-color: transparent;
     border-top-color: transparent;
@@ -118,13 +107,11 @@
     margin-right: 0;
   }
 
-  .popper[x-placement^="left"],
-  .tooltip[x-placement^="left"] {
+  .v-popper-tooltip[x-placement^="left"] {
     margin-right: 5px;
   }
 
-  .popper[x-placement^="left"] .popper__arrow,
-  .tooltip[x-placement^="left"] .tooltip-arrow {
+  .v-popper-tooltip[x-placement^="left"] .tooltip-arrow {
     border-width: 5px 0 5px 5px;
     border-top-color: transparent;
     border-right-color: transparent;
