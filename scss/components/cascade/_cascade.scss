@@ -1,7 +1,12 @@
 $cascade-slide-transition: transform .5s ease !default;
 
 .#{$ns}-cascade {
-
+  &-wrapper {
+    display: flex;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
 }
 
 .#{$ns}-cascade-panel {
@@ -52,7 +57,7 @@ $cascade-slide-transition: transform .5s ease !default;
         font-size: $size-normal * 1.25;
       }
     }
-    
+
     &.has-more {
       .as-arrow-link {
         font-size: 12px;

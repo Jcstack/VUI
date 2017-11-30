@@ -1,5 +1,5 @@
 import PopupManager from '../utils/popup'
-import PopperJS from '../plugins/popper'
+import PopperJS from '../plugins/popper.js'
 
 const stopPropagation = e => e.stopPropagation()
 

@@ -1,103 +1,110 @@
-$switch-bd-color: $element-bd-color !default;
-$switch-off-bg-color: $is-error-color !default;
-$switch-on-bg-color: $is-success-color !default;
-$switch-bd-radius: $element-bd-radius !default;
-$switch-default-width: 20px !default;
+$speed-slow: 0.15s;
+$easing: ease-out;
 
-.sav-switch {
-  width: $switch-default-width * 3;
-  height: 34px;
-  border-radius: $switch-bd-radius * 50;
-  border: 2px solid $switch-bd-color;
-  box-sizing: border-box;
-  padding: 5px 2px 5px 2px;
-  background: $switch-off-bg-color;
-  cursor: $element-cursor;
-  font-size: $font-size-sm - 2;
+$switch-width-number: 2.75;
+$switch-width: $switch-width-number * 1em;
+$switch-padding: 0.2em;
 
-  > .roll-boll {
-    width: $switch-default-width;
-    height: $switch-default-width;
-    position: relative;
-    left: 1px;
-    border-radius: $switch-bd-radius * 50;
-    background: $element-bg-color;
-    display: block;
-    float: left;
+$switch-active-background-color: $primary !default;
+
+.#{$ns}-switch {
+  @include unselectable;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+
+  & + .#{$ns}-switch {
+    margin-left: 0.5em;
   }
 
-  > .sw-cont-off {
-    display: block;
-    position: absolute;
-    left: 30px;
-    margin-top: 2px;
-    color: $is-text-light-color;
+  .control-label {
+    padding-left: 0.5em;
   }
 
-  > .sw-cont-on {
-    @extend .sw-cont-off;
-
-    position: relative;
-    left: -14px;
-  }
-}
-
-.sav-switch.is-small {
-  @include make-square-sm;
-
-  width: calc(#{$switch-default-width * 2 + 8} + 0.7rem);
-
-  > .roll-boll {
-    top: -3px;
-  }
-
-  .sw-cont-off, .sw-cont-on {
-    margin: 0;
-    font-size: $font-size-sm;
-  }
-}
-
-.sav-switch.is-large {
-  @include make-square-lg;
-
-  width: calc(#{$switch-default-width * 4 - 6} + 0.7rem);
-  font-size: $font-size-lg;
-
-  > .roll-boll {
-    width: $switch-default-width + 10;
-    height: $switch-default-width + 10;
-  }
-
-  .sw-cont-off {
-    left: 47px;
-    margin-top: 4px;
-  }
-
-  .sw-cont-on {
-    left: -22px;
-    margin-top: 4px;
-  }
-}
-
-.sw-disabled {
-  background: $switch-bd-color;
-}
-
-.sw-on {
-  background: $switch-on-bg-color;
-
-  > .roll-boll {
-    animation: v-kf-sw-roll 0.5s;
-    animation-fill-mode: forwards;
-  }
-}
-
-@keyframes v-kf-sw-roll {
-  from {
-    transform: translateX(0);
+  input[type=checkbox] {
+    display: none;
+    + .check {
+      display: flex;
+      align-items: center;
+      width: $switch-width;
+      height: #{$switch-width / 2 + $switch-padding};
+      padding: $switch-padding;
+      background: $grey-light;
+      border-radius: 1em;
+      transition: background $speed-slow $easing;
+      &:before {
+        content: "";
+        border-radius: 1em;
+        width: #{($switch-width - $switch-padding * 2) / 2};
+        height: #{($switch-width - $switch-padding * 2) / 2};
+        background: $background;
+        box-shadow: 0 3px 1px 0 rgba(0, 0, 0, 0.05), 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 3px 3px 0 rgba(0, 0, 0, 0.05);
+        transition: transform $speed-slow $easing, width $speed-slow $easing;
+        will-change: transform;
+      }
+      &.is-elastic:before {
+        width: 1.75em;
+      }
+    }
+    &:checked + .check {
+      background: $switch-active-background-color;
+      @each $name, $pair in $colors {
+        $color: nth($pair, 1);
+        &.is-#{$name} {
+          background: $color;
+        }
+      }
+      &:before {
+        transform: translate3d(100%, 0, 0);
+      }
+      &.is-elastic:before {
+        // Might be a little offset if base font is not 16px
+        transform: translate3d(percentage(16 / ($switch-width-number * 16)), 0, 0);
+      }
+    }
   }
 
-  to {
-    transform: translateX(150%);
+  &:hover {
+    input[type=checkbox] + .check {
+      background: rgba($grey-light, 0.9);
+    }
+    input[type=checkbox]:checked + .check {
+      background: rgba($switch-active-background-color, 0.9);
+      @each $name, $pair in $colors {
+        $color: nth($pair, 1);
+        &.is-#{$name} {
+          background: rgba($color, 0.9);
+        }
+      }
+    }
+  }
+  &:focus {
+    outline: none;
+    input[type=checkbox] + .check {
+      box-shadow: 0 0 0.5em rgba($grey, 0.6);
+    }
+    input[type=checkbox]:checked + .check {
+      box-shadow: 0 0 0.5em rgba($switch-active-background-color, 0.8);
+      @each $name, $pair in $colors {
+        $color: nth($pair, 1);
+        &.is-#{$name} {
+          box-shadow: 0 0 0.5em rgba($color, 0.8);
+        }
+      }
+    }
+  }
+  &.is-small {
+    @include control-small;
+  }
+  &.is-medium {
+    @include control-medium;
+  }
+  &.is-large {
+    @include control-large;
+  }
+  &[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+    color: $grey;
   }
 }

@@ -1,4 +1,4 @@
-import Popper from './popper.js'
+import Popper from '../plugins/popper.js'
 import is from 'is-type-of'
 import { addClass } from '../utils/dom'
 

@@ -162,14 +162,3 @@
     }
   }
 </script>
-
-<style lang="scss" type="text/scss">
-  .v-cascade {
-    &-wrapper {
-      display: flex;
-      width: 100%;
-      position: relative;
-      overflow: hidden;
-    }
-  }
-</style>
