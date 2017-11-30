@@ -1,5 +1,5 @@
 import Popper from '../plugins/popper.js'
-import is from 'is-type-of'
+import { isFunction } from '../../sources/utils/is'
 import { addClass } from '../utils/dom'
 
 const DEFAULT_OPTIONS = {
@@ -160,7 +160,7 @@ export default class Tooltip {
     if (title.nodeType === 1 || title.nodeType === 11) {
       // if title is a element node or document fragment, append it only if allowHtml is true
       allowHtml && titleNode.appendChild(title)
-    } else if (is.function(title)) {
+    } else if (isFunction(title)) {
       // if title is a function, call it and set innerText or innerHtml depending by `allowHtml` value
       const titleText = title.call(reference)
       allowHtml

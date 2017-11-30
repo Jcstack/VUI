@@ -17,11 +17,11 @@
 </template>
 
 <script>
+  import { isFunction } from '../../sources/utils/is'
   import VDatepickerTable from './impl_table.vue'
   import busMixin from '../common/mixinBus'
   import SCalendar from '../../sources/plugins/s.calendar'
   import moment from 'moment'
-  import is from 'is-type-of'
 
   export default {
     name: 'VDatepicker',
@@ -103,7 +103,7 @@
 
       _selectItem (item) {
         const {scalendar} = this.$options
-        if (item && is.function(item.toMoment)) {
+        if (item && isFunction(item.toMoment)) {
           scalendar.date = item.toMoment() // Unique entry
         }
       }

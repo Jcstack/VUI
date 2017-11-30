@@ -53,11 +53,11 @@
 </template>
 
 <script>
+  import { isDate } from '../../sources/utils/is'
   import Scalendar from '../../sources/plugins/s.calendar'
   import VDropdown from '../dropdown'
   import VDatepicker from './impl.vue'
   import moment from 'moment'
-  import is from 'is-type-of'
 
   export default {
     name: 'VDatepickerInput',
@@ -154,7 +154,7 @@
       },
 
       formatDateValue () {
-        if (is.date(this.value)) {
+        if (isDate(this.value)) {
           return moment(this.val).format(this.format)
         } else if (moment.isMoment(this.value)) {
           return this.value.format(this.format)

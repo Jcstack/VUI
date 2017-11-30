@@ -45,7 +45,7 @@
 </template>
 
 <script>
-  import is from 'is-type-of'
+  import { isString, isPromise } from '../../sources/utils/is'
   import { createMixins } from '../../sources/utils/mixin'
 
   export default {
@@ -88,7 +88,7 @@
     created () {
       // handle events
       this.$on('dimission', (e) => {
-        if (is.string(e)) {
+        if (isString(e)) {
           switch (e) {
             case 'close':
               this.$emit('close')
@@ -107,7 +107,7 @@
               })
               break
           }
-        } else if (is.promise(e)) {
+        } else if (isPromise(e)) {
           e.then(() => {
             this.$emit('close')
           }, (err) => {

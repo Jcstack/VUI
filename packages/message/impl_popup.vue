@@ -25,7 +25,7 @@
 </template>
 
 <script>
-  import is from 'is-type-of'
+  import { isFunction, isObject } from '../../sources/utils/is'
 
   const typeMaps = {
     success: 'success',
@@ -80,7 +80,7 @@
       close () {
         this.closed = true
 
-        if (is.function(this.onClose)) {
+        if (isFunction(this.onClose)) {
           this.onClose(this)
         }
       },
@@ -104,7 +104,7 @@
             if (!this.closed) {
               this.close()
             }
-          }, is.object(e) ? 1000 : this.duration)
+          }, isObject(e) ? 1000 : this.duration)
         }
       }
     }

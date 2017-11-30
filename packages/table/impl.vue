@@ -66,7 +66,7 @@
 </template>
 
 <script>
-  import is from 'is-type-of'
+  import { isFunction } from '../../sources/utils/is'
   import { createMixins } from '../../sources/utils/mixin'
 
   const ORDER_ASC = 'asc'
@@ -188,7 +188,7 @@
       _injectRowItemField (key, value) {
         this.rows && this.rows.forEach((it, index) => {
           if (it && !it.hasOwnProperty(key)) {
-            this.$set(it, key, is.function(value) ? value(it, index) : value) // force set row field reactive
+            this.$set(it, key, isFunction(value) ? value(it, index) : value) // force set row field reactive
           }
         })
       },

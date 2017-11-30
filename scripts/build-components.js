@@ -1,4 +1,6 @@
 const {executeRollup} = require('@vui/rollup-standalone')
+// const builtins = require('rollup-plugin-node-builtins')
+// const globals = require('rollup-plugin-node-globals')
 const path = require('path')
 
 
@@ -15,7 +17,12 @@ executeRollup({
       localPopperPath
     ],
     namedExports: {}
-  }
+  },
+  resolveOptions: {},
+  extraPlugins: [
+    // globals(),
+    // builtins()
+  ]
 })
 
 process.on('unhandledRejection', (reason, p) => {

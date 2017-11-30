@@ -29,7 +29,7 @@
     ]
   },
   "devDependencies": {
-    "@vui/rollup-standalone": "0.0.2",
+    "@vui/rollup-standalone": "0.0.4",
     "ava": "^0.22.0",
     "avoriaz": "^6.0.1",
     "browser-env": "^3.2.2",
@@ -41,6 +41,8 @@
     "require-extension-hooks": "^0.3.2",
     "require-extension-hooks-babel": "^0.1.1",
     "require-extension-hooks-vue": "^0.4.1",
+    "rollup-plugin-node-builtins": "^2.1.2",
+    "rollup-plugin-node-globals": "^1.1.0",
     "standard": "^10.0.3",
     "standard-sass": "0.0.6",
     "vue": "^2.5.9",
@@ -49,7 +51,8 @@
     "watch-cli": "^0.2.3"
   },
   "dependencies": {
-    "is-type-of": "^1.2.0",
+    "core-util-is": "^1.0.2",
+    "is-class": "0.0.4",
     "moment": "^2.19.2",
     "vue-template-compiler": "^2.5.9"
   },

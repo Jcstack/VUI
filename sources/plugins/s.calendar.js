@@ -1,5 +1,5 @@
 import moment from 'moment'
-import is from 'is-type-of'
+import { isDate } from '../utils/is'
 
 const SUPPORTED_FORMATS = ['MM-DD-YYYY', 'YYYY-MM-DD', 'MM/DD/YYYY', 'YYYY/MM/DD']
 
@@ -42,7 +42,7 @@ class SCalendar {
     if (typeof value === 'string') {
       value = moment(value, SUPPORTED_FORMATS)
     }
-    if (is.date(value)) {
+    if (isDate(value)) {
       value = moment(value)
     }
     if (moment.isMoment(value) && value.isValid()) {
