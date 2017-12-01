@@ -120,8 +120,8 @@ export function getFirstComponentChild (children) {
 
 /**
  * zero index base
- * @param step {Number}
- * @param ptrIndex {Number|null}
+ * @param step {Number} offset step
+ * @param ptrIndex {Number|null} current index
  * @param maxLen {Number}
  */
 export function pluckValidCircleIndex (step = 1, ptrIndex = null, maxLen) {
