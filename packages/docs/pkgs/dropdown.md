@@ -5,7 +5,7 @@
   <v-dropdown magic="left" v-model="formData.price">
     <button
         slot="trigger"
-        class="v-btn is-default">
+        class="v-btn is-default is-link">
       <span>{{ formData.price == null ? '请选择价格' : formData.price }}</span>
       <span class="has-icon is-small">
           <i class="fa fa-angle-down"></i>
@@ -19,13 +19,10 @@
     </v-dropdown-item>
     <v-dropdown-item :divider="true"></v-dropdown-item>
     <v-dropdown-item :value="null">
+      <v-iconfont icon="delete" size="small"></v-iconfont>
       清空
     </v-dropdown-item>
   </v-dropdown>
-
-  <p>
-    {{ formData.price }}
-  </p>
 </div>
 
 ```html

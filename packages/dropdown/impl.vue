@@ -13,7 +13,7 @@
       <slot name="trigger"></slot>
     </div>
 
-    <transition name="v-ani-menu">
+    <transition :name="transition">
       <div v-show="active || hoverable"
            ref="dropdownMenu"
            class="v-dropdown-menu">
@@ -37,6 +37,11 @@
     props: {
       value: {
         type: [String, Number, Boolean, Symbol, Object],
+        'default': null
+      },
+
+      transition: {
+        type: String,
         'default': null
       }
     },

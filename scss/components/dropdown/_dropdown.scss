@@ -69,11 +69,12 @@ $dropdown-divider-background-color: $border !default;
 }
 
 .#{$ns}-dropdown-item {
+  @include unselectable;
   color: $dropdown-item-color;
   display: block;
   font-size: 0.875 * $size-unit;
-  line-height: 1.5;
-  padding: 0.375 * $size-unit $size-unit;
+  line-height: 1;
+  padding: 0.625 * $size-unit $size-unit;
   position: relative;
 }
 
