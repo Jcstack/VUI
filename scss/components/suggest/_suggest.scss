@@ -1,0 +1,51 @@
+$suggest-link-item-grey-bg: $grey-lighter !default;
+$suggest-item-active-bg: lighten($primary, 10) !default;
+
+.#{$ns}-suggest {
+  .as-item {
+    overflow: hidden;
+    border-radius: $radius-small;
+    &.is-active {
+      background-color: $suggest-item-active-bg;
+      .as-link-item {
+        color: $primary-invert;
+        &:hover {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+
+  .as-link-item {
+    @include unselectable;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+    display: block;
+    border-radius: $radius-small;
+    padding: 0.5 * $size-unit;
+    line-height: $size-unit;
+    color: inherit;
+    font-size: $size-normal * 0.85;
+    &:hover {
+      background-color: $suggest-link-item-grey-bg;
+    }
+  }
+}
+
+.#{$ns}-suggest-input {
+  .#{$ns}-dropdown-content {
+    background-color: #ffffff;
+    padding: 5px;
+    box-shadow: 0 0 0 1px rgba(16, 22, 26, 0.1), 0 2px 4px rgba(16, 22, 26, 0.2), 0 8px 24px rgba(16, 22, 26, 0.2);
+    overflow: auto;
+  }
+}
+
+.#{$ns}-suggest-search {
+
+}
+
+.#{$ns}-suggest-select {
+
+}

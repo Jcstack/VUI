@@ -12,5 +12,7 @@ Suggest.install = function (Vue) {
 
 export {
   Suggest as default,
-  SuggestInput
+  SuggestInput,
+  SuggestSearch,
+  SuggestSelect
 }

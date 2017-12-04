@@ -125,7 +125,7 @@ export function getFirstComponentChild (children) {
  * @param maxLen {Number}
  */
 export function pluckValidCircleIndex (step = 1, ptrIndex = null, maxLen) {
-  if (step && maxLen && step < maxLen) {
+  if (step && maxLen && step <= maxLen) {
     if (ptrIndex == null) {
       ptrIndex = step > 0 ? 0 : (maxLen - 1)
     } else {

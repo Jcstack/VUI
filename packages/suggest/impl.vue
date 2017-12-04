@@ -32,7 +32,8 @@
     name: 'VSuggest',
 
     props: {
-      local: Boolean
+      local: Boolean,
+      activated: Boolean // interceptor for `keyup` `keydown` ...
     },
 
     data() {
@@ -40,7 +41,6 @@
         pending: false,
         localData: null, // for `local mode`
         results: null, // filtered results
-        activated: false, // could be `keyup` `keydown`
         activeIndex: null,
       }
     },
@@ -98,7 +98,7 @@
       },
 
       keyEnter () {
-        if (!this.activated || !this.activeIndex) return
+        if (!this.activated || this.activeIndex == null) return
 
         const item = this._getItemByIndex(this.activeIndex)
 
