@@ -54,7 +54,13 @@
           return Promise.resolve(null)
         }
 
-        return this.searchDoubanMovies(payload.key)
+        return this.searchDoubanMovies(payload.key).then(results => {
+          if (Array.isArray(results)) {
+            results.__key = payload.key
+          }
+
+          return results
+        })
       },
 
       pullDouban250() {

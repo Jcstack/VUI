@@ -76,13 +76,22 @@
           context: this
         }
 
-        const setResults = suggest.setResults.bind(suggest)
+        const setResults = function (results) {
+          // discard the results which not belong to current filter key
+          if (results && results.hasOwnProperty('__key') && results.__key !== _filterKey) {
+            console.debug('[Suggest Search] discard key', results.__key, '≠', _filterKey)
+            return
+          }
+
+          this.$emit('received-results', results)
+          suggest.setResults(results)
+        }
 
         if (this.local && !isFunction(this.onResults)) {
-          this._simpleLocalDataFilter(payload).then(setResults)
+          this._simpleLocalDataFilter(payload).then(setResults.bind(this))
         } else {
           // @todo scheduler for `pending` data loader
-          isFunction(this.onResults) && this.onResults(payload).then(setResults)
+          isFunction(this.onResults) && this.onResults(payload).then(setResults.bind(this))
         }
 
         _filterKey = key
@@ -152,6 +161,18 @@
 
       _handleItemSelected() {
         this.$emit('item-selected', ...Array.from(arguments))
+      }
+    },
+
+    computed: {
+      resultsLength () {
+        const {suggest} = this.$refs
+
+        if (!Array.isArray(suggest._results)) {
+          return null
+        }
+
+        return suggest._results.length
       }
     },
 
