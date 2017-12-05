@@ -6,7 +6,11 @@
         :on-results="_handleMovieResults"
         placeholder="Search Movies"
         v-model="inputValue"
-        :suggest-dropdown-theme="`my-suggest-menu`"
+        :to-value-string="_itemToValueString"
+        :suggest-input-theme="`my-suggest-menu`"
+        :loading="inputLoading"
+        @item-selected="_handleItemSelected"
+        :disabled="inputDisabled"
     >
       <!--<template slot="result-item"-->
                 <!--slot-scope="{ item, index}"-->
@@ -23,41 +27,76 @@
         <!--</a>-->
       <!--</template>-->
     </v-suggest-input>
+
+    <hr>
+    <!-- suggest popover -->
+    <v-suggest-select
+        :local="false"
+        ref="ref_suggest2"
+        :suggest-select-theme="`my-suggest-select`"
+        value-bag="Select Douban Movies"
+        :on-results="_handleMovieResults"
+        :to-value-bag="_handleItemToValueBag"
+    ></v-suggest-select>
   </div>
 </template>
 
 <script>
   import VSuggestInput from 'packages/suggest/impl_input.vue'
+  import VSuggestSelect from 'packages/suggest/impl_select.vue'
   import $ from 'jquery'
 
   export default {
     data() {
       return {
         inputLocal: false,
-        inputValue: ''
+        inputValue: '',
+        inputLoading: false,
+        inputDisabled: false
       }
     },
 
     components: {
-      VSuggestInput
+      VSuggestInput,
+      VSuggestSelect
     },
 
     created() {
       // this.pullDouban250().then(collections => {
-      //   this.$refs.ref_suggest.setLocalData(collections)
+      //   this.$refs.ref_suggest2.setLocalData(collections)
+      // }).catch(e => {
       // })
     },
 
     methods: {
+      _handleItemToValueBag (item) {
+        return {
+          text: item.original_title,
+          value: item.id
+        }
+      },
+
+      _itemToValueString (item) {
+        return item.original_title
+      },
+
+      _handleItemSelected (item) {
+        console.log(item)
+      },
+
       _handleMovieResults(payload) {
         if (payload.key === '') {
           return Promise.resolve(null)
         }
 
+        this.inputLoading = true
+
         return this.searchDoubanMovies(payload.key).then(results => {
           if (Array.isArray(results)) {
             results.__key = payload.key
           }
+
+          this.inputLoading = false
 
           return results
         })

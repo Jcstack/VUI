@@ -1,5 +1,5 @@
 <template>
-  <span>
+  <div class="v-popover-wrap">
     <transition :name="transition" @after-leave="_handleTransitionAfterLeave">
       <div
           class="v-popover"
@@ -21,7 +21,7 @@
       </div>
     </transition>
     <slot name="reference"></slot>
-  </span>
+  </div>
 </template>
 
 <script>
@@ -47,7 +47,7 @@
       disabled: Boolean,
       content: String,
       reference: {},
-      popperClass: String,
+      popperClass: [String, Array, Object],
       width: {},
       autoDestroy: {
         type: Boolean,

@@ -1,10 +1,16 @@
 $suggest-link-item-grey-bg: $grey-lighter !default;
 $suggest-item-active-bg: lighten($primary, 10) !default;
+$suggest-dropdown-panel-shadow: 0 0 0 1px rgba(16, 22, 26, 0.1), 0 2px 4px rgba(16, 22, 26, 0.2), 0 8px 24px rgba(16, 22, 26, 0.2) !default;
 
 .#{$ns}-suggest {
   .as-item {
     overflow: hidden;
     border-radius: $radius-small;
+
+    &:first-child {
+      margin-top: 5px;
+    }
+
     &.is-active {
       background-color: $suggest-item-active-bg;
       .as-link-item {
@@ -34,10 +40,17 @@ $suggest-item-active-bg: lighten($primary, 10) !default;
 }
 
 .#{$ns}-suggest-input {
+  .#{$ns}-dropdown {
+    width: 100%;
+    &-trigger {
+      width: 100%;
+    }
+  }
+
   .#{$ns}-dropdown-content {
     background-color: #ffffff;
     padding: 5px;
-    box-shadow: 0 0 0 1px rgba(16, 22, 26, 0.1), 0 2px 4px rgba(16, 22, 26, 0.2), 0 8px 24px rgba(16, 22, 26, 0.2);
+    box-shadow: $suggest-dropdown-panel-shadow;
     overflow: auto;
   }
 }
@@ -47,5 +60,12 @@ $suggest-item-active-bg: lighten($primary, 10) !default;
 }
 
 .#{$ns}-suggest-select {
-
+  &-popper {
+    .#{$ns}-popover-body {
+      .has-content {
+        overflow: visible;
+        padding-top: 0.5 * $size-unit;
+      }
+    }
+  }
 }

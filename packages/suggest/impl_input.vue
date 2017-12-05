@@ -1,19 +1,29 @@
 <template>
-  <div class="v-suggest-input">
+  <div class="v-suggest-input"
+       :class="suggestInputTheme"
+  >
     <v-dropdown
         ref="dropdown"
-        :class="suggestDropdownTheme"
+        :custom="true"
     >
       <div class="v-field" slot="trigger">
-        <input
-            type="text"
-            class="v-input"
-            v-bind="$attrs"
-            v-model="localValue"
-            @focus="_handleInputFocus"
-            @blur="_handleInputBlur"
-            ref="elInput"
+        <div class="v-control"
+             :class="{
+              'is-loading': loading
+             }"
         >
+          <input
+              type="text"
+              class="v-input"
+              v-bind="$attrs"
+              v-model="localValue"
+              @focus="_handleInputFocus"
+              @blur="_handleInputBlur"
+              ref="elInput"
+              :class="[sizeModifier, colorModifier]"
+              :disabled="disabled"
+          >
+        </div>
       </div>
 
       <!-- panel -->
@@ -52,12 +62,16 @@
   import VSuggest from './impl.vue'
   import {isString, isFunction} from '../../sources/utils/is'
   import {on, off} from '../../sources/utils/dom'
+  import {createMixins} from '../../sources/utils/mixin'
 
   export default {
     name: 'VSuggestInput',
 
+    mixins: [createMixins(['color', 'size', 'disabled'])],
+
     props: {
-      suggestDropdownTheme: [String, Array, Object],
+      loading: Boolean,
+      suggestInputTheme: [String, Array, Object],
       value: String,
       local: Boolean,
       onResults: {
@@ -75,16 +89,27 @@
     },
 
     created() {
+      this._isInputFocused = false
       this._selectedItem = null
     },
 
     mounted() {
       this._setupSearchInput()
 
-      this.$refs.suggest.$on('received-results', results => {
+      const {suggest} = this.$refs
+
+      suggest.$on('received-results', results => {
         if (results && Array.isArray(results) && results.length) {
           // force show panel
           this.showResultsPanel()
+        }
+      })
+
+      suggest.$watch('resultsLength', (a, b) => {
+        if (a > 0) {
+          this.showResultsPanel()
+        } else {
+          this.hideResultsPanel()
         }
       })
     },
@@ -107,7 +132,9 @@
       showResultsPanel() {
         const {dropdown} = this.$refs
 
-        dropdown.active = true
+        if (this._isInputFocused) {
+          dropdown.active = true
+        }
       },
 
       hideResultsPanel() {
@@ -138,12 +165,27 @@
           e.preventDefault()
         }
 
-        this.$refs.suggest.$watch('activated', (a, b) => {
+        const suggestSearch = this.$refs.suggest
+
+        suggestSearch.$watch('activated', (a, b) => {
           if (a) {
             on(elInput, 'keyup', keyupHandler)
           } else {
             off(elInput, 'keyup', keyupHandler)
           }
+        })
+
+        // local mode
+        on(elInput, 'focus', e => {
+          this._isInputFocused = true
+
+          if (suggestSearch.resultsLength) {
+            this.showResultsPanel()
+          }
+        })
+
+        on(elInput, 'blur', e => {
+          this._isInputFocused = false
         })
       },
 
@@ -156,9 +198,8 @@
 
         this._selectedItem = item
 
-        this.localValue = this._localToValueString(item)
-
-        dropdown._handleToggle()
+        this.localValue = isFunction(this.toValueString) ? this.toValueString(item) : item.toString()
+        this.hideResultsPanel()
 
         this.$emit('item-selected', item, event)
       },

@@ -13,6 +13,7 @@
                  @blur="_handleInputBlur"
                  ref="elInput"
                  v-model="filterKey"
+                 v-bind="$attrs"
           >
         </div>
       </div>
@@ -47,6 +48,7 @@
     name: 'VSuggestSearch',
 
     props: {
+      pending: Boolean,
       local: Boolean,
       hasSearchInput: Boolean,
       onResults: {
@@ -90,7 +92,6 @@
         if (this.local && !isFunction(this.onResults)) {
           this._simpleLocalDataFilter(payload).then(setResults.bind(this))
         } else {
-          // @todo scheduler for `pending` data loader
           isFunction(this.onResults) && this.onResults(payload).then(setResults.bind(this))
         }
 
@@ -111,6 +112,10 @@
         this.$refs.suggest.setLocalData(data)
       },
 
+      resetSearchState () {
+        this.filterKey = ''
+      },
+
       _setupSearchInput() {
         const {suggest, elInput} = this.$refs
 
@@ -126,7 +131,7 @@
               suggest.keyEnter()
               break
             case 27: // Esc
-              this.filterKey = ''
+              this.resetSearchState()
               break;
           }
 

@@ -40,6 +40,11 @@
         'default': null
       },
 
+      custom: {
+        type: Boolean, // handle trigger event or not
+        'default': false
+      },
+
       transition: {
         type: String,
         'default': null
@@ -81,7 +86,7 @@
       },
 
       _handleToggle () {
-        if (this.disabled || this.hoverable) return
+        if (this.disabled || this.hoverable || this.custom) return
 
         this.active = !this.active
       }
