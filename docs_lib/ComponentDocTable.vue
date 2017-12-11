@@ -55,7 +55,7 @@
   }
 </script>
 
-<style lang="scss">
+<style lang="scss" type="text/scss">
   $theme-color: #e96900;
   .vue-component-doc-table {
     table {

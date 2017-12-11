@@ -1,16 +1,17 @@
 // 默认行高 line-height(1.0~1.2)
-$line-height-default: 1.2 !default;
+$line-height-default: 1.25 !default;
 
 // 默认字体
-$font-size-sm: 12px !default;
-$font-size-default: 14px !default;
-$font-size-lg: 16px !default;
+$font-size-12: 12px !default;
+$font-size-14: 14px !default;
+$font-size-16: 16px !default;
+$font-size-20: 20px !default;
 $font-size-important: false !default;
 
 // 默认补白
-$pad-padding-sm: 0.35rem !default;
-$pad-padding-default: 0.5rem !default;
-$pad-padding-lg: 0.75rem !default;
+$pad-padding-sm: 0.25 * $size-unit !default;
+$pad-padding-default: 0.5 * $size-unit !default;
+$pad-padding-lg: 0.75 * $size-unit !default;
 $pad-padding-important: false !default;
 
 // 行高
@@ -19,7 +20,7 @@ $pad-padding-important: false !default;
 }
 
 // 字体
-@mixin make-font-size-default($font-size: $font-size-default, $important: $font-size-important) {
+@mixin make-font-size-default($font-size: $font-size-16, $important: $font-size-important) {
   @if $important {
     font-size: $font-size !important;
   }
@@ -29,11 +30,11 @@ $pad-padding-important: false !default;
 }
 
 @mixin make-font-size-sm($important: $font-size-important) {
-  @include make-font-size-default($font-size-sm, $important);
+  @include make-font-size-default($font-size-12, $important);
 }
 
 @mixin make-font-size-lg($important: $font-size-important) {
-  @include make-font-size-default($font-size-lg, $important);
+  @include make-font-size-default($font-size-20, $important);
 }
 
 // 内补白
@@ -74,21 +75,21 @@ $pad-padding-important: false !default;
 }
 
 // 矩形
-$element-line-height-default: floor($font-size-default * $line-height-default) + 2px !default;
+$element-line-height-default: floor($font-size-14 * $line-height-default) + 2px !default;
 
 @mixin make-square-default {
   width: calc(#{$element-line-height-default} + #{$pad-padding-default * 2});
   height: calc(#{$element-line-height-default} + #{$pad-padding-default * 2});
 }
 
-$element-line-height-sm: floor($font-size-sm * $line-height-default) + 2px !default;
+$element-line-height-sm: floor($font-size-12 * $line-height-default) + 2px !default;
 
 @mixin make-square-sm {
   width: calc(#{$element-line-height-sm} + #{$pad-padding-sm * 2});
   height: calc(#{$element-line-height-sm} + #{$pad-padding-sm * 2});
 }
 
-$element-line-height-lg: floor($font-size-lg * $line-height-default) + 2px !default;
+$element-line-height-lg: floor($font-size-16 * $line-height-default) + 2px !default;
 
 @mixin make-square-lg {
   width: calc(#{$element-line-height-lg} + #{$pad-padding-lg * 2});

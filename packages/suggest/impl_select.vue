@@ -36,7 +36,7 @@
 </template>
 
 <script>
-  import Debug from 'debug'
+  import Debug from '../../sources/utils/debug'
   import VSuggestSearch from './impl_search.vue'
   import {on, off} from '../../sources/utils/dom'
   import {createMixins} from '../../sources/utils/mixin'

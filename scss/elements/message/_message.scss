@@ -12,7 +12,7 @@ $message-bg-radius: $element-bd-radius !default;
   > .message-tip {
     border-radius: $message-bg-radius;
     color: $is-text-light-color;
-    font-size: $font-size-default;
+    font-size: $font-size-14;
     padding: 7px 10px 7px 10px;
   }
 
@@ -21,13 +21,13 @@ $message-bg-radius: $element-bd-radius !default;
     border-radius: $message-bg-radius;
     padding: 10px 20px 10px 12px;
     font-family: $element-font-family;
-    font-size: $font-size-default;
+    font-size: $font-size-14;
     box-sizing: border-box;
     box-shadow: 0 1px 5px 0 rgba(84, 98, 105, 0.5);
 
     > .message-icon-close {
       position: absolute;
-      font-size: $font-size-lg + 4;
+      font-size: $font-size-16 + 4;
       cursor: $element-cursor;
       right: 10px;
       top: 5px;

@@ -5,13 +5,13 @@
 ```html
 <article class="v-message">
   <div class="v-message-body">
-    😈   &nbsp;这是一个病毒链接 <a href="">http://www.baidu.com</a> ...
+    😈 &nbsp;这是一个病毒链接 <a href="">http://www.baidu.com</a> ...
   </div>
 </article>
 
 <article class="v-message is-warning">
   <div class="v-message-body">
-    💔  &nbsp;你的快递被人拿走了 ...
+    💔 &nbsp;你的快递被人拿走了 ...
   </div>
 </article>
 ```
@@ -25,19 +25,19 @@
 <div class="demo-box">
   <article class="v-message">
     <div class="v-message-body">
-      😈   &nbsp;这是一个病毒链接 <a href="">http://www.baidu.com</a> ...
+      😈 &nbsp;这是一个病毒链接 <a href="">http://www.baidu.com</a> ...
     </div>
   </article>
 
   <article class="v-message is-warning">
     <div class="v-message-body">
-      💔  &nbsp;你的快递被人拿走了 ...
+      💔 &nbsp;你的快递被人拿走了 ...
     </div>
   </article>
 
   <article class="v-message is-primary">
     <div class="v-message-body">
-     👼 &nbsp; 都是天使惹的祸 ...
+      👼 &nbsp; 都是天使惹的祸 ...
     </div>
   </article>
 
@@ -50,13 +50,12 @@
 </div>
 
 <script>
-  import MessageFactory from 'packages/message'
+  import {MessageFactory} from 'packages/message'
 
   export default {
     methods: {
-      _showMsg () {
-        let fn = ['success', 'warning', 'info', 'error'][Math.floor(Math.random() * 4)]
-        let h = this.$createElement
+      _showMsg() {
+        let fn = ['success', 'warn', 'info', 'error'][Math.floor(Math.random() * 4)]
         MessageFactory[fn]({
           size: 'small',
           message: '你有一个快递要收了 ....'

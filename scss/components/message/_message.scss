@@ -23,6 +23,7 @@ $message-popup-body-padding: 0.5em 1em !default;
   background-color: $message-background-color;
   border-radius: $message-radius;
   font-size: $size-normal;
+  word-break: break-all;
 
   strong {
     color: currentColor;

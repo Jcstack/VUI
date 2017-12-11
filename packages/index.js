@@ -19,6 +19,7 @@ import Pagination from './pagination'
 import Datepicker from './datepicker'
 import Carousel from './carousel'
 import Cascade from './cascade'
+import Suggest from './suggest'
 
 const components = [
   Layout,
@@ -40,7 +41,8 @@ const components = [
   Pagination,
   Datepicker,
   Carousel,
-  Cascade
+  Cascade,
+  Suggest
 ]
 
 export function install (Vue) {

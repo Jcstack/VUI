@@ -1,10 +1,9 @@
 const {executeRollup} = require('@vui/rollup-standalone')
 // const builtins = require('rollup-plugin-node-builtins')
-// const globals = require('rollup-plugin-node-globals')
+const globals = require('rollup-plugin-node-globals')
 const path = require('path')
-
-
 const localPopperPath = path.resolve(__dirname, '../sources/plugins/popper.js')
+const localDebugPath = path.resolve(__dirname, '../sources/utils/debug.js')
 
 executeRollup({
   entry: 'packages/index.js',
@@ -12,15 +11,21 @@ executeRollup({
   format: 'umd',
   vueOptions: true,
   moduleName: 'vui',
+  globals: {
+    debug: 'debug'
+  },
   commonjsOptions: {
     include: ['node_modules/**',
-      localPopperPath
+      localPopperPath,
+      localDebugPath
     ],
-    namedExports: {}
+    namedExports: {},
+    ignore: ['util', 'tty'],
+    ignoreGlobal: true
   },
   resolveOptions: {},
   extraPlugins: [
-    // globals(),
+    globals()
     // builtins()
   ]
 })

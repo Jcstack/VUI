@@ -93,7 +93,7 @@
 </div>
 
 <script>
-  import NotificationFactory from 'root/packages/notification'
+  import { NotificationFactory } from 'packages/notification'
 
   export default {
     methods: {
