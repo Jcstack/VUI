@@ -159,6 +159,8 @@
               suggest.keyEnter()
               break
             case 27: // Esc
+              // just hide result panel
+              this.hideResultsPanel()
               break;
           }
 
