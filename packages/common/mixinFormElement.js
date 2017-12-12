@@ -1,9 +1,10 @@
 import { createMixins } from '../../sources/utils/mixin'
 
 export default {
-  mixins: [createMixins(['size'])],
+  mixins: [createMixins(['size', 'color'])],
 
   props: {
+    outlined: Boolean,
     expanded: Boolean,
     loading: Boolean,
     icon: [Boolean, String],

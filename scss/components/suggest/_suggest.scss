@@ -24,6 +24,7 @@ $suggest-dropdown-panel-shadow: 0 0 0 1px rgba(16, 22, 26, 0.1), 0 2px 4px rgba(
 
   .as-link-item {
     @include unselectable;
+    text-decoration: none;
     text-overflow: ellipsis;
     white-space: nowrap;
     word-wrap: normal;
@@ -36,6 +37,12 @@ $suggest-dropdown-panel-shadow: 0 0 0 1px rgba(16, 22, 26, 0.1), 0 2px 4px rgba(
     &:hover {
       background-color: $suggest-link-item-grey-bg;
     }
+  }
+}
+
+.#{$ns}-suggest-panel {
+  ul {
+    @include reset-ul;
   }
 }
 

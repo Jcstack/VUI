@@ -13,7 +13,8 @@ export default {
   render (h) {
     return h(this.$attrs.hasOwnProperty('anchor') ? 'a' : 'button', {
       staticClass: 'v-btn',
-      class: [this._modeClass]
+      class: [this._modeClass],
+      $attrs: this.$attrs
     }, [
       this.$slots.default
     ])

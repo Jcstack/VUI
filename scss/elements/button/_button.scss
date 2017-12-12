@@ -78,7 +78,7 @@
     &::after {
       @include make-icon-loader;
       @include make-spin-around;
-      @include center(1.2em);
+      @include center(1em);
     }
   }
   &.is-circle {

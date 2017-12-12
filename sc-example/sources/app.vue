@@ -1,15 +1,15 @@
 <template>
   <div class="main-body">
-    <page-cascade></page-cascade>
+    <page-entry></page-entry>
   </div>
 </template>
 
 <script>
-  import PageCascade from './pages/suggest.vue'
+  import PageEntry from './pages/select.vue'
 
   export default {
     components: {
-      PageCascade
+      PageEntry
     }
   }
 </script>

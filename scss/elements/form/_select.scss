@@ -5,7 +5,7 @@
   vertical-align: top;
   box-sizing: $box-sizing;
 
-  &:not(.is-multiple) {
+  &:not(.is-multiple, .is-fake-face) {
     height: 2.25em;
 
     &::after {
@@ -46,6 +46,12 @@
       option {
         padding: 0.5em 1em;
       }
+    }
+  }
+
+  &.is-fake-face {
+    select {
+      display: none;
     }
   }
 
@@ -100,7 +106,7 @@
     }
   }
 
-  &.is-loading {
+  &:not(.is-fake-face).is-loading {
     &::after {
       @include loader;
 

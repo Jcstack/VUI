@@ -82,7 +82,8 @@ $button-link-hover-color: $text-strong !default;
   &.is-disabled,
   &:disabled,
   &[disabled] {
-    background-color: $color !important;
+    color: $color-invert !important;
+    background-color: lighten($color, 5) !important;
     border-color: transparent !important;
   }
 
