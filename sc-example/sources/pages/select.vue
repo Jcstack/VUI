@@ -5,8 +5,7 @@
               v-model="selectValue"
               @option-command="_handleOptionCommand"
     >
-      <option value="a">colors</option>
-      <option value="b">sizes</option>
+      <option :value="el" v-for="el in selectOptions">{{ el }}</option>
       <option value="__divider" hidden></option>
       <option value="__reset" hidden>Reset</option>
       <option value="__toGoogle" hidden>Go to Google</option>
@@ -19,7 +18,8 @@
   export default {
     data () {
       return {
-        selectValue: 'b'
+        selectValue: 'sizes',
+        selectOptions: ['colors', 'sizes', 'apple']
       }
     },
 

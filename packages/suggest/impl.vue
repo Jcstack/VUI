@@ -2,8 +2,8 @@
   <div class="v-suggest">
     <slot name="header"></slot>
     <div class="v-suggest-panel">
-      <ul v-if="Array.isArray(_results)">
-        <li v-for="(item, $index) in _results"
+      <ul v-if="Array.isArray(presentationResults)">
+        <li v-for="(item, $index) in presentationResults"
             :key="item.__key"
             :class="['as-item', {
               'is-active': activeIndex === $index
@@ -26,7 +26,7 @@
 </template>
 
 <script>
-  import { pluckValidCircleIndex } from '../../sources/utils'
+  import {pluckValidCircleIndex} from '../../sources/utils'
 
   export default {
     name: 'VSuggest',
@@ -64,13 +64,13 @@
         })
       },
 
-      _handleItemClick (item, index, event) {
+      _handleItemClick(item, index, event) {
         this.activeIndex = +index
 
         this.$emit('item-selected', item, event)
       },
 
-      _getItemByIndex (index) {
+      _getItemByIndex(index) {
         if (Number.isNaN(+index) || !Array.isArray(this._results) || this._results.length === 0) {
           return null
         }
@@ -78,7 +78,7 @@
         return this._results[index]
       },
 
-      _moveActiveIndex (step) {
+      _moveActiveIndex(step) {
         if (!this.activated || !Array.isArray(this._results) || this._results.length === 0) {
           this.activeIndex = null
           return
@@ -89,15 +89,15 @@
         this.activeIndex = pluckValidCircleIndex(step, this.activeIndex, len)
       },
 
-      keyUp () {
+      keyUp() {
         this._moveActiveIndex(-1)
       },
 
-      keyDown () {
+      keyDown() {
         this._moveActiveIndex(1)
       },
 
-      keyEnter () {
+      keyEnter() {
         if (!this.activated || this.activeIndex == null) return
 
         const item = this._getItemByIndex(this.activeIndex)
@@ -125,18 +125,17 @@
     },
 
     watch: {
-      '_results' () {
+      'presentationResults'() {
         this.activeIndex = null
       }
     },
 
     computed: {
-      _results() {
+      presentationResults() {
         let results = this.results
 
         if (this.local) {
           if (this.results == null && Array.isArray(this.localData)) {
-            // filter
             return this.localData.slice(0, 10)
           }
         }

@@ -5,7 +5,8 @@
 </template>
 
 <script>
-  import PageEntry from './pages/select.vue'
+  // import PageEntry from './pages/select.vue'
+  import PageEntry from './pages/suggest.vue'
 
   export default {
     components: {
