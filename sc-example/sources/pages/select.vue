@@ -13,7 +13,7 @@
 
     <hr>
     <div class="v-control">
-      <v-radio native-value="a" name="a" :fake-face="true" v-model="radioValue">hello</v-radio>
+      <v-radio native-value="a" name="a" :fake-face="true" v-model="radioValue" disabled>hello</v-radio>
       <v-radio native-value="b" name="a" :fake-face="true" v-model="radioValue">hello2</v-radio>
     </div>
   </div>
