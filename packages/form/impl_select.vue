@@ -18,9 +18,10 @@
               ref="select"
               :multiple="multiple"
               :size="nativeSize"
-              v-bind="$attrs"
+              :name="nativeName"
               @blur="$emit('blur', $event)"
-              @focus="$emit('focus', $event)">
+              @focus="$emit('focus', $event)"
+      >
 
         <option
             v-if="placeholder"
@@ -94,6 +95,7 @@
       },
       placeholder: String,
       multiple: Boolean,
+      nativeName: String,
       nativeSize: [String, Number],
       fakeFace: Boolean
     },

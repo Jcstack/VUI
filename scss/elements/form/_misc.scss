@@ -2,12 +2,14 @@
 .#{$ns}-radio {
   @include unselectable;
   cursor: pointer;
-  display: inline-block;
+  display: inline-flex;
   line-height: 1.25;
   position: relative;
+  align-items: center;
 
   input {
     cursor: pointer;
+    margin-right: 5px;
   }
 
   &:hover {
@@ -22,7 +24,66 @@
 
 .#{$ns}-radio {
   & + .#{$ns}-radio {
-    margin-left: 1em;
+    margin-left: 8px;
+  }
+
+  &.is-fake-face {
+    padding-left: 1.4em;
+
+    input {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      z-index: -1;
+    }
+
+    .#{$ns}-fake-radio {
+      font-size: 16px;
+      font-weight: 400;
+      font-style: normal;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+      position: absolute;
+      top: 2px;
+      left: 0;
+      margin: 0;
+      border: none;
+      box-shadow: inset 0 0 0 1px rgba(16, 22, 26, .2), inset 0 -1px 0 rgba(16, 22, 26, .1);
+      background-clip: padding-box;
+      background-color: #f5f8fa;
+      background-image: linear-gradient(180deg, hsla(0, 0%, 100%, .8), hsla(0, 0%, 100%, 0));
+      cursor: pointer;
+      width: 16px;
+      height: 16px;
+      line-height: 16px;
+      user-select: none;
+    }
+
+    .#{$ns}-fake-radio {
+      border-radius: 50%;
+      font-size: 6px;
+
+      &:after {
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        background: #fff;
+        width: 1em;
+        height: 1em;
+        content: "";
+      }
+    }
+
+    input:checked ~ .#{$ns}-fake-radio {
+      box-shadow: none;
+      background-color: $primary;
+      background-image: linear-gradient(180deg, hsla(0, 0%, 100%, .1), hsla(0, 0%, 100%, 0));
+      color: #fff;
+    }
   }
 }
 

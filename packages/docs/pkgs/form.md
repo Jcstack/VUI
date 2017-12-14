@@ -109,8 +109,9 @@ size       | 尺寸修饰符             | String    | /      | /
 loading    | 是否加载中              | Boolean  | /      | `false`
 icon       | 是否有图标(Left)       | Boolean   | /      | /
 placeholder| Option默认占位(`null`) | String    | /      | /
-multiple   | 对应HTML5 Attr         | Boolean   | /     | /
-nativeSize | 对应HTML5 `size` Attr  | Number    | /     | `0`
+multiple   | 对应HTML Attr         | Boolean   | /     | /
+nativeName | 对应HTML `name` Attr  | String    | /     | /
+nativeSize | 对应HTML `size` Attr  | Number    | /     | `0`
 
 ## v-checkbox
 Name       | Description           | Type     | Values | Default
