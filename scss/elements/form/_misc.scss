@@ -1,3 +1,6 @@
+$input-checkbox-checked-iconfont-code: '\e72e' !default;
+$input-checkbox-indeterminate-iconfont-code: '\e729' !default;
+
 .#{$ns}-checkbox,
 .#{$ns}-radio {
   @include unselectable;
@@ -20,6 +23,41 @@
     color: $input-disabled-color;
     cursor: not-allowed;
   }
+
+  input:checked ~ .#{$ns}-fake-radio,
+  input:checked ~ .#{$ns}-fake-checkbox,
+  input:indeterminate ~ .#{$ns}-fake-checkbox {
+    box-shadow: none;
+    background-color: $primary;
+    background-image: linear-gradient(180deg, hsla(0, 0%, 100%, .1), hsla(0, 0%, 100%, 0));
+    color: #fff;
+
+    &:before {
+    }
+  }
+}
+
+.#{$ns}-fake-radio,
+.#{$ns}-fake-checkbox {
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  position: absolute;
+  top: 2px;
+  left: 0;
+  margin: 0;
+  border: none;
+  box-shadow: inset 0 0 0 1px rgba(16, 22, 26, .2), inset 0 -1px 0 rgba(16, 22, 26, .1);
+  background-clip: padding-box;
+  background-color: #f5f8fa;
+  background-image: linear-gradient(180deg, hsla(0, 0%, 100%, .8), hsla(0, 0%, 100%, 0));
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  user-select: none;
 }
 
 .#{$ns}-radio {
@@ -39,39 +77,13 @@
     }
 
     .#{$ns}-fake-radio {
-      font-size: 16px;
-      font-weight: 400;
-      font-style: normal;
-      -moz-osx-font-smoothing: grayscale;
-      -webkit-font-smoothing: antialiased;
-      position: absolute;
-      top: 2px;
-      left: 0;
-      margin: 0;
-      border: none;
-      box-shadow: inset 0 0 0 1px rgba(16, 22, 26, .2), inset 0 -1px 0 rgba(16, 22, 26, .1);
-      background-clip: padding-box;
-      background-color: #f5f8fa;
-      background-image: linear-gradient(180deg, hsla(0, 0%, 100%, .8), hsla(0, 0%, 100%, 0));
-      cursor: pointer;
-      width: 16px;
-      height: 16px;
-      line-height: 16px;
-      user-select: none;
-    }
-
-    .#{$ns}-fake-radio {
       border-radius: 50%;
-      font-size: 6px;
+      font-size: $size-unit;
     }
 
     input:checked ~ .#{$ns}-fake-radio {
-      box-shadow: none;
-      background-color: $primary;
-      background-image: linear-gradient(180deg, hsla(0, 0%, 100%, .1), hsla(0, 0%, 100%, 0));
-      color: #fff;
-
       &:before {
+        font-size: 0.375em;
         display: inline-block;
         position: absolute;
         top: 50%;
@@ -87,8 +99,49 @@
 
     input:disabled ~ .#{$ns}-fake-radio {
       box-shadow: none;
-      background: rgba(206,217,224,.5);
+      background: rgba(206, 217, 224, .5);
       cursor: not-allowed;
+    }
+  }
+}
+
+.#{$ns}-checkbox {
+  & + .#{$ns}-checkbox {
+    margin-left: 8px;
+  }
+
+  &.is-fake-face {
+    padding-left: 1.4em;
+
+    input {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      z-index: -1;
+    }
+
+    .#{$ns}-fake-checkbox {
+      border-radius: 3px;
+      font-size: $size-unit;
+    }
+
+    input:checked ~ .#{$ns}-fake-checkbox,
+    input:indeterminate ~ .#{$ns}-fake-checkbox {
+      font-size: 0.875em;
+      text-align: center;
+      &:before {
+        font-family: "iconfont", serif;
+        content: $input-checkbox-checked-iconfont-code;
+        font-weight: bold;
+      }
+    }
+
+    input:indeterminate ~ .#{$ns}-fake-checkbox {
+      font-size: 0.75em;
+      &:before {
+        content: $input-checkbox-indeterminate-iconfont-code;
+      }
     }
   }
 }

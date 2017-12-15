@@ -13,8 +13,16 @@
 
     <hr>
     <div class="v-control">
-      <v-radio native-value="a" name="a" :fake-face="true" v-model="radioValue" disabled>hello</v-radio>
-      <v-radio native-value="b" name="a" :fake-face="true" v-model="radioValue">hello2</v-radio>
+      <v-radio native-value="a" native-name="a" :fake-face="true" v-model="radioValue" >hello</v-radio>
+      <v-radio native-value="b" native-name="a" :fake-face="true" v-model="radioValue">hello2</v-radio>
+    </div>
+
+    <div class="v-control">
+      <v-checkbox native-value="666" native-name="xbs" v-model="checkValues" :fake-face="true">数理逻辑</v-checkbox>
+      <v-checkbox native-value="6696" native-name="xbss" v-model="checkValues"
+                  :fake-face="true"
+                  :indeterminate="true"
+      >check me</v-checkbox>
     </div>
   </div>
 </template>
@@ -22,12 +30,14 @@
 <script>
   import VSelect from 'packages/form/impl_select.vue'
   import VRadio from 'packages/form/impl_radio.vue'
+  import VCheckbox from 'packages/form/impl_checkbox.vue'
 
   export default {
     data () {
       return {
         selectValue: 'sizes',
         selectOptions: ['colors', 'sizes', 'apple'],
+        checkValues: [],
         radioValue: 'b'
       }
     },
@@ -42,7 +52,8 @@
 
     components: {
       VSelect,
-      VRadio
+      VRadio,
+      VCheckbox
     }
   }
 </script>
