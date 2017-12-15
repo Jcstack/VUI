@@ -173,11 +173,11 @@
       resultsLength () {
         const {suggest} = this.$refs
 
-        if (!Array.isArray(suggest._results)) {
+        if (!Array.isArray(suggest.presentationResults)) {
           return null
         }
 
-        return suggest._results.length
+        return suggest.presentationResults.length
       }
     },
 

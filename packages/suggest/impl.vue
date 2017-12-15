@@ -71,20 +71,20 @@
       },
 
       _getItemByIndex(index) {
-        if (Number.isNaN(+index) || !Array.isArray(this._results) || this._results.length === 0) {
+        if (Number.isNaN(+index) || !Array.isArray(this.presentationResults) || this.presentationResults.length === 0) {
           return null
         }
 
-        return this._results[index]
+        return this.presentationResults[index]
       },
 
       _moveActiveIndex(step) {
-        if (!this.activated || !Array.isArray(this._results) || this._results.length === 0) {
+        if (!this.activated || !Array.isArray(this.presentationResults) || this.presentationResults.length === 0) {
           this.activeIndex = null
           return
         }
 
-        const len = this._results.length
+        const len = this.presentationResults.length
 
         this.activeIndex = pluckValidCircleIndex(step, this.activeIndex, len)
       },

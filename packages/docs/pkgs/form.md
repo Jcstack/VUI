@@ -123,6 +123,7 @@ nativeValue| 控件值                 | String    | /     | /
 nativeName | 控件名                 | String    | /     | /
 trueValue  | 选中对应值              | Any      | /      | `true`
 falseValue | 未选对应值              | Any      | /      | `false`
+indeterminate| 未确定状态            | Boolean  | /      | /
 
 ## v-radio
 Name       | Description           | Type     | Values | Default
