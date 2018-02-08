@@ -9,6 +9,10 @@ import Modal from './impl.vue'
 /* istanbul ignore next */
 Modal.install = function (Vue) {
   Vue.component(Modal.name, Modal)
+
+  Vue.prototype.$VDialog = {
+    open
+  }
 }
 
 export const modalShared = {

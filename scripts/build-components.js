@@ -8,12 +8,9 @@ const localDebugPath = path.resolve(__dirname, '../sources/utils/debug.js')
 executeRollup({
   entry: 'packages/index.js',
   dest: 'dist/vui.packages.js',
-  format: 'umd',
+  format: 'iife',
   vueOptions: true,
   moduleName: 'vui',
-  globals: {
-    debug: 'debug'
-  },
   commonjsOptions: {
     include: ['node_modules/**',
       localPopperPath,
@@ -21,13 +18,18 @@ executeRollup({
     ],
     namedExports: {},
     ignore: ['util', 'tty'],
-    ignoreGlobal: true
+    ignoreGlobal: false
   },
   resolveOptions: {},
   extraPlugins: [
     globals()
     // builtins()
-  ]
+  ],
+  external: ['vue'],
+  globals: {
+    debug: 'debug',
+    'vue': 'Vue'
+  }
 })
 
 process.on('unhandledRejection', (reason, p) => {

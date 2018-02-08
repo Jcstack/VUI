@@ -1,6 +1,6 @@
 {
   "name": "@vui/core",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Yet a really simple and impressive UI framework for SavJS",
   "main": "dist/vui.css",
   "homepage": "https://github.com/savjs/sav-vui#readme",
