@@ -203,11 +203,11 @@
             tmp = it.split('|')
             // extra attrs
             const attrs = {}
-            if (tmp[2] && /^\d+$/.test(tmp[2])) {
-              attrs.width = `${tmp[2]}%`
+            if (tmp[2] && /^\d+/.test(tmp[2])) {
+              attrs.width = tmp[2]
             }
 
-            tmp = [tmp[0].trim().toLowerCase(), tmp[1].trim(), attrs] // index[[2]] for with of percent
+            tmp = [tmp[0].trim(), tmp[1].trim(), attrs] // index[[2]] for with of percent
             this.tdColumns.push(tmp[0])
             this.thColumns.push(tmp)
           } else {

@@ -28,8 +28,9 @@ $button-link-hover-color: $text-strong !default;
 
 @mixin make-button-variant($color-invert, $color, $button-focus-box-shadow-size) {
   &.is-outlined {
-    color: $color;
-    background-color: $color-invert;
+    color: darken($color, 6);
+    //background-color: $color-invert;
+    background-color: transparent;
     border-color: darken($color, 2);
 
     &:hover,

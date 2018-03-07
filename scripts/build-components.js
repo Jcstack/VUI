@@ -28,7 +28,7 @@ executeRollup({
   external: ['vue'],
   globals: {
     debug: 'debug',
-    'vue': 'Vue'
+    vue: 'Vue'
   }
 })
 
