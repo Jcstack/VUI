@@ -7,6 +7,7 @@
     <tr>
       <th v-for="cc in thColumns"
           @click="_headClick(cc[0], $event)"
+          v-bind="cc[2]"
       >
 
         <slot v-if="`${cc[0].indexOf('__')}` == -1"
@@ -200,7 +201,13 @@
           let tmp = null
           if (it && !!~it.indexOf('|')) {
             tmp = it.split('|')
-            tmp = [tmp[0].trim().toLowerCase(), tmp[1].trim()]
+            // extra attrs
+            const attrs = {}
+            if (tmp[2] && /^\d+$/.test(tmp[2])) {
+              attrs.width = `${tmp[2]}%`
+            }
+
+            tmp = [tmp[0].trim().toLowerCase(), tmp[1].trim(), attrs] // index[[2]] for with of percent
             this.tdColumns.push(tmp[0])
             this.thColumns.push(tmp)
           } else {

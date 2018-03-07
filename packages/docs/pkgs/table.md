@@ -63,7 +63,7 @@
   export default {
     data () {
       return {
-        tableCols: ['__select|全选', 'first|第一列', 'second'],
+        tableCols: ['__select|全选', 'first|第一列|20', 'second'],
         tableRows: [
           {
             first: 'a',
@@ -91,7 +91,7 @@
 
 Name       | Description    | Type     | Values | Default
 ----       | -------------- | -------- | ------ | -------
-columns    | 列元数据，以`__`开头的key为内置插件(目前支持 : `__select`)        | Array    | [`"key_ref|[key_alias]"`]      | `[]`
+columns    | 列元数据，以`__`开头的key为内置插件(目前支持 : `__select`)        | Array    | [`"key_ref|[key_alias]|[col_with]"`]      | `[]`
 rows       | 行数据集, 实体`key`必须对应列元数据  | Array    | /      | `[]`
 bordered   | 是否边框        | Boolean  | /      | /
 striped    | 🐴  &nbsp;斑马线      | Boolean  | /      | /
@@ -117,7 +117,7 @@ order-by-column | 排序        | [`sortableState`, `col`]
   export default {
     data () {
       return {
-        tableCols: ['__select|全选', 'first|第一列', 'second'],
+        tableCols: ['__select|全选', 'first|第一列|20', 'second'],
         tableRows: [
           {
             first: 'a',

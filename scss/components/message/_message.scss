@@ -113,6 +113,7 @@ $message-popup-body-padding: 0.5em 1em !default;
 }
 
 .#{$ns}-message-popup {
+  box-sizing: $box-sizing;
   position: fixed;
   top: $message-popup-top;
   //left: 50%;
