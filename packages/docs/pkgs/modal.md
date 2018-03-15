@@ -102,7 +102,8 @@ _justOpenADialog () {
       }
     }
   }, {
-    message: 'this is my dialog content'
+    message: 'this is my dialog content',
+    _userEvent (type, argv) {}
   }).then(res => {
     alert(res)
   })
@@ -202,8 +203,8 @@ closable   | 可否关闭        | Boolean  |  /     |  `true`
 Name           | Description                 | Params
 ----           | ------------                | --------
 dimission      | 所有`dimiss`行为的事件总线    | `string | Promise`
-close          | 关闭通知                     | `e`
-ok             | 成功通知(默认`confirm`, 确定按钮发出) | `e`
+close          | 关闭通知(只移除弹框容器，不转化`Promise[pending]`状态)                     | `e`
+ok             | 成功通知(默认`confirm`, 确定按钮发出, `preConfirm`通过的话，将会`resolve`) | `e`
 error          | 错误通知(默认`Promise`状态下，触发`reject`) | `e`
 </div>
 <div slot="slots">

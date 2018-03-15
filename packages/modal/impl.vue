@@ -109,7 +109,7 @@
           }
         } else if (isPromise(e)) {
           e.then(() => {
-            this.$emit('close')
+            this.$emit('ok')
           }, (err) => {
             this.$emit('error')
             console.debug(err)

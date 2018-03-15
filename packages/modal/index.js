@@ -6,28 +6,29 @@
 import Vue from 'vue'
 import Modal from './impl.vue'
 
+export const modalShared = {
+  rootCtx: null
+}
+
 /* istanbul ignore next */
 Modal.install = function (Vue) {
   Vue.component(Modal.name, Modal)
 
   Vue.prototype.$VDialog = {
-    open
+    open,
+    modalShared
   }
 }
 
-export const modalShared = {
-  rootCtx: null
-}
-
-export function open ($slots, options = {}, slotData = {}) {
-  let _onResolved = () => {}
-  let _onRejected = () => {}
+export function open($slots, options = {}, slotData = {}) {
+  let vm = null
+  const deferred = {}
 
   const Dialog = Vue.extend({
-    name: 'XVDialog',
+    name: 'VDialog',
     mixins: [Modal],
     parent: modalShared.rootCtx, // setup `context` shared data
-    beforeCreate () {
+    beforeCreate() {
       if (typeof $slots === 'string') {
         $slots = {
           default: $slots
@@ -38,12 +39,19 @@ export function open ($slots, options = {}, slotData = {}) {
       Object.keys($slots).forEach((k) => {
         const renderer = Vue.compile($slots[k])
         const slotCtx = {
-          data () {
+          data() {
             slotData = typeof slotData === 'function' ? slotData.call(this) : slotData
 
             if (slotData) {
-              slotData.onResolved = _onResolved
-              slotData.onRejected = _onRejected
+              slotData.onEvent = function (type, $event) {
+                if (typeof type === 'string') {
+                  this.$emit(type, $event)
+                }
+
+                if (typeof slotData._userEvent === 'function') {
+                  slotData._userEvent.apply(vm, [type, $event])
+                }
+              }
             }
 
             return slotData
@@ -53,11 +61,11 @@ export function open ($slots, options = {}, slotData = {}) {
           components: options.components || {},
           computed: options.computed || {},
           methods: Object.assign(options.methods || {}, {
-            getTopDialog () {
+            getTopDialog() {
               let dialog = this.$parent || null
 
               while (dialog) {
-                if (dialog.$options.name === 'XVDialog') {
+                if (dialog.$options.name === 'VDialog') {
                   break
                 }
 
@@ -89,18 +97,18 @@ export function open ($slots, options = {}, slotData = {}) {
     delete options.propsData
   }
 
-  const vm = new Dialog(Object.assign(_defaults, options))
+  vm = new Dialog(Object.assign(_defaults, options))
 
   return new Promise((resolve, reject) => {
-    _onResolved = resolve
-    _onRejected = reject
+    deferred.resolve = resolve
+    deferred.reject = reject
 
     // render it
     vm.$mount()
 
     document.body.appendChild(vm.$el)
 
-    function forceDestroyElement () {
+    function forceDestroyElement() {
       // vm.visible = false
       vm.$destroy()
       vm.$el.parentNode.removeChild(vm.$el)
