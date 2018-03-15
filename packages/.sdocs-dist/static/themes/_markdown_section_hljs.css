@@ -1,0 +1,133 @@
+.hljs {
+  /* markdown content found on pages */
+  padding: 0.5rem 0 !important;
+}
+
+.hljs h1,
+.hljs h2,
+.hljs h3,
+.hljs h4,
+.hljs strong {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.hljs a {
+  color: var(--theme-color, #42b983);
+  font-weight: 600;
+}
+
+.hljs h1 {
+  font-size: 2rem;
+  margin: 0 0 1rem;
+}
+
+.hljs h2 {
+  font-size: 1.75rem;
+  margin: 45px 0 0.8rem;
+}
+
+.hljs h3 {
+  font-size: 1.5rem;
+  margin: 40px 0 .6rem;
+}
+
+.hljs h4 {
+  font-size: 1.25rem;
+}
+
+.hljs h5 {
+  font-size: 1rem;
+}
+
+.hljs h6 {
+  color: #777;
+  font-size: 1rem;
+}
+
+.hljs figure,
+.hljs p,
+.hljs ul,
+.hljs ol {
+  margin: 1.2em 0;
+}
+
+.hljs p,
+.hljs ul,
+.hljs ol {
+  line-height: 1.6rem;
+  word-spacing: 0.05rem;
+}
+
+.hljs ul,
+.hljs ol {
+  padding-left: 1.5rem;
+}
+
+.hljs blockquote {
+  border-left: 4px solid var(--theme-color, #42b983);
+  color: #858585;
+  margin: 2em 0;
+  padding-left: 20px;
+}
+
+.hljs blockquote p {
+  font-weight: 600;
+  margin-left: 0;
+}
+
+.hljs iframe {
+  margin: 1em 0;
+}
+
+.hljs em {
+  color: #7f8c8d;
+}
+
+.hljs code {
+  background-color: #f8f8f8;
+  border-radius: 2px;
+  color: #e96900;
+  font-family: 'Roboto Mono', Monaco, courier, monospace;
+  font-size: 0.8rem;
+  margin: 0 2px;
+  padding: 3px 5px;
+  white-space: pre-wrap;
+}
+
+.hljs pre {
+  -moz-osx-font-smoothing: initial;
+  -webkit-font-smoothing: initial;
+  background-color: #f8f8f8;
+  font-family: 'Roboto Mono', Monaco, courier, monospace;
+  line-height: 1.5rem;
+  margin: 1.2em 0;
+  overflow: auto;
+  padding: 0 1.4rem;
+  position: relative;
+  word-wrap: normal;
+}
+
+.hljs code {
+  background-color: #f8f8f8;
+  border-radius: 2px;
+  color: #e96900;
+  font-family: 'Roboto Mono', Monaco, courier, monospace;
+  font-size: 0.8rem;
+  margin: 0 2px;
+  padding: 3px 5px;
+  white-space: pre-wrap;
+}
+
+.hljs pre {
+  -moz-osx-font-smoothing: initial;
+  -webkit-font-smoothing: initial;
+  background-color: #f8f8f8;
+  font-family: 'Roboto Mono', Monaco, courier, monospace;
+  line-height: 1.5rem;
+  margin: 1.2em 0;
+  overflow: auto;
+  padding: 0 1.4rem;
+  position: relative;
+  word-wrap: normal;
+}
